@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xszzTyForm" type="xgxt.xszz.XszzTyForm"/>
+		<form-bean name="xxcjForm" type="xgxt.xszz.tjgy.XxcjForm"/>
+		<form-bean name="xfjmForm" type="xgxt.xszz.tjgy.XfjmForm"/>
+	</form-beans>
+	
+	<action-mappings>	
+		
+		<!-- 贵州大学 -->
+		
+		<!-- 副食补助 -->
+    	<action path="/guizdx_jxszz_fsbzfp" 	forward="/guizdxXszz.do?method=fsbzfpManage"/>	<!-- 分配专业 -->
+		<action path="/guizdx_jxszz_fsbzff" 	forward="/guizdxXszz.do?method=fsbzffManage"/>	<!-- 发布 -->
+		<action path="/guizdx_jxszz_fsbzjg" 	forward="/guizdxXszz.do?method=fsbzjgManage"/>	<!-- 结果 -->
+		
+    	<!-- 贵州大学 end-->
+    	
+    	<!-- 海南大学 -->
+    	
+    	<!-- 参数设置 -->
+    	<action path="/hndx_xszz_cssz" 	  forward="/hndxXszz.do?method=csszManage"/>	<!-- 参数设置 -->
+    	
+    	<!-- 经济困难生认定 -->
+	    <action path="/hndx_xszz_jjknssq" forward="/hndxXszz.do?method=jjknssq"/>	<!-- 申请 -->
+		<action path="/hndx_xszz_jjknssh" forward="/hndxXszz.do?method=jjknssh"/>	<!-- 审核 -->
+		<action path="/hndx_xszz_jjknsjg" forward="/hndxXszz.do?method=jjknsjg"/>	<!-- 结果 -->	
+		
+		<!-- 海南大学 end-->
+		
+		<!-- 南京技师 -->
+		<action path="/njjs_xszz_xfxx" 	forward="/njjsXszz.do?method=xfxxManage"/>	<!-- 团员信息 -->
+		<!-- 南京技师 end-->
+		
+		<!-- ====================================我是广州大学的！有种来打我啊！============================================== -->
+		
+		<action path="/gzdx_xszz_tjsz"   forward="/gzdxXszz.do?method=tjszManage"/>	<!-- 申请 -->
+		   
+		<!-- ====================================我是通用版本的============================================== -->
+		
+		<!-- 相关设置 -->
+		<action path="/comm_xszz_xmwh" 	forward="/commXszz.do?method=xmwhManage"/>	<!-- 项目维护 -->
+		<action path="/comm_xszz_rssz" 	forward="/commXszz.do?method=rsszManage"/>	<!-- 人数设置 -->
+		<action path="/comm_xszz_zdsz" 	forward="/commXszz.do?method=zdszManage"/>	<!-- 字段设置 -->
+		<action path="/comm_xszz_xmsq" 	forward="/commXszz.do?method=xmsqManage"/>	<!-- 项目申请 -->
+		<action path="/comm_xszz_msg" 	forward="/commXszz.do?method=msgManage"/>	<!-- 抛个msg -->
+		<action path="/comm_xszz_xmsh" 	forward="/commXszz.do?method=xmtjManage"/>	<!-- 项目审核 -->
+		<action path="/comm_xszz_jgcx" 	forward="/commXszz.do?method=jgcxManage"/>	<!-- 结果查询 -->
+		<action path="/comm_xszz_tjbb" 	forward="/commXszz.do?method=tjbbManage"/>	<!-- 统计表报 -->
+		<action path="/comm_xszz_zzhz" 	forward="/commXszz.do?method=zzhzManage"/>	<!-- 资助汇总 -->
+		<action path="/comm_xszz_printTjbb" forward="/commXszz.do?method=printTjbbManage"/>	<!-- 打印统计表报 -->
+
+		<!-- 2010.12.01 quph 浙江科技要求做的资助续办 -->
+		<action path="/xszz_zzxb" forward="/commXszz.do?method=zzxbManage"/>	<!-- 资助续办 -->
+		<!-- 资助续办结束-->
+		
+		
+		<!-- ==============从通用版分出来的困难生认定（含家庭情况调查）=====2011.7.5 qph============ -->
+		<action path="/kns_jbsz" 	forward="/commXszz.do?method=xmwhManage&amp;iskns=yes"/>	<!-- 基本设置 -->
+		<action path="/kns_rssz" 	forward="/commXszz.do?method=rsszManage&amp;iskns=yes"/>  <!-- 人数设置 -->
+		<action path="/kns_xmsq" 	forward="/commXszz.do?method=xmsqManage&amp;iskns=yes"/>	<!-- 项目申请 -->
+		<action path="/kns_xmsh" 	forward="/commXszz.do?method=xmtjManage&amp;iskns=yes"/>	<!-- 项目审核 -->
+		<action path="/kns_jgcx" 	forward="/commXszz.do?method=jgcxManage&amp;iskns=yes"/>	<!-- 结果查询 -->
+		
+		
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 贵州大学 -->
+    	
+    	<action path="/guizdxXszz" 
+        		parameter="method"  
+        		name="xszzTyForm" 
+        		scope="request"
+		        type="xgxt.xszz.guizdx.XszzGuizdxAction">	
+		       
+		<!-- 副食补助 -->
+		<forward name="fsbzfpManage"    	path="/xszz/guizdx/fsbzfpManage.jsp" />	<!-- 分配专业 -->
+		<forward name="fsbzffManage"    	path="/xszz/guizdx/fsbzffManage.jsp" />	<!-- 发布 -->
+		<forward name="fsbzjgManage"    	path="/xszz/guizdx/fsbzjgManage.jsp" />	<!-- 结果 -->
+		
+		</action>
+		
+		<!-- 贵州大学 end-->
+	
+		<!-- 海南大学 -->
+    	
+    	<action path="/hndxXszz" 
+        		parameter="method"  
+        		name="xszzTyForm" 
+        		scope="request"
+		        type="xgxt.xszz.hndx.XszzHndxAction">	
+		       
+		
+		<!-- 参数设置 -->
+		<forward name="csszManage"    	path="/xszz/hndx/csszManage.jsp" />		<!-- 管理 -->
+		<forward name="csszUpdate"    	path="/xszz/hndx/csszUpdate.jsp" />		<!-- 维护 -->
+		<!-- 经济困难生 -->
+		<forward name="jjknsManage"    	path="/xszz/hndx/jjknsManage.jsp" />	<!-- 管理 -->
+		<forward name="jjknsUpdate"    	path="/xszz/hndx/jjknsUpdate.jsp" />	<!-- 维护 -->
+		
+		</action>
+		
+		<!-- 海南大学 end-->
+		
+		<!-- 南京技师 -->
+    	
+    	<action path="/njjsXszz" 
+        		parameter="method"  
+        		name="xszzTyForm" 
+        		scope="request"
+		        type="xgxt.xszz.njjs.XszzNjjsAction">	
+		       	
+		<forward name="xfxxManage"    	path="/xszz/njjs/xfxxManage.jsp" />		<!-- 学费信息 -->
+		
+		</action>
+		
+		<!-- 南京技师 end-->
+		
+		<!-- ====================================我是广州大学============================================== -->
+		<action path="/gzdxXszz" 
+        		parameter="method"  
+        		name="xszzTyForm" 
+        		scope="request"
+		        type="xgxt.xszz.gzdx.GzdxXszzAction">	
+		       	
+		<forward name="tjszManage"    	path="/xszz/gzdx/tjszManage.jsp" />	<!-- 条件设置 -->
+		
+		</action>
+		
+		<!-- ====================================我是通用版本的============================================== -->
+
+		<action path="/commXszz" 
+        		parameter="method"  
+        		name="xszzTyForm" 
+        		scope="request"
+		        type="xgxt.xszz.comm.XszzCommAction">
+		        	
+		    <!-- 抛个msg -->
+			<forward name="msgManage"    	path="/xszz/comm/msgManage.jsp" />	<!-- 抛个msg -->
+		    <!-- 项目维护 -->
+			<forward name="xmwhManage"    	path="/xszz/comm/xmwhManage.jsp" />	<!-- 项目维护 -->
+			<forward name="xmwhUpdate"    	path="/xszz/comm/xmwhUpdate.jsp" />	
+			<forward name="rsszManage"    	path="/xszz/comm/rsszManage.jsp" />	<!-- 人数设置 -->
+			<forward name="rsszUpdate"    	path="/xszz/comm/rsszUpdate.jsp" />	
+			<!-- 学生操作 -->
+			<forward name="xmsqManage"    	path="/xszz/comm/xmsqManage.jsp" />	<!-- 项目申请 -->
+			<forward name="xmsqUpdate"    	path="/xszz/comm/xmsqUpdate.jsp" />	
+			<!-- 教师操作 -->
+			<forward name="xmtjManage"    	path="/xszz/comm/xmtjManage.jsp" />	<!-- 项目审核 -->
+			<forward name="xmshManage"    	path="/xszz/comm/xmshManage.jsp" />	
+			<forward name="xmshUpdate"    	path="/xszz/comm/xmshUpdate.jsp" />	
+			<forward name="xmshPl"    		path="/xszz/comm/xmshPl.jsp" />	
+			<!-- 项目相关 -->
+			<forward name="jgcxManage"    	path="/xszz/comm/jgcxManage.jsp" />	<!-- 结果查询 -->
+			<forward name="jgcxUpdate"    	path="/xszz/comm/jgcxUpdate.jsp" />	
+			<!-- 学生信息 -->
+			<forward name="xsxxManage"    	path="/xszz/comm/xsxxManage.jsp" />	<!-- 学生信息 -->
+			<!-- 老师信息 -->
+			<forward name="lsxxManage"    	path="/xszz/comm/lsxxManage.jsp" />	<!-- 老师信息 -->
+			<!-- 项目统计 -->
+			<forward name="zzhzManage"		path="/xszz/comm/xmtj/zzhzManage.jsp" />	<!-- 资助汇总 -->
+			<forward name="zzhzUpdate"		path="/xszz/comm/xmtj/zzhzUpdate.jsp" />
+			<forward name="tjbbManage"    	path="/xszz/comm/tjbbManage.jsp" />			<!-- 统计报表 -->
+			<!-- 文件上传 -->
+			<forward name="fileUpload"    	path="/xszz/comm/other/fileUpload.jsp" />
+			<!-- 相关设置 -->
+			<forward name="zdszManage"    	path="/xszz/comm/xgsz/zdszManage.jsp" />	<!-- 字段设置 -->
+
+            <!-- 文件上传 -->
+			<forward name="uploadFile"    	path="/xszz/comm/uploadFile.jsp" />
+			<forward name="dowDqfbMb"    	path="/xszz/comm/dqfbImport.jsp" />
+			<!-- 资助续办 作者：qph  2010.12.01-->
+			<forward name="zzxbManage"    	path="/xszz/comm/zzxb/zzxbManage.jsp" />	
+			<forward name="zzxbUpdate"    	path="/xszz/comm/zzxb/zzxbUpdate.jsp" />	
+			<!-- end 资助续办 -->
+		</action>
+		
+		<!-- 我是打印的 -->
+		<action path="/commPrint" parameter="method" name="xszzTyForm" scope="request" type="xgxt.xszz.comm.XszzCommPrint">
+			<forward name="printKnsrd"    	path="/xszz/comm/print/gzfy/printKnsrd.jsp" />
+		</action>
+		
+		<!-- =========================宁波城市助学贷款============================ -->
+		<action path="/xszz_nbcs_zxdksh" 	forward="/xszz_nbcs.do?method=zxdksh"/>
+		<action path="/xszz_nbcs_zxdkcx" 	forward="/xszz_nbcs.do?method=zxdkcx"/>
+		<action path="/xszz_nbcs_ffdk" 	    forward="/xszz_nbcs.do?method=ffdkManager"/>
+		
+		
+		<action path="/xszz_nbcs" 
+        		parameter="method"  
+        		name="xszzTyForm" 
+        		scope="request"
+		        type="xgxt.xszz.nbcs.XszzNbcsAction">
+		     <forward name="zxdksh"    	path="/xszz/nbcs/zxdksh.jsp" />
+		     <forward name="zxdkcx"    	path="/xszz/nbcs/zxdkcx.jsp" />
+		     <forward name="zxdkUpdate" path="/xszz/nbcs/zxdkUpdate.jsp"/>
+		     <forward name="ffdkManager" path="/xszz/nbcs/ffdkManager.jsp"/>
+		     <forward name="ffdkUpdate" path="/xszz/nbcs/ffdkUpdate.jsp"/>
+		</action>
+		
+		<action path="/xszzXszj" 
+        		parameter="method"  
+        		name="xszzTyForm" 
+        		scope="request"
+		        type="xgxt.xszz.comm.xscj.XszzXscjAction">
+		     <forward name="xscjManage"    	path="/xszz/xscj/xscjManage.jsp" />
+		</action>
+		
+		
+		
+		
+		<!-- 天津工业信息采集 -->
+		<action path="/xxcj_xstx" 		forward="/xxcj.do?method=xstx"/>
+		<action path="/xxcj_xxcjsh" 	forward="/xxcj.do?method=xxcjshcx"/>
+		<action path="/xxcj_xxcjcx" 	forward="/xxcj.do?method=xxcjcx"/>
+		
+		<action path="/xxcj"
+				type="xgxt.xszz.tjgy.XxcjAction"
+				parameter="method"  
+        		name="xxcjForm" 
+        		scope="request"
+		>
+			 <forward name="xstx"    	path="/xszz/tjgy/xstx.jsp" />
+			 <forward name="xxcjcx"    	path="/xszz/tjgy/xxcjcx.jsp" />
+			 <forward name="xxcjsh"    	path="/xszz/tjgy/xxcjsh.jsp" />
+			 <forward name="xxcjDgsh"   path="/xszz/tjgy/xxcjDgsh.jsp" />
+			 <forward name="xxcjUpdate" path="/xszz/tjgy/xxcjUpdate.jsp" />
+		</action>
+		
+		<!-- 天津工业学费减免 -->
+		<action path="/tjgy_jmxmsz" 		forward="/tjgy_xfjm.do?method=xmszManage"/>
+		<action path="/tjgy_jmxmsq" 		forward="/tjgy_xfjm.do?method=xmsqManage"/>
+		<action path="/tjgy_jmxmsh" 		forward="/tjgy_xfjm.do?method=xmshManage"/>
+		<action path="/tjgy_jmxmjg" 		forward="/tjgy_xfjm.do?method=jgcxManage"/>
+		
+		<action path="/tjgy_xfjm"
+				type="xgxt.xszz.tjgy.XfjmAction"
+				parameter="method"  
+        		name="xfjmForm" 
+        		scope="request"
+		>
+			<forward name="xmsz" path="/xszz/tjgy/xfjm/xmsz.jsp" />
+			<forward name="xmszManage" path="/xszz/tjgy/xfjm/xmszManage.jsp" />
+			<forward name="xmsqManage" path="/xszz/tjgy/xfjm/xmsqManage.jsp" />
+			<forward name="xmsq" path="/xszz/tjgy/xfjm/xmsq.jsp" />
+			<forward name="xmshManage" path="/xszz/tjgy/xfjm/xmshManage.jsp" />
+			<forward name="xmdgsh" path="/xszz/tjgy/xfjm/xmdgsh.jsp" />
+			<forward name="jgcxManage" path="/xszz/tjgy/xfjm/jgcxManage.jsp" />
+		</action>
+		
+		
+		
+		<action path="/xszzAjax"
+				type="xgxt.xszz.comm.XszzAjaxAction"
+				parameter="method"  
+        		name="xszzTyForm" 
+        		scope="request"
+		>
+		</action>
+		
+	</action-mappings>
+
+</struts-config>

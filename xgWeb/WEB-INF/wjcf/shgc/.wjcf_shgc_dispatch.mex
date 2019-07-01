@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/shgcxysbdefault.do" location="350,50" dimension="142,60" />
+  <StrutsActivity path="/shgcxysbqrystu.do" location="650,50" dimension="136,60" />
+  <StrutsActivity path="/shgcxysbdatasub.do" location="950,50" dimension="142,60" />
+  <StrutsActivity path="/shgcxxshdefault.do" location="350,250" dimension="142,60" />
+  <StrutsActivity path="/shgcxxshqry.do" location="650,250" dimension="118,60" />
+  <StrutsActivity path="/shgcxxsh.do" location="950,250" dimension="100,60" />
+  <StrutsActivity path="/shgcxxshsave.do" location="50,350" dimension="124,60" />
+  <StrutsActivity path="/delshxx.do" location="350,450" dimension="94,60" />
+  <StrutsActivity path="/wjcfysbprint.do" location="650,450" dimension="124,60" />
+  <StrutsActivity path="/wjcfrqwhwhdefault.do" location="950,450" dimension="154,60" />
+  <StrutsActivity path="/wjcfrqwhqry.do" location="50,550" dimension="118,60" />
+  <StrutsActivity path="/shgcwjrswhwh.do" location="350,650" dimension="124,60" />
+  <StrutsActivity path="/savecfrqwh.do" location="650,650" dimension="112,60" />
+  <StrutsActivity path="/wjcfkszbdefault.do" location="950,650" dimension="142,60" />
+  <StrutsActivity path="/wjcfkszbqry.do" location="350,850" dimension="118,60" />
+  <StrutsActivity path="/deletewjcfkszb.do" location="50,750" dimension="136,60" />
+  <StrutsActivity path="/jygzbprint.do" location="650,850" dimension="112,60" />
+  <StrutsActivity path="/wtgwjcfdefault.do" location="950,850" dimension="136,60" />
+  <StrutsActivity path="/wtgwjcfxxqry.do" location="50,950" dimension="124,60" />
+  <StrutsActivity path="/deletewtgwjxx.do" location="350,1050" dimension="130,60" />
+  <StrutsActivity path="/shsldefault.do" location="650,1050" dimension="118,60" />
+  <StrutsActivity path="/savessslxx.do" location="950,1050" dimension="112,60" />
+  <StrutsActivity path="/shgcwjcfwh.do" location="0,160" dimension="130,72" />
+  <StrutsActivity path="/shjddefault.do" location="50,1150" dimension="118,60" />
+  <StrutsActivity path="/savessjdxx.do" />
+  <StrutsTransition id="/shgcxxsh.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1000,310" />
+      <AbsolutePoint location="1000,415" />
+      <AbsolutePoint location="35,415" />
+      <AbsolutePoint location="35,232" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jygzbprint.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="65,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgcxysbqrystu.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="718,110" />
+      <AbsolutePoint location="718,174" />
+      <AbsolutePoint location="130,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgcxxshqry.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="709,310" />
+      <AbsolutePoint location="709,325" />
+      <AbsolutePoint location="112,325" />
+      <AbsolutePoint location="112,232" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgcxxshdefault.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="65,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfysbprint.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="65,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/savecfrqwh.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="65,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfkszbqry.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,880" />
+      <AbsolutePoint location="249,880" />
+      <AbsolutePoint location="249,-120" />
+      <AbsolutePoint location="95,-120" />
+      <AbsolutePoint location="95,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgcxysbdefault.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="421,110" />
+      <AbsolutePoint location="421,166" />
+      <AbsolutePoint location="130,166" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shsldefault.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="709,1080" />
+      <AbsolutePoint location="65,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgcxysbdatasub.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1021,110" />
+      <AbsolutePoint location="1021,196" />
+      <AbsolutePoint location="130,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/savessjdxx.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="65,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletewjcfkszb.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,780" />
+      <AbsolutePoint location="-225,780" />
+      <AbsolutePoint location="-225,226" />
+      <AbsolutePoint location="0,226" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/savessslxx.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1006,1110" />
+      <AbsolutePoint location="1006,1187" />
+      <AbsolutePoint location="207,1187" />
+      <AbsolutePoint location="207,174" />
+      <AbsolutePoint location="130,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletewtgwjxx.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,1080" />
+      <AbsolutePoint location="313,1080" />
+      <AbsolutePoint location="313,226" />
+      <AbsolutePoint location="130,226" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgcwjrswhwh.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,680" />
+      <AbsolutePoint location="-150,680" />
+      <AbsolutePoint location="-150,166" />
+      <AbsolutePoint location="0,166" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wtgwjcfxxqry.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="174,980" />
+      <AbsolutePoint location="567,980" />
+      <AbsolutePoint location="567,-270" />
+      <AbsolutePoint location="125,-270" />
+      <AbsolutePoint location="125,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shjddefault.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1180" />
+      <AbsolutePoint location="-39,1180" />
+      <AbsolutePoint location="-39,196" />
+      <AbsolutePoint location="0,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wtgwjcfdefault.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,880" />
+      <AbsolutePoint location="921,880" />
+      <AbsolutePoint location="921,-195" />
+      <AbsolutePoint location="5,-195" />
+      <AbsolutePoint location="5,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfrqwhqry.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,580" />
+      <AbsolutePoint location="-75,580" />
+      <AbsolutePoint location="-75,174" />
+      <AbsolutePoint location="0,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfkszbdefault.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,680" />
+      <AbsolutePoint location="861,680" />
+      <AbsolutePoint location="861,-45" />
+      <AbsolutePoint location="35,-45" />
+      <AbsolutePoint location="35,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgcxxshsave.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="65,350" />
+      <AbsolutePoint location="65,232" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/delshxx.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,480" />
+      <AbsolutePoint location="5,480" />
+      <AbsolutePoint location="5,232" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfrqwhwhdefault.do,null,/shgcwjcfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1065,450" />
+      <AbsolutePoint location="1065,125" />
+      <AbsolutePoint location="65,125" />
+      <AbsolutePoint location="65,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/testPrint.jsp" location="39,188" dimension="92,49" />
+  <StrutsActivity path="/train_size.do" location="350,50" dimension="89,62" />
+  <StrutsActivity path="/train_cloth.do" location="650,50" dimension="155,88" />
+  <StrutsActivity path="/train_cloth_insert.do" location="950,50" dimension="155,88" />
+  <StrutsActivity path="/train_conf.do" location="350,250" dimension="169,88" />
+  <StrutsActivity path="/sjcz/train_size.jsp" location="650,250" dimension="119,49" />
+  <StrutsActivity path="/sqb/train_cloth.jsp" location="950,250" dimension="123,49" />
+  <StrutsActivity path="/errMsg.do" location="50,350" dimension="92,75" />
+  <StrutsActivity path="/sjcz/train_conf.jsp" location="650,350" dimension="122,49" />
+  <StrutsTransition id="/train_conf.do,success,/sjcz/train_conf.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="519,314" />
+      <AbsolutePoint location="711,314" />
+      <AbsolutePoint location="711,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/train_cloth_insert.do,success,/train_cloth.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,94" />
+      <AbsolutePoint location="805,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/train_cloth.do,false,/errMsg.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,94" />
+      <AbsolutePoint location="594,94" />
+      <AbsolutePoint location="594,384" />
+      <AbsolutePoint location="142,384" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/test_print.do,success,/testPrint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="85,88" />
+      <AbsolutePoint location="85,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/train_cloth_insert.do,false,/errMsg.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1088,138" />
+      <AbsolutePoint location="1088,414" />
+      <AbsolutePoint location="142,414" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/train_cloth.do,success,/sqb/train_cloth.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="787,138" />
+      <AbsolutePoint location="787,274" />
+      <AbsolutePoint location="950,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/train_size.do,null,/sjcz/train_size.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="394,112" />
+      <AbsolutePoint location="394,153" />
+      <AbsolutePoint location="709,153" />
+      <AbsolutePoint location="709,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/train_conf.do,false,/errMsg.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,294" />
+      <AbsolutePoint location="96,294" />
+      <AbsolutePoint location="96,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

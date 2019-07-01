@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>
+		<!--	转移到湖北师范学院的配置文件,pjpy_hbsf.xml    -->
+		<action path="/pjpy_hbsf_apply" 	forward="/pjpyhbsfwh.do?method=priseApply"></action><!-- 奖学金申请首页 -->
+		<action path="/hbsf_jxjsqsave"           forward="/pjpyhbsfwh.do?method=jxjsqSave"></action><!-- 奖学金申请保存 -->
+		<action path="/pjpy_hbsf_zhszcp"    forward="/pjpyhbsfwh.do?method=zhszcpDefault"></action><!-- 综合素质测评首页 -->
+		<action path="/hbsf_zhszcpqry"           forward="/pjpyhbsfwh.do?method=zhszcpQry"></action><!-- 综合素质测评查询信息 -->
+		<action path="/hbsf_zhszcpadd"           forward="/pjpyhbsfwh.do?method=zhszcpAdd"></action><!-- 综合素质测评单个增加页面 -->
+		<action path="/hbsf_zhszcpsave"          forward="/pjpyhbsfwh.do?method=zhszcpSave"></action><!-- 综合素质测评保存 -->
+		<action path="/hbsf_zhszcpdel"           forward="/pjpyhbsfwh.do?method=zhszcpDel"></action><!-- 综合素质测评删除 -->
+		<action path="/hbsf_zhszcpview"          forward="/pjpyhbsfwh.do?method=zhszcpView"></action><!-- 综合素质测评修改显示 -->
+		<action path="/hbsf_zhszcpexp"           forward="/pjpyhbsfwh.do?method=zhszcpExp"></action><!-- 综合素质测评数据导出 -->
+	</action-mappings>
+</struts-config>

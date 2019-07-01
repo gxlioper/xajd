@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="bbdmModel" type="com.zfsoft.xgxt.comm.bbdmpz.model.BbdmModel" />
+	</form-beans>
+
+	<action-mappings>
+  		<action path="/comm_bbdmpz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.comm.bbdmpz.BbdmAction" 
+    			name="bbdmModel"
+    			parameter="method">
+    		<forward name="viewBbdmList" path="/xsgzgl/comm/bbdmpz/bbdmList.jsp"></forward>
+    		<forward name="viewBbdmInfo" path="/xsgzgl/comm/bbdmpz/bbdmInfo.jsp"></forward>
+    		<forward name="yhInfo" path="/xsgzgl/comm/bbdmpz/yhInfo.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>

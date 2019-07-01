@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xljk_XskhdxwhForm" type="xgxt.xljk.whlgdx.form.Xljk_XskhdxwhForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!--<<<<<<<<<<<<<<<<<<<< 首页 心理困惑学生维护 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xljk_XskhdxwhForm" parameter="index" path="/xljk_whlgdx_xskhdxwh" scope="request" 
+		type="xgxt.xljk.whlgdx.action.Xljk_XskhdxwhAction" validate="false">
+			<forward name="index" path="/xljk/whlgdx/xskhdxwh_index.jsp" />
+			<forward name="add" path="/xljk/whlgdx/xskhdxwh_add.jsp" />
+			<forward name="modi" path="/xljk/whlgdx/xskhdxwh_add.jsp" />
+			<forward name="del" path="/xljk/whlgdx/xskhdxwh_index.jsp" />
+			<forward name="view" path="/xljk/whlgdx/xskhdxwh_add.jsp" />
+			<forward name="stu_info" path="/xljk/whlgdx/xskhdxwh_stuinfo.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<心理咨询中心教育活动>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action name="xljk_XskhdxwhForm" path="/whlgdx_xljk" scope="request"  parameter="method"
+		type="xgxt.xljk.whlgdx.action.WhlgdxXljkDispatchAction" validate="false">
+			<forward name="xlzxjyhd_queryOne" path="/xljk/whlgdx/xlzxjyhd_queryOne.jsp" />
+			<forward name="data_xlzxjyhd" path="/xljk/whlgdx/data_xlzxjyhd.jsp" />
+			<!-- <<<<<<<<<<<<<<<<<<<<<<<<辅导员工作记录维护>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+			<forward name="fdygzjl_queryOne" path="/xljk/whlgdx/fdygzjl_queryOne.jsp" />
+			<forward name="data_fdygzjl" path="/xljk/whlgdx/data_fdygzjl.jsp" />
+			<forward name="common_exp" path="/about:black" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

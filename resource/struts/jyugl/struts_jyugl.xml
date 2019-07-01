@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="zfssForm" type="com.zfsoft.xgxt.jygl.zfss.ZfssForm" />
+    	<form-bean name="jzygForm" type="com.zfsoft.xgxt.jygl.zfss.JzygForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/jygl_zfss_zfssMg" 	forward="/zfss_zfss.do?method=zfssManage"/>
+		<action path="/jygl_zfss_zfssCt" 	forward="/zfss_zfss.do?method=zfssCount"/>
+		<action path="/szdw_showJzyg"  forward="/szdw_new.do?method=showJzyg"/>
+		
+		<!-- 辅导员走访宿舍 -->
+		<action path="/zfss_zfss" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.jygl.zfss.ZfssAction" 
+    			name="zfssForm"
+    			parameter="method">	
+    			
+    		<forward name="zfssList" path="/hqgl/jygl/zfssList.jsp"></forward>
+			<forward name="zfssAdd" path="/hqgl/jygl/zfssAdd.jsp"></forward>
+			<forward name="zfssUpdate" path="/hqgl/jygl/zfssUpdate.jsp"></forward>
+			<forward name="zfssCountList" path="/hqgl/jygl/zfssCountList.jsp"></forward>
+		</action>
+		<!-- 选择教职工 -->
+		<action path="/szdw_new" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.jygl.zfss.JzygAction" 
+    			name="jzygForm"
+    			parameter="method">
+    			
+    		<forward name="showJzyg" path="/hqgl/jygl/showJzyg.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>

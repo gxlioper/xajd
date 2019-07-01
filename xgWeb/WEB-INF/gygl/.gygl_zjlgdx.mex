@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/dormCheckManage.do" location="87,0" dimension="142,60" />
+  <StrutsActivity path="/jhzy_gygl.do" location="30,160" dimension="256,84" />
+  <StrutsActivity path="/gygl/jhzyjsxy/gyfdyInfo/gyfdyInfo_manager.jsp" location="0,344" dimension="316,48" />
+  <StrutsActivity path="/dormCadreStat.do" />
+  <StrutsTransition id="/dormCheckManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="158,60" />
+      <AbsolutePoint location="158,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dormCadreStat.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="158,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jhzy_gygl.do,gyfdyInfoQuery,/gygl/jhzyjsxy/gyfdyInfo/gyfdyInfo_manager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="158,244" />
+      <AbsolutePoint location="158,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

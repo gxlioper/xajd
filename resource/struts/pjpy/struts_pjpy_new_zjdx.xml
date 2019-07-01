@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<!-- 项目类型 -->
+		<form-bean name="xmlxForm" type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.dmwh.xmlx.XmlxForm"></form-bean>
+		<!-- 项目性质 -->
+		<form-bean name="xmxzForm" type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.dmwh.xmxz.XmxzForm"></form-bean>
+		<!-- 参数设置 -->
+		<form-bean name="zjdxCsszForm" type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.cssz.CsszForm"></form-bean>
+		<!-- 项目设置_项目维护 -->
+		<form-bean name="zjdxXmwhForm" type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.xmsz.xmwh.XmwhForm"></form-bean>
+		<!-- 项目设置_条件设置 -->
+		<form-bean name="tjszForm" type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.xmsz.tjsz.TjszForm"></form-bean>
+		<!-- 项目设置_人数设置 -->
+		<form-bean name="rsszForm" type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.xmsz.rssz.RsszForm"></form-bean>
+		<!-- 项目设置_兼得设置 -->
+		<form-bean name="jdszForm" type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.xmsz.jdsz.JdszForm"></form-bean>
+		<!-- 项目设置_报表设置 -->
+		<form-bean name="bbszForm" type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.xmsz.bbsz.BbszForm"></form-bean>
+		<!-- 综合测评_综测维护 -->
+		<form-bean name="zcwhForm" type="com.zfsoft.xgxt.xpjpy.zjdxzhcp.zcwh.ZcwhForm"></form-bean>
+		<!-- 学院人数设置 -->
+		<form-bean name="xyrsszForm" type="com.zfsoft.xgxt.xpjpy.zjdxzhcp.xyrssz.XyrsszForm"></form-bean>
+		<!-- 综合测评_参评人员调整记录 -->
+		<form-bean name="cprytzjlForm" type="com.zfsoft.xgxt.xpjpy.zjdxzhcp.cprytzjl.CprytzjlForm"></form-bean>
+		<!-- 荣誉申请 -->
+		<form-bean name="rysqForm" type="com.zfsoft.xgxt.xpjpy.zjdxwdpj.rysq.RysqForm"></form-bean>
+		<!-- 奖项申请 -->
+		<form-bean name="xmsqForm" type="com.zfsoft.xgxt.xpjpy.zjdxwdpj.xmsq.XmsqForm"></form-bean>
+		<!-- 项目审核 -->
+		<form-bean name="xmshForm" type="com.zfsoft.xgxt.xpjpy.zjdxwdpj.xmsh.XmshForm"></form-bean>
+		<!-- 评奖结果 -->
+		<form-bean name="pjjgForm" type="com.zfsoft.xgxt.xpjpy.zjdxwdpj.pjjg.PjjgForm"></form-bean>
+		<!-- 评奖项目汇总 -->
+		<form-bean name="xPjxmhzForm" type="com.zfsoft.xgxt.xpjpy.zjdxtjgl.pjxmhz.PjxmhzForm"></form-bean>
+		<!-- 证书打印数据 -->
+		<form-bean name="zsdysjForm" type="com.zfsoft.xgxt.xpjpy.zjdxtjgl.zsdysj.ZsdysjForm"></form-bean>
+		<!-- 发文名单导出 -->
+		<form-bean name="fwmddcForm" type="com.zfsoft.xgxt.xpjpy.zjdxtjgl.fwmddc.FwmddcForm"></form-bean>
+		<!-- 奖学金名额分配一览表 -->
+		<form-bean name="jxjfpForm" type="com.zfsoft.xgxt.xpjpy.zjdxtjgl.jxjfp.JxjfpForm"></form-bean>
+		<!-- 综合测评_先进集体 -->
+		<form-bean name="xjjtXjbjForm" type="com.zfsoft.xgxt.xpjpy.xjjt.xjbj.XjbjForm"></form-bean>
+		<!-- 综合测评_文明寝室 -->
+		<form-bean name="xjjtWmqsForm" type="com.zfsoft.xgxt.xpjpy.xjjt.wmqs.WmqsForm"></form-bean>
+	</form-beans>
+	
+	<action-mappings>
+		 <action path="/xpjpy_dmwh" forward="/xpjpy_xmlx.do?method=listXmlx"></action>                         <!-- 项目类型 -->
+		 <action path="/xpjpy_pjxzdm" forward="/xpjpy_xmxz.do?method=listXmxz"></action>                       <!-- 项目性质 -->
+		 <action path="/xpjpy_jbsz_cssz" forward="/xpjpy_cssz.do?method=getCsszList"></action>                 <!-- 参数设置 -->
+		 <action path="/xpjpy_jbsz_xmsz" forward="/xpjpy_xmwh.do?method=getXmwhList"></action>                 <!-- 项目设置 -->
+		 <action path="/xpjpy_zhcp_zcwh" forward="/xpjpy_zcwh.do?method=getZcwhList"></action>                 <!-- 综测维护 -->
+		 <action path="/xpjpy_zhcp_xyrssz" forward="/xpjpy_xyrssz.do?method=getXyrsszList"></action>           <!-- 学院人数设置 -->
+		 <action path="/xpjpy_zhcp_qxtjzcf" forward="/xpjpy_zcwh.do?method=getQxtjzcfList"></action>           <!-- 取消提交综测分 -->
+		 <action path="/xpjpy_zhcp_cprytzjl" forward="/xpjpy_cprytzjl.do?method=getCprytzjlList"></action>     <!-- 参评人员调整记录 -->
+		 <action path="/xpjpy_wdpj_rysq" forward="/xpjpy_rysq.do?method=getRysqList"></action>                 <!-- 荣誉申请 -->
+		 <action path="/xpjpy_wdpj_pjsq" forward="/xpjpy_xmsq.do?method=getXmsqList"></action>                 <!-- 奖项申请 -->
+		 <action path="/xpjpy_wdpj_pjsh" forward="/xpjpy_xmsh.do?method=getXmshList"></action>                 <!-- 项目审核 -->
+		 <action path="/xpjpy_wdpj_pjjg" forward="/xpjpy_pjjg.do?method=getPjjgList"></action>                 <!-- 评奖结果 -->
+		 <action path="/xpjpy_tjgl_pjxmhz" forward="/xpjpy_pjxmhz.do?method=getPjxmhzList"></action>           <!-- 评奖项目汇总 -->
+		 <action path="/xpjpy_tjgl_zsdysj" forward="/xpjpy_zsdysj.do?method=getZsdysjList"></action>           <!-- 证书打印数据 -->
+		 <action path="/xpjpy_tjgl_fwmddc" forward="/xpjpy_fwmddc.do?method=getFwmddcList"></action>           <!-- 发文名单导出 -->
+		 <action path="/xpjpy_tjgl_jxjfp" forward="/xpjpy_jxjfp.do?method=getJxjfpList"></action>              <!-- 奖学金名额分配一览表 -->
+ 		 <action path="/xpjpy_yxjt_xjbj" forward="/xpjpy_xjbj.do?method=getDataList"></action>       	       <!-- 先进班级 -->
+		 <action path="/xpjpy_yxjt_wmqs" forward="/xpjpy_wmqs.do?method=getDataList"></action>       	       <!-- 文明寝室 -->
+		 
+		 <!-- 新评奖评优代码维护-项目类型 -->
+		 <action path="/xpjpy_xmlx"
+				 name="xmlxForm"
+				 type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.dmwh.xmlx.XmlxAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="listXmlx" path="/xsgzgl/xpjpy/zjdxjbsz/dmwh/xmlx/listXmlx.jsp"></forward>      <!-- 项目类型查询页面 -->
+				 <forward name="addXmlx" path="/xsgzgl/xpjpy/zjdxjbsz/dmwh/xmlx/addXmlx.jsp"></forward>	       <!-- 项目类型增加页面 -->
+				 <forward name="updateXmlx" path="/xsgzgl/xpjpy/zjdxjbsz/dmwh/xmlx/updateXmlx.jsp"></forward>  <!-- 项目类型修改页面 -->
+		</action>
+		
+		<!-- 新评奖评优代码维护-项目性质 -->
+		 <action path="/xpjpy_xmxz"
+				 name="xmxzForm"
+				 type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.dmwh.xmxz.XmxzAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="listXmxz" path="/xsgzgl/xpjpy/zjdxjbsz/dmwh/xmxz/listXmxz.jsp"></forward>      <!-- 项目性质查询页面 -->
+				 <forward name="addXmxz" path="/xsgzgl/xpjpy/zjdxjbsz/dmwh/xmxz/addXmxz.jsp"></forward>	       <!-- 项目性质增加页面 -->
+				 <forward name="updateXmxz" path="/xsgzgl/xpjpy/zjdxjbsz/dmwh/xmxz/updateXmxz.jsp"></forward>  <!-- 项目性质修改页面 -->
+		</action>
+		
+		<!-- 新评奖评优基本设置-参数设置 -->
+		 <action path="/xpjpy_cssz"
+				 name="zjdxCsszForm"
+				 type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.cssz.CsszAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="listCssz" path="/xsgzgl/xpjpy/zjdxjbsz/cssz/listCssz.jsp"></forward>      <!-- 参数设置查询页面 -->
+				 <forward name="addZcxm" path="/xsgzgl/xpjpy/zjdxjbsz/cssz/addZcxm.jsp"></forward>        <!-- 综测项目增加页面 -->
+				 <forward name="updateZcxm" path="/xsgzgl/xpjpy/zjdxjbsz/cssz/updateZcxm.jsp"></forward>  <!-- 综测项目修改页面 -->
+		</action>
+		
+		<!-- 新评奖评优基本设置-项目维护-项目维护 -->
+		 <action path="/xpjpy_xmwh"
+				 name="zjdxXmwhForm"
+				 type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.xmsz.xmwh.XmwhAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="xmwhList" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/xmwh/xmwhList.jsp"></forward>      <!-- 项目维护查询页面 -->
+				 <forward name="xmwhAdd" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/xmwh/xmwhAdd.jsp"></forward>        <!-- 项目维护增加页面 -->
+				 <forward name="xmwhUpdate" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/xmwh/xmwhUpdate.jsp"></forward>  <!-- 项目维护修改页面 -->
+				 <forward name="xmwhSjkg" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/xmwh/xmwhSjkg.jsp"></forward>      <!-- 项目维护时间开关 -->
+				 <forward name="xmwhJxfz" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/xmwh/xmwhJxfz.jsp"></forward>      <!-- 项目维护奖项复制 -->
+		</action>
+		
+		
+		<!-- 新评奖评优基本设置-项目维护-人数设置 -->
+		<action path="/xpjpy_xmwh_rssz"
+				 name="rsszForm"
+				 type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.xmsz.rssz.RsszAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="xmwhRsszCx" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/rssz/xmwhRsszCx.jsp"></forward><!-- 人数设置查询 -->
+		</action>
+		
+		<!-- 新评奖评优基本设置-项目维护-条件设置 -->
+		<action path="/xpjpy_xmwh_tjsz"
+				name="tjszForm"
+				type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.xmsz.tjsz.TjszAction"
+				scope="request"
+				parameter="method">
+				<forward name="xmwhTjszCx" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/tjsz/xmwhTjszCx.jsp"></forward>         <!-- 条件设置查询 -->
+				<forward name="xmwhTjszXn" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/tjsz/xmwhTjszXn.jsp"></forward>         <!-- 条件设置-学年学期选择 -->
+				<forward name="xmwhTjszTjzDiv" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/tjsz/xmwhTjszTjzDiv.jsp"></forward> <!-- 条件设置-条件值弹层选择 -->
+		</action>
+		
+		<!-- 新评奖评优基本设置-项目维护-不可兼得设置 -->
+		<action path="/xpjpy_xmwh_jdsz"
+				name="jdszForm"
+				type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.xmsz.jdsz.JdszAction"
+				scope="request"
+				parameter="method">
+				<forward name="xmwhJdszcx" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/jdsz/xmwhJdszcx.jsp"></forward>         <!-- 兼得设置查询 -->
+		</action>
+		
+		<!-- 新评奖评优基本设置-项目维护-报表设置 -->
+		<action path="/xpjpy_xmwh_bbsz"
+				name="bbszForm"
+				type="com.zfsoft.xgxt.xpjpy.zjdxjbsz.xmsz.bbsz.BbszAction"
+				scope="request"
+				parameter="method">
+				<forward name="bbylList" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/bbsz/bbylList.jsp"></forward> <!-- 报表列表 -->
+				<forward name="showYlbb" path="/xsgzgl/xpjpy/zjdxjbsz/xmsz/bbsz/showYlbb.jsp"></forward> <!-- 报表预览 -->
+		</action>
+		
+		
+		<!-- 新评奖评优综合测评-综测维护 -->
+		<action path="/xpjpy_zcwh"
+				name="zcwhForm"
+				type="com.zfsoft.xgxt.xpjpy.zjdxzhcp.zcwh.ZcwhAction"
+				scope="request"
+				parameter="method">
+				<forward name="zcwhList" path="/xsgzgl/xpjpy/zjdxzhcp/zcwh/zcwhList.jsp"></forward>          <!-- 综测维护查询列表 -->
+				<forward name="zcwhEdit" path="/xsgzgl/xpjpy/zjdxzhcp/zcwh/zcwhEdit.jsp"></forward>          <!-- 综测名单分数维护 -->
+				<forward name="zcwhView" path="/xsgzgl/xpjpy/zjdxzhcp/zcwh/zcwhView.jsp"></forward>          <!-- 综测名单查看 -->
+				<forward name="cpxsAdd" path="/xsgzgl/xpjpy/zjdxzhcp/zcwh/cpxsAdd.jsp"></forward>            <!-- 增加参评学生名单 -->
+				<forward name="importZcf" path="/xsgzgl/xpjpy/zjdxzhcp/zcwh/importZcf.jsp"></forward>        <!-- 综测分导入 -->
+				<forward name="qxtjzcfList" path="/xsgzgl/xpjpy/zjdxzhcp/qxtjzcf/qxtjzcfList.jsp"></forward> <!-- 取消提交综测分 -->
+				<forward name="cancelTj" path="/xsgzgl/xpjpy/zjdxzhcp/qxtjzcf/cancelTj.jsp"></forward>       <!-- 综测分取消提交 -->
+		</action>
+		
+		<!-- 新评奖评优综合测评-学院人数设置 -->
+		<action path="/xpjpy_xyrssz"
+				name="xyrsszForm"
+				type="com.zfsoft.xgxt.xpjpy.zjdxzhcp.xyrssz.XyrsszAction"
+				scope="request"
+				parameter="method">
+				<forward name="xyrsszList" path="/xsgzgl/xpjpy/zjdxzhcp/xyrssz/xyrsszList.jsp"></forward> <!-- 学院人数设置查询列表 -->
+				<forward name="xyrsszCx" path="/xsgzgl/xpjpy/zjdxzhcp/xyrssz/xyrsszCx.jsp"></forward>     <!-- 学院用户设置查询列表 -->
+		</action>
+		
+		
+		<!--  新评奖评优综合测评-参评人员调整记录 -->
+		<action path="/xpjpy_cprytzjl"
+				name="cprytzjlForm"
+				type="com.zfsoft.xgxt.xpjpy.zjdxzhcp.cprytzjl.CprytzjlAction"
+				scope="request"
+				parameter="method">
+				<forward name="cprytzjlList" path="/xsgzgl/xpjpy/zjdxzhcp/cprytzjl/cprytzjlList.jsp"></forward> <!-- 参评人员调整记录查询列表 -->
+		</action>
+		
+		<!-- 新评奖评优我的评奖-荣誉申请 -->
+		<action path="/xpjpy_rysq"
+				 name="rysqForm"
+				 type="com.zfsoft.xgxt.xpjpy.zjdxwdpj.rysq.RysqAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="rysqList" path="/xsgzgl/xpjpy/zjdxwdpj/rysq/rysqList.jsp"></forward>        <!-- 荣誉申请查询页面  -->
+				 <forward name="rysqAdd" path="/xsgzgl/xpjpy/zjdxwdpj/rysq/rysqAdd.jsp"></forward>          <!-- 荣誉申请增加页面 -->
+				 <forward name="rysqUpdate" path="/xsgzgl/xpjpy/zjdxwdpj/rysq/rysqUpdate.jsp"></forward>    <!-- 荣誉申请修改页面 -->
+				 <forward name="rysqView" path="/xsgzgl/xpjpy/zjdxwdpj/rysq/rysqView.jsp"></forward>        <!-- 荣誉申请查看页面 -->
+				 <forward name="selectRyxm" path="/xsgzgl/xpjpy/zjdxwdpj/rysq/selectRyxm.jsp"></forward>    <!-- 荣誉申请选择荣誉 -->
+		</action>
+		
+		<!-- 新评奖评优我的评奖-奖项申请 -->
+		<action path="/xpjpy_xmsq"
+				 name="xmsqForm"
+				 type="com.zfsoft.xgxt.xpjpy.zjdxwdpj.xmsq.XmsqAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="xmsqList" path="/xsgzgl/xpjpy/zjdxwdpj/xmsq/xmsqList.jsp"></forward>        <!-- 奖项申请查询页面 -->
+				 <forward name="xmsqAdd" path="/xsgzgl/xpjpy/zjdxwdpj/xmsq/xmsqAdd.jsp"></forward>          <!-- 奖项申请增加页面-->
+				 <forward name="xmsqUpdate" path="/xsgzgl/xpjpy/zjdxwdpj/xmsq/xmsqUpdate.jsp"></forward>    <!-- 奖项申请修改页面 -->
+				 <forward name="xmsqView" path="/xsgzgl/xpjpy/zjdxwdpj/xmsq/xmsqView.jsp"></forward>      	<!-- 奖项申请查看页面 -->
+				 <forward name="selectPjxm" path="/xsgzgl/xpjpy/zjdxwdpj/xmsq/selectPjxm.jsp"></forward>    <!-- 奖项申请选择奖项 -->
+		</action>
+		
+		<!-- 新评奖评优我的评奖-奖项审核 -->
+		<action path="/xpjpy_xmsh"
+				 name="xmshForm"
+				 type="com.zfsoft.xgxt.xpjpy.zjdxwdpj.xmsh.XmshAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="xmshList" path="/xsgzgl/xpjpy/zjdxwdpj/xmsh/xmshList.jsp"></forward>        <!-- 审核查询页面 -->
+				 <forward name="xmshPlsh" path="/xsgzgl/xpjpy/zjdxwdpj/xmsh/xmshPlsh.jsp"></forward>        <!-- 批量审核页面 -->
+		</action>
+		
+		<!-- 新评奖评优我的评奖-评奖结果 -->
+		 <action path="/xpjpy_pjjg"
+				 name="pjjgForm"
+				 type="com.zfsoft.xgxt.xpjpy.zjdxwdpj.pjjg.PjjgAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="listPjjg" path="/xsgzgl/xpjpy/zjdxwdpj/pjjg/listPjjg.jsp"></forward>         <!-- 评奖结果查询页面 -->
+				 <forward name="addPjjg" path="/xsgzgl/xpjpy/zjdxwdpj/pjjg/addPjjg.jsp"></forward>	         <!-- 评奖结果增加页面 -->
+				 <forward name="updatePjjg" path="/xsgzgl/xpjpy/zjdxwdpj/pjjg/updatePjjg.jsp"></forward>     <!-- 评奖结果修改页面 -->
+				 <forward name="viewPjjg" path="/xsgzgl/xpjpy/zjdxwdpj/pjjg/viewPjjg.jsp"></forward>         <!-- 评奖结果查看页面 -->
+				 <forward name="showStudents" path="/xsgzgl/xpjpy/zjdxwdpj/pjjg/showStudents.jsp"></forward> <!-- 评奖学生选择页面 -->
+		</action>
+		
+		<!-- 新评奖评优统计管理-评奖项目汇总 -->
+		<action path="/xpjpy_pjxmhz"
+				name="xPjxmhzForm"
+				type="com.zfsoft.xgxt.xpjpy.zjdxtjgl.pjxmhz.PjxmhzAction"
+				scope="request"
+				parameter="method">
+				<forward name="pjxmhzList" path="/xsgzgl/xpjpy/zjdxtjgl/pjxmhz/pjxmhzList.jsp"></forward>          <!-- 评奖项目汇总查询页面 -->
+				<forward name="pjxmhzHjrsView" path="/xsgzgl/xpjpy/zjdxtjgl/pjxmhz/pjxmhzHjrsView.jsp"></forward>  <!-- 评奖项目汇总人数查询 -->
+		</action>
+		
+		<!-- 新评奖评优统计管理-证书打印数据 -->
+		<action path="/xpjpy_zsdysj"
+				name="zsdysjForm"
+				type="com.zfsoft.xgxt.xpjpy.zjdxtjgl.zsdysj.ZsdysjAction"
+				scope="request"
+				parameter="method">
+				<forward name="zsdysjList" path="/xsgzgl/xpjpy/zjdxtjgl/zsdysj/zsdysjList.jsp"></forward>          <!-- 证书打印数据查询页面 -->
+		</action>
+		
+		<!-- 新评奖评优统计管理-发文名单导出 -->
+		<action path="/xpjpy_fwmddc"
+				name="fwmddcForm"
+				type="com.zfsoft.xgxt.xpjpy.zjdxtjgl.fwmddc.FwmddcAction"
+				scope="request"
+				parameter="method">
+				<forward name="fwmddcList" path="/xsgzgl/xpjpy/zjdxtjgl/fwmddc/fwmddcList.jsp"></forward>          <!-- 发文名单导出查询页面 -->
+		</action>
+		
+		<!-- 新评奖评优统计管理-奖学金名额分配一览表 -->
+		<action path="/xpjpy_jxjfp"
+				name="jxjfpForm"
+				type="com.zfsoft.xgxt.xpjpy.zjdxtjgl.jxjfp.JxjfpAction"
+				scope="request"
+				parameter="method">
+				<forward name="jxjfpList" path="/xsgzgl/xpjpy/zjdxtjgl/jxjfp/jxjfpList.jsp"></forward>     <!-- 奖学金名额分配一览表查询页面 -->
+		</action>
+		
+		 <!-- 新评奖评优代码维护-先进班级 -->
+		 <action path="/xpjpy_xjbj"
+				 name="xjjtXjbjForm"
+				 type="com.zfsoft.xgxt.xpjpy.xjjt.xjbj.XjbjAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="listXjbj" path="/xsgzgl/xpjpy/xjjt/xjbj/listXjbj.jsp"></forward>       <!-- 先进班级查询页面 -->
+				 <forward name="addXjbj" path="/xsgzgl/xpjpy/xjjt/xjbj/addXjbj.jsp"></forward>	       <!-- 项目类型增加页面 -->
+		</action>
+		
+		<!-- 新评奖评优代码维护-文明寝室 -->
+		 <action path="/xpjpy_wmqs"
+				 name="xjjtWmqsForm"
+				 type="com.zfsoft.xgxt.xpjpy.xjjt.wmqs.WmqsAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="listWmqs" path="/xsgzgl/xpjpy/xjjt/wmqs/listWmqs.jsp"></forward>       <!-- 先进班级查询页面 -->
+				 <forward name="addWmqs" path="/xsgzgl/xpjpy/xjjt/wmqs/addWmqs.jsp"></forward>	       <!-- 项目类型增加页面 -->
+		</action>
+	</action-mappings>
+</struts-config>

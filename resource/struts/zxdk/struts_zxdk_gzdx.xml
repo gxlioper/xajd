@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="zxdkgzdxForm" type="xgxt.zxdk.gzdx.ZxdkGzdxActionForm">
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>	
+		<!-- 展现路径 -->
+		<action path="/zxdk_gzdx_sjwh" forward="/zxdk_gzdx.do?method=zxdkSjwhQuery"></action><!-- 助学贷款数据维护查询页面 -->
+		<action path="/zxdk_gzdx_addZxdkSjwh" forward="/zxdk_gzdx.do?method=addZxdkSjwh"></action><!-- 单个增加助学贷款数据维护  -->
+		<action path="/zxdk_gzdx_zxdkSjwhxxQueryOpen" forward="/zxdk_gzdx.do?method=zxdkSjwhxxQueryOpen"></action><!-- 查看助学贷款数据跳转  -->
+		<action path="/zxdk_gzdx_zxdkSjwhxxQuery" forward="/zxdk_gzdx.do?method=zxdkSjwhxxQuery"></action><!-- 查看助学贷款数据  -->
+		<action path="/zxdk_gzdx_updateZxdkSjwh" forward="/zxdk_gzdx.do?method=updateZxdkSjwh"></action><!-- 单个修改助学贷款数据维护 -->
+		<action path="/zxdk_gzdx_delZxdkSjwh" forward="/zxdk_gzdx.do?method=delZxdkSjwh"></action><!-- 删除助学贷款数据维护 -->
+		<!-- 实际路径 -->	
+		<action name="zxdkgzdxForm" 
+				parameter="method" 
+				path="/zxdk_gzdx"
+				scope="request"	
+				type="xgxt.zxdk.gzdx.ZxdkGzdxAction">
+			<forward name="zxdkSjwhQuery" path="/zxdk/gzdx/zxdkSjwhQuery.jsp" /><!-- 助学贷款数据维护查询页面  -->
+			<forward name="addZxdkSjwh" path="/zxdk/gzdx/addZxdkSjwh.jsp" /><!-- 单个增加助学贷款数据维护  -->
+			<forward name="zxdkSjwhxxQueryOpen" path="/zxdk/gzdx/zxdkSjwhxxQuery.jsp" /><!-- 查看助学贷款数据跳转  -->
+			<forward name="zxdkSjwhxxQuery" path="/zxdk/gzdx/zxdkSjwhxxQuery.jsp" /><!-- 查看助学贷款数据  -->
+			<forward name="updateZxdkSjwh" path="/zxdk/gzdx/updateZxdkSjwh.jsp" /><!-- 单个修改助学贷款数据维护 -->
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    <form-bean name="GyccDmwhForm" type="xsgzgl.gygl.gyccgl.dmwh.GyccDmwhForm" />
+	<form-bean name="CcdjForm" type="xsgzgl.gygl.gyccgl.ccdj.CcdjForm" />
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/gygl_gyccgl_dmwh" 	forward="/gyccgl_dmwh.do?method=searchRs"/>		<!-- 代码维护 -->
+    	
+    	<action path="/gyccgl_dmwh" 
+    			scope="request"
+    			type="xsgzgl.gygl.gyccgl.dmwh.GyccDmwhAction" 
+    			name="GyccDmwhForm"
+    			parameter="method">	
+    		<forward name="cx" path="/gygl/gyccgl/dmwh/searchrs.jsp"/>
+    		<forward name="addwp" path="/gygl/gyccgl/dmwh/addwp.jsp"/>
+    		<forward name="updatewp" path="/gygl/gyccgl/dmwh/updatewp.jsp"/>
+    		<forward name="addshcd" path="/gygl/gyccgl/dmwh/addshcd.jsp"/>
+    		<forward name="updateshcd" path="/gygl/gyccgl/dmwh/updateshcd.jsp"/>
+    		
+		</action>
+		
+		<action path="/gygl_gyccgl_ccdj" 	forward="/gyccgl_ccdj.do?method=searchRs"/>		<!-- 代码维护 -->
+    	
+    	<action path="/gyccgl_ccdj" 
+    			scope="request"
+    			type="xsgzgl.gygl.gyccgl.ccdj.CcdjAction" 
+    			name="CcdjForm"
+    			parameter="method">	
+    		<forward name="cx" path="/gygl/gyccgl/ccdj/searchrs.jsp"/>
+    		<forward name="addccdj" path="/gygl/gyccgl/ccdj/addccdj.jsp"/>
+    		<forward name="updateccdj" path="/gygl/gyccgl/ccdj/updateccdj.jsp"/>
+    		<forward name="dr" path="/gygl/gyccgl/ccdj/dr.jsp"/>
+    		<forward name="viewccdj" path="/gygl/gyccgl/ccdj/viewccdj.jsp"/>
+		</action>    	
+    	
+		
+	</action-mappings>
+</struts-config>

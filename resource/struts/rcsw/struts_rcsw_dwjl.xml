@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务 -对外交流+思想教育-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="dwjlForm" type="com.zfsoft.xgxt.rcsw.dwjl.DwjlForm" />
+    	<form-bean name="sxjyForm" type="com.zfsoft.xgxt.rcsw.sxjy.SxjyForm" />
+	</form-beans>
+	
+	<action-mappings>
+	
+	<action path="/xg_dwjl_dwjljg" forward="/xg_dwjl_dwjl.do?method=dwjlcx"/>	<!-- 对外交流 -->
+	<action path="/xg_dwjl_dwjl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.dwjl.DwjlAction" 
+   			name="dwjlForm"         
+   			parameter="method">	
+   		<forward name="dwjlcx" path="/xsgzgl/rcsw/dwjl/dwjlcx.jsp"></forward>
+   		<forward name="add" path="/xsgzgl/rcsw/dwjl/add.jsp"></forward>
+   		<forward name="xg" path="/xsgzgl/rcsw/dwjl/xg.jsp"></forward>
+   		<forward name="view" path="/xsgzgl/rcsw/dwjl/ck.jsp"></forward>
+	</action> 
+	
+	<action path="/xg_sxjy_sxjyjg" forward="/xg_sxjy_sxjy.do?method=sxjycx"/>	<!-- 思想教育 -->
+	<action path="/xg_sxjy_sxjy" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.sxjy.SxjyAction" 
+   			name="sxjyForm"         
+   			parameter="method">	
+   		<forward name="sxjycx" path="/xsgzgl/rcsw/sxjy/sxjycx.jsp"></forward>
+   		<forward name="add" path="/xsgzgl/rcsw/sxjy/add.jsp"></forward>
+   		<forward name="xg" path="/xsgzgl/rcsw/sxjy/xg.jsp"></forward>
+   		<forward name="view" path="/xsgzgl/rcsw/sxjy/ck.jsp"></forward>
+	</action> 
+	</action-mappings>
+</struts-config>

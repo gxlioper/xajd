@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="qgzxForm" type="xgxt.qgzx.form.QgzxForm" />
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+		<form-bean name="qgzxCjffForm" type="xgxt.qgzx.zgdzdx.QgzxCjffForm" />
+		<form-bean name="qgzxGbmygForm" type="xgxt.qgzx.QgzxGbmygExcelActionForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action 
+			path="/qgzx_bb_gwsbb" 
+			name="qgzxForm"
+			parameter="qgzx_gwsbb" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/qgzx_bb_gwsbb.jsp"/>
+			<forward name="success_zzsf" path="/qgzx/zzsf/qgzx_bb_gwsbb.jsp"/>
+		</action>
+		
+		<action 
+			path="/qgzx_bb_gwsqb" 
+			name="qgzxForm"
+			parameter="qgzx_gwsqb" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/qgzx_bb_gwsqb.jsp"/>
+			<forward name="success_zzsf" path="/qgzx/zzsf/qgzx_bb_gwsqb.jsp"/>
+		</action>
+		
+		<action 
+			path="/qgzx_xskh_print" 
+			name="qgzxForm"
+			parameter="xskhPrint" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/bjlhdx/xsykhb.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<勤工助学 勤工助学申请>>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/qgzx_ynys_qgzxApply" 
+			name="qgzxForm"
+			parameter="qgzx_ynys_qgzxApply" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/ynys/qgzx_ynys_gwsq.jsp"/>
+			<forward name="false" path="/errMsg.jsp"/>
+		</action>
+		
+		<action 
+			path="/qgzx_work_adjust" 
+			name="qgzxForm"
+			parameter="qgzx_work_adjust" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/ynys/qgzx_ynys_gwtzxx.jsp"/>
+			<forward name="false" path="/errMsg.jsp"/>
+		</action>
+		
+		<action 
+			path="/qgzx_work_adjustInfo" 
+			name="qgzxForm"
+			parameter="qgzx_work_adjustInfo" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/ynys/qgzx_ynys_gwtzb.jsp"/>
+			<forward name="false" path="errMsg.jsp"/>
+		</action>
+		
+		<action 
+			path="/qgzx_work_adjustSave" 
+			name="qgzxForm"
+			parameter="qgzx_work_adjustSave" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx_work_adjustInfo.do"/>
+			<forward name="false" path="errMsg.jsp"/>
+		</action>
+		
+		<action 
+			path="/qgzx_work_adjustAudi" 
+			name="qgzxForm"
+			parameter="qgzx_work_adjustAudi" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/qgzx_gwtzAudi.jsp"/>
+			<forward name="false" path="errMsg.jsp"/>
+		</action>
+		
+		<action 
+			path="/saveAdjustBatchAudi" 
+			name="qgzxForm"
+			parameter="saveAdjustBatchAudi" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/qgzx_gwtzAudi.jsp"/>
+			<forward name="false" path="errMsg.jsp"/>
+		</action>
+		
+		<action 
+			path="/adjustDetails" 
+			name="qgzxForm"
+			parameter="adjustDetails" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/qgzx_gwtzxxxx.jsp"/>
+			<forward name="false" path="errMsg.jsp"/>
+		</action>
+		
+		<action 
+			path="/qgzx_jsxx_gwsq" 
+			name="qgzxForm"
+			parameter="qgzx_jsxx_gwsq" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/jsxx/gwsq.jsp"/>
+		</action>
+		
+		<action 
+			path="/qgzx_jsxx_gwsqSave" 
+			name="qgzxForm"
+			parameter="qgzx_jsxx_gwsqSave" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/jsxx/gwsq.jsp"/>
+		</action>
+		
+		<action 
+			path="/qgzx_jsxx_gwsqPrint" 
+			name="qgzxForm"
+			parameter="qgzx_jsxx_gwsqPrint" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/jsxx/print/jsxx_qgzx_gwsbb.jsp"/>
+		</action>
+		
+		<action 
+			path="/postStuChkBatch" 
+			name="qgzxForm"
+			parameter="postStuChkBatch" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<<<<北京联合经费汇总查询>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/jfhzcx" 
+			name="qgzxForm" 
+			parameter="jfhzcx"
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="success" path="/qgzx/bjlhdx/jfhzcx.jsp"/>
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 参数设置－勤工助学参数设置 >>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			name="commanForm" 
+			parameter="workConf" 
+			path="/work_conf"
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/work_conf.jsp" />
+			<forward name="zgdzdxWorkConf" path="/qgzx/zgdzdx/work_conf.jsp" />			
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 勤工助学－岗位申请以及总表 >>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			name="commanForm" 
+			parameter="workerApply"
+			path="/post_stu_apply" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/gwsq.jsp" />
+			<forward name="zgdzdx" path="/qgzx/zgdzdx/qgzxgwsq.jsp"></forward>
+			<forward name="qgzx_gdbyxy" path="/qgzx/byxy/qgzx_byxy_gwsq.jsp" />
+		</action>
+		
+		<!-- 申请了勤工助学的学生-->
+		<action 
+			name="commanForm" 
+			parameter="stuQgzxInfo"
+			path="/stu_qgzx_info" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="stu_qgzx_info" path="/qgzx/zgdzdx/stu_qgzx_info.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<< 勤工助学－酬金发放查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			name="commanForm" 
+			parameter="workPaySearch"
+			path="/work_pay_search" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/work_pay_search.jsp" />
+		</action>
+		
+		<action path="/qgzx_gbmyg_execl" 	forward="/qgzxGbmyg.do?method=gbmygbtj"/><!-- 各部门用工表统计 -->
+		<!-- 各部门用工表统计 -->
+    	<action path="/qgzxGbmyg" 
+        		parameter="method"  
+        		name="qgzxGbmygForm" 
+        		scope="request"
+		        type="xgxt.qgzx.action.QgzxGbmygExcelAction">
+		        <forward name="gbmygbtj" path="/sjcz/work_pay_search_t.jsp" />
+		</action>
+		
+		<action 
+			name="commanForm" 
+			parameter="workPaySearch"
+			path="/work_pay_search" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/work_pay_search.jsp" />
+		</action>
+		
+		<action 
+			name="commanForm" 
+			parameter="workPaySearchT"
+			path="/work_pay_search_t" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/work_pay_search_t.jsp" />
+		</action>
+		
+		<action 
+			name="commanForm" 
+			parameter="auditingControl"
+			path="/post_stu_zhztkz" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/auditingControl.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 勤工助学－酬金发放保存 >>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			name="commanForm" 
+			parameter="workPaySave"
+			path="/workPaySave" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/work_pay_search_t.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 勤工助学－酬金发放-查看报表 >>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			name="commanForm" 
+			parameter="VIEWREPORT"
+			path="/view_report" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/view_report.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 勤工助学－经费管理-经费划拨 >>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			name="commanForm" 
+			parameter="workOutlayTransfer"
+			path="/work_outlay_transfer" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/work_outlay_transfer.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 勤工助学－经费管理-经费追加 >>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			name="commanForm" 
+			parameter="workOutlayAdd"
+			path="/work_outlay_add" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/work_outlay_add.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 勤工助学－经费管理-经费记录修改 >>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			name="commanForm" 
+			parameter="workOutlayModi"
+			path="/work_outlay_modi" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/work_outlay_add.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 勤工助学 >>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			path="/qgzxLogic" 
+			type="xgxt.qgzx.action.QgzxLogicAction"
+			parameter="method" 
+			name="commanForm"
+			scope="request">
+			<forward name="success" path="/qgzx/ynys/qgzx_ynys_passcheck.jsp" />
+			<forward name="infopub" path="/qgzx/gdnzzy/infoPub.jsp" />
+			<forward name="info" path="/qgzx/gdnzzy/infoContent.jsp" />
+			<forward name="timeconf" path="/qgzx/shgc/timeConf.jsp" />
+			<forward name="stationtimeconf" path="/qgzx/shgc/stationTimeConf.jsp" />
+			<forward name="show_station_timeconf_page" path="/qgzx/shgc/stationTimeModify.jsp" />
+			<forward name="show_timeconf_page" path="/qgzx/shgc/timeModify.jsp" />
+			<forward name="qgzx_ynys_gwxxb" path="/qgzx/ynys/qgzx_ynys_gwxxb.jsp" />
+			<forward name="qgzx_lfsf_xsgwkhb" path="/qgzx/lfsf/qgzx_lfsf_xsgwkhb.jsp" />
+			<forward name="qgzx_lfsf_sjtj" path="/qgzx/lfsf/qgzx_lfsf_sjtj.jsp" />
+			<forward name="qgzx_byxy_gwsq" path="/qgzx/byxy/qgzx_byxy_gwsq.jsp" />
+			<forward name="qgzx_byxy_printapply" path="/qgzx/byxy/print/qgzx_byxy_printapply.jsp" />
+			<forward name="qgzx_gdnz_browsestation" path="/qgzx/gdnzzy/qgzx_gdnzzy_browsestation.jsp" />
+			<forward name="namelist" path="/qgzx/gdnzzy/nameList.jsp" />
+			<forward name="shgc_batch_workpay" path="/qgzx/shgc/shgc_work_pay_details.jsp" /> 
+			<forward name="shgc_batchpage" path="/qgzx/shgc/shgc_batchpage.jsp" />
+			<forward name="batchpay_success" path="/sjcz/work_pay_put.jsp" />
+			<forward name="xsgwxxcx" path="/qgzx/qgzx_xsgwsq_search.jsp" />		
+			<forward name="reTime" path="/qgzx/qgzx_gzbfsj.jsp" />	
+			<forward name="reWorkPay" path="/qgzx/re_work_pay_details.jsp" />
+			<forward name="gwxxxx" path="/qgzx/qgzx_gwxxxx.jsp" />				
+			<forward name="gzdx_gwxxxx" path="/qgzx/gzdx/gzdx_gwxxxx.jsp" />
+			<forward name="gzdx_xsgwxx" path="/qgzx/gzdx/gzdx_xsgwxxb.jsp" />
+			<forward name="zgdzdx_xsgwxx" path="/qgzx/zgdzdx/zgdzdx_xsgwxxb.jsp" />
+			<forward name="rsxxdetail" path="/qgzx/zgdzjxy/rsxxdetail.jsp" />	
+		</action>
+		
+		<!--湖南工业岗位管理-->
+    	<action path="/gwgl" 
+    		type="xgxt.qgzx.hngydx.action.HngydxGwglAction"
+    		parameter="method" 
+    		name="commanForm">
+    		<forward name="success" path="/qgzx/hngydx/qgzx_hngydx_gwxxb.jsp"></forward>
+    		</action>
+    	<!--湖南工业学生勤工助学管理-->	
+	    <action 
+	    	path="/xsqgzx" 
+	    	type="xgxt.qgzx.hngydx.action.HngydxXsqgzxAction"
+	    	parameter="method"
+	    	name="commanForm"
+	    	scope="request">
+	    	<forward name="success" path="/qgzx/hngydx/gwsq.jsp"></forward>
+	    	<forward name="modiRemark" path="/qgzx/hngydx/modiRemark.jsp"></forward>
+	    	<forward name="printXsgwxxb" path="/qgzx/hngydx/print_hngydx_gwsqb.jsp"></forward>
+	   		</action>
+	   	<!--武汉理工大学岗位管理-->	
+    	<action 
+    		path="/whlggwgl" 
+    		type="xgxt.qgzx.whlgdx.action.WhlgdxGwglAction"
+    		name="commanForm"
+    		parameter="method">
+    		<forward name="success" path="/qgzx/whlgdx/gwxxb.jsp"></forward>
+    		</action>
+    	<!--中国美术学院酬金发放-->	
+    	<action 
+    		path="/qgzxZgmsxy" 
+    		type="xgxt.qgzx.zgmsxy.QgzxZgmsxyAction"
+    		name="commanForm"
+    		parameter="method">
+    		<forward name="disbursePay" path="/qgzx/zgmsxy/work_pay_detail_k.jsp"></forward>
+    		</action>
+       <action 
+       		name="commanForm"
+       		path="/qgzxZjjjzy" 
+       		type="xgxt.qgzx.zjjjzyjsxy.QgzxZjjjzyAction" 
+       		parameter="method"
+       		scope="request">
+       		<forward name="printGwsqb" path="/qgzx/zjjjzyjsxy/zjjjzyjsxy_qgzx_bb_gwsqb.jsp"/>    
+       		<forward name="qgzx_xsgwkhb" path="/qgzx/zjjjzyjsxy/qgzx_zjjjzy_xsgwkhb.jsp"/>
+       	    </action>
+       <action 
+    	  name="qgzxCjffForm"
+    	  path="/cjff" 
+    	  type="xgxt.qgzx.zgdzdx.QgzxCjffAction"
+    	  parameter="method"
+    	  scope="request" >
+    	  <forward name="ygzff" path="/qgzx/zgdzdx/ygzff.jsp"/>
+    	  <forward name="ygzbf" path="/qgzx/zgdzdx/ygzbf.jsp"/>    
+    	  <forward name="workPaySearch" path="/sjcz/work_pay_search_t.jsp"/>    	
+    	  <forward name="lsgzff" path="/qgzx/zgdzdx/lsgzff.jsp"/>	
+    	  <forward name="xzffsj" path="/qgzx/qgzx_xzffsj.jsp"/>
+    	  
+      </action>
+      <action 
+    	  name="qgzxForm"
+    	  path="/qgzxZjcm" 
+    	  type="xgxt.qgzx.zjcm.QgzxZjcmXsgwglAction"
+    	  parameter="method"
+    	  scope="request" >
+    	  <forward name="gwsq" path="/qgzx/zjcm/zjcm_gwsq.jsp"/> 
+    	  <forward name="printGwsqb" path="/qgzx/zjcm/gwsqb.jsp"/>     	     	    		
+      </action>
+    <action 
+    	path="/qgzxShgc" 
+    	type="xgxt.qgzx.shgc.QgzxShgcAction" 
+    	parameter="method"
+    	scope="request"
+    	name="qgzxForm">  
+    	<forward name="khsbsj" path="/qgzx/shgc/qgzx_khsbsj.jsp"/>  
+    	<forward name="khsbsjsz" path="/qgzx/shgc/khsbsjsz.jsp"/>      	
+    	<forward name="printYrdwXskh" path="/qgzx/shgc/yrdw_xskh.jsp"/>
+    </action>
+    
+    <action 
+    	path="/qgzxPortallet" 
+    	type="xgxt.qgzx.portallet.QgzxForPortalletAction"
+    	parameter="method"
+    	scope="request"
+    	name="qgzxForm">
+    	<forward name="cjxxPortal" path="/qgzx/portallet/portalletPage.jsp"/> 
+    </action>
+    
+    <!-- 为portallet提供学生酬金发放信息 -->
+	<action 
+		path="/xscjffPortallet"
+		forward="/qgzxPortallet.do?method=cjffcx">
+	</action>
+	
+	<!-- 学生查看岗位申请信息 -->
+    <action 
+    	path="/qgzxGwgl" 
+    	type="xgxt.qgzx.action.QgzxGwglAction" 
+    	parameter="method" 
+    	scope="request" 
+    	name="qgzxForm">
+    	<forward name="success" path="/qgzx/stu_view_gwsqxx.jsp"/>
+    	<forward name="modiXszgxx" path="/qgzx/modiXszgxx.jsp"/> 
+    </action>
+    
+    <!-- 漳州师范勤工助学  -->
+    <action 
+    	path="/qgzxZzsf" 
+    	type="xgxt.qgzx.zzsf.action.QgzxZzsfAction" 
+    	parameter="method" 
+    	scope="request" 
+    	name="qgzxForm">
+    	<forward name="success" path="/qgzx/zzsf/zzsf_gwxx.jsp"/> 
+    </action>
+    
+    <!-- 西昌学院勤工助学 -->
+    <action 
+    	path="/qgzxXcxy" 
+    	type="xgxt.qgzx.xcxy.action.QgzxXcxyAction" 
+    	parameter="method" 
+    	scope="request" 
+    	name="qgzxForm">
+    	<forward name="success" path="/qgzx/xcxy/xcxy_gwxx.jsp"/> 
+    </action>
+    
+    <!--勤工助学工作考核-->
+    <action 
+    	path="/qgzxkh" 
+    	type="xgxt.qgzx.action.QgzxXskhAction" 
+    	parameter="method" 
+    	scope="request" 
+    	name="qgzxForm">
+    	<forward name="success" path="/qgzx/qgzx_xsgzjlwh.jsp"/>
+    	<forward name="xsgzkhwh" path="/qgzx/qgzx_xsgzkhwh.jsp"/>
+    	<forward name="xsgzjlAdd" path="/qgzx/xsgzjlAdd.jsp"/>
+    	<forward name="xsgzjlModi" path="/qgzx/xsgzjlModi.jsp"/> 
+    	<forward name="xsgzkhModi" path="/qgzx/xsgzkhModi.jsp"/>
+    	<forward name="xsgzjlAddBatch" path="/qgzx/xsgzjlAddBatch.jsp"/>
+    </action>
+    
+    <!--勤工助学酬金管理-->
+    <action 
+    	path="/qgzxcjff" 
+    	type="xgxt.qgzx.action.QgzxCjffglAction" 
+    	parameter="method" 
+    	scope="request" 
+    	name="qgzxForm">
+    	<forward name="addXscjff" path="/qgzx/addXscjff.jsp"/>
+    	<forward name="batchModiXscjff" path="/qgzx/batchModiXscjff.jsp"/>
+    	<forward name="cjffAudiSearch" path="/qgzx/cjffAudiSearch.jsp"/>
+    	<forward name="xscjffAudi" path="/qgzx/xscjffAudi.jsp"/>
+    	<forward name="cjff" path="/qgzx/cjff.jsp"/>
+    	<forward name="cjff_txxd" path="/qgzx/cjffTxxd.jsp"/>
+    	
+    </action>
+	</action-mappings>
+
+	<message-resources key="pjpy" parameter="xgxt.base.pjpy" />
+</struts-config>

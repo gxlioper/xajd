@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="hngydx_gyglForm" type="xgxt.xsgygl.hngydx.GyglHngydxActionForm"/>
+	</form-beans>
+	<global-forwards />
+	<action-mappings>				
+		<action path="/hngydx_gygl" parameter="method"  name="hngydx_gyglForm" scope="request"
+		        type="xgxt.xsgygl.hngydx.GyglHngydxAction">
+		        <forward name="getHmcTj" path="/gygl/hngydx/getHmcTj.jsp"></forward>
+		         <forward name="HmcTj" path="/gygl/hngydx/HmcTj.jsp"></forward>			                
+		</action>
+	</action-mappings>
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources" />
+</struts-config>

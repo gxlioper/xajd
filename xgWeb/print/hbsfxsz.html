@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<title>无标题文档</title>
+		<style>
+.weizhi{
+	position:absolute;
+	left:1cm;
+	top:1cm;
+	}
+.weizhi ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	
+	}
+.weizhi li{
+	list-style:none;
+	margin:26px 0px;;
+	padding:0px;
+	}
+.weizhi h4{
+	float:left;
+	margin:0px 20px;
+	font-size:16px;
+	font-family:黑体;
+	font-weight:normal;
+	break-all:keep-all
+	}	
+.youbianxia{
+	margin-top:5px;
+	}
+.yueri{
+	margin-left:5px}
+</style>
+	</head>
+	<script language="javascript" src="../js/jsFunction.js"></script>
+	<script language="javascript" type="text/javascript">
+var dragswitch=0
+var nsx
+function drag_dropns(name){
+temp=eval(name)
+temp.captureEvents(window.event.mousedown | window.event.mouseup)
+temp.onmousedown=gons
+temp.onmousemove=dragns
+temp.onmouseup=stopns
+}
+function gons(e){
+temp.captureEvents(window.event.mousemove)
+nsx=e.x
+nsy=e.y
+}
+function dragns(e){
+if (dragswitch==1){
+temp.moveBy(e.x-nsx,e.y-nsy)
+return false
+}
+}
+function stopns(){
+temp.releaseEvents(window.event.mousemove)
+}
+var dragapproved=false
+
+function drag_dropie(showimage2){
+if (dragapproved==true){
+document.getElementById(showimage2).style.pixelLeft=tempx+window.event.clientX-iex
+document.getElementById(showimage2).style.pixelTop=tempy+window.event.clientY-iey
+return false
+}
+}
+function initializedragie(showimage2){
+iex=window.event.clientX
+iey=window.event.clientY
+tempx=document.getElementById(showimage2).style.pixelLeft
+tempy=document.getElementById(showimage2).style.pixelTop
+dragapproved=true
+}
+if (document.all){
+document.onmouseup=new Function("dragapproved=false")
+}
+</script>
+	<body onload="getValueForHbsf();">
+		<div id="xm1" style="position: absolute; left: 168px; top: 245px;"
+			onmousedown="initializedragie('xm1')"
+			onMousemove="drag_dropie('xm1')"
+			onMouseover="dragswitch=1;drag_dropns(xm1)" onMouseout="dragswitch=0">
+			<h4 id="xm" title="姓名">
+				张三(姓名)
+			</h4>
+		</div>
+		<div id="xh1"
+			style="position: absolute; left: 164px; top: 287px; height: 1px;"
+			onmousedown="initializedragie('xh1')"
+			onMousemove="drag_dropie('xh1')"
+			onMouseover="dragswitch=1;drag_dropns(xh1)" onMouseout="dragswitch=0">
+			<h4 id="xh" title="学号">
+				123456(学号)
+			</h4>
+		</div>
+		<div id="zymc1" style="position: absolute; left: 486px; top: 40px;"
+			onmousedown="initializedragie('zymc1')"
+			onMousemove="drag_dropie('zymc1')"
+			onMouseover="dragswitch=1;drag_dropns(zymc1)"
+			onMouseout="dragswitch=0">
+			<h4 id="zymc" title="专业">
+				计算机应用(专业)
+			</h4>
+		</div>
+		<div id="xymc1" style="position: absolute; left: 486px; top: 12px;"
+			onmousedown="initializedragie('xymc1')"
+			onMousemove="drag_dropie('xymc1')"
+			onMouseover="dragswitch=1;drag_dropns(xymc1)"
+			onMouseout="dragswitch=0">
+			<h4 id="xymc" title="学院">
+				计算机学院(学院)
+			</h4>
+		</div>
+		<div id="nj1" style="position: absolute; left: 486px; top: 70px;"
+			onmousedown="initializedragie('nj1')"
+			onMousemove="drag_dropie('nj1')"
+			onMouseover="dragswitch=1;drag_dropns(nj1)"
+			onMouseout="dragswitch=0">
+			<h4 id="nj" title="年级">
+				2006(年级)
+			</h4>
+		</div>
+		<div id="xb1"
+			style="position: absolute; left: 488px; top: 100px; width: 100px; height: 62px;"
+			onmousedown="initializedragie('xb1')"
+			onMousemove="drag_dropie('xb1')"
+			onMouseover="dragswitch=1;drag_dropns(xb1)" onMouseout="dragswitch=0">
+			<h4 id="xb" title="性别">
+				男(性别)
+			</h4>
+		</div>
+
+		<div id="jg1"
+			style="position: absolute; left: 483px; top: 140px; height: 125px;"
+			onmousedown="initializedragie('jg1')"
+			onMousemove="drag_dropie('jg1')"
+			onMouseover="dragswitch=1;drag_dropns(jg1)" onMouseout="dragswitch=0">
+			<h4 id="jg" title="籍贯">
+				杭州(籍贯)
+			</h4>
+		</div>
+
+		<div id="csy1" style="position: absolute; left: 488px; top: 168px;"
+			onmousedown="initializedragie('csy1')"
+			onMousemove="drag_dropie('csy1')"
+			onMouseover="dragswitch=1;drag_dropns(csy1)"
+			onMouseout="dragswitch=0">
+			<h4 id="csy" title="出生年">
+				2007(出生年)
+			</h4>
+		</div>
+		<div id="csm1" style="position: absolute; left: 623px; top: 171px;"
+			onmousedown="initializedragie('csm1')"
+			onMousemove="drag_dropie('csm1')"
+			onMouseover="dragswitch=1;drag_dropns(csm1)"
+			onMouseout="dragswitch=0">
+			<h4 id="csm" 　title="出生月">
+				9(出生月)
+			</h4>
+		</div>
+		<div id="csd1" style="position: absolute; left: 733px; top: 170px;"
+			onmousedown="initializedragie('csd1')"
+			onMousemove="drag_dropie('csd1')"
+			onMouseover="dragswitch=1;drag_dropns(csd1)"
+			onMouseout="dragswitch=0">
+			<h4 id="csd" title="出生日">
+				10(出生日)
+			</h4>
+		</div>
+		<div id="fzy1" style="position: absolute; left: 488px; top: 255px;"
+			onmousedown="initializedragie('fzy1')"
+			onMousemove="drag_dropie('fzy1')"
+			onMouseover="dragswitch=1;drag_dropns(fzy1)"
+			onMouseout="dragswitch=0">
+			<h4 id="fzy" title="发证年">
+				2007(发证年)
+			</h4>
+		</div>
+		<div id="fzm1" style="position: absolute; left: 620px; top: 258px;"
+			onmousedown="initializedragie('fzm1')"
+			onMousemove="drag_dropie('fzm1')"
+			onMouseover="dragswitch=1;drag_dropns(fzm1)"
+			onMouseout="dragswitch=0">
+			<h4 class="yueri" id="fzm" title="发证月">
+				9(发证月)
+			</h4>
+		</div>
+
+		<div id="fzd1" style="position: absolute; left: 739px; top: 263px;"
+			onmousedown="initializedragie('fzd1')"
+			onMousemove="drag_dropie('fzd1')"
+			onMouseover="dragswitch=1;drag_dropns(fzd1)"
+			onMouseout="dragswitch=0">
+			<h4 id="fzd" title="发证日">
+				10(发证日)
+			</h4>
+		</div>
+		<div id="yxy1" style="position: absolute; left: 488px; top: 300px;"
+			onmousedown="initializedragie('yxy1')"
+			onMousemove="drag_dropie('yxy1')"
+			onMouseover="dragswitch=1;drag_dropns(yxy1)"
+			onMouseout="dragswitch=0">
+			<h4 id="yxy" title="有效年">
+				2007(有效年)
+			</h4>
+		</div>
+		<div id="yxm1" style="position: absolute; left: 620px; top: 300px;"
+			onmousedown="initializedragie('yxm1')"
+			onMousemove="drag_dropie('yxm1')"
+			onMouseover="dragswitch=1;drag_dropns(yxm1)"
+			onMouseout="dragswitch=0">
+			<h4 class="yxm" id="yxm" title="有效月">
+				9(有效月)
+			</h4>
+		</div>
+
+		<div id="yxd1" style="position: absolute; left: 739px; top: 300px;"
+			onmousedown="initializedragie('yxd1')"
+			onMousemove="drag_dropie('yxd1')"
+			onMouseover="dragswitch=1;drag_dropns(yxd1)"
+			onMouseout="dragswitch=0">
+			<h4 id="yxd" title="有效日">
+				10(有效日)
+			</h4>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="bjlhGyglForm" type="xgxt.xsgygl.bjlh.BjlhGyglForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+	<action path="/bjlh_gygl_tws"	forward="/bjlh_sjwh.do?method=twsManage"/>	<!-- 团委学生维护 -->
+	<action path="/bjlh_gygl_tys"	forward="/bjlh_sjwh.do?method=tysManage"/>	<!-- 体优学生维护 -->
+	<action path="/bjlh_gygl_yjs"	forward="/bjlh_sjwh.do?method=yjsManage"/>	<!-- 研究生维护 -->
+	<action path="/bjlh_gygl_cjs"	forward="/bjlh_sjwh.do?method=cjsManage"/>	<!-- 成教生维护 -->	
+	<action path="/bjlh_gygl_fyk"	forward="/bjlh_sjwh.do?method=fykManage"/>	<!-- 房源库维护 -->
+	<action path="/bjlh_gygl_zsxx"	forward="/bjlh_sjwh.do?method=zsxxManage"/>	<!-- 住宿信息维护 -->
+	<action path="/bjlh_gygl_xlcw"	forward="/bjlh_sjwh.do?method=xlcwManage"/>	<!-- 行李床位信息维护 -->
+	<action path="/bjlh_gygl_ssfp" 	forward="/bjlh_ssfp.do?method=ssfpManage"/>	<!-- 宿舍分配 -->
+    <action path="/bjlh_gygl_cwfp" 	forward="/bjlh_cwfp.do?method=cwfpManage"/>	<!-- 床位分配 -->
+    <action path="/bjlh_gygl_fpjg"	forward="/bjlh_fyk.do?method=fykManage"/>	<!-- 房源分配结果 -->
+    <action path="/bjlh_gygl_expfpjg" forward="/bjlh_fyk.do?method=expfpjg"></action><!-- 导出房源分配结果 -->
+    
+    <action path="/bjlh_gygl_tjbb" 	forward="/bjlh_gybb.do?method=tjbbPrint"/>	<!-- 统计报表 -->
+    <action path="/bjlh_gygl_saveSsfp"  forward="/bjlh_ssfp.do?method=saveSsfp"></action><!-- 保存宿舍分配信息 -->
+    <action path="/bjlh_gygl_ssfpquery" 	forward="/bjlh_ssfp.do?method=ssfpquery"/>	<!-- 宿舍分配结果查询 -->
+    <action path="/bjlh_gygl_deleteSsfp" 	forward="/bjlh_ssfp.do?method=deleteSsfp"/>	<!-- 删除宿舍分配结果 -->
+    <action path="/bjlh_gygl_saveCwfp"  forward="/bjlh_cwfp.do?method=saveCwfp"></action><!-- 保存床位分配信息 -->
+    <action path="/bjlh_gygl_saveXlCwfp"  forward="/bjlh_cwfp.do?method=saveXlCwfp"></action><!-- 保存行李床位分配信息 -->
+    
+    <!-- 实际路径 -->
+	
+		<!-- 数据维护 -->
+	    <action path="/bjlh_sjwh" 
+        		parameter="method"  
+        		name="bjlhGyglForm" 
+        		scope="request"
+		        type="xgxt.xsgygl.bjlh.sjwh.SjwhAction">		        
+		<!-- 团委学生维护 -->
+		<forward name="twsManage" path="/gygl/bjlh/sjwh/twsManage.jsp" />
+		<!-- 体优学生维护 -->
+		<forward name="tysManage" path="/gygl/bjlh/sjwh/tysManage.jsp" />
+		<!-- 研究生维护 -->
+		<forward name="yjsManage" path="/gygl/bjlh/sjwh/yjsManage.jsp" />
+		<forward name="yjsUpdate" path="/gygl/bjlh/sjwh/yjsUpdate.jsp" />
+		<!-- 成教生维护 -->
+		<forward name="cjsManage" path="/gygl/bjlh/sjwh/cjsManage.jsp" />
+		<forward name="cjsUpdate" path="/gygl/bjlh/sjwh/cjsUpdate.jsp" />
+		<!-- 房源库维护 -->
+		<forward name="fykManage" path="/gygl/bjlh/sjwh/fykManage.jsp" />
+		<forward name="fykUpdate" path="/gygl/bjlh/sjwh/fykUpdate.jsp" />
+		<!-- 住宿信息维护 -->
+		<forward name="zsxxManage" path="/gygl/bjlh/sjwh/zsxxManage.jsp" />
+		<forward name="zsxxUpdate" path="/gygl/bjlh/sjwh/zsxxUpdate.jsp" />
+		<forward name="zsxxView"   path="/gygl/bjlh/sjwh/zsxxView.jsp" />
+		<!-- 学生基本信息维护 -->
+		<forward name="xsxxManage" path="/gygl/bjlh/sjwh/xsxxManage.jsp" />
+		<!-- 行李床位维护 -->
+		<forward name="xlcwManage" path="/gygl/bjlh/sjwh/xlcwManage.jsp" />
+		</action>
+		
+		<!-- 房源库维护 -->
+	    <action path="/bjlh_fyk" 
+        		parameter="method"  
+        		name="bjlhGyglForm" 
+        		scope="request"
+		        type="xgxt.xsgygl.bjlh.fyk.FykAction">		        
+		<forward name="fykManage" path="/gygl/bjlh/fyk/fykManage.jsp" />
+		<forward name="fykUpdate" path="/gygl/bjlh/fyk/fykUpdate.jsp" />
+		<forward name="jjtjManage" path="/gygl/bjlh/fyk/jjtjManage.jsp" />
+		<forward name="tbtjManage" path="/gygl/bjlh/fyk/tbtjManage.jsp" />
+		</action>
+		
+		<!-- 宿舍分配 -->
+	    <action path="/bjlh_ssfp" 
+        		parameter="method"  
+        		name="bjlhGyglForm" 
+        		scope="request"
+		        type="xgxt.xsgygl.bjlh.ssfp.SsfpAction">		        
+		<forward name="ssfpManage"  path="/gygl/bjlh/ssfp/ssfpManage.jsp" />
+		<forward name="ssfpquery"   path="/gygl/bjlh/ssfp/ssfpquery.jsp"></forward>
+		</action>
+		
+		<!-- 床位分配 -->
+	    <action path="/bjlh_cwfp" 
+        		parameter="method"  
+        		name="bjlhGyglForm" 
+        		scope="request"
+		        type="xgxt.xsgygl.bjlh.cwfp.CwfpAction">		        
+		<forward name="cwfpManage" path="/gygl/bjlh/cwfp/cwfpManage.jsp" />
+		</action>
+		
+		<!-- 报表打印 -->
+        <action path="/bjlh_gybb" 
+        		parameter="method"  
+        		name="bjlhGyglForm" 
+        		scope="request"
+		        type="xgxt.xsgygl.bjlh.tjbb.TjbbAction">		        
+		<forward name="tjbbPrint" path="/gygl/bjlh/tjbb/tjbbPrint.jsp" />
+		</action>	
+	</action-mappings>
+
+</struts-config>

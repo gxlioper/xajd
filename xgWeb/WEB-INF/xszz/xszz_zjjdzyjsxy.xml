@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzZjjdzyjsxyActionForm" type="xgxt.xszz.zjjdzyjsxy.XszzZjjdzyjsxyActionForm"><!-- test.forms.DynaActionFormTest -->
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="xszzZjjdzyjsxyActionForm" parameter="method" path="/zjjdzyjsxy_xszz"
+				scope="request"	type="xgxt.xszz.zjjdzyjsxy.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- 浙江机电职业技术学院 "学生资助"-"困难生"-->
+			<forward name="knssq" path="/xszz/zjjd/knssq.jsp" />
+			<forward name="knssqSave" path="/xszz/zjjd/knssq.jsp" />
+			<forward name="knssqb" path="/xszz/zjjd/knssqb.jsp" />
+			<forward name="knssh" path="/xszz/zjjd/knssh.jsp" />
+			<forward name="knsshOne" path="/xszz/zjjd/knsshOne.jsp" />
+			<forward name="knsshSave" path="/xszz/zjjd/knsshOne.jsp" />
+			<forward name="knsExp" path="/about:blank" />
+			<!-- 浙江机电职业技术学院 "学生资助"-"国家助学金"-->
+			<forward name="gjzxjsq" path="/xszz/zjjd/gjzxjsq.jsp" />
+			<forward name="gjzxjsqSave" path="/xszz/zjjd/gjzxjsq.jsp" />
+			<forward name="gjzxjsqb" path="/xszz/zjjd/gjzxjsqb.jsp" />
+			<forward name="gjzxjsh" path="/xszz/zjjd/gjzxjsh.jsp" />
+			<forward name="gjzxjshOne" path="/xszz/zjjd/gjzxjshOne.jsp" />
+			<forward name="gjzxjshSave" path="/xszz/zjjd/gjzxjshOne.jsp" />
+			<forward name="gjzxjExp" path="/about:blank" />
+			<!-- 浙江机电职业技术学院 "学生资助"-"国家励志奖学金"-->
+			<forward name="gjlzjxjsq" path="/xszz/zjjd/gjlzjxjsq.jsp" />
+			<forward name="gjlzjxjsqSave" path="/xszz/zjjd/gjlzjxjsq.jsp" />
+			<forward name="gjlzjxjsqb" path="/xszz/zjjd/gjlzjxjsqb.jsp" />
+			<forward name="gjlzjxjsh" path="/xszz/zjjd/gjlzjxjsh.jsp" />
+			<forward name="gjlzjxjshOne" path="/xszz/zjjd/gjlzjxjshOne.jsp" />
+			<forward name="gjlzjxjshSave" path="/xszz/zjjd/gjlzjxjshOne.jsp" />
+			<forward name="gjlzjxjExp" path="/about:blank" />
+			<!-- 浙江机电职业技术学院 "学生资助"-"临时补助"-->
+			<forward name="lsbzsq" path="/xszz/zjjd/lsbzsq.jsp" />
+			<forward name="lsbzsqSave" path="/xszz/zjjd/lsbzsq.jsp" />
+			<forward name="lsbzsqb" path="/xszz/zjjd/lsbzsqb.jsp" />
+			<forward name="lsbzsh" path="/xszz/zjjd/lsbzsh.jsp" />
+			<forward name="lsbzshOne" path="/xszz/zjjd/lsbzshOne.jsp" />
+			<forward name="lsbzshSave" path="/xszz/zjjd/lsbzshOne.jsp" />
+			<forward name="lsbzExp" path="/about:blank" />
+			<!-- 浙江机电职业技术学院 "学生资助"-"国家助学贷款"-->
+			<forward name="gjzxdksq" path="/xszz/zjjd/gjzxdksq.jsp" />
+			<forward name="gjzxdksqSave" path="/xszz/zjjd/gjzxdksq.jsp" />
+			<forward name="gjzxdksqb" path="/xszz/zjjd/gjzxdksqb.jsp" />
+			<forward name="gjzxdksh" path="/xszz/zjjd/gjzxdksh.jsp" />
+			<forward name="gjzxdkshOne" path="/xszz/zjjd/gjzxdkshOne.jsp" />
+			<forward name="gjzxdkshSave" path="/xszz/zjjd/gjzxdkshOne.jsp" />
+			<forward name="gjzxdkExp" path="/about:blank" />
+			<!-- 浙江机电职业技术学院 "学生资助"-"学费减免"-->
+			<forward name="xfjmsq" path="/xszz/zjjd/xfjmsq.jsp" />
+			<forward name="xfjmsqSave" path="/xszz/zjjd/xfjmsq.jsp" />
+			<forward name="xfjmsqb" path="/xszz/zjjd/xfjmsqb.jsp" />
+			<forward name="xfjmsh" path="/xszz/zjjd/xfjmsh.jsp" />
+			<forward name="xfjmshOne" path="/xszz/zjjd/xfjmshOne.jsp" />
+			<forward name="xfjmshSave" path="/xszz/zjjd/xfjmshOne.jsp" />
+			<forward name="xfjmExp" path="/about:blank" />
+			<!-- 浙江机电职业技术学院 "学生资助"-"学费缓缴"-->
+			<forward name="xfhjsq" path="/xszz/zjjd/xfhjsq.jsp" />
+			<forward name="xfhjsqSave" path="/xszz/zjjd/xfhjsq.jsp" />
+			<forward name="xfhjsqb" path="/xszz/zjjd/xfhjsqb.jsp" />
+			<forward name="xfhjsh" path="/xszz/zjjd/xfhjsh.jsp" />
+			<forward name="xfhjshOne" path="/xszz/zjjd/xfhjshOne.jsp" />
+			<forward name="xfhjshSave" path="/xszz/zjjd/xfhjshOne.jsp" />
+			<forward name="xfhjExp" path="/about:blank" />
+			<!-- 浙江机电职业技术学院 "学生资助"-"放款信息"-->
+			<forward name="data_fkxx" path="/xszz/zjjd/data_fkxx.jsp" />
+			<forward name="fkxx_queryOne" path="/xszz/zjjd/fkxx_queryOne.jsp" />
+			<forward name="fkxx_save" path="/xszz/zjjd/fkxx_queryOne.jsp" />
+			<forward name="fkxx_exp" path="/about:blank" />
+		</action>
+		
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

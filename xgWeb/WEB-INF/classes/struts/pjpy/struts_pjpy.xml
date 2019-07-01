@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	
+	<form-beans>
+		<form-bean name="xpjPjdmModel" type="com.zfsoft.xgxt.xpjpy.pjdm.PjdmModel"></form-bean>
+		<form-bean name="pjxzdmForm" type="com.zfsoft.xgxt.xpjpy.pjdm.pjxzdm.PjxzdmForm"></form-bean>
+		<form-bean name="bjdldmForm" type="com.zfsoft.xgxt.xpjpy.pjdm.bjdldm.BjdldmForm"></form-bean>
+		<form-bean name="xpjCsszModel" type="com.zfsoft.xgxt.xpjpy.cssz.CsszModel"></form-bean>
+		<form-bean name="xpjCpmdModel" type="com.zfsoft.xgxt.xpjpy.cpmd.CpmdModel"></form-bean>
+		<form-bean name="xpjCpxzModel" type="com.zfsoft.xgxt.xpjpy.cpxz.CpxzModel"></form-bean>
+		<form-bean name="xpjZcxmModel" type="com.zfsoft.xgxt.xpjpy.zhcp.zcxm.ZcxmModel"></form-bean>
+		<form-bean name="xpjZcfsModel" type="com.zfsoft.xgxt.xpjpy.zhcp.zcfs.ZcfsModel"></form-bean>
+		<form-bean name="xpjTsxsModel" type="com.zfsoft.xgxt.xpjpy.tsxs.TsxsModel"></form-bean>
+		<form-bean name="TsxsDmForm" type="com.zfsoft.xgxt.xpjpy.tsxsdm.TsxsDmForm"></form-bean>
+		<form-bean name="xpjSqshModel" type="com.zfsoft.xgxt.xpjpy.wdpj.sqsh.SqshModel"></form-bean>
+		<form-bean name="xpjPjjgModel" type="com.zfsoft.xgxt.xpjpy.wdpj.pjjg.PjjgModel"></form-bean>
+		<form-bean name="TjcxModel" type="com.zfsoft.xgxt.xpjpy.tjcx.TjcxModel"></form-bean>
+		<form-bean name="xpjxmsqModel" type="com.zfsoft.xgxt.xpjpy.wdpj.pjxmsq.PjxmsqModel"></form-bean>
+		<form-bean name="zdzcform" type="com.zfsoft.xgxt.xpjpy.zhcp.zdzc.ZdzcForm"></form-bean>
+		
+		<!-- 评奖班级评议 < -->
+		<form-bean name="xpjpyJcszForm" type="com.zfsoft.xgxt.xpjpy.pjpybjpy.jcsz.JcszForm" />
+	 	<form-bean name="xpjpyXzszForm" type="com.zfsoft.xgxt.xpjpy.pjpybjpy.xzsz.XzszForm" />
+	 	<form-bean name="xpjpyJglrForm" type="com.zfsoft.xgxt.xpjpy.pjpybjpy.jglr.JglrForm" />
+	 	<form-bean name="xpjpyJgcxForm" type="com.zfsoft.xgxt.xpjpy.pjpybjpy.jgcx.JgcxForm" />
+		<!-- 评奖班级评议 > -->
+		
+		<!-- 项目维护 -->
+		<form-bean name="xmwhModel" type="com.zfsoft.xgxt.xpjpy.xmsz.xmwh.XmwhModel" />	
+    	<form-bean name="rsszModel" type="com.zfsoft.xgxt.xpjpy.xmsz.rssz.RsszModel" />	
+    	<form-bean name="jdszModel" type="com.zfsoft.xgxt.xpjpy.xmsz.jdsz.JdszModel" />	
+    	<form-bean name="tzszModel" type="com.zfsoft.xgxt.xpjpy.xmsz.tzsz.TzszModel" />	
+		<form-bean name="tjszModel" type="com.zfsoft.xgxt.xpjpy.xmsz.tjsz.TjszModel" />	
+		
+		<!-- 班风竞赛 -->
+    	<form-bean name="BfjsCsszModel" type="com.zfsoft.xgxt.xpjpy.bfjs.cssz.BfjsCsszModel" />
+    	<form-bean name="BfjsJsxmModel" type="com.zfsoft.xgxt.xpjpy.bfjs.jsxm.BfjsJsxmModel" />
+    	<form-bean name="BfjsFswhModel" type="com.zfsoft.xgxt.xpjpy.bfjs.fswh.BfjsFswhModel" />
+		
+		<!-- 报表维护 -->
+		<form-bean name="bbwhModel" type="com.zfsoft.xgxt.xpjpy.bbwh.BbwhForm"></form-bean>
+		
+		<!-- 综测分查询-->
+		<form-bean name="ZcfForm" type="com.zfsoft.xgxt.xpjpy.zhcp.zcf.ZcfForm"></form-bean>
+		
+		<!-- 专业主干课设置（上海戏剧学院） -->
+		<form-bean name="ZyzgkModel" type="com.zfsoft.xgxt.xpjpy.zyzgk.ZyzgkModel"></form-bean>
+		
+		<!-- 评奖项目汇总 -->
+		<form-bean name="pjxmhzForm" type="com.zfsoft.xgxt.xpjpy.pjxmhz.PjxmhzForm"></form-bean>
+		<!-- 综合品行分，浙江旅游 -->
+		<form-bean name="zhpxfForm" type="com.zfsoft.xgxt.xpjpy.zhcp.zhpxf.zhpxfForm"></form-bean>
+		
+	</form-beans>
+	
+	<action-mappings>
+		
+		 <action path="/pj_dmwh" forward="/xpj_pjdm.do?method=xmlxList"></action>
+		 <action path="/pj_pjxzdm" forward="/xpj_pjxzdm.do?method=viewPjxzdmList"></action>
+		 <action path="/pj_bjdldm" forward="/xpj_bjdldm.do?method=viewBjdldmList"></action>
+		 <action path="/pj_cssz" forward="/xpj_cssz.do?method=viewCssz"></action>
+		 <action path="/pj_cpmd" forward="/xpj_cpmd.do?method=viewCpxsList"></action>	
+		 <action path="/pj_tzjl" forward="/xpj_cpmd.do?method=viewTzjlList"></action>		
+		 <action path="/pj_cpxz" forward="/xpj_cpxz.do?method=viewCpxzList"></action>		
+		 <action path="/pj_zcflr" forward="/xpj_zcfs.do?method=viewBjzcList"></action>
+		 <action path="/pj_zcfqx" forward="/xpj_zcfs.do?method=viewZcfqxList"></action>
+		 <action path="/pj_zcfqxyf" forward="/xpj_zcfs.do?method=viewZcfqxListYf"></action>
+		 <action path="/pj_jgcx"  forward="/xpj_zcfs.do?method=viewZcfjgList"></action>
+		 <action path="/pj_qxjl" forward="/xpj_zcfs.do?method=viewQxjlList"></action>
+		 <action path="/pj_jxsb" forward="/xpj_sqsh.do?method=viewJxsbList"></action>
+		 <action path="/pj_jxsq" forward="/xpj_sqsh.do?method=viewJxsqList"></action>
+		 <action path="/pj_jxsq_new" forward="/xpj_sqsh.do?method=viewJxsqList_new"></action>
+		 <action path="/pj_jxsh" forward="/xpj_sqsh.do?method=viewJxshList"></action>
+		 <action path="/pj_jxplsh" forward="/xpj_sqsh.do?method=viewJxplshList"></action>
+		 <action path="/pj_pjjg" forward="/xpj_pjjg.do?method=viewPjjgList"></action>
+		 <action path="/pj_tsxs" forward="/xpj_tsxs.do?method=viewTsxsTj"></action>
+		 <action path="/pj_tsxsdm" forward="/xpj_tsxsdm.do?method=tsxsDmList"></action>
+		 
+		 <action path="/pj_tjcx" forward="/xpj_tjcx.do?method=viewTjcxList"></action>
+		 <action path="/pj_jxjmefp" forward="/xpj_tjcx.do?method=viewJxjmefpList"></action>
+		 <action path="/pj_zsdy" forward="/xpj_tjcx.do?method=viewZsdy"></action>
+		 
+		 <action path="/pj_pjxmsq" forward="/xpj_pjxmsq.do?method=viewPjxmsqList"></action>
+
+		 <action path="/pj_zdzcwh" forward="/zdzcwh.do?method=viewZdzcList"/>
+		 
+		  <action path="/pj_zcfcx" forward="/zcfcx.do?method=viewZcfcxList"/>
+		 <action path="/xg_pjpy_tjgl_pjxmhz" forward="/xpj_pjxmhz.do?method=viewPjxmhz"/><!-- 浙江大学评奖项目汇总 -->
+		 <action path="/pj_zcqkcx" forward="/xpj_zhpxf.do?method=getZhpxf"></action><!-- 浙江旅游综合品行分 -->
+		 
+		 <!-- 评奖评优2013版	评奖代码维护 -->
+		 <action path="/xpj_pjdm"
+				 name="xpjPjdmModel"
+				 type="com.zfsoft.xgxt.xpjpy.pjdm.PjdmAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="xmlxList" path="/xsgzgl/xpjpy/pjdm/xmlx.jsp"></forward>
+				 <forward name="addXmlx" path="/xsgzgl/xpjpy/pjdm/addXmlx.jsp"></forward>
+				 <forward name="updateXmlx" path="/xsgzgl/xpjpy/pjdm/updateXmlx.jsp"></forward>
+		</action>
+		
+		 <!-- 评奖评优2013版	评奖性质代码维护 -->
+		 <action path="/xpj_pjxzdm"
+		 		 name="pjxzdmForm"
+		 		 type="com.zfsoft.xgxt.xpjpy.pjdm.pjxzdm.PjxzdmAction"
+		 		 scope="request"
+		 		 parameter="method">
+		 		 <forward name="viewPjxzdmList" path="/xsgzgl/xpjpy/pjdm/pjxzdm/viewPjxzdmList.jsp"></forward>
+		 		 <forward name="addPjxzdm" path="/xsgzgl/xpjpy/pjdm/pjxzdm/addPjxzdm.jsp"></forward>
+		 		 <forward name="updatePjxzdm" path="/xsgzgl/xpjpy/pjdm/pjxzdm/updatePjxzdm.jsp"></forward>
+		 </action>
+		 
+		 <!-- 评奖评优2013版	班级大类代码维护 -->
+		 <action path="/xpj_bjdldm"
+		 		 name="bjdldmForm"
+		 		 type="com.zfsoft.xgxt.xpjpy.pjdm.bjdldm.BjdldmAction"
+		 		 scope="request"
+		 		 parameter="method">
+		 		 <forward name="viewBjdldmList" path="/xsgzgl/xpjpy/pjdm/bjdldm/viewBjdldmList.jsp"></forward>
+		 		 <forward name="addBjlbdm" path="/xsgzgl/xpjpy/pjdm/bjdldm/addBjdldm.jsp"></forward>
+		 		 <forward name="updateBjlbdm" path="/xsgzgl/xpjpy/pjdm/bjdldm/updateBjdldm.jsp"></forward>
+		 </action>
+		 
+		
+		 <!-- 评奖评优2013版  参数设置 -->
+		 <action path="/xpj_cssz" 
+	    		 name="xpjCsszModel"
+	    		 type="com.zfsoft.xgxt.xpjpy.cssz.CsszAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="viewCssz" path="/xsgzgl/xpjpy/cssz/cssz.jsp"></forward>
+		 </action>
+		 
+		 <!-- 评奖评优2013版 参评名单 -->
+		 <action path="/xpj_cpmd" 
+	    		 name="xpjCpmdModel"
+	    		 type="com.zfsoft.xgxt.xpjpy.cpmd.CpmdAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="viewCpxsList" path="/xsgzgl/xpjpy/pjmd/viewCpxsList.jsp"></forward>
+			     <forward name="viewTzjlList" path="/xsgzgl/xpjpy/pjmd/viewTzjlList.jsp"></forward>
+			     <forward name="tzcpxszt" path="/xsgzgl/xpjpy/pjmd/tzcpxszt.jsp"></forward>
+			     <forward name="zjcpxszt" path="/xsgzgl/xpjpy/pjmd/zjcpxszt.jsp"></forward>
+			     <forward name="viewAddCpxsList" path="/xsgzgl/xpjpy/pjmd/viewAddCpxsList.jsp"></forward>
+			     <forward name="showStudents" path="/xsgzgl/xpjpy/pjmd/showStudents.jsp"></forward>
+		 </action>
+
+		<action path="/pj_cpzglywh" forward="/xpj_cpxz.do?method=viewCpzglyList"/>
+		<!-- 评奖评优2013版  参评小组 -->
+		<action path="/xpj_cpxz" 
+	    		 name="xpjCpxzModel"
+	    		 type="com.zfsoft.xgxt.xpjpy.cpxz.CpxzAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="viewCpxzList" path="/xsgzgl/xpjpy/cpxz/viewCpxzList.jsp"></forward>
+			     <forward name="zdszCpz" path="/xsgzgl/xpjpy/cpxz/zdszCpz.jsp"></forward>
+			     <forward name="szCpz" path="/xsgzgl/xpjpy/cpxz/szCpz.jsp"></forward>
+			<forward name="viewCpzglyList" path="/xsgzgl/xpjpy/cpxz/viewCpzglyList.jsp"></forward>
+			<forward name="cpzfpgly" path="/xsgzgl/xpjpy/cpxz/cpzfpgly.jsp"></forward>
+		 </action>
+		 
+		  
+		 <!-- 评奖评优2013版  综则项目 -->
+		<action path="/xpj_zcxm" 
+	    		 name="xpjZcxmModel"
+	    		 type="com.zfsoft.xgxt.xpjpy.zhcp.zcxm.ZcxmAction"
+				 scope="request"
+			     parameter="method">
+			  <forward name="viewZcxm" path="/xsgzgl/xpjpy/zhcp/zcxm/viewZcxm.jsp"></forward>
+			  <forward name="addZcxm" path="/xsgzgl/xpjpy/zhcp/zcxm/addZcxm.jsp"></forward>
+			  <forward name="editZcxm" path="/xsgzgl/xpjpy/zhcp/zcxm/editZcxm.jsp"></forward>
+			  <forward name="showXxbl" path="/xsgzgl/xpjpy/zhcp/zcxm/showXxbl.jsp"></forward>
+			  <forward name="showYf" path="/xsgzgl/xpjpy/zhcp/zcxm/showYf.jsp"></forward>
+		 </action>
+		 
+		 <!-- 评奖评优2013版  综则分数 -->
+		 <action path="/xpj_zcfs" 
+	    		 name="xpjZcfsModel"
+	    		 type="com.zfsoft.xgxt.xpjpy.zhcp.zcfs.ZcfsAction"
+				 scope="request"
+			     parameter="method">
+			   <forward name="viewBjzcList" path="/xsgzgl/xpjpy/zhcp/zcfs/viewBjzcList.jsp"></forward>
+			   <forward name="editZcfsOfYf" path="/xsgzgl/xpjpy/zhcp/zcfs/editZcfsOfYf.jsp"></forward>
+			   <forward name="editZcfs" path="/xsgzgl/xpjpy/zhcp/zcfs/editZcfs.jsp"></forward>
+			   <forward name="viewZcfs" path="/xsgzgl/xpjpy/zhcp/zcfs/viewZcfs.jsp"></forward>
+			   <forward name="viewZcfsOfYf" path="/xsgzgl/xpjpy/zhcp/zcfs/viewZcfsOfYf.jsp"></forward>
+			   <forward name="toImportZcfs" path="/xsgzgl/xpjpy/zhcp/zcfs/toImportZcfs.jsp"></forward>
+			   <forward name="viewZcfqxList" path="/xsgzgl/xpjpy/zhcp/zcfs/viewZcfqxList.jsp"></forward>
+			   <forward name="viewQxjlList" path="/xsgzgl/xpjpy/zhcp/zcfs/viewQxjlList.jsp"></forward>
+			   <forward name="cancelTj" path="/xsgzgl/xpjpy/zhcp/zcfs/cancelTj.jsp"></forward>
+			   <forward name="viewZcfjgList" path="/xsgzgl/xpjpy/zhcp/zcfs/viewZcfjgList.jsp"></forward>
+			   <forward name="qxjlView" path="/xsgzgl/xpjpy/zhcp/zcfs/qxjlView.jsp"></forward>
+			   <forward name="viewZcfqxListYf" path="/xsgzgl/xpjpy/zhcp/zcfs/viewZcfqxListYf.jsp"></forward>
+			   <forward name="zcfaytjtjcx" path="/xsgzgl/xpjpy/zhcp/zcfs/zcfaytjtjcx.jsp"></forward>
+			   <forward name="viewBjzcListck" path="/xsgzgl/xpjpy/zhcp/zcfs/viewBjzcListck.jsp"></forward>
+			   
+		 </action>
+		  <!-- 综合品行分，浙江旅游 -->
+		 <action path="/xpj_zhpxf" 
+	    		 name="zhpxfForm"
+	    		 type="com.zfsoft.xgxt.xpjpy.zhcp.zhpxf.zhpxfAction"
+				 scope="request"
+			     parameter="method">
+			   <forward name="cx" path="/xsgzgl/xpjpy/zhcp/zhpxf/cx.jsp"></forward>
+			   <forward name="xscx" path="/xsgzgl/xpjpy/zhcp/zhpxf/xscx.jsp"></forward>
+			   <forward name="drjsp" path="/xsgzgl/xpjpy/zhcp/zhpxf/dr.jsp"/>
+			   <forward name="ck" path="/xsgzgl/xpjpy/zhcp/zhpxf/ck.jsp"/>
+		 </action>
+		 <action path="/xpj_zcfs_yf" 
+	    		 name="xpjZcfsModel"
+	    		 type="com.zfsoft.xgxt.xpjpy.zhcp.zcfs.ZcfsOfYfAction"
+				 scope="request"
+			     parameter="method">
+			   
+		 </action>
+		 
+		 <!-- 评奖评优2013版	特殊学生代码维护 -->
+		 <action path="/xpj_tsxsdm"
+		 		 name="TsxsDmForm"
+		 		 type="com.zfsoft.xgxt.xpjpy.tsxsdm.TsxsDmAction"
+		 		 scope="request"
+		 		 parameter="method">
+		 		 <forward name="tsxsDmList" path="/xsgzgl/xpjpy/tsxsdm/tsxsDmList.jsp"></forward>
+		 		 <forward name="addTsxsDm" path="/xsgzgl/xpjpy/tsxsdm/addTsxsDm.jsp"></forward>
+		 		 <forward name="updateTsxsDm" path="/xsgzgl/xpjpy/tsxsdm/updateTsxsDm.jsp"></forward>
+		 </action>
+		 
+		 
+		 <!-- 评奖评优2013版  特殊学生 -->
+		 <action path="/xpj_tsxs" 
+	    		 name="xpjTsxsModel"
+	    		 type="com.zfsoft.xgxt.xpjpy.tsxs.TsxsAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="viewTsxsTj" path="/xsgzgl/xpjpy/tsxs/tsxsTj.jsp"></forward><!-- 特殊学生统计页面 -->
+			     <forward name="tsxsZj" path="/xsgzgl/xpjpy/tsxs/tsxsZj.jsp"></forward><!-- 特殊学生增加 -->
+			     <forward name="tsxsXx" path="/xsgzgl/xpjpy/tsxs/tsxsXx.jsp"></forward><!-- 特殊学生信息 -->
+		 </action>
+		 
+		 <!-- 评奖班级评议 < -->
+		 <!-- 基本设置 -->
+		 <action path="/xpjpy_pjpybjpy_jcsz" 	forward="/xpjpy_pjpybjpy_jcszgl.do?method=jcsz"/>
+		 <action path="/xpjpy_pjpybjpy_jcszgl" 
+		   		 name="xpjpyJcszForm"
+		   		 type="com.zfsoft.xgxt.xpjpy.pjpybjpy.jcsz.JcszAction"
+				 scope="request"
+			     parameter="method">
+			      <forward name="jcsz" path="/xsgzgl/xpjpy/pjpybjpy/jcsz/jcsz.jsp"></forward>
+		 </action>
+		 
+		 <!-- 小组设置 -->
+		 <action path="/xpjpy_pjpybjpy_xzsz" forward="/xpjpy_pjpybjpy_xzszgl.do?method=xzszManage"/>
+		<action path="/xpjpy_pjpybjpy_xzszgl" 
+	 			scope="request"
+	 			type="com.zfsoft.xgxt.xpjpy.pjpybjpy.xzsz.XzszAction" 
+	 			name="xpjpyXzszForm"         
+	 			parameter="method">	
+	 		<forward name="xzszManage" path="/xsgzgl/xpjpy/pjpybjpy/xzsz/xzszManage.jsp"></forward>
+	 		<forward name="addXzsz" path="/xsgzgl/xpjpy/pjpybjpy/xzsz/addXzsz.jsp"></forward>
+	 		<forward name="updateXzsz" path="/xsgzgl/xpjpy/pjpybjpy/xzsz/updateXzsz.jsp"></forward>
+		</action>
+		 <!-- 结果录入 -->
+		 <action path="/xpjpy_pjpybjpy_jglr" forward="/xpjpy_pjpybjpy_jglrgl.do?method=jglrManage"/>
+		<action path="/xpjpy_pjpybjpy_jglrgl" 
+	 			scope="request"
+	 			type="com.zfsoft.xgxt.xpjpy.pjpybjpy.jglr.JglrAction" 
+	 			name="xpjpyJglrForm"         
+	 			parameter="method">	
+	 		<forward name="jglrManage" path="/xsgzgl/xpjpy/pjpybjpy/jglr/jglrManage.jsp"></forward>
+		</action>
+		 <!-- 结果查询 -->
+		 <action path="/xpjpy_pjpybjpy_jgcx" forward="/xpjpy_pjpybjpy_jgcxgl.do?method=jgcxManage"/>
+		<action path="/xpjpy_pjpybjpy_jgcxgl" 
+	 			scope="request"
+	 			type="com.zfsoft.xgxt.xpjpy.pjpybjpy.jgcx.JgcxAction" 
+	 			name="xpjpyJgcxForm"         
+	 			parameter="method">	
+	 		<forward name="jgcxManage" path="/xsgzgl/xpjpy/pjpybjpy/jgcx/jgcxManage.jsp"></forward>
+	 		<forward name="jgcxView" path="/xsgzgl/xpjpy/pjpybjpy/jgcx/jgcxView.jsp"></forward>
+	 		<forward name="jgcxTj" path="/xsgzgl/xpjpy/pjpybjpy/jgcx/jgcxTj.jsp"></forward>
+		</action>
+		<!-- 评奖班级评议 > -->
+		 
+		 <!-- 评奖评优2013版  申请审核 -->
+		 <action path="/xpj_sqsh" 
+	    		 name="xpjSqshModel"
+	    		 type="com.zfsoft.xgxt.xpjpy.wdpj.sqsh.SqshAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="viewJxsbList" path="/xsgzgl/xpjpy/wdpj/sqsh/viewJxsbList.jsp"></forward>
+			     <forward name="viewJxsqList" path="/xsgzgl/xpjpy/wdpj/sqsh/viewJxsqList.jsp"></forward>
+			     <forward name="viewJxshList" path="/xsgzgl/xpjpy/wdpj/sqsh/viewJxshList.jsp"></forward>
+			     <forward name="viewJxshList_1202" path="/xsgzgl/xpjpy/wdpj/sqsh/viewJxshList_1202.jsp"></forward>
+			     <forward name="toCheckPjsq" path="/xsgzgl/xpjpy/wdpj/sqsh/plsqPypj.jsp"></forward>
+			     <forward name="viewAllzcpm" path="/xsgzgl/xpjpy/wdpj/sqsh/viewAllzcpm.jsp"></forward>
+			     <forward name="toCheckPjpy" path="/xsgzgl/xpjpy/wdpj/sqsh/plshPypj.jsp"></forward>
+			     <forward name="selectSbjx" path="/xsgzgl/xpjpy/wdpj/sqsh/selectSbjx.jsp"></forward>
+			     <forward name="toJxsb" path="/xsgzgl/xpjpy/wdpj/sqsh/toJxsb.jsp"></forward>
+			     <forward name="updateSqb" path="/xsgzgl/xpjpy/wdpj/sqsh/updateSqb.jsp"></forward>
+			     <forward name="viewSqb" path="/xsgzgl/xpjpy/wdpj/sqsh/viewSqb.jsp"></forward>
+			     <forward name="editSqb" path="/xsgzgl/xpjpy/wdpj/sqsh/editSqb.jsp"></forward>
+			     <forward name="selectPjxm" path="/xsgzgl/xpjpy/wdpj/sqsh/selectPjxm.jsp"></forward>
+			     <forward name="plSelectPjxm" path="/xsgzgl/xpjpy/wdpj/sqsh/plSelectPjxm.jsp"></forward>
+			     <forward name="viewShqkList" path="/xsgzgl/xpjpy/wdpj/sqsh/viewShqkList.jsp"></forward>
+			     <forward name="selectTjdw" path="/xsgzgl/xpjpy/wdpj/sqsh/selectTjdw.jsp"></forward>
+			     <forward name="viewJxsh" path="/xsgzgl/xpjpy/wdpj/sqsh/viewJxsh.jsp"></forward>
+			     <forward name="viewLcgz" path="/xsgzgl/xpjpy/wdpj/sqsh/lcgz.jsp"></forward>
+			     <forward name="pjxmShtj" path="/xsgzgl/xpjpy/wdpj/sqsh/pjxmShtj.jsp"></forward>
+			     <forward name="viewShqk" path="/xsgzgl/xpjpy/wdpj/sqsh/viewShqk.jsp"></forward>
+			     <forward name="studentsList" path="/xsgzgl/xpjpy/wdpj/sqsh/studentsList.jsp"></forward>
+			     <forward name="pjshview" path="/xsgzgl/xpjpy/wdpj/sqsh/pjsh_view.jsp"></forward>
+			     <forward name="pjshview_new" path="/xsgzgl/xpjpy/wdpj/sqsh/pjsh_new_view.jsp"></forward>
+			     <forward name="viewJxsqList_new" path="/xsgzgl/xpjpy/wdpj/sqsh/viewJxsqList_new.jsp"></forward>
+			     <forward name="zjdxPlsh" path="/xsgzgl/xpjpy/wdpj/sqsh/zjdxPlsh.jsp"></forward>
+			     <forward name="viewZdtj" path="/xsgzgl/xpjpy/wdpj/sqsh/viewZdtj.jsp"></forward>
+			     <forward name="xscjhzShow" path="/xsgzgl/xpjpy/wdpj/sqsh/xscjhzShow.jsp"></forward> <!-- 浙江同济学生成绩汇总查看 -->
+			     <forward name="sqlyPdf" path="/xsgzgl/xpjpy/wdpj/sqsh/sqlyPdf_11799.jsp"></forward> <!-- 重庆工商大学申请理由个性化 -->
+			     <forward name="hjjgadd" path="/xsgzgl/xpjpy/wdpj/sqsh/selectHjjg.jsp"/>
+			     <forward name="hjxx" path="/xsgzgl/xpjpy/wdpj/sqsh/hjxx.jsp"/>
+		 </action>
+		 
+		  <!-- 评奖评优2013版  评奖结果 -->
+		 <action path="/xpj_pjjg" 
+	    		 name="xpjPjjgModel"
+	    		 type="com.zfsoft.xgxt.xpjpy.wdpj.pjjg.PjjgAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="viewPjjgList" path="/xsgzgl/xpjpy/wdpj/pjjg/viewPjjgList.jsp"></forward>
+			     <forward name="addPjxmjg" path="/xsgzgl/xpjpy/wdpj/pjjg/addPjxmjg.jsp"></forward>
+			     <forward name="updatePjxmjg" path="/xsgzgl/xpjpy/wdpj/pjjg/updatePjxmjg.jsp"></forward>
+			     <forward name="pjxmjgView" path="/xsgzgl/xpjpy/wdpj/pjjg/pjxmjgView.jsp"></forward>
+			     <forward name="showStudents" path="/xsgzgl/xpjpy/wdpj/pjjg/showStudents.jsp"></forward>
+			     <forward name="pjjghzList" path="/xsgzgl/xpjpy/wdpj/pjjg/pjjghzList.jsp"></forward>
+			     <forward name="pjjghzMdList" path="/xsgzgl/xpjpy/wdpj/pjjg/pjjghzMdList.jsp"></forward>
+		 </action>
+		 
+		  <!-- 评奖评优  项目申请（学生用） -->
+		 <action path="/xpj_pjxmsq"
+	    		 name="xpjxmsqModel"
+	    		 type="com.zfsoft.xgxt.xpjpy.wdpj.pjxmsq.PjxmsqAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="viewPjxmsqList" path="/xsgzgl/xpjpy/wdpj/pjxmsq/viewPjxmsqList.jsp"></forward>
+			     <forward name="xmsqView" path="/xsgzgl/xpjpy/wdpj/pjxmsq/xmsq.jsp"></forward>
+			     <forward name="updateSqb" path="/xsgzgl/xpjpy/wdpj/pjxmsq/updateXmsq.jsp"></forward>
+			     <forward name="viewLcgz" path="/xsgzgl/xpjpy/wdpj/pjxmsq/lcgz.jsp"></forward>
+		 </action>
+		 
+		 
+		 <!-- 项目维护-->
+		<action path="/xpj_xmwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xpjpy.xmsz.xmwh.XmwhAction" 
+    			name="xmwhModel"
+    			parameter="method">
+    		<forward name="xmwhCx" path="/xsgzgl/xpjpy/xmsz/xmwhCx.jsp"></forward><!-- 查询 -->
+			<forward name="xmwhZjXg" path="/xsgzgl/xpjpy/xmsz/xmwhZjXg.jsp"></forward><!-- 增加、修改 -->
+			<forward name="xmwhSjkg" path="/xsgzgl/xpjpy/xmsz/xmwhSjkg.jsp"></forward><!-- 时间开关 -->
+			<forward name="xmwhJxfz" path="/xsgzgl/xpjpy/xmsz/xmwhJxfz.jsp"></forward><!-- 奖项复制 -->
+		</action>
+		
+		<!-- 项目维护-人数设置-->
+		<action path="/xpj_xmwh_rssz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xpjpy.xmsz.rssz.RsszAction" 
+    			name="rsszModel"
+    			parameter="method">
+    		<forward name="xmwhRsszCx" path="/xsgzgl/xpjpy/xmsz/xmwhRsszCx.jsp"></forward><!-- 人数设置查询 -->
+			<forward name="xmwhRsszLnme" path="/xsgzgl/xpjpy/xmsz/xmwhRsszLnme.jsp"></forward><!-- 人数设置-历年名额查询-->
+			<forward name="xmwhRsszCk" path="/xsgzgl/xpjpy/xmsz/xmwhRsszCk.jsp"></forward><!-- 人数设置查看 -->
+		</action>		
+		
+		<!-- 项目维护-兼得设置-->
+		<action path="/xpj_xmwh_jdsz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xpjpy.xmsz.jdsz.JdszAction" 
+    			name="jdszModel"
+    			parameter="method">
+    		<forward name="xmwhJdszCx" path="/xsgzgl/xpjpy/xmsz/xmwhJdszCx.jsp"></forward><!-- 兼得设置查询 -->
+		</action>
+		<!-- 项目维护-审核调整奖项设置-->
+		<action path="/xpj_xmwh_tzsz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xpjpy.xmsz.tzsz.TzszAction" 
+    			name="tzszModel"
+    			parameter="method">
+    		<forward name="xmwhShszCx" path="/xsgzgl/xpjpy/xmsz/xmwhShszCx.jsp"></forward><!-- 审核调整奖项设置查询 -->
+		</action>	
+			<!-- 项目维护-条件 设置-->
+		<action path="/xpj_xmwh_tjsz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xpjpy.xmsz.tjsz.TjszAction" 
+    			name="tjszModel"
+    			parameter="method">
+    		<forward name="xmwhTjszCx" path="/xsgzgl/xpjpy/xmsz/xmwhTjszCx.jsp"></forward><!-- 条件设置查询 -->
+			<forward name="xmwhTjszXn" path="/xsgzgl/xpjpy/xmsz/xmwhTjszXn.jsp"></forward><!-- 条件设置-学年学期选择 -->
+			<forward name="xmwhTjszTjzDiv" path="/xsgzgl/xpjpy/xmsz/xmwhTjszTjzDiv.jsp"></forward><!-- 条件设置-条件值弹层选择 -->
+			<forward name="xmwhbfhList" path="/xsgzgl/xpjpy/xmsz/xmwhbfhList.jsp"></forward>
+		</action>	 	
+		
+		<!-- 评奖评优2013版  评奖统计 -->
+		<action path="/xpj_pjtj" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xpjpy.xmsz.tzsz.TzszAction" 
+    			name="tzszModel"
+    			parameter="method">
+    		<forward name="xmwhShszCx" path="/xsgzgl/xpjpy/xmsz/xmwhShszCx.jsp"></forward><!-- 审核调整奖项设置查询 -->
+		</action>
+		
+		
+		  <!-- 评奖评优2013版  统计查询 -->
+		 <action path="/xpj_tjcx" 
+				 scope="request"
+	    		 type="com.zfsoft.xgxt.xpjpy.tjcx.TjcxAction"
+	    		 name="TjcxModel"
+			     parameter="method">
+			     <forward name="viewTjcxList" path="/xsgzgl/xpjpy/tjcx/viewTjcxList.jsp"></forward>
+			     <forward name="viewJxjmefpList" path="/xsgzgl/xpjpy/tjcx/viewJxjmefpList.jsp"></forward>
+			     <forward name="viewZsdy" path="/xsgzgl/xpjpy/tjcx/viewZsdy.jsp"></forward>
+		 </action>
+		 
+		 <action path="/xpj_bbwh"
+		 		 scope="request"
+		 		 type="com.zfsoft.xgxt.xpjpy.bbwh.BbwhAction"
+		 		 name="bbwhModel"
+		 		 parameter="method">
+		 		 <forward name="viewBgylList" path="/xsgzgl/xpjpy/bbwh/bgylList.jsp"></forward>	
+		 		 <forward name="viewYlbb" path="/xsgzgl/xpjpy/bbwh/showYlbg.jsp"></forward>	 
+		 </action>
+		 
+		 
+		  <!-- 浙大综测维护 -->
+		  <action path="/zdzcwh"
+		 		 scope="request"
+		 		 type="com.zfsoft.xgxt.xpjpy.zhcp.zdzc.ZdzcAction"
+		 		 name="zdzcform"
+		 		 parameter="method">
+		 		 <forward name="viewZdzcList" path="/xsgzgl/xpjpy/zhcp/zdzc/viewZdzcList.jsp"></forward>
+		 		 <forward name="toImportZdzc" path="/xsgzgl/xpjpy/zhcp/zdzc/toImportZdzc.jsp"></forward>
+		 </action>
+		 <!-- =====================================班风竞赛start===================================================== -->
+		<action path="/xpjpy_bfjs_cssz" forward="/xpjpyBfjsCssz.do?method=viewBfjsCssz"/><!-- 参数设置 -->
+		<action path="/xpjpyBfjsCssz" 
+	    			scope="request"
+	    			type="com.zfsoft.xgxt.xpjpy.bfjs.cssz.BfjsCsszAction" 
+	    			name="BfjsCsszModel"
+	    			parameter="method">
+	    		 <forward name="viewBfjsCssz" path="/xsgzgl/xpjpy/bfjs/cssz/viewBfjsCssz.jsp"></forward>
+			</action>
+		<action path="/xpjpy_bfjs_jsxm" forward="/xpjpyBfjsJsxm.do?method=viewJsxm"/><!-- 竞赛项目 -->
+		<action path="/xpjpyBfjsJsxm" 
+	    			scope="request"
+	    			type="com.zfsoft.xgxt.xpjpy.bfjs.jsxm.BfjsJsxmAction" 
+	    			name="BfjsJsxmModel"
+	    			parameter="method">
+	    		 <forward name="viewBfjsJsxm" path="/xsgzgl/xpjpy/bfjs/jsxm/viewBfjsJsxm.jsp"></forward>
+	    		  <forward name="addBfjsJsxm" path="/xsgzgl/xpjpy/bfjs/jsxm/addBfjsJsxm.jsp"></forward>
+				  <forward name="editBfjsJsxm" path="/xsgzgl/xpjpy/bfjs/jsxm/editBfjsJsxm.jsp"></forward>
+				  <forward name="showXxbl" path="/xsgzgl/xpjpy/zhcp/zcxm/showXxbl.jsp"></forward>
+			</action>
+		<action path="/xpjpy_bfjs_fswh" forward="/xpjpyBfjsFswh.do?method=viewBjjsList"/><!-- 分数维护 -->
+		<action path="/xpjpy_bfjs_qxtj" forward="/xpjpyBfjsFswh.do?method=viewJsfqxList"/><!-- 取消提交 -->
+		<action path="/xpjpy_bfjs_pfjg" forward="/xpjpyBfjsFswh.do?method=viewJsfjgList"/><!-- 评分结果 -->
+		 <action path="/xpjpyBfjsFswh"  name="BfjsFswhModel" type="com.zfsoft.xgxt.xpjpy.bfjs.fswh.BfjsFswhAction" scope="request" parameter="method">
+		 <forward name="viewBjjsList" path="/xsgzgl/xpjpy/bfjs/fswh/viewBjjsList.jsp"></forward>
+	     <forward name="editJsfs" path="/xsgzgl/xpjpy/bfjs/fswh/editJsfs.jsp"></forward>
+	     <forward name="viewJsfs" path="/xsgzgl/xpjpy/bfjs/fswh/viewJsfs.jsp"></forward>
+	     <forward name="toImportJsfs" path="/xsgzgl/xpjpy/bfjs/fswh/toImportJsfs.jsp"></forward>
+	     <forward name="viewJsfqxList" path="/xsgzgl/xpjpy/bfjs/fswh/viewJsfqxList.jsp"></forward>
+	     <forward name="viewQxjlList" path="/xsgzgl/xpjpy/bfjs/fswh/viewQxjlList.jsp"></forward>
+	     <forward name="cancelTj" path="/xsgzgl/xpjpy/bfjs/fswh/cancelTj.jsp"></forward>
+	     <forward name="viewJsfjgList" path="/xsgzgl/xpjpy/bfjs/fswh/viewJsfjgList.jsp"></forward>
+	     <forward name="qxjlView" path="/xsgzgl/xpjpy/bfjs/fswh/qxjlView.jsp"></forward>
+	      </action>
+		<!-- =====================================班风竞赛end===================================================== -->
+		 <!-- 综测分查询 -->
+		 <action path="/zcfcx"
+		 		 scope="request"
+		 		 type="com.zfsoft.xgxt.xpjpy.zhcp.zcf.ZcfAction"
+		 		 name="ZcfForm"
+		 		 parameter="method">
+		 		 <forward name="cx" path="/xsgzgl/xpjpy/zhcp/zcfcx/zcfcx.jsp"></forward>
+		 		 <forward name="ck" path="/xsgzgl/xpjpy/zhcp/zcfcx/zcfck.jsp"></forward>
+		 </action>
+		 
+		 <!-- 专业主干课设置(上海戏剧学院) -->
+		 <action path="/xpj_zyzgk"
+		 		 scope="request"
+		 		 type="com.zfsoft.xgxt.xpjpy.zyzgk.ZyzgkAction"
+		 		 name="ZyzgkModel"
+		 		 parameter="method">
+		 		 <forward name="szZyzgk" path="/xsgzgl/xpjpy/zyzgk/szZyzgk.jsp"></forward>
+		 </action>
+		 
+		 <!-- 浙江大学评奖项目汇总 -->
+		 <action path="/xpj_pjxmhz"
+				 name="pjxmhzForm"
+				 type="com.zfsoft.xgxt.xpjpy.pjxmhz.PjxmhzAction"
+				 scope="request"
+				 parameter="method">
+				 <forward name="viewPjxmhz" path="/xsgzgl/xpjpy/pjxmhz/viewPjxmhz.jsp"></forward>
+				 <forward name="viewRs" path="/xsgzgl/xpjpy/pjxmhz/viewRs.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>

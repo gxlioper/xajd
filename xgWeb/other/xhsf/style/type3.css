@@ -1,0 +1,509 @@
+@charset "utf-8";
+/*=======================================================
+Filename:default.css
+Description:主页面样式
+Version:2.0.0(2010-11-24)
+Website:西华师范大学学生工作网栏目页
+Auther:
+=======================================================*/
+/*======================公共样式========================*/
+html{
+width:100%;
+text-align:center;
+font-size:12px;
+}
+body {
+margin:0;
+padding:0;
+width:100%;
+font-family:tamoha,Arial, "宋体"
+}
+div, form, img, ul, ol, li, dl, dt, dd, table, td, tr, th, p, span {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 12px
+}
+li{
+list-style-type: none;
+text-align: left
+}
+select, input, button {
+font-size: 12px;
+font-family: Arial, "宋体"
+}
+em {
+font-style: normal
+}
+h1, h2, h3, h4, h5, h6 {
+margin: 0;
+padding: 0;
+font-weight: normal;
+font-size: 12px
+}
+img {
+vertical-align: middle;
+text-align: center
+}
+a:link, a:visited {
+color: #000;
+text-decoration: none
+}
+a:hover {
+color: #000;
+text-decoration: underline
+}
+/*=====================层样式=========================*/
+.body_main{
+width:1002px;
+margin:0 auto;
+}
+.topframe,.botframe {
+margin:0 auto;
+width:1002px;
+background:#fff;
+clear:both;
+}
+.topframe_01{
+	width:100%;
+	height:30px;
+	background:url(images/tophead_bg.gif) left top repeat-x;
+}
+.topframe_02{
+	width:100%;
+	height:158px;
+	background:url(images/toppic.jpg) left top no-repeat;
+}
+.topframe_03{
+	width:100%;
+	height:30px;
+	background:url(images/nav_bg.jpg) left top no-repeat;
+}
+.mainframe {
+width:1002px;
+min-height:250px;
+_height:250px;
+}
+.mainframe:after {
+content:".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;	
+}
+.botframe {
+height:111px;
+background:url(images/bottom_bg.gif) left top repeat-x;
+}
+.mainframe_01 {
+float:left;
+width:100%;
+display:inline;
+margin-top:10px;
+}
+.mainframe_01_01{
+width:500px;
+float:left;
+}
+.mainframe_01_02{
+width:480px;
+float:left;
+}
+/*=======================图片链接控件=======================*/
+.PicUrlPortlet {
+width:100%;
+margin-top:5px;
+float:left;
+display:inline;
+}
+.PicUrlPortlet h3 {
+display:none;
+}
+.PicUrlPortlet h3 span {
+display:block;
+float:left;
+padding-left:10px;
+}
+.PicUrlPortlet h3 a {
+display:block;
+float:right;
+margin-right:5px;
+}
+.PicUrlPortlet ul {
+width:100%;
+}
+.PicUrlPortlet ul li {
+width:228px;
+height:37px;
+margin:2px auto;
+}
+/*=======================新闻图片滚动控件=======================*/
+.newsPicScroll_129230504595325584{
+width:100%;
+}
+.newsPicScroll_129230504595325584 h3{
+display:none;
+}
+.newsPicScroll_129230504595325584 ul{
+width:100%;
+}
+.newsPicScroll_129230504595325584 li{
+width:160px;
+float:left;
+margin-left:5px;
+}
+/*=======================简单新闻列表控件=======================*/
+.NewsList {
+width:100%;
+}
+.NewsList h3 {
+width:100%;
+height:22px;
+line-height:22px;
+background:#f5f5f5;
+border-bottom:1px solid #ccc;
+display:none;
+}
+.NewsList h3 span {
+display:block;
+float:left;
+padding-left:10px;
+}
+.NewsList h3 a {
+display:block;
+float:right;
+margin-right:5px;
+}
+.NewsList ul {
+width:100%;
+margin:5px auto;
+}
+.NewsList ul li{
+width:100%;
+height:22px;
+line-height:180%;
+text-align:left;
+background:url(images/ico_05.gif) left center no-repeat;
+color:#3c3c3c;
+}
+.NewsList .type{
+float:left;
+padding-left:5px;
+color:red;
+display:none;
+}
+.NewsList ul li a{
+float:left;
+padding-left:10px;
+width:70%;
+text-overflow:ellipsis;
+white-space:nowrap;
+overflow:hidden;
+color:#3c3c3c !important;
+}
+.NewsList .new{
+float:left;
+width:30px;
+height:22px;
+background:red;
+padding-left:5px;
+display:none;
+}
+.NewsList .pic {
+float:left;
+width:12px;
+height:8px;
+background:red;
+margin-left:5px;
+display:inline;
+display:none;
+}
+.NewsList .time{
+float:right;
+padding-right:5px;
+}
+/*=======================HTML控件=======================*/
+.TextDisplay_01 {
+width:40%;
+float:left;
+}
+.TextDisplay_01 h3 {
+display:none;
+}
+.TextDisplay_01 .con {
+color:#2f2f2f;
+line-height:30px;
+text-align:left;
+padding-left:10px;
+}
+/*=======================时间日期显示控件=======================*/
+.Showtime {
+width:30%;
+float:right;
+}
+.Showtime h3 {
+display:none;
+}
+.Showtime h3 span {
+}
+.Showtime h3 a {
+}
+.Showtime .con {
+width:100%;
+color:#666;
+}
+.Showtime  span {
+float:left;
+line-height:30px;
+color:#2f2f2f;
+}
+/*=======================导航控件=======================*/
+.navigation {
+width:100%;
+height:30px;
+background:url(images/nav_bg.gif) left top repeat-x;
+}
+.navigation h3 {
+display:none;
+}
+.navigation ul {
+width:98%;
+margin:0 auto;
+}
+.navigation ul li {
+float:left;
+background:url(images/fgx_01.gif) right center no-repeat;
+padding:0 5px 0 4px;
+height:30px;
+line-height:30px;
+color:#FFF;
+position:relative;
+z-index:999;
+}
+.navigation ul li a {
+display:block;
+color:#FFF;
+padding-left:10px;
+text-decoration:none;
+}
+.navigation ul li a span {
+font-size:14px;
+color:#FFF;
+font-weight:bold;
+display:block;
+padding-right:10px;
+}
+.navigation .nav .current{
+}
+.navigation .nav .current a{
+background: url(images/nav_current.gif) left center no-repeat;
+height:30px;
+}
+.navigation .nav .current a span {
+background: url(images/nav_current.gif) right center no-repeat;
+height:30px;
+}
+.navigation .nav .sub {
+position: absolute;
+left:0px;
+top:30px;
+width:115px;
+background:#60c6e6;
+padding:5px 0;
+}
+.navigation .nav .sub li{ 
+height:25px;
+width:115px;
+background: url(images/nav_line.gif) left bottom repeat-x;
+line-height:25px; 
+float: none; 
+clear: both;
+padding:0;
+text-align:left;
+z-index:999px;
+}
+.navigation .nav .sub li a{ 
+color:#262626!important;
+font-size:12px!important;
+width:100%;
+height:25px;
+text-indent:2.5em;
+display:block;
+background:url(images/ico_09.gif) 10px center no-repeat;
+padding:0;
+font-weight:bold;
+}
+.navigation .nav .sub li a:hover{ 
+text-decoration:none; 
+background:#447bb4 url(images/ico_10.gif) 10px center no-repeat;
+color:#fff!important;
+height:25px;
+display:block;
+padding:0;
+}
+/*=======================类型导航=======================*/
+.TypePagelmNavigate_01 {
+width:90%;
+margin:30px auto 0 auto;
+}
+.TypePagelmNavigate_01 h3 {
+width:100%;
+height:32px;
+line-height:32px;
+background:url(images/type_lefthead1.gif) left bottom no-repeat;
+}
+.TypePagelmNavigate_01 h3 span {
+display:block;
+float:left;
+padding-left:10px;
+color:#0168c4;
+font-weight:bold;
+font-size:14px;
+}
+.TypePagelmNavigate_01 h3 img {
+display:none;
+}
+.TypePagelmNavigate_01 ul {
+width:86%;
+margin:5px auto;
+}
+.TypePagelmNavigate_01 ul li {
+clear:both;
+width:100%;
+height:30px;
+line-height:30px;
+background:url(images/ico_07.gif) left center no-repeat;
+}
+.TypePagelmNavigate_01 ul li a {
+float:left;
+padding-left:20px;
+color:#3b608f !important;
+font-size:14px;
+font-weight:bold;
+}
+.TypePagelmNavigate_01 .current {
+background:url(images/ico_06.gif) left center no-repeat;
+}
+.TypePagelmNavigate_01 .current a {
+color:#e4a100 !important;
+font-weight:bold;
+}
+/*=======================显示页面的位置=======================*/
+.ShowPlaceNavigate {
+display:inline;
+line-height:30px;
+width:100%;
+height:30px;
+float:left;
+text-align:left;
+margin-top:15px;
+margin-left:10px;
+}
+.ShowPlaceNavigate h3 {
+display:none;
+}
+.ShowPlaceNavigate em {
+font-style:normal;
+padding-left:5px;
+color:#0955c7;
+}
+/*=======================类型内容=======================*/
+.typepagecontent_01 {
+width:98%;
+float:left;
+margin-top:10px;
+margin-left:20px;
+display:inline;
+}
+.typepagecontent_01 h3 {
+width:100%;
+height:30px;
+line-height:30px;
+background:url(images/right_title.gif) bottom left no-repeat;
+}
+.typepagecontent_01 h3 span {
+display:block;
+float:left;
+padding-left:10px;
+color:#155fbe;
+font-weight:bold;
+font-size:14px;
+}
+.typepagecontent_01 .type_con{
+margin:10px auto;
+text-align:left;
+line-height:180%;
+width:100%;
+color:#3c3c3c;
+}
+.typepagecontent_01 .typelist{
+margin-top:20px;
+}
+.typepagecontent_01 .typelist ul{
+width:96%;
+margin:0 auto;
+}
+
+.typepagecontent_01 .typelist li{
+width:100%;
+height:22px;
+line-height:180%;
+text-align:left;
+background:url(images/ico_05.gif) left center no-repeat;
+color:#3c3c3c;
+}
+
+.typepagecontent_01 .typelist ul li a{
+float:left;
+padding-left:10px;
+width:70%;
+text-overflow:ellipsis;
+white-space:nowrap;
+overflow:hidden;
+color:#3c3c3c !important;
+}
+.typepagecontent_01 .typelist .puber {
+float:left;
+display:inline;
+margin-left:5px;
+display:none;
+}
+.typepagecontent_01 .typelist ul li .new{
+float:left;
+margin-left:5px;
+background:url(images/ico_05.gif) left center no-repeat;
+}
+.typepagecontent_01 .typelist .time{
+float:right;
+height:22px;
+}
+.typepagecontent_01 .page {
+float:right;
+margin:10px 10px 0 0;
+height:22px;
+line-height:22px;
+text-align:center;
+}
+.typepagecontent_01 .news_num{
+float:right;
+margin-right:10px;
+color:#666666;
+}
+.typepagecontent_01 .news_page{
+float:right;
+margin-right:5px;
+color:#666666;
+}
+
+/*=======================HTML控件=======================*/
+.TextDisplay_02 {
+width:100%;
+}
+.TextDisplay_02 h3 {
+display:none;
+}
+.TextDisplay_02 .con {
+padding-top:20px;
+color:#2f2f2f;
+line-height:22px;
+}

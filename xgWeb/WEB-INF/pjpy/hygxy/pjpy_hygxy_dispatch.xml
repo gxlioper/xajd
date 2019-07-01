@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>
+		<!--	转移到淮阴工学院的配置文件,pjpy_hygxy.xml    -->
+		<action path="/pjpy_hygxy_jxjdmwh" 	  forward="/pjpyhygxywh.do?method=jxjdmwh"></action><!-- 奖学金代码增加 -->
+		<action path="/hygxyjxjdmsave"        forward="/pjpyhygxywh.do?method=jxjdmSave"></action><!-- 奖学金代码保存 -->
+		<action path="/pjpy_hygxy_jxjdmmodi"  forward="/pjpyhygxywh.do?method=jxjdmView"></action><!-- 奖学金代码修改显示 -->
+		<action path="/hygxyjxjdmmodi"        forward="/pjpyhygxywh.do?method=jxjdmModi"></action><!-- 奖学金代码修改保存 -->
+		<action path="/pjpy_hygxy_jxjlbdmwh"  forward="/pjpyhygxywh.do?method=jxjlbdmWh"></action><!-- 奖学金类别代码维护 -->
+		<action path="/pjpy_hygxy_jxjlbdmmodi" forward="/pjpyhygxywh.do?method=jxjlbdmModi"></action><!-- 奖学金类别代码修改维护 -->
+		<action path="/hygxyjxjlbdmsave"         forward="/pjpyhygxywh.do?method=jxjlbdmSave"></action>
+		<action path="/hygxyjxjlbdmmodisave"       forward="/pjpyhygxywh.do?method=jxjlbdmmodiSave"></action>
+		<action path="/pjpy_pjsjsz"           forward="/pjpyhygxywh.do?method=pjsjSz"></action><!-- 评奖时间设定 -->
+		<action path="/savepjsj"              forward="/pjpyhygxywh.do?method=savePjsj"></action><!-- 保存评奖时间 -->
+	</action-mappings>
+</struts-config>

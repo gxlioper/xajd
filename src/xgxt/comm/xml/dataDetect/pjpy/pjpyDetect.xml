@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xgxt>
+	<gnmk id="pjpy">
+	<!-- 检测出勤率表中的学生是否存在 -->
+	<jcmk id="PJPY_CQL">
+		<param>
+		<yclx>PJPY_CQL_003</yclx> 
+		<sql>
+			 select *
+  			 from xg_pjpy_cqlb a
+ 			 where not exists (select 1 from view_xsjbxx b where a.xh = b.xh)
+		</sql>
+		</param>
+	</jcmk>
+	
+	<jcmk id="PJPY_CXF">
+		<param>
+		<yclx>PJPY_CXF_001</yclx> 
+		<sql>
+			 select *
+  			 from xg_pjpy_cxfpdb a
+ 			 where not exists (select 1 from view_xsjbxx b where a.xh = b.xh)
+		</sql>
+		</param>
+		
+		<param>
+		<yclx>PJPY_CXF_002</yclx> 
+		<sql>
+			 select *
+  			 from xg_pjpy_cxfpdb a
+ 			 where not exists (select 1 from xqdzb b where a.pjxq = b.xqdm)
+		</sql>
+		</param>
+	</jcmk>
+	
+	<jcmk id="PJPY_ZHCP">
+		<param>
+		<yclx>PJPY_ZHCP_001</yclx> 
+		<sql>
+			 select *
+  			 from xg_pjpy_zhcpcjb a
+ 			 where not exists (select 1 from view_xsjbxx b where a.xh = b.xh)
+		</sql>
+		</param>
+		
+		<param>
+		<yclx>PJPY_ZHCP_005</yclx> 
+		<sql>
+			 select *
+  			 from xg_pjpy_zhcpcjb a
+ 			 where not exists (select 1 from xqdzb b where a.xq = b.xqdm)
+		</sql>
+		</param>
+	</jcmk>
+	</gnmk>
+</xgxt>

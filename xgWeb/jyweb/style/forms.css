@@ -1,0 +1,148 @@
+fieldset {
+	border: #C3A892 1px solid;
+	padding: 4px;
+}
+
+legend {
+	font-weight: bold;
+}
+/*FOR FF*/
+*>input[type="text"] { 
+	border: 1px solid #C3A892;
+	padding: 1px 2px;
+}
+*>input[type="text"]:hover{
+	padding: 1px 2px;
+	background:#FFFFCC;
+	border:1px solid #999999;
+	}
+*>input[type="text"]:focus{
+	padding: 1px 2px;
+	background:#FFFFCC;
+	border:1px solid #999999;
+	}
+* html input.text_normal {
+	border: 1px solid #C3A892;
+	padding: 0 2px;
+}
+
+input.inputtext {
+	border: 1px solid #CCCCCC;
+	padding: 0 2px;
+	color: #000;
+}
+input {
+	border: 1px solid #CCCCCC;
+	padding: 0 2px;
+	color: #000;
+}
+select {
+	border: 1px solid #C3A892;
+}
+
+textarea {
+	border: 1px solid #C3A892;
+}
+
+/*======================全局按钮样式===============*/
+button {
+	padding: 0 4px;
+	background: #FFFCF7 url(../images/button_nor.gif) repeat-x left top;
+	cursor: pointer;
+	color: #FF7400;
+	margin: 0 2px;
+	letter-spacing: 0.2em;
+}
+
+button:hover {
+	padding: 0 4px;
+	background: #FFFCF7 url(../images/button_nor.gif) repeat-x left top;
+	cursor: pointer;
+	color: #FF7400;
+	margin: 0 2px;
+	letter-spacing: 0.2em;
+}
+
+*>button { /*for modern browser*/
+	outline: 1px solid #FF9339;
+	border: 1px solid #fff !important;
+}
+
+* html button { /*for IE 6.0/IE 5.*/
+	border: 1px solid #FF9339;
+	height: 20px;
+}
+
+*+html button { /* for IE 7 */
+	border: 1px solid #FF9339 !important;
+}
+
+.tbborder {
+	border-collapse: collapse;
+}
+
+.tbborder thead {
+	height: 23px;
+}
+.tbborder .btys td {
+	border: 1px #fff solid;
+	background:#FFD9BB;
+	padding: 2px;
+	font-weight: bold;
+	word-break: keep-all;
+	color:#D84106;
+}
+.tbborder thead td {
+	border: 1px #fff solid;
+	background:#FFD9BB;
+	padding: 2px;
+	font-weight: bold;
+	word-break: keep-all;
+	color:#D84106;
+}
+
+.tbborder tbody td {
+	border: 1px #fff solid;
+	background:F7F7F7;
+	padding: 2px;
+	word-break: keep-all;
+	height: 26px;
+}
+
+.grxx {
+	border-collapse: collapse;
+	}
+
+.grxx thead td{
+	background: #FFDDC0 url(../images/table_title.gif) repeat-x left top;
+	height:29px;
+	line-height:29px;
+	font-size:13px;
+	font-weight:bold;
+	letter-spacing: 5px;
+	}
+.grxx td{
+	padding:0 4px;
+	}
+.jy_midframe textarea {
+	border: 0;
+}
+
+.zcbd {
+	width: 150px;
+	height: 20px;
+	border: 1px solid #ccc;
+	border-top: 1px solid #000;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #000;
+}
+/*=========对操作按钮加深颜色==========*/
+.linkred a{
+	color:#F24400;
+	font-weight:bold;
+	}
+.linkred a:visited{
+	color:#B88B7A;
+	font-weight:bold;
+	}

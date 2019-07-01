@@ -1,0 +1,347 @@
+/*基本参数定义*/
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana, arial, helvetica, sans-serif, 宋体;
+	color: #000;
+	background-color: #fff;
+	font-size: 12px;
+}
+
+body {
+	background-color: #ffffff;
+	scrollbar-shadow-color: #666666;
+	scrollbar-darkshadow-color: #F0F0F0;
+	scrollbar-arrow-color: #000000;
+	scrollbar-base-color: #CCCCCC;
+	scrollbar-highlight-color: #F0F0F0;
+}
+
+td {
+	font-size: 12px;
+}
+
+th {
+	font-size: 12px;
+}
+
+strong,b {
+	font-weight: bold;
+}
+
+img map {
+	border: 0;
+}
+
+/*--------------------------------*/ /*全局参数定义*/
+legend {
+	font-weight: bold;
+	color: #003366
+}
+
+fieldset {
+	border: #98BCE1 1px solid;
+	padding: 4px;
+}
+
+input {
+	background: #F7F9FC;
+	border: 1px solid #6699CC;
+}
+
+textarea {
+	background: #F7F9FC;
+	border: 1px solid #6699CC;
+}
+
+/*按钮定义*/
+.button2 {
+	border: #002D96 1px solid;
+	padding: 2px 0px 0px 2px;
+	filter: progid : DXImageTransform . Microsoft .
+		Gradient(GradientType = 0, StartColorStr = #FFFFFF, EndColorStr =
+		#9DBCEA);
+	cursor: hand;
+	color: #003366;
+	margin: 0px 2px;
+	height: 19px;
+}
+
+/*默认的超连接样式*/
+A:link {
+	COLOR: #000;
+	TEXT-DECORATION: none
+}
+
+A:visited {
+	COLOR: #003366;
+	TEXT-DECORATION: none
+}
+
+A:active {
+	COLOR: #003366;
+	TEXT-DECORATION: none
+}
+
+A:hover {
+	COLOR: red;
+	TEXT-DECORATION: underline
+}
+
+/*----------------top部分----------*/
+.topframe {
+	background: url(../images/top_bg.gif) no-repeat;
+	height: 50px;
+	width: 100%;
+}
+
+.toptool {
+	background: #80B8E7;
+	border: solid #fff;
+	border-width: 1px 0px;
+	filter: progid : DXImageTransform . Microsoft . Alpha(opacity = 55);
+	height: 20px;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.menubg {
+	background: #80B8E7;
+	border: solid #fff;
+	border-width: 1px 0px;
+	filter: progid : DXImageTransform . Microsoft . Alpha(opacity = 55);
+	height: 18px;
+	width: 100%;
+	margin-top: 100px;
+}
+
+.menu_link {
+	position: absolute;
+	top: 51px;
+	font-weight: bold;
+	left: 20px;
+}
+
+.menu_link a:link {
+	COLOR: #fff;
+	TEXT-DECORATION: none;
+	padding: 3px;
+}
+
+.menu_link a:visited {
+	COLOR: #fff;
+	TEXT-DECORATION: none;
+	padding: 3px;
+}
+
+.menu_link a:hover {
+	COLOR: #fff;
+	TEXT-DECORATION: none;
+	background: #4B85C1;
+	padding: 2px;
+	border: 1px solid #3464B7;
+}
+
+.tolefthand {
+	cursor: hand;
+	background: url(../images/sous_2.gif) no-repeat;
+	height: 83px;
+	width: 11px;
+}
+
+.torighthand {
+	cursor: hand;
+	background: url(../images/sous_2.gif) no-repeat;
+	height: 83px;
+	width: 11px;
+}
+
+.tool {
+	position: absolute;
+	top: 46px;
+	right: 5px;
+}
+
+.tool ul {
+	list-style: none;
+	margin: 0px;
+}
+
+.tool li {
+	list-style: none;
+	float: left;
+	margin: 0px 2px;
+	cursor: hand;
+}
+
+.tool_1 {
+	background: url(../images/tool_loginout.gif) no-repeat;
+	height: 17px;
+	width: 17px;
+}
+
+.tool_2 {
+	background: url(../images/tool_close.gif) no-repeat;
+	height: 17px;
+	width: 17px;
+}
+
+.tool_3 {
+	background: url(../images/tool_help.gif) no-repeat;
+	height: 17px;
+	width: 17px;
+}
+
+/*----------------top部分----------*/
+.leftframe {
+	background: url(../images/left_bg.gif);
+	width: 100%;
+	height: 100%
+}
+
+/*========================左边菜单样式=======================*/
+	/*.tit为每个菜单的标题样式 .list 为菜单项目的样式*/
+.tit  , .list {
+	margin-left: 3px;
+}
+
+/*菜单标题的样式*/
+.tit {
+	color: #D9E1F6; /*前景色*/
+	text-indent: 17px;
+	border: solid #98BCE1;
+	margin-top: 10px;
+	border-width: 0px 0px 1px 0px;
+	font: bold 12px/ 14px "宋体"; /*文字样式依次为：粗体 大小/行高 字族*/
+}
+
+.tit a  ,.tit a:link  , .tit a hover { /*菜单标题中的链接的样式，共同的部分*/
+	color: #003366;
+	display: block;
+	text-decoration: none;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: 2px 0px;
+}
+
+/*====================
+    菜单标题中的箭头图片
+======================*/
+.on {
+	background-image: url(../images/arrow_down.gif); /*向上的箭头-暗色*/
+}
+
+.on:hover {
+	background-image: url(../images/arrow_down_o.gif); /*向上的箭头-亮色*/
+}
+
+.off {
+	background-image: url(../images/arrow_up.gif); /*向下的箭头-暗色*/
+}
+
+.off:hover {
+	background-image: url(../images/arrow_up_o.gif); /*向下的箭头-亮色*/
+}
+
+.tit a:hover {
+	color: #006699; /*鼠标经过时的颜色*/
+	text-decoration: none;
+}
+
+.list {
+	font-size: 12px;
+	color: #002280;
+	text-align: left;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	overflow: hidden;
+}
+
+html>body .list {
+	width: 150px;
+}
+
+.list ul {
+	list-style-type: none;
+	margin: 5px 0px;
+	padding: 0;
+	padding-left: 20px;
+}
+
+.list li {
+	margin: 2px;
+	padding: 0;
+	padding-left: 5px;
+}
+
+/*============
+菜单链接的样式
+==============*/
+.lipic {
+	list-style-image: url("../images/.gif");
+}
+
+.list a {
+	color: #002280;
+	text-decoration: none;
+}
+
+.list a:link {
+	color: #002280;
+}
+
+.list a:hover {
+	color: #296DC1;
+	text-decoration: underline;
+}
+
+.list a:active {
+	color: #296DC1;
+}
+
+/*============右边主窗口样式==============*/
+.title {
+	border: #7AA5D2 1px solid;
+	padding: 2px 0px 0px 2px;
+	filter: progid : DXImageTransform . Microsoft .
+		Gradient(GradientType = 0, StartColorStr = #7AA5D2, EndColorStr =
+		#CEE3F9);
+	color: #003366;
+	height: 14px;
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+.title_img {
+	float: left;
+	background: url(../images/list-image-5.gif) no-repeat;
+	height: 16px;
+	padding-left: 25px
+}
+
+.rightcontent {
+	border: #7AA5D2 solid;
+	border-width: 0px 1px 1px 1px;
+	padding: 4px;
+}
+
+/*============底部样式==============*/
+.bottomframe {
+	width: 100%;
+	height: 25px;
+	border: #A2C7EA solid 1px;
+	background-color: #CEE4F9;
+}
+
+.welcome {
+	float: left;
+	color: #ccc;
+}
+
+.zflogo {
+	background: url(../images/zflogo.gif) no-repeat;
+	height: 25px;
+	width: 67px;
+	cursor: hand;
+	float: right
+}

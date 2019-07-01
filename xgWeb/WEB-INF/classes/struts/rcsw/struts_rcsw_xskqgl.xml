@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+	
+		<form-bean name="KqlxForm" type="com.zfsoft.xgxt.rcsw.kqgl.dmwh.KqlxForm"></form-bean>
+		<form-bean name="KqglForm" type="com.zfsoft.xgxt.rcsw.kqgl.xskqgl.KqglForm"></form-bean>
+		<form-bean name="ZjsyKqForm" type="com.zfsoft.xgxt.rcsw.kqgl.zjsy.ZjsyKqForm"></form-bean>
+		<form-bean name="KqgljgForm" type="com.zfsoft.xgxt.rcsw.kqgl.kqgl.KqglForm"></form-bean>
+		<form-bean name="KqCsszForm" type="com.zfsoft.xgxt.rcsw.kqgl.cssz.KqCsszForm"></form-bean>
+		<form-bean name="KqwhForm" type="com.zfsoft.xgxt.rcsw.kqgl.kqwh.KqwhForm"></form-bean>
+		<form-bean name="KqshForm" type="com.zfsoft.xgxt.rcsw.kqgl.kqsh.KqshForm"></form-bean>
+		<form-bean name="kqjlForm" type="com.zfsoft.xgxt.rcsw.kqgl.kqjl.kqjlForm"></form-bean>
+
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/rcsw_kqgl_kqlxdmwh" forward="/rcsw_kqgl_dmwh.do?method=viewKqlxList"></action>
+		<action path="/rcsw_kqgl_kqgl" forward="/rcsw_kqgl_xskqgl.do?method=viewKqdjList"></action>
+			
+	 	
+	 	<!-- ===================================== 考勤类型代码维护 ===================================================== -->	
+		
+		<action path="/rcsw_kqgl_dmwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.kqgl.dmwh.KqlxAction"
+    			name="KqlxForm"
+    			parameter="method">
+    			
+    		<forward name="viewKqlxList" path="/xsgzgl/rcsw/kqgl/dmwh/viewKqlxList.jsp"></forward>  <!-- 查询 -->
+	 		<forward name="addKqlx" path="/xsgzgl/rcsw/kqgl/dmwh/addKqlx.jsp"></forward>			<!-- 增加 -->
+	 		<forward name="updateKqlx" path="/xsgzgl/rcsw/kqgl/dmwh/updateKqlx.jsp"></forward>		<!-- 修改 -->
+    		
+		</action>
+		
+	 	<!-- ===================================== 考勤类型代码维护end=================================================== -->
+	 	
+	 	<!-- ===================================== 学生考勤管理 ===================================================== -->	
+		<action path="/rcsw_kqgl_xskqgl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.kqgl.xskqgl.KqglAction"
+    			name="KqglForm"
+    			parameter="method">
+    			
+    		<forward name="viewKqdjList" path="/xsgzgl/rcsw/kqgl/xskqgl/viewKqdjList.jsp"></forward>  	<!-- 查询 -->
+	 		<forward name="addKqdj" path="/xsgzgl/rcsw/kqgl/xskqgl/addKqdj.jsp"></forward>				<!-- 增加 -->
+	 		<forward name="updateKqdj" path="/xsgzgl/rcsw/kqgl/xskqgl/updateKqdj.jsp"></forward>		<!-- 修改 -->
+    		<forward name="oneKqdjView" path="/xsgzgl/rcsw/kqgl/xskqgl/oneKqdjView.jsp"></forward>		<!-- 单个查看考勤登记-->
+    		
+		</action>
+		
+	 	<!-- ===================================== 学生考勤管理end=================================================== -->	
+	 	
+	 	
+	 	<!-- 考勤管理 --> 
+	 	<action path="/rcsw_kqjg_cx" forward="/rcsw_kqgl_kqgljg.do?method=viewKqjgList"/>	
+	 	<action path="/rcsw_kqgl_kqgljg" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.kqgl.kqgl.KqglAction"
+    			name="KqgljgForm"
+    			parameter="method">
+    		<forward name="viewKqjgList" path="/xsgzgl/rcsw/kqgl/kqgl/viewKqjgList.jsp"></forward>  	<!-- 查询 -->
+	 		<forward name="addKqjg" path="/xsgzgl/rcsw/kqgl/kqgl/addKqjg.jsp"></forward>				<!-- 增加 -->
+	 		<forward name="updateKqjg" path="/xsgzgl/rcsw/kqgl/kqgl/updateKqjg.jsp"></forward>		<!-- 修改 -->
+    		<forward name="viewKqjg" path="/xsgzgl/rcsw/kqgl/kqgl/viewKqjg.jsp"></forward>		<!-- 单个查看考勤登记-->
+		</action>
+		
+		<!-- 内蒙古电子信息考勤记录 --> 
+	 	<action path="/rcsw_kqgl_kqjl" forward="/kqgl_kqjl.do?method=viewKqjlList"/>	
+	 	<action path="/kqgl_kqjl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.kqgl.kqjl.kqjlAction"
+    			name="kqjlForm"
+    			parameter="method">
+    		<forward name="viewKqjlList" path="/xsgzgl/rcsw/kqgl/kqjl/viewKqjlList.jsp"></forward> <!-- 查询 -->
+    		<forward name="viewKqjl" path="/xsgzgl/rcsw/kqgl/kqjl/viewKqjl.jsp"></forward> <!-- 查询 -->
+		</action>
+		
+        <!--浙江商业个性化考勤管理begin  -->
+        <action path="/rcsw_zjsy_kqgl" forward="/zjsy_kqgl.do?method=viewKqjgList"/>
+        <action path="/rcsw_zjsy_kqcsh" forward="/zjsy_kqgl.do?method=cshKqList"/>
+        <action path="/rcsw_zjsy_kqcssz" forward="/zjsy_kqcssz.do?method=jcsz"/>
+        <action path="/rcsw_zjsy_kqwh" forward="/zjsy_kqwh.do?method=kqwhKqList"/>
+        <action path="/rcsw_zjsy_kqsh" forward="/zjsy_kqsh.do?method=kqshKqList"/>
+        
+        <action path="/zjsy_kqgl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.kqgl.zjsy.ZjsyKqAction"
+    			name="ZjsyKqForm"
+    			parameter="method">
+    			
+    		<forward name="viewKqjgList" path="/xsgzgl/rcsw/kqgl/zjsy/viewKqjgList.jsp"></forward>  	<!-- 查询 -->
+    		<forward name="cshKqList" path="/xsgzgl/rcsw/kqgl/zjsy/cshKqList.jsp"></forward>
+    		<forward name="cshKqdj" path="/xsgzgl/rcsw/kqgl/zjsy/cshKqdj.jsp"></forward>
+	        <forward name="addKqdj" path="/xsgzgl/rcsw/kqgl/zjsy/addKqdj.jsp"></forward> 
+	        <forward name="updateKqdj" path="/xsgzgl/rcsw/kqgl/zjsy/updateKqdj.jsp"></forward>
+	        <forward name="getStu" path="/xsgzgl/rcsw/kqgl/zjsy/getStu.jsp" />
+	        <forward name="viewKqdj" path="/xsgzgl/rcsw/kqgl/zjsy/viewKqdj.jsp"></forward>
+		</action>
+		
+		<action path="/zjsy_kqcssz" 
+				scope="request"
+				type="com.zfsoft.xgxt.rcsw.kqgl.cssz.KqCsszAction"
+				name="KqCsszForm"
+				parameter="method">
+			<forward name="jcsz" path="/xsgzgl/rcsw/kqgl/cssz/jcsz.jsp" />		<!-- 参数设置 -->
+		</action>
+		
+		
+		<action path="/zjsy_kqwh" 
+				scope="request"
+				type="com.zfsoft.xgxt.rcsw.kqgl.kqwh.KqwhAction"
+				name="KqwhForm"
+				parameter="method">
+			<forward name="kqwhKqList" path="/xsgzgl/rcsw/kqgl/kqwh/kqwhKqList.jsp" />
+			<forward name="updateKqwh" path="/xsgzgl/rcsw/kqgl/kqwh/updateKqwh.jsp"/>
+		</action>
+		
+		<action path="/zjsy_kqsh" 
+				scope="request"
+				type="com.zfsoft.xgxt.rcsw.kqgl.kqsh.KqshAction"
+				name="KqshForm"
+				parameter="method">
+				
+			<forward name="kqshKqList" path="/xsgzgl/rcsw/kqgl/kqsh/kqshList.jsp"></forward>
+			<forward name="kqDgsh" path="/xsgzgl/rcsw/kqgl/kqsh/kqDgsh.jsp"></forward>
+			<forward name="kqPlsh" path="/xsgzgl/rcsw/kqgl/kqsh/kqPlsh.jsp"></forward>
+			<forward name="kqshCk" path="/xsgzgl/rcsw/kqgl/kqsh/kqshCk.jsp"></forward>
+		</action>
+		
+        <!--浙江商业个性化考勤管理end  -->
+	</action-mappings>
+	
+</struts-config>

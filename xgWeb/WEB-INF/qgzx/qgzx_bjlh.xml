@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    <form-bean name="commanForm" type="xgxt.form.CommanForm" />
+	</form-beans>
+
+	<global-forwards />
+
+	<action-mappings>
+		<action 
+			path="/qgzxUpload"
+			name="commanForm"
+			type="xgxt.qgzx.bjlhdx.BjlhQgzxAction"
+			parameter="method">			
+			<forward name="import" path="/qgzx/bjlhdx/dataUpLoad.jsp"/>
+			<forward name="success" path="/qgzx/bjlhdx/data_import.jsp"/>
+			<forward name="false" path="/errMsg.jsp"/>
+			<forward name="loadSuccess" path="/importData.do" />
+		</action>
+		<action 
+			path="/qgzxBjlhdx"
+			name="commanForm"
+			type="xgxt.qgzx.bjlhdx.BjlhQgzxAction"
+			parameter="method">		
+			<forward name="gwxx" path="/qgzx/bjlhdx/modiGwxxb.jsp"/>
+			<forward name="workLog" path="/qgzx/qgzx_gzkh_one.jsp" />		
+		</action>
+	</action-mappings>
+</struts-config>

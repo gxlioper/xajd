@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyXmlgActionForm" type="xgxt.pjpy.xmlg.PjpyXmlgActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_xmlg_zhszcpwhDefault" 	   forward="/xmlgpjpy.do?method=zhszcpwhDefault"/> <!-- 综合素质测评分维护页面 -->
+	    <action path="/pjpy_xmlg_zhszcpwhDelete" 	   forward="/xmlgpjpy.do?method=zhszcpwhDelete"/> <!-- 综合素质测评分删除操作 -->
+	   	<action path="/pjpy_xmlg_addZhszcpxx" 	   forward="/xmlgpjpy.do?method=addZhszcpxx"/> <!-- 综合素质测评分增加操作 -->
+	   	<action path="/pjpy_xmlg_modiZhszcpxx" 	   forward="/xmlgpjpy.do?method=modiZhszcpxx"/> <!-- 综合素质测评分修改操作 -->
+	   	<action path="/pjpy_xmlg_szZhszcppm" 	   forward="/xmlgpjpy.do?method=szZhszcppm"/> <!-- 设置综测排名方式操作 -->
+	   	<action path="/pjpy_xmlg_csblsz" 	   forward="/xmlgpjpy.do?method=csblsz"/> <!-- 奖学金荣誉称号学校比例设置 -->
+	    <action path="/pjpy_xmlg_initData" 	   forward="/xmlgpjpy.do?method=initData"/> <!-- 初始化数据 -->
+	   	<action path="/pjpy_xmlg_jxjBlsz" 	   forward="/xmlgpjpy.do?method=jxjBlsz"/> <!-- 奖学金批量比例设置 -->
+	   	<action path="/pjpy_xmlg_modiBlszxx" 	   forward="/xmlgpjpy.do?method=modiBlszxx"/> <!-- 奖学金比例设置修改 -->
+	   	<action path="/pjpy_xmlg_rychCsblsz" 	   forward="/xmlgpjpy.do?method=rychCsblsz"/> <!-- 荣誉称号学校比例设置 -->
+	   	<action path="/pjpy_xmlg_initDataByRych" 	   forward="/xmlgpjpy.do?method=initDataByRych"/> <!-- 荣誉称号数据初始化 -->
+	   	<action path="/pjpy_xmlg_rychBlsz" 	   forward="/xmlgpjpy.do?method=rychBlsz"/> <!-- 荣誉称号比例设置 -->
+	   	<action path="/pjpy_xmlg_modiRychBlszxx" 	   forward="/xmlgpjpy.do?method=modiRychBlszxx"/> <!-- 荣誉称号单个比例设置 -->
+        <action path="/pjpy_xmlg_xyJxjrstz" 	   forward="/xmlgpjpy.do?method=xyJxjrstz"/> <!-- 奖学金荣誉称号学校比例设置 -->
+	   	<action path="/pjpy_xmlg_jxjsqDefault" 	   forward="/xmlgpjpy.do?method=jxjsqDefault"/> <!-- 奖学金申请页面 -->
+	   	<action path="/pjpy_xmlg_tzrsFssz" 	   forward="/xmlgpjpy.do?method=tzrsFssz"/> <!-- 奖学金调整人数方式设置 -->
+	   	<action path="/pjpy_xmlg_jxjsqQuery" 	   forward="/xmlgpjpy.do?method=jxjsqQuery"/> <!-- 奖学金申请查询页面 -->
+	   	<action path="/pjpy_xmlg_jxjsqDelete" 	   forward="/xmlgpjpy.do?method=jxjsqDelete"/> <!-- 奖学金申请删除操作 -->
+	   	<action path="/pjpy_xmlg_modiJxjsqxx" 	   forward="/xmlgpjpy.do?method=modiJxjsqxx"/> <!-- 奖学金申请修改操作 -->
+	   	<action path="/pjpy_xmlg_queryJxjsqxxBystu" 	   forward="/xmlgpjpy.do?method=queryJxjsqxxBystu"/> <!-- 学生查询奖学金申请信息 -->
+	   	<action path="/pjpy_xmlg_stuJxjsqDelete" 	   forward="/xmlgpjpy.do?method=stujxjsqDelete"/> <!-- 学生删除奖学金申请信息 -->
+	   	<action path="/pjpy_xmlg_jxjsh" 	   forward="/xmlgpjpy.do?method=jxjsh"/> <!-- 奖学金审核页面 -->
+	   	<action path="/pjpy_xmlg_jxjDgsh" 	   forward="/xmlgpjpy.do?method=jxjDgsh"/> <!-- 奖学金单个审核页面 -->
+	    <action path="/pjpy_xmlg_rychsqDefault" 	   forward="/xmlgpjpy.do?method=rychsqDefault"/> <!-- 荣誉称号申请 -->
+	   	<action path="/pjpy_xmlg_rychsqQuery" 	   forward="/xmlgpjpy.do?method=rychsqQuery"/> <!-- 奖学金申请查询页面 -->
+	   	<action path="/pjpy_xmlg_modiRychsqxx" 	   forward="/xmlgpjpy.do?method=modiRychsqxx"/> <!-- 奖学金申请查询页面 -->
+		<action path="/pjpy_xmlg_jxjplsh" 	   forward="/xmlgpjpy.do?method=jxjPlsh"/> <!-- 奖学金批量审核操作 -->
+		<action path="/pjpy_xmlg_jxjprint" 	   forward="/xmlgpjpy.do?method=jxjPrint"/> <!-- 奖学金申请表打印 -->
+		<action path="/pjpy_xmlg_rych" 	   forward="/xmlgpjpy.do?method=rychsh"/> <!-- 荣誉称号审核页面 -->   
+		<action path="/pjpy_xmlg_jxhzsc" 	   forward="/xmlgpjpy.do?method=jxhzsc"/> <!-- 奖学金，荣誉称号推荐表，公示名单，金额汇总输出 -->
+	   	<action path="/pjpy_xmlg_jxjjehzsc" 	   forward="/xmlgpjpy.do?method=jxjjehzsc"/> <!-- 奖学金金额汇总输出 -->
+	    <action path="/pjpy_xmlg_mdsc" 	   forward="/xmlgpjpy.do?method=mdscDefault"/> <!-- 奖学金金额汇总输出 -->	
+	    <action path="/pjpy_xmlg_jxjjehzOutPut" 	   forward="/xmlgpjpy.do?method=jxjjehzOutPut"/> <!-- 奖学金金额汇总输出 -->	
+	    
+	    <!-- 实际路径 -->	
+		<action path="/xmlgpjpy"
+				type="xgxt.pjpy.xmlg.PjpyXmlgAction"
+				name="pjpyXmlgActionForm"
+				parameter="method"
+				scope="request">
+		<forward name="zhszcpwhDefault" path="/pjpy/xmlg/zhszcp/zhszcpwhDefault.jsp" />														
+		<forward name="addZhszcpxx" path="/pjpy/xmlg/zhszcp/addZhszcpxx.jsp" />	
+		<forward name="modiZhszcpxx" path="/pjpy/xmlg/zhszcp/modiZhszcpxx.jsp" />	
+		<forward name="szZhszcppm" path="/pjpy/xmlg/zhszcp/szZhszcppm.jsp" />	
+		<forward name="csblsz" path="/pjpy/xmlg/cssz/csblsz.jsp" />	
+		<forward name="xyJxjrstz" path="/pjpy/xmlg/cssz/xyJxjrstz.jsp" />	
+		<forward name="jxjBlsz" path="/pjpy/xmlg/cssz/jxjBlsz.jsp" />	
+		<forward name="modiBlszxx" path="/pjpy/xmlg/cssz/modiBlszxx.jsp" />
+		<forward name="rychCsblsz" path="/pjpy/xmlg/cssz/rychCsblsz.jsp" />
+		<forward name="rychBlsz" path="/pjpy/xmlg/cssz/rychBlsz.jsp" />
+		<forward name="xyRychrstz" path="/pjpy/xmlg/cssz/xyRychrstz.jsp" />
+		<forward name="modiRychBlszxx" path="/pjpy/xmlg/cssz/modiRychBlszxx.jsp" />
+		<forward name="jxjsqDefault" path="/pjpy/xmlg/jxj/jxjsqDefault.jsp" />
+		<forward name="tzrsFssz" path="/pjpy/xmlg/cssz/tzrsFssz.jsp" />
+		<forward name="jxjsqQuery" path="/pjpy/xmlg/jxj/jxjsqQuery.jsp" />
+		<forward name="modiJxjsqxx" path="/pjpy/xmlg/jxj/modiJxjsqxx.jsp" />
+		<forward name="queryJxjsqxxBystu" path="/pjpy/xmlg/jxj/queryJxjsqxxBystu.jsp" />
+		<forward name="jxjsh" path="/pjpy/xmlg/jxj/jxjsh.jsp" />
+		<forward name="jxjDgsh" path="/pjpy/xmlg/jxj/jxjDgsh.jsp" />
+		<forward name="rychsqDefault" path="/pjpy/xmlg/rych/rychsqDefault.jsp" />
+		<forward name="rychsqQuery" path="/pjpy/xmlg/rych/rychsqQuery.jsp" />
+		<forward name="modiRychsqxx" path="/pjpy/xmlg/rych/modiRychsqxx.jsp" />
+		<forward name="rychsh" path="/pjpy/xmlg/rych/rychsh.jsp" />
+		<forward name="rychdgsh" path="/pjpy/xmlg/rych/rychdgsh.jsp" />
+		<forward name="jxjPrint" path="/pjpy/xmlg/jxj/jxjprint.jsp" />
+		<forward name="jxhzsc" path="/pjpy/xmlg/jxhzsc.jsp" />
+		<forward name="mdscDefault" path="/pjpy/xmlg/mdscDefault.jsp" />
+		<forward name="jxjgsd" path="/pjpy/xmlg/jxjgsd.jsp" />
+		<forward name="rychgsd" path="/pjpy/xmlg/rychgsd.jsp" />
+		<forward name="pytjb" path="/pjpy/xmlg/pytjb.jsp" />
+		<forward name="jxjjehzOutPut" path="/pjpy/xmlg/cssz/jxjjehzOutPut.jsp" />
+        </action>
+	</action-mappings>
+	<message-resources key="" parameter="" />
+
+</struts-config>

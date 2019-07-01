@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>
+		<!--	转移到宁波理工学院的配置文件,pjpy_nblg.xml    -->
+		<action path="/pjpy_djkswh" 	   forward="/pjpynblgwh.do?method=pjpydjksWh"></action><!-- 等级考试维护首页 -->
+		<action path="/djksqry"            forward="/pjpynblgwh.do?method=djksQry"></action><!-- 等级考试成绩查询 -->
+		<action path="/djkscjtb"           forward="/pjpynblgwh.do?method=djkscjTb"></action><!-- 等级考试教务同步 -->
+		<action path="/pjpy_nblg_ddpycjwh" forward="/pjpynblgzhcpwh.do?method=ddpycjWh"></action>
+		<action path="/pjpy_nblg_dycjadd"  forward="/pjpynblgzhcpwh.do?method=dycjAdd"></action><!-- 德育成绩增加页面 -->
+		<action path="/pjpy_nblg_dycjmodi" forward="/pjpynblgzhcpwh.do?method=dycjModi"></action><!-- 德育成绩修改页面 -->
+		<action path="/pjpy_nblg_zhszcpwh" forward="/pjpynblgzhcpwh.do?method=zhszcpWh"></action><!-- 综合测评成绩 -->
+		<action path="/pjpy_nblg_zhszcpexp" forward="/pjpynblgzhcpwh.do?method=zhszcpExp"></action>
+		<action path="/pjpy_nblg_jxjsq"    forward="/pjpynblgwh.do?method=jxjSq"></action> <!-- 奖学金申请页面 -->
+		<action path="/pjpy_nblg_jxjprint" forward="/pjpynblgwh.do?method=jxjPrint"></action><!-- 奖学金评审表打印 -->
+		<action path="/pjpy_nblg_jxjdm"    forward="/pjpynblgwh.do?method=jxjdmAdd"></action><!-- 奖学金代码增加页面 -->
+		<action path="/pjpy_nblg_tjsz"     forward="/pjpynblgwh.do?method=tjsz"></action><!-- 奖学金条件设置 -->
+		<action path="/pjpy_nblg_tjszsave" forward="/pjpynblgwh.do?method=tjszSave"></action><!-- 条件设置保存 -->
+		<action path="/pjpy_nblg_yytjsz"   forward="/pjpynblgwh.do?method=yytjsz"></action><!-- 英语条件设置 -->
+		<action path="/pjpy_nblg_jxjsh"    forward="/pjpynblgwh.do?method=jxjsh"></action><!-- 奖学金审核页面 -->
+		<action path="/pjpy_nblg_rychtjsz" forward="/pjpynblgwh.do?method=rychTjsz"></action><!-- 荣誉称号条件设置 -->
+		<action path="/pjpy_nblg_rychsh"   forward="/pjpynblgwh.do?method=rychsh"></action><!-- 荣誉称号审核页面 -->
+		<action path="/pjpy_nblg_rychprint" forward="/pjpynblgwh.do?method=rychPrint"></action><!-- 荣誉称号报表打印 -->
+		<action path="/pjpy_nblg_wmbjprint" forward="/pjpynblgwh.do?method=wmbjPrint"></action><!-- 文明班级报表打印 -->
+		<action path="/pjpy_nblg_cjtjgl"   forward="/pjpynblgwh.do?method=cjtjGl"></action><!-- 成绩条件过滤设置 -->
+		<action path="/pjpy_nblg_cjtjadd"  forward="/pjpynblgwh.do?method=cjtjadd"></action><!-- 成绩条件增加 -->
+		<action path="/pjpy_nblg_cjtjmodi" forward="/pjpynblgwh.do?method=cjtjmodi"></action><!-- 成绩条件修改 -->
+	</action-mappings>	
+</struts-config>

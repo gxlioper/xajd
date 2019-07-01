@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="rcswBxglCsszForm" type="com.zfsoft.xgxt.rcsw.bxgl.cssz.CsszForm" />
+		<form-bean name="xsyybxxxForm" type="com.zfsoft.xgxt.rcsw.bxgl.xsyybxxx.XsyybxxxForm" />
+		<form-bean name="xsbxbxForm" type="com.zfsoft.xgxt.rcsw.bxgl.xsbxbx.XsbxbxForm" />	
+		<form-bean name="BxbxSqForm" type="com.zfsoft.xgxt.rcsw.bxgl.bxbxsq.BxbxSqForm" />
+		<form-bean name="BxbxshForm" type="com.zfsoft.xgxt.rcsw.bxgl.bxbxsh.BxbxshForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/rcsw_bxgl_cssz" forward="/rcswBxglCssz.do?method=cssz"/>
+		<action path="/rcsw_bxgl_bxbxsq" forward="/rcswBxglBxbxsq.do?method=bxbxsqList"/>
+		<action path="/rcsw_bxgl_bxbxsh" forward="/rcswBxglBxbxsh.do?method=bxbxshList"/>
+		
+		<!-- 学生预约报销信息 -->
+		<action path="/rcsw_bxgl_xsyybxxx" forward="/rcsw_bxgl_xsyybx.do?method=xsyybxxxList"/>
+		<action path="/rcsw_bxgl_xsyybx" name="xsyybxxxForm" type="com.zfsoft.xgxt.rcsw.bxgl.xsyybxxx.XsyybxxxAction"
+			parameter="method" scope="request">
+			<forward name="xsyybxxxList" path="/xsgzgl/rcsw/bxgl/xsyybxxx/xsyybxxxList.jsp" />
+			<forward name="yyxxAdd" path="/xsgzgl/rcsw/bxgl/xsyybxxx/yyxxAdd.jsp" />
+			<forward name="yyxxUpdate" path="/xsgzgl/rcsw/bxgl/xsyybxxx/yyxxUpdate.jsp" />
+			<forward name="ckYyxx" path="/xsgzgl/rcsw/bxgl/xsyybxxx/ckYyxx.jsp" />
+		</action>
+		
+		<!-- 学生保险报销 -->
+		<action path="/rcsw_bxgl_xsbxbx" forward="/rcswBxglXsbxbx.do?method=xsbxbxList"/>
+		<action path="/rcswBxglXsbxbx" name="xsbxbxForm" type="com.zfsoft.xgxt.rcsw.bxgl.xsbxbx.XsbxbxAction"
+			parameter="method" scope="request">
+			<forward name="xsbxbxList" path="/xsgzgl/rcsw/bxgl/xsbxbx/xsbxbxList.jsp" />
+			<forward name="addBx" path="/xsgzgl/rcsw/bxgl/xsbxbx/addBx.jsp" />
+			<forward name="updateBx" path="/xsgzgl/rcsw/bxgl/xsbxbx/updateBx.jsp" />
+			<forward name="ckBx" path="/xsgzgl/rcsw/bxgl/xsbxbx/ckBx.jsp" />
+		</action>
+		
+		<!-- 参数设置 -->
+		<action path="/rcswBxglCssz" name="rcswBxglCsszForm" type="com.zfsoft.xgxt.rcsw.bxgl.cssz.CsszAction"
+			parameter="method" scope="request">
+			<forward name="cssz" path="/xsgzgl/rcsw/bxgl/cssz/cssz.jsp" />
+		</action>
+		
+		<!-- 学生保险报销申请 -->
+		<action path="/rcswBxglBxbxsq" name="BxbxSqForm" type="com.zfsoft.xgxt.rcsw.bxgl.bxbxsq.BxbxSqAction"
+			parameter="method" scope="request">
+			<forward name="bxbxsqList" path="/xsgzgl/rcsw/bxgl/bxbxsq/bxbxsqList.jsp" />
+			<forward name="bxbxsqZj" path="/xsgzgl/rcsw/bxgl/bxbxsq/bxbxsqZj.jsp" />
+			<forward name="bxbxsqXg" path="/xsgzgl/rcsw/bxgl/bxbxsq/bxbxsqXg.jsp" />
+			<forward name="bxbxsqCk" path="/xsgzgl/rcsw/bxgl/bxbxsq/bxbxsqCk.jsp" />
+		</action>
+		
+		<!-- 学生保险报销审核-->
+		<action path="/rcswBxglBxbxsh" name="BxbxshForm" type="com.zfsoft.xgxt.rcsw.bxgl.bxbxsh.BxbxshAction"
+			parameter="method" scope="request">
+			<forward name="bxbxshList" path="/xsgzgl/rcsw/bxgl/bxbxsh/bxbxshList.jsp" />
+			<forward name="bxbxDgsh" path="/xsgzgl/rcsw/bxgl/bxbxsh/bxbxDgsh.jsp" />
+			<forward name="bxbxPlsh" path="/xsgzgl/rcsw/bxgl/bxbxsh/bxbxPlsh.jsp" />
+		</action>
+		
+	</action-mappings>
+</struts-config>

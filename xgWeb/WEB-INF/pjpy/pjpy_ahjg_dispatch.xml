@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到安徽建工的配置文件,pjpy_ahjg.xml    -->
+		<action path="/pjpy_ahjg_xscjdefault" 	   forward="/pjpyahjgwh.do?method=pjpyahjgxscjDefault"></action><!-- 学生成绩查询默认页面 -->
+		<action path="/pjpy_ahjg_xscjqry"          forward="/pjpyahjgwh.do?method=pjpyahjgxscjQry"></action><!-- 学生成绩查询 -->
+		<action path="/pjpy_ahjg_rysqdefault"      forward="/pjpyahjgwh.do?method=pjpyahjgrysqDefault"></action><!-- 荣誉申诉默认页面 -->
+		<action path="/pjpy_ahjg_xsjtsq"           forward="/pjpyahjgwh.do?method=pjpyahjgxsjtSq"></action><!-- 先进集体申请默认页 -->
+		<action path="/pjpy_ahjg_xjbjsq"           forward="/pjpyahjgwh.do?method=pjpyahjgxjbjSq"></action><!-- 先进班级申请 -->
+		<action path="/pjpy_ahjg_bjbklwh"          forward="/pjpyahjgwh.do?method=bjbklDefault"></action><!-- 班级补考率默认页 -->
+		<action path="/pjpy_ahjg_zccqlwh"          forward="/pjpyahjgwh.do?method=zccqlDefault"></action><!-- 早操出勤率默认页 -->
+		<action path="/bjbklqry"                   forward="/pjpyahjgwh.do?method=bjbklQry"></action><!-- 班级补考率查询 -->
+		<action path="/bjbkladd"                   forward="/pjpyahjgwh.do?method=bjbklAdd"></action><!-- 班级补考率增加 -->
+		<action path="/bjbklsave"                  forward="/pjpyahjgwh.do?method=bjbklSave"></action><!-- 班级补考率保存 -->
+		<action path="/bjbklmodi"                  forward="/pjpyahjgwh.do?method=bjbklModi"></action><!-- 班级补考率修改 -->
+		<action path="/bjbklmodi1"                 forward="/pjpyahjgwh.do?method=bjbklModi1"></action>
+		<action path="/bjbkldel"                   forward="/pjpyahjgwh.do?method=bjbklDel"></action><!-- 班级补考率删除 -->
+		<action path="/zccqlqry"                   forward="/pjpyahjgwh.do?method=zccqlQry"></action><!-- 早操出勤率查询 -->
+		<action path="/zccqladd"                   forward="/pjpyahjgwh.do?method=zccqlAdd"></action><!-- 早操出勤率增加 -->
+		<action path="/zccqlsave"                  forward="/pjpyahjgwh.do?method=zccqlSave"></action><!-- 早操出勤率保存 -->
+		<action path="/zccqlview"                  forward="/pjpyahjgwh.do?method=zccqlView"></action><!-- 早操出勤率修改显示 -->
+		<action path="/zccqlmodi"                  forward="/pjpyahjgwh.do?method=zccqlModi"></action><!-- 早操出勤率修改 -->
+		<action path="/zccqldel"                   forward="/pjpyahjgwh.do?method=zccqlDel"></action><!-- 早操出勤率删除 -->
+		<action path="/xsbjsq"                     forward="/pjpyahjgwh.do?method=xsbjSq"></action><!-- 先进班级申请 -->
+		<action path="/rychshdefault"              forward="/pjpyahjgwh.do?method=rychShDefault"></action><!-- 荣誉称号审核默认页面 -->
+		<action path="/xjjtshdefault"              forward="/pjpyahjgwh.do?method=xjjtShDefault"></action><!-- 先进班级审核 -->
+		<action path="/xsjtqry"                    forward="/pjpyahjgwh.do?method=xsjtQry"></action><!-- 先进集体查询 -->
+		<action path="/xjjtsh"                     forward="/pjpyahjgwh.do?method=xjjtSh"></action><!-- 先进集体审核 -->
+		<action path="/xjjtshview"                 forward="/pjpyahjgwh.do?method=xjjtshView"></action><!-- 先进集体单个审核显示 -->
+		<action path="/shjgbyone"                  forward="/pjpyahjgwh.do?method=shjgByOne"></action><!-- 先进集体单个审核 -->
+		<action path="/pjpy_ahjg_rychjgcxmr"       forward="/pjpyahjgwh.do?method=rychjgCxMr"></action><!-- 荣誉称号结果查询默认页面 -->
+		<action path="/xjjtjgcx"                   forward="/pjpyahjgwh.do?method=xjjtJgCx"></action><!-- 先进班级结果查询 -->
+		<action path="/xjbjcxjg"                   forward="/pjpyahjgwh.do?method=xjbjCxJg"></action><!-- 先进班级查询结果 -->
+		<action path="/xjbjmodiview"               forward="/pjpyahjgwh.do?method=xjbjModiView"></action><!-- 先进班级修改显示 -->
+		<action path="/xjbjmodi"                   forward="/pjpyahjgwh.do?method=xjbjModi"></action>
+		<action path="/xjbjsqdel"                  forward="/pjpyahjgwh.do?method=xjbjsqDel"></action><!-- 先进班级删除 -->
+		<action path="/xjjtpbfbb"                  forward="/pjpyahjgwh.do?method=xjjtPbfbb"></action><!-- 先进集体评比分配表 -->
+		<action path="/xjgrfbb"                    forward="/pjpyahjgwh.do?method=xjgrFbb"></action><!-- 先进个人评比分配表 -->
+		<action path="/xjgrshdefault"              forward="/pjpyahjgwh.do?method=xjgrShDefault"></action><!-- 先进个人审核默认页面 -->
+		<action path="/xjgrshqry"                  forward="/pjpyahjgwh.do?method=xjgrShQry"></action><!-- 先进个人审核查询 -->
+		<action path="/xjgrshone"                  forward="/pjpyahjgwh.do?method=xjgrShOne"></action><!-- 先进个人单个审核显示 -->
+		<action path="/xjgrshbyone"                forward="/pjpyahjgwh.do?method=xjgrshByOne"></action><!-- 先进个人单个审核 -->
+		<action path="/pjpy_ahjg_xxjsdefault"      forward="/pjpyahjgwh.do?method=xxjsDefault"></action><!-- 学习竞赛默认页面 -->
+		<action path="/xsxxjsqry"                  forward="/pjpyahjgwh.do?method=xsxxjsQry"></action><!-- 学习竞赛查询 -->
+		<action path="/xxjsadd"                    forward="/pjpyahjgwh.do?method=xxjsAdd"></action><!-- 学习竞赛增加 -->
+		<action path="/savexxjsxx"                 forward="/pjpyahjgwh.do?method=saveXxjsxx"></action><!-- 学习竞赛保存 -->
+		<action path="/xxjsmodi"                   forward="/pjpyahjgwh.do?method=xxjsModi"></action><!-- 学习竞赛修改 -->
+		<action path="/xxjsdel"                    forward="/pjpyahjgwh.do?method=xxjsDel"></action><!-- 学习竞赛批量删除 -->
+		<action path="/jxjzsprint"                 forward="/pjpyahjgwh.do?method=jxjzsprint"></action><!-- 奖学金证书打印 -->
+		<action path="/jxjzsprintmore"             forward="/pjpyahjgwh.do?method=jxjzsPrintMore"></action><!-- 奖学金证书连打印 -->
+		<action path="/ahjg_cjtb"                  forward="/pjpyahjgwh.do?method=ahjgcjTb"></action><!-- 成绩同步 -->
+		<action path="/pjpy_anjg_tjsz"             forward="/pjpyahjgwh.do?method=tjszDefault"></action><!-- 参数设置条件设置 -->
+		<action path="/refreshZdcz"                forward="/pjpyahjgwh.do?method=refreshZdcz"></action><!-- 刷新字段操作 -->
+		<action path="/ahjg_jxjpdtjadd"            forward="/pjpyahjgwh.do?method=jxjPdtjAdd"></action><!-- 奖学金评定条件增加 -->
+		<action path="/tjszplDel"                  forward="/pjpyahjgwh.do?method=tjszplDel"></action><!-- 条件设置批量删除 -->
+		<action path="/tjszdgDel"                  forward="/pjpyahjgwh.do?method=tjszdgDel"></action><!-- 条件设置单个删除 -->
+		<action path="/ahjg_xscjb"                 forward="/pjpyahjgwh.do?method=xscjb"></action><!-- 学生成绩信息 -->
+
+	</action-mappings>
+</struts-config>

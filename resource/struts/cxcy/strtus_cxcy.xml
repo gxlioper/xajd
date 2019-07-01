@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+    <form-beans>
+        <form-bean name="csszForm" type="com.zfsoft.xgxt.cxcy.cssz.CsszForm" />
+        <!--创新创业补助申报-->
+        <form-bean name="bzsbwhsqForm" type="com.zfsoft.xgxt.cxcy.bzsbwh.bzsbwhsq.BzsbwhsqForm" />
+        <!--创新创业补助申报审核-->
+        <form-bean name="bzsbwhshForm" type="com.zfsoft.xgxt.cxcy.bzsbwh.bzsbwhsh.BzsbwhshForm" />
+        <!--创新创业补助申报结果-->
+        <form-bean name="bzsbwhjgForm" type="com.zfsoft.xgxt.cxcy.bzsbwh.bzsbwhjg.BzsbwhjgForm" />
+        <!--讲座上报-->
+        <form-bean name="jzsbForm" type="com.zfsoft.xgxt.cxcy.sbwh.jzsb.JzsbForm" />
+        <!--项目上报-->
+        <form-bean name="xmsbForm" type="com.zfsoft.xgxt.cxcy.sbwh.xmsb.XmsbForm" />
+        <!--统计报表-->
+        <form-bean name="tjbbForm" type="com.zfsoft.xgxt.cxcy.tjbb.TjbbForm" />
+        <!--我的创新创业补助-->
+        <form-bean name="stubzForm" type="com.zfsoft.xgxt.cxcy.bzsbwh.stubz.StubzForm" />
+    </form-beans>
+
+    <action-mappings>
+                                <!--创新创业补助申报维护-->
+        <action path="/cxcy_jcsz_cssz" 	forward="/cxcy_cssz.do?method=cssz"/>
+        <action path="/cxcy_cssz"
+                scope="request"
+                type="com.zfsoft.xgxt.cxcy.cssz.CsszAction"
+                name="csszForm"
+                parameter="method">
+            <forward name="cssz" path="/xsgzgl/cxcy/cssz/cxcyCssz.jsp"/>
+        </action>
+
+        <action path="/cxcy_bzsbwh_sq" 	forward="/cxcy_bzsbwhsq.do?method=getList"/>
+        <action path="/cxcy_bzsbwhsq"
+                scope="request"
+                type="com.zfsoft.xgxt.cxcy.bzsbwh.bzsbwhsq.BzsbwhsqAction"
+                name="bzsbwhsqForm"
+                parameter="method">
+            <forward name="bzsbwhsqList" path="/xsgzgl/cxcy/bzsbwh/bzsbwhsq/bzsbwhsqList.jsp"/>
+            <forward name="bzsbwhsqAdd" path="/xsgzgl/cxcy/bzsbwh/bzsbwhsq/bzsbwhsqAdd.jsp"/>
+            <forward name="bzsbwhsqUpdate" path="/xsgzgl/cxcy/bzsbwh/bzsbwhsq/bzsbwhsqUpdate.jsp"/>
+            <forward name="bzsbwhsqView" path="/xsgzgl/cxcy/bzsbwh/bzsbwhsq/bzsbwhsqView.jsp"/>
+        </action>
+
+        <action path="/cxcy_bzsbwh_sh" 	forward="/cxcy_bzsbwhsh.do?method=getList"/>
+        <action path="/cxcy_bzsbwhsh"
+                scope="request"
+                type="com.zfsoft.xgxt.cxcy.bzsbwh.bzsbwhsh.BzsbwhshAction"
+                name="bzsbwhshForm"
+                parameter="method">
+            <forward name="bzsbwhshList" path="/xsgzgl/cxcy/bzsbwh/bzsbwhsh/bzsbwhshList.jsp"/>
+            <forward name="bzsbwhDgsh" path="/xsgzgl/cxcy/bzsbwh/bzsbwhsh/bzsbwhDgsh.jsp"/>
+            <forward name="bzsbwhPlsh" path="/xsgzgl/cxcy/bzsbwh/bzsbwhsh/bzsbwhPlsh.jsp"/>
+        </action>
+
+        <action path="/cxcy_bzsbwh_jg" 	forward="/cxcy_bzsbwhjg.do?method=getList"/>
+        <action path="/cxcy_bzsbwhjg"
+                scope="request"
+                type="com.zfsoft.xgxt.cxcy.bzsbwh.bzsbwhjg.BzsbwhjgAction"
+                name="bzsbwhjgForm"
+                parameter="method">
+            <forward name="bzsbwhjgList" path="/xsgzgl/cxcy/bzsbwh/bzsbwhjg/bzsbwhjgList.jsp"/>
+            <forward name="bzsbwhjgAdd" path="/xsgzgl/cxcy/bzsbwh/bzsbwhjg/bzsbwhjgAdd.jsp"/>
+            <forward name="bzsbwhjgUpdate" path="/xsgzgl/cxcy/bzsbwh/bzsbwhjg/bzsbwhjgUpdate.jsp"/>
+            <forward name="bzsbwhjgView" path="/xsgzgl/cxcy/bzsbwh/bzsbwhjg/bzsbwhjgView.jsp"/>
+        </action>
+                                      <!--创新创业补助申报维护end-->
+
+                                        <!--上报维护-->
+        <action path="/cxcy_sbwh_jzsb" 	forward="/cxcy_jzsb.do?method=getList"/><!--讲座上报-->
+        <action path="/cxcy_jzsb"
+                scope="request"
+                type="com.zfsoft.xgxt.cxcy.sbwh.jzsb.JzsbAction"
+                name="jzsbForm"
+                parameter="method">
+            <forward name="jzsbList" path="/xsgzgl/cxcy/sbwh/jzsb/jzsbList.jsp"/>
+            <forward name="jzsbAdd" path="/xsgzgl/cxcy/sbwh/jzsb/jzsbAdd.jsp"/>
+            <forward name="jzsbUpdate" path="/xsgzgl/cxcy/sbwh/jzsb/jzsbUpdate.jsp"/>
+            <forward name="jzsbView" path="/xsgzgl/cxcy/sbwh/jzsb/jzsbView.jsp"/>
+        </action>
+
+        <action path="/cxcy_sbwh_xmsb" 	forward="/cxcy_xmsb.do?method=getList"/>
+        <action path="/cxcy_xmsb"
+                scope="request"
+                type="com.zfsoft.xgxt.cxcy.sbwh.xmsb.XmsbAction"
+                name="xmsbForm"
+                parameter="method">
+            <forward name="xmsbList" path="/xsgzgl/cxcy/sbwh/xmsb/xmsbList.jsp"/>
+            <forward name="xmsbAdd" path="/xsgzgl/cxcy/sbwh/xmsb/xmsbAdd.jsp"/>
+            <forward name="xmsbUpdate" path="/xsgzgl/cxcy/sbwh/xmsb/xmsbUpdate.jsp"/>
+            <forward name="xmsbView" path="/xsgzgl/cxcy/sbwh/xmsb/xmsbView.jsp"/>
+        </action>
+                                    <!--上报维护end-->
+        <!--统计报表-->
+        <action path="/cxcy_tjbb_tjbb" 	forward="/cxcy_tjbb.do?method=getList"/>
+        <action path="/cxcy_tjbb"
+                scope="request"
+                type="com.zfsoft.xgxt.cxcy.tjbb.TjbbAction"
+                name="tjbbForm"
+                parameter="method">
+            <forward name="tjbbList" path="/xsgzgl/cxcy/tjbb/tjbbList.jsp"/>
+            <forward name="getBzList" path="/xsgzgl/cxcy/tjbb/getBzList.jsp"/>
+            <forward name="getJzList" path="/xsgzgl/cxcy/tjbb/getJzList.jsp"/>
+            <forward name="getXmList" path="/xsgzgl/cxcy/tjbb/getXmList.jsp"/>
+        </action>
+
+        <!--我的创新创业补助-->
+        <action path="/cxcy_wdcxcybz_wdcxcybz" 	forward="/cxcy_stubz.do?method=getList"/>
+        <action path="/cxcy_stubz"
+                scope="request"
+                type="com.zfsoft.xgxt.cxcy.bzsbwh.stubz.StubzAction"
+                name="stubzForm"
+                parameter="method">
+            <forward name="stubzList" path="/xsgzgl/cxcy/bzsbwh/stubz/stubzList.jsp"/>
+
+        </action>
+
+
+    </action-mappings>
+</struts-config>

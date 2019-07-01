@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="jqfxwhForm" type="com.zfsoft.xgxt.rcsw.jqfxgl.jqfxfxwh.JqfxFxwhForm"/>
+		<form-bean name="jqfxjbszForm" type="com.zfsoft.xgxt.rcsw.jqfxgl.jqfxjbsz.JqfxJbszForm"/>
+		<form-bean name="jqfxdmwhForm" type="com.zfsoft.xgxt.rcsw.jqfxgl.jqfxdmwh.JqfxDmwhForm"/>
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+		<action path="/rcsw_jqfxgl_dmwh" forward="/rcsw_jqfxdmwh.do?method=jqfxDmwh"/>
+		<!--实际的路径-->
+		<action path="/rcsw_jqfxdmwh" parameter="method"  name="jqfxdmwhForm" scope="request"
+		        type="com.zfsoft.xgxt.rcsw.jqfxgl.jqfxdmwh.JqfxDmwhAction">
+		        <forward name="jqfxDmwh" path="/xsgzgl/rcsw/jqfxgl/jqfxDmwh/jqfxDmwh.jsp"></forward>	
+		        <forward name="addJqfxDmwh" path="/xsgzgl/rcsw/jqfxgl/jqfxDmwh/addJqfxDmwh.jsp" />	  
+		        <forward name="updateJqfxDmwh" path="/xsgzgl/rcsw/jqfxgl/jqfxDmwh/updateJqfxDmwh.jsp" />	      		      
+		</action>
+		
+		<action path="/rcsw_jqfxgl_jbsz" forward="/rcsw_jqfxjbsz.do?method=jqfxJbsz"/>
+		<!--实际的路径-->
+		<action path="/rcsw_jqfxjbsz" parameter="method"  name="jqfxjbszForm" scope="request"
+		        type="com.zfsoft.xgxt.rcsw.jqfxgl.jqfxjbsz.JqfxJbszAction">
+		        <forward name="jqfxjbsz" path="/xsgzgl/rcsw/jqfxgl/jqfxJbsz/jqfxJbsz.jsp"></forward>  		      
+		</action>
+		
+		<action path="/rcsw_jqfxgl_fxwh" forward="/rcsw_jqfxFxwh.do?method=jqfxwhManage"/>
+		<!--实际的路径-->
+		<action path="/rcsw_jqfxFxwh" parameter="method"  name="jqfxwhForm" scope="request"
+		        type="com.zfsoft.xgxt.rcsw.jqfxgl.jqfxfxwh.JqfxFxwhAction">			        	        
+		        <forward name="rcswjqfxwh" path="/xsgzgl/rcsw/jqfxgl/jqfxFxwh/jqfxwhManage.jsp"></forward>  
+		        <forward name="addxsJqfx" path="/xsgzgl/rcsw/jqfxgl/jqfxFxwh/xsJqfx.jsp"></forward>		
+		        <forward name="addxsJqwfx" path="/xsgzgl/rcsw/jqfxgl/jqfxFxwh/xsJqwfx.jsp"></forward>			        
+		        <forward name="addPlxsJqfx" path="/xsgzgl/rcsw/jqfxgl/jqfxFxwh/plJqfx.jsp"></forward>	
+		        <forward name="viewxsJqfx" path="/xsgzgl/rcsw/jqfxgl/jqfxFxwh/viewxsJqfx.jsp"></forward>
+		        <forward name="szCyyy" path="/xsgzgl/rcsw/jqfxgl/jqfxFxwh/szCyyy.jsp"></forward>	
+		        <forward name="addplxsJqwfx" path="/xsgzgl/rcsw/jqfxgl/jqfxFxwh/plxsJqwfx.jsp"></forward>		        		              
+		</action>
+		
+	</action-mappings>
+	<!--<message-resources key="gygl" parameter="xgxt.base.ApplicationResources" />-->
+</struts-config>

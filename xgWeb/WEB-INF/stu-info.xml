@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="StudentInfoForm" type="xgxt.studentInfo.model.StudentInfoForm" />
+		<form-bean name="xsxxflForm" type="xgxt.studentInfo.model.XsxxflForm" />
+		<form-bean name="familyForm" type="xgxt.base.form.FamilyForm" />
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+    	<form-bean name="xbemyStudentInfoForm" type="xgxt.studentInfo.xbemy.XbemyStudentInfoForm" />
+    	<form-bean name="bdzcForm" type="xgxt.studentInfo.bdzc.BdzcActionForm" />
+    	<form-bean name="xsxxdjForm" type="xgxt.studentInfo.model.XsxxdjForm" />
+    	<form-bean name="xsxxcshForm" type="xgxt.xsxx.form.XsxxcshForm" />
+    	<form-bean name="jqlxForm" type="xgxt.studentInfo.jqlx.JqlxActionForm"></form-bean>
+    	<form-bean name="xszcForm" type="xgxt.studentInfo.xszc.XszcActionForm"></form-bean>
+    	<form-bean name="xsbdForm" type="xgxt.studentInfo.nthy.XsbdActionForm"></form-bean>
+    	<form-bean name="xsxjzcForm" type="xgxt.studentInfo.nthy.XszcActionForm"></form-bean>
+    	<form-bean name="xscjForm" type="xgxt.studentInfo.xscj.XscjActionForm"></form-bean>
+    	<form-bean name="xsxxTjForm" type="xgxt.xsxx.form.XsxxRstjForm"></form-bean>
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+		<!-- <<<<<<<<<<<<<<学生信息：学生信息查询>>>>>>>>>>>>> -->
+		<action 
+			name="commanForm" 
+			parameter="method"
+			path="/stu_info_query" 
+			scope="request"
+			type="xgxt.studentInfo.action.StudentInfoLogicAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/stu_info_query.jsp" />
+			<forward name="zgdd_stuInfo" path="/xsxx/zgdzdx/stu_info_query.jsp" />
+			<forward name="knxy_zsfxx" path="/xsxx/knxy/zsfxx.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：学生信息维护>>>>>>>>>>>>> -->
+		<action 
+			name="commanForm" 
+			parameter="method"
+			path="/stu_info_add" 
+			scope="request"
+			type="xgxt.studentInfo.action.StudentInfoLogicAction">
+			<forward name="stuinfo_bjsgmjsxy" path="/shgc/stu_info/bjsgmjsxy/stu_info_bjsgmjsxy.jsp" />
+			<forward name="stuinfo_shgc" path="/shgc/stu_info/shgc/stu_info_shgcjsdx.jsp" />
+			<forward name="stuinfo_dblydx" path="/shgc/stu_info/dblydx/stu_info_dblydx.jsp" />
+			<forward name="stuinfo_gdnzzy" path="/shgc/stu_info/gdnzzy/stu_info_gdnzzy.jsp" />
+			<forward name="stuinfo_xcxy" path="/shgc/stu_info/xcxy/stu_info_xcxy.jsp" />
+			<forward name="stuinfo_ynys" path="/shgc/stu_info/ynys/stu_info_ynys.jsp" />
+			<forward name="stuinfo_byxy" path="/shgc/stu_info/gdbyxy/stu_info_byxy.jsp" />
+			<forward name="stuinfo_nckj" path="/shgc/stu_info/ncdxkjxy/stu_info_nckj.jsp" />
+			<forward name="stuinfo_xbemy" path="/shgc/stu_info/xbemy/stu_info_xbemy.jsp" />
+			<forward name="stuinfo_whlgdx" path="/shgc/stu_info/whlgdx/stu_info_whlgdx_xx.jsp" />
+			<forward name="stuinfo_whlgdx_xy" path="/shgc/stu_info/whlgdx/stu_info_whlgdx_xy.jsp" />
+			<forward name="stuinfo_whlgdxhxxy" path="/xsxx/whlghxxy/stu_info_whlghxxy.jsp" />
+			<forward name="stuinfo_zjgszyjsxy" path="/shgc/stu_info/zjgszyjsxy/stu_info_zjgszyjsxy.jsp" />	
+			<forward name="stuinfo_zjjjzyjsxy" path="/shgc/stu_info/zjjjzyjsxy/stu_info_zjjjzyjsxy.jsp" />
+			<forward name="stuinfo_scjdzyjsxy" path="/shgc/stu_info/scjdzyjsxy/stu_info_scjdzyjsxy.jsp" />
+			<forward name="stuinfo_hzsfxy" path="/shgc/stu_info/hzsfxy/stu_info_hzsfxy.jsp" />
+			<forward name="stuinfo" path="/sjcz/stu_info_modify.jsp" />
+			<forward name="modistuinfo" path="/sjcz/modi_stu_info.jsp" /> 
+			<forward name="zbdx_xsxx_modi" path="/zbdx/xsxx/modi_stu_info.jsp" />
+			<forward name="xsxx_whlg_modi" path="/shgc/stu_info/whlgdx/modi_stu_info.jsp" />
+			<forward name="xsxx_ynys_modi" path="/shgc/stu_info/ynys/modi_stu_info.jsp" />
+			<forward name="xsxx_lssfxy_modi" path="/shgc/stu_info/lssfxy/modi_stu_info.jsp" />
+			<forward name="success" path="/sjcz/stu_info_query.jsp" />
+			<forward name="show_batch_pageofstuinfo" path="/shgc/stu_info/bjlhdx/stu_info_batch.jsp" />
+			<forward name="dataconf" path="/shgc/stu_info/shgc/dataConf.jsp" />
+			<forward name="datum_commit_single" path="/shgc/stu_info/shgc/datumSingle.jsp" />
+			<forward name="datum_commit_sjxySingle" path="/shgc/stu_info/shgc/datum_commit_sjxySingle.jsp" />
+			<forward name="details_info_datum" path="/shgc/stu_info/shgc/datumDetailInfo.jsp" />
+			<forward name="print_ljsdasq" path="/shgc/stu_info/ljszdsqb.jsp" />
+			<forward name="xgtk" path="/xsxx/hbsfxy/xsxx_xxxgxy.jsp" />
+			<forward name="dzdxxsrxdjb" path="/xsxx/hbsfxy/xsxx_dzdxxsrxdjb.jsp" />
+			<forward name="printXsdjb" path="/xsxx/cdtyxy/printXsdjb.jsp" />
+			<!-- 江苏信息职业：新生情况登记 -->
+			<forward name="jsxxXsdjb" path="/xsxx/jsxx/jsxx_xsqkdj.jsp" />
+			<forward name="jsxxXsdjbPrint" path="/xsxx/jsxx/jsxx_xsqkdjPrint.jsp" />
+			<forward name="jsxxXsdjManage" path="/xsxx/jsxx/jsxx_xsqkdjManage.jsp" />
+			<forward name="jsxxXsdjUpdate" path="/xsxx/jsxx/jsxx_xsqkdjUpdate.jsp" />
+			<forward name="jsxxXsdjbView" path="/xsxx/jsxx/jsxx_xsqkdjView.jsp" />
+			<forward name="xsxxwh" path="/xsxx/comm/jbxx/xsxxwh.jsp" />
+			<forward name="false" path="/errMsg.do" />
+			<forward name="blank" path="/about:blank" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：参数设置>>>>>>>>>>>>> -->
+		<action path="/studentMessage_conf"
+				type="xgxt.studentInfo.action.StudentInfoAction" 
+				name="StudentInfoForm"
+			    parameter="studentMessage" 
+			    scope="request" 
+			    validate="false">
+				<forward name="success" path="/shgc/stu_info/student_conf.jsp" />
+				<forward name="hzzy_conf" path="/shgc/stu_info/hzzy/student_conf.jsp" />
+				<forward name="failure" path="/errMsg.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<学生信息：学籍异动信息>>>>>>>>>>>>> -->
+		<action 
+			path="/stu_status_different"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="stuStatusDifferent" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/stu_info.jsp" />
+			<forward name="page" path="/shgc/stu_info/stu_info_modify.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：学生信息报表打印>>>>>>>>>>>>> -->
+		<action 
+			path="/stuinfo_print"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="stuinfoPrint" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/dblydx/dblydxxsxxb.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：在校学生档案信息>>>>>>>>>>>>> -->
+		<action 
+			path="/stu_archives_now" 
+			type="xgxt.studentInfo.action.StuInfoAndArchives" 
+			name="ShgcForm"
+			parameter="stu_archives" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/stu_archives_now.jsp" />
+			<forward name="page" path="/shgc/stu_info/stu_archives_info.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：历届学生转档申请>>>>>>>>>>>>> -->
+		<action 
+			path="/stu_archives_apply"
+			type="xgxt.studentInfo.action.StuInfoAndArchives" 
+			name="ShgcForm"
+			parameter="archivesApply" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/stu_archives_apply.jsp" />
+			<forward name="xszdsq" path="/shgc/stu_info/xszdsq.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		
+		<action 
+			path="/archives_apply_query"
+			type="xgxt.studentInfo.action.StuInfoAndArchives" 
+			name="ShgcForm"
+			parameter="archivesApplyData" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/archives_apply_query.jsp" />
+			<forward name="xszdshAndQuery" path="/shgc/stu_info/xszdshAndQuery.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		<action 
+			path="/archives_deal"
+			type="xgxt.studentInfo.action.StuInfoAndArchives" 
+			name="ShgcForm"
+			parameter="archivesDeal" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/archives_deal.jsp" />
+			<forward name="editZdxx" path="/shgc/stu_info/editZdxx.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		<action 
+			path="/archives_print"
+			type="xgxt.studentInfo.action.StuInfoAndArchives" 
+			name="ShgcForm"
+			parameter="archivesPrint" 
+			scope="request" 
+			validate="false">
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：出国出境信息>>>>>>>>>>>>> -->
+		<action 
+			path="/stu_cgcj"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="stu_cgcj" 
+			scope="request" 
+			validate="false">
+			<forward name="query" path="/shgc/stu_info/search_page.jsp" />
+			<forward name="txsq" path="/shgc/stu_info/stu_txsq.jsp" />
+			<forward name="success" path="/shgc/stu_info/stu_cgcjsq.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：出国出境查询>>>>>>>>>>>>> -->
+		<action 
+			path="/abroad_query"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="query" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/search_page.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：通讯录>>>>>>>>>>>>> -->
+		<action 
+			path="/address_book"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="addressBook" 
+			scope="request" 
+			validate="false">
+			<forward name="view" path="/shgc/stu_info/bzrtxlb.jsp"></forward>
+			<forward name="success" path="/shgc/stu_info/address_search.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：在读证明申请>>>>>>>>>>>>> -->
+		<action 
+			path="/attend_school_prove"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="attend_school_prove" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/stu_zdzm_apply.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：在读证明查询 >>>>>>>>>>>>> -->
+		<action 
+			path="/prove_query"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="prove_query" 
+			scope="request" 
+			validate="false">
+			<forward name="view" path="/shgc/stu_info/stu_zdzm_apply.jsp" />
+			<forward name="success" path="/shgc/stu_info/search_prove.jsp" />
+			<forward name="auditingOne" path="/shgc/stu_info/zdzmsqsh.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：出国学生在读证明打印 >>>>>>>>>>>>> -->
+		<action 
+			path="/certificate_print"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="certificatePrint" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/stu_zdzm_print.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：学费信息>>>>>>>>>>>>> -->
+		<action
+			path="/stuSchoolingInfo"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="commanForm"
+			parameter="stuSchoolingInfo" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/xsxx/hzzy/stu_schooling_info.jsp" />
+			<forward name="xfxxwh" path="/xfxx.do?method=xfxxgl" />
+			<forward name="false" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<学生信息：单个增加学生学费信息>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/stu_schoolinginfo_one"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="stuSchoolingInfoOne" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/xsxx/hzzy/stu_schooling_one.jsp" />
+			<forward name="false" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<学生信息：单个学生学费信息保存>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/stu_schoolinginfo_save"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="stuSchoolingInfoSave" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/stu_schoolinginfo_one.do" />
+			<forward name="false" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<学生信息：学生集体信息报表>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/stu_group_info"
+			type="xgxt.studentInfo.action.StudentInfoAction"
+			name="StudentInfoForm"
+			parameter="stuGroupInfo" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/stu_group_info.jsp" />
+			<forward name="false" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<学生信息：证明连打>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/certificatePrintAll"
+			type="xgxt.studentInfo.action.StudentInfoAction" 
+			name="StudentInfoForm"
+			parameter="certificatePrintAll" 
+			scope="request" 
+			validate="false">
+			<forward name="ywmb_all" path="/print/xszdzm_en.html" />
+			<forward name="zwmb_all" path="/print/xszdzm_cn.jsp" />
+			<forward name="zwmb_xw" path="/print/xszdzm_xw.jsp" />			
+			<forward name="zwmb_zcby" path="/print/xszdzm_zcby.jsp" />
+			<forward name="zdzm_en_one" path="/print/xszdzm_en.html" />
+			<forward name="zdzm_cglx_xw" path="/print/xszdzm_cglx_xw.jsp" />
+			<forward name="zdzm_cglx_zcby" path="/print/xszdzm_cglx_zcby.jsp" />
+			<forward name="zdzm_cn_one" path="/print/xszdzm_cn_one.jsp" />
+			<forward name="false" path="/logicError.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<学生信息：分班编学号>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/arrangeClass"
+			type="xgxt.studentInfo.action.StudentInfoLogicAction" 
+			name="StudentInfoForm"
+			parameter="method" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/arrangeInit.jsp" />
+			<forward name="classconf" path="/shgc/stu_info/classConf.jsp" />
+			<forward name="classcode" path="/shgc/stu_info/classCode.jsp" />
+			<forward name="classsimplename" path="/shgc/stu_info/classSimpleName.jsp" />
+			<forward name="classname" path="/shgc/stu_info/className.jsp" />
+			<forward name="learningcode" path="/shgc/stu_info/learningCode.jsp" />
+			<forward name="learningcodeorder" path="/shgc/stu_info/learningCodeOrder.jsp" />
+			<forward name="arrangeclass" path="/shgc/stu_info/arrangeClassInit.jsp" />
+			<forward name="createclassinfo" path="/shgc/stu_info/shownewclass.jsp" />
+			<forward name="false" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<学生信息：将分班编学号后的学生转入到学生基本信息库>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/transferStuInfo"
+			type="xgxt.studentInfo.zzdx.action.TransferStuInfoAction" 
+			name="StudentInfoForm"
+			parameter="method" 
+			scope="request" 
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/arrangeClassInit.jsp" />
+			<forward name="false" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<学生信息：学生退学>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/leaveSchool"
+			type="xgxt.studentInfo.action.StudentInfoLogicAction" 
+			name="StudentInfoForm"
+			parameter="method" 
+			scope="request" 
+			validate="false">
+			<forward name="printbyxy" path="/shgc/stu_info/gdbyxy/stu_gdbyxy_txspb.jsp" />
+			<forward name="false" path="/errMsg.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<学生信息：portallet>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/portallet"
+			type="xgxt.studentInfo.portallet.StudentForPortalletAction"
+			name="StudentInfoForm" 
+			parameter="method" 
+			scope="request"
+			validate="false">
+			<forward name="sucess" path="/shgc/stu_info/portallet/portalletPage.jsp"/>
+			<forward name="false" path="/errMsg.jsp" />
+		</action>	
+			
+		<!-- 为portallet提供信息 -->
+		<action 
+			path="/stuportallet"
+			forward="/portallet.do?method=stuInfo">
+		</action>
+		
+		<!-- <<<<<<<<<<<<<学生信息：申请审核>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/business"
+			type="xgxt.studentInfo.action.StudentInfoLogicAction" 
+			name="StudentInfoForm"
+			parameter="method" 
+			scope="request" 
+			validate="false">
+			<forward name="plugclass" path="/shgc/stu_info/gdbyxy/plugclassapp.jsp" />
+			<forward name="printtx" path="/shgc/stu_info/xstxsqb.jsp" />
+			<forward name="printchg" path="/shgc/stu_info/xscgsqb.jsp" />
+			<forward name="printzm" path="/shgc/stu_info/xszdzmsqb.jsp" />
+			<forward name="showtxsqlc" path="/shgc/stu_info/shgc/txsqlc.jsp" />
+			<forward name="showcgsqlc" path="/shgc/stu_info/shgc/cgsqlc.jsp" />
+			<forward name="filerecode" path="/shgc/stu_info/shgc/filerecode.jsp" />
+			<forward name="showfilerecode" path="/shgc/stu_info/shgc/showFileRecode.jsp" />
+			<forward name="datumcommit" path="/shgc/stu_info/shgc/datumCommit.jsp" />
+			<forward name="datumquerry" path="/shgc/stu_info/shgc/datumQuerry.jsp" />
+			<forward name="gradarchivesapply" path="/shgc/stu_info/shgc/gradstu_archives_apply.jsp" />
+			<forward name="grad_apply_querry" path="/shgc/stu_info/shgc/grad_archives_apply_query.jsp" />
+			<forward name="grad_auditing" path="/shgc/stu_info/shgc/gradstu_archives_sh.jsp" />
+			<forward name="print_bys_report" path="/shgc/stu_info/shgc/byszdsqb.jsp" />	
+			<forward name="false" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- 西北二民院学生档案 -->
+		<action 
+			path="/xbemyArchive"
+			type="xgxt.studentInfo.xbemy.XbemyStudentInfoAction" 
+			name="xbemyStudentInfoForm"
+			parameter="method" 
+			scope="request" 
+			validate="false">	
+			<forward name="enrollment_archive" path="/shgc/stu_info/xbemy/enrollmentArchive.jsp" />
+			<forward name="show_enrollment_archive" path="/shgc/stu_info/xbemy/enrollmentArchiveInfo.jsp" />
+			<forward name="graduate_archive" path="/shgc/stu_info/xbemy/graduateArchive.jsp" />	
+			<forward name="show_graduate_archive" path="/shgc/stu_info/xbemy/graduateArchiveInfo.jsp" />		
+			<forward name="false" path="/errMsg.jsp" />
+		</action>
+		
+		<!-- 西北二民院学籍异动 -->
+		<action 
+			path="/xbemyStuStatus"
+			type="xgxt.studentInfo.xbemy.XbemyStudentInfoAction" 
+			name="xbemyStudentInfoForm"
+			parameter="method" 
+			scope="request" 
+			validate="false">								
+			<forward name="transfer_app" path="/shgc/stu_info/xbemy/stuTransferApp.jsp" />	
+			<forward name="transfer_querry" path="/shgc/stu_info/xbemy/stuTransferQuery.jsp" />	
+			<forward name="transfer_specialty_app" path="/shgc/stu_info/xbemy/stuTransferSpecApp.jsp" />	
+			<forward name="transfer_specialty_querry" path="/shgc/stu_info/xbemy/stuTransferSpecQuery.jsp" />				
+			<forward name="transfer_stu_status" path="/shgc/stu_info/xbemy/stuTransferStatusApp.jsp" />				
+			<forward name="transfer_status_querry" path="/shgc/stu_info/xbemy/stuTransferStatusQuery.jsp" />	
+			<forward name="stu_transfer_auditing" path="/shgc/stu_info/xbemy/stuTransferAuditing.jsp" />
+			<forward name="transterIn_auditing" path="/shgc/stu_info/xbemy/transferInAuditing.jsp" />
+			<forward name="transterOut_auditing" path="/shgc/stu_info/xbemy/transferOutAuditing.jsp" />
+			<forward name="transter_spec_auditing" path="/shgc/stu_info/xbemy/transferSpecAuditing.jsp" />
+			<forward name="stu_transfer_spec_auditing" path="/shgc/stu_info/xbemy/stuTransferSpecAuditing.jsp" />
+			<forward name="stu_transfer_status_auditing" path="/shgc/stu_info/xbemy/stuTransferStatusAuditing.jsp" />
+			<forward name="transter_status_auditing" path="/shgc/stu_info/xbemy/transferStatusAuditing.jsp" />		
+			<forward name="printTransferApp" path="/shgc/stu_info/xbemy/printTransferApp.jsp" />		
+			<forward name="printTransferSpecApp" path="/shgc/stu_info/xbemy/printTransferSpecApp.jsp" />		
+			<forward name="printTransferStatusApp" path="/shgc/stu_info/xbemy/printTransferStatusApp.jsp" />					
+			<forward name="inSchTransfer" path="/shgc/stu_info/xbemy/inTransferApp.jsp" />
+			<forward name="false" path="/errMsg.jsp" />
+			<forward name="success" path="/shgc/stu_info/xbemy/transfSchdispatch.jsp" />
+		</action>
+		
+		<!--西北二民院上传学生照片-->
+		<action 
+			path="/uploadPicture"
+			type="xgxt.studentInfo.xbemy.XbemyStudentInfoAction"
+			name="xbemyStudentInfoForm"
+			parameter="method"
+			scope="request"
+			validate="false">
+			<forward name="success" path="/shgc/stu_info/xbemy/picture_import.jsp"/>
+			<forward name="uploadPicture2" path="/shgc/stu_info/xbemy/picture_import2.jsp"/>
+		</action>
+		
+		<!--上海工程学生档案-->
+   	   <action 
+   	   		path="/stuArchives" 
+   	   		name="StudentInfoForm"
+   	   		parameter="method"
+   	   		type="xgxt.studentInfo.action.ArchiveAction"
+   	   		scope="request"
+			validate="false">
+   	   		<forward name="disApp" path="/xsxx/shgc/dispatchApp.jsp"/>
+   	   		<forward name="disQue" path="/xsxx/shgc/dispatchQue.jsp"/>
+   	   		<forward name="disExa" path="/xsxx/shgc/dispatchExa.jsp"/>
+   	   	</action>
+		<!--学生集体信息-->
+    	<action 
+    		path="/stuGroupInfo" 
+    		type="xgxt.studentInfo.action.StuGroupInfoAction" 
+    		name="StudentInfoForm"
+    		scope="request"
+    		parameter="method"
+    		validate="false">
+    		<forward name="success" path="/xsxx/ynys/stuinfoOfBj.jsp"/>
+    		</action>
+		<!--学生信息管理-->
+       <action 
+	    	path="/xsxxgl" 
+	    	type="xgxt.studentInfo.action.XsxxglAction" 
+	    	name="commanForm"
+	    	parameter="method"
+	    	scope="request">
+    	<forward name="success" path="/xsxx/exportXsxx.jsp"/>
+    	<forward name="stuInfoPub" path="/xsxx/hbsfxy/stu_InfoPub.jsp"/>   
+    	<forward name="stuxxb" path="/xsxx/zgkd/stu_xxb.jsp"/>
+    	<forward name="xscjbgdxxwh" path="/xsxx/hzzy/xscjbgdxxwh.jsp"/>
+    	<forward name="xscjbgdxxAdd" path="/xsxx/hzzy/xscjbgdAdd.jsp"/> 
+    	<forward name="xscjbgdxxModi" path="/xsxx/hzzy/xscjbgdModi.jsp"/>
+    	<forward name="stumodi" path="/xsxx/stu_modinfo.jsp"/>
+    	<forward name="xsUpdateXsxx" path="/xsxx/xsUpdateXsxx.jsp"/>  
+    	<forward name="zyxfsz" path="/xsxx/xfszxxcx.jsp"/>
+    	<forward name="xfsz" path="/xsxx/xfsz.jsp"/>
+    	<forward name="czxxCjdPrint" path="/xsxx/czxx/czxxCjdPrint.jsp"/>    	
+    	<forward name="zdxz" path="/shgc/stu_info/zdxz.jsp"/>
+    	<forward name="cjbgdlxdy" path="/xsxx/hzzy/cjbgdlxdy.jsp"/>
+    	<forward name="djb" path="/xsxx/tjjtzyjsxy_xsdjb.jsp"/> 
+    	
+    	<forward name="xsxxpz" path="/sjcz/xsxxpz.jsp" />  				<!-- 详细显示信息配置 !-->
+    	</action>
+    	
+		<!--学生信息登记-->
+       <action 
+	    	path="/xsxxdj" 
+	    	type="xgxt.studentInfo.action.XsxxglAction" 
+	    	name="xsxxdjForm"
+	    	parameter="method"
+	    	scope="request">	    	
+    	<forward name="success" path="/xsxx/xsxxdjManager.jsp"/>
+    	<forward name="xsxxdjAdd" path="/xsxx/xsxxdjAdd.jsp"/>
+    	<forward name="xsxxdjModi" path="/xsxx/xsxxdjModi.jsp"/>
+    	<forward name="xsdjb" path="/xsxx/xsdjb.jsp"/>    	
+    	</action>
+    	<!--学籍信息登记-->
+       <action 
+	    	path="/xjxxdj" 
+	    	type="xgxt.studentInfo.action.XsxxglAction" 
+	    	name="xsxxdjForm"
+	    	parameter="method"
+	    	scope="request">	    	
+    	<forward name="success" path="/xsxx/bjqnzzxy/xjxxdjManager.jsp"/>
+    	<forward name="xjxxdjAdd" path="/xsxx/bjqnzzxy/xjxxdjAdd.jsp"/>
+    	<forward name="xjxxdjModi" path="/xsxx/bjqnzzxy/xjxxdjModi.jsp"/>
+    	<forward name="xjdjb" path="/xsxx/bjqnzzxy/xjdjb.jsp"/>    	
+    	</action>
+		<!--广东工业大学-->
+    	<action 
+    		path="/xsxxGdgydx" 
+    		type="xgxt.studentInfo.gdgydx.XsxxGdgydxAction" 
+    		parameter="method"
+    		name="commanForm"
+    		scope="request">
+    		<forward name="sjtb" path="/xtwh/gdgydx/sjtb.jsp"/>
+    	</action>
+	<!--杭州职业技术学院-->
+    	<action 
+    		path="/cjbgdPrint" 
+    		type="xgxt.studentInfo.action.StudentInfoLogicAction"
+    		parameter="method"
+    		scope="request"
+    		name="commanForm">
+    		<forward name="cjbgdPrint" path="/xsxx/hzzy/cjbgdPrint.jsp"/>
+    	</action>
+    	<!--上海工程学生档案--> 
+    	
+    	<!--学籍异动管理--> 
+    	<action 
+    		path="/xjydgl" 
+    		type="xgxt.studentInfo.action.XjydglAction"
+    		parameter="method"
+    		scope="request"
+    		name="StudentInfoForm">
+    		<forward name="false" path="/errMsg.do" />
+    	</action> 
+    	<!--end学籍异动管理--> 	
+    	
+    	<!--学生信息分流管理--> 
+    	<action 
+    		path="/xsxxflgl" 
+    		type="xgxt.studentInfo.action.XsxxflglAction"
+    		parameter="method"
+    		scope="request"
+    		name="xsxxflForm">
+    		<forward name="xxfl" path="/xsxx/xxfl.jsp" />
+    		<forward name="xxflModi" path="/xsxx/xxflModi.jsp" />    		
+    		<forward name="false" path="/errMsg.do" />
+    	</action> 
+    	<!--end学生信息分流管理--> 	
+    	
+    	
+    	<!-- 报到注册-->
+    	<action path="/bdzc_sjsz" forward="/bdzcgl.do?method=sjsz"/>
+    	<action path="/bdzc_hzcsq" forward="/bdzcgl.do?method=hzcsq"/>
+    	<action path="/bdzc_hzcsh" forward="/bdzcgl.do?method=hzcsh"/>
+    	<action path="/bdzc_hzcjg" forward="/bdzcgl.do?method=hzcjg"/>
+    	<action path="/bdzc_xsjf" forward = "/bdzcgl.do?method=xsjf"/>
+    	<action path="/bdzc_lstd" forward="/bdzcgl.do?method=lstd"/>
+    	<action path="/bdzc_zcdj" forward="/bdzcgl.do?method=zcdj"/>
+    	<action path="/bdzc_tjjg" forward="/bdzcgl.do?method=tjjg"/>
+    	<action path="/bdzc_bdzc" forward="/bdzcgl.do?method=bdzc"/>
+    	
+    	<action 
+    		path="/bdzcgl" 
+    		type="xgxt.studentInfo.bdzc.BdzcAction"
+    		parameter="method"
+    		scope="request"
+    		name="bdzcForm">
+    		
+    		<forward name="sjsz" path="/xsxx/bdzc/sjsz.jsp" />
+    		<forward name="hzcsq" path="/xsxx/bdzc/hzcsq.jsp"/>
+    		<forward name="hzcsh" path="/xsxx/bdzc/hzcsh.jsp"/>
+    		<forward name="hzcjg" path="/xsxx/bdzc/hzcjg.jsp"/>
+    		<forward name="hzcOne" path="/xsxx/bdzc/hzcOne.jsp"/>
+    		<forward name="xsjf" path="/xsxx/bdzc/xsjf.jsp"/>
+    		<forward name="lstd" path="/xsxx/bdzc/lstd.jsp"/>
+    		<forward name="lstdOne" path="/xsxx/bdzc/lstdOne.jsp"/>
+    		<forward name="zcdj" path="/xsxx/bdzc/zcdj.jsp"/>
+    		<forward name="tjjg" path="/xsxx/bdzc/tjjg.jsp"/>
+    		<forward name="tjjgOne" path="/xsxx/bdzc/tjjgOne.jsp"/>
+    		<forward name="bdzc" path="/xsxx/bdzc/bdzc.jsp"/>
+    		<forward name="bdzcOne" path="/xsxx/bdzc/bdzcOne.jsp"/>
+    	</action> 
+    	
+    	<action 
+    		path="/xsxxtj" 
+    		type="xgxt.studentInfo.action.XsxxXxtjglAction"
+    		parameter="method"
+    		scope="request"
+    		name="StudentInfoForm">    		
+    		<forward name="syxxtj" path="/xsxx/xxtj/syxxtj.jsp" />
+    		<forward name="xsxxfxytj" path="/xsxx/xxtj/xsxxfxytj.jsp" />
+    	</action>
+    	
+    	<!-- 学籍异动管理 -->
+    	<action path="/xjydsq" forward="/xjyd.do?method=xjydsq"></action><!-- 学籍异动申请页面 -->
+    	<action path="/xjydsh" forward="/xjyd.do?method=xjydsh"></action><!-- 学籍异动审核页面 -->
+    	<action path="/xjydcx" forward="/xjyd.do?method=xjydcx"></action><!-- 学籍异动查询页面 -->
+    	<action path="/xjydshlc" forward="/xjyd.do?method=xjydshlc"></action><!-- 学籍异动审核流程页面 -->
+    	<action 
+    		path="/xjyd" 
+    		type="xgxt.xsxx.action.XsxxXjydglAction"
+    		parameter="method"
+    		scope="request"
+    		name="StudentInfoForm">    		
+    		<forward name="success" path="/xsxx/xjyd/xjydsq.jsp" />
+    		<forward name="xjydsh" path="/xsxx/xjyd/xjydsh.jsp" />
+    		<forward name="xjydshOne" path="/xsxx/xjyd/xjydshOne.jsp" />
+    		<forward name="xjydcx" path="/xsxx/xjyd/xjydcx.jsp" />
+    		<forward name="xjydshlc" path="/xsxx/xjyd/xjydshlc.jsp" />  
+    		<forward name="updateXjydshlc" path="/xsxx/xjyd/updateXjydshlc.jsp" />    
+    	</action>
+    	
+    	<!-- 学生信息初始管理 -->
+    	<action path="/xsxxjcsjcsh" forward="/xxcshgl.do?method=xxbmcsh"></action><!-- 学校部门信息初始化 -->
+    	<action 
+    		path="/xxcshgl" 
+    		type="xgxt.xsxx.action.XxcshglAction"
+    		parameter="method"
+    		scope="request"
+    		name="xsxxcshForm">    		
+    		<forward name="success" path="/xsxx/jcsz/xxbmcsh.jsp" />
+    		<forward name="xxbmUpdate" path="/xsxx/jcsz/xxbmUpdate.jsp" />    		
+    		<forward name="zyxxcsh" path="/xsxx/jcsz/zyxxcsh.jsp" />
+    		<forward name="zyxxUpdate" path="/xsxx/jcsz/zyxxUpdate.jsp" />    		
+    		<forward name="bjxxcsh" path="/xsxx/jcsz/bjxxcsh.jsp" />
+    		<forward name="bjxxUpdate" path="/xsxx/jcsz/bjxxUpdate.jsp" />
+    		<forward name="xsxxcsh" path="/xsxx/jcsz/xsxxcsh.jsp" />
+    		<forward name="xsxxUpdate" path="/xsxx/jcsz/xsxxUpdate.jsp" />	    					
+    	</action>
+    	
+    	<!-- 统计设置 -->
+		<action 
+    		path="/xsxx_tjsz" 
+    		type="xgxt.studentInfo.action.XsxxTjszAction"
+    		parameter="method"
+    		scope="request"
+    		name="StudentInfoForm">    		
+    		<forward name="tjszManage" path="/xsxx/tjsz/tjszManage.jsp" />
+    	</action>
+    	
+    	
+    	<!-- 学生信息统计报表 by:Penghui.Qu 2011.4.6 -->
+    	<action 
+    		path="/stuInfoReport" 
+    		type="xgxt.studentInfo.action.StuInfoReportAction"
+    		parameter="method"
+    		scope="request"
+    		name="StudentInfoForm">    		
+    		<forward name="stuInfoReport" path="/xsxx/stuInfoReport.jsp" />
+    	</action>
+    	
+    	<!-- 河南大学财物编号 by:sjf -->
+    	<action path="/stuCwbh" forward="/stuGxh.do?method=cwbhManage" />
+    	
+    	<action 
+    		path="/stuGxh" 
+    		type="xgxt.studentInfo.action.XsxxGxhAction"
+    		parameter="method"
+    		scope="request"
+    		name="StudentInfoForm">    		
+    		<forward name="cwbhManage" path="/xsxx/cwbh/cwbhManage.jsp" />
+    		<forward name="cwbhUpdate" path="/xsxx/cwbh/cwbhUpdate.jsp" />
+    	</action>
+    	
+    	
+    	
+    	<!-- 假期留校管理 -->
+    	<action path="/xsxx_xsjqlxsq" forward="/jqlxgl.do?method=jqlxsq"/>
+    	<action path="/xsxx_xsjqlxsh" forward="/jqlxgl.do?method=jqlxsh"/>
+    	
+    	<action 
+    		path="/jqlxgl" 
+    		type="xgxt.studentInfo.jqlx.JqlxAction"
+    		parameter="method"
+    		scope="request"
+    		name="jqlxForm">
+    		<forward name="jqlxsq" path="/xsxx/jqlx/jqlxsq.jsp" />
+    		<forward name="jqlxsh" path="/xsxx/jqlx/jqlxsh.jsp" />
+    		<forward name="jqlxsqDetail" path="/xsxx/jqlx/jqlxsqDetail.jsp" />
+    		<forward name="jqlxshDetail" path="/xsxx/jqlx/jqlxshDetail.jsp" />
+    	</action> 
+    	
+    	
+    	<!-- 学生注册管理 -->
+    	<action path="/xsxx_xszcsq" forward="/xszcgl.do?method=xszcsq"/>
+    	<action path="/xsxx_xszcsh" forward="/xszcgl.do?method=xszcsh"/>
+    	<action path="/xsxx_xszcjgcx" forward="/xszcgl.do?method=xszcjgcx"/>
+    	
+    	<action 
+    		path="/xszcgl" 
+    		type="xgxt.studentInfo.xszc.XszcAction"
+    		parameter="method"
+    		scope="request"
+    		name="xszcForm">
+    		<forward name="xszcsq" path="/xsxx/xszc/xszcsq.jsp" />
+    		<forward name="xszcsqyydetail" path="/xsxx/xszc/xszcsqyydetail.jsp" />
+    		<forward name="xszcsh" path="/xsxx/xszc/xszcsh.jsp" />
+    		<forward name="xszcshDetail" path="/xsxx/xszc/xszcshDetail.jsp" />
+    		<forward name="xszcjgcx" path="/xsxx/xszc/xszcjgcx.jsp" />
+    		<forward name="xszcjgcxDetail" path="/xsxx/xszc/xszcjgcxDetail.jsp" />
+    	</action> 
+    	
+    	<!-- <<<<<<<<<<<<<<学生信息：身份证号信息校验 籍贯、出生年月、性别>>>>>>>>>>>>> -->
+		<action 
+			name="commanForm" 
+			parameter="method"
+			path="/stu_sfzhinfo_jy" 
+			scope="request"
+			type="xgxt.studentInfo.action.StudentInfoLogicAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="stuSfzhInfoJy" path="/sjcz/stu_sfzhinfo_jy.jsp" />
+		</action>
+    	
+    	<!-- 学生报到（南通航运个性化） -->
+    	<action path="/xsxx_xsbd" forward="/xsbd.do?method=xsbd"/>
+    	<action path="/xsxx_xsbdtj" forward="/xsbd.do?method=xsbdtj"/>
+    	<action 
+    		path="/xsbd" 
+    		type="xgxt.studentInfo.nthy.XsbdAction"
+    		parameter="method"
+    		scope="request"
+    		name="xsbdForm">
+    		<forward name="xsbd" path="/xsxx/nthy/xsbd.jsp" />
+    		<forward name="wbdyydetail" path="/xsxx/nthy/wbdyydetail.jsp" />
+    		<forward name="xsbddetail" path="/xsxx/nthy/xsbddetail.jsp" />
+    		<forward name="xsbdtj" path="/xsxx/nthy/xsbdtj.jsp" />
+    	</action>
+    	
+    	<!-- 学生注册（南通航运个性化） -->
+    	<action path="/xsxx_xszc" forward="/xszc.do?method=xszc"/>
+    	<action path="/xsxx_xszctj" forward="/xszc.do?method=xszctj"/>
+    	<action 
+    		path="/xszc" 
+    		type="xgxt.studentInfo.nthy.XszcAction"
+    		parameter="method"
+    		scope="request"
+    		name="xsxjzcForm">
+    		<forward name="xszc" path="/xsxx/nthy/xszc.jsp" />
+    		<forward name="wzcyydetail" path="/xsxx/nthy/wzcyydetail.jsp" />
+    		<forward name="xszcdetail" path="/xsxx/nthy/xszcdetail.jsp" />
+    		<forward name="xszctj" path="/xsxx/nthy/xszctj.jsp" />
+    	</action>
+    	
+    	<!--  学生成绩维护  -->
+    	<action path="/xsxx_xscj" forward="/xscj.do?method=xscjQuery"/>
+    	<action path="/xsxx_xscjQuery" forward="/xscj.do?method=xscjQuery"/>
+    	<action path="/xsxx_kindChoose" forward="/xscj.do?method=kindChoose"/>
+    	<action 
+    		path="/xscj" 
+    		type="xgxt.studentInfo.xscj.XscjAction"
+    		parameter="method"
+    		scope="request"
+    		name="xscjForm">
+    		<forward name="xscj" path="/xsxx/xscj/xsxx_xscj.jsp" />
+    		<forward name="kindChoose" path="/xsxx/xscj/kindChoose.jsp" />
+    	</action>
+    	
+    	
+    	<!--  学生信息统计导出  -->
+    	<action path="/xsxx_rstjcx" forward="/rstj.do?method=rstjCx"/>
+    	<action path="/xsxx_rstjdc" forward="/rstj.do?method=rstjDc"/>
+    	<action 
+    		path="/rstj" 
+    		type="xgxt.xsxx.action.XsxxRstjAction"
+    		parameter="method"
+    		scope="request"
+    		name="xsxxTjForm">
+    		<forward name="rstjCx" path="/xsxx/rstj/rstjCx.jsp" />
+    	</action>
+	</action-mappings>
+</struts-config>

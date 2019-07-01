@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+    	<form-bean name="jyglnewJyglByqxForm" type="com.zfsoft.xgxt.jyglnew.jygl.byqx.ByqxForm" />
+    	<form-bean name="jyglnewJyglCyjyyzdForm" type="com.zfsoft.xgxt.jyglnew.jygl.cyjyyzd.CyjyyzdForm" />
+    	<form-bean name="jyglnewJyglCyyqglForm" type="com.zfsoft.xgxt.jyglnew.jygl.cyyqgl.CyyqglForm" />
+    	<form-bean name="jyglnewJyglCypxForm" type="com.zfsoft.xgxt.jyglnew.jygl.cypx.CypxForm" />
+	</form-beans>
+	
+	<action-mappings>
+	
+	<!-- 毕业去向 -->
+	<action path="/jyglnew_jygl_byqx" forward="/jyglnew_jygl_byqxgl.do?method=byqxManage"/>
+	<action path="/jyglnew_jygl_byqxgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.jyglnew.jygl.byqx.ByqxAction" 
+   			name="jyglnewJyglByqxForm"         
+   			parameter="method">	
+   		<forward name="byqxManage" path="/xsgzgl/jyglnew/jygl/byqx/byqxManage.jsp"></forward>
+   		<forward name="addByqx" path="/xsgzgl/jyglnew/jygl/byqx/addByqx.jsp"></forward>
+   		<forward name="updateByqx" path="/xsgzgl/jyglnew/jygl/byqx/updateByqx.jsp"></forward>
+   		<forward name="viewByqx" path="/xsgzgl/jyglnew/jygl/byqx/viewByqx.jsp"></forward>
+	</action>
+	
+	<!-- 就业创业教育与指导 -->
+	<action path="/jyglnew_jygl_cyjyyzd" forward="/jyglnew_jygl_cyjyyzdgl.do?method=cyjyyzdManage"/>
+	<action path="/jyglnew_jygl_cyjyyzdgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.jyglnew.jygl.cyjyyzd.CyjyyzdAction" 
+   			name="jyglnewJyglCyjyyzdForm"         
+   			parameter="method">	
+   		<forward name="cyjyyzdManage" path="/xsgzgl/jyglnew/jygl/cyjyyzd/cyjyyzdManage.jsp"></forward>
+   		<forward name="addCyjyyzd" path="/xsgzgl/jyglnew/jygl/cyjyyzd/addCyjyyzd.jsp"></forward>
+   		<forward name="updateCyjyyzd" path="/xsgzgl/jyglnew/jygl/cyjyyzd/updateCyjyyzd.jsp"></forward>
+   		<forward name="viewCyjyyzd" path="/xsgzgl/jyglnew/jygl/cyjyyzd/viewCyjyyzd.jsp"></forward>
+	</action>
+	
+	<!-- 创业园区管理 -->
+	<action path="/jyglnew_jygl_cyyqgl" forward="/jyglnew_jygl_cyyqglgl.do?method=cyyqglManage"/>
+	<action path="/jyglnew_jygl_cyyqglgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.jyglnew.jygl.cyyqgl.CyyqglAction" 
+   			name="jyglnewJyglCyyqglForm"         
+   			parameter="method">	
+   		<forward name="cyyqglManage" path="/xsgzgl/jyglnew/jygl/cyyqgl/cyyqglManage.jsp"></forward>
+   		<forward name="addCyyqgl" path="/xsgzgl/jyglnew/jygl/cyyqgl/addCyyqgl.jsp"></forward>
+   		<forward name="updateCyyqgl" path="/xsgzgl/jyglnew/jygl/cyyqgl/updateCyyqgl.jsp"></forward>
+   		<forward name="viewCyyqgl" path="/xsgzgl/jyglnew/jygl/cyyqgl/viewCyyqgl.jsp"></forward>
+   		<forward name="getStu" path="/xsgzgl/jyglnew/jygl/cyyqgl/getStu.jsp"></forward>
+	</action>
+	
+	<!-- 创业培训 -->
+	<action path="/jyglnew_jygl_cypx" forward="/jyglnew_jygl_cypxgl.do?method=cypxManage"/>
+	<action path="/jyglnew_jygl_cypxgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.jyglnew.jygl.cypx.CypxAction" 
+   			name="jyglnewJyglCypxForm"         
+   			parameter="method">	
+   		<forward name="cypxManage" path="/xsgzgl/jyglnew/jygl/cypx/cypxManage.jsp"></forward>
+   		<forward name="addCypx" path="/xsgzgl/jyglnew/jygl/cypx/addCypx.jsp"></forward>
+   		<forward name="updateCypx" path="/xsgzgl/jyglnew/jygl/cypx/updateCypx.jsp"></forward>
+   		<forward name="viewCypx" path="/xsgzgl/jyglnew/jygl/cypx/viewCypx.jsp"></forward>
+	</action>
+	
+	</action-mappings>
+</struts-config>

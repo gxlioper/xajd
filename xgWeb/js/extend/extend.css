@@ -1,0 +1,51 @@
+.selectItemcont {
+	padding: 8px;
+}
+
+#selectItem {
+	background: #FFF;
+	position: absolute;
+	top: 0px;
+	left: center;
+	border: 1px solid #000;
+	overflow: hidden;
+	width: 240px;
+	z-index: 1000;
+}
+
+.selectItemtit {
+	line-height: 20px;
+	height: 20px;
+	margin: 1px;
+	padding-left: 12px;
+}
+
+.bgc_ccc {
+	background: #E88E22;
+}
+
+.selectItemleft {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.selectItemright {
+	float: right;
+	cursor: pointer;
+	color: #fff;
+}
+
+.selectItemcls {
+	clear: both;
+	font-size: 0px;
+	height: 0px;
+	overflow: hidden;
+}
+
+.selectItemhidden {
+	display: none;
+}

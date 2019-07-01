@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://www.getahead.ltd.uk/dwr/dwr20.dtd">
+<dwr>
+  <allow>
+    <create creator="new" javascript="getList">
+      <param name="class" value="xgxt.DAO.DAO"/>
+      <include method="getHistoryNjList"></include>
+      <include method="getList"></include>
+      <include method="getStuDormList"></include>
+    </create>
+    
+    <create creator="new" javascript="getXjydInfo">
+      <param name="class" value="xgxt.studentInfo.dao.StudentInfoLogicDAO" />  
+      <include method="getColumnEx" />
+      <include method="getYdlbStyle" />
+      <include method="getYdxh" />
+      <include method="getStuXjYdXx" />
+      <include method="getStudentXjydDiffInfo" />
+      <include method="getStudentXjydDiffTitle" />
+      <include method="getGdzlxx" />
+      <include method="checkArchivesExist" />
+      <include method="getLxr" />
+      <include method="getLxrInfo" />
+      <include method="queryBjParentInfo" />
+      <include method="getWfxxx" />
+      <include method="getQgzxTsxx"/>
+      <include method="isWjcfJcsj"/>
+      <include method="getXjydlbxx"/>  
+      <include method="getXjydInfo"/>   
+    </create>
+     
+    <create creator="new" javascript="getStuDyInfo">
+    	<param name="class" value="xgxt.pjpy.PjpyLogicDAO" />      
+        <include method="getStuDyInfo" />
+        <include method="getZhbx" />
+    </create>
+
+	<!-- <<<<<<<<<<<<<<<<<<sq>>>>>>>>>>>>>>>>>> -->
+    <create creator="new" javascript="GetListData">
+    	<param name="class" value="xgxt.DAO.GetDropDownList"/>
+    	<include method="getNjList"></include>
+    	<include method="getNfList"></include>
+    	<include method="getNdList"></include>
+    	<include method="getXnList"></include>
+    	<include method="getXqList"></include>
+    	<include method="getXyList"></include>
+    	<include method="getZyList"></include>
+    	<include method="getZyallList"></include>
+    	<include method="getBjList"></include>
+    	<include method="getBjallList"></include>
+    	<include method="getYhzList"></include>
+    	<include method="getYhList"></include>
+    	<include method="getXydmList"></include>    
+    	<include method="getHthList"></include>    
+    	<include method="GetQshList"></include>
+    	<include method="GetQshList2"></include>
+    	<include method="GetOneList"></include>
+    	<include method="GetOneList1"></include>
+    	<include method="GetGwInfo"></include>
+    	<include method="GetStuLczInfo"></include>
+    	<include method="getDykpInfo"></include>
+    	<include method="getDykpDeInfo"></include>
+    	<include method="getYhInfo"></include>
+    	<include method="getUserPower"></include>
+    	<include method="GetCwhList"></include>
+    	<include method="GetLcList"></include>
+    	<include method="GetBlQshList"></include><!-- 保留寝室列表 -->   
+    	<include method="GetGyJcList"></include>
+    	<include method="GetRzXsXx"></include><!-- 入住寝室学生信息 -->   	
+    	<include method="getColumnList"></include>
+    	<include method="getFs"></include>
+    	<include method="getBj"></include>
+    	<include method="getXm"></include><!-- 文件上传 --> 
+    	<include method="GetQsRzXsXx"></include>  
+    	<include method="GetQsRzXsXxHH"></include>  
+    	<include method="GetQsRzXsXxList"></include>  
+    	<include method="GetQsRzXsXxMsg"></include>  
+    	<include method="getNblgJxYjbzList"></include><!-- 宁波理工军训编制营级列表 -->
+    	<include method="getNblgJxLjbzList"></include><!-- 宁波理工军训编制连级列表 -->
+    	<include method="getNblgJxPjbzList"></include><!-- 宁波理工军训编制排级列表 -->
+    	<include method="getNblgJxBjList"></include><!-- 宁波理工军训编制班级列表 -->
+    	<include method="getStList"></include><!-- 心理健康 -->
+    	<include method="getYhList"></include><!-- 文件上传 -->
+    	<include method="getUnAllotPower"></include><!-- 用户未分配的权限 -->    	
+    	<include method="getSubList"></include><!-- 用户未分配的子系统 -->   
+    	<include method="getUnAllotPowerById"></include><!-- 用户未分配的子系统下的功能 -->
+    	<include method="getGroupSubPower"></include><!-- 未分配给用户组的子功能 -->
+    	<include method="getStrInfo"></include>
+    	<include method="getJxjdm"></include>
+    	<include method="getZyListnoxy"></include>
+    	<include method="getJxjje"></include>
+    	<include method="getZs"></include>
+    	<include method="getZlb"></include>
+    	<include method="getYrdw"></include>
+    	<include method="getXyZyBj"></include>
+    	<include method="getGbList"></include>
+    	<include method="getLpcl"></include>
+		<!--获取视图的字段信息-->
+		<include method="getTableColForExp"></include>
+		<!--加载政治面貌-->
+		<include method="getZZmmList"></include>
+		<include method="getXyListByDm"></include>  
+		<!-- 金华职业begin -->
+		<include method="getUserPowerForJhzy"></include> 
+		<include method="getSubListForJhzy"></include> 
+		<include method="getUnAllotPowerForJhzy"></include> 
+		<include method="getfdyInfo"></include> 
+		<include method="getbzrInfo"></include> 
+		<!-- 班级列表加载BY 思政队伍编班 -->
+		<include method="getBjListBySzbb"></include>
+		<!-- 金华职业end -->
+		<include method="getBmListByLb"></include>
+    </create>
+    <!-- 杭职院奖学金 -->
+    
+    <create creator="new" javascript="getBjStus">
+    	<param name="class" value="xgxt.pjpy.hzy.DwrPjpyMethods" />
+    	<include method="getBjStus" />
+    </create>
+    <create creator="new" javascript="getJxjList">
+       <param  name="class" value="xgxt.pjpy.PjpyLogicDAO"/>
+       <include method="getJxjList"></include>
+       <include method="getJxjListByJxjfl"></include>
+       <include method="getXmflList"></include>
+       <include method="getXmList"></include>
+       <include method="getJxjInfo"></include>
+    </create>
+    
+    <create creator="new" javascript="xljk_zxzx_dwr">
+       <param  name="class" value="xgxt.xljk.zxzx.util.xljk_zxzx_dwr"/>
+       <include method="xljk_dmwh_chcekdmh"></include>
+    </create>
+    
+     <create creator="new" javascript="pjpy_countZhszcpzf_dwr">
+       <param  name="class" value="xgxt.pjpy.util.zbdx_pjpy_dwr"/>
+       <include method="pjpy_countZhszcpzf"></include>
+    </create>
+    
+    <create creator="new" javascript="getNewStuBdd">
+       <param  name="class" value="xgxt.yxgl.YxglAction"/>
+       <include method="yxglBjlyXsbdd"></include>
+    </create>
+    
+    <create creator="new" javascript="getWjcfInfo">
+       <param name="class" value="xgxt.wjcf.WjcfOperactionAction"/>
+       <include method="getInfoEx"></include>
+    </create>
+ <!-- <<<<<<<<<<< sq >>>>>>>>>>>> -->
+    <create creator="new" javascript="getOtherData">
+    	<param name="class" value="xgxt.DAO.GetDataInfo"/>
+    	<include method="getYrdwInfo"></include>   	
+    	<include method="IsDataExist"></include>
+    	<include method="zgdzdx_hg_IsDataExist"></include> <!-- 中国地质大学换岗位判断 -->
+    	<include method="zgdzdx_sqgw_IsDataExist"></include> <!-- 中国地质大学申请岗位位判断 -->
+    	<include method="insertYrdwghxslsb"></include> <!-- 中国地质大学用人单位更换学生信息临时存储 -->
+    	<include method="deleteYrdwghxslsb"></include> <!-- 中国地质大学用人单位更换学生信息临时删除 -->
+    	<include method="getXyInfo"></include>
+    	<include method="getZyInfo"></include>
+    	<include method="getBjInfo"></include>
+    	<include method="getGwDetInfo"></include>
+    	<include method="getDormInfo"></include>
+    	<include method="getSsFpLdList"></include><!-- 宿舍划分 -->
+    	<include method="getSsFpSsXxList"></include>
+    	<include method="getSsFpFpSsXxList"></include>
+    	<include method="getSsFpZsData"></include>
+    	<include method="getSsFpCsList"></include>
+    	<include method="getSsFpYhfcws"></include>
+    	<include method="getCwFpXqList"></include><!-- 床位分配 -->
+    	<include method="getCwFpYhfcws"></include>
+    	<include method="getCwFpWhfcws"></include>
+    	<include method="getCwFpCwXxList"></include>
+    	<include method="getCwFpXsXxList"></include>
+    	<include method="getCwFpYfpXsXxList"></include>
+    	<include method="getLdList"></include>
+    	<include method="getCwFpLdList"></include>
+    	<include method="getCwFpSsCwXxList"></include>
+    	<include method="getWfpcwzsData"></include>
+    	<include method="getYfpcwzsData"></include>
+    	<include method="getWfpxsxxList"></include>
+    	<include method="getYfpqkxxList"></include>
+    	<include method="getWfpcwxxList"></include>
+    	<include method="getCwFpZsData"></include>
+    	<include method="getCwFpSsXsList"></include>
+    	<include method="getCwFpFpCwList"></include>
+    	<include method="getCwYfpZsData"></include>
+    	<include method="getcwFpCsList"></include>
+    	<include method="getLcList"></include>
+    	<include method="getDwmc"></include><!-- 根据岗位名称获取单位 -->
+    	<!--  <include method="getKaohelxr"></include>  根据“岗位名称”获得考核联系人的名字和电话信息 --> 
+    	<include method="GegGyWxNrFzBmList"></include>
+    	<!-- 军训建制详细信息 -->
+    	<include method="getJxjzDate"></include>
+    	<include method="getXbmzJxjzDate"></include>
+    	<!-- 中国地质大学国家助学贷款——通过展期年限得到展期后贷款结束日期 -->
+    	<include method="getZgdzdxGjzxdkZqqx"></include>
+    	<!-- 奖助学金——得到批量审核具体人数 -->
+    	<include method="getJzxjPlshNum"></include>
+    	<!-- 北京联合大学——通过助学金代码得到助学金相关信息 -->
+    	<include method="getBjlhdxZxjxx"></include>  
+		<!-- 通用获得指定表的指定字段 -->
+		<include method="getOneValue"></include>   	
+		<include method="getTableZd"></include>   	
+    	<include method="getTableInfo"></include>   	
+    	<include method="getTableListInfo"></include>
+        <include method="getTableListArrInfo"></include>   
+        <!-- 获得指定模块的结果集显示表头 -->
+		<include method="getTopTr"></include>
+		<include method="getRsListForPage"></include>   
+    </create>
+    
+    <create creator="new" javascript="getSztzData">
+        <param name="class" value="xgxt.sztz.dao.SztzDao" />
+        <include method="getDataEx"></include>
+        <include method="getInfoEx"></include>
+        <include method="getTzBjList"></include>
+        <include method="getInfoEx2"></include>
+        <include method="getyhbmmc"></include> 
+        <include method="getStuInfo"></include> 
+        <include method="getXsList"></include> 
+        <include method="getYhList"></include>
+        <include method="getTzxmDyCout"></include>
+        <include method="getXsInfo"></include>  
+    </create>
+
+     <create creator="new" javascript="getInsureInfo">
+      <param name="class" value="xgxt.qtsj.dao.QtsjDAO"/>      
+      <include method="InsureInfoisExist"></include> 
+      <include method="CheckExist"></include> 
+      <include method="AddYdkInfo"></include>   
+      <include method="getTrainInfoByCc"></include> 
+      <include method="getZdzInfo"></include>   
+      <include method="CheckOrtherExist"></include>
+	  <include method="getBf"></include>
+      <include method="checkCpydInfo"></include>
+      <include method="getBxxzByBxgs"></include>      
+      <include method="getBxgsdm"></include>      
+    </create>
+	
+	<create creator="new" javascript="getPagePara">
+      <param name="class" value="xgxt.action.MakePDF"/>            
+      <include method="savePagePara"></include>
+      <include method="getParam"></include>
+    </create>
+    
+    <create creator="new" javascript="getStuDetails">
+      <param name="class" value="xgxt.studentInfo.dao.StuInfoDAO"/>      
+      <include method="getAllOfInfo"></include>
+      <include method="checkDisplay"></include>   
+      <include method="checkDisOfXszz"></include>
+      <include method="getWmqspbInfo"></include>
+      <include method="getBjgcjInfo"></include>
+      <include method="getXszzInfo"></include>
+      <include method="getColOfXszz"></include>
+      <include method="getBzrInfo"></include>
+      <include method="getZsf"></include>
+      <include method="dctStuXh"></include>
+      <include method="checkGradArchiveApply"></include>
+	  <include method="getTzBjJy"></include>	
+	  <include method="checkQsdhAndQsbh"></include>
+	  <include method="getShiList"></include>
+	  <include method="getXianList"></include>
+	  <include method="shiList"></include>
+	  <include method="zgdzdxCheckZc"></include>	  
+	  <include method="zgdzdxCheckBy"></include>	  
+	  <include method="getNbzyZhszcp"></include><!-- 宁波职业综合素质测评 -->	
+	  <include method="getTurnJwUrl"></include>	  
+	  <include method="getXsjtxx"></include>	 
+	  <include method="getZhszcpOfZgkydx"></include><!-- 中国矿业大学综合素质测评信息查询 -->		
+	  <include method="getDyxx"></include><!-- 中国矿业大学党员信息查询 -->	
+	  <include method="getXsztList"></include><!-- 中国地大获得学生状态 -->	
+	  <include method="queryXjydxx"></include>
+	  <include method="getXsxxjl"></include><!-- 获取学生学习经历信息 -->
+	  <include method="getXsshgx"></include><!-- 获取学生社会关系信息 -->	  
+	  <include method="getColOfJygl"></include>
+    </create>
+	
+	 <!-- <<<<<<<<<<< luning plan >>>>>>>>>>>> -->
+	<create creator="new" javascript="getPlan">
+      <param name="class" value="xgxt.sxjy.action.szdw.XsgbAction"/>            
+      <include method="getPlanList"></include>
+    </create>
+    
+    <create creator="new" javascript="GetFdyList">
+      <param name="class" value="xgxt.sxjy.action.szdw.FdyxgAction"/>            
+      <include method="getFdyList"></include>
+    </create>
+    
+    <create creator="new" javascript="GetBmList">
+      <param name="class" value="xgxt.szdw.utils.GetBmForDwr"/>            
+      <include method="getBmList"></include>
+    </create>
+    
+    <create creator="new" javascript="getJxLdjzList">
+      <param name="class" value="xgxt.jxgl.JxglDAO"/>            
+      <include method="getLdList"></include>
+      <include method="getCjbl"></include>
+    </create>
+    
+	<convert converter="bean" match="xgxt.pjpy.model.zbdx_zhszcp_model">
+		<param name="include" value="xh,xn,nd,dcj,tcj,zcj,rwszf,cxysjszf,zhszcpzf" /> 
+	</convert>
+	
+	<create creator="new" javascript="getRule">
+      <param name="class" value="xgxt.studentInfo.action.StudentInfoLogicAction"/>            
+      <include method="getClassRule"></include>
+      <include method="getLength"></include>
+      <include method="getClassSimpleNameRule"></include>
+      <include method="getClassNameRule"></include>
+      <include method="getLearningCodeRule"></include>
+      <include method="getLearningCodeOrderRule"></include>
+    </create>
+    <!-- 合作教育分数评定 -->
+    <create creator="new" javascript="getScoreinfo">
+      <param name="class" value="xgxt.hzjy.dao.HzjyDao"/>            
+      <include method="getHzdwscore"></include>
+      <include method="getXtyscore"></include>
+      <include method="getYwbgscore"></include>
+      <include method="getAllscore"></include>
+      <include method="getSjd"></include>
+      <include method="checkExist"></include>
+    </create>
+    
+    <!-- 合作教育日期天数差距 -->
+    <create creator="new" javascript="getTowdays">
+      <param name="class" value="xgxt.utils.GetTime"/>            
+      <include method="getDaysOfTowDate"></include>
+    </create>
+        
+    <create creator="new" javascript="getGdnzHdHtxx">
+      <param name="class" value="xgxt.DAO.XszzDao"/>            
+      <include method="getGdnzHtxx"></include>
+    </create>
+    
+    <create creator="new" javascript="cqkjFunc">
+      <param name="class" value="xgxt.qgzx.dao.QgzxDao"/>            
+      <include method="getGwmcList"></include>
+      <include method="getPrincipalInfo"></include>
+      <include method="getSqtjString"></include> <!-- 井冈山大学，根据岗位的主键得到相应的申请要求 --> 
+      <include method="isStudentCondOK"></include> <!-- 井冈山大学，检验学生是否符合申请条件 --> 
+      <include method="isStuOkNumBeyondStandard"></include><!-- 井冈山大学， 判断岗位合格的学生是否超过了该岗位的额定人数 -->
+      <include method="isStudentExists"></include><!-- 长沙民政， 判断学生是否存在，如果存在，就返回学生的信息 -->
+      <include method="isGwZyfw"></include><!-- 长沙民政， 判断岗位是否是志愿服务的 -->
+      <include method="checkPostStuAudi"></include><!-- 勤工助学学生岗位批量审核人数限制判断 -->
+      <include method="getGwrsxx"></include><!-- 勤工助学学生所申请的岗位人数和通过人数 -->      
+      <include method="checkStuHavePost"></include><!-- 勤工助学判断学生是否申请过岗位 -->
+      <include method="checkGwsj"></include><!--检测岗位是否可以申请-->
+      <include method="getGwmcByYrdw"></include><!--国家用人单位代码查询岗位列表-->
+      <include method="checkFprs"></include>
+      <include method="checkZdgwExists"></include>  
+      <include method="loadJcbz"></include>  
+      <include method="getYrdwGwList"></include> 
+      <include method="checkGwsqsj"></include> 
+	  <!-- 补考科目限制条件-->
+      <include method="checkBktj"></include>
+      <include method="getGwmcxxList"></include>
+      <include method="getFgwfbrGwmcxxList"></include>
+      <include method="checkZjkjXsgw"></include>
+      <include method="checkGwExists"></include><!-- 判断是否存在相同的岗位信息 -->
+      <include method="getTitles"></include><!-- 根据PATH路径获取TITLE -->
+      <include method="checkXsgwsqqk"></include>
+    </create>
+    
+    <create creator="new" javascript="qgzxZgdzdxFunc">
+      <param name="class" value="xgxt.qgzx.zgdzdx.QgzxZgdzdxDAO"/>            
+      <include method="getDWRGwList"></include>
+      <include method="getDWRGwGzdxList"></include>
+    </create>
+    
+    <create creator="new" javascript="chkExists">
+      <param name="class" value="xgxt.studentInfo.csmzzyjsxy.StudentInfoCsmzDAO"/>            
+      <include method="chkExist"></include>
+    </create>
+    
+     <create creator="new" javascript="tbxxFunc">
+      <param name="class" value="xgxt.qtsj.shgc.dao.TbxxDAO"/>            
+      <include method="isExists"></include>
+    </create>
+
+    <create creator="new" javascript="getBaseData">
+       <param name="class" value="xgxt.DAO.Bjlh.DwrBaseData" />
+       <include method="getLocalColumns" />
+       <include method="getRemoteColumns" />
+       <include method="saveTableStructure" />
+       <include method="getTableProperties" />
+       <include method="synchronizeTableData" />
+       <include method="synchronizeTableDataForZFweb" />
+       <include method="getJwSiteFromJwWebservice"/>
+       <include method="getVerify"/>
+    </create>
+    
+    <create creator="new" javascript="getSjInfo">
+      <param name="class" value="xgxt.xslx.action.XslxDao"/>            
+      <include method="getSjInfo"></include>
+    </create>
+    
+    <create creator="new" javascript="transferStuinfo">
+      <param name="class" value="xgxt.studentInfo.zzdx.dao.TransferStuInfoDAO"/>            
+      <include method="ckeckNullOfStuinfo"></include>
+    </create>
+    <!-- 新生报到(只有考生号)公寓管理所需信息 -->
+    <create creator="new" javascript="GetGyglDataInfo">
+      <param name="class" value="xgxt.xsgygl.csmzzyjsxy.GetGyglData"/>            
+      <include method="getSsFpSsXxList"></include>
+      <include method="getLdXbXdList"></include>
+      <include method="getSsFpLdList"></include>
+      <include method="getSsFpFpSsXxList"></include>
+      <include method="getSsFpZyList"/>
+      <include method="getWfpXsList"/>
+      <include method="getXiaoQuList"/>
+      <include method="getXsCwFpLdList"/>
+      <include method="getXsCwFpSsList"/>
+      <include method="getXsYFpCwList"/>
+      <include method="getStuKshExist"/>
+      <include method="getQshList"/>
+      <include method="getCwhList"/>
+      <include method="getXsWFPrs"/>
+      <include method="getXSYFPcws"/>
+      <include method="getXsYFPrs"/>
+      <include method="getInfoExist"/>
+      <include method="getSsFpBjList"/>
+      <include method="xhKshSynchro"/> 
+    </create>
+   
+   <!-- 心理健康 -->
+    <create creator="new" javascript="getXljkSjm">
+      <param name="class" value="xgxt.xljk.xlcs.util.xljk_xlcs_zxpc_util"/>            
+      <include method="get_sjmcBy_sjlsh"></include>
+      <include method="isStuAlreadyDid"></include>
+      <include method="stuExist"></include>
+      
+      <include method="saveStuDWR"></include>  <!-- 武汉理工大学 保存学生的信息-->
+      <include method="isStuInKHXX"></include> <!-- 武汉理工大学 判断学生是否已经在困惑对象维护的信息表中-->
+      <include method="getStuInfoByXh"></include> <!-- 武汉理工大学 根据学号返回学生的基本信息 -->
+      <include method="modiStuInfo"></include> <!-- 武汉理工大学 修改学生的信息 -->
+      <include method="deleteStuInfoByXn_id"></include> <!-- 武汉理工大学 删除学生的信息 -->
+      <include method="deleteStuInfoByCondi"></include> <!-- 武汉理工大学 根据条件删除学生的信息 -->
+    </create>
+    
+    <create creator="new" javascript="sjstProcFun">
+      <param name="class" value="xgxt.xljk.zxzx.util.Xljk_DAO"/>            
+      <include method="sjstbBatchAddRecord"></include> <!-- 批量插入数据到试卷试题表中 return-true/false-->
+    </create> 
+    
+    <create creator="new" javascript="XljkDWR">
+      <param name="class" value="xgxt.xljk.common.XljkDWR"/>            
+      <include method="isZxsbhExist"></include> <!-- 判断咨询师编号是否存在 -->
+      <include method="isZxszyExist"></include> <!-- 判断咨询师资源是否存在 -->
+    </create>
+    
+   <!-- 迎新管理 -->
+    <create creator="new" javascript="yxglFun">
+      <param name="class" value="xgxt.yxgl.YxglDAO"/>
+       	<include method="xsbdOneByOne"></include>            
+      	<include method="isXybd"></include>
+      	<include method="getQsListByLddm"></include>
+      	<include method="isKshExists"></include>  <!-- 考生号是否存在 -->
+      	<include method="isXhExists"></include>   <!-- 学号是否存在 -->
+      	<include method="cancleBd"></include>   <!-- 取消学生报到 -->
+    </create>
+    
+   <!-- 党团建设  大学生生涯 -->
+    <create creator="new" javascript="dssyFun">
+      <param name="class" value="xgxt.action.zgkd.SyltDao"/>
+       	<include method="checkUserPower"></include>            
+    </create>
+    <!-- 公寓管理(部分)中国地质大学(武汉) -->
+    <create creator="new" javascript="gyglShareData">
+     <param name="class" value="xgxt.xsgygl.dao.GyglShareDAO"/>  
+         <include method="getSsHfLdList"/>
+         <include method="getSsHfLcList"/>
+         <include method="getSsHfSsXxList"/>
+         <include method="getAcs_AldList"/>
+         <include method="getAcs_Ald_delList"/>
+		 <include method="getSsYHfList"/>
+		 <include method="getWhfrs"/>
+		 <include method="getYhfcws"/>
+		 <include method="getSsldList"/>
+		 <include method="getSssBjList"/>
+		 <include method="getSssXqList"/>
+		 <include method="getSssLdList"/>
+		 <include method="getSssCsList"/>
+		 <include method="getSssCwList"/>
+		 <include method="getSssXsList"/>
+		 <include method="getSssFpCwList"/>
+		 <include method="getSssCwYfpZsData"/>
+		 <include method="getSssCwWfpZsData"/>
+		 <include method="GetQshList"/>
+		 <include method="getLcList2"/>
+		 <include method="isSsbhExists"/>
+		 <include method="GetSsbhList"/>
+		 <include method="getYqList"/>
+		 <include method="getYqLdList"/>
+		 <include method="getGyDyXf"/>
+		 <include method="getLcqszZzpd"/>
+    </create>
+    
+     <create creator="new" javascript="whlgPjpy">
+      <param name="class" value="xgxt.pjpy.whlgdx.PjpyWhlgDAO"/>
+       	<include method="checkDemand"></include>  
+       	<include method="getXmfl"></include>
+       	<include method="checkIsNewStu"></include>       	
+    </create>
+
+     <!-- 杭职院评奖评优计算综合测评分 -->
+    <create creator="new" javascript="hzyZhszcpf">
+      <param name="class" value="xgxt.pjpy.hzy.PjpyHzzyDAO"/>
+       	<include method="countZhszcpzfByXydyf"></include>
+       	<include method="getNoPassIsNo"></include>              
+    </create>
+	<!--中国矿业大学学生信息-->
+	<create creator="new" javascript="xsxxZgkd">
+      <param name="class" value="xgxt.studentInfo.zgkd.XsxxZgkdDAO"/>
+       	<include method="getWhzdByYh"></include>
+       	<include method="getBtzdByYh"></include>            
+    </create>
+	<!-- 安徽建工评奖评优 -->
+    <create creator="new" javascript="ahjgPjpyTjsz">
+      <param name="class" value="xgxt.pjpy.ahjg.PjpyAhjgDAO"/>
+       	<include method="getZdczbjList"></include>            
+    </create>
+    
+    <!-- 生涯论坛 -->
+    <create creator="new" javascript="syltDao">
+      <param name="class" value="xgxt.action.zgkd.SyltDao"/>
+       	<include method="bkSortSave"></include> <!-- 保存论坛的显示顺序信息 -->   
+       	<include method="getNoteDj"></include> <!-- 返回帖子的等级 -->        
+    </create>
+    
+     <!--湖南工业学生必修课成绩不及格信息 -->
+    <create creator="new" javascript="hngyStuCj">
+      <param name="class" value="xgxt.qgzx.hngydx.dao.HngydxXsqgzxDAO"/>
+       	<include method="getXscjInfo"></include>      
+    </create>
+    
+     <!--浙江商业职业技术学院评奖评优学生是否在黑名单中 -->
+    <create creator="new" javascript="pjpyZjsyzy">
+      <param name="class" value="xgxt.pjpy.zjsyzy.PjpyZjsyzyDAO"/>
+       <include method="checkIsHmd"></include>  
+       	<include method="jxjsqTj"/>
+       	<include method="chkxySzrs"/>
+       	<include method="chkjxjSqtj"/>
+       	<include method="xyJxjtzje"/>
+       	<include method="chksqtj"/>
+       	<include method="queryJxjInfo"/><!-- 查询奖学金类别和奖励金额信息-->
+       	<include method="pjpyTj_validate"/><!--验证学生是否可以获取奖学金-->
+       	<include method="changeCzlx"/><!--获取项目积分操作类型-->
+    </create>
+    
+    <!-- 长沙民政选择学院后过滤奖学金 -->
+    <create creator="new" javascript="chgJxjlist">
+      <param name="class" value="xgxt.pjpy.csmz.PjpyCsmzDAO"/>
+       	<include method="xyJxjList"></include>      
+       	<include method="chkStucfwh"></include>
+       	<include method="chkStuIsBys"></include>
+    </create>
+    
+    <create creator="new" javascript="chgRychlist">
+      <param name="class" value="xgxt.pjpy.csmz.PjpyCsmzDAO"/>
+       	<include method="xyRychList"></include>      
+    </create>
+    
+    <create creator="new" javascript="rcswFunction">
+      <param name="class" value="xgxt.rcgl.TicketDAO"/>
+       	<include method="ccrqCheck"></include>      
+    </create>
+    
+    <create creator="new" javascript="dwjlgl">
+      <param name="class" value="xgxt.dwjl.DwjlDAO"/>
+       	<include method="getDwjljxjHisinfo"></include>
+       	<include method="queryDwjlxmList"></include>      
+    </create>
+    
+    <create creator="new" javascript="cjff">
+      <param name="class" value="xgxt.qgzx.zgdzdx.QgzxCjffDAO"/>
+       	<include method="checkFfsj"></include>  
+       	<include method="getXsInfo"></include>
+       	<include method="getSyjf"></include>
+       	<include method="checkRepeat"></include>
+       	<include method="getBatchOperSyjf"></include>       	
+    </create> 
+    
+    <create creator="new" javascript="jxglNblg">
+      <param name="class" value="xgxt.jxgl.JxglDataAccessAction"/>
+       	<include method="getJsInfo"></include>
+       	<include method="getJxbzdm"></include>
+       	<include method="getNblgBjList"></include> 
+       	<include method="getNblgBjTList"></include>       
+       	<include method="setNblgBjList"></include> 
+       	<include method="setXbmzBjList"></include>  
+       	<include method="getXbmzBjList"></include>                        
+    </create>
+    
+    <create creator="new" javascript="systemFunction">
+      <param name="class" value="xgxt.action.base.BaseDAO"/>
+       	<include method="userIsOperator"></include>      
+       	<include method="checkExists"></include>                                       
+    </create> 
+      
+    <!-- 四川建筑评奖评优 -->
+    <create creator="new" javascript="pjpyscjzJs">
+      <param name="class" value="xgxt.pjpy.scjz.PjpyScjzDAO"/>
+       	<include method="getJxjlbandje"></include>
+       	<include method="countZf"></include>      
+    </create>  
+    
+    <!-- 中国矿大素质拓展 -->
+    <create creator="new" javascript="getSztzDao">
+    	<param name="class" value="xgxt.sztz.zgkydx.SztzZgkydxDAO" />
+    	<include method="dao_getHdList" />
+    	<include method="dao_getSxList" />
+    	<include method="getHdnrsx" />
+    	<include method="getXlsxmc" />
+    	<include method="getXlsxmc1" />
+    	<include method="getSxmc" />
+    	<include method="getGrSztzNr" />
+    	<include method="dao_getNr" />
+    	<include method="dao_getHdnrmc" />
+    	<include method="dao_getKmmc" />
+    	<include method="dao_getKmdm" />
+    	<include method="dao_getHdmc" />
+    	<include method="dao_getHddm" />
+    	<include method="dao_getSxmc" />
+    	<include method="dao_getNrmc" />
+    	<include method="dao_getXlmc" />
+    </create>
+    
+    <!-- 军训管理－建制维护－通用 -->
+    <create creator="new" javascript="getJxglDAO">
+    	<param name="class" value="xgxt.jxgl.gt.JxglDAO" />
+    	<include method="getBjList" />
+    	<include method="getBjTList" />
+    	<include method="getXsBjList" />
+    	<include method="getZyList" />
+    	<include method="setBjList" />
+    	<include method="chBzList" />
+    	<include method="getLdList" />
+    	<include method="getNextMinJz" />
+    	<include method="getzwList" />
+    	<include method="getBzzwList" />
+    	<include method="getdwList" />
+    	<include method="getLdListMc" />	
+    	<include method="getTdList" />	
+    </create>
+    <!-- 思想教育－江苏信息－新生问卷调查 -->
+    <create creator="new" javascript="getSxjyDAO">
+    	<param name="class" value="xgxt.sxjy.jsxx.SxjyDAO" />
+    	<include method="getXlsxmc" />
+    	<include method="getXsStList" />
+    	<include method="getXsSjStList" />
+    	<include method="getWjdcXsList" />
+    </create>
+    <!-- 思政队伍－宁波职业－班级特色项目 -->
+    <create creator="new" javascript="getBjtsxmDAO">
+    	<param name="class" value="xgxt.szdw.nbzy.BjtsxmDAO" />
+    	<include method="getSsFpQsList" />
+    </create>
+    
+    <!-- 军训管理－建制维护－通用 -->
+    <create creator="new" javascript="zzsfQgzx">
+    	<param name="class" value="xgxt.qgzx.zzsf.dao.QgzxZzsfDAO" />
+    	<include method="checkXsgwExists" />
+    </create>
+    
+    <create creator="new" javascript="getCpzfp">
+      <param name="class" value="xgxt.pjpy.zjlg.ZjlgPjpyDAO"/>
+      <include method="getCpzList"></include>
+      <include method="getCpzBjList"></include>
+      <include method="getWfpBjList"></include>
+      <include method="getJxjList"></include>
+    </create>
+
+    <!-- 评奖评优-通用 -->
+    <create creator="new" javascript="getPjpyDao">
+    	<param name="class" value="xgxt.pjpy.PjpyLogicDAO" />
+    	<include method="getInfoEx" />
+    	<include method="checkDataExists" /><!-- 盐城师范获奖数据检测 -->
+    </create>   
+     <!-- 评奖评优-获取奖学金人数 -->
+    <create creator="new" javascript="getJxjRs">
+    	<param name="class" value="xgxt.pjpy.zjlg.ZjlgPjpyDAO" />
+    	<include method="getJxjrsxz" />
+    </create>   
+    <!-- 评奖评优-获取奖学金通过人数 -->
+    <create creator="new" javascript="getJxjRstg">
+    	<param name="class" value="xgxt.pjpy.zjlg.ZjlgPjpyDAO" />
+    	<include method="getJxjrsxz1" />
+    </create>  
+    
+    <!-- 中国地大 - 党团建设 - 值班id数 -->
+    <create creator="new" javascript="getZbrDAO">
+    	<param name="class" value="xgxt.dtjs.zgdzdx.zbr.ZbrDAO" />
+    	<include method="getZbid" />
+    </create>  
+    
+    <!-- 中国地大 - 社会工作 - 获得字段 -->
+    <create creator="new" javascript="getCsszDAO">
+    	<param name="class" value="xgxt.shgz.zgdzdx.cssz.CsszDAO" />
+    	<include method="getZd" />
+    </create>
+    
+    <!-- 中国地大 - 社会工作 - 获得自定义字段 -->
+    <create creator="new" javascript="getHdglDAO">
+    	<param name="class" value="xgxt.shgz.zgdzdx.hdgl.HdglDAO" />
+    	<include method="getZdyZd" />
+    	<include method="getZdyZdz" />
+    	<include method="inSj" />
+    </create>
+
+	<!-- 苏州工业园区 - 评奖评优  -->
+    <create creator="new" javascript="getSzPjpyDAO">
+    	<param name="class" value="xgxt.pjpy.szyqxy.zhszcp.PjpySzyqxyZhszcpDAO" />
+    	<include method="dao_get5s" />
+    	<include method="dao_getShsj" />
+    	<include method="getPointLimit" />
+    	<include method="dao_getYf" />
+		<include method="getPointLimitXthd" />
+    	<include method="dao_getZZnlDwr"></include>
+    	<include method="dao_getXsXthdDwr"></include>
+    </create>      
+  
+  	<!-- 金华职业 - 军训管理  -->
+    <create creator="new" javascript="jxglJhzyDAO">
+    	<param name="class" value="xgxt.jxgl.jhzy.JxglJhzyDAO" />
+    	<include method="getLdList" />
+    	<include method="dao_getJxrcZt" /><!--整体安排-->
+    	<include method="dao_getJxrcJt" /><!--具体安排-->
+    	<include method="getZzlxXxList" />
+    </create>
+    
+    <!-- 金华职业 - 评奖评优 - 奖惩分  -->
+    <create creator="new" javascript="jcfJhzyDAO">
+    	<param name="class" value="xgxt.pjpy.jhzy.jcf.JcfDAO" />
+    	<include method="getJcf" />
+    	<include method="getWjcf" />
+    	<include method="getXqmc" />
+    	<include method="isZhfsx" />
+    </create>
+    
+    <!-- 金华职业 - 公寓管理   -->
+    <create creator="new" javascript="gyglJhzyDAO">
+    	<param name="class" value="xgxt.xsgygl.jhzyjsxy.GyglJhzyDAO" />
+    	<include method="getSsLcList" />
+    	<include method="getSsmList" />
+    	<include method="getUserInfo" />
+    	<include method="getZbfzr" />
+    </create>
+    
+    <!-- 浙江传媒 - 评奖评优 - 测评组设置  -->
+    <create creator="new" javascript="cpzZjcmDAO">
+    	<param name="class" value="xgxt.pjpy.zjcm.cpz.CpzDAO" />
+    	<include method="getZwList" />
+    	<include method="getCpZwList" />
+    	<include method="getCpzSj" />
+    </create>
+    
+    <!-- 浙江传媒 - 评奖评优 - 综合分  -->
+    <create creator="new" javascript="zjcmZhfDAO">
+    	<param name="class" value="xgxt.pjpy.zjcm.zhf.ZhfDAO" />
+    	<include method="getXqmc" />
+    	<include method="isZhfbl" />
+    </create>
+    
+     <!-- 浙江传媒 - 评奖评优 - 奖学金  -->
+    <create creator="new" javascript="zjcmJxjDAO">
+    	<param name="class" value="xgxt.pjpy.zjcm.xnjxj.XnjxjDAO" />
+    	<include method="getJxjList" />
+    	<include method="getJxjlb" />
+    	<include method="checkJxjshjg"/>   <!-- 校内奖学金单个审核检测 -->
+    	<include method="checkRychshjg"/>  <!-- 荣誉称号单个审核检测 -->
+    	<include method="checkXwjxjShxx"/><!-- 校外奖学金审核检测 -->
+    </create>
+    
+    <!--学风建设  -->
+    <create creator="new" javascript="xfjs">
+    	<param name="class" value="xgxt.pjpy.zjcm.xfjs.PjpyXfjsDAO" />
+    	<include method="selectBjrs" />
+    	<include method="bjccqkExists" />
+    	<include method="selectXsccqkbByBj" />
+    	<include method="selectDmList" />
+    	<include method="getWjxx" />
+    	<include method="selectBjccqkfk" />    	
+    </create>
+    
+    <!--支部管理  -->
+    <create creator="new" javascript="zjlgZbglDAO">
+    	<param name="class" value="xgxt.dtjs.zjlg.zbgl.ZbglDAO" />
+    	<include method="getZbList" />
+    	<include method="getBjList" />
+    	<include method="getZbcyList" />
+    	<include method="getWfpbjList" />
+    	<include method="getZbWssList" />
+    	<include method="getZbmc" />
+    	<include method="setZyList" />
+    	<include method="setBjList" />
+    </create>
+    
+        <!--查看是已经申请  -->
+    <create creator="new" javascript="xmlgjyglDAO">
+    	<param name="class" value="xgxt.jygl.dao.Dao_jhzy" />
+    	<include method="isexistsInfo" />
+    </create>
+    
+     <!--浙江传媒公寓查看是否已审核  -->
+    <create creator="new" javascript="checkXsInfo">
+    	<param name="class" value="xgxt.xsgygl.zjcmxy.GyglZjcmxyDAO" />
+    	<include method="checkXsInfo" />
+    </create>
+
+  <!-- 厦门理工评奖评优 -->
+    <create creator="new" javascript="getStuDtiaInfo">
+    	<param name="class" value="xgxt.pjpy.xmlg.PjpyXmlgDAO" />
+    	<include method="getStuCjList" />
+    	<include method="getStuWjcfList" />
+    	<include method="checkStusqExists" />
+        <include method="retXyRsTzXzFs" />
+        <include method="getJxjListByajax" />
+        <include method="checkJxjshrs" />
+		<include method="checkStuRychsq" />
+        <include method="checkPlshxx" />
+        <include method="getStuWjcfxx" />
+    </create>
+  <!-- 厦门理工思政队伍 -->
+    <create creator="new" javascript="getXmlgSzdwDAO">
+    	<param name="class" value="xgxt.szdw.xmlg.XmlgSzdwDAO" />
+    	<include method="getWmbjZdyZd" />
+    	<include method="getWmbjSbnr" />
+    	<include method="getFdyypZdyZd" />
+    	<include method="getFdyypSbnr" />
+    	<include method="getZd" />
+    	<include method="getCpdf" />
+    	<include method="getMcList" />
+    </create>
+    
+    <!-- 勤工助学学生考核 -->
+    <create creator="new" javascript="qgzxgzkh">
+    	<param name="class" value="xgxt.qgzx.dao.QgzxXskhDAO" />
+    	<include method="checkExists" />
+    </create>
+    
+	 <!-- 广州大学评奖 -->
+    <create creator="new" javascript="gzdxpjpy">
+    	<param name="class" value="xgxt.pjpy.gzdx.PjpyGzdxDAO" />
+    	<include method="countBxfZf" />
+    	<include method="getXyxzrs" />
+    	<include method="checkStujxjsqcs" />
+    	<include method="checkPlshdata" />
+    </create>
+    <!-- 获得星期几 -->
+    <create creator="new" javascript="dateUtil">
+    	<param name="class" value="xgxt.utils.date.DateUtils" />
+    	<include method="getDayOfWeek_CN" />
+    </create>
+    
+    <!-- 北京联合 公寓管理 -->
+    <create creator="new" javascript="getBjlhGyglDAO">
+    	<param name="class" value="xgxt.xsgygl.bjlh.BjlhGyglDAO" />
+    	<include method="getNjList" />
+    	<include method="getXyZyBjList" />
+		<include method="getXqLdList" />
+    	<include method="getCsList" />
+    	<include method="getQsList" />
+    	<include method="getCwList" />
+    	<include method="isCz" />
+    	<include method="getSsFpCsList"/>
+    	<include method="getSsFpYhfcws"/>
+    	<include method="getCwFpZsData"/>
+    	<include method="getCwFpZsDatas"/>
+    	<include method="getSsFpSsXxList"/>
+    	<include method="getSsFpFpSsXxList"/>
+        <include method="getxbXqLdList" />
+    	<include method="getCwFpYhfcws"></include>
+    	<include method="getCwFpWhfcws"></include>
+    	<include method="getCwFpCwXxList"></include>
+    	<include method="getCwFpXsXxList"></include>
+    	<include method="getCwFpYfpXsXxList"></include>
+    </create>
+    
+    <!--报到证办理管理-->
+    <create creator="new" javascript="bdzblgl">
+    	<param name="class" value="xgxt.jygl.dao.BdzblDao" />
+    	<include method="getSyd" />
+    	<include method="getBdzkwdwmc" />    	
+    </create>
+    
+	<!--学生服务指导中心管理-->	
+    <create creator="new" javascript="xsfwzdzx">
+    	<param name="class" value="xgxt.rcgl.nbcs.XsfwzdzxglDAO" />
+    	<include method="checkXslfbmlxr" />
+    	<include method="checkYhm" />   
+    	<include method="getBmslr" />
+    	<include method="checkXslfxx" /> 	
+    	<include method="checkCqxx" />    	
+    </create>
+    
+    <!--学生服务指导中心管理-->	
+    <create creator="new" javascript="bylfgl">
+    	<param name="class" value="xgxt.rcgl.nbcs.BylfglDAO" />
+    	<include method="checkBylf" />
+    </create>
+    
+     <!--学生学费管理-->	
+    <create creator="new" javascript="xsxfxxgl">
+    	<param name="class" value="xgxt.rcgl.nbcs.XfxxglDAO" />
+    	<include method="checkXsxfxx" />
+    	<include method="checkJcjsxx" />    	
+    </create>
+   
+	<!-- 三江学院 党团建设 -->
+    <create creator="new" javascript="getSjxyDtjsDAO">
+    	<param name="class" value="xgxt.dtjs.sjxy.SjxyDtjsDAO" />
+    	<include method="getDzbxxList" />
+    	<include method="getSelectList" />
+    	<include method="getDzz" />
+    </create>
+    
+    <!-- 通用版本 公寓管理 -->
+    <create creator="new" javascript="getGyglDAO">
+    	<param name="class" value="xgxt.xsgygl.GyglTyDAO" />
+    	<include method="getXqYqLdList" />
+    	<include method="getXqLdList" />
+    	<include method="getCsList" />
+    	<include method="getQsList" />
+    	<include method="getCwList" />
+    	<include method="isCz" />
+    	<include method="getOneValue" />
+    	<include method="getSelectList" /><!--获取系统中不可维护的列表值-->
+    	<include method="orderByList" />
+    	<include method="wsjcfs" /><!--卫生检查分数是否达标-->
+		<include method="qswjrs" /><!--寝室成员违纪人数-->
+		<include method="xqydwmqs" /><!--学期获得月度文明寝室的次数-->
+		<include method="xnxqwmqs" /><!--学年获得学期文明寝室的次数-->
+		<include method="getCwFpSsCwXxList" />
+    </create>
+    
+   	<!-- 卫生检查 -->
+    <create creator="new" javascript="getGyglWsjcDAO">
+    	<param name="class" value="xgxt.xsgygl.wsjc.GyglWsjcDAO" />
+    	<include method="getWsjcInfo" />
+    </create>
+    
+    
+    <!-- 通用版本 党团建设 -->
+    <create creator="new" javascript="getDtjsInfo">
+    	<param name="class" value="xgxt.dtjs.DtjsDAO" />
+    	<include method="getDyxxInfo" />
+    	<include method="getStuDefInfo" />
+    </create>
+
+    <!-- 通用版本 军训管理 -->
+    <create creator="new" javascript="getJxglTyDAO">
+    	<param name="class" value="xgxt.jxgl.JxglTyDAO" />
+    	<include method="getJxglInfo" />
+    	<include method="getJxjzList" />
+    	<include method="scmd" />
+    </create>
+    
+    <!-- 通用版本 评奖评优 -->
+    <create creator="new" javascript="getPjpyInfo">
+    	<param name="class" value="xgxt.pjpy.PjpyTyDAO" />
+    	<include method="getPjpyInfo" />
+    	<include method="getPjpyList" />
+    	<include method="getSelectList" />
+    	<include method="getCpzInfoList" />
+    	<include method="getXyList" />
+    	<include method="sswrValue" />
+    </create>
+
+    <!-- 通用版本 社会工作 -->
+    <create creator="new" javascript="getShgzTyDAO">
+    	<param name="class" value="xgxt.shgz.ShgzTyDAO" />
+    	<include method="getShgzInfoMap" />
+    	<include method="getShgzInfoArr" />
+    </create>
+
+    <!-- 通用版本 日常事务 -->
+    <create creator="new" javascript="getRcswDAO">
+    	<param name="class" value="xgxt.rcsw.RcswDAO" />
+    	<include method="updateRcswDwr" />
+    </create>
+      
+    <!-- 浙江传媒 违纪处分 -->
+    <create creator="new" javascript="getLxckDcls">
+    	<param name="class" value="xgxt.wjcf.zjcm.WjcfZjcmService" />
+    	<include method="getLxckjcDjcxx" />
+    </create>
+	
+	<create creator="new" javascript="xszzCommonN05DWR">
+    	<param name="class" value="xgxt.xszz.commonN05.XszzCommonN05DAO" />
+    	<include method="jlsfqbsh" />
+    	<include method="checkIsShgc" />    	
+    </create>
+    
+     <!-- 常州信息 评奖评优 -->
+ 	<create creator="new" javascript="CzxxJxjDao">
+    	<param name="class" value="xgxt.pjpy.czxx.jxj.JxjDAO" />
+    	<include method="checkJxjSqtj" />
+    	<include method="queryShjg" />
+    	<include method="queryShjgByrych" />
+    	<include method="checkRychSqtj" />
+    </create>
+    
+    <!-- 通用版 评奖评优 -->
+    <create creator="new" javascript="PjpyTybDAO">
+    	<param name="class" value="xgxt.pjpy.tyb.zhszcp.dao.PjpyZctjszDAO" />
+    	<include method="query3jZcdm" />
+    	<include method="checkDmDataUnion"/>
+    </create>
+    
+    <!-- 通用版本 学生资助 -->
+    <create creator="new" javascript="getXszzInfo">
+    	<param name="class" value="xgxt.xszz.XszzDAO" />
+    	<include method="getXszzInfo" />
+    	<include method="getXmxxByRssz" />
+    	<include method="getXszzxmList" />
+    	<include method="getShxmList" />
+    	<include method="getXszzList" />
+    	<include method="getXszzLikeList" />
+    	<include method="getSelectList" />
+    	<include method="getLnXszzList" /><!-- 获取学生历年资助信息 -->
+		<include method="getTableZd" /><!-- 获取表字段 -->
+    	<include method="getJjknsRs_Hndx" /><!-- 获得已经通过审核该级别困难生的学院人数（海南大学） -->
+    	<include method="getXszzInfoByXmdm" /><!-- 根据项目代码取申请周期 -->
+    	<include method="filePathDel" /><!-- 删除附件 -->
+    </create>
+    
+    <!-- 宁波城市 评奖评优 -->
+    <create creator="new" javascript="getPjpyNbcsDAO">
+    	<param name="class" value="xgxt.pjpy.nbcs.PjpyNbcsDAO" />
+    	<include method="getTkxxList" />
+		<include method="getWjstList" />
+		<include method="getWjmcList" />	
+    </create>
+    
+    <!-- 宁波天一 学生资助 -->
+     <create creator="new" javascript="nbtyxszz">
+    	<param name="class" value="xgxt.xszz.nbty.jtjjknsbz.XszzDao" />
+    	<include method="getJtjjknbz" />
+    </create>
+    
+     <!-- 宁波天一 文明寝室申请 -->
+     <create creator="new" javascript="nbtyWmqssq">
+    	<param name="class" value="xgxt.pjpy.nbty.wmqs.NbtyWqmsService" />
+    	<include method="getZsxxList" />
+    </create>
+    
+    <!-- 通过版 综测加载下拉列表数据 -->
+     <create creator="new" javascript="TybZhszcpService">
+    	<param name="class" value="xgxt.pjpy.tyb.zhszcp.service.PjpyZhszcpService" />
+    	<include method="queryZdyzdSelectData" />
+    </create>
+    
+    <!-- 广东白云 团员异动 -->
+     <create creator="new" javascript="getTyYdLx">
+    	<param name="class" value="xgxt.dtjs.gdby.tyxx.GdbyTyxxService" />
+    	<include method="initTyYdLx" />
+    </create>
+    
+     <create creator="new" javascript="rcswKqglXskqService">
+    	<param name="class" value="xgxt.rcsw.kqgl.xskq.RcswKqglXskqService" />
+    	<include method="checkTimes" />
+    </create>
+	
+	<create creator="new" javascript="pjpyService">
+    	<param name="class" value="xgxt.pjpy.guizhdx.GuizhdxService" />
+    	<include method="pjpyTjsz" />
+		<include method="nbcxPjpyTjsz" />
+		<include method="getPxdj"/>
+    </create>    
+ 	
+  	<!-- 闽江学院 奖学金申请判断 -->
+     <create creator="new" javascript="checkMjJxj">
+    	<param name="class" value="xgxt.pjpy.mjxy.PjpyMjxyService" />
+    	<!-- 申请奖学金的必要条件 -->
+    	<include method="getJxjTjList" />
+    </create>
+    <create creator="new" javascript="moneyFormat">
+    	<param name="class" value="xgxt.utils.date.MoneyFormat" />
+    	<include method="format" />
+    </create>   
+    <create creator="new" javascript="dealDate">
+    	<param name="class" value="xgxt.utils.dealDate" />
+    	<include method="getMonths" />
+    </create> 
+
+	 <!-- 硅湖学院 荣誉减分 -->
+     <create creator="new" javascript="getLdxx">
+    	<param name="class" value="xgxt.pjpy.ghxy.rykf.RyjfGhxyService" />
+    	<include method="getLdlb" />
+    	<include method="getCslb" />
+    	<include method="getQslb" />
+    	<include method="getXsjfxx" />
+    </create> 
+    
+    <!-- 就业管理 -->
+    <create creator="new" javascript="jyglDAO">
+    	<param name="class" value="xgxt.jygl.comman.JyglDAO" />
+    	<include method="getDwInfo" />
+    	<include method="getXmbz" />
+    	<include method="saveXybh" />
+    	<include method="getWsybh" />
+    </create>
+    <!-- 就业网 -->
+    <create creator="new" javascript="jyweb">
+    	<param name="class" value="xgxt.jygl.comman.JyWEBDAO" />
+		<include method="getLayOut" />
+    	<include method="getAllGsmc"/>
+    	<include method="isUserExists"/>
+    	<include method="saveStuJobs"/>
+    	<include method="saveHfxxMore"/>
+    	<include method="getNews"/>
+    	<include method="getZtzpList"/>
+    </create>
+    
+    
+     <!-- 问卷调查 -->
+     <create creator="new" javascript="getWjdcDAO">
+    	<param name="class" value="xgxt.wjdc.WjdcDAO" />
+    	<include method="getWjstList" />	<!-- 获得指定问卷的试题情况 -->
+    	<include method="getTkxxList" />	<!-- 获得题库信息列表(除去已经分配) -->
+    	<include method="getWjmcList" />	<!-- 获得问卷名称列表 -->
+    </create> 
+    
+     <!-- 根据权限初始化寝室 -->
+     <create creator="new" javascript="initQsxx">
+    	<param name="class" value="xgxt.pjpy.ghxy.qsryf.GhxyQsryfService" />
+    	<include method="initCs" />	<!-- 初始化楼层 -->
+    	<include method="initQsh" />	<!-- 初始化寝室号 -->
+    	<include method="getSsByQx" />	<!-- 初始化寝室号 -->
+    	<include method="initCsByQx" />	<!-- 初始化寝室号 -->
+    	<include method="initQshByQx" />	<!-- 初始化寝室号 -->
+    </create> 
+    
+    <create creator="new" javascript="xszzComm">
+    	<param name="class" value="xgxt.xszz.comm.XszzCommDAO" />
+    	<include method="getTjbbZd" />	<!-- 初始化楼层 -->    	
+    </create>
+    
+    <!-- 柳州职业 第二课堂活动 --> 
+    <create creator="new" javascript="sztzLzzy">
+    	<param name="class" value="xgxt.sztz.csmzzyjsxy.SztzLzzyService" />
+    	<include method="getHdxm" />	<!-- 活动项目 -->    
+    	<include method="getStuXxByXy" />	<!-- 根据学院获取学生信息 -->   
+    	<include method="getStuXxByZy" />	<!-- 根据专业获取学生信息 -->   
+    	<include method="getStuXxByBj" />	<!-- 根据班级获取学生信息 -->    	
+    	<include method="getStuXxByXh" />	<!-- 根据学号获取学生信息 -->    	
+    	<include method="getStuXxByXm" />	<!-- 根据姓名获取学生信息 -->    	
+    </create>
+    
+    <!-- 漳州师范 学生资助 --> 
+    <create creator="new" javascript="zzxmTj">
+    	<param name="class" value="xgxt.xszz.zzxmtj.XszzZzxmService" />
+    	<include method="getXmdjList" />	<!-- 获取项目等级列表 -->    
+    	<include method="getZzZq" />		<!-- 获取资助周期 -->  
+    	<include method="checkSffj"/>       <!-- 判断是否分级 -->
+    	<include method="getSfxsG"/>        <!-- 组维护 设置信息加载 -->
+    </create>
+    
+     <!-- 南宁职业 心理咨询师 留言功能 --> 
+    <create creator="new" javascript="xzsxxPp">
+    	<param name="class" value="xgxt.xljk.zxzx.service.xljk_xzsxx_ppService" />
+    	<include method="getFdyListByTj" />	<!--查询辅导员 -->    
+    	<include method="getZxsListByTj" />		<!--查询咨询师 -->  
+    </create>
+    
+ 	<!-- 南宁职业 心理咨询师 选择留言咨询师 -->
+ 	 <create creator="new" javascript="sfXzZxs">
+    	<param name="class" value="xgxt.rcsw.gzdx.RcswGzdxService" />
+    	<include method="getXzZxs" />	<!-- 是否选择咨询师 -->    
+    	<include method="getXlzxsByTj" />	<!-- 筛选咨询师 -->    
+    </create>
+    <!-- 学生会 -->
+     <create creator="new" javascript="xsh">
+    	<param name="class" value="xgxt.xsh.XshDAO" />
+    	<include method="getstInfo" />	<!-- 加载社团详细信息-->    
+    </create>
+    
+     <!-- 通用DWR by luojw -->
+     <create creator="new" javascript="commDAO">
+    	<param name="class" value="xgxt.comm.CommDAO" />
+    	<include method="getTableZd" />		<!-- 获得指定表的所有字段-->    
+    	<include method="getTableZdList" />	<!-- 获得指定表的所有字段及备注-->    
+    </create>
+    
+    <!-- 系统维护 by luojw -->
+    <create creator="new" javascript="xtwhDAO">
+    	<param name="class" value="xgxt.xtwh.XtwhDAO" />
+    	<include method="saveKjfsOne" />	<!-- 保存快捷方式 -->  
+    	<include method="delKjfsOne" />	<!-- 删除快捷方式 -->  
+    	<include method="saveSydc" />		<!-- 保存首页调查 -->    
+    </create>
+    
+    <!-- 通用违纪处分 -->
+    <create creator="new" javascript="commWjcfDAO">
+    	<param name="class" value="xgxt.wjcf.zjcm.WjcfZjcmDAO" />
+    	<include method="checkStuWjcfIsExists" />		<!-- 检测学生同一处分文号，时间是否有处分-->    
+    	<include method="checkStuWjcfIsExistsBypl" />		<!-- 检测学生同一处分文号，时间是否有处分-->    
+    </create>
+    
+    <!-- 综合测评奖学金 -->
+    <create creator="new" javascript="zhcpjxjDWR">
+    	<param name="class" value="xgxt.pjpy.tyb.zhszcp.dao.PjpyZhcpjxjDAO" />
+    	<include method="checkJxjsb" />		<!-- 检测是否可上报奖学金-->    
+    	<include method="checkQxJxjsb" />	<!-- 检测上报奖学金是否可取消上报-->    
+    </create>
+    
+    <!--奖学金 -->
+    <create creator="new" javascript="jxjDWR">
+    	<param name="class" value="xgxt.pjpy.guizhdx.GuizhdxDAO" />
+    	<include method="checkJxjsb" />		<!-- 检测是否可上报奖学金-->    
+    	<include method="checkQxJxjsb" />	<!-- 检测上报奖学金是否可取消上报-->
+    	<include method="checkXyjxjsbrs" />	<!-- 检测人数是否超限-->    	    
+    	<include method="checkJxjje" />	<!-- 检测奖学金金额是否超限-->
+    </create>
+
+    <!--信息统计查询 -->
+    <create creator="new" javascript="xsxxtjDWR">
+    	<param name="class" value="xgxt.studentInfo.dao.XsxxtjcxglDAO" />
+    	<include method="getZyGoupList" />		<!-- 查询专业-->
+    	<include method="getBjGoupList" />		<!-- 查询班级--> 
+    </create>
+    
+    
+    <!-- 名单确认 -->
+    <create creator="new" javascript="mdqrDWR">
+    	<param name="class" value="xgxt.mdqr.MdqrService" />
+    	<include method="getXmList" />	 <!-- 项目获取 --> 
+    	<include method="getXmShList" />	 <!-- 项目获取 --> 
+    	<include method="checkMdSz" />   <!-- 名单设置权限 -->
+    	<include method="checkMdQr" />   <!-- 名单设置权限 -->
+    	<include method="getXmListBySzqx" />   <!-- 名单设置权限 -->
+    	<include method="getXmListByShqx" />   <!-- 名单审核权限 -->
+    	<include method="getSzzq"/>   <!-- 获取项目周期 -->
+    </create>
+	
+	<!-- 评奖评优 人员确定 -->
+	<create creator="new" javascript="ryqdDWR">
+    	<param name="class" value="xgxt.pjpy.comm.pjpy.ryqd.PjpyRyqdDAO" />
+    	<include method="getPjZyList" />	 <!-- 加载评奖专业列表 --> 
+    	<include method="getPjBjList" />	 <!-- 加载评奖班级列表 --> 
+    </create>
+    
+    <!-- 首页新闻信息 -->
+    <create creator="new" javascript="newsInfoDWR">
+    	<param name="class" value="xgxt.action.NewsAction" />
+    	<include method="getNewsInfo" />	 <!-- 加载评奖专业列表 --> 
+    	<include method="checkTpxssx" />	 <!-- 判断图片显示顺序是否存在 --> 
+    </create>
+    
+    <!-- 首页设置 -->
+    <create creator="new" javascript="syszDWR">
+    	<param name="class" value="xgxt.xtwh.sysz.SyszDAO" />
+    	<include method="getXmList" />	 <!-- 加载项目列表(学生申请) --> 
+    </create>
+
+
+	<!-- 表单设置 -->
+	<create creator="new" javascript="bdsz">
+    	<param name="class" value="xgxt.bdsz.BdszDAO" />
+		<include method="getGnmcList" />
+		<include method="getGnmcListByMkdm" />
+    </create>
+    
+    <!-- 高级查询 -->
+    <create creator="new" javascript="searchUtil">
+    	<param name="class" value="xgxt.comm.search.SearchService" />
+    	<include method="getZyInfoByPy" />	<!-- 获得专业信息（根据拼音） -->
+    	<include method="getZyInfoByXy" />	<!-- 获得专业信息（根据学院） -->
+    	<include method="getBjInfoByTj" />	<!-- 获得班级信息（根据拼音，年级，学院，专业） -->
+    	<include method="getGyglInfo" />	<!-- 获得公寓相关信息 --> 
+    	<include method="getQsInfoByPy" />	<!-- 获得寝室信息（根据拼音） -->
+    	<include method="getBmpy" />		<!-- 获得部门拼音 --> 
+    	<include method="getGyglInfo_Third"/>	<!-- 获得公寓相关信息（公寓管理第三版） --> 
+    	<include method="getQsInfoByPy_Third" />	<!-- 获得寝室信息（根据拼音）（公寓管理第三版） -->
+    	<include method="getZyNewInfoByPy" />	<!-- 获得专业信息（根据拼音）[全] -->
+    	<include method="getBjNewInfoByTj" />	<!-- 获得班级信息（根据拼音，年级，学院，专业）[全] -->
+    	<include method="getXmInfoByTj" /> <!-- 或侧评奖项目信息（根据类型和性质） -->>
+    </create>
+	
+	<!-- 学籍异动设置 -->
+	<create creator="new" javascript="xjydgl">
+    	<param name="class" value="xgxt.xsxx.dao.XsxxXjydglDAO" />
+		<include method="checkSfkqxsh" />
+    </create>
+    
+    <!-- 检查主键是否存在 -->
+    <create creator="new" javascript="basicOperaDwr">
+    	<param name="class" value="xgxt.dtjs.gdby.tygl.BasicExtendService" />
+		<include method="checkExists" />
+    </create>
+    
+    <!-- 通用导出 -->
+    <create creator="new" javascript="exportData">
+    	<param name="class" value="xgxt.sjdrdc.ExportDataService" />
+		<include method="getDczds" />
+		<include method="isConfigure" />
+    </create>
+    
+    <!-- 功能菜单管理 -->
+    <create creator="new" javascript="menuManage">
+    	<param name="class" value="xgxt.comm.menuManage.MenuManageDAO" />
+		<include method="getChildGnmkList" />
+		<include method="changeBtnSfqy" />
+		<include method="getNextGnmkdm" />
+		<include method="getGnmkInfo" />
+		<include method="getChildNode" />
+    </create>
+  	
+  	 <!-- 公寓维护 -->
+    <create creator="new" javascript="gyglGywh">
+    	<param name="class" value="xgxt.gygl.gywh.GyglGywhDAO" />
+		<include method="getYqxxList" /> <!-- 楼栋维护 校区园区维护 -->
+		<include method="getLdxxList" /> <!-- 寝室维护 楼栋维护 -->
+		<include method="getRzryList" /> <!-- 寝室维护 楼栋维护 -->
+		<include method="getLdlcList" /> <!-- 获取楼栋楼层信息 -->
+    </create>
+    
+    <!-- new edition 公寓管理 -->
+    <create creator="new" javascript="getCommGygl">
+    	<param name="class" value="xgxt.gygl.GyglCommDAO" />
+    	<include method="getQsInfoList" /> 		<!-- 获得寝室信息 -->
+    	<include method="getQsxxList" /> 		<!-- 获得寝室分配寝室信息-->
+    	<include method="getBmList" />			<!-- 获得部门信息 -->
+    	<include method="getBmtjInfoForQsfp" />	<!-- 获得部门统计信息(寝室分配部门信息统计) -->
+    	<include method="checkPkValue"/>        <!-- 判断是否存在相同数据 -->
+    </create>
+    
+    <!-- 公寓管理-异常数据检测 -->
+    <create creator="new" javascript="gyglYcsjjc">
+    	<param name="class" value="xgxt.gygl.ycsj.GyglYcsjjcService" />
+    	<include method="getCountByType" />
+    </create>
+    
+    
+    <!-- new edition 评奖评优 -->
+    <create creator="new" javascript="getCommPjpy">
+    	<param name="class" value="xgxt.pjpy.comm.pjpy.PjpyCommDAO" />
+    	<include method="getXmInfoList" /> <!-- 获得评奖项目信息 -->
+    	<include method="getXmszInfo" /> <!-- 获得评奖项设置 -->
+    </create>
+    
+    <!-- 评奖通用service -->
+       <create creator="new" javascript="pjpyCommService">
+    	<param name="class" value="xgxt.pjpy.comm.pjpy.PjpyCommService" />
+		<include method="getPjxm" /> <!-- 加载评奖项目 -->
+		<include method="getLcmcByXmdm" /> <!-- 加载评奖各级流程名称 -->
+		<include method="getBmList"/>
+    </create>
+    <!-- 
+     <convert converter="bean" match="xgxt.pjpy.comm.pjpy.model.PjpyXmszModel">  
+		<param name="include" value="pjxn,pjxq,pjnd,xmlx,xmxz,xmfw,xmdm" />
+	 </convert>
+	 -->
+	 <!-- 公寓管理 床位管理 -->
+    <create creator="new" javascript="gyglCwgl">
+    	<param name="class" value="xgxt.gygl.cwgl.GyglCwglService" />
+		<include method="getLdcsList" /> <!-- 获取楼栋层数 -->
+		<include method="getQsfpList" /> <!-- 寝室分配列表 -->
+		<include method="getQsxxList" /> <!-- 寝室详细信息 -->
+		<include method="saveCwyd" /> <!-- 保存床位异动信息 -->
+		<include method="getBmxxList" /> <!-- 部门分配情况信息 -->
+		<include method="getFpcwXsxx" /> <!-- 获取分配床位学生信息 -->
+		<include method="getFpcwXsByrz" /> <!-- 获取分配床位学生信息 -->
+		<include method="getKxssTjList" /> <!-- 空闲宿舍楼层信息统计 -->
+		<include method="Bmxss" /> <!-- 部门学生数 -->	
+    </create>
+	 
+	 <!-- 南京技师先进班级 -->
+	 <create creator="new" javascript="xjbjService">
+    	<param name="class" value="xgxt.pjpy.njjs.XjbjService" />
+		<include method="getBjxxByBjdm"/>
+	</create>
+	
+	 <!-- 学籍异动 -->
+	 <create creator="new" javascript="xjydService">
+    	<param name="class" value="xgxt.xsxx.comm.xjyd.XsxxXjydService" />
+		<include method="getShlcidByYdlb"/>
+	 </create>
+	
+	
+	<!-- 通用数据检测模块 -->
+	<create creator="new" javascript="dataDetectDWR">
+    	<param name="class" value="xgxt.comm.sjjc.DataDetectService" />
+		<include method="dataDetect"/>
+	</create>
+	
+	<!-- 公寓辅导员 -->
+	<create creator="new" javascript="gyfdyDWR">
+    	<param name="class" value="xgxt.gygl.gyfzr.gyfdy.GyglGyfdyService" />
+		<include method="getGyfdyGxld"/>
+		<include method="getYqxxDWR"/>
+		<include method="getWfpldList"/>
+	</create>
+	
+	<!--权限维护 -->
+	<create creator="new" javascript="qxwhDWR">
+    	<param name="class" value="xgxt.xtwh.xtwhCriterion.jsgl.JsglService" />
+		<include method="getYhForJs"/>
+		<include method="getGnmkList"/>
+	</create>
+	
+	 <!-- 审批流程 AJAX获取用户列表 -->
+	<create creator="new" javascript="getYhList">
+      <param name="class" value="xgxt.audit.spgw.SpgwDao"/>
+      <include method="getQueryYhList"></include>
+    </create>
+ 
+    <!-- new edition 用户管理 -->
+    <create creator="new" javascript="yhgl">
+    	<param name="class" value="xgxt.xtwh.xtwhCriterion.yhgl.YhglService" />
+    	<include method="getGnmkList" /> <!-- 获得子功能模块 -->
+    </create>
+    
+     <!-- new edition 用户管理 -->
+    <create creator="new" javascript="modiDAO">
+    	<param name="class" value="xgxt.action.dataMan.ModiDAO" />
+    	<include method="getCwList" /> <!-- 获取床位列表 -->
+    	<include method="getQsList" /> <!-- 获取寝室列表 -->
+    </create>
+    
+    <!-- new edition 日常事物 之江学院 -->
+    <create creator="new" javascript="rcswZjxyDAO">
+    	<param name="class" value="xgxt.rcsw.zjxy.RcswZjxyDAO" />
+    	<include method="getXhBySfzh" /> <!-- 根据身份证获取学号 -->
+    </create>
+    
+    <!-- new edition 日常事物 南通航运 -->
+    <create creator="new" javascript="xfhjglService">
+    	<param name="class" value="xgxt.rcsw.nthy.XfhjglService" />
+    	<include method="checkXsxfsfhj" /> <!-- 验证学生是否可以进行缓交申请 -->
+    	<include method="checkXfhjsqxx"/> <!-- 查询学生缓交申请信息 -->
+    </create> 
+    
+     <!-- 武汉铁路 素质拓展 -->
+    <create creator="new" javascript="whtlSztz">
+    	<param name="class" value="xgxt.sztz.csmzzyjsxy.SztzWhtlDAO" />
+    	<include method="getXmList" /> <!-- 获取项目列表 -->
+    </create>
+  </allow>
+</dwr>

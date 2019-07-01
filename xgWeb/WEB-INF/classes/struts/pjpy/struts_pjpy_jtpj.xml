@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="jtpjszForm"
+			type="com.zfsoft.xgxt.pjpy.jtpj.jtpzsz.JtpjSzForm" />
+		<form-bean name="jtpjsqForm"
+			type="com.zfsoft.xgxt.pjpy.jtpj.jtpjsq.JtpjSqForm" />
+		<form-bean name="jtpjshForm"
+			type="com.zfsoft.xgxt.pjpy.jtpj.jtpjsh.JtpjShForm" />
+		<form-bean name="jtpjjgForm"
+			type="com.zfsoft.xgxt.pjpy.jtpj.jtpjjg.JtpjJgForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/jtpjszbase" forward="/jtpjsz.do?method=list" /> <!--  -->
+		<!-- 集体奖学金-->
+		<action path="/jtpjsz" parameter="method" name="jtpjszForm"
+			scope="request" type="com.zfsoft.xgxt.pjpy.jtpj.jtpzsz.JtpjSzAction">
+			<forward name="jtpjszadd" path="/pjpy/jtpj/jtpjszadd.jsp" />
+			<forward name="jtpjszupdate" path="/pjpy/jtpj/jtpjszupdate.jsp" />
+			<forward name="jtpjszview" path="/pjpy/jtpj/jtpjszview.jsp" />
+			<forward name="jtpjszlist" path="/pjpy/jtpj/jtpjszlist.jsp" />
+			<forward name="jtpjszcopy" path="/pjpy/jtpj/jtpjszcopy.jsp" />
+			<forward name="djbview" path="/pjpy/jtpj/djbview.jsp" />
+			<forward name="djblist" path="/pjpy/jtpj/djblist.jsp" />
+		</action>
+		<action path="/jtpjsqbase" forward="/jtpjsq.do?method=list" /> <!--  -->
+		<!-- 集体奖学金申请-->
+		<action path="/jtpjsq" parameter="method" name="jtpjsqForm"
+			scope="request" type="com.zfsoft.xgxt.pjpy.jtpj.jtpjsq.JtpjSqAction">
+			<forward name="jtpjsqadd" path="/pjpy/jtpj/jtpjsq/jtpjsqadd.jsp" />
+			<forward name="jtpjsqupdate" path="/pjpy/jtpj/jtpjsq/jtpjsqupdate.jsp" />
+			<forward name="jtpjsqview" path="/pjpy/jtpj/jtpjsq/jtpjsqview.jsp" />
+			<forward name="jtpjsqlist" path="/pjpy/jtpj/jtpjsq/jtpjsqlist.jsp" />
+			<forward name="bj" path="/pjpy/jtpj/jtpjsq/bj.jsp" />
+			<forward name="bjManage" path="/pjpy/jtpj/jtpjsq/bjManage.jsp" />
+			<forward name="xy" path="/pjpy/jtpj/jtpjsq/xy.jsp" />
+			<forward name="qt" path="/pjpy/jtpj/jtpjsq/qt.jsp" />
+			<forward name="qs" path="/pjpy/jtpj/jtpjsq/qs.jsp" />
+			<forward name="bjview" path="/pjpy/jtpj/jtpjsq/view/bj.jsp" />
+			<forward name="xyview" path="/pjpy/jtpj/jtpjsq/view/xy.jsp" />
+			<forward name="qtview" path="/pjpy/jtpj/jtpjsq/view/qt.jsp" />
+			<forward name="qsview" path="/pjpy/jtpj/jtpjsq/view/qs.jsp" />
+			<forward name="bjqsxx" path="/pjpy/jtpj/jtpjsq/view/bjqsxx.jsp" />
+			<forward name="qsxsxx" path="/pjpy/jtpj/jtpjsq/view/qsxsxx.jsp" />
+		</action>
+		<action path="/jtpjshbase" forward="/jtpjsh.do?method=list" /> <!--  -->
+		<!-- 集体奖学金审核-->
+		<action path="/jtpjsh" parameter="method" name="jtpjshForm"
+			scope="request" type="com.zfsoft.xgxt.pjpy.jtpj.jtpjsh.JtpjShAction">
+			<forward name="jtpjsh" path="/pjpy/jtpj/jtpjsh/jtpjsh.jsp" />
+			<forward name="jtpjshview" path="/pjpy/jtpj/jtpjsh/jtpjshview.jsp" />
+			<forward name="jtpjshlist" path="/pjpy/jtpj/jtpjsh/jtpjshlist.jsp" />
+			<forward name="jtpjPlsh" path="/pjpy/jtpj/jtpjsh/jtpjPlsh.jsp" />
+		</action>
+		<action path="/jtpjjgbase" forward="/jtpjjg.do?method=list" /> <!--  -->
+		<!-- 集体奖学金结果-->
+		<action path="/jtpjjg" parameter="method" name="jtpjjgForm"
+			scope="request" type="com.zfsoft.xgxt.pjpy.jtpj.jtpjjg.JtpjJgAction">
+			<forward name="jtpjjgadd" path="/pjpy/jtpj/jtpjjg/jtpjjgadd.jsp" />
+			<forward name="jtpjjgupdate" path="/pjpy/jtpj/jtpjjg/jtpjjgupdate.jsp" />
+			<forward name="jtpjjgview" path="/pjpy/jtpj/jtpjjg/jtpjjgview.jsp" />
+			<forward name="jtpjjglist" path="/pjpy/jtpj/jtpjjg/jtpjjglist.jsp" />
+			<forward name="bj" path="/pjpy/jtpj/jtpjsq/bj.jsp" />
+			<forward name="xy" path="/pjpy/jtpj/jtpjsq/xy.jsp" />
+			<forward name="qs" path="/pjpy/jtpj/jtpjsq/qs.jsp" />
+			<forward name="qt" path="/pjpy/jtpj/jtpjsq/qt.jsp" />
+			<forward name="bjview" path="/pjpy/jtpj/jtpjsq/view/bj.jsp" />
+			<forward name="xyview" path="/pjpy/jtpj/jtpjsq/view/xy.jsp" />
+			<forward name="qsview" path="/pjpy/jtpj/jtpjsq/view/qs.jsp" />
+			<forward name="qtview" path="/pjpy/jtpj/jtpjsq/view/qt.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

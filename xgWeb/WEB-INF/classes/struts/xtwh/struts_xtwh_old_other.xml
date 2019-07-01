@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xtwhOtherForm" type="xgxt.xtwh.xtwhOther.XtwhOtherForm">
+		</form-bean>
+		<form-bean name="xtwhZpglForm" type="xgxt.xtwh.zpgl.XtwhZpglForm"/>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+		<!--照片-->
+		<action path="/picpldr" forward="/xtwhOther.do?method=picPlsc"/>
+		<!--显示在学生信息 页面 的照片导入-->
+		<action path="/xsxxpicpldr" forward="/xtwhOther.do?method=picPlsc"/>
+		<!--功能开关  -->
+		<action path="/gnkgsz" forward="/xtwhOther.do?method=gnkgManage"/> 
+		<!--通用导出  -->
+		<action path="/export" forward="/xtwhOther.do?method=showExportPage"/> 
+		
+		<action name="xtwhOtherForm" 
+			    parameter="method" 
+			    path="/xtwhOther"
+				scope="request"	type="xgxt.xtwh.xtwhOther.XtwhOtherAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="picpldr" path="/xtwh/picpldr.jsp" />
+			<forward name="xtDmwhNew" path="/xtwh/xtDmwhNew.jsp" />
+			<forward name="xtDmwhOne" path="/xtwh/xtDmwhOne.jsp" />			
+			<forward name="gnkgManage" path="/xtwh/gnkg/gnkgManage.jsp" />
+			<forward name="showexport" path="/xtwh/drdc/showExport.jsp" />
+		</action>
+		
+		<action name="xtwhZpglForm" 
+			    parameter="method" 
+			    path="/xtwhZpgl"
+				scope="request"	type="xgxt.xtwh.zpgl.XtwhZpglAction">
+			<forward name="zpglManage" path="/xtwh/zpgl/zpglManage.jsp" />
+			<forward name="xszpdrManage" path="/xtwh/zpgl/xszpdrManage.jsp" />
+			<forward name="zpdc" path="/xtwh/zpgl/zpdc.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

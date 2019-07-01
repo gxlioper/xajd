@@ -1,0 +1,38 @@
+.partial {
+	background-image: url(images/checkboxes_bf.gif);
+	background-repeat: no-repeat;
+	width:18px;
+	height:18px;
+	padding-left: 15px;
+	margin-left: 2px;
+	margin-top: 3px;
+}
+.unchecked {
+	background-image: url(images/checkboxes.gif);
+	background-position:-18px center;
+	width:18px;
+	height:18px;
+	padding-left: 18px;
+}
+.unchecked:hover {
+	background-image: url(images/checkboxes.gif);
+	background-position:-54px center;
+	width:18px;
+	height:18px;
+	padding-left: 18px;
+}
+
+.checked {
+	background-image: url(images/checkboxes.gif);
+	background-position:left center;
+	width:18px;
+	height:18px;
+	padding-left: 18px;
+}
+.checked:hover {
+	background-image: url(images/checkboxes.gif);
+	background-position:-36px center;
+	width:18px;
+	height:18px;
+	padding-left: 18px;
+}

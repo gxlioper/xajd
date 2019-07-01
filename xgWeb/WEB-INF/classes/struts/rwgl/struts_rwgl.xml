@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="rwglMbxxForm" type="xsgzgl.rwgl.mbxx.RwglMbxxForm" />
+    	<form-bean name="rwglRwtwForm" type="xsgzgl.rwgl.rwtw.RwglRwtwForm" />
+    	<form-bean name="rwxfbcglForm" type="com.zfsoft.xgxt.rwgl.rwtw.RwxfbcglForm" />
+    	
+	</form-beans>
+
+
+	<action-mappings>
+  		<action path="/rwgl_mbxxgl_mbxxgl" forward="/rwgl_mbxxgl.do?method=mbxxCx"/><!-- 民兵信息查询 -->
+  		<action path="/rwgl_rwtwgl_rwdjgl" forward="/rwgl_rwtwgl.do?method=rwdjCx"/><!-- 入伍登记查询 -->
+  		<action path="/rwgl_rwtwgl_twdjgl" forward="/rwgl_rwtwgl.do?method=twdjCx"/><!-- 退伍登记查询 -->
+  		<action path="/rwgl_rwtwgl_rwxfbcgl" forward="/rwgl_rwxfbcgl.do?method=getRwxfbcList"/><!-- 入伍学费补偿查询 -->
+  		
+  		<!-- =====================================民兵信息===================================================== -->	
+		<action path="/rwgl_mbxxgl" 
+    			scope="request"
+    			type="xsgzgl.rwgl.mbxx.RwglMbxxAction" 
+    			name="rwglMbxxForm"
+    			parameter="method">
+    		<forward name="mbxxCx" 	path="/xsgzgl/rwgl/mbxx/mbxxCx.jsp"/>		<!-- 民兵信息查询 -->
+    		<forward name="mbxxZj" 	path="/xsgzgl/rwgl/mbxx/mbxxZj.jsp"/>		<!-- 民兵信息增加 -->
+    		<forward name="mbxxXg" 	path="/xsgzgl/rwgl/mbxx/mbxxXg.jsp"/>		<!-- 民兵信息修改 -->
+    		<forward name="mbxxCk" 	path="/xsgzgl/rwgl/mbxx/mbxxCk.jsp"/>		<!-- 民兵信息查看 -->
+		</action>
+		<action path="/rwgl_mbxxgl_ajax"
+        		parameter="method"
+        		name="rwglMbxxForm"
+        		scope="request"
+		        type="xsgzgl.rwgl.mbxx.RwglMbxxAjax">
+		</action>
+		
+		<!-- =====================================入伍退伍管理===================================================== -->	
+		<action path="/rwgl_rwtwgl" 
+    			scope="request"
+    			type="xsgzgl.rwgl.rwtw.RwglRwtwAction" 
+    			name="rwglRwtwForm"
+    			parameter="method">
+    		<forward name="rwdjCx" 	path="/xsgzgl/rwgl/rwtw/rwdjCx.jsp"/>		<!-- 入伍登记查询 -->
+    		<forward name="rwdjZj" 	path="/xsgzgl/rwgl/rwtw/rwdjZj.jsp"/>		<!-- 入伍登记增加 -->
+    		<forward name="zxxsCx" 	path="/xsgzgl/rwgl/rwtw/zxxsCx.jsp"/>		<!-- 在校学生查询 -->
+    		<forward name="rwdjXg" 	path="/xsgzgl/rwgl/rwtw/rwdjXg.jsp"/>		<!-- 入伍登记修改 -->
+    		<forward name="rwdjCk" 	path="/xsgzgl/rwgl/rwtw/rwdjCk.jsp"/>		<!-- 入伍登记查看 -->
+    		<forward name="twdjCx" 	path="/xsgzgl/rwgl/rwtw/twdjCx.jsp"/>		<!-- 退伍登记查询 -->
+    		<forward name="twdjZj" 	path="/xsgzgl/rwgl/rwtw/twdjZj.jsp"/>		<!-- 退伍登记增加 -->
+    		<forward name="rwxsCx" 	path="/xsgzgl/rwgl/rwtw/rwxsCx.jsp"/>		<!-- 入伍学生查询 -->
+    		<forward name="twdjXg" 	path="/xsgzgl/rwgl/rwtw/twdjXg.jsp"/>		<!-- 退伍登记修改 -->
+    		<forward name="twdjCk" 	path="/xsgzgl/rwgl/rwtw/twdjCk.jsp"/>		<!-- 退伍登记查看 -->
+    		<forward name="rwxfbcCx" 	path="/xsgzgl/rwgl/rwtw/rwxfbcCx.jsp"/>		<!-- 入伍学费补偿查询 -->
+    		<forward name="rwxfbcZj" 	path="/xsgzgl/rwgl/rwtw/rwxfbcZj.jsp"/>		<!-- 入伍学费补偿增加 -->
+    		<forward name="rwxfbcXg" 	path="/xsgzgl/rwgl/rwtw/rwxfbcXg.jsp"/>		<!-- 入伍学费补偿修改 -->
+    		<forward name="rwxfbcCk" 	path="/xsgzgl/rwgl/rwtw/rwxfbcCk.jsp"/>		<!-- 入伍学费补偿查看 -->
+		</action>
+		<action path="/rwgl_rwtwgl_ajax"
+        		parameter="method"
+        		name="rwglRwtwForm"
+        		scope="request"
+		        type="xsgzgl.rwgl.rwtw.RwglRwtwAjax">
+		</action>
+		<!-- 入伍学费补偿管理 -->
+		<action path="/rwgl_rwxfbcgl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rwgl.rwtw.RwxfbcglAction" 
+    			name="rwxfbcglForm"
+    			parameter="method">
+    		<forward name="rwxfbcList" 	path="/xsgzgl/rwgl/rwtw/rwxfbcList.jsp"/>		<!-- 入伍学费补偿查询 -->
+    		<forward name="rwxfDgbc" 	path="/xsgzgl/rwgl/rwtw/rwxfDgbc.jsp"/>		<!-- 单个入伍学费补偿 -->
+    		<forward name="rwxfPlbc" 	path="/xsgzgl/rwgl/rwtw/rwxfPlbc.jsp"/>	<!-- 批量入伍学费补偿 -->
+    		<forward name="viewRwxfbc" 	path="/xsgzgl/rwgl/rwtw/viewRwxfbc.jsp"/>		<!-- 入伍学费补偿查看 -->
+		</action>
+		
+		
+	</action-mappings>
+</struts-config>

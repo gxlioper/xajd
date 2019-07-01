@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    <form-bean name="sztzGhxyForm" type="xgxt.sztz.ghxy.SztzGhxyForm" />
+		
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+	
+	<!-- 硅湖学院 素质拓展 -->
+    <action path="/sztzGhxy" 
+    		type="xgxt.sztz.ghxy.SztzGhxyAction" 
+    		name="sztzGhxyForm"
+    		parameter="method"
+    		scope="request"
+    >
+    <forward name="sztzSh" path="/sztz/ghxy/sztzSh.jsp"/>
+	</action>	
+	</action-mappings>
+</struts-config>

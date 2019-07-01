@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到杭州职院评的配置文件,pjpy_hzzy.xml    -->
+		<action path="/pjpy_hzzy_cjimp"          forward="/pjpyhzzywh.do?method=cjImp"></action><!-- 成绩导入页面 -->
+		<action path="/cjqry"                    forward="/pjpyhzzywh.do?method=cjQry"></action><!-- 成绩查询 -->
+		<action path="/pjpy_hzy_zhszcpdefault"            forward="/pjpyhzzywh.do?method=zhszcpDefault"></action><!-- 综合素质测评首页 -->
+		<action path="/hzzy_zhszcpqry"                forward="/pjpyhzzywh.do?method=zhszcpQry"></action><!-- 综合素质测评查询 -->
+		<action path="/hzzy_zhszcpadd"                forward="/pjpyhzzywh.do?method=zhszcpAdd"></action><!-- 综合素质测评增加 -->
+		<action path="/hzzy_zhszcpsave"               forward="/pjpyhzzywh.do?method=zhszcpSave"></action><!-- 综合素质测评保存 -->
+		<action path="/hzzy_zhszcpdel"                forward="/pjpyhzzywh.do?method=zhszcpDel"></action><!-- 综合素质测评批量删除 -->
+		<action path="/hzzy_zhszcpview"               forward="/pjpyhzzywh.do?method=zhszcpView"></action><!-- 综合素质测评显示详细信息 -->
+		<action path="/hzzy_zhszcpmodi"               forward="/pjpyhzzywh.do?method=zhszcpModi"></action><!-- 综合素质测评修改 -->
+		<action path="/hzyrychprint"                  forward="/pjpyhzzywh.do?method=hzyrychprint"></action>
+		<action path="/hzzyjxjmodi"                   forward="/pjpyhzzywh.do?method=hzzyjxjModi"></action>
+		<action path="/hzzyjxjmodisave"               forward="/pjpyhzzywh.do?method=hzzyjxjmodiSave"></action>
+		<action path="/hzzyrychmodi"                  forward="/pjpyhzzywh.do?method=hzzyrychModi"></action>
+		<action path="/hzzyrychmodisave"              forward="/pjpyhzzywh.do?method=hzzyrychmodiSave"></action>
+		<action path="/hzzyzsld"                      forward="/pjpyhzzywh.do?method=hzzyZsld"></action><!-- 奖学金申请报表连打 -->
+		<action path="/hzyrychbbld"                   forward="/pjpyhzzywh.do?method=hzyrychBbld"></action><!-- 荣誉称号报表连打 -->
+		<action path="/hzzyxjbjld"                    forward="/pjpyhzzywh.do?method=hzzyxjbjLd"></action><!-- 先进班报表连打 -->
+		<action path="/pjpy_hzzy_plqm"                forward="/pjpyhzzywh.do?method=plqm"></action><!-- 批量签名 -->
+	</action-mappings>
+</struts-config>

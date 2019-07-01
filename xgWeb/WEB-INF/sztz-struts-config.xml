@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+	<form-bean name="sztzForm" type="xgxt.sztz.form.SztzForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!--<<<<<<<<<<<<江苏信息职业技术学院-素质拓展>>>>>>>>>>>>>>-->
+		 <!--<<<<<<<<< 数据查询公用模块（部分） >>>>>>>>>>>-->
+		 <action name="sztzForm" parameter="sztzDataSearch"
+		 	path="/sztz_data_search" scope="request"
+		 	type="xgxt.sztz.action.SztzAction">
+		 	<forward name="false" path="/errMsg.do" />
+		 	<forward name="success" path="/sztz/tzhd_xx.jsp" />
+		 </action>		
+		 <!--<<<<<<<<< 申请提交保存 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="saveApply"
+			path="/sztz_applySave" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<< 申请结果查询 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="applyResult"
+			path="/sztz_applyResult" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz/tzhdsq_result.jsp" />
+		</action>		
+		<!--<<<<<<<<< 拓展学分个人申报 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="sztzxfsb"
+			path="/sztz_xf_sb" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz/tzxf_sb.jsp" />
+		</action>
+		<!--<<<<<<<<< 信息维护—素质拓展成绩 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="sztzpointin"
+			path="/sztz_point_in" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />			
+		</action>
+		<!--<<<<<<<<< 信息维护—素质拓展成绩添加、修改 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="modipointdata"
+			path="/sztz_modi_data" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz/sztz_point_add.jsp" />
+		</action>	
+		<!--<<<<<<<<< 数据操作公用模块（部分） >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="sztz_modiData" path="/sztz_modiData"
+			scope="request" type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<< 拓展学分个人学分申报审核 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="xfsbsh"
+			path="/sztz_xfsb_sh" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz/xfsbsh.jsp" />
+		</action>
+		<!--<<<<<<<<< 个人拓展成绩汇总（数据查询） >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="sztzcjhzquery"
+			path="/sztzcj_hz_query" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz/tzcjhz.jsp" />
+		</action>
+		<!--<<<<<<<<< 个人拓展成绩汇总（当年汇总、历年汇总） >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="sztzcjhz"
+			path="/sztz_cj_hz" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<< 数据导出 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="sztzExpData"
+			path="/sztzExpData" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+		<!--<<<<<<<<< 证书打印 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="sztzprint"
+			path="/sztz_print" scope="request" 
+			type="xgxt.sztz.action.MakePdf">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz/print/sztzprint.jsp" />
+		</action>			  
+		<!--<<<<<<<<< 整批自动审核 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="sztzxfsbautochk"
+			path="/sztz_xfsb_autochk" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz_xfsb_sh.do" />
+		</action>
+		<action name="sztzForm" parameter="sztzhdsb"
+			path="/sztz_hd_sb" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz/tzhd_sb.jsp" />
+		</action>
+		<action path="/SavaSztzHdsb" name="sztzForm" parameter="SavaSztzHdsb" scope="request"
+				type="xgxt.sztz.action.SztzAction">
+				<forward name="false" path="/errMsg.do"></forward>
+				<forward name="success" path="/sztz_hd_sb.do"></forward>		
+		</action>
+		<action path="/sztz_hd_cx" name="sztzForm" parameter="sztz_hd_cx" scope="request"
+				type="xgxt.sztz.action.SztzAction">
+				<forward name="false" path="/errMsg.do"></forward>
+				<forward name="success" path="/sztz/tzhd_cx.jsp" />
+		</action>
+		<action path="/sztz_hd_check" name="sztzForm" parameter="sztz_hd_check" scope="request"
+				type="xgxt.sztz.action.SztzAction">
+				<forward name="false" path="/errMsg.do"></forward>
+				<forward name="success" path="/sztz/tzhd_sb_sh.jsp" />
+		</action>
+		<action path="/sztz_hd_view" name="sztzForm" parameter="sztz_hd_view" scope="request"
+				type="xgxt.sztz.action.SztzAction">
+				<forward name="false" path="/errMsg.do"></forward>
+				<forward name="success" path="/sztz/tzhd_sb_view.jsp" />
+		</action>
+		<!--<<<<<<<<< 拓展项目查询 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="sztzxmquery"
+			path="/sztz_xm_query" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz/sztz_xm_query.jsp" />
+		</action>
+	    <!--<<<<<<<<<<<<西南民族大学-素质拓展>>>>>>>>>>>>>>-->
+	    <!-- <<<<<<<<<<<<<<<<<  参数设置   >>>>>>>>>>>>>>>>>>>>>> -->
+	    <action path="/para_set" name="sztzForm" parameter="para_set" scope="request" type="xgxt.sztz.xnmz.SztzAction">
+	            <forward name="false" path="errMsg.do"></forward>
+	            <forward name="success" path="/sztz/xnmz/para_set.jsp"></forward>                
+	    </action>
+		<!-- <<<<<<<<<<<<<<<<<  拓展班级信息发布   >>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/tzbj_pub" name="sztzForm" parameter="tzbj_pub" scope="request" type="xgxt.sztz.xnmz.SztzAction">
+		        <forward name="false" path="errMsg.do"></forward>
+		        <forward name="success" path="/sztz/xnmz/tzbj_pub.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<  信息查询公用模块   >>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/tz_dataSearch" name="sztzForm" parameter="tz_dataSearch" scope="request" type="xgxt.sztz.xnmz.SztzAction">
+		        <forward name="false" path="errMsg.do"></forward>
+		        <forward name="success" path="/sztz/xnmz/data_search.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<  拓展班级学生申请   >>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/tzbj_sq" name="sztzForm" parameter="tzbj_sq" scope="request" type="xgxt.sztz.xnmz.SztzAction">
+		        <forward name="false" path="errMsg.do"></forward>
+		        <forward name="success" path="/sztz/xnmz/tzbj_sq.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<  拓展班级学生申请审核   >>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/tzbj_sh" name="sztzForm" parameter="tzbj_sh" scope="request" type="xgxt.sztz.xnmz.SztzAction">
+		        <forward name="false" path="errMsg.do"></forward>
+		        <forward name="success" path="/sztz/xnmz/tzbj_sh.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<  拓展班级学生结业信息维护   >>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/tzbj_jy" name="sztzForm" parameter="tzbj_jy" scope="request" type="xgxt.sztz.xnmz.SztzAction">
+		        <forward name="false" path="errMsg.do"></forward>
+		        <forward name="success" path="/sztz/xnmz/tzbj_jy.jsp"></forward>
+		</action>
+				<!--<<<<<<<<< 拓展学分统计表 >>>>>>>>>>>-->
+		<action name="sztzForm" parameter="xftjManage"
+			path="/sztzXfTjManage" scope="request" 
+			type="xgxt.sztz.action.SztzAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz/xftjManage.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<  长沙民政职业技术学院   >>>>>>>>>>>>>>>>>>>>>> -->
+		<!-- 长沙民政职业技术学院素质拓展项目申报 URL例子:csmz_sztz.do?method=tzxm_sb-->
+		<action name="sztzForm" parameter="method"  path="/csmz_sztz" scope="request"
+		        type="xgxt.sztz.csmzzyjsxy.sztzAction">
+		        <forward name="tzxm_sb" path="/sztz/csmzzyjsxy/tzxm_sb.jsp"></forward>
+		        <forward name="csmztzxmsh_Manage" path="/sztz/csmzzyjsxy/csmztzxmShManage.jsp"></forward>
+		        <forward name="tzxmcx_Manage" path="/sztz/csmzzyjsxy/tzxmCxManage.jsp"></forward>
+		        <forward name="cgsb_Manage" path="/sztz/csmzzyjsxy/tzcgSbManage.jsp"></forward>
+		        <forward name="csmzcgsbsh_Manage" path="/sztz/csmzzyjsxy/csmzcgshManage.jsp"></forward>
+		        <forward name="tzcgcj_Manage" path="/sztz/csmzzyjsxy/tzcgcjManage.jsp"></forward>
+		        <forward name="tzxmsh_Manage" path="/sztz/csmzzyjsxy/tzxmShManage.jsp"></forward>		        
+		        <forward name="data_search" path="/sztz/csmzzyjsxy/csmz_data_search.jsp"></forward>		        
+		        <forward name="tzxm_sh" path="/sztz/csmzzyjsxy/tzxm_sh.jsp"></forward>
+		        <forward name="tzcg_sb" path="/sztz/csmzzyjsxy/tzcg_sb.jsp"></forward>		        
+		        <forward name="tzxm_xxcx" path="/sztz/csmzzyjsxy/tzxm_xxcx.jsp"></forward>
+		        <forward name="whtl_tzxm_xxcx" path="/sztz/csmzzyjsxy/whtl_tzxm_xxcx.jsp"></forward>
+		        <forward name="cgsb_result" path="/sztz/csmzzyjsxy/cgsb_result.jsp"></forward>
+		        <forward name="param_set" path="/sztz/csmzzyjsxy/param_set.jsp"></forward>
+		        <forward name="tzcg_sh" path="/sztz/csmzzyjsxy/tzcg_sh.jsp"></forward>
+		        <forward name="all_check" path="/csmz_sztz.do?method=data_search"></forward>
+		        <forward name="xxwh_tzcgcj" path="/sztz/csmzzyjsxy/xxwh_tzcgcj.jsp"></forward>
+		        <forward name="tzxm_tj" path="/sztz/csmzzyjsxy/tzxm_tj.jsp"></forward>
+		        <forward name="tzxm_tj_print" path="/sztz/csmzzyjsxy/tzxm_tj_print.jsp"></forward>
+		        <forward name="tzxf_cxtj" path="/sztz/csmzzyjsxy/tzxf_cxtj.jsp"></forward>
+		        <forward name="fsdcx_b_print" path="/sztz/csmzzyjsxy/tjbb/fsdcx_b_print.jsp"></forward>
+		        <forward name="grcgtj_cx" path="/sztz/csmzzyjsxy/grcgtj_cx.jsp"></forward>
+		        <forward name="grcgxfsbb" path="/sztz/csmzzyjsxy/grcgxfsbb.jsp"></forward>
+		        <forward name="tzxf_rzhz" path="/sztz/csmzzyjsxy/tzxf_rzhz.jsp"></forward>
+		        <forward name="cgrzsh" path="/sztz/csmzzyjsxy/cgrz_sh.jsp"></forward>
+		        <forward name="tzcgrz_jlhz" path="/sztz/csmzzyjsxy/tzcgrz_jlhz.jsp"></forward>
+		        <forward name="getBjxx" path="/sztz/csmzzyjsxy/getBjxx.jsp"></forward>
+		        <forward name="xmsb_search" path="/sztz/csmzzyjsxy/xmsb_search.jsp"></forward>
+		        <forward name="success" path="/about:blank" />
+		        <forward name="tzxm_shView" path="/sztz/csmzzyjsxy/tzxm_shView.jsp"></forward>
+		        <forward name="cgsbsh_Manage" path="/sztz/csmzzyjsxy/cgshManage.jsp"></forward>	
+		        <forward name="whtl_cgsbsh_Manage" path="/sztz/csmzzyjsxy/whtl_cgshManage.jsp"></forward>	
+		        <forward name="tzcg_shView" path="/sztz/csmzzyjsxy/tzcg_shView.jsp"></forward>
+		        <forward name="tzxmAdd" path="/sztz/csmzzyjsxy/tzxmAdd.jsp"></forward>	
+		        <forward name="tzcg_adjust" path="/sztz/csmzzyjsxy/tzcg_adjust.jsp"></forward>	
+		        <forward name="tzcgAjs" path="/sztz/csmzzyjsxy/tzcgAjs.jsp"></forward> 
+                <forward name="sqbPrint" path="/sztz/lzzyjsxy/sqbPrint.jsp"></forward>  
+                <forward name="tzcg_wh" path="/sztz/csmzzyjsxy/tzcg_wh.jsp"></forward>		             
+		</action>
+		<!--<<<<<<<<西昌学院 证书打印>>>>>>>>> -->
+		<action name="sztzForm" parameter="xcxy_sztzprint" path="/xcxy_sztzprint" scope="request"  type="xgxt.sztz.action.MakePdf">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sztz/print/xcxy/xcxy_sztzprint.jsp" />
+		</action>		
+		<action name="sztzForm" parameter="xcxy_sztzprintOne" path="/xcxy_sztzprintOne" scope="request"  type="xgxt.sztz.action.MakePdf">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="successO" path="/sztz/print/xcxy/xcxyzs_O.jsp" /><!-- 证书模板第一页 -->
+			<forward name="successT" path="/sztz/print/xcxy/xcxyzs_T.jsp" /><!-- 证书模板第二页 -->
+			<forward name="successTh" path="/sztz/print/xcxy/xcxyzs_TH.jsp" /><!-- 证书模板第三页 -->
+		</action>
+		<!-- <<<<<<<<<<<<<长沙民政职业技术学院 拓展证书打印>>>>>>>>>>>>> -->
+		<action name="sztzForm" parameter="csmz_sztzprintOne" path="/csmz_sztzprintOne" scope="request"  type="xgxt.sztz.action.MakePdf">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="successO" path="/sztz/print/csmz/csmzzs_O.jsp" /><!-- 证书模板第一页 -->
+			<forward name="successT" path="/sztz/print/csmz/csmzzs_T.jsp" /><!-- 证书模板第二页（证书具体事项） -->
+			<forward name="successTH" path="/sztz/print/csmz/csmzzs_TH.jsp"></forward><!-- 证书模板第三页（证书第三页） -->
+		</action>		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

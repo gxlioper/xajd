@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/dxjxjsp.do" location="50,150" dimension="180,88" />
+  <StrutsActivity path="/pjpy/hzy/pjpy_hzy_dxjxjsqb.jsp" location="350,150" dimension="188,49" />
+  <StrutsActivity path="" location="0,0" dimension="39,62" />
+  <StrutsActivity path="/pjpy/xnmz/set_condition_bl.jsp" location="350,50" dimension="183,49" />
+  <StrutsActivity path="/pjpy/hzy/set_condition_bl.jsp" location="950,50" dimension="175,49" />
+  <StrutsActivity path="/xgWeb/pjpy/hzy/pjpy_hzy_dxjxjsqb.jsp" location="650,150" dimension="226,49" />
+  <StrutsActivity path="/pjpy/hzy/pjpy_hzy_dxjxjspb.jsp" />
+  <StrutsTransition id="/dxjxjsp.do,failure,,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="140,150" />
+      <AbsolutePoint location="140,31" />
+      <AbsolutePoint location="39,31" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dxjxjsp.do,success,/pjpy/hzy/pjpy_hzy_dxjxjsqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="230,184" />
+      <AbsolutePoint location="350,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dxjxjsp.do,success,/pjpy/hzy/pjpy_hzy_dxjxjspb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="140,194" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dxjxjsp.do,success,/xgWeb/pjpy/hzy/pjpy_hzy_dxjxjsqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="230,214" />
+      <AbsolutePoint location="763,214" />
+      <AbsolutePoint location="763,199" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

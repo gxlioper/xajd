@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="gyglCommForm" type="xgxt.gygl.GyglCommForm"/>
+		<form-bean name="gyglZsjgForm" type="xgxt.gygl.zsjg.GyglZsjgForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/gygl_zsjg_zsxx" 	forward="/gyglZsjg.do?method=zsxxManage"/>		<!-- 住宿结果_住宿信息管理 -->
+		<action path="/gygl_zsjg_lsxx" 	forward="/gyglZsjg.do?method=lsxxManage"/>		<!-- 住宿结果_历史信息管理 -->
+ 		<action path="/gygl_zsjg_ydgl" 	forward="/gyglZsjg.do?method=ydglManage"/>		<!-- 住宿结果_异动信息管理 -->
+ 		<action path="/gygl_zsjg_zstj" 	forward="/gyglZsjg.do?method=zsxxTj"/>		<!-- 住宿结果_住宿信息统计 -->
+ 		<action path="/gygl_zsjg_ydtj" 	forward="/gyglZsjg.do?method=ssydTj"/>		<!-- 宿舍异动_宿舍异动统计 -->
+ 		<action path="/gygl_zsjg_ydcx" 	forward="/gyglZsjg.do?method=ssydCx"/>		<!-- 宿舍异动_宿舍异动查询 -->
+ 		<action path="/gygl_zsjg_kxss" 	forward="/gyglZsjg.do?method=kxssTj"/>		<!-- 住宿结果-空闲宿舍统计 -->
+ 		<!-- add by great luo -->
+		<action path="/gygl_zsjg_qsrzqk" forward="/gyglZsjg.do?method=qsrzqkCx"/>		<!-- 住宿结果_寝室入住情况查看 -->
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 基本设置 -->
+    	<action path="/gyglZsjg" 
+        		parameter="method"  
+        		name="gyglZsjgForm" 
+        		scope="request"
+		        type="xgxt.gygl.zsjg.GyglZsjgAction">	
+		       
+		    <forward name="zsxxManage"    path="/gygl/comm/zsjg/zsxxManage.jsp" />	<!-- 住宿信息管理 -->
+		    <forward name="zsxxTj"    	  path="/gygl/comm/zsjg/zsxxTj.jsp" />		<!-- 住宿信息统计 -->
+			<forward name="lsxxManage"    path="/gygl/comm/zsjg/lsxxManage.jsp" />	<!-- 历史信息管理 -->
+			<forward name="ydglManage"    path="/gygl/comm/zsjg/ydglManage.jsp" />	<!-- 学生床位异动管理 -->
+			<forward name="xscwyd"        path="/gygl/comm/zsjg/xscwyd.jsp" />	<!-- 学生床位异动 -->
+			<forward name="ssydTj"        path="/gygl/comm/zsjg/ssydTj.jsp" />	<!-- 宿舍异动统计 -->
+			<forward name="ssydCx"        path="/gygl/comm/zsjg/ssydCx.jsp" />	<!-- 宿舍异动查询 -->
+			<forward name="kxssTj"        path="/gygl/comm/zsjg/kxssTj.jsp" />	<!-- 空闲宿舍统计 -->
+			<forward name="kqsxx"        path="/gygl/comm/zsjg/kqsxx.jsp" />	<!-- 空闲宿舍统计 -->
+			<forward name="xqsxx"        path="/gygl/comm/zsjg/xqsxx.jsp" />	<!-- 空闲宿舍统计 -->
+		
+			<forward name="qsrzqkCx"      path="/gygl/comm/zsjg/qsrzqkCx.jsp" />	<!-- 寝室入住情况 -->
+	</action>
+		
+		
+		<action path="/gygl_zsjg_ycsj" forward="/gyglYcjc.do?method=ycsjjcManage"/>
+		<!--异常数据检测 -->
+		<action path="/gyglYcjc" 
+        		parameter="method"  
+        		name="gyglCommForm" 
+        		scope="request"
+		        type="xgxt.gygl.ycsj.GyglYcsjjcAction">	
+		       
+			<forward name="ycsjjcManage"    	path="/gygl/comm/ycjc/ycsjjcManage.jsp" />
+			<forward name="queryYcsj"    	path="/gygl/comm/ycjc/queryYcsj.jsp" />
+		</action>
+		
+	</action-mappings>
+</struts-config>

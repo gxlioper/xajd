@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzHzzyjsxyActionForm" type="xgxt.xszz.hzzyjsxy.XszzHzzyjsxyActionForm"><!-- test.forms.DynaActionFormTest -->
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="xszzHzzyjsxyActionForm" parameter="method" path="/hzzyjsxy_xszz"
+				scope="request"	type="xgxt.xszz.hzzyjsxy.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- 杭州职业技术学院 "学生资助"-"在校学生贷款信息"-->
+			<forward name="data_dkxx" path="/xszz/hzzy/data_dkxx.jsp" />
+			<forward name="dkxx_queryOne" path="/xszz/hzzy/dkxx_queryOne.jsp" />
+			<forward name="dkxx_save" path="/xszz/hzzy/dkxx_queryOne.jsp" />
+			<forward name="dkxx_exp" path="/about:blank" />
+			<!-- 杭州职业技术学院 "学生资助"-"家庭经济困难证明"-->
+			<forward name="jtjjknzm" path="/xszz/hzzy/jtjjknzmb.jsp" />
+			<!-- 杭州职业技术学院 "学生资助"-"家庭经济困难情况说明"-->
+			<forward name="jtjjknqksm" path="/xszz/hzzy/jtjjknqksmb.jsp" />
+			<!-- 杭州职业技术学院 "学生资助"-"家庭经济困难学生认定"-->
+			<forward name="knssq" path="/xszz/hzzy/knssq.jsp" />
+			<forward name="knssqSave" path="/xszz/hzzy/knssq.jsp" />
+			<forward name="knssqb" path="/xszz/hzzy/knssqb.jsp" />
+			<forward name="knssh" path="/xszz/hzzy/knssh.jsp" />
+			<forward name="knsshOne" path="/xszz/hzzy/knsshOne.jsp" />
+			<forward name="knsshSave" path="/xszz/hzzy/knsshOne.jsp" />
+			<forward name="knsExp" path="/about:blank" />
+			<!-- 杭州职业技术学院 "学生资助"-"国家奖学金"-->
+			<forward name="gjjxjsq" path="/xszz/hzzy/gjjxjsq.jsp" />
+			<forward name="gjjxjsqSave" path="/xszz/hzzy/gjjxjsq.jsp" />
+			<forward name="gjjxjsqb" path="/xszz/hzzy/gjjxjsqb.jsp" />
+			<forward name="gjjxjsh" path="/xszz/hzzy/gjjxjsh.jsp" />
+			<forward name="gjjxjshOne" path="/xszz/hzzy/gjjxjshOne.jsp" />
+			<forward name="gjjxjshSave" path="/xszz/hzzy/gjjxjshOne.jsp" />
+			<forward name="gjjxjExp" path="/about:blank" />
+			<!-- 杭州职业技术学院 "学生资助"-"国家助学金"-->
+			<forward name="gjzxjsq" path="/xszz/hzzy/gjzxjsq.jsp" />
+			<forward name="gjzxjsqSave" path="/xszz/hzzy/gjzxjsq.jsp" />
+			<forward name="gjzxjsqb" path="/xszz/hzzy/gjzxjsqb.jsp" />
+			<forward name="gjzxjsh" path="/xszz/hzzy/gjzxjsh.jsp" />
+			<forward name="gjzxjshOne" path="/xszz/hzzy/gjzxjshOne.jsp" />
+			<forward name="gjzxjshSave" path="/xszz/hzzy/gjzxjshOne.jsp" />
+			<forward name="gjzxjExp" path="/about:blank" />
+		</action>
+		
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

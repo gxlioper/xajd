@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+		<form-bean name="nblgxy_gyglForm" type="xgxt.xsgygl.nblgxy.GyglNblgxyForm"/>
+  </form-beans>
+ <global-forwards/>
+ <action-mappings>
+        <action path="/ybAdd" forward="/nblgxy_gygl.do?method=ybAdd"/>
+        <action path="/ybManage" forward="/nblgxy_gygl.do?method=ybManage"/>
+        <action path="/zrrManage" forward="/nblgxy_gygl.do?method=zrrManage"/>
+        <action path="/tsxsManage" forward="/nblgxy_gygl.do?method=tsxsManage"/>
+        <action path="/nblgxy_gygl" parameter="method"  name="nblgxy_gyglForm" scope="request"
+		        type="xgxt.xsgygl.nblgxy.GyglNblgxyAction">
+		        <forward name="nblgxy_wmqsshcx" path="/gygl/nblgxy/nblgxy_wmqsshcx.jsp"></forward>
+                <forward name="nblgxy_wmqssbsh" path="/gygl/nblgxy/nblgxy_wmqssbsh.jsp"></forward>
+                <forward name="yhAdd" path="/gygl/nblgxy/ybAdd.jsp"></forward>
+                <forward name="ybPView" path="/gygl/nblgxy/ybPreview.jsp"></forward>
+                <forward name="ybM" path="/gygl/nblgxy/ybManage.jsp"></forward>
+                <forward name="ybModi" path="/gygl/nblgxy/ybModi.jsp"></forward>
+                <forward name="zrrM" path="/gygl/nblgxy/zrrManage.jsp"></forward>
+                <forward name="zrrAdd" path="/gygl/nblgxy/zrrAdd.jsp"></forward>
+                <forward name="zrrModi" path="/gygl/nblgxy/zrrModi.jsp"></forward>
+                <forward name="tsxsM" path="/gygl/nblgxy/tsxsManage.jsp"></forward>
+                <forward name="tsxsAdd" path="/gygl/nblgxy/tsxsAdd.jsp"></forward>
+                <forward name="tsxsView" path="/gygl/nblgxy/tsxsxxView.jsp"></forward>
+                <forward name="tsxsModi" path="/gygl/nblgxy/tsxsModi.jsp"></forward>
+        </action>
+ </action-mappings>
+ <message-resources key="gygl" parameter="xgxt.base.ApplicationResources" />
+</struts-config>

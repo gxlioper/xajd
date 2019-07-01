@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="zwzxkqJcszForm" type="com.zfsoft.xgxt.rcsw.zwzxkqgl.jcsz.JcszForm" />
+		<form-bean name="ZwzxKqjgForm" type="com.zfsoft.xgxt.rcsw.zwzxkqgl.zwzxkqjg.ZwzxKqjgForm" />
+		<form-bean name="ZwzxKqsqForm" type="com.zfsoft.xgxt.rcsw.zwzxkqgl.zwzxkqsq.ZwzxKqsqForm" />
+		<form-bean name="ZwzxKqshForm" type="com.zfsoft.xgxt.rcsw.zwzxkqgl.zwzxkqsh.ZwzxKqshForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/rcsw_zwzxkq_kqjg" forward="/zwzxkqKqjg.do?method=getKqjgList" />
+		<action path="/rcsw_zwzxkq_kqsq" forward="/zwzxKqsq.do?method=getKqsqList" />
+		<action path="/rcsw_zwzxkq_kqsh" forward="/zwzxKqsh.do?method=getKqshList" />
+		<action path="/rcsw_zwzxkq_jcsz" forward="/zwzxkqJcsz.do?method=jcsz" />
+		<action path="/rcsw_zwzxkq_xskqxx" forward="/zwzxkqKqjg.do?method=getQqxsList" />
+		<action path="/rcsw_zwzxkq_fdyfk" forward="/zwzxKqsq.do?method=kqfkList" />
+		<!-- 基础设置 -->
+		<action path="/zwzxkqJcsz" scope="request"
+			type="com.zfsoft.xgxt.rcsw.zwzxkqgl.jcsz.JcszAction" name="zwzxkqJcszForm"
+			parameter="method">
+			<forward name="jcsz" path="/xsgzgl/rcsw/zwzxkqgl/jcsz/jcsz.jsp" />		<!-- 参数设置 -->
+		</action>
+		
+		<!-- 考勤填写申请 -->
+		<action path="/zwzxKqsq" scope="request"
+			type="com.zfsoft.xgxt.rcsw.zwzxkqgl.zwzxkqsq.ZwzxKqsqAction" name="ZwzxKqsqForm"
+			parameter="method">
+			<forward name="kqsqList" path="/xsgzgl/rcsw/zwzxkqgl/kqsq/kqsqList.jsp" />
+			<forward name="kqfkList" path="/xsgzgl/rcsw/zwzxkqgl/kqsq/kqfkList.jsp" />
+			<forward name="fdyfk" path="/xsgzgl/rcsw/zwzxkqgl/kqsq/fdyfk.jsp" />
+			<forward name="addKqsq" path="/xsgzgl/rcsw/zwzxkqgl/kqsq/addKqsq.jsp" />
+			<forward name="editKqsq" path="/xsgzgl/rcsw/zwzxkqgl/kqsq/editKqsq.jsp" />
+			<forward name="viewKqsq" path="/xsgzgl/rcsw/zwzxkqgl/kqsq/viewKqsq.jsp" />
+		</action>
+		
+		<!-- 考勤审核-->
+		<action path="/zwzxKqsh" scope="request"
+			type="com.zfsoft.xgxt.rcsw.zwzxkqgl.zwzxkqsh.ZwzxKqshAction" name="ZwzxKqshForm"
+			parameter="method">
+			<forward name="kqshList" path="/xsgzgl/rcsw/zwzxkqgl/kqsh/kqshList.jsp" />
+			<forward name="kqPlsh" path="/xsgzgl/rcsw/zwzxkqgl/kqsh/kqPlsh.jsp"/>
+			<forward name="kqshView" path="/xsgzgl/rcsw/zwzxkqgl/kqsh/kqshView.jsp"/>
+			<forward name="kqDgsh" path="/xsgzgl/rcsw/zwzxkqgl/kqsh/kqDgsh.jsp"/>
+		</action>
+		
+		<!-- 考勤结果 -->
+		<action path="/zwzxkqKqjg" scope="request"
+			type="com.zfsoft.xgxt.rcsw.zwzxkqgl.zwzxkqjg.ZwzxKqjgAction" name="ZwzxKqjgForm"
+			parameter="method">
+			<forward name="kqjgList" path="/xsgzgl/rcsw/zwzxkqgl/kqjg/kqjgList.jsp" />
+			<forward name="addKqjg" path="/xsgzgl/rcsw/zwzxkqgl/kqjg/addKqjg.jsp" />
+			<forward name="editKqjg" path="/xsgzgl/rcsw/zwzxkqgl/kqjg/editKqjg.jsp" />
+			<forward name="viewKqjg" path="/xsgzgl/rcsw/zwzxkqgl/kqjg/viewKqjg.jsp" />
+			<forward name="bjSelect" path="/xsgzgl/rcsw/zwzxkqgl/comm/bjSelect.jsp" />
+			<forward name="getStu" path="/xsgzgl/rcsw/zwzxkqgl/comm/getStu.jsp" />
+			<forward name="qqxsList" path="/xsgzgl/rcsw/zwzxkqgl/xskqxx/qqxsList.jsp" />
+			<forward name="qqxsView" path="/xsgzgl/rcsw/zwzxkqgl/xskqxx/qqxsView.jsp" />
+		</action>
+
+	</action-mappings>
+</struts-config>

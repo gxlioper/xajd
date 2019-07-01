@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyGzdxActionForm" type="xgxt.pjpy.gzdx.PjpyGzdxActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_gzdx_cfxzsz" 	   forward="/gzdxPjpy.do?method=cfxzsz"/> <!--  -->
+	    <action path="/pjpy_gzdx_xsZhbxfsb" 	   forward="/gzdxPjpy.do?method=xsZhbxfsb"/> <!--  -->
+	    <action path="/pjpy_gzdx_zhszcpwh" 	   forward="/gzdxPjpy.do?method=zhszcpwh"/> <!-- 综合测评 -->
+	    <action path="/pjpy_gzdx_xsZhbxfQuery" 	   forward="/gzdxPjpy.do?method=xsZhbxfQuery"/> 
+	    <action path="/pjpy_gzdx_xsZhbxpf" 	   forward="/gzdxPjpy.do?method=xsZhbxpfQuery"/> 
+	    <action path="/pjpy_gzdx_zhszcpwhDelete" 	   forward="/gzdxPjpy.do?method=zhszcpwhDelete"/> <!-- 综合测评删除数据 -->
+	    <action path="/pjpy_gzdx_addZhszcpxx" 	   forward="/gzdxPjpy.do?method=addZhszcpxx"/> <!-- 增加综合测评数据 -->
+	    <action path="/pjpy_gzdx_modiZhszcpxx" 	   forward="/gzdxPjpy.do?method=modiZhszcpxx"/> <!-- 增加综合测评数据 -->
+	    <action path="/pjpy_gzdx_xysbHjdata" 	   forward="/gzdxPjpy.do?method=xysbHjdata"/> <!-- 学院上报获奖数据 -->
+	    <action path="/pjpy_gzdx_expZhszcp" 	   forward="/gzdxPjpy.do?method=expZhszcp"/> <!-- 导出综测排名表 -->
+	    <action path="/pjpy_gzdx_sbhjmd" 	   forward="/gzdxPjpy.do?method=sbhjmd"/> <!-- 上报获奖名单 -->
+	    <action path="/pjpy_gzdx_deleteHjxx" 	   forward="/gzdxPjpy.do?method=deleteHjxx"/> <!-- 取消获奖名单 -->
+	    <action path="/pjpy_gzdx_viewHjsbxx" 	   forward="/gzdxPjpy.do?method=viewHjsbxx"/> <!-- 单个申报获奖名单详细信息 -->
+	    <action path="/pjpy_gzdx_jxjjgQuery" 	   forward="/gzdxPjpy.do?method=jxjjgQuery"/> 
+	    <action path="/pjpy_gzdx_rychjgQuery" 	   forward="/gzdxPjpy.do?method=rychjgQuery"/> 
+		<action path="/pjpy_gzdx_viewJxjSh" 	   forward="/gzdxPjpy.do?method=viewJxjSh"/> <!-- 单个奖学金，荣誉称号审核 -->
+	    <action path="/pjpy_gzdx_tjhz" 	   forward="/gzdxPjpy.do?method=tjhz"/> <!-- 统计汇总 -->
+	   	<action path="/pjpy_gzdx_expTjhz" 	   forward="/gzdxPjpy.do?method=expTjhz"/>
+	    
+	    <!-- 实际路径 -->	
+		<action path="/gzdxPjpy"
+				type="xgxt.pjpy.gzdx.PjpyGzdxAction"
+				name="pjpyGzdxActionForm"
+				parameter="method"
+				scope="request">
+		<!-- 条件设置 -->
+		<forward name="cfxzsz" path="/pjpy/gzdx/cfxzsz.jsp" />
+        <forward name="xsZhbxfsb" path="/pjpy/gzdx/xsZhbxfsb.jsp" />
+        <forward name="zhszcpwh" path="/pjpy/gzdx/zhszcpwh.jsp" />	
+		<forward name="xsZhbxfQuery" path="/pjpy/gzdx/xsZhbxfQuery.jsp" />
+		<forward name="xsZhbxpfQuery" path="/pjpy/gzdx/xsZhbxpfQuery.jsp" />																
+        <forward name="addGzdxZhszcpxx" path="/pjpy/gzdx/addZhszcpxx.jsp" />															
+		<forward name="modiZhszcpxx" path="/pjpy/gzdx/modiZhszcpxx.jsp" />		
+		<forward name="xysbHjdata" path="/pjpy/gzdx/xysbHjdata.jsp" />
+		<forward name="zhBxPf" path="/pjpy/gzdx/zhBxPf.jsp" />																		
+		<forward name="viewHjsbxx" path="/pjpy/gzdx/viewHjsbxx.jsp" />
+		<forward name="jxjjgQuery" path="/pjpy/gzdx/jxjjgQuery.jsp" />
+		<forward name="jxjjgModi" path="/pjpy/gzdx/jxjjgModi.jsp" />
+		<forward name="rychjgQuery" path="/pjpy/gzdx/rychjgQuery.jsp" />
+		<forward name="rychjgModi" path="/pjpy/gzdx/rychjgModi.jsp" />															
+		<forward name="viewJxjSh" path="/pjpy/gzdx/viewJxjSh.jsp" />
+		<forward name="stuQueryZhszcpxx" path="/pjpy/gzdx/stuQueryZhszcpxx.jsp" />														
+		<forward name="tjhz" path="/pjpy/gzdx/tjhz.jsp" />																
+		<forward name="rsszXyOne" path="/pjpy/gzdx/rsszXyOne.jsp" />		
+		<forward name="rssz" path="/pjpy/gzdx/rssz.jsp" />			
+		<forward name="rsszXxOne" path="/pjpy/gzdx/rsszXxOne.jsp" />														
+		</action>
+	</action-mappings>
+
+</struts-config>

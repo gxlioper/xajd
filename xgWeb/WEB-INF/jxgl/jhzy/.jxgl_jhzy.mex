@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/jxglZzld.do" location="196,0" dimension="100,60" />
+  <StrutsActivity path="/jxgl_jhzy.do" location="136,160" dimension="220,84" />
+  <StrutsActivity path="/jxgl/jhzy/zzld_Update.jsp" location="0,344" dimension="196,48" />
+  <StrutsActivity path="/jxgl/jhzy/zzld_Manage.jsp" location="296,344" dimension="196,48" />
+  <StrutsTransition id="/jxgl_jhzy.do,zzldUpdate,/jxgl/jhzy/zzld_Update.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="191,244" />
+      <AbsolutePoint location="191,294" />
+      <AbsolutePoint location="98,294" />
+      <AbsolutePoint location="98,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jxgl_jhzy.do,zzldManage,/jxgl/jhzy/zzld_Manage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="301,244" />
+      <AbsolutePoint location="301,294" />
+      <AbsolutePoint location="394,294" />
+      <AbsolutePoint location="394,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jxglZzld.do,null,/jxgl_jhzy.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="246,60" />
+      <AbsolutePoint location="246,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

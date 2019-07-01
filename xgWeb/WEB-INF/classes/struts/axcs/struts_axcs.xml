@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    
+    <!-- 爱心超市 -->
+	<form-beans>
+   		<form-bean name="AxlbglForm" type="com.zfsoft.xgxt.axcs.axlb.AxlbglForm" />
+   		<form-bean name="WpszForm" type="com.zfsoft.xgxt.axcs.wpsz.WpszForm" />
+   		<form-bean name="WpsqForm" type="com.zfsoft.xgxt.axcs.wpsq.WpsqForm" />
+   		<form-bean name="WpsqJsForm" type="com.zfsoft.xgxt.axcs.wpsq.js.WpsqJsForm" />
+   		<form-bean name="WpshForm" type="com.zfsoft.xgxt.axcs.wpsh.WpshForm" />
+   		<form-bean name="WpjgForm" type="com.zfsoft.xgxt.axcs.wpjg.WpjgForm" />			
+	</form-beans>
+	
+	<action-mappings>
+		<action path="/axcs_axcslbgl" forward="/axcsAxlbgl.do?method=axlbglList"/> 
+		<action path="/axcs_axcswpsz" forward="/axcsWpsz.do?method=wpszList"/> 
+		<action path="/axcs_axcswpsq_stu" forward="/axcswpsqxs.do?method=wpsqList"/>
+		<action path="/axcs_axcswpsq_tea" forward="/axcswpsqjs.do?method=wpsqJsList"/>
+		<action path="/axcs_axcswpsh" forward="/axcswpsh.do?method=wpshList"/> 
+		<action path="/axcs_axcswpjg" forward="/axcswpjg.do?method=wpjgList"/>   
+		 <!-- 爱心超市物品类别管理 -->
+	    <action path="/axcsAxlbgl" 
+	    		type="com.zfsoft.xgxt.axcs.axlb.AxlbglAction"
+	    		parameter="method"
+	    		name="AxlbglForm"
+	    		scope="request">
+			<forward name="axlbglList" path="/xsgzgl/axcs/axlb/axlbglList.jsp"/>
+			<forward name="addAxlb" path="/xsgzgl/axcs/axlb/addAxlb.jsp"/>
+			<forward name="updateAxlb" path="/xsgzgl/axcs/axlb/updateAxlb.jsp"/>
+			<forward name="delAxlb" path="/xsgzgl/axcs/axlb/delAxlb.jsp"/>
+		</action>
+		<!-- 爱心超市物品设置 -->
+		<action path="/axcsWpsz" 
+	    		type="com.zfsoft.xgxt.axcs.wpsz.WpszAction"
+	    		parameter="method"
+	    		name="WpszForm"
+	    		scope="request">
+			<forward name="wpszList" path="/xsgzgl/axcs/wpsz/wpszList.jsp"/>
+			<forward name="wpJbsz" path="/xsgzgl/axcs/wpsz/wpJbsz.jsp"/>
+			<forward name="wpTjsz" path="/xsgzgl/axcs/wpsz/wpTjsz.jsp"/>
+			<forward name="addWp" path="/xsgzgl/axcs/wpsz/addWp.jsp"/>
+			<forward name="updateWp" path="/xsgzgl/axcs/wpsz/updateWp.jsp"/>
+			<forward name="ckWp" path="/xsgzgl/axcs/wpsz/ckWp.jsp"/>
+			<forward name="wpfz" path="/xsgzgl/axcs/wpsz/wpFz.jsp"/>
+		</action>
+		<!-- 爱心超市物品申请-学生 -->
+		<action path="/axcswpsqxs" 
+	    		type="com.zfsoft.xgxt.axcs.wpsq.WpsqAction"
+	    		parameter="method"
+	    		name="WpsqForm"
+	    		scope="request">
+			<forward name="wpsqList" path="/xsgzgl/axcs/wpsq/wpsqList.jsp"/>
+			<forward name="wpsqxsZj" path="/xsgzgl/axcs/wpsq/wpsqxsZj.jsp"/>
+			<forward name="wpsqxsXg" path="/xsgzgl/axcs/wpsq/wpsqxsXg.jsp"/>
+			<forward name="wpsqxsCk" path="/xsgzgl/axcs/wpsq/wpsqxsCk.jsp"/>
+		</action>
+		
+		<action path="/axcs_wpsz_ajax" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.axcs.wpsz.AxcsWpszAjax" 
+    			name="WpszForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 爱心超市物品申请-老师 -->
+		<action path="/axcswpsqjs" 
+	    		type="com.zfsoft.xgxt.axcs.wpsq.js.WpsqJsAction"
+	    		parameter="method"
+	    		name="WpsqJsForm"
+	    		scope="request">
+			<forward name="wpsqJsList" path="/xsgzgl/axcs/wpsq/wpsqJsList.jsp"/>
+			<forward name="wpsqZj" path="/xsgzgl/axcs/wpsq/wpsqZj.jsp"/>
+			<forward name="wpsqUpdate" path="/xsgzgl/axcs/wpsq/wpsqUpdate.jsp"/>
+			<forward name="wpsqView" path="/xsgzgl/axcs/wpsq/wpsqView.jsp"/>
+			<forward name="selectWp" path="/xsgzgl/axcs/wpsq/selectWp.jsp"/>
+		</action>
+		
+		<!-- 爱心超市物品审核 -->
+		<action path="/axcswpsh" 
+	    		type="com.zfsoft.xgxt.axcs.wpsh.WpshAction"
+	    		parameter="method"
+	    		name="WpshForm"
+	    		scope="request">
+			<forward name="wpshList" path="/xsgzgl/axcs/wpsh/wpshList.jsp"/>
+			<forward name="wpPlsh" path="/xsgzgl/axcs/wpsh/WpPlsh.jsp"/>
+			<forward name="wpshView" path="/xsgzgl/axcs/wpsh/wpshView.jsp"/>
+			<forward name="wpDgsh" path="/xsgzgl/axcs/wpsh/wpDgsh.jsp"/>
+		</action>
+		
+		<!-- 爱心超市物品结果 -->
+		<action path="/axcswpjg" 
+	    		type="com.zfsoft.xgxt.axcs.wpjg.WpjgAction"
+	    		parameter="method"
+	    		name="WpjgForm"
+	    		scope="request">
+			<forward name="wpjgList" path="/xsgzgl/axcs/wpjg/wpjgList.jsp"/>
+			<forward name="wpjgZj" path="/xsgzgl/axcs/wpjg/wpjgZj.jsp"/>
+			<forward name="wpjgXg" path="/xsgzgl/axcs/wpjg/wpjgXg.jsp"/>
+			<forward name="wpjgCk" path="/xsgzgl/axcs/wpjg/wpjgCk.jsp"/>
+		</action>
+		
+	</action-mappings>
+</struts-config>

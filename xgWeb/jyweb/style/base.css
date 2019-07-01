@@ -1,0 +1,50 @@
+html {
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+}
+
+body{
+	font-family: arial,'新宋体',sans-serif,'宋体'; /*width: expression(document.body.clientWidth <= 900? "900px":"auto" ); 在IE6以下浏览器中设置最小宽度：770px*/
+	line-height: 150%;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 12px;
+}
+
+ul,li{
+	list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6,td,th,div,button,input,select{
+	font-size: 100%;
+	font-weight: normal;
+}
+
+strong,b{
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link,a:visited {
+	color: #843212;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #C35E0C;
+	text-decoration: underline;
+}
+
+
+

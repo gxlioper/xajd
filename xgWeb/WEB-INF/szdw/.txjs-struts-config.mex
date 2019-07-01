@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/dtjs/zjjj/txgz/tzzgxbgxx.jsp" location="0,184" dimension="214,48" />
+  <StrutsActivity path="/dtjs/zjjj/txgz/tzzgbOne.jsp" location="314,184" dimension="208,48" />
+  <StrutsActivity path="/dtjs/zjjj/txgz/tytysb.jsp" location="622,184" dimension="196,48" />
+  <StrutsActivity path="/dtjs/zjjj/txgz/tzzgb.jsp" location="918,184" dimension="190,48" />
+  <StrutsTransition id="/txgz.do,tzzgxbgxx,/dtjs/zjjj/txgz/tzzgxbgxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="479,84" />
+      <AbsolutePoint location="479,119" />
+      <AbsolutePoint location="107,119" />
+      <AbsolutePoint location="107,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/txgz.do,tzzgb,/dtjs/zjjj/txgz/tzzgb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="658,84" />
+      <AbsolutePoint location="658,119" />
+      <AbsolutePoint location="1013,119" />
+      <AbsolutePoint location="1013,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/txgz.do,tytysbsh,/dtjs/zjjj/txgz/tytysb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="598,84" />
+      <AbsolutePoint location="598,149" />
+      <AbsolutePoint location="720,149" />
+      <AbsolutePoint location="720,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/txgz.do,tzzgbOne,/dtjs/zjjj/txgz/tzzgbOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="539,84" />
+      <AbsolutePoint location="539,149" />
+      <AbsolutePoint location="418,149" />
+      <AbsolutePoint location="418,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

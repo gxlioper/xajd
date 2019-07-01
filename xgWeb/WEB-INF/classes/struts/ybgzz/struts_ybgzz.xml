@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	
+	<form-beans>
+		<form-bean name="ybgzzCssz" type="com.zfsoft.xgxt.ybgzz.cssz.YbgzzCssz"></form-bean>
+		<form-bean name="ybgzzModel" type="com.zfsoft.xgxt.ybgzz.sqsh.YbgzzModel"></form-bean>
+		<form-bean name="ybgzzCyglModel" type="com.zfsoft.xgxt.ybgzz.cywh.YbcyModel"></form-bean>
+	</form-beans>
+	
+	<action-mappings>
+		<action path="/ybgzz_cssz" forward="/ybgzzCssz.do?method=cssz"/>
+		<action path="/ybgzz_xssq" forward="/ybgzzSqsh.do?method=list"/>
+		<action path="/ybgzz_jssh" forward="/ybgzzSqsh.do?method=jsshList"/>
+		<action path="/ybgzz_cywh" forward="/ybgzzCywh.do?method=list"/>
+		
+		<action path="/ybgzzCssz" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.ybgzz.cssz.YbgzzCsszAction" 
+	   			name="ybgzzCssz"
+	   			parameter="method">
+	   			<forward name="cssz" path="/xsgzgl/ybgzz/cssz/cssz.jsp"/>
+		</action>
+		
+		<action path="/ybgzzSqsh" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.ybgzz.sqsh.YbgzzAction" 
+	   			name="ybgzzModel"
+	   			parameter="method">
+	   			<forward name="list" path="/xsgzgl/ybgzz/sqsh/list.jsp"/>
+	   			<forward name="add" path="/xsgzgl/ybgzz/sqsh/add.jsp"/>
+	   			<forward name="edit" path="/xsgzgl/ybgzz/sqsh/edit.jsp"/>
+	   			<forward name="view" path="/xsgzgl/ybgzz/sqsh/view.jsp"/>
+	   			<forward name="jssh" path="/xsgzgl/ybgzz/sqsh/jssh.jsp"/>
+	   			<forward name="jsshList" path="/xsgzgl/ybgzz/sqsh/jsshList.jsp"/>
+		</action>
+		
+		<action path="/ybgzzCywh" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.ybgzz.cywh.YbcyAction" 
+	   			name="ybgzzCyglModel"
+	   			parameter="method">
+	   			<forward name="list" path="/xsgzgl/ybgzz/cywh/list.jsp"/>
+	   			<forward name="add" path="/xsgzgl/ybgzz/cywh/add.jsp"/>
+	   			<forward name="edit" path="/xsgzgl/ybgzz/cywh/edit.jsp"/>
+	   			<forward name="view" path="/xsgzgl/ybgzz/cywh/view.jsp"/>
+	   			<forward name="exit" path="/xsgzgl/ybgzz/cywh/exit.jsp"/>
+	   			<forward name="viewExit" path="/xsgzgl/ybgzz/cywh/viewExit.jsp"/>
+		</action>
+	</action-mappings>
+	
+</struts-config>

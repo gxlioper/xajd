@@ -1,0 +1,38 @@
+?/*========全局CSS定义========*/
+body { margin: 0; padding: 0; font: normal 100 12px tahoma, Arial, "宋体"; }
+dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, label, textarea, select, p, blockquote, button, tr, td, th, thead, caption { margin: 0; padding: 0; }
+ol, ul, li { list-style: none; }
+.pull-left { float: left; }
+.pull-right { float: right; }
+.container { margin: auto; width: 1024px; }
+.mb20 { margin-bottom: 20px; }
+
+/* 非法访问 */
+body { background-color: #e4f2ff; margin: 0px;}
+.top-frame { background: url("../images/top-bg.png") no-repeat top center; }
+.top-con { height: 80px; }
+.top-con .logo { margin-right: 20px; }
+.top-con .logo > img { height: 42px; margin-top: 18px; }
+.top-con .logo-desc { line-height: 80px; font-family: "microsoft YaHei"; font-size: 24px; color: #fff; }
+
+.main-frame { }
+.error-prompt { height: 135px; background-color: #216bcc; position: relative; }
+.error-prompt .error-prompt-word { font-size: 30px; color: #fff; text-align: center; font-weight: bold; line-height: 70px; padding-top: 32.5px; }
+.error-prompt .error-prompt-word > img { position: relative; top: 8px; height: 40px; width: 40px; }
+.error-prompt .term-of-validity { font-size: 18px; font-weight: bold; color: #fff; position: absolute; right: 0px; bottom: 0px; background-color: #5b8fd3; padding: 10px 20px; }
+.error-prompt .term-of-validity > img { position: relative; top: 2px; }
+.support { min-height: 360px; width: 100%; background-color: #fff; display: table; }
+.support .support-word { display: table-cell; padding: 20px; width: 50%; }
+.support-word-title { font-size: 24px; font-weight: bold; color: #216bcc; padding: 20px 0px; }
+.support-word-con { font-size: 18px; font-weight: bold; color: #666; padding-left: 75px; }
+.support-word-con > div { line-height: 40px; }
+.support-word-con .word-con-sm { text-indent: 8px; }
+.support-word-con .word-con-sm > i { background: url("../images/ico-num.png") no-repeat left center; padding-left: 2px; padding-right: 8px; color: #fff; font-size: 12px; font-weight: normal; font-family: 'microsoft yahei'; }
+
+.bot-frame { background-color: #216bcc; height: 80px; }
+.bot-frame .copyright { font-size: 18px; line-height: 30px; color: #fff; text-align: center; padding: 10px 0px; }
+
+
+
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpyzgmswh.do" location="703,0" dimension="194,88" />
+  <StrutsActivity path="/pjpy/zgms/cjview.jsp" location="0,208" dimension="134,49" />
+  <StrutsActivity path="/pjpy/zgms/kkjl/update.jsp" location="234,208" dimension="157,49" />
+  <StrutsActivity path="/pjpy/zgms/kkjl/add.jsp" location="491,208" dimension="141,49" />
+  <StrutsActivity path="/pjpy/zgms/cjpage.jsp" location="732,208" dimension="136,49" />
+  <StrutsActivity path="/pjpy/zgms/tydbmodipage.jsp" location="968,208" dimension="172,49" />
+  <StrutsActivity path="/pjpy/zgms/tydbpage.jsp" location="1240,208" dimension="150,49" />
+  <StrutsActivity path="/pjpy/zgms/kkjl/default.jsp" location="1490,208" dimension="157,49" />
+  <StrutsTransition id="/pjpyzgmswh.do,tydbpage,/pjpy/zgms/tydbpage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="855,88" />
+      <AbsolutePoint location="855,148" />
+      <AbsolutePoint location="1315,148" />
+      <AbsolutePoint location="1315,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzgmswh.do,kkjlmodipage,/pjpy/zgms/kkjl/update.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="744,88" />
+      <AbsolutePoint location="744,148" />
+      <AbsolutePoint location="312,148" />
+      <AbsolutePoint location="312,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzgmswh.do,tydbmodipage,/pjpy/zgms/tydbmodipage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="827,88" />
+      <AbsolutePoint location="827,178" />
+      <AbsolutePoint location="1054,178" />
+      <AbsolutePoint location="1054,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzgmswh.do,cjwhpage,/pjpy/zgms/cjpage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="800,88" />
+      <AbsolutePoint location="800,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzgmswh.do,kkjladdpage,/pjpy/zgms/kkjl/add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="772,88" />
+      <AbsolutePoint location="772,178" />
+      <AbsolutePoint location="561,178" />
+      <AbsolutePoint location="561,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzgmswh.do,kkjlpage,/pjpy/zgms/kkjl/default.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="883,88" />
+      <AbsolutePoint location="883,118" />
+      <AbsolutePoint location="1568,118" />
+      <AbsolutePoint location="1568,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzgmswh.do,cjview,/pjpy/zgms/cjview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="716,88" />
+      <AbsolutePoint location="716,118" />
+      <AbsolutePoint location="67,118" />
+      <AbsolutePoint location="67,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

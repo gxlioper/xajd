@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+	
+		<!-- 我的评奖 -->
+    	<form-bean name="pjpySzgyyqMypjForm" type="xsgzgl.pjpy.szgyyq.mypj.PjpyMypjForm" />
+    	<!-- 学生 -->
+    	<form-bean name="pjpySzgyyqStuForm" type="xsgzgl.pjpy.szgyyq.mypj.stu.PjpyStuForm" />
+    	<!-- 老师 -->
+    	<form-bean name="pjpySzgyyqTeaForm" type="xsgzgl.pjpy.szgyyq.mypj.tea.PjpyTeaForm" />
+    	<!-- 评奖汇总 -->
+    	<form-bean name="pjpySzgyyqPjhzForm" type="xsgzgl.pjpy.szgyyq.pjhz.PjpyPjhzForm" />
+	</form-beans>
+
+	<action-mappings>
+  
+  		<action path="/pjpy_szgyyq_mypj" 	forward="/szgyyq_mypj.do?method=mypjManage"/>		<!-- 我的评奖 -->
+  		<action path="/pjpy_szgyyq_fssq" 	forward="/szgyyq_mypj_stu.do?method=fssqManage"/>	<!-- 分数申请 -->
+  		<action path="/pjpy_szgyyq_jgcx" 	forward="/szgyyq_mypj_stu.do?method=jgcxManage"/>	<!-- 结果查询 -->
+  		<action path="/pjpy_szgyyq_myss" 	forward="/szgyyq_mypj_stu.do?method=myssManage"/>	<!-- 我的申诉 -->
+  		<action path="/pjpy_szgyyq_myts" 	forward="/szgyyq_mypj_stu.do?method=mytsManage"/>	<!-- 我的投诉 -->
+  		<action path="/pjpy_szgyyq_zhcp" 	forward="/szgyyq_mypj_tea.do?method=zhcpManage"/>	    <!-- 综合测评 -->
+  		
+  		<action path="/pjpy_szgyyq_fives" 	forward="/szgyyq_mypj_tea.do?method=fivesManage"/>	<!-- 5S分维护 -->
+  		<action path="/pjpy_szgyyq_fssh" 	forward="/szgyyq_mypj_tea.do?method=fsshManage"/>	<!-- 分数审核 -->
+  		<action path="/pjpy_szgyyq_teajgcx" 	forward="/szgyyq_mypj_tea.do?method=jgcxManage"/>	<!-- 结果查询 -->
+  		
+  		<action path="/pjpy_szgyyq_cjhz" 	forward="/szgyyq_pjhz.do?method=cjhzManage"/>		<!-- 成绩汇总 -->
+  		
+    	<!-- =====================================我的评奖===================================================== -->	  	
+    	<action path="/szgyyq_mypj" 
+    			scope="request"
+    			type="xsgzgl.pjpy.szgyyq.mypj.PjpyMypjAction" 
+    			name="pjpySzgyyqMypjForm"
+    			parameter="method">	
+    			
+    		<forward name="mypjForStu" path="/xsgzgl/pjpy/szgyyq/mypj/stu/mypjForStu.jsp"/>		<!-- 普通学生 -->
+			<forward name="mypjForBz"  path="/xsgzgl/pjpy/szgyyq/mypj/stu/mypjForBz.jsp"/>		<!-- 班长 -->
+			<forward name="mypjForBzr" path="/xsgzgl/pjpy/szgyyq/mypj/tea/mypjForBzr.jsp"/>		<!-- 班主任 -->
+			<forward name="mypjForXx"  path="/xsgzgl/pjpy/szgyyq/mypj/tea/mypjForXx.jsp"/>		<!-- 学校或院系 -->
+		</action>
+		
+		<!-- ===================================== 学生 ===================================================== -->	
+		<action path="/szgyyq_mypj_stu" 
+    			scope="request"
+    			type="xsgzgl.pjpy.szgyyq.mypj.stu.PjpyStuAction" 
+    			name="pjpySzgyyqStuForm"
+    			parameter="method">
+		
+			<forward name="fssqManage" path="/xsgzgl/pjpy/szgyyq/mypj/stu/fssqManage.jsp"/>		<!-- 分数申请 -->
+			<forward name="sqxxDetail" path="/xsgzgl/pjpy/szgyyq/mypj/stu/sqxxDetail.jsp"/>		<!-- 分数详细 -->
+			<forward name="jgcxManage" path="/xsgzgl/pjpy/szgyyq/mypj/stu/jgcxManage.jsp"/>		<!-- 结果查询 -->
+			<forward name="myssManage" path="/xsgzgl/pjpy/szgyyq/mypj/stu/myssManage.jsp"/>		<!-- 我的申诉 -->
+			<forward name="mytsManage" path="/xsgzgl/pjpy/szgyyq/mypj/stu/mytsManage.jsp"/>		<!-- 我的投诉 -->
+		</action>
+		
+		<!-- ===================================== 老师 ===================================================== -->	
+		<action path="/szgyyq_mypj_tea" 
+    			scope="request"
+    			type="xsgzgl.pjpy.szgyyq.mypj.tea.PjpyTeaAction" 
+    			name="pjpySzgyyqTeaForm"
+    			parameter="method">
+		
+			<forward name="fivesManage" path="/xsgzgl/pjpy/szgyyq/mypj/tea/fivesManage.jsp"/>	<!-- 5S分维护 -->
+			<forward name="fivesDetail" path="/xsgzgl/pjpy/szgyyq/mypj/tea/fivesDetail.jsp"/>	<!-- 5S分维护(详细) -->
+			<forward name="fsshManage"  path="/xsgzgl/pjpy/szgyyq/mypj/tea/fsshManage.jsp"/>	<!-- 分数审核 -->
+			<forward name="fsshDetail"  path="/xsgzgl/pjpy/szgyyq/mypj/tea/fsshDetail.jsp"/>	<!-- 分数审核(详细) -->
+			<forward name="zhcpManage"  path="/xsgzgl/pjpy/szgyyq/mypj/tea/zhcpManage.jsp"/>		<!-- 综合测评 -->
+			<forward name="jgcxManage"  path="/xsgzgl/pjpy/szgyyq/mypj/tea/jgcxManage.jsp"/>		<!-- 结果查询 -->
+			<forward name="importIvtlt"  path="/xsgzgl/pjpy/szgyyq/mypj/tea/importIvtltData.jsp"/>		<!-- 结果查询 -->
+		</action>
+		
+		<!-- ===================================== 评奖汇总 ===================================================== -->	
+		<action path="/szgyyq_pjhz" 
+    			scope="request"
+    			type="xsgzgl.pjpy.szgyyq.pjhz.PjpyPjhzAction" 
+    			name="pjpySzgyyqPjhzForm"
+    			parameter="method">
+		
+			<forward name="cjhzManage" path="/xsgzgl/pjpy/szgyyq/pjhz/cjhzManage.jsp"/>			<!-- 成绩汇总 -->
+		</action>
+		
+	</action-mappings>
+</struts-config>

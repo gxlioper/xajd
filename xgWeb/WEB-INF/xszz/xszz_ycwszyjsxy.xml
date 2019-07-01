@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzYcwsActionForm"
+			type="xgxt.xszz.ycws.XszzYcwsActionForm" /><!-- test.forms.DynaActionFormTest -->
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+
+		<action name="xszzYcwsActionForm" parameter="method"
+			path="/ycws_xszz" scope="request"
+			type="xgxt.xszz.ycws.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!--"时间维护"-->
+			<forward name="zzsjEdit" path="/xszz/ycws/zzsjEdit.jsp"/>
+			<!--"困难生认定"-->
+			<forward name="knsrd_data" path="/xszz/ycws/knsrd_data.jsp"/>
+			<forward name="knsrdExp" path="/about:blank" />
+			<forward name="knsrdOne" path="/xszz/ycws/knsrdOne.jsp"/>
+			<forward name="knsrdEdit" path="/xszz/ycws/knsrdEdit.jsp"/>
+			<forward name="knsrdEditSave" path="/xszz/ycws/knsrdEdit.jsp"/>
+			<!--"困难资助项目"-->
+			<forward name="knzzxm_data" path="/xszz/ycws/knzzxm_data.jsp"/>
+			<forward name="knzzxmExp" path="/about:blank" />
+			<forward name="knzzxmOne" path="/xszz/ycws/knzzxmOne.jsp"/>
+			<forward name="knzzxmEdit" path="/xszz/ycws/knzzxmEdit.jsp"/>
+			<forward name="knzzxmEditSave" path="/xszz/ycws/knzzxmEdit.jsp"/>
+		</action>
+		
+		
+
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp" />
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

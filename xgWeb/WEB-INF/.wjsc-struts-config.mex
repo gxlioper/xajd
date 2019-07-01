@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/filePutOut.do" location="650,50" dimension="166,84" />
+  <StrutsActivity path="/fileIncept.do" location="350,150" dimension="166,84" />
+  <StrutsActivity path="/fileSave.do" location="650,250" dimension="166,84" />
+  <StrutsActivity path="/fileView.do" location="50,350" dimension="166,84" />
+  <StrutsActivity path="/fileDownload.do" location="350,350" dimension="124,84" />
+  <StrutsActivity path="/fileManager.do" location="950,350" dimension="166,84" />
+  <StrutsActivity path="/fileDel.do" location="650,450" dimension="166,84" />
+  <StrutsActivity path="/wjsc/wjsc_fileput.jsp" location="950,50" dimension="172,48" />
+  <StrutsActivity path="" location="50,150" dimension="40,48" />
+  <StrutsActivity path="/wjsc/wjsc_filelist.jsp" location="950,250" dimension="178,48" />
+  <StrutsActivity path="/wjsc/wjsc_fileincept.jsp" location="50,250" dimension="190,48" />
+  <StrutsActivity path="/wjsc/wjsc_filemanager.jsp" location="50,550" dimension="196,48" />
+  <StrutsActivity path="/" location="350,50" dimension="46,48" />
+  <StrutsActivity path="/wjsc/" location="950,150" dimension="76,48" />
+  <StrutsTransition id="/fileIncept.do,success,/wjsc/wjsc_filelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="433,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileView.do,success,/wjsc/wjsc_fileincept.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="133,350" />
+      <AbsolutePoint location="133,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileDel.do,success,/filePutOut.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="733,92" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/filePutOut.do,false,,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,113" />
+      <AbsolutePoint location="70,113" />
+      <AbsolutePoint location="70,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileIncept.do,false,,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="433,192" />
+      <AbsolutePoint location="70,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/filePutOut.do,success,/wjsc/wjsc_fileput.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="816,83" />
+      <AbsolutePoint location="950,83" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileManager.do,success,/wjsc/wjsc_filemanager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileSave.do,success,/filePutOut.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="733,250" />
+      <AbsolutePoint location="733,134" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

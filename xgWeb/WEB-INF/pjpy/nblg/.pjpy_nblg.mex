@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpynblgwh.do" location="950,50" dimension="220,84" />
+  <StrutsActivity path="/pjpy/nblg/djkswh.jsp" location="350,50" dimension="166,48" />
+  <StrutsActivity path="/about:blank" location="0,196" dimension="112,48" />
+  <StrutsActivity path="/pjpy/xibeierminyuan/pjpy_xbemy_jxjjgqry.jsp" location="212,196" dimension="304,48" />
+  <StrutsActivity path="/pjpy/xibeierminyuan/pjpy_xbemy_xysbjxj.jsp" location="616,196" dimension="298,48" />
+  <StrutsTransition id="/pjpynblgwh.do,djkswh,/pjpy/nblg/djkswh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1060,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

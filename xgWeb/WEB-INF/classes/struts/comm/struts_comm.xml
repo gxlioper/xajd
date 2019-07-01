@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+	
+    	<form-bean name="logModel" type="com.zfsoft.xgxt.base.log.LogInfo" />
+    	<form-bean name="exportModel" type="com.zfsoft.xgxt.comm.export.model.ExportModel" />
+    	<form-bean name="importModel" type="com.zfsoft.xgxt.base.export.model.ImportModel" />
+    	<form-bean name="shlcModel" type="com.zfsoft.xgxt.comm.shlc.model.ShxxModel" />
+    	<form-bean name="flszModel" type="com.zfsoft.xgxt.comm.zdybd.model.FlszModel" /><!-- 自定义表单-分类设置 -->
+    	<form-bean name="zddyModel" type="com.zfsoft.xgxt.comm.zdybd.model.ZddyModel" /><!-- 自定义表单-字段定义 -->
+	</form-beans>
+
+	<action-mappings>
+	    
+	    <action path="/log" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.base.log.LogAction" 
+    			name="logModel"
+    			parameter="method">
+    		<forward name="logList" path="/xsgzgl/comm/log/logList.jsp"></forward>
+		</action>
+	    
+  		<action path="/comm_export" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.comm.export.action.ExportAction" 
+    			name="exportModel"
+    			parameter="method">
+    		<forward name="exportConfig" path="/xsgzgl/comm/export/exportConfig.jsp"></forward>
+		</action>
+		<!-- 审核流程  -->
+		<action path="/comm_spl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.comm.shlc.action.ShlcAction" 
+    			name="shlcModel"
+    			parameter="method">
+    		<forward name="lcgz" path="/xsgzgl/comm/shlc/lcgz.jsp"></forward>
+    		<forward name="lccx" path="/xsgzgl/comm/shlc/lccx.jsp"></forward>
+    		<forward name="lcth" path="/xsgzgl/comm/shlc/lcth.jsp"></forward>
+    		<forward name="lcthForZzd" path="/xsgzgl/gygl/zzdgl/comm/lcth.jsp"></forward>
+    		<forward name="szShyj" path="/xsgzgl/comm/shlc/szShyj.jsp"></forward>
+			<forward name="lcgz_hb" path="/xsgzgl/comm/shlc/lcgz_hb.jsp"></forward>
+		</action>
+		<action path="/editUpload" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.base.editor.EditorAction" 
+    			parameter="method">
+		</action>
+		<!-- 第三方页面跳转 -->
+  		<action path="/out_access" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.comm.out.action.OutAccessAction" 
+    			parameter="method">
+    	<!-- 新版导入 -->
+		</action>
+		
+		<!--====================================自定义表单======================================== -->
+		<!-- 分类设置 -->
+  		<action path="/zdybd_flsz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.comm.zdybd.action.FlszAction" 
+    			name="flszModel"
+    			parameter="method">
+		</action>
+		<!-- 字段定义 -->
+  		<action path="/zdybd_zddy_zdpz" forward="/zdybd_zddy.do?method=zdpz"/>		<!-- 字段配置，仅设置修改、非空状态 -->
+  		<action path="/zdybd_zddy" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.comm.zdybd.action.ZddyAction" 
+    			name="zddyModel"
+    			parameter="method">
+    		<forward name="zdpz" path="/xsgzgl/comm/zdybd/zdpz.jsp"></forward>
+		</action>
+		
+		 <action path="/import" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.base.export.action.ImportAction" 
+    			name="importModel"
+    			parameter="method">
+    		<forward name="toImportData" path="/xsgzgl/comm/exportNew/toImportData.jsp"></forward>
+    		<forward name="autoset" path="/xsgzgl/comm/exportNew/autoset.jsp"></forward>
+    		<forward name="autosetexport" path="/xsgzgl/comm/exportNew/autosetexport.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>

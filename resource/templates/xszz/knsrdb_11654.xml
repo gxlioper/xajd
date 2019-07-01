@@ -1,0 +1,5161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?mso-application progid="Word.Document"?>
+<w:wordDocument xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:wsp="http://schemas.microsoft.com/office/word/2003/wordml/sp2" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
+<w:ignoreElements w:val="http://schemas.microsoft.com/office/word/2003/wordml/sp2"/>
+<w:fonts>
+<w:defaultFonts w:ascii="Times New Roman" w:fareast="宋体" w:h-ansi="Times New Roman" w:cs="Times New Roman"/>
+<w:font w:name="宋体">
+<w:altName w:val="SimSun"/>
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="黑体">
+<w:altName w:val="SimHei"/>
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000001" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@宋体">
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@黑体">
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000001" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="新宋体">
+<w:panose-1 w:val="02010609030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="00000003" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@新宋体">
+<w:panose-1 w:val="02010609030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="00000003" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+</w:fonts>
+<w:lists>
+<w:listDef w:listDefId="0">
+<w:lsid w:val="0052728A"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="EEE692FE"/>
+<w:lvl w:ilvl="0" w:tplc="27C079E0">
+<w:start w:val="6"/>
+<w:lvlText w:val="%1、"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1200"/>
+</w:tabs>
+<w:ind w:left="1200" w:hanging="720"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:hint="default"/>
+</w:rPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1320"/>
+</w:tabs>
+<w:ind w:left="1320" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1740"/>
+</w:tabs>
+<w:ind w:left="1740" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2160"/>
+</w:tabs>
+<w:ind w:left="2160" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2580"/>
+</w:tabs>
+<w:ind w:left="2580" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3000"/>
+</w:tabs>
+<w:ind w:left="3000" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3420"/>
+</w:tabs>
+<w:ind w:left="3420" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3840"/>
+</w:tabs>
+<w:ind w:left="3840" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4260"/>
+</w:tabs>
+<w:ind w:left="4260" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="1">
+<w:lsid w:val="090118FB"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="EB3AC868"/>
+<w:lvl w:ilvl="0" w:tplc="6D48F738">
+<w:start w:val="1"/>
+<w:lvlText w:val="%1、"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1780"/>
+</w:tabs>
+<w:ind w:left="1780" w:hanging="1140"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:hint="default"/>
+</w:rPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1480"/>
+</w:tabs>
+<w:ind w:left="1480" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1900"/>
+</w:tabs>
+<w:ind w:left="1900" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2320"/>
+</w:tabs>
+<w:ind w:left="2320" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2740"/>
+</w:tabs>
+<w:ind w:left="2740" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3160"/>
+</w:tabs>
+<w:ind w:left="3160" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3580"/>
+</w:tabs>
+<w:ind w:left="3580" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4000"/>
+</w:tabs>
+<w:ind w:left="4000" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4420"/>
+</w:tabs>
+<w:ind w:left="4420" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="2">
+<w:lsid w:val="0CD45ECE"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="8948332E"/>
+<w:lvl w:ilvl="0" w:tplc="04090011">
+<w:start w:val="1"/>
+<w:lvlText w:val="%1)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="885"/>
+</w:tabs>
+<w:ind w:left="885" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1305"/>
+</w:tabs>
+<w:ind w:left="1305" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1725"/>
+</w:tabs>
+<w:ind w:left="1725" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2145"/>
+</w:tabs>
+<w:ind w:left="2145" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2565"/>
+</w:tabs>
+<w:ind w:left="2565" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2985"/>
+</w:tabs>
+<w:ind w:left="2985" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3405"/>
+</w:tabs>
+<w:ind w:left="3405" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3825"/>
+</w:tabs>
+<w:ind w:left="3825" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4245"/>
+</w:tabs>
+<w:ind w:left="4245" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="3">
+<w:lsid w:val="1227199F"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="3B70B960"/>
+<w:lvl w:ilvl="0" w:tplc="04090011">
+<w:start w:val="1"/>
+<w:lvlText w:val="%1)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="900"/>
+</w:tabs>
+<w:ind w:left="900" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1320"/>
+</w:tabs>
+<w:ind w:left="1320" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1740"/>
+</w:tabs>
+<w:ind w:left="1740" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2160"/>
+</w:tabs>
+<w:ind w:left="2160" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2580"/>
+</w:tabs>
+<w:ind w:left="2580" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3000"/>
+</w:tabs>
+<w:ind w:left="3000" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3420"/>
+</w:tabs>
+<w:ind w:left="3420" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3840"/>
+</w:tabs>
+<w:ind w:left="3840" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4260"/>
+</w:tabs>
+<w:ind w:left="4260" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="4">
+<w:lsid w:val="18B3435D"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="7326DE04"/>
+<w:lvl w:ilvl="0" w:tplc="58204C24">
+<w:start w:val="5"/>
+<w:lvlText w:val="%1、"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1200"/>
+</w:tabs>
+<w:ind w:left="1200" w:hanging="720"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:hint="default"/>
+</w:rPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1320"/>
+</w:tabs>
+<w:ind w:left="1320" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1740"/>
+</w:tabs>
+<w:ind w:left="1740" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2160"/>
+</w:tabs>
+<w:ind w:left="2160" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2580"/>
+</w:tabs>
+<w:ind w:left="2580" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3000"/>
+</w:tabs>
+<w:ind w:left="3000" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3420"/>
+</w:tabs>
+<w:ind w:left="3420" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3840"/>
+</w:tabs>
+<w:ind w:left="3840" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4260"/>
+</w:tabs>
+<w:ind w:left="4260" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="5">
+<w:lsid w:val="22ED0676"/>
+<w:plt w:val="Multilevel"/>
+<w:tmpl w:val="30B4EDBA"/>
+<w:lvl w:ilvl="0">
+<w:start w:val="1"/>
+<w:lvlText w:val="%1)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="900"/>
+</w:tabs>
+<w:ind w:left="900" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="1">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1320"/>
+</w:tabs>
+<w:ind w:left="1320" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1740"/>
+</w:tabs>
+<w:ind w:left="1740" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2160"/>
+</w:tabs>
+<w:ind w:left="2160" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2580"/>
+</w:tabs>
+<w:ind w:left="2580" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3000"/>
+</w:tabs>
+<w:ind w:left="3000" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3420"/>
+</w:tabs>
+<w:ind w:left="3420" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3840"/>
+</w:tabs>
+<w:ind w:left="3840" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4260"/>
+</w:tabs>
+<w:ind w:left="4260" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="6">
+<w:lsid w:val="2A7A5303"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="D8AE269A"/>
+<w:lvl w:ilvl="0" w:tplc="176291B8">
+<w:start w:val="3"/>
+<w:lvlText w:val="%1．"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1200"/>
+</w:tabs>
+<w:ind w:left="1200" w:hanging="720"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:hint="default"/>
+</w:rPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1320"/>
+</w:tabs>
+<w:ind w:left="1320" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1740"/>
+</w:tabs>
+<w:ind w:left="1740" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2160"/>
+</w:tabs>
+<w:ind w:left="2160" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2580"/>
+</w:tabs>
+<w:ind w:left="2580" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3000"/>
+</w:tabs>
+<w:ind w:left="3000" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3420"/>
+</w:tabs>
+<w:ind w:left="3420" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3840"/>
+</w:tabs>
+<w:ind w:left="3840" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4260"/>
+</w:tabs>
+<w:ind w:left="4260" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="7">
+<w:lsid w:val="2B1D4303"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="30B4EDBA"/>
+<w:lvl w:ilvl="0" w:tplc="04090011">
+<w:start w:val="1"/>
+<w:lvlText w:val="%1)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="900"/>
+</w:tabs>
+<w:ind w:left="900" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1320"/>
+</w:tabs>
+<w:ind w:left="1320" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1740"/>
+</w:tabs>
+<w:ind w:left="1740" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2160"/>
+</w:tabs>
+<w:ind w:left="2160" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2580"/>
+</w:tabs>
+<w:ind w:left="2580" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3000"/>
+</w:tabs>
+<w:ind w:left="3000" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3420"/>
+</w:tabs>
+<w:ind w:left="3420" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3840"/>
+</w:tabs>
+<w:ind w:left="3840" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4260"/>
+</w:tabs>
+<w:ind w:left="4260" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="8">
+<w:lsid w:val="3DD67A2A"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="FDB6E98E"/>
+<w:lvl w:ilvl="0" w:tplc="8A765EBA">
+<w:start w:val="1"/>
+<w:lvlText w:val="%1、"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1320"/>
+</w:tabs>
+<w:ind w:left="1320" w:hanging="720"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:ascii="Times New Roman" w:fareast="Times New Roman" w:h-ansi="Times New Roman" w:cs="Times New Roman"/>
+</w:rPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1440"/>
+</w:tabs>
+<w:ind w:left="1440" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1860"/>
+</w:tabs>
+<w:ind w:left="1860" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2280"/>
+</w:tabs>
+<w:ind w:left="2280" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2700"/>
+</w:tabs>
+<w:ind w:left="2700" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3120"/>
+</w:tabs>
+<w:ind w:left="3120" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3540"/>
+</w:tabs>
+<w:ind w:left="3540" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3960"/>
+</w:tabs>
+<w:ind w:left="3960" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4380"/>
+</w:tabs>
+<w:ind w:left="4380" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="9">
+<w:lsid w:val="401E09EA"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="9E442DB2"/>
+<w:lvl w:ilvl="0" w:tplc="6532A94E">
+<w:start w:val="1"/>
+<w:lvlText w:val="%1、"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1185"/>
+</w:tabs>
+<w:ind w:left="1185" w:hanging="720"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:ascii="Times New Roman" w:fareast="宋体" w:h-ansi="Times New Roman" w:cs="Times New Roman"/>
+</w:rPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1305"/>
+</w:tabs>
+<w:ind w:left="1305" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1725"/>
+</w:tabs>
+<w:ind w:left="1725" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2145"/>
+</w:tabs>
+<w:ind w:left="2145" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2565"/>
+</w:tabs>
+<w:ind w:left="2565" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2985"/>
+</w:tabs>
+<w:ind w:left="2985" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3405"/>
+</w:tabs>
+<w:ind w:left="3405" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3825"/>
+</w:tabs>
+<w:ind w:left="3825" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4245"/>
+</w:tabs>
+<w:ind w:left="4245" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="10">
+<w:lsid w:val="5D803049"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="67EC4ECC"/>
+<w:lvl w:ilvl="0" w:tplc="2D9C2DF4">
+<w:start w:val="1"/>
+<w:nfc w:val="11"/>
+<w:lvlText w:val="%1、"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1320"/>
+</w:tabs>
+<w:ind w:left="1320" w:hanging="720"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:hint="default"/>
+</w:rPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1440"/>
+</w:tabs>
+<w:ind w:left="1440" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1860"/>
+</w:tabs>
+<w:ind w:left="1860" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2280"/>
+</w:tabs>
+<w:ind w:left="2280" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2700"/>
+</w:tabs>
+<w:ind w:left="2700" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3120"/>
+</w:tabs>
+<w:ind w:left="3120" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3540"/>
+</w:tabs>
+<w:ind w:left="3540" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3960"/>
+</w:tabs>
+<w:ind w:left="3960" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4380"/>
+</w:tabs>
+<w:ind w:left="4380" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="11">
+<w:lsid w:val="7B17018A"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="B872714A"/>
+<w:lvl w:ilvl="0" w:tplc="948C41CC">
+<w:start w:val="1"/>
+<w:lvlText w:val="%1、"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1920"/>
+</w:tabs>
+<w:ind w:left="1920" w:hanging="720"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:hint="default"/>
+</w:rPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2040"/>
+</w:tabs>
+<w:ind w:left="2040" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2460"/>
+</w:tabs>
+<w:ind w:left="2460" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2880"/>
+</w:tabs>
+<w:ind w:left="2880" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3300"/>
+</w:tabs>
+<w:ind w:left="3300" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3720"/>
+</w:tabs>
+<w:ind w:left="3720" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4140"/>
+</w:tabs>
+<w:ind w:left="4140" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4560"/>
+</w:tabs>
+<w:ind w:left="4560" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="4980"/>
+</w:tabs>
+<w:ind w:left="4980" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:list w:ilfo="1">
+<w:ilst w:val="1"/>
+</w:list>
+<w:list w:ilfo="2">
+<w:ilst w:val="7"/>
+</w:list>
+<w:list w:ilfo="3">
+<w:ilst w:val="5"/>
+</w:list>
+<w:list w:ilfo="4">
+<w:ilst w:val="3"/>
+</w:list>
+<w:list w:ilfo="5">
+<w:ilst w:val="2"/>
+</w:list>
+<w:list w:ilfo="6">
+<w:ilst w:val="6"/>
+</w:list>
+<w:list w:ilfo="7">
+<w:ilst w:val="4"/>
+</w:list>
+<w:list w:ilfo="8">
+<w:ilst w:val="0"/>
+</w:list>
+<w:list w:ilfo="9">
+<w:ilst w:val="9"/>
+</w:list>
+<w:list w:ilfo="10">
+<w:ilst w:val="10"/>
+</w:list>
+<w:list w:ilfo="11">
+<w:ilst w:val="8"/>
+</w:list>
+<w:list w:ilfo="12">
+<w:ilst w:val="11"/>
+</w:list>
+</w:lists>
+<w:styles>
+<w:versionOfBuiltInStylenames w:val="4"/>
+<w:latentStyles w:defLockedState="off" w:latentStyleCount="156"/>
+<w:style w:type="paragraph" w:default="on" w:styleId="a">
+<w:name w:val="Normal"/>
+<wx:uiName wx:val="正文"/>
+<w:rsid w:val="00427343"/>
+<w:pPr>
+<w:widowControl w:val="off"/>
+<w:jc w:val="both"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:kern w:val="2"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="24"/>
+<w:lang w:val="EN-US" w:fareast="ZH-CN" w:bidi="AR-SA"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:default="on" w:styleId="a0">
+<w:name w:val="Default Paragraph Font"/>
+<wx:uiName wx:val="默认段落字体"/>
+<w:semiHidden/>
+</w:style>
+<w:style w:type="table" w:default="on" w:styleId="a1">
+<w:name w:val="Normal Table"/>
+<wx:uiName wx:val="普通表格"/>
+<w:semiHidden/>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+</w:rPr>
+<w:tblPr>
+<w:tblInd w:w="0" w:type="dxa"/>
+<w:tblCellMar>
+<w:top w:w="0" w:type="dxa"/>
+<w:left w:w="108" w:type="dxa"/>
+<w:bottom w:w="0" w:type="dxa"/>
+<w:right w:w="108" w:type="dxa"/>
+</w:tblCellMar>
+</w:tblPr>
+</w:style>
+<w:style w:type="list" w:default="on" w:styleId="a2">
+<w:name w:val="No List"/>
+<wx:uiName wx:val="无列表"/>
+<w:semiHidden/>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a3">
+<w:name w:val="footer"/>
+<wx:uiName wx:val="页脚"/>
+<w:basedOn w:val="a"/>
+<w:rsid w:val="00C1596D"/>
+<w:pPr>
+<w:pStyle w:val="a3"/>
+<w:tabs>
+<w:tab w:val="center" w:pos="4153"/>
+<w:tab w:val="right" w:pos="8306"/>
+</w:tabs>
+<w:snapToGrid w:val="off"/>
+<w:jc w:val="left"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="a4">
+<w:name w:val="page number"/>
+<wx:uiName wx:val="页码"/>
+<w:basedOn w:val="a0"/>
+<w:rsid w:val="00C1596D"/>
+</w:style>
+<w:style w:type="table" w:styleId="a5">
+<w:name w:val="Table Grid"/>
+<wx:uiName wx:val="网格型"/>
+<w:basedOn w:val="a1"/>
+<w:rsid w:val="00E236C0"/>
+<w:pPr>
+<w:widowControl w:val="off"/>
+<w:jc w:val="both"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+</w:rPr>
+<w:tblPr>
+<w:tblInd w:w="0" w:type="dxa"/>
+<w:tblBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideH w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideV w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tblBorders>
+<w:tblCellMar>
+<w:top w:w="0" w:type="dxa"/>
+<w:left w:w="108" w:type="dxa"/>
+<w:bottom w:w="0" w:type="dxa"/>
+<w:right w:w="108" w:type="dxa"/>
+</w:tblCellMar>
+</w:tblPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a6">
+<w:name w:val="header"/>
+<wx:uiName wx:val="页眉"/>
+<w:basedOn w:val="a"/>
+<w:rsid w:val="00705DD7"/>
+<w:pPr>
+<w:pStyle w:val="a6"/>
+<w:pBdr>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="1" w:color="auto"/>
+</w:pBdr>
+<w:tabs>
+<w:tab w:val="center" w:pos="4153"/>
+<w:tab w:val="right" w:pos="8306"/>
+</w:tabs>
+<w:snapToGrid w:val="off"/>
+<w:jc w:val="center"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="a7">
+<w:name w:val="annotation reference"/>
+<wx:uiName wx:val="批注引用"/>
+<w:semiHidden/>
+<w:rsid w:val="00F12219"/>
+<w:rPr>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a8">
+<w:name w:val="annotation text"/>
+<wx:uiName wx:val="批注文字"/>
+<w:basedOn w:val="a"/>
+<w:link w:val="CharChar"/>
+<w:semiHidden/>
+<w:rsid w:val="00F12219"/>
+<w:pPr>
+<w:pStyle w:val="a8"/>
+<w:jc w:val="left"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a9">
+<w:name w:val="annotation subject"/>
+<wx:uiName wx:val="批注主题"/>
+<w:basedOn w:val="a8"/>
+<w:next w:val="a8"/>
+<w:semiHidden/>
+<w:rsid w:val="00F12219"/>
+<w:pPr>
+<w:pStyle w:val="a9"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="aa">
+<w:name w:val="Balloon Text"/>
+<wx:uiName wx:val="批注框文本"/>
+<w:basedOn w:val="a"/>
+<w:semiHidden/>
+<w:rsid w:val="00F12219"/>
+<w:pPr>
+<w:pStyle w:val="aa"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="ab">
+<w:name w:val="Body Text"/>
+<wx:uiName wx:val="正文文本"/>
+<w:basedOn w:val="a"/>
+<w:rsid w:val="006A3506"/>
+<w:pPr>
+<w:pStyle w:val="ab"/>
+<w:spacing w:before-lines="50"/>
+<w:jc w:val="center"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体"/>
+<wx:font wx:val="新宋体"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="CharChar">
+<w:name w:val="Char Char"/>
+<w:link w:val="a8"/>
+<w:semiHidden/>
+<w:rsid w:val="00100D28"/>
+<w:rPr>
+<w:kern w:val="2"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="24"/>
+</w:rPr>
+</w:style>
+</w:styles>
+<w:divs>
+<w:div w:id="334574372">
+<w:bodyDiv w:val="on"/>
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="940144515">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="210"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="370959915">
+<w:marLeft w:val="75"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="60"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="392512624">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="241575002">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="743604106">
+<w:marLeft w:val="600"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1951475242">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+<w:div w:id="384912933">
+<w:bodyDiv w:val="on"/>
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="509031752">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="210"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1067071573">
+<w:marLeft w:val="75"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="60"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="520437372">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="813523308">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="852497440">
+<w:marLeft w:val="600"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1968772856">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+<w:div w:id="922491349">
+<w:bodyDiv w:val="on"/>
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1000617929">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="210"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1547989281">
+<w:marLeft w:val="75"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="60"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="254484778">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="74205570">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="365831164">
+<w:marLeft w:val="600"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="710688903">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+<w:div w:id="1035616949">
+<w:bodyDiv w:val="on"/>
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="650208988">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="210"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="885988655">
+<w:marLeft w:val="75"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="60"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1106540914">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="777798088">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1982073427">
+<w:marLeft w:val="600"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="350301150">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+<w:div w:id="1050691669">
+<w:bodyDiv w:val="on"/>
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+</w:div>
+<w:div w:id="1191797975">
+<w:bodyDiv w:val="on"/>
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="149292354">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="210"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="299726716">
+<w:marLeft w:val="75"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="60"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="132061223">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1158572463">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="595869388">
+<w:marLeft w:val="600"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="426311861">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+<w:div w:id="1590961259">
+<w:bodyDiv w:val="on"/>
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="78717883">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="210"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="2069764348">
+<w:marLeft w:val="75"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="60"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="46614493">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1817993426">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="147213263">
+<w:marLeft w:val="600"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1384938435">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+<w:div w:id="1771046358">
+<w:bodyDiv w:val="on"/>
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="3559619">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="210"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="2014870890">
+<w:marLeft w:val="75"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="60"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="334504135">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="293947791">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="32927195">
+<w:marLeft w:val="600"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1394549642">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+<w:div w:id="2127460343">
+<w:bodyDiv w:val="on"/>
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1873688293">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="210"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1762723710">
+<w:marLeft w:val="75"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="60"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1562909464">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1068726293">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1346447037">
+<w:marLeft w:val="600"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+<w:divsChild>
+<w:div w:id="1678312991">
+<w:marLeft w:val="0"/>
+<w:marRight w:val="0"/>
+<w:marTop w:val="0"/>
+<w:marBottom w:val="0"/>
+<w:divBdr>
+<w:top w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:left w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+<w:right w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:divBdr>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divsChild>
+</w:div>
+</w:divs>
+<w:shapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="7170"/>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1"/>
+</o:shapelayout>
+</w:shapeDefaults>
+<w:docPr>
+<w:view w:val="print"/>
+<w:zoom w:percent="90"/>
+<w:doNotEmbedSystemFonts/>
+<w:bordersDontSurroundHeader/>
+<w:bordersDontSurroundFooter/>
+<w:attachedTemplate w:val=""/>
+<w:defaultTabStop w:val="420"/>
+<w:drawingGridVerticalSpacing w:val="156"/>
+<w:displayHorizontalDrawingGridEvery w:val="0"/>
+<w:displayVerticalDrawingGridEvery w:val="2"/>
+<w:punctuationKerning/>
+<w:characterSpacingControl w:val="CompressPunctuation"/>
+<w:optimizeForBrowser/>
+<w:validateAgainstSchema/>
+<w:saveInvalidXML w:val="off"/>
+<w:ignoreMixedContent w:val="off"/>
+<w:alwaysShowPlaceholderText w:val="off"/>
+<w:hdrShapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="7170"/>
+</w:hdrShapeDefaults>
+<w:footnotePr>
+<w:footnote w:type="separator">
+<w:p wsp:rsidR="006509DD" wsp:rsidRDefault="006509DD">
+<w:r>
+<w:separator/>
+</w:r>
+</w:p>
+</w:footnote>
+<w:footnote w:type="continuation-separator">
+<w:p wsp:rsidR="006509DD" wsp:rsidRDefault="006509DD">
+<w:r>
+<w:continuationSeparator/>
+</w:r>
+</w:p>
+</w:footnote>
+</w:footnotePr>
+<w:endnotePr>
+<w:endnote w:type="separator">
+<w:p wsp:rsidR="006509DD" wsp:rsidRDefault="006509DD">
+<w:r>
+<w:separator/>
+</w:r>
+</w:p>
+</w:endnote>
+<w:endnote w:type="continuation-separator">
+<w:p wsp:rsidR="006509DD" wsp:rsidRDefault="006509DD">
+<w:r>
+<w:continuationSeparator/>
+</w:r>
+</w:p>
+</w:endnote>
+</w:endnotePr>
+<w:compat>
+<w:spaceForUL/>
+<w:balanceSingleByteDoubleByteWidth/>
+<w:doNotLeaveBackslashAlone/>
+<w:ulTrailSpace/>
+<w:doNotExpandShiftReturn/>
+<w:adjustLineHeightInTable/>
+<w:breakWrappedTables/>
+<w:snapToGridInCell/>
+<w:wrapTextWithPunct/>
+<w:useAsianBreakRules/>
+<w:dontGrowAutofit/>
+<w:useFELayout/>
+</w:compat>
+<wsp:rsids>
+<wsp:rsidRoot wsp:val="00CF14D5"/>
+<wsp:rsid wsp:val="00005B08"/>
+<wsp:rsid wsp:val="00017585"/>
+<wsp:rsid wsp:val="00025DA5"/>
+<wsp:rsid wsp:val="00027F2F"/>
+<wsp:rsid wsp:val="0003081C"/>
+<wsp:rsid wsp:val="00030DE6"/>
+<wsp:rsid wsp:val="00032848"/>
+<wsp:rsid wsp:val="00045615"/>
+<wsp:rsid wsp:val="00045735"/>
+<wsp:rsid wsp:val="000519BE"/>
+<wsp:rsid wsp:val="00053369"/>
+<wsp:rsid wsp:val="0005349D"/>
+<wsp:rsid wsp:val="0006115F"/>
+<wsp:rsid wsp:val="0006400E"/>
+<wsp:rsid wsp:val="00067238"/>
+<wsp:rsid wsp:val="0007499F"/>
+<wsp:rsid wsp:val="000810DC"/>
+<wsp:rsid wsp:val="00093D2B"/>
+<wsp:rsid wsp:val="000A0D76"/>
+<wsp:rsid wsp:val="000A64EE"/>
+<wsp:rsid wsp:val="000C0DC1"/>
+<wsp:rsid wsp:val="000C426E"/>
+<wsp:rsid wsp:val="000D47F3"/>
+<wsp:rsid wsp:val="000D7462"/>
+<wsp:rsid wsp:val="000E12B1"/>
+<wsp:rsid wsp:val="000E3D40"/>
+<wsp:rsid wsp:val="000F1B50"/>
+<wsp:rsid wsp:val="000F697D"/>
+<wsp:rsid wsp:val="00100D28"/>
+<wsp:rsid wsp:val="00102EEF"/>
+<wsp:rsid wsp:val="00103F04"/>
+<wsp:rsid wsp:val="00112C85"/>
+<wsp:rsid wsp:val="00113D51"/>
+<wsp:rsid wsp:val="00116EA8"/>
+<wsp:rsid wsp:val="00122145"/>
+<wsp:rsid wsp:val="001251B9"/>
+<wsp:rsid wsp:val="00140C2A"/>
+<wsp:rsid wsp:val="0014202F"/>
+<wsp:rsid wsp:val="00143C76"/>
+<wsp:rsid wsp:val="00143ECC"/>
+<wsp:rsid wsp:val="00144B09"/>
+<wsp:rsid wsp:val="00145011"/>
+<wsp:rsid wsp:val="00146BAF"/>
+<wsp:rsid wsp:val="00146E99"/>
+<wsp:rsid wsp:val="001510FC"/>
+<wsp:rsid wsp:val="00160EEB"/>
+<wsp:rsid wsp:val="00165B97"/>
+<wsp:rsid wsp:val="00167BFA"/>
+<wsp:rsid wsp:val="00187A4E"/>
+<wsp:rsid wsp:val="001B0C64"/>
+<wsp:rsid wsp:val="001C5204"/>
+<wsp:rsid wsp:val="001C6587"/>
+<wsp:rsid wsp:val="001D1C8F"/>
+<wsp:rsid wsp:val="001D2C95"/>
+<wsp:rsid wsp:val="001E0B9E"/>
+<wsp:rsid wsp:val="001E338C"/>
+<wsp:rsid wsp:val="001E5146"/>
+<wsp:rsid wsp:val="001F05F9"/>
+<wsp:rsid wsp:val="001F33C8"/>
+<wsp:rsid wsp:val="00204E43"/>
+<wsp:rsid wsp:val="00205F11"/>
+<wsp:rsid wsp:val="00214803"/>
+<wsp:rsid wsp:val="002408A3"/>
+<wsp:rsid wsp:val="00241522"/>
+<wsp:rsid wsp:val="00244554"/>
+<wsp:rsid wsp:val="00246ABB"/>
+<wsp:rsid wsp:val="002477B5"/>
+<wsp:rsid wsp:val="00250DBA"/>
+<wsp:rsid wsp:val="00253044"/>
+<wsp:rsid wsp:val="002672E4"/>
+<wsp:rsid wsp:val="0026777E"/>
+<wsp:rsid wsp:val="00293E22"/>
+<wsp:rsid wsp:val="00296CA1"/>
+<wsp:rsid wsp:val="00297CD4"/>
+<wsp:rsid wsp:val="002B1AEB"/>
+<wsp:rsid wsp:val="002B3194"/>
+<wsp:rsid wsp:val="002B4B24"/>
+<wsp:rsid wsp:val="002B4C55"/>
+<wsp:rsid wsp:val="002B77BB"/>
+<wsp:rsid wsp:val="002C0D80"/>
+<wsp:rsid wsp:val="002C264C"/>
+<wsp:rsid wsp:val="002D1C89"/>
+<wsp:rsid wsp:val="002E03F1"/>
+<wsp:rsid wsp:val="002E0A8D"/>
+<wsp:rsid wsp:val="002F0956"/>
+<wsp:rsid wsp:val="002F0F90"/>
+<wsp:rsid wsp:val="002F196D"/>
+<wsp:rsid wsp:val="002F206A"/>
+<wsp:rsid wsp:val="002F58AB"/>
+<wsp:rsid wsp:val="003146CB"/>
+<wsp:rsid wsp:val="00320E89"/>
+<wsp:rsid wsp:val="00324D16"/>
+<wsp:rsid wsp:val="00325C7D"/>
+<wsp:rsid wsp:val="00331B66"/>
+<wsp:rsid wsp:val="003347CA"/>
+<wsp:rsid wsp:val="0033589B"/>
+<wsp:rsid wsp:val="0033744D"/>
+<wsp:rsid wsp:val="00340C17"/>
+<wsp:rsid wsp:val="00351823"/>
+<wsp:rsid wsp:val="0035238E"/>
+<wsp:rsid wsp:val="00354CAF"/>
+<wsp:rsid wsp:val="00361A65"/>
+<wsp:rsid wsp:val="00365859"/>
+<wsp:rsid wsp:val="00366862"/>
+<wsp:rsid wsp:val="00372BD4"/>
+<wsp:rsid wsp:val="00374057"/>
+<wsp:rsid wsp:val="00375C17"/>
+<wsp:rsid wsp:val="003762EE"/>
+<wsp:rsid wsp:val="00376591"/>
+<wsp:rsid wsp:val="00382069"/>
+<wsp:rsid wsp:val="00383EBA"/>
+<wsp:rsid wsp:val="003947A1"/>
+<wsp:rsid wsp:val="00395FA3"/>
+<wsp:rsid wsp:val="00397867"/>
+<wsp:rsid wsp:val="003A3106"/>
+<wsp:rsid wsp:val="003A4FEA"/>
+<wsp:rsid wsp:val="003B176B"/>
+<wsp:rsid wsp:val="003B2457"/>
+<wsp:rsid wsp:val="003B529F"/>
+<wsp:rsid wsp:val="003B5985"/>
+<wsp:rsid wsp:val="003C0E46"/>
+<wsp:rsid wsp:val="003C2360"/>
+<wsp:rsid wsp:val="003D14B8"/>
+<wsp:rsid wsp:val="003D36FC"/>
+<wsp:rsid wsp:val="003E1F24"/>
+<wsp:rsid wsp:val="003E3C72"/>
+<wsp:rsid wsp:val="003E7730"/>
+<wsp:rsid wsp:val="003F05F4"/>
+<wsp:rsid wsp:val="003F4C67"/>
+<wsp:rsid wsp:val="003F4F05"/>
+<wsp:rsid wsp:val="004036B0"/>
+<wsp:rsid wsp:val="004119FB"/>
+<wsp:rsid wsp:val="00414E4F"/>
+<wsp:rsid wsp:val="0041618D"/>
+<wsp:rsid wsp:val="00416E1D"/>
+<wsp:rsid wsp:val="00427343"/>
+<wsp:rsid wsp:val="0042744C"/>
+<wsp:rsid wsp:val="00427970"/>
+<wsp:rsid wsp:val="00433F0E"/>
+<wsp:rsid wsp:val="00436803"/>
+<wsp:rsid wsp:val="004401D0"/>
+<wsp:rsid wsp:val="0044436A"/>
+<wsp:rsid wsp:val="0045799C"/>
+<wsp:rsid wsp:val="00473089"/>
+<wsp:rsid wsp:val="0047523B"/>
+<wsp:rsid wsp:val="004828AB"/>
+<wsp:rsid wsp:val="00491B79"/>
+<wsp:rsid wsp:val="00492DBC"/>
+<wsp:rsid wsp:val="004A4ABA"/>
+<wsp:rsid wsp:val="004B05A8"/>
+<wsp:rsid wsp:val="004B5EE7"/>
+<wsp:rsid wsp:val="004B603C"/>
+<wsp:rsid wsp:val="004D1F65"/>
+<wsp:rsid wsp:val="004D55F1"/>
+<wsp:rsid wsp:val="004E1800"/>
+<wsp:rsid wsp:val="004E59FD"/>
+<wsp:rsid wsp:val="004F3DD4"/>
+<wsp:rsid wsp:val="00500FE6"/>
+<wsp:rsid wsp:val="00502EE2"/>
+<wsp:rsid wsp:val="00503BCD"/>
+<wsp:rsid wsp:val="0051722B"/>
+<wsp:rsid wsp:val="00532542"/>
+<wsp:rsid wsp:val="005369E9"/>
+<wsp:rsid wsp:val="005511A7"/>
+<wsp:rsid wsp:val="00556930"/>
+<wsp:rsid wsp:val="00566B6A"/>
+<wsp:rsid wsp:val="00591548"/>
+<wsp:rsid wsp:val="005A31DD"/>
+<wsp:rsid wsp:val="005A5D8D"/>
+<wsp:rsid wsp:val="005B172B"/>
+<wsp:rsid wsp:val="005B5510"/>
+<wsp:rsid wsp:val="005B7E05"/>
+<wsp:rsid wsp:val="005C0578"/>
+<wsp:rsid wsp:val="005C178E"/>
+<wsp:rsid wsp:val="005C1880"/>
+<wsp:rsid wsp:val="005C22FC"/>
+<wsp:rsid wsp:val="005C50FB"/>
+<wsp:rsid wsp:val="005D03C8"/>
+<wsp:rsid wsp:val="005D3218"/>
+<wsp:rsid wsp:val="005D5136"/>
+<wsp:rsid wsp:val="005D6353"/>
+<wsp:rsid wsp:val="005E5776"/>
+<wsp:rsid wsp:val="00615864"/>
+<wsp:rsid wsp:val="006203D3"/>
+<wsp:rsid wsp:val="006228E9"/>
+<wsp:rsid wsp:val="00623147"/>
+<wsp:rsid wsp:val="0062322A"/>
+<wsp:rsid wsp:val="00623B6A"/>
+<wsp:rsid wsp:val="00624510"/>
+<wsp:rsid wsp:val="006245EA"/>
+<wsp:rsid wsp:val="0062468F"/>
+<wsp:rsid wsp:val="00630587"/>
+<wsp:rsid wsp:val="006346AD"/>
+<wsp:rsid wsp:val="00634D6C"/>
+<wsp:rsid wsp:val="00643F94"/>
+<wsp:rsid wsp:val="00644540"/>
+<wsp:rsid wsp:val="00650021"/>
+<wsp:rsid wsp:val="006509DD"/>
+<wsp:rsid wsp:val="00651293"/>
+<wsp:rsid wsp:val="0065378D"/>
+<wsp:rsid wsp:val="00654E0B"/>
+<wsp:rsid wsp:val="0065555D"/>
+<wsp:rsid wsp:val="00666E42"/>
+<wsp:rsid wsp:val="006726DB"/>
+<wsp:rsid wsp:val="006736BC"/>
+<wsp:rsid wsp:val="00675B25"/>
+<wsp:rsid wsp:val="00681874"/>
+<wsp:rsid wsp:val="00697405"/>
+<wsp:rsid wsp:val="006A3506"/>
+<wsp:rsid wsp:val="006A5D3B"/>
+<wsp:rsid wsp:val="006A7B24"/>
+<wsp:rsid wsp:val="006B606E"/>
+<wsp:rsid wsp:val="006C5998"/>
+<wsp:rsid wsp:val="006D0BCF"/>
+<wsp:rsid wsp:val="006D2B64"/>
+<wsp:rsid wsp:val="006D4A50"/>
+<wsp:rsid wsp:val="006E104B"/>
+<wsp:rsid wsp:val="006E42FE"/>
+<wsp:rsid wsp:val="006F23F3"/>
+<wsp:rsid wsp:val="006F5619"/>
+<wsp:rsid wsp:val="006F6BF2"/>
+<wsp:rsid wsp:val="00703F9B"/>
+<wsp:rsid wsp:val="00704AD2"/>
+<wsp:rsid wsp:val="00705DD7"/>
+<wsp:rsid wsp:val="00706D5E"/>
+<wsp:rsid wsp:val="00710E3B"/>
+<wsp:rsid wsp:val="00713215"/>
+<wsp:rsid wsp:val="0072129E"/>
+<wsp:rsid wsp:val="007219E2"/>
+<wsp:rsid wsp:val="00743E50"/>
+<wsp:rsid wsp:val="0074730A"/>
+<wsp:rsid wsp:val="00754752"/>
+<wsp:rsid wsp:val="007575F6"/>
+<wsp:rsid wsp:val="007617C9"/>
+<wsp:rsid wsp:val="00772FC9"/>
+<wsp:rsid wsp:val="007741C4"/>
+<wsp:rsid wsp:val="007759D6"/>
+<wsp:rsid wsp:val="0078324A"/>
+<wsp:rsid wsp:val="00792CD7"/>
+<wsp:rsid wsp:val="007A1501"/>
+<wsp:rsid wsp:val="007A2A3D"/>
+<wsp:rsid wsp:val="007A3663"/>
+<wsp:rsid wsp:val="007B3C85"/>
+<wsp:rsid wsp:val="007C2877"/>
+<wsp:rsid wsp:val="007D6C23"/>
+<wsp:rsid wsp:val="007D72E1"/>
+<wsp:rsid wsp:val="007D7A39"/>
+<wsp:rsid wsp:val="007E4477"/>
+<wsp:rsid wsp:val="007E476F"/>
+<wsp:rsid wsp:val="00800549"/>
+<wsp:rsid wsp:val="00801424"/>
+<wsp:rsid wsp:val="00804DEA"/>
+<wsp:rsid wsp:val="008110F6"/>
+<wsp:rsid wsp:val="00823870"/>
+<wsp:rsid wsp:val="00825348"/>
+<wsp:rsid wsp:val="008275AC"/>
+<wsp:rsid wsp:val="0083427A"/>
+<wsp:rsid wsp:val="00843DD9"/>
+<wsp:rsid wsp:val="00850505"/>
+<wsp:rsid wsp:val="00854802"/>
+<wsp:rsid wsp:val="008623C9"/>
+<wsp:rsid wsp:val="00864D69"/>
+<wsp:rsid wsp:val="00866CE2"/>
+<wsp:rsid wsp:val="00871D3D"/>
+<wsp:rsid wsp:val="00876D51"/>
+<wsp:rsid wsp:val="00882B8D"/>
+<wsp:rsid wsp:val="00882E06"/>
+<wsp:rsid wsp:val="008A36CE"/>
+<wsp:rsid wsp:val="008B1D5B"/>
+<wsp:rsid wsp:val="008B47D2"/>
+<wsp:rsid wsp:val="008C4B6A"/>
+<wsp:rsid wsp:val="008F0C63"/>
+<wsp:rsid wsp:val="009064A4"/>
+<wsp:rsid wsp:val="0091065B"/>
+<wsp:rsid wsp:val="009153C3"/>
+<wsp:rsid wsp:val="0091588C"/>
+<wsp:rsid wsp:val="0091641C"/>
+<wsp:rsid wsp:val="009175D4"/>
+<wsp:rsid wsp:val="009209DA"/>
+<wsp:rsid wsp:val="009229D5"/>
+<wsp:rsid wsp:val="00924529"/>
+<wsp:rsid wsp:val="00931374"/>
+<wsp:rsid wsp:val="009338CA"/>
+<wsp:rsid wsp:val="009339DA"/>
+<wsp:rsid wsp:val="00935509"/>
+<wsp:rsid wsp:val="00942232"/>
+<wsp:rsid wsp:val="009425BA"/>
+<wsp:rsid wsp:val="00951EC2"/>
+<wsp:rsid wsp:val="009539AB"/>
+<wsp:rsid wsp:val="00955C25"/>
+<wsp:rsid wsp:val="00955C7B"/>
+<wsp:rsid wsp:val="009643BE"/>
+<wsp:rsid wsp:val="00966BC1"/>
+<wsp:rsid wsp:val="009673EF"/>
+<wsp:rsid wsp:val="00982E9C"/>
+<wsp:rsid wsp:val="0099355D"/>
+<wsp:rsid wsp:val="009A23BE"/>
+<wsp:rsid wsp:val="009B142D"/>
+<wsp:rsid wsp:val="009B2FD0"/>
+<wsp:rsid wsp:val="009B7312"/>
+<wsp:rsid wsp:val="009C10E0"/>
+<wsp:rsid wsp:val="009C17D0"/>
+<wsp:rsid wsp:val="009C4498"/>
+<wsp:rsid wsp:val="009C77B7"/>
+<wsp:rsid wsp:val="009D4016"/>
+<wsp:rsid wsp:val="009E0736"/>
+<wsp:rsid wsp:val="009E2C25"/>
+<wsp:rsid wsp:val="009E49A7"/>
+<wsp:rsid wsp:val="009F20CA"/>
+<wsp:rsid wsp:val="009F21D7"/>
+<wsp:rsid wsp:val="009F3E0C"/>
+<wsp:rsid wsp:val="009F5B71"/>
+<wsp:rsid wsp:val="009F68D1"/>
+<wsp:rsid wsp:val="00A004C3"/>
+<wsp:rsid wsp:val="00A0106E"/>
+<wsp:rsid wsp:val="00A02234"/>
+<wsp:rsid wsp:val="00A043A0"/>
+<wsp:rsid wsp:val="00A1285E"/>
+<wsp:rsid wsp:val="00A16797"/>
+<wsp:rsid wsp:val="00A221E3"/>
+<wsp:rsid wsp:val="00A41068"/>
+<wsp:rsid wsp:val="00A44647"/>
+<wsp:rsid wsp:val="00A5402F"/>
+<wsp:rsid wsp:val="00A542C5"/>
+<wsp:rsid wsp:val="00A61B42"/>
+<wsp:rsid wsp:val="00A64072"/>
+<wsp:rsid wsp:val="00A7495B"/>
+<wsp:rsid wsp:val="00A74D64"/>
+<wsp:rsid wsp:val="00A80657"/>
+<wsp:rsid wsp:val="00AA2E25"/>
+<wsp:rsid wsp:val="00AB0824"/>
+<wsp:rsid wsp:val="00AB4A53"/>
+<wsp:rsid wsp:val="00AC153A"/>
+<wsp:rsid wsp:val="00AC1E8D"/>
+<wsp:rsid wsp:val="00AC20DC"/>
+<wsp:rsid wsp:val="00AC3057"/>
+<wsp:rsid wsp:val="00AC3A2D"/>
+<wsp:rsid wsp:val="00AD08E7"/>
+<wsp:rsid wsp:val="00AD70C4"/>
+<wsp:rsid wsp:val="00AE27E5"/>
+<wsp:rsid wsp:val="00AE7118"/>
+<wsp:rsid wsp:val="00AF4ED1"/>
+<wsp:rsid wsp:val="00B00970"/>
+<wsp:rsid wsp:val="00B0270E"/>
+<wsp:rsid wsp:val="00B12526"/>
+<wsp:rsid wsp:val="00B13A1C"/>
+<wsp:rsid wsp:val="00B13F8D"/>
+<wsp:rsid wsp:val="00B20B50"/>
+<wsp:rsid wsp:val="00B2188F"/>
+<wsp:rsid wsp:val="00B2469C"/>
+<wsp:rsid wsp:val="00B25F1A"/>
+<wsp:rsid wsp:val="00B30F81"/>
+<wsp:rsid wsp:val="00B31A8F"/>
+<wsp:rsid wsp:val="00B36527"/>
+<wsp:rsid wsp:val="00B4694F"/>
+<wsp:rsid wsp:val="00B47845"/>
+<wsp:rsid wsp:val="00B51216"/>
+<wsp:rsid wsp:val="00B5403A"/>
+<wsp:rsid wsp:val="00B70CEC"/>
+<wsp:rsid wsp:val="00B7508D"/>
+<wsp:rsid wsp:val="00B81DC8"/>
+<wsp:rsid wsp:val="00B84CC4"/>
+<wsp:rsid wsp:val="00B97CD9"/>
+<wsp:rsid wsp:val="00BA0D8E"/>
+<wsp:rsid wsp:val="00BA382C"/>
+<wsp:rsid wsp:val="00BB4F30"/>
+<wsp:rsid wsp:val="00BC3ADE"/>
+<wsp:rsid wsp:val="00BC6B2A"/>
+<wsp:rsid wsp:val="00BD6434"/>
+<wsp:rsid wsp:val="00C0402F"/>
+<wsp:rsid wsp:val="00C1596D"/>
+<wsp:rsid wsp:val="00C21A50"/>
+<wsp:rsid wsp:val="00C31054"/>
+<wsp:rsid wsp:val="00C34436"/>
+<wsp:rsid wsp:val="00C36773"/>
+<wsp:rsid wsp:val="00C36D4A"/>
+<wsp:rsid wsp:val="00C37897"/>
+<wsp:rsid wsp:val="00C42197"/>
+<wsp:rsid wsp:val="00C55E11"/>
+<wsp:rsid wsp:val="00C5623E"/>
+<wsp:rsid wsp:val="00C64496"/>
+<wsp:rsid wsp:val="00C65BE5"/>
+<wsp:rsid wsp:val="00C9281F"/>
+<wsp:rsid wsp:val="00C94554"/>
+<wsp:rsid wsp:val="00C95E3B"/>
+<wsp:rsid wsp:val="00CA3C4F"/>
+<wsp:rsid wsp:val="00CB2E8C"/>
+<wsp:rsid wsp:val="00CD2EBF"/>
+<wsp:rsid wsp:val="00CD398F"/>
+<wsp:rsid wsp:val="00CD41F1"/>
+<wsp:rsid wsp:val="00CF14D5"/>
+<wsp:rsid wsp:val="00CF4C75"/>
+<wsp:rsid wsp:val="00CF715F"/>
+<wsp:rsid wsp:val="00D06D64"/>
+<wsp:rsid wsp:val="00D134EB"/>
+<wsp:rsid wsp:val="00D178D1"/>
+<wsp:rsid wsp:val="00D23743"/>
+<wsp:rsid wsp:val="00D24800"/>
+<wsp:rsid wsp:val="00D26647"/>
+<wsp:rsid wsp:val="00D32FDB"/>
+<wsp:rsid wsp:val="00D47E42"/>
+<wsp:rsid wsp:val="00D50B78"/>
+<wsp:rsid wsp:val="00D55CD6"/>
+<wsp:rsid wsp:val="00D66BB4"/>
+<wsp:rsid wsp:val="00D67ABA"/>
+<wsp:rsid wsp:val="00D7264B"/>
+<wsp:rsid wsp:val="00D77481"/>
+<wsp:rsid wsp:val="00D80239"/>
+<wsp:rsid wsp:val="00D87DA4"/>
+<wsp:rsid wsp:val="00DA2746"/>
+<wsp:rsid wsp:val="00DB00A6"/>
+<wsp:rsid wsp:val="00DB04F3"/>
+<wsp:rsid wsp:val="00DC795E"/>
+<wsp:rsid wsp:val="00DC7DD2"/>
+<wsp:rsid wsp:val="00DD2611"/>
+<wsp:rsid wsp:val="00DD66EF"/>
+<wsp:rsid wsp:val="00DE4A53"/>
+<wsp:rsid wsp:val="00DE75A2"/>
+<wsp:rsid wsp:val="00DF0D9A"/>
+<wsp:rsid wsp:val="00DF27CB"/>
+<wsp:rsid wsp:val="00DF4BD0"/>
+<wsp:rsid wsp:val="00E01D96"/>
+<wsp:rsid wsp:val="00E07E40"/>
+<wsp:rsid wsp:val="00E16B81"/>
+<wsp:rsid wsp:val="00E230EB"/>
+<wsp:rsid wsp:val="00E236C0"/>
+<wsp:rsid wsp:val="00E2723F"/>
+<wsp:rsid wsp:val="00E36DC3"/>
+<wsp:rsid wsp:val="00E56076"/>
+<wsp:rsid wsp:val="00E61216"/>
+<wsp:rsid wsp:val="00E61748"/>
+<wsp:rsid wsp:val="00E64D81"/>
+<wsp:rsid wsp:val="00E758EC"/>
+<wsp:rsid wsp:val="00E763CF"/>
+<wsp:rsid wsp:val="00E77521"/>
+<wsp:rsid wsp:val="00E86509"/>
+<wsp:rsid wsp:val="00E937BC"/>
+<wsp:rsid wsp:val="00EA0356"/>
+<wsp:rsid wsp:val="00EA1DA7"/>
+<wsp:rsid wsp:val="00EA2442"/>
+<wsp:rsid wsp:val="00EA345E"/>
+<wsp:rsid wsp:val="00EA3F11"/>
+<wsp:rsid wsp:val="00EB02D9"/>
+<wsp:rsid wsp:val="00EB2465"/>
+<wsp:rsid wsp:val="00EB2793"/>
+<wsp:rsid wsp:val="00EB33C4"/>
+<wsp:rsid wsp:val="00EB7282"/>
+<wsp:rsid wsp:val="00EB7AE5"/>
+<wsp:rsid wsp:val="00EC0E26"/>
+<wsp:rsid wsp:val="00EC2C9B"/>
+<wsp:rsid wsp:val="00EC4E13"/>
+<wsp:rsid wsp:val="00ED0D28"/>
+<wsp:rsid wsp:val="00ED3C41"/>
+<wsp:rsid wsp:val="00EE0575"/>
+<wsp:rsid wsp:val="00EE6538"/>
+<wsp:rsid wsp:val="00EE6A07"/>
+<wsp:rsid wsp:val="00EF28C8"/>
+<wsp:rsid wsp:val="00F040F5"/>
+<wsp:rsid wsp:val="00F12219"/>
+<wsp:rsid wsp:val="00F14410"/>
+<wsp:rsid wsp:val="00F17C84"/>
+<wsp:rsid wsp:val="00F200B2"/>
+<wsp:rsid wsp:val="00F31CFF"/>
+<wsp:rsid wsp:val="00F34A4F"/>
+<wsp:rsid wsp:val="00F46690"/>
+<wsp:rsid wsp:val="00F7157E"/>
+<wsp:rsid wsp:val="00F7236A"/>
+<wsp:rsid wsp:val="00F7393A"/>
+<wsp:rsid wsp:val="00F82F88"/>
+<wsp:rsid wsp:val="00F835B7"/>
+<wsp:rsid wsp:val="00F84A4C"/>
+<wsp:rsid wsp:val="00F87011"/>
+<wsp:rsid wsp:val="00F8716D"/>
+<wsp:rsid wsp:val="00F87FC4"/>
+<wsp:rsid wsp:val="00FA2985"/>
+<wsp:rsid wsp:val="00FC129E"/>
+<wsp:rsid wsp:val="00FC16DB"/>
+<wsp:rsid wsp:val="00FC520C"/>
+<wsp:rsid wsp:val="00FD16F6"/>
+<wsp:rsid wsp:val="00FD4989"/>
+<wsp:rsid wsp:val="00FD60CD"/>
+<wsp:rsid wsp:val="00FD7828"/>
+<wsp:rsid wsp:val="00FD79E5"/>
+<wsp:rsid wsp:val="00FE4D33"/>
+<wsp:rsid wsp:val="00FE7D1A"/>
+<wsp:rsid wsp:val="00FF221E"/>
+<wsp:rsid wsp:val="00FF3827"/>
+<wsp:rsid wsp:val="00FF607C"/>
+<wsp:rsid wsp:val="00FF6EAA"/>
+</wsp:rsids>
+</w:docPr>
+<w:body>
+<wx:sect>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="007575F6" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体"/>
+<wx:font wx:val="黑体"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="32"/>
+<w:sz-cs w:val="32"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="32"/>
+<w:sz-cs w:val="32"/>
+</w:rPr>
+<w:t>${xxmc!}家庭经济困难学生认定申请表</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b-cs/>
+<w:sz w:val="32"/>
+<w:sz-cs w:val="32"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:tbl>
+<w:tblPr>
+<w:tblW w:w="9752" w:type="dxa"/>
+<w:jc w:val="center"/>
+<w:tblBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:insideH w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:insideV w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tblBorders>
+</w:tblPr>
+<w:tblGrid>
+<w:gridCol w:w="933"/>
+<w:gridCol w:w="1440"/>
+<w:gridCol w:w="1266"/>
+<w:gridCol w:w="162"/>
+<w:gridCol w:w="544"/>
+<w:gridCol w:w="46"/>
+<w:gridCol w:w="1010"/>
+<w:gridCol w:w="1371"/>
+<w:gridCol w:w="1040"/>
+<w:gridCol w:w="824"/>
+<w:gridCol w:w="1116"/>
+</w:tblGrid>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="454"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge w:val="restart"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:textFlow w:val="tb-rl-v"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+<w:t>学生本人基本情况</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1651" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>姓</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>名</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1347" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00D7264B" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${xm!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="819" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>性</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>别</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1051" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="007D6C23" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${xb!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1059" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="2" wx:bdrwidth="5" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>出生</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>年月</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1059" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00500FE6" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${csrq!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="907" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>民</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>族</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="843" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00EB02D9" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${mzmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="584"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1651" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>系</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>部</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3217" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00D66BB4" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${xymc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1059" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>专业班级</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2809" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="003E3C72" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${zymc!}</w:t>
+</w:r>
+<w:r wsp:rsidR="00AF4ED1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${bjmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="454"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1651" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>学号</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2116" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="0006400E" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${xh!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1101" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>政治面貌</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1059" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00F46690" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${zzmmmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1059" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>家庭人均年收入</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1750" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="2" wx:bdrwidth="5" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>${jtqk.jtrjsr!}</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>元</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="600"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1651" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>身份证号码</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4276" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00D87DA4" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${sfzh!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1059" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>本人联系电话</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1750" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00AC153A" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${sjhm!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="603"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:textFlow w:val="tb-rl-v"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1651" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:rPr>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>家庭住址</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4276" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="003947A1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:rPr>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>${jtqk.jtdz!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1059" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:rPr>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>家庭联系电话</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1750" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00713215" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:rPr>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>${jtqk.jtdh!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="2781"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:textFlow w:val="tb-rl-v"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+<w:t>学生陈述申请理由</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="8736" w:type="dxa"/>
+<w:gridSpan w:val="10"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00792CD7" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>       ${sqrdly!}</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRDefault="00FC16DB" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00866CE2" wsp:rsidRDefault="00866CE2" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="00866CE2" wsp:rsidRDefault="00866CE2" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="00866CE2" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00866CE2" wsp:rsidP="004D55F1"/>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:h-rule="exact" w:val="615"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge w:val="restart"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:textFlow w:val="tb-rl-v"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+<w:t>班级</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+<w:t>推荐意见</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3174" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>A.</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>家庭经济一般困难</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>□</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="5562" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vmerge w:val="restart"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F31CFF" wsp:rsidRDefault="00F31CFF" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="00F31CFF" wsp:rsidRDefault="00F31CFF" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="00F31CFF" wsp:rsidRDefault="00F31CFF" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="00F31CFF" wsp:rsidRDefault="00F31CFF" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>班级认定小组组长</w:t>
+</w:r>
+<w:r wsp:rsidR="00F31CFF">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>签字：</w:t>
+</w:r>
+<w:r wsp:rsidR="00F31CFF">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>            </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>    </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>年</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>   </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>月</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>    </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>日</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:h-rule="exact" w:val="592"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:textFlow w:val="tb-rl-v"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3174" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>B.</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>家庭经济困难</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>      </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>□</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="5562" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:textFlow w:val="tb-rl-v"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:h-rule="exact" w:val="574"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3174" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>C.</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>家庭经济特殊困难</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>□</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="5562" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:left w:val="single" w:sz="6" wx:bdrwidth="15" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="629"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge w:val="restart"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:textFlow w:val="tb-rl-v"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+<w:t>院系</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+<w:t>认定意见</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3174" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>A.</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>家庭经济一般困难</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>□</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="5562" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vmerge w:val="restart"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>经班级评议、院系审核、公示无异议，现报请批准该同学认定为家庭经济困难学生。</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>院系认定</w:t>
+</w:r>
+<w:r wsp:rsidR="00CD398F">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>工作</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>组</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>组长</w:t>
+</w:r>
+<w:r wsp:rsidR="00F31CFF">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>签字</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>：</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>院系公章：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>                  </w:t>
+</w:r>
+<w:r wsp:rsidR="00F31CFF">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>    </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>    </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>年</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>   </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>月</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>    </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>日</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="625"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:textFlow w:val="tb-rl-v"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3174" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>B.</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>家庭经济困难</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>      </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>□</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="5562" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="00C34436">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="761"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:left w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:textFlow w:val="tb-rl-v"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3174" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>C.</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>家庭经济特殊困难</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>□</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="5562" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vmerge/>
+<w:tcBorders>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="8" wx:bdrwidth="20" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidTr="004D55F1">
+<w:tblPrEx>
+<w:tblBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideH w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideV w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tblBorders>
+</w:tblPrEx>
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="1725"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1016" w:type="dxa"/>
+<w:textFlow w:val="tb-rl-v"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+</w:rPr>
+<w:t>学生工作部</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+</w:rPr>
+<w:t>审批</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="8736" w:type="dxa"/>
+<w:gridSpan w:val="10"/>
+</w:tcPr>
+<w:p wsp:rsidR="00866CE2" wsp:rsidRDefault="00866CE2" wsp:rsidP="00BA382C">
+<w:pPr>
+<w:spacing w:before-lines="50"/>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="007B3C85">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>经学生所在院（系）提请，</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>校学生资助管理中心</w:t>
+</w:r>
+<w:r wsp:rsidRPr="007B3C85">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>认真核实，</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00866CE2" wsp:rsidRPr="007B3C85" wsp:rsidRDefault="00866CE2" wsp:rsidP="00BA382C">
+<w:pPr>
+<w:spacing w:before-lines="50"/>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="007B3C85">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>□  同意</w:t>
+</w:r>
+<w:r wsp:rsidR="00EA345E">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>院系认定</w:t>
+</w:r>
+<w:r wsp:rsidRPr="007B3C85">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>工作组和</w:t>
+</w:r>
+<w:r wsp:rsidR="00EA345E">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>班级</w:t>
+</w:r>
+<w:r wsp:rsidR="001D2C95">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>认定</w:t>
+</w:r>
+<w:r wsp:rsidR="00EA345E" wsp:rsidRPr="00EA345E">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>工作</w:t>
+</w:r>
+<w:r wsp:rsidRPr="007B3C85">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>小组意见。</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="00866CE2" wsp:rsidRDefault="00866CE2" wsp:rsidP="00866CE2">
+<w:pPr>
+<w:rPr>
+<w:u w:val="single"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="007B3C85">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>□  不同意</w:t>
+</w:r>
+<w:r wsp:rsidR="00EA345E">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>院系认定</w:t>
+</w:r>
+<w:r wsp:rsidR="00EA345E" wsp:rsidRPr="007B3C85">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>工作组和</w:t>
+</w:r>
+<w:r wsp:rsidR="00EA345E">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>班级认定</w:t>
+</w:r>
+<w:r wsp:rsidR="00EA345E" wsp:rsidRPr="00EA345E">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>工作</w:t>
+</w:r>
+<w:r wsp:rsidR="00EA345E">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>小组意见</w:t>
+</w:r>
+<w:r wsp:rsidRPr="007B3C85">
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>。调整为</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+</w:rPr>
+<w:t>：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>                       </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1"/>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="00866CE2" wsp:rsidP="004D55F1">
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>                   </w:t>
+</w:r>
+<w:r wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>审批意见（公章）：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>                      </w:t>
+</w:r>
+<w:r wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>    </w:t>
+</w:r>
+<w:r wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>年</w:t>
+</w:r>
+<w:r wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>   </w:t>
+</w:r>
+<w:r wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>月</w:t>
+</w:r>
+<w:r wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>    </w:t>
+</w:r>
+<w:r wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>日</w:t>
+</w:r>
+<w:r wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>          </w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+</w:tbl>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="004D55F1" wsp:rsidRDefault="004D55F1" wsp:rsidP="004D55F1">
+<w:pPr>
+<w:rPr>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>本人承诺保证以上所填内容真实</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>，在校期间保持诚信，努力学习工作，如有弄虚作假同意取消家庭经济困难学生认定资格。</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>                              </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="004D55F1" wsp:rsidRPr="00866CE2" wsp:rsidRDefault="004D55F1" wsp:rsidP="00BA382C">
+<w:pPr>
+<w:ind w:first-line-chars="2100"/>
+<w:rPr>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>学生签字：</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b-cs/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>        </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>      </w:t>
+</w:r>
+<w:r wsp:rsidR="00866CE2">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>            </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b-cs/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>     </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>年</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b-cs/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>   </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>月</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b-cs/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>    </w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>日</w:t>
+</w:r>
+<w:r wsp:rsidRPr="004D55F1">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b-cs/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+</w:p>
+<w:sectPr wsp:rsidR="004D55F1" wsp:rsidRPr="00866CE2" wsp:rsidSect="009F20CA">
+<w:hdr w:type="even">
+<wx:pBdrGroup>
+<wx:borders>
+<wx:bottom wx:val="solid" wx:bdrwidth="15" wx:space="1" wx:color="auto"/>
+</wx:borders>
+<w:p wsp:rsidR="001510FC" wsp:rsidRDefault="001510FC">
+<w:pPr>
+<w:pStyle w:val="a6"/>
+</w:pPr>
+</w:p>
+</wx:pBdrGroup>
+</w:hdr>
+<w:hdr w:type="odd">
+<w:p wsp:rsidR="001510FC" wsp:rsidRDefault="001510FC" wsp:rsidP="00500FE6">
+<w:pPr>
+<w:pStyle w:val="a6"/>
+<w:pBdr>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:pBdr>
+</w:pPr>
+</w:p>
+</w:hdr>
+<w:ftr w:type="even">
+<wx:pBdrGroup>
+<wx:apo>
+<wx:jc wx:val="right"/>
+</wx:apo>
+<w:p wsp:rsidR="001510FC" wsp:rsidRDefault="00BA382C" wsp:rsidP="00DE75A2">
+<w:pPr>
+<w:pStyle w:val="a3"/>
+<w:framePr w:wrap="around" w:vanchor="text" w:hanchor="margin" w:x-align="right" w:y="1"/>
+<w:rPr>
+<w:rStyle w:val="a4"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rStyle w:val="a4"/>
+</w:rPr>
+<w:fldChar w:fldCharType="begin"/>
+</w:r>
+<w:r wsp:rsidR="001510FC">
+<w:rPr>
+<w:rStyle w:val="a4"/>
+</w:rPr>
+<w:instrText>PAGE  </w:instrText>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rStyle w:val="a4"/>
+</w:rPr>
+<w:fldChar w:fldCharType="end"/>
+</w:r>
+</w:p>
+</wx:pBdrGroup>
+<w:p wsp:rsidR="001510FC" wsp:rsidRDefault="001510FC" wsp:rsidP="00C1596D">
+<w:pPr>
+<w:pStyle w:val="a3"/>
+<w:ind w:right="360"/>
+</w:pPr>
+</w:p>
+</w:ftr>
+<w:ftr w:type="odd">
+<w:p wsp:rsidR="001510FC" wsp:rsidRDefault="001510FC">
+<w:pPr>
+<w:pStyle w:val="a3"/>
+</w:pPr>
+</w:p>
+</w:ftr>
+<w:hdr w:type="first">
+<wx:pBdrGroup>
+<wx:borders>
+<wx:bottom wx:val="solid" wx:bdrwidth="15" wx:space="1" wx:color="auto"/>
+</wx:borders>
+<w:p wsp:rsidR="001510FC" wsp:rsidRDefault="001510FC">
+<w:pPr>
+<w:pStyle w:val="a6"/>
+</w:pPr>
+</w:p>
+</wx:pBdrGroup>
+</w:hdr>
+<w:ftr w:type="first">
+<w:p wsp:rsidR="001510FC" wsp:rsidRDefault="001510FC">
+<w:pPr>
+<w:pStyle w:val="a3"/>
+</w:pPr>
+</w:p>
+</w:ftr>
+<w:pgSz w:w="11906" w:h="16838" w:code="9"/>
+<w:pgMar w:top="851" w:right="851" w:bottom="851" w:left="851" w:header="851" w:footer="992" w:gutter="0"/>
+<w:cols w:space="425"/>
+<w:docGrid w:type="lines" w:line-pitch="312"/>
+</w:sectPr>
+</wx:sect>
+</w:body>
+</w:wordDocument>

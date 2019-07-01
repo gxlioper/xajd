@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<!-- 站内信管理 -->
+		<form-bean name="ZnxglForm" type="com.zfsoft.xgxt.znxgl.znxgl.ZnxglForm" />
+	<!-- 我的站内信 -->
+		<form-bean name="WdznxForm" type="com.zfsoft.xgxt.znxgl.wdznx.WdznxForm" />
+	
+	</form-beans>
+	<action-mappings>
+	<!-- 基础设置 -->
+	<action path="/znxgl_znxgl" forward="/znxgl.do?method=getZnxglList" />
+	<action path="/znxgl_wdznx" forward="/wdznx.do?method=getSjxlist" />
+	
+		<!-- 站内信管理 -->
+		<action path="/znxgl" name="ZnxglForm" type="com.zfsoft.xgxt.znxgl.znxgl.ZnxglAction"
+			parameter="method" scope="request">
+			<forward name="getZnxglList" path="/xsgzgl/znxgl/znxgl/getZnxglList.jsp" />
+			<forward name="znxfp" path="/xsgzgl/znxgl/znxgl/znxfp.jsp" />
+			<forward name="znxhf" path="/xsgzgl/znxgl/znxgl/znxhf.jsp" />
+			<forward name="glyxjCk" path="/xsgzgl/znxgl/znxgl/glyxjCk.jsp"/>
+		</action>
+		
+		<!-- 我的站内信 -->
+		<action path="/wdznx" name="WdznxForm" type="com.zfsoft.xgxt.znxgl.wdznx.WdznxAction"
+			parameter="method" scope="request">
+			<forward name="getSjxList" path="/xsgzgl/znxgl/wdznx/getSjxList.jsp" />
+			<forward name="getFjxList" path="/xsgzgl/znxgl/wdznx/getFjxList.jsp" />
+			<forward name="xsxx" path="/xsgzgl/znxgl/wdznx/xsxx.jsp" />
+			<forward name="teaxx" path="/xsgzgl/znxgl/wdznx/teaxx.jsp" />
+			<forward name="getTea" path="/xsgzgl/znxgl/wdznx/getTea.jsp" />
+			<forward name="getStu" path="/xsgzgl/znxgl/wdznx/getStu.jsp" />
+			<forward name="wdznxhf" path="/xsgzgl/znxgl/wdznx/wdhf.jsp" />
+			<forward name="sjxck" path="/xsgzgl/znxgl/wdznx/wdck.jsp" />
+			<forward name="fjxck" path="/xsgzgl/znxgl/wdznx/wdck.jsp" />
+		</action>
+		
+		
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,90 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana, arial, helvetica, sans-serif, ËÎÌו;
+	color: #000;
+	filter: progid : DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#fffffff,EndColorStr=#CDE3F9);
+	font-size: 12px;
+	text-align: center;
+	height: 100%
+}
+
+td {
+	font-size: 12px;
+}
+
+th {
+	font-size: 12px;
+}
+
+strong,b {
+	font-weight: bold;
+}
+
+img {
+	border: 0;
+}
+
+.textbox {
+	border-color: #4471AF;
+	padding: 2px;
+	height: 18px;
+	border-width: 1px;
+}
+
+.login {
+	background: url(../../images/slxyloginbg.gif) no-repeat;
+	width: 700px;
+	height: 402px;
+	margin-top: 100px;
+	text-align: right;
+}
+
+.system_name {
+	background: url(../images/system_xsgz-.gif) no-repeat;
+	width: 345px;
+	height: 33px;
+	margin: 170px 50x 0px 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	height: 30px
+}
+
+.denglu {
+	width: 250px;
+	color: #fff;
+	margin-right: 50px
+}
+
+.login_dl {
+	background: url(../images/dl.gif) no-repeat;
+	height: 20px;
+	width: 69px;
+	float: left;
+	margin-left: 30px;
+	cursor: hand;
+}
+
+.login_gb {
+	background: url(../images/gb.gif) no-repeat;
+	height: 20px;
+	width: 69px;
+	float: left;
+	margin-left: 5px;
+	cursor: hand;
+}
+
+.errors {
+	width: 300px;
+	position: absolute;
+	color: #ffffff;
+	top: 65%;
+	left: 50%;
+	text-align: left;
+	font-weight: bold;
+}

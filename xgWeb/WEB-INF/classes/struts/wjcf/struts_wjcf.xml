@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<!-- 违纪处分 -->
+	
+	<form-beans>
+	<form-bean name="wjcfGeneralForm" type="xsgzgl.wjcf.general.WjcfGeneralForm" />
+		<!-- 基础设置 -->
+    	<form-bean name="wjcfJcszForm" type="xsgzgl.wjcf.jcsz.WjcfJcszForm" />
+		<!-- 处分上报 -->
+    	<form-bean name="wjcfCfsbForm" type="xsgzgl.wjcf.general.cfsbgl.WjcfCfsbModel" />
+    	<!-- 违纪处分new -->
+    	<form-bean name="cfsbglForm" type="com.zfsoft.xgxt.wjcf.cfsb.CfsbglForm" />
+    	<form-bean name="cflbdmwhForm" type="com.zfsoft.xgxt.wjcf.cflbdmwh.CflbdmwhForm" />
+    	<form-bean name="cfyydmForm" type="com.zfsoft.xgxt.wjcf.cfyydmwh.CfyydmForm" />
+    	<form-bean name="cfshForm" type="com.zfsoft.xgxt.wjcf.cfsh.CfshForm" />
+    	<form-bean name="cfsssqForm" type="com.zfsoft.xgxt.wjcf.cfsssq.CfsssqForm"></form-bean>
+    	<form-bean name="cfssshForm" type="com.zfsoft.xgxt.wjcf.cfsssh.CfssshForm"></form-bean>
+    	<form-bean name="cfjcsqForm" type="com.zfsoft.xgxt.wjcf.cfjcsq.CfjcsqForm"></form-bean>
+    	<form-bean name="cfjcshForm" type="com.zfsoft.xgxt.wjcf.cfjcsh.CfjcshForm"></form-bean>
+    	<form-bean name="cfjgForm" type="com.zfsoft.xgxt.wjcf.cfjg.CfjgForm"></form-bean>
+    	
+    	<!-- 处分申诉管理 -->
+    	<form-bean name="wjcfCfssglForm" type="xsgzgl.wjcf.cfssgl.WjcfCfssglForm" />
+    	
+    	<!-- 处分解除 -->
+    	<form-bean name="wjcfCfjcForm" type="xsgzgl.wjcf.general.cfjcgl.WjcfCfjcModel" />
+    	
+    	<!-- 处分正式库 -->
+    	<form-bean name="wjcfCfsjwhActionForm" type="xsgzgl.wjcf.cfsjwh.WjcfCfsjwhActionForm" />
+    	<!-- 学生处分查询 -->
+    	<form-bean name="wjcfXscfActionForm" type="xsgzgl.wjcf.xscfcx.WjcfXscfActionForm" />
+    	<form-bean name="wjcfCfsjtjActionForm" type="xsgzgl.wjcf.cfsjtj.WjcfCfsjtjActionForm"></form-bean>
+	</form-beans>
+	<action-mappings>
+		
+		<!-- 处分类别代码维护-->
+    	<action path="/cflbdmCx" 	forward="/wjcfJcsz_cflbdm.do?method=cflbdmCx"/>	<!-- 处分类别代码维护查询 -->
+    	<action path="/cflbdmZj" 	forward="/wjcfJcsz_cflbdm.do?method=cflbdmZj"/>	<!-- 处分类别代码维护增加 -->
+    	<action path="/cflbdmXg" 	forward="/wjcfJcsz_cflbdm.do?method=cflbdmXg"/>	<!-- 处分类别代码维护修改 -->
+    	<action path="/cflbdmSc" 	forward="/wjcfJcsz_cflbdm.do?method=cflbdmSc"/>	<!-- 处分类别代码维护删除 -->
+    	<action path="/cflbdmCk" 	forward="/wjcfJcsz_cflbdm.do?method=cflbdmCk"/>	<!-- 处分类别代码维护查看 -->
+    	<!-- 处分原因代码维护-->
+    	<action path="/cfyydmCx" 	forward="/wjcfJcsz_cfyydm.do?method=cfyydmCx"/>	<!-- 处分原因代码维护查询 -->
+    	<action path="/cfyydmZj" 	forward="/wjcfJcsz_cfyydm.do?method=cfyydmZj"/>	<!-- 处分原因代码维护增加 -->
+    	<action path="/cfyydmXg" 	forward="/wjcfJcsz_cfyydm.do?method=cfyydmXg"/>	<!-- 处分原因代码维护修改 -->
+    	<action path="/cfyydmSc" 	forward="/wjcfJcsz_cfyydm.do?method=cfyydmSc"/>	<!-- 处分原因代码维护删除 -->
+    	<action path="/cfyydmCk" 	forward="/wjcfJcsz_cfyydm.do?method=cfyydmCk"/>	<!-- 处分原因代码维护查看 -->
+    	<!-- 审批流设置-->
+    	<action path="/ssjcsplCx" 	forward="/wjcfJcsz_ssjcspl.do?method=ssjcsplCx"/>	<!-- 处分原因代码维护查询 -->
+    	<action path="/ssjcsplBc" 	forward="/wjcfJcsz_ssjcspl.do?method=ssjcsplBc"/>	<!-- 处分原因代码维护增加 -->
+    	
+    	<!-- 处分申诉管理   处分申诉维护 -->
+    	<action path="/cfsswhCx" 	forward="/wjcfCfssgl_cfsswh.do?method=cfsswhCx"/>	<!-- 处分申诉维护查询 -->
+    	<action path="/cfsswhCk" 	forward="/wjcfCfssgl_cfsswh.do?method=cfsswhCk"/>	<!-- 处分申诉维护查看 -->
+    	<action path="/cfsswhZj" 	forward="/wjcfCfssgl_cfsswh.do?method=cfsswhZj"/>	<!-- 处分申诉维护增加 -->
+    	<action path="/cfsswhSC" 	forward="/wjcfCfssgl_cfsswh.do?method=cfssglSc"/>	<!-- 处分申诉维护删除 -->
+    	<action path="/cfsswhCxSj" 	forward="/wjcfCfssgl_cfsswh.do?method=cfsswhCxSj"/>	<!-- 处分申诉维护查询 -->
+		    	
+		<!-- 处分申诉管理   处分申诉审核 -->
+    	<action path="/cfssshCx" 	forward="/wjcfCfssgl_cfsssh.do?method=cfssshCx"/>	<!-- 处分申诉审核查询 -->
+    	<action path="/cfssshCxSj" 	forward="/wjcfCfssgl_cfsssh.do?method=cfssshCxSj"/>	<!-- 处分申诉审核数据-->
+    	<action path="/cfssshSh" 	forward="/wjcfCfssgl_cfsssh.do?method=cfssshSh"/>	<!-- 处分申诉审核 -->
+    	<action path="/cfssshPlsh" 	forward="/wjcfCfssgl_cfsssh.do?method=cfssshPlsh"/>	<!-- 处分申诉批量审核 -->
+    	<action path="/cfssshTJ" 	forward="/wjcfCfssgl_cfsssh.do?method=cfssshTj"/>	<!-- 处分申诉提交 -->
+    	<!-- 处分正式库 -->
+    	<action path="/wjcfsjCx" 	forward="/wjcfCfshwh_cfsjwh.do?method=wjcfsjCx"/>	<!-- 处分维护查询 -->
+    	<action path="/wjcfsjCxAjax" 	forward="/wjcfCfshwh_cfsjwh.do?method=wjcfsjCxAjax"/>	<!-- 处分维护查询 -->
+    	<action path="/wjcfsjZj" 	forward="/wjcfCfshwh_cfsjwh.do?method=wjcfsjZj"/>	<!-- 处分维护增加 -->
+    	<action path="/savewjcfsjZj" 	forward="/wjcfCfshwh_cfsjwh.do?method=savewjcfsjZj"/>	<!-- 处分维护增加保存 -->
+    	<action path="/wjcfsjXg" 	forward="/wjcfCfshwh_cfsjwh.do?method=wjcfsjXg"/>	<!-- 处分维护修改 -->
+    	<action path="/wjcfsjCk" 	forward="/wjcfCfshwh_cfsjwh.do?method=wjcfsjCk"/>	<!-- 处分维护查看 -->
+    	<action path="/wjcfsjSc" 	forward="/wjcfCfshwh_cfsjwh.do?method=wjcfsjSc"/>	<!-- 处分维护删除 -->
+    	<action path="/saveWjcfsjXg" 	forward="/wjcfCfshwh_cfsjwh.do?method=saveWjcfsjXg"/>	<!-- 处分维护修改保存 -->
+    	<action path="/saveWjcfssjg" 	forward="/wjcfCfshwh_cfsjwh.do?method=saveWjcfssjg"/>	<!-- 处分申诉保存 -->
+    	<action path="/saveWjcfjcjg" 	forward="/wjcfCfshwh_cfsjwh.do?method=saveWjcfjcjg"/>	<!-- 处分解除保存 -->
+    	<action path="/cfsssjCx" 	forward="/wjcfCfshwh_cfsjwh.do?method=cfsssjCx"/>	<!-- 处分申诉查询 -->
+    	<action path="/fjxz" 	forward="/wjcfCfshwh_cfsjwh.do?method=fjxz"/>	<!--附件下载 -->
+    	
+    	<!-- 学生处分查询 -->
+    	<action path="/xscfCx" 	forward="/wjcfCfshwh_xscfcx.do?method=xscfCx"/>	<!--学生处分查询 -->
+    	<action path="/xscfCxAjax" 	forward="/wjcfCfshwh_xscfcx.do?method=xscfCxAjax"/>	<!--学生处分查询 -->
+    	<action path="/xscfCk" 	forward="/wjcfCfshwh_xscfcx.do?method=xscfCk"/>	<!--学生处分查看 -->
+    	<action path="/xsssSave" 	forward="/wjcfCfshwh_xscfcx.do?method=xsssSave"/>	<!--学生处分申诉 -->
+    	<action path="/xsjcSave" 	forward="/wjcfCfshwh_xscfcx.do?method=xsjcSave"/>	<!--学生处分解除 -->
+    	<action path="/xsssQx" 	forward="/wjcfCfshwh_xscfcx.do?method=xsssQx"/>	<!--学生处分申诉删除 -->
+    	<action path="/xscfjcQx" 	forward="/wjcfCfshwh_xscfcx.do?method=xscfjcQx"/>	<!--学生处分解除删除 -->
+    	
+		<!-- =====================================处分类别代码维护================================================= -->	
+		<action path="/wjcfJcsz_cflbdm" 
+    			scope="request"
+    			type="xsgzgl.wjcf.jcsz.WjcfJcszAction" 
+    			name="wjcfJcszForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/wjcf/jcsz/cflbdmCx.jsp"/>
+    		<forward name="add" path="/xsgzgl/wjcf/jcsz/cflbdmZj.jsp"/>
+    		<forward name="update" path="/xsgzgl/wjcf/jcsz/cflbdmXg.jsp"/>
+    		<forward name="view" path="/xsgzgl/wjcf/jcsz/cflbdmCk.jsp"/>
+		</action>
+		
+		<!-- =====================================处分原因代码维护================================================= -->	
+		<action path="/wjcfJcsz_cfyydm" 
+    			scope="request"
+    			type="xsgzgl.wjcf.jcsz.WjcfJcszAction" 
+    			name="wjcfJcszForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/wjcf/jcsz/cfyydmCx.jsp"/>
+    		<forward name="add" path="/xsgzgl/wjcf/jcsz/cfyydmZj.jsp"/>
+    		<forward name="update" path="/xsgzgl/wjcf/jcsz/cfyydmXg.jsp"/>
+    		<forward name="view" path="/xsgzgl/wjcf/jcsz/cfyydmCk.jsp"/>
+		</action>
+		
+		<!-- =====================================申述解除审批流================================================= -->	
+		<action path="/wjcfJcsz_ssjcspl" 
+    			scope="request"
+    			type="xsgzgl.wjcf.jcsz.WjcfJcszAction" 
+    			name="wjcfJcszForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/wjcf/jcsz/ssjcsplCx.jsp"/>
+		</action>
+		
+		<action path="/wjcf_general_cfsb" 	forward="/general_wjcf.do?method=cfsbCx"/>			<!-- 处分上报 -->
+		<action path="/wjcf_general_cfsh" 	forward="/general_wjcf.do?method=cfshCx"/>			<!-- 处分审核 -->
+		<action path="/wjcf_general_cfjc" 	forward="/general_wjcf.do?method=cfjcCx"/>			<!-- 处分解除 -->
+		<action path="/wjcf_general_cfjcsh" 	forward="/general_wjcf.do?method=cfjcshCx"/>			<!-- 处分解除 -->
+	<!-- =====================================违纪处分================================================= -->	
+		<action path="/general_wjcf" 
+    			scope="request"
+    			type="xsgzgl.wjcf.general.WjcfGeneralAction" 
+    			name="wjcfGeneralForm"
+    			parameter="method">	
+		</action>
+		
+		<!-- =====================================违纪处分处分上报================================================= -->	
+		<action path="/general_wjcf_cfsb_ajax" 
+    			scope="request"
+    			type="xsgzgl.wjcf.general.cfsbgl.WjcfCfsbAction" 
+    			name="wjcfGeneralForm"
+    			parameter="method">
+    	<forward name="success" path="/xsgzgl/wjcf/general/cfsbgl/cfsbCx.jsp"/>	
+    	<forward name="cfsbZj" path="/xsgzgl/wjcf/general/cfsbgl/cfsbZj.jsp"/>	
+    	<forward name="cfsbXg" path="/xsgzgl/wjcf/general/cfsbgl/cfsbXg.jsp"/>	
+    	<forward name="cfsbCk" path="/xsgzgl/wjcf/general/cfsbgl/cfsbCk.jsp"/>	
+		</action>
+		
+		<!-- =====================================违纪处分处分审核================================================= -->	
+		<action path="/general_wjcf_cfsh_ajax" 
+    			scope="request"
+    			type="xsgzgl.wjcf.general.cfsbgl.WjcfCfshAction" 
+    			name="wjcfGeneralForm"
+    			parameter="method">
+    	<forward name="success" path="/xsgzgl/wjcf/general/cfsbgl/cfsbCx.jsp"/>	
+    	<forward name="cfshZj" path="/xsgzgl/wjcf/general/cfsbgl/cfshZj.jsp"/>	
+    	<forward name="plCfsh" path="/xsgzgl/wjcf/general/cfsbgl/plCfsh.jsp"/>
+    	<forward name="tongJi" path="/xsgzgl/wjcf/general/cfsbgl/tongJi.jsp"/>	
+		</action>
+		
+		<!-- =====================================违纪处分申诉管理================================================= -->
+		<!-- =====================================违纪处分申诉维护================================================= -->
+		<action path="/wjcfCfssgl_cfsswh" 
+    			scope="request"
+    			type="xsgzgl.wjcf.cfssgl.WjcfCfssglAction" 
+    			name="wjcfCfssglForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/wjcf/cfssgl/cfsswhCx.jsp"/>
+    		<forward name="view" path="/xsgzgl/wjcf/cfssgl/cfsswhCk.jsp"/>
+    		<forward name="add" path="/xsgzgl/wjcf/cfssgl/cfsswhZj.jsp"/>
+    		<forward name="edit" path="/xsgzgl/wjcf/cfssgl/cfsswhXg.jsp"/>
+		</action>
+		
+		<!-- =====================================违纪处分申诉审核================================================= -->
+		<action path="/wjcfCfssgl_cfsssh" 
+    			scope="request"
+    			type="xsgzgl.wjcf.cfssgl.WjcfCfssglAction" 
+    			name="wjcfCfssglForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/wjcf/cfssgl/cfssshCx.jsp"/>
+    		<forward name="cfssshSh" path="/xsgzgl/wjcf/cfssgl/cfssshSp.jsp"/>
+    		<forward name="cfssshPlsh" path="/xsgzgl/wjcf/cfssgl/cfssshPlsp.jsp"/>
+    		<forward name="cfssshTj" path="/xsgzgl/wjcf/cfssgl/cfssshTj.jsp"/>
+		</action>
+
+		<!-- =====================================违纪处分处分解除================================================= -->	
+		<action path="/general_wjcf_cfjc_ajax" 
+    			scope="request"
+    			type="xsgzgl.wjcf.general.cfjcgl.WjcfCfjcAction" 
+    			name="wjcfGeneralForm"
+    			parameter="method">
+	    	<forward name="success" path="/xsgzgl/wjcf/general/cfjcgl/cfjcCx.jsp"/>	
+	    	<forward name="jcsqZj" path="/xsgzgl/wjcf/general/cfjcgl/jcsqZj.jsp"/>	
+	    	<forward name="jcsqXg" path="/xsgzgl/wjcf/general/cfjcgl/jcsqXg.jsp"/>
+	    	<forward name="ckCfjc" path="/xsgzgl/wjcf/general/cfjcgl/ckCfjc.jsp"/>
+		</action>
+		
+		<!-- =====================================违纪处分处分解除审核================================================= -->	
+		<action path="/general_wjcf_cfjcsh_ajax" 
+    			scope="request"
+    			type="xsgzgl.wjcf.general.cfjcgl.WjcfCfjcshAction" 
+    			name="wjcfGeneralForm"
+    			parameter="method">
+	    	<forward name="success" path="/xsgzgl/wjcf/general/cfjcgl/cfjcshCx.jsp"/>	
+	    	<forward name="cfjcshZj" path="/xsgzgl/wjcf/general/cfjcgl/jcshZj.jsp"/>	
+	    	<forward name="plJcsh" path="/xsgzgl/wjcf/general/cfjcgl/plJcsh.jsp"/>
+	    	<forward name="tongJi" path="/xsgzgl/wjcf/general/cfjcgl/tongJi.jsp"/>	
+		</action>
+		
+
+		<!-- ===================================处分正式库========================================================== -->
+		<action path="/wjcfCfshwh_cfsjwh" 
+    			scope="request"
+    			type="xsgzgl.wjcf.cfsjwh.WjcfCfsjwhAction" 
+    			name="wjcfCfsjwhActionForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/wjcf/cfsjwh/wjcfsjCx.jsp"/>
+			<forward name="wjcfsjZj" path="/xsgzgl/wjcf/cfsjwh/wjcfsjZj.jsp"/>
+			<forward name="wjcfsjXg" path="/xsgzgl/wjcf/cfsjwh/wjcfsjXg.jsp"/>
+			<forward name="wjcfsjCk" path="/xsgzgl/wjcf/cfsjwh/wjcfsjCk.jsp"/>
+			<forward name="wjcfsjCfss" path="/xsgzgl/wjcf/cfsjwh/wjcfsjCfss.jsp"/>
+			<forward name="wjcfsjCfjc" path="/xsgzgl/wjcf/cfsjwh/wjcfsjCfjc.jsp"/>
+			<forward name="wjcfsjCfzz" path="/xsgzgl/wjcf/cfsjwh/wjcfsjCfzz.jsp"/>
+		</action>
+		
+		<!-- ==================================学生处分查询========================================================= -->
+		<action path="/wjcfCfshwh_xscfcx" 
+    			scope="request"
+    			type="xsgzgl.wjcf.xscfcx.WjcfXscfAction" 
+    			name="wjcfXscfActionForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/wjcf/xscfcx/xscfCx.jsp"/>
+    		<forward name="xscfCk" path="/xsgzgl/wjcf/xscfcx/xscfCk.jsp"/>
+    		<forward name="cfsswhCk" path="/xsgzgl/wjcf/cfssgl/cfsswhCk.jsp"/>
+    		<forward name="ckCfjc" path="/xsgzgl/wjcf/general/cfjcgl/ckCfjc.jsp"/>
+    		
+		</action>
+		<!-- ==================================学生处分统计========================================================= -->
+		<action path="/wjcfCfsjtj"
+				scope="request"
+				type="xsgzgl.wjcf.cfsjtj.WjcfCfsjtjAction"
+				name="wjcfCfsjtjActionForm"
+				parameter="method">
+			<forward name="xywjtj" path="/xsgzgl/wjcf/cfsjtj/xywjtj.jsp"></forward>
+			<forward name="xnyl" path="/xsgzgl/wjcf/cfsjtj/xnyl.jsp"></forward>		
+		</action>
+		
+		<!-- ==================================违纪处分new  start===================================== -->
+		<action path="/wjcf_cfjg_new"   forward="/wjcf_cfjg.do?method=cxCfjgList"/>
+		<action path="/wjcf_cflbdmwh"
+				scope="request"
+				type="com.zfsoft.xgxt.wjcf.cflbdmwh.CflbdmwhAction"
+				name="cflbdmwhForm"
+				parameter="method">
+			<forward name="cxCflbdmList" path="/xsgzgl/wjcf/cflbdmwhnew/cxCflbdmList.jsp"></forward>
+			<forward name="cflbdmAdd" path="/xsgzgl/wjcf/cflbdmwhnew/cflbdmAdd.jsp"></forward>
+			<forward name="cflbdmUpdate" path="/xsgzgl/wjcf/cflbdmwhnew/cflbdmUpdate.jsp"></forward>
+		</action>
+		
+		<action path="/wjcf_cfyydmwh"
+				scope="request"
+				type="com.zfsoft.xgxt.wjcf.cfyydmwh.CfyydmAction"
+				name="cfyydmForm"
+				parameter="method">
+			<forward name="cxCfyydmList" path="/xsgzgl/wjcf/cfyydmwhnew/cxCfyydmList.jsp"></forward>
+			<forward name="cfyydmAdd" path="/xsgzgl/wjcf/cfyydmwhnew/cfyydmAdd.jsp"></forward>
+			<forward name="cfyydmUpdate" path="/xsgzgl/wjcf/cfyydmwhnew/cfyydmUpdate.jsp"></forward>
+		</action>
+		
+		<action path="/wjcf_cfsbgl"
+				scope="request"
+				type="com.zfsoft.xgxt.wjcf.cfsb.CfsbglAction"
+				name="cfsbglForm"
+				parameter="method">
+			<forward name="cxCfsbList" path="/xsgzgl/wjcf/cfsbglnew/cfsb/cxCfsbList.jsp"></forward>
+			<forward name="cxCfsbAdd" path="/xsgzgl/wjcf/cfsbglnew/cfsb/cxCfsbAdd.jsp"></forward>
+			<forward name="cxCfsbUpdate" path="/xsgzgl/wjcf/cfsbglnew/cfsb/cxCfsbUpdate.jsp"></forward>
+			<forward name="cfsbView" path="/xsgzgl/wjcf/cfsbglnew/cfsb/cfsbView.jsp"></forward>
+		</action>
+		<action path="/wjcf_cfsh"
+				scope="request"
+				type="com.zfsoft.xgxt.wjcf.cfsh.CfshAction"
+				name="cfshForm"
+				parameter="method">
+			<forward name="cxCfshList" path="/xsgzgl/wjcf/cfsbglnew/cfsh/cxCfshList.jsp"></forward>
+			<forward name="cfsh" path="/xsgzgl/wjcf/cfsbglnew/cfsh/cfsh.jsp"></forward>
+			<forward name="cfplsh" path="/xsgzgl/wjcf/cfsbglnew/cfsh/cfplsh.jsp"></forward>
+			<forward name="cfshCk" path="/xsgzgl/wjcf/cfsbglnew/cfsh/cfshCk.jsp"></forward>
+		</action>
+		
+		<action path="/wjcf_cfsssq"
+				scope="request"
+				type="com.zfsoft.xgxt.wjcf.cfsssq.CfsssqAction"
+				name="cfsssqForm"
+				parameter="method">
+			<forward name="cxCfsssqList" path="/xsgzgl/wjcf/cfssglnew/cfsssq/cxCfsssqList.jsp"></forward>
+			<forward name="cfsssqAdd" path="/xsgzgl/wjcf/cfssglnew/cfsssq/cfsssqAdd.jsp"></forward>
+			<forward name="cfsssqUpdate" path="/xsgzgl/wjcf/cfssglnew/cfsssq/cfsssqUpdate.jsp"></forward>
+		</action>
+		
+		<action path="/wjcf_cfsssh"
+				scope="request"
+				type="com.zfsoft.xgxt.wjcf.cfsssh.CfssshAction"
+				name="cfssshForm"
+				parameter="method">
+			<forward name="cxCfssshList" path="/xsgzgl/wjcf/cfssglnew/cfsssh/cxCfssshList.jsp"></forward>
+			<forward name="sssh" path="/xsgzgl/wjcf/cfssglnew/cfsssh/sssh.jsp"></forward>
+			<forward name="ssplsh" path="/xsgzgl/wjcf/cfssglnew/cfsssh/ssplsh.jsp"></forward>
+			<forward name="ssshCk" path="/xsgzgl/wjcf/cfssglnew/cfsssh/ssshCk.jsp"></forward>
+		</action>
+		
+		<action path="/wjcf_cfjcsq"
+				scope="request"
+				type="com.zfsoft.xgxt.wjcf.cfjcsq.CfjcsqAction"
+				name="cfjcsqForm"
+				parameter="method">
+			<forward name="cxCfjcsqList" path="/xsgzgl/wjcf/cfjcglnew/cfjcsq/cxCfjcsqList.jsp"></forward>
+			<forward name="cfjcsqAdd" path="/xsgzgl/wjcf/cfjcglnew/cfjcsq/cfjcsqAdd.jsp"></forward>
+			<forward name="cfjcsqUpdate" path="/xsgzgl/wjcf/cfjcglnew/cfjcsq/cfjcsqUpdate.jsp"></forward>
+		</action>
+		<action path="/wjcf_cfjcsh"
+				scope="request"
+				type="com.zfsoft.xgxt.wjcf.cfjcsh.CfjcshAction"
+				name="cfjcshForm"
+				parameter="method">
+			<forward name="cxCfjcshList" path="/xsgzgl/wjcf/cfjcglnew/cfjcsh/cxCfjcshList.jsp"></forward>
+			<forward name="jcsh" path="/xsgzgl/wjcf/cfjcglnew/cfjcsh/jcsh.jsp"></forward>
+			<forward name="jcshCk" path="/xsgzgl/wjcf/cfjcglnew/cfjcsh/jcshCk.jsp"></forward>
+		</action>
+		
+		<action path="/wjcf_cfjg"
+				scope="request"
+				type="com.zfsoft.xgxt.wjcf.cfjg.CfjgAction"
+				name="cfjgForm"
+				parameter="method">
+			<forward name="cxCfjgList" path="/xsgzgl/wjcf/cfjgglnew/cfjg/cxCfjgList.jsp"></forward>
+			<forward name="cfjgZj" path="/xsgzgl/wjcf/cfjgglnew/cfjg/cfjgZj.jsp"/>
+			<forward name="cfjgXg" path="/xsgzgl/wjcf/cfjgglnew/cfjg/cfjgXg.jsp"/>
+			<forward name="cfjgshlcXg" path="/xsgzgl/wjcf/cfjgglnew/cfjg/cfjgshlcXg.jsp"/>
+			<forward name="cfjgSs" path="/xsgzgl/wjcf/cfjgglnew/cfjg/cfjgSs.jsp"/>
+			<forward name="cfjgJc" path="/xsgzgl/wjcf/cfjgglnew/cfjg/cfjgJc.jsp"/>
+			<forward name="cfjgZz" path="/xsgzgl/wjcf/cfjgglnew/cfjg/cfjgZz.jsp"/>
+			<forward name="cfjgCk" path="/xsgzgl/wjcf/cfjgglnew/cfjg/cfjgCk.jsp"/>
+		</action>
+	</action-mappings>
+	
+</struts-config>

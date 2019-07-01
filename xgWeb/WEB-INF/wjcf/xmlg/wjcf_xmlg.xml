@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfXmlgActionForm" type="xgxt.wjcf.xmlg.WjcfXmlgActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<action path="/wjcf_xmlg_cfbprint" 	   forward="/wjcfxmlgwh.do?method=cfbPrint"/> <!-- 处分报表打印 -->
+		<action path="/wjcf_xmlg_cfsbxxModi" 	   forward="/wjcfxmlgwh.do?method=cfsbxxModi"/> <!-- 处分早报信息修改页面 -->
+		<action path="/wjcf_xmlg_modiCfsbxx" 	   forward="/wjcfxmlgwh.do?method=modiCfsbxx"/> <!-- 处分早报信息修改页面 -->
+		<action path="/wjcf_xmlg_delCfsbxx" 	   forward="/wjcfxmlgwh.do?method=delCfsbxx"/> <!-- 处分早报信息修改页面 -->
+		<action path="/wjcf_xmlg_cfsh" 	       forward="/wjcfxmlgwh.do?method=cfsh"/> <!-- 处分审核页面 -->
+		<action path="/wjcf_xmlg_cfsbxxDgsh" 	   forward="/wjcfxmlgwh.do?method=cfsbxxDgsh"/> <!-- 处分单个审核页面 -->
+		<action path="/wjcf_xmlg_cfplsh" 	   forward="/wjcfxmlgwh.do?method=cfplsh"/> <!-- 处分批量审核页面 -->
+		<action path="/wjcf_xmlg_xbsh" 	   forward="/wjcfxmlgwh.do?method=xbsh"/> <!-- 校办处分审核页面 -->
+		<action path="/wjcf_xmlg_cfsbxxDgshByxb" 	   forward="/wjcfxmlgwh.do?method=cfsbxxDgshByxb"/> <!-- 校办处分审核页面 -->
+		<action path="/wjcf_xmlg_cfplshbyxb" 	   forward="/wjcfxmlgwh.do?method=cfplshbyxb"/> <!-- 校办处分审核页面 -->
+		<action path="/wjcf_xmlg_lxckDefault" 	   forward="/wjcfxmlgwh.do?method=lxckDefault"/> <!-- 留校察看数据维护页面 -->
+		<action path="/wjcf_xmlg_lxckStusq" 	   forward="/wjcfxmlgwh.do?method=lxckStusq"/> <!-- 留校察看数据维护页面 -->
+		<action path="/wjcf_xmlg_lxckxxquery" 	   forward="/wjcfxmlgwh.do?method=lxckxxquery"/> <!-- 留校察看数据维护页面 -->
+		<action path="/wjcf_xmlg_lxckprint" 	   forward="/wjcfxmlgwh.do?method=lxckPrint"/> <!-- 留校察看数据打印 -->
+		<action path="/wjcf_xmlg_modiLxckxx" 	   forward="/wjcfxmlgwh.do?method=modiLxckxx"/> 
+		<action path="/wjcf_xmlg_delLxckxx" 	   forward="/wjcfxmlgwh.do?method=delLxckxx"/> 
+		<action path="/wjcf_xmlg_lxckDgsh" 	   forward="/wjcfxmlgwh.do?method=lxckDgsh"/> 
+		<action path="/wjcf_xmlg_plshLxckxx" 	   forward="/wjcfxmlgwh.do?method=plshLxckxx"/>
+		<action path="/wjcf_xmlg_lxckxbsh" 	   forward="/wjcfxmlgwh.do?method=lxckxbsh"/>
+		<action path="/wjcf_xmlg_xbLxckxxDgsh" 	   forward="/wjcfxmlgwh.do?method=xbLxckxxDgsh"/>
+		<action path="/wjcf_xmlg_xbplshLxckxx" 	   forward="/wjcfxmlgwh.do?method=xbplshLxckxx"/>
+		<action path="/wjcf_xmlg_plsh" 	   forward="/wjcfxmlgwh.do?method=plsh"/>
+        <!-- 实际路径 -->	
+		<action path="/wjcfxmlgwh"
+				type="xgxt.wjcf.xmlg.WjcfXmlgAction"
+				name="wjcfXmlgActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="cfbPrint"       path="/wjcf/xmlg/cfbPrint.jsp" /><!-- 处分报表页面 -->
+			<forward name="cfsbxxModi"       path="/wjcf/xmlg/cfsbxxModi.jsp" /><!-- 处分报表页面 -->
+			<forward name="modiCfsbxx"       path="/wjcf/xmlg/modiCfsbxx.jsp" />
+			<forward name="cfsh"           path="/wjcf/xmlg/cfsh.jsp" /><!-- 处分审核页面 -->
+			<forward name="cfsbxxDgsh"        path="/wjcf/xmlg/cfsbxxDgsh.jsp" /><!-- 处分单个审核页面 -->
+			<forward name="cfplsh"        path="/wjcf/xmlg/cfplsh.jsp" />
+			<forward name="xbsh"        path="/wjcf/xmlg/xbsh.jsp" />
+			<forward name="cfsbxxDgshByxb"        path="/wjcf/xmlg/cfsbxxDgshByxb.jsp" /><!-- 校办处分审核页面 -->
+			<forward name="cfplshbyxb"        path="/wjcf/xmlg/cfplshbyxb.jsp" />
+			<forward name="lxckDefault"        path="/wjcf/xmlg/lxckDefault.jsp" /><!--解除留校察看页面 -->
+			<forward name="lxckStusq"        path="/wjcf/xmlg/lxckStusq.jsp" />
+			<forward name="lxckxxquery"        path="/wjcf/xmlg/lxckxxquery.jsp" />
+			<forward name="lxckPrint"        path="/wjcf/xmlg/lxckPrint.jsp" />
+			<forward name="modiLxckxx"        path="/wjcf/xmlg/modiLxckxx.jsp" />
+			<forward name="lxckDgsh"        path="/wjcf/xmlg/lxckDgsh.jsp" />
+			<forward name="plshLxckxx"        path="/wjcf/xmlg/plshLxckxx.jsp" />
+			<forward name="lxckxbsh"        path="/wjcf/xmlg/lxckxbsh.jsp" />
+			<forward name="xbLxckxxDgsh"        path="/wjcf/xmlg/xbLxckxxDgsh.jsp" />
+			<forward name="xbplshLxckxx"        path="/wjcf/xmlg/xbplshLxckxx.jsp" />
+			<forward name="plsh"        path="/wjcf/xmlg/plsh.jsp" />
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

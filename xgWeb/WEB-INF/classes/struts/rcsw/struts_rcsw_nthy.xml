@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xfhjglActionForm" type="xgxt.rcsw.nthy.XfhjglActionForm"/>
+		<form-bean name="xfqfglActionForm" type="xgxt.rcsw.nthy.XfqfglActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+	
+	
+	<!-- ============条件设置====================== -->
+	<action path="/rcsw_nthy_xfhjsjkz" forward="/rcsw_nthy_xfhjgl.do?method=xfhjSjkz"></action>
+	<action path="/rcsw_nthy_xfhjsq"   forward="/rcsw_nthy_xfhjgl.do?method=xfhjsq"></action>
+	<action path="/rcsw_nthy_xfhjsh"   forward="/rcsw_nthy_xfhjgl.do?method=xfhjsh"></action>
+	<action path="/rcsw_nthy_xfhjsjsh" forward="/rcsw_nthy_xfhjgl.do?method=xfhjsjsh"></action>
+	<action path="/rcsw_nthy_xfhjcx"   forward="/rcsw_nthy_xfhjgl.do?method=xfhjcx"></action>
+	<action path="/rcsw_nthy_xfhjxg"   forward="/rcsw_nthy_xfhjgl.do?method=xfhjxg"></action>
+
+	
+	<action path="/rcsw_nthy_xfhjgl"
+			type="xgxt.rcsw.nthy.XfhjglAction"
+			parameter="method"
+			scope="request"
+			name="xfhjglActionForm">
+		
+		<forward name="xfhjSjkz" path="/rcsw/nthy/xfhjgl/xfhjSjkz.jsp"></forward>
+		<forward name="xfhjsq"   path="/rcsw/nthy/xfhjgl/xfhjsq.jsp"></forward>
+		<forward name="xfhjsh"   path="/rcsw/nthy/xfhjgl/xfhjsh.jsp"></forward>
+		<forward name="xfhjsjsh" path="/rcsw/nthy/xfhjgl/xfhjsjsh.jsp"></forward>
+		<forward name="xfhjcx"   path="/rcsw/nthy/xfhjgl/xfhjcx.jsp"></forward>
+		<forward name="xfhjxg"   path="/rcsw/nthy/xfhjgl/xfhjxg.jsp"></forward>
+	</action>
+	<!-- ============条件设置==end==================== -->
+	
+	
+	<!-- 学费欠费查询 -->
+	<action path="/rcsw_nthy_xfqfcx"   forward="/rcsw_nthy_xfqfgl.do?method=xfqfcx"></action>
+	<action path="/rcsw_nthy_xfqfgl"
+			type="xgxt.rcsw.nthy.XfqfglAction"
+			parameter="method"
+			scope="request"
+			name="xfqfglActionForm">
+		<forward name="xfqfcx" path="/rcsw/nthy/xfqfgl/xfqfcx.jsp"></forward>
+		<forward name="xfqfcxDetail"   path="/rcsw/nthy/xfqfgl/xfqfcxDetail.jsp"></forward>
+	</action>
+	
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpy_hbsf_apply.do" location="50,50" dimension="142,60" />
+  <StrutsActivity path="/pjpy_hbsf_zhszcp.do" location="950,50" dimension="148,60" />
+  <StrutsActivity path="/pjpyhbsfwh.do" location="350,50" dimension="130,72" />
+  <StrutsActivity path="zhszcpDefault" location="50,250" dimension="118,48" />
+  <StrutsActivity path="/hbsf_jxjsqsave.do" />
+  <StrutsActivity path="/hbsf_zhszcpqry.do" />
+  <StrutsActivity path="/hbsf_zhszcpadd.do" />
+  <StrutsActivity path="/hbsf_zhszcpsave.do" />
+  <StrutsActivity path="/hbsf_zhszcpdel.do" />
+  <StrutsActivity path="/hbsf_zhszcpview.do" />
+  <StrutsActivity path="/hbsf_zhszcpexp.do" />
+  <StrutsTransition id="/zhszcpexp.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hbsf_zhszcpview.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hbsf_zhszcpsave.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpy_hbsf_zhszcp.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1024,50" />
+      <AbsolutePoint location="1024,-45" />
+      <AbsolutePoint location="415,-45" />
+      <AbsolutePoint location="415,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hbsf_zhszcpqry.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hbsf_zhszcpdel.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hbsf_jxjsqsave.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zhszcpview.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hbsf_zhszcpexp.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zhszcpadd.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zhszcpqry.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jxjsqsave.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zhszcpsave.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1006,250" />
+      <AbsolutePoint location="1006,197" />
+      <AbsolutePoint location="415,197" />
+      <AbsolutePoint location="415,122" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zhszcpdel.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="156,380" />
+      <AbsolutePoint location="471,380" />
+      <AbsolutePoint location="471,122" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpy_hbsf_apply.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="192,80" />
+      <AbsolutePoint location="350,80" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hbsf_zhszcpadd.do,null,/pjpyhbsfwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="415,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

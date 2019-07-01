@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+<form-beans>
+		<form-bean name="zgdzdxForm" type="xgxt.xsgygl.zgdzdx.GyglZgdzdxForm"/>
+</form-beans>
+	<global-forwards />
+	<action-mappings>	    
+		<action path="/roomAutoCreate" forward="/zgdzdx_Gygl.do?method=roomACtIndex"/>
+		<action path="/viewSsInfo" forward="/zgdzdx_Gygl.do?method=viewSsInfo"/>
+		<action path="/getSsinfoLocal" forward="/zgdzdx_Gygl.do?method=getSsinfo"/>
+		<action path="/getSsinfo" forward="/zgdzdx_Gygl.do?method=checkBss"/>
+		<action path="/yqManager" forward="/zgdzdx_Gygl.do?method=yqManager"/>	
+		<action path="/ldManager" forward="/zgdzdx_Gygl.do?method=ldManager"/>
+		<action path="/lcManager" forward="/zgdzdx_Gygl.do?method=lcManager"/>
+		<action path="/yqzbManage" forward="/zgdzdx_Gygl.do?method=yqzbManage"/>	
+		<action path="/yqhdManage" forward="/zgdzdx_Gygl.do?method=yqhdManage"/>
+		<action path="/wxs_dormUser_Manage" forward="/zgdzdx_Gygl.do?method=wxsDormUserManage"/>
+		<action path="/dyDormManage" forward="/zgdzdx_Gygl.do?method=dyDormManage"/>		
+		<action path="/jswmhdManage" forward="/zgdzdx_Gygl.do?method=jswmhdManage"/>
+		<action path="/jswmhdApply" forward="/zgdzdx_Gygl.do?method=jswmhdSq"/>	
+		<action path="/jswmhdShManage" forward="/zgdzdx_Gygl.do?method=hdShManage"/>
+		<action path="/dormFeeChg_stati" forward="/zgdzdx_Gygl.do?method=dormFeeChg_stati"/>							
+		<action path="/zgdzdx_Gygl" parameter="method"  name="zgdzdxForm" scope="request"
+		        type="xgxt.xsgygl.zgdzdx.GyglZgdzdxAction">
+		        <forward name="RoomACTIn" path="/gygl/zgdzdx/roomACTIndex.jsp"></forward>
+		        <forward name="RoomIModi" path="/gygl/zgdzdx/roomInFoMod.jsp"></forward>
+		        <forward name="RoomCompart" path="/gygl/zgdzdx/roomCompart.jsp"></forward>
+                <forward name="RoomACTIn" path="/gygl/zgdzdx/roomACTIndex.jsp"></forward>
+		        <forward name="RoomIModi" path="/gygl/zgdzdx/roomInFoMod.jsp"></forward>
+		        <forward name="bsszxss" path="/gygl/zgdzdx/bsszxss.jsp"></forward>
+		        <forward name="oneinfo" path="/gygl/zgdzdx/oneinfo.jsp"></forward>
+                <forward name="roomGrapSta" path="/gygl/zgdzdx/roomGraphStat.jsp"></forward>
+                <forward name="imageview" path="/gygl/zgdzdx/imageview.jsp"></forward>
+                <forward name="onessinfo" path="/gygl/zgdzdx/onessinfo.jsp"></forward>
+                <forward name="viewssinfo" path="/gygl/zgdzdx/viewssinfo.jsp"></forward>
+                <forward name="BedCompart" path="/gygl/zgdzdx/bedCompart.jsp"></forward>
+                <forward name="yqManager" path="/gygl/zgdzdx/yqManager.jsp"></forward>
+                <forward name="yqMAdd" path="/gygl/zgdzdx/yqManagerAdd.jsp"></forward>
+                <forward name="yqMModi" path="/gygl/zgdzdx/yqManagerModi.jsp"></forward>
+                <forward name="ldM" path="/gygl/zgdzdx/ldManager.jsp"></forward>
+                <forward name="ldMAdd" path="/gygl/zgdzdx/ldManagerAdd.jsp"></forward>
+                <forward name="ldMModi" path="/gygl/zgdzdx/ldManagerModi.jsp"></forward>
+                <forward name="lcM" path="/gygl/zgdzdx/lcManager.jsp"></forward>
+                <forward name="lcMAdd" path="/gygl/zgdzdx/lcManagerAdd.jsp"></forward>
+                <forward name="lcMModi" path="/gygl/zgdzdx/lcManagerModi.jsp"></forward>
+                <forward name="yqzbM" path="/gygl/zgdzdx/yqzbManage.jsp"></forward>
+                <forward name="yqzbMAdd" path="/gygl/zgdzdx/yqzbManageAdd.jsp"></forward>
+                <forward name="yqzbMModi" path="/gygl/zgdzdx/yqzbManageModi.jsp"></forward>
+                <forward name="yqhdM" path="/gygl/zgdzdx/yqhdManage.jsp"></forward>
+                <forward name="yqhdMAdd" path="/gygl/zgdzdx/yqhdManageAdd.jsp"></forward>
+                <forward name="yqhdMModi" path="/gygl/zgdzdx/yqhdManageModi.jsp"></forward>
+                <forward name="wxsDUM" path="/gygl/zgdzdx/wxs_DUManage.jsp"></forward>
+                <forward name="wxsDUAdd" path="/gygl/zgdzdx/wxs_DormUserAdd.jsp"></forward>
+                <forward name="wxsDUModi" path="/gygl/zgdzdx/wxs_DormUserModi.jsp"></forward>
+                <forward name="dyDManage" path="/gygl/zgdzdx/dyDormManage.jsp"></forward>
+                <forward name="hdsq" path="/gygl/zgdzdx/jswmhdsq.jsp"></forward>
+                <forward name="hdShM" path="/gygl/zgdzdx/jswmhdshManage.jsp"></forward>
+                <forward name="hdShView" path="/gygl/zgdzdx/jswmhdshView.jsp"></forward>
+                <forward name="jsQmHdM" path="/gygl/zgdzdx/jswmhdManage.jsp"></forward>
+                <forward name="jsWmHdAdd" path="/gygl/zgdzdx/jswmhdAdd.jsp"></forward>
+                <forward name="jsWmHdModi" path="/gygl/zgdzdx/jswmhdModi.jsp"></forward>
+                <forward name="jswmhdView" path="/gygl/zgdzdx/jswmhdView.jsp"></forward>
+                <forward name="dormFChg_stati" path="/gygl/zgdzdx/dormFChg_stati.jsp"></forward>
+		</action>	
+	</action-mappings>	
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources" />
+</struts-config>

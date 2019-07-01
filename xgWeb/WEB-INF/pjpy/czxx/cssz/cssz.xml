@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyCzxxActionForm" type="xgxt.pjpy.czxx.PjpyCzxxActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_czxx_tjsz" 	   forward="/czxxPjpyCssz.do?method=tjsz"/> <!-- 条件设置 -->
+	    <action path="/pjpy_czxx_kgsz"     forward="/czxxPjpyCssz.do?method=kgsz"/>
+	    <action path="/pjpy_czxx_rytjsz"   forward="/czxxPjpyCssz.do?method=rytjsz"/>
+
+	    <!-- 实际路径 -->	
+		<action path="/czxxPjpyCssz"
+				type="xgxt.pjpy.czxx.cssz.PjpyCsszActon"
+				name="pjpyCzxxActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 条件设置 -->
+		<forward name="tjsz" path="/pjpy/czxx/cssz/tjsz.jsp" />
+		<forward name="kgsz" path="/pjpy/czxx/cssz/kgsz.jsp"/>
+		<forward name="rytjsz" path="/pjpy/czxx/cssz/rytjsz.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config>

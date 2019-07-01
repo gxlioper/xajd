@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/hndx_fzxsz.do" location="128,0" dimension="262,84" />
+  <StrutsActivity path="/pjpy/hndx/fzxsz/fzxszxm.jsp" location="0,184" dimension="208,48" />
+  <StrutsActivity path="/pjpy/hndx/fzxsz/fzxszflr.jsp" location="308,184" dimension="214,48" />
+  <StrutsTransition id="/hndx_fzxsz.do,fzxszflr,/pjpy/hndx/fzxsz/fzxszflr.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="325,84" />
+      <AbsolutePoint location="325,134" />
+      <AbsolutePoint location="415,134" />
+      <AbsolutePoint location="415,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hndx_fzxsz.do,fzxszxm,/pjpy/hndx/fzxsz/fzxszxm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="194,84" />
+      <AbsolutePoint location="194,134" />
+      <AbsolutePoint location="104,134" />
+      <AbsolutePoint location="104,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

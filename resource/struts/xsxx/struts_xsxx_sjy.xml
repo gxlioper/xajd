@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="sjyJcsjszForm" 	type="xgxt.xsxx.comm.sjy.jcsjsz.SjyJcsjszForm"/>
+		<form-bean name="sjyJcsjcshForm" 	type="xgxt.xsxx.comm.sjy.jcsjcsh.SjyJcsjcshForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/xsxx_sjy_jcsjsz" 	forward="/sjyJcsjsz.do?method=jcsjszManage"/>		<!-- 基础数据设置 -->
+		<action path="/xsxx_sjy_xxypz" 		forward="/sjyJcsjsz.do?method=xxypzManage"/>		<!-- 学生信息详细页配置 -->
+		<action path="/xsxx_sjy_jcsjcsh" 	forward="/sjyJcsjcsh.do?method=jcsjcshManage"/>		<!-- 基础数据初始化 -->
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 数据源_基础数据设置 -->
+    	<action path="/sjyJcsjsz" 
+        		parameter="method"  
+        		name="sjyJcsjszForm" 
+        		scope="request"
+		        type="xgxt.xsxx.comm.sjy.jcsjsz.SjyJcsjszAction">	
+		       
+		    <forward name="jcsjszChoose"    	path="/xsxx/comm/sjy/jcsjsz/jcsjszChoose.jsp" />	<!-- 选择 -->
+			<forward name="jcsjszManage"    	path="/xsxx/comm/sjy/jcsjsz/jcsjszManage.jsp" />	<!-- 管理 -->
+			<forward name="jcsjszGuide"    		path="/xsxx/comm/sjy/jcsjsz/jcsjszGuide.jsp" />		<!-- 向导 -->
+			<forward name="jcsjszUpdate"    	path="/xsxx/comm/sjy/jcsjsz/jcsjszUpdate.jsp" />	<!-- 修改 -->
+			<!-- 学生信息详细页配置 -->
+			<forward name="xxypzManage"    	path="/xsxx/comm/sjy/jcsjsz/xxypzManage.jsp" />	<!-- 修改 -->
+		</action>
+		
+		<!-- 数据源_基础数据初始化 -->
+    	<action path="/sjyJcsjcsh" 
+        		parameter="method"  
+        		name="sjyJcsjcshForm" 
+        		scope="request"
+		        type="xgxt.xsxx.comm.sjy.jcsjcsh.SjyJcsjcshAction">	
+		       
+		    <forward name="jcsjcshForXy"    	path="/xsxx/comm/sjy/jcsjcsh/jcsjcshForXy.jsp" />	<!-- 学院初始化 -->
+		    <forward name="jcsjcshForZy"    	path="/xsxx/comm/sjy/jcsjcsh/jcsjcshForZy.jsp" />	<!-- 专业初始化 -->
+		    <forward name="jcsjcshForBj"    	path="/xsxx/comm/sjy/jcsjcsh/jcsjcshForBj.jsp" />	<!-- 班级初始化 -->
+		    <forward name="jcsjcshForStu"    	path="/xsxx/comm/sjy/jcsjcsh/jcsjcshForStu.jsp"/>	<!-- 学生基本信息初始化 -->
+		    
+		    <forward name="ruleManage"    		path="/xsxx/comm/sjy/jcsjcsh/ruleManage.jsp" />		<!-- 规则制定 -->
+		    <forward name="ruleUpdate"    		path="/xsxx/comm/sjy/jcsjcsh/ruleUpdate.jsp" />		<!-- 规则维护 -->
+		</action>
+		
+	</action-mappings>
+</struts-config>

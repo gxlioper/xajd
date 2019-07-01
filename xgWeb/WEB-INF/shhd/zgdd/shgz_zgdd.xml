@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="zgddShgzForm" type="xgxt.shgz.zgdzdx.ZgdzdxShgzForm" />
+	</form-beans>
+ 	<action-mappings>
+ 		<!-- 显示路径 -->
+        <action path="/zgdzdxShgzCssz" forward="/zgddShgzCssz.do?method=csszManage"/>	<!-- 参数设置 -->
+     	<action path="/zgdzdxShgzHdfb" forward="/zgddShgzHdfb.do?method=hdfbManage"/>	<!-- 活动发布 -->
+     	<action path="/zgdzdxShgzHdsq" forward="/zgddShgzHdgl.do?method=hdglHdsq"/>		<!-- 活动申请 -->
+     	<action path="/zgdzdxShgzHdsh" forward="/zgddShgzHdgl.do?method=hdglManage"/>	<!-- 活动审核 -->
+     	<action path="/zgdzdxShgzHdjg" forward="/zgddShgzHdgl.do?method=hdglHdjg"/>		<!-- 活动申请结果 -->
+     
+		<!-- 实际路径 -->
+        <action path="/zgddShgzCssz" 
+        		parameter="method"  
+        		name="zgddShgzForm" 
+        		scope="request"
+		        type="xgxt.shgz.zgdzdx.cssz.CsszAction">
+		        
+		<!-- 参数设置 -->
+		<forward name="csszManage" path="/shgz/zgdzdx/cssz/csszManage.jsp" />
+		<forward name="csszUpdate" path="/shgz/zgdzdx/cssz/csszUpdate.jsp" />	
+		</action>
+		
+		<!-- 实际路径 -->
+        <action path="/zgddShgzHdfb" 
+        		parameter="method"  
+        		name="zgddShgzForm" 
+        		scope="request"
+		        type="xgxt.shgz.zgdzdx.hdfb.HdfbAction">
+		        
+		<!-- 活动发布 -->
+		<forward name="hdfbManage" path="/shgz/zgdzdx/hdfb/hdfbManage.jsp" />
+		<forward name="hdfbUpdate" path="/shgz/zgdzdx/hdfb/hdfbUpdate.jsp" />	
+		</action>
+		
+		<!-- 实际路径 -->
+        <action path="/zgddShgzHdgl" 
+        		parameter="method"  
+        		name="zgddShgzForm" 
+        		scope="request"
+		        type="xgxt.shgz.zgdzdx.hdgl.HdglAction">
+		        
+		<!-- 活动管理 -->
+		<forward name="hdglManage" path="/shgz/zgdzdx/hdgl/hdglManage.jsp" />
+		<forward name="hdglHdsh" path="/shgz/zgdzdx/hdgl/hdglSh.jsp" />	
+		<forward name="hdglHdsq" path="/shgz/zgdzdx/hdgl/hdglSq.jsp" />	
+		<forward name="hdglHdjg" path="/shgz/zgdzdx/hdgl/hdglManage.jsp" />	
+		</action>
+	</action-mappings>
+	<message-resources key="zjlgPjpy" parameter="xgxt.pjpy.zjlg.zjlgPjpy" />
+
+</struts-config>

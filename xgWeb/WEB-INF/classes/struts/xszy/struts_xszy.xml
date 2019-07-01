@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    <!-- 新生之友 -->
+	<form-beans>
+		<form-bean name="XszyXsxxForm" type="com.zfsoft.xgxt.xszy.xsxxgl.XszyXsxxForm" />
+		<form-bean name="XszyQshfForm" type="com.zfsoft.xgxt.xszy.xsqshf.XszyQshfForm" />
+		<form-bean name="XszyglForm" type="com.zfsoft.xgxt.xszy.xszygl.XszyglForm" />
+		<form-bean name="XszyQsppForm" type="com.zfsoft.xgxt.xszy.qsppgl.XszyQsppForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/xszy_xsxxgl" forward="/xszyXsxxgl.do?method=getXsxxList" />
+		<action path="/xszy_xsqshf" forward="/xszyXsqshf.do?method=getQshfxxList" />
+		<action path="/xszy_xszygl" forward="/xszygl.do?method=getXszyList" />
+		<action path="/xszy_qsppgl" forward="/qsppgl.do?method=getQsppList" />
+		<action path="/xszy_tjcx" forward="/qsppgl.do?method=getQstjList" />
+		
+		
+		
+		<!-- 新生信息管理 -->
+		<action path="/xszyXsxxgl" scope="request"
+			type="com.zfsoft.xgxt.xszy.xsxxgl.XszyXsxxAction" name="XszyXsxxForm"
+			parameter="method">
+			<forward name="xszyXsxxManage" path="/xsgzgl/xszy/xsxxgl/xsxxList.jsp" />
+			<forward name="updateXszyXsxx" path="/xsgzgl/xszy/xsxxgl/updateXsxx.jsp" />
+			<forward name="viewXszyXsxx" path="/xsgzgl/xszy/xsxxgl/viewXsxx.jsp" />
+		</action>
+		<!-- 寝室划分 -->
+		<action path="/xszyXsqshf" scope="request"
+			type="com.zfsoft.xgxt.xszy.xsqshf.XszyQshfAction" name="XszyQshfForm"
+			parameter="method">
+			<forward name="qshfxxList" path="/xsgzgl/xszy/xsqshf/qshfxxList.jsp" />
+			<forward name="fpcz" path="/xsgzgl/xszy/xsqshf/fpcz.jsp" />
+			<forward name="qsxxView" path="/xsgzgl/xszy/xsqshf/qsxxView.jsp" />
+			<forward name="plfp" path="/xsgzgl/xszy/xsqshf/plfp.jsp" />
+			<forward name="fpxqCk" path="/xsgzgl/xszy/xsqshf/fpxqCk.jsp" />
+			<forward name="fptjCk" path="/xsgzgl/xszy/xsqshf/fptjCk.jsp" />
+		</action>
+		
+		<!-- 新生之友管理-->
+		<action path="/xszygl" scope="request"
+			type="com.zfsoft.xgxt.xszy.xszygl.XszyglAction" name="XszyglForm"
+			parameter="method">
+			<forward name="xszyList" path="/xsgzgl/xszy/xszygl/xszyList.jsp" />
+			<forward name="addXszy" path="/xsgzgl/xszy/xszygl/addXszy.jsp" />
+			<forward name="viewXszy" path="/xsgzgl/xszy/xszygl/viewXszy.jsp" />
+			<forward name="editXszy" path="/xsgzgl/xszy/xszygl/editXszy.jsp" />
+			<forward name="fpyx" path="/xsgzgl/xszy/xszygl/fpyx.jsp" />
+			<forward name="kyxbj" path="/xsgzgl/xszy/xszygl/kyxbj.jsp" />
+		</action>
+		
+		<!-- 寝室匹配-->
+		<action path="/qsppgl" scope="request"
+			type="com.zfsoft.xgxt.xszy.qsppgl.XszyQsppAction" name="XszyQsppForm"
+			parameter="method">
+			<forward name="qsppList" path="/xsgzgl/xszy/qsppgl/qsppList.jsp" />
+			<forward name="zdpp" path="/xsgzgl/xszy/qsppgl/zdpp.jsp" />
+			<forward name="sgppXszyList" path="/xsgzgl/xszy/qsppgl/sgppXszyList.jsp" />
+		</action>
+		
+		<!-- 寝室匹配-->
+		<action path="/qsppgl" scope="request"
+			type="com.zfsoft.xgxt.xszy.qsppgl.XszyQsppAction" name="XszyQsppForm"
+			parameter="method">
+			<forward name="qsppList" path="/xsgzgl/xszy/qsppgl/qsppList.jsp" />
+			<forward name="qstjList" path="/xsgzgl/xszy/tjcxgl/qstjList.jsp" />
+			<forward name="zdpp" path="/xsgzgl/xszy/qsppgl/zdpp.jsp" />
+			<forward name="sgppXszyList" path="/xsgzgl/xszy/qsppgl/sgppXszyList.jsp" />
+		</action>
+	
+
+	</action-mappings>
+</struts-config>

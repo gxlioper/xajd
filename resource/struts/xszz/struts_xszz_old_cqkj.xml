@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzForm" type="xgxt.form.XszzForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!--<<<<<<<<<<<<<<<<<<<< 重庆科技学院-绿色通道申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="cqkjxy_lstd" 
+		   path="/cqkjxy_lstd" scope="request"
+		   type="xgxt.action.cqkjxy.XszzAction">  
+		     <forward name="success" path="/xszz/cqkjxy/cqkjxy_lstd.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 重庆科技学院-绿色通道申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="cqkjxy_lstdb" 
+		   path="/cqkjxy_lstdb" scope="request"
+		   type="xgxt.action.cqkjxy.XszzAction">  
+		     <forward name="success" path="/xszz/cqkjxy/cqkjxy_lstdb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 重庆科技学院-绿色通道审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_cqkjxy_lstd" 
+		   path="/auditing_cqkjxy_lstd" scope="request"
+		   type="xgxt.action.cqkjxy.XszzAction">  
+		     <forward name="success" path="/xszz/cqkjxy/auditing_cqkjxy_lstd.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_cqkjxy_lstd_one" 
+		   path="/auditing_cqkjxy_lstd_one" scope="request"
+		   type="xgxt.action.cqkjxy.XszzAction">  
+		     <forward name="success" path="/xszz/cqkjxy/auditing_cqkjxy_lstd_one.jsp"/>   
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

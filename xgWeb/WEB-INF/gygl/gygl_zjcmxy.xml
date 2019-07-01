@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+<form-beans>
+		<form-bean name="zjcmxyForm" type="xgxt.xsgygl.zjcmxy.GyglZjcmxyForm"/>
+</form-beans>
+	<global-forwards />
+	<action-mappings>	    
+		<action path="/zsjlInput" forward="/zjcmxy_Gygl.do?method=zsjlInput"/><!-- 住宿纪律录入 -->
+		<action path="/zsjlDispose" forward="/zjcmxy_Gygl.do?method=zsjlDispose"/><!-- 住宿纪律处理-->
+		<action path="/zsjlCheck" forward="/zjcmxy_Gygl.do?method=zsjlCheck"/><!-- 住宿纪律审核 -->
+		<action path="/zsjlStat" forward="/zjcmxy_Gygl.do?method=zsjlStat"/><!-- 住宿纪律统计 -->							
+		<action path="/zjcmxy_Gygl" parameter="method"  name="zjcmxyForm" scope="request"
+		        type="xgxt.xsgygl.zjcmxy.GyglZjcmxyAction">
+		        <forward name="zsjl_manager" path="/gygl/zjcmxy/zsjl_manager.jsp"></forward>
+		        <forward name="zsjl_add" path="/gygl/zjcmxy/zsjl_add.jsp"></forward>
+				<forward name="zsjlDispose" path="/gygl/zjcmxy/zsjlDispose.jsp"></forward>
+		        <forward name="dispose" path="/gygl/zjcmxy/dispose.jsp"></forward>
+		        <forward name="zsjlCheck" path="/gygl/zjcmxy/zsjlCheck.jsp"></forward>
+		        <forward name="doCheck" path="/gygl/zjcmxy/doCheck.jsp"></forward>
+		        <forward name="zsjlStat" path="/gygl/zjcmxy/zsjlStat.jsp"></forward>
+		</action>	
+	</action-mappings>	
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources" />
+</struts-config>

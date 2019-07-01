@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfGzdxActionForm" type="xgxt.wjcf.gzdx.WjcfGzdxActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<action path="/wjcf_gzdx_wjcfhzb" 	   forward="/wjcfgzdxwh.do?method=wjcfhzb"/> <!-- 违纪处分汇总表 -->
+		<action path="/wjcf_gzdx_wjcfhzbByjwc" 	   forward="/wjcfgzdxwh.do?method=wjcfhzbByjwc"/> <!-- 教务处违纪处分汇总表 -->
+		<action path="/wjcf_gzdx_ssprint"      forward="/wjcfgzdxwh.do?method=ssprint"/><!-- 申诉书打印 -->
+		<action path="/wjcf_gzdx_cfbprint"     forward="/wjcfgzdxwh.do?method=cfbprint"/><!--处分表打印-->
+		
+        <!-- 实际路径 -->	
+		<action path="/wjcfgzdxwh"
+				type="xgxt.wjcf.gzdx.WjcfGzdxAction"
+				name="wjcfGzdxActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="ssprint"       path="/wjcf/gzdx/ssprint.jsp" />
+			<forward name="cfbprint"      path="/wjcf/gzdx/cfbprint.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

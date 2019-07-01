@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xszzTyForm" type="xgxt.xszz.XszzTyForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+	
+	<!-- 副食补助 -->
+	<action path="/xszz_fsbz_fp" forward="/xszz_forward.do?method=fsbzfpForward"/>		<!-- 分配专业 -->
+	<action path="/xszz_fsbz_ff" forward="/xszz_forward.do?method=fsbzffForward"/>		<!-- 发放 -->
+    <action path="/xszz_fsbz_jg" forward="/xszz_forward.do?method=fsbzjgForward"/>		<!-- 结果 -->
+    
+    <!-- 经济困难生认定 -->
+    <action path="/xszz_cssz" forward="/xszz_forward.do?method=csszForward"/>			<!-- 参数设置 -->
+    <action path="/xszz_jjkns_sq" forward="/xszz_forward.do?method=jjknssqForward"/>	<!-- 申请 -->
+	<action path="/xszz_jjkns_sh" forward="/xszz_forward.do?method=jjknsshForward"/>	<!-- 审核 -->
+	<action path="/xszz_jjkns_jg" forward="/xszz_forward.do?method=jjknsjgForward"/>	<!-- 结果查询 -->
+	
+	<action path="/xszz_xfxx" forward="/xszz_forward.do?method=xfxxForward"/>			<!-- 学费信息 -->
+	
+	<!--=========================== ~我是广州大学~================================= -->
+	<action path="/xszz_tjsz" forward="/xszz_forward.do?method=tjszForward"/>		<!-- 项目维护 -->
+	
+	<!--=========================== 周大师强化版资助================================= -->
+	<!-- 相关设置 -->
+	<action path="/yhInfo" 		   forward="/xszz_forward.do?method=yhInfoForward"/>	<!-- 友好信息 -->
+	<action path="/xszz_xgsz_xmwh" forward="/xszz_forward.do?method=xmwhForward"/>		<!-- 项目维护 -->
+	<action path="/xszz_xgsz_rssz" forward="/xszz_forward.do?method=rsszForward"/>		<!-- 人数设置 -->
+	<action path="/xszz_xgsz_zdsz" forward="/xszz_forward.do?method=zdszForward"/>		<!-- 字段设置 -->
+	<action path="/xszz_xscz_xmsq" forward="/xszz_forward.do?method=xmsqForward"/>		<!-- 项目申请 -->
+	<action path="/xszz_jscz_xmsh" forward="/xszz_forward.do?method=xmshForward"/>		<!-- 项目审核 -->
+	<action path="/xszz_xmxg_jgcx" forward="/xszz_forward.do?method=jgcxForward"/>		<!-- 结果查询 -->
+	<action path="/xszz_xmtj_zzhz" forward="/xszz_forward.do?method=zzhzForward"/>		<!-- 资助汇总 -->
+	<action path="/xszz_jscz_tjbb" forward="/xszz_forward.do?method=tjbbForward"/>	    <!-- 统计报表 -->
+	<action path="/xszz_jscz_printTjbb" forward="/xszz_forward.do?method=printTjbbForward"/> <!-- 打印统计报表 -->	
+	<action path="/xgxt_data_imp"  forward="/xszz_forward.do?method=impForward"/>		<!-- 导入 -->
+	
+    <!-- 实际路径 -->
+    <action path="/xszz_forward"  parameter="method"   name="xszzTyForm"  scope="request"  type="xgxt.xszz.XszzAction">
+   		<forward name="yhInfo" path="/xszz/comm/other/yhInfo.jsp"/>
+    </action>
+		
+	</action-mappings>
+
+</struts-config>

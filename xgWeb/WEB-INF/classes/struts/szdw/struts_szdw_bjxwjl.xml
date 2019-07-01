@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		 <form-bean name="bjxwjlwhForm" type="com.zfsoft.xgxt.szdw.bjxwjl.bjxwjlwh.BjxwjlwhForm" />	
+		 <form-bean name="bjxwjltjForm" type="com.zfsoft.xgxt.szdw.bjxwjl.bjxwjltj.BjxwjltjForm" />	
+	</form-beans>
+		
+	<action-mappings>
+    <action 
+    	path="/szdw_bjxwjlwh" 
+    	name="bjxwjlwhForm"
+    	type="com.zfsoft.xgxt.szdw.bjxwjl.bjxwjlwh.BjxwjlwhAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="bjxwjlwhManage" path="/xsgzgl/szdw/bjxwjl/bjxwjlwhManage.jsp"/>
+    	<forward name="sq" path="/xsgzgl/szdw/bjxwjl/sq.jsp"/>
+    	<forward name="ck" path="/xsgzgl/szdw/bjxwjl/ck.jsp"/>
+    	<forward name="updateSq" path="/xsgzgl/szdw/bjxwjl/updateSq.jsp"/>
+    </action>
+    
+    <action 
+    	path="/szdw_bjxwjltj" 
+    	name="bjxwjltjForm"
+    	type="com.zfsoft.xgxt.szdw.bjxwjl.bjxwjltj.BjxwjltjAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="bjxwjltjManage" path="/xsgzgl/szdw/bjxwjl/bjxwjltjManage.jsp"/>
+    	<forward name="tjck" path="/xsgzgl/szdw/bjxwjl/tjck.jsp"/>
+    </action>
+	</action-mappings>
+  <message-resources parameter="xgxt.base.ApplicationResources" /> 
+</struts-config>

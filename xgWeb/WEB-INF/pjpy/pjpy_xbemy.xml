@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyXbemyActionForm" type="xgxt.pjpy.xbemy.PjpyXbemyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/xysbjxj"
+				type="xgxt.pjpy.xbemy.PjpyXbemyAction"
+				name="pjpyXbemyActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="xysbjxj" path="/pjpy/xibeierminyuan/pjpy_xbemy_xysbjxj.jsp" />
+			<forward name="xysbjxjsh" path="/xysbjxjSearch.do" />
+			<forward name="xyjxjjgqry" path="/pjpy/xibeierminyuan/pjpy_xbemy_jxjjgqry.jsp"></forward>
+			<forward name="exp" path="/about:blank" />
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="pjpyXbemy" parameter="xgxt.pjpy.xbemy.pjpyxbemy" />
+
+</struts-config>

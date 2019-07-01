@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="ahjg_gyglForm" type="xgxt.xsgygl.ahjzgyxy.GyglAhjgForm"/>
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+		<!--展现的路径  安徽建筑工业学院-->
+		<action path="/wmqs_sb" forward="/ahjg_gygl.do?method=wmqsSb"/>
+		<action path="/wmqs_sh" forward="/ahjg_gygl.do?method=wmqsSbShDef"/>
+		<!--实际的路径 -->
+		<action path="/ahjg_gygl" parameter="method"  name="ahjg_gyglForm" scope="request"
+		        type="xgxt.xsgygl.ahjzgyxy.GyglAhjgAction">
+		        <forward name="wmqssb" path="/gygl/ahjzgyxy/wmqssb.jsp"></forward>
+		        <forward name="wmqsshcx" path="/gygl/ahjzgyxy/wmqsshcx.jsp"></forward>
+		        <forward name="wmqssbsh" path="/gygl/ahjzgyxy/wmqssbsh.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources"/>
+</struts-config>

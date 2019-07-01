@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzNblgActionForm"
+			type="xgxt.xszz.nblg.XszzNblgActionForm" /><!-- test.forms.DynaActionFormTest -->
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+
+		<action name="xszzNblgActionForm" parameter="method"
+			path="/nblg_xszz" scope="request"
+			type="xgxt.xszz.nblg.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- "时间维护"-->
+			<forward name="zzsjcsh" path="/about:blank" />
+			<forward name="data_zzsj" path="/xszz/nblg/data_zzsj.jsp" />
+			<forward name="zzsjEdit" path="/xszz/nblg/zzsjEdit.jsp"/>
+			<forward name="zzsjPlsz" path="/xszz/nblg/zzsjPlEdit.jsp"/>
+			<!-- "困难生"-->
+			<forward name="knssq" path="/xszz/nblg/knssq.jsp" />
+			<forward name="knssqSave" path="/xszz/nblg/knssq.jsp" />
+			<forward name="knssqb" path="/xszz/nblg/knssqb.jsp" />
+			<forward name="knsplsh" path="/xszz/nblg/knsplsh.jsp" />
+			<forward name="knssh" path="/xszz/nblg/knssh.jsp" />
+			<forward name="knsshOne" path="/xszz/nblg/knsshOne.jsp" />
+			<forward name="knsshSave" path="/xszz/nblg/knsshOne.jsp" />
+			<forward name="knsExp" path="/about:blank" />
+			<!-- "临时困难补助"-->
+			<forward name="lsknbzsq" path="/xszz/nblg/lsknbzsq.jsp" />
+			<forward name="lsknbzsqSave" path="/xszz/nblg/lsknbzsq.jsp" />
+			<forward name="lsknbzsqb" path="/xszz/nblg/lsknbzsqb.jsp" />
+			<forward name="lsknbzsh" path="/xszz/nblg/lsknbzsh.jsp" />
+			<forward name="lsknbzshOne" path="/xszz/nblg/lsknbzshOne.jsp" />
+			<forward name="lsknbzshSave" path="/xszz/nblg/lsknbzshOne.jsp" />
+			<forward name="lsknbzExp" path="/about:blank" />
+			<!-- "助学金"-->
+			<forward name="zxjsq" path="/xszz/nblg/zxjsq.jsp" />
+			<forward name="zxjsqSave" path="/xszz/nblg/zxjsq.jsp" />
+			<forward name="zxjsqb" path="/xszz/nblg/zxjsqb.jsp" />
+			<forward name="zxjsh" path="/xszz/nblg/zxjsh.jsp" />
+			<forward name="zxjshOne" path="/xszz/nblg/zxjshOne.jsp" />
+			<forward name="zxjshSave" path="/xszz/nblg/zxjshOne.jsp" />
+			<forward name="zxjExp" path="/about:blank" />
+			<!-- "国家助学金"-->
+			<forward name="gjzxjsq" path="/xszz/nblg/gjzxjsq.jsp" />
+			<forward name="gjzxjsqSave" path="/xszz/nblg/gjzxjsq.jsp" />
+			<forward name="gjzxjsqb" path="/xszz/nblg/gjzxjsqb.jsp" />
+			<forward name="gjzxjsh" path="/xszz/nblg/gjzxjsh.jsp" />
+			<forward name="gjzxjshOne" path="/xszz/nblg/gjzxjshOne.jsp" />
+			<forward name="gjzxjshSave" path="/xszz/nblg/gjzxjshOne.jsp" />
+			<forward name="gjzxjExp" path="/about:blank" />
+			<!-- "国家励志奖学金"-->
+			<forward name="gjlzjxjsq" path="/xszz/nblg/gjlzjxjsq.jsp" />
+			<forward name="gjlzjxjsqSave" path="/xszz/nblg/gjlzjxjsq.jsp" />
+			<forward name="gjlzjxjsqb" path="/xszz/nblg/gjlzjxjsqb.jsp" />
+			<forward name="gjlzjxjsh" path="/xszz/nblg/gjlzjxjsh.jsp" />
+			<forward name="gjlzjxjshOne" path="/xszz/nblg/gjlzjxjshOne.jsp" />
+			<forward name="gjlzjxjshSave" path="/xszz/nblg/gjlzjxjshOne.jsp" />
+			<forward name="gjlzjxjExp" path="/about:blank" />
+			<!-- "彩虹慈善助学金"-->
+			<forward name="chzxjsq" path="/xszz/nblg/chzxjsq.jsp" />
+			<forward name="chzxjsqSave" path="/xszz/nblg/chzxjsq.jsp" />
+			<forward name="chzxjsqb" path="/xszz/nblg/chzxjsqb.jsp" />
+			<forward name="chzxjsh" path="/xszz/nblg/chzxjsh.jsp" />
+			<forward name="chzxjshOne" path="/xszz/nblg/chzxjshOne.jsp" />
+			<forward name="chzxjshSave" path="/xszz/nblg/chzxjshOne.jsp" />
+			<forward name="chzxjExp" path="/about:blank" />
+			<!-- "慈善总会高校在校生助学金"-->
+			<forward name="zxszxjsq" path="/xszz/nblg/zxszxjsq.jsp" />
+			<forward name="zxszxjsqSave" path="/xszz/nblg/zxszxjsq.jsp" />
+			<forward name="zxszxjsqb" path="/xszz/nblg/zxszxjsqb.jsp" />
+			<forward name="zxszxjsh" path="/xszz/nblg/zxszxjsh.jsp" />
+			<forward name="zxszxjshOne" path="/xszz/nblg/zxszxjshOne.jsp" />
+			<forward name="zxszxjshSave" path="/xszz/nblg/zxszxjshOne.jsp" />
+			<forward name="zxszxjExp" path="/about:blank" />
+			<!-- "国家助学贷款"-->
+			<forward name="gjzxdksq" path="/xszz/nblg/gjzxdksq.jsp" />
+			<forward name="gjzxdksqSave" path="/xszz/nblg/gjzxdksq.jsp" />
+			<forward name="gjzxdksqb" path="/xszz/nblg/gjzxdksqb.jsp" />
+			<forward name="gjzxdksh" path="/xszz/nblg/gjzxdksh.jsp" />
+			<forward name="gjzxdkshOne" path="/xszz/nblg/gjzxdkshOne.jsp" />
+			<forward name="gjzxdkshSave" path="/xszz/nblg/gjzxdkshOne.jsp" />
+			<forward name="gjzxdkExp" path="/about:blank" />
+		</action>
+		
+		
+
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp" />
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

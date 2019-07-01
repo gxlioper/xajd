@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="fzxszForm" type="xgxt.pjpy.hntx.fzxsz.FzxszForm" />
+		<form-bean name="dypyForm" type="xgxt.pjpy.hntx.dypy.DypyForm" />
+	</form-beans>
+ 	<action-mappings>
+ 	
+ 		<action path="/hndx_fzxsz" name="fzxszForm"
+ 				parameter="method"
+ 		 		type="xgxt.pjpy.hntx.fzxsz.FzxszHndxAction"
+ 		 		scope="request">
+			<forward name="fzxszflr" path="/pjpy/hndx/fzxsz/fzxszflr.jsp"></forward>
+			<forward name="fzxszfcx" path="/pjpy/hndx/fzxsz/fzxszcx.jsp"></forward>
+			<forward name="fzxszxm" path="/pjpy/hndx/fzxsz/fzxszxm.jsp"></forward>
+			<forward name="fzxszfview" path="/pjpy/hndx/fzxsz/fzxszfview.jsp"></forward>
+			<forward name="zhszfcx" path="/pjpy/hndx/fzxsz/zhszfcx.jsp"></forward>
+ 		</action>
+ 		
+ 		<!-- 海南大学德育评议-->
+ 		<action path="/hndx_dypy" name="dypyForm"
+ 				parameter="method"
+ 		 		type="xgxt.pjpy.hntx.dypy.DypyAction"
+ 		 		scope="request">
+ 			<forward name="dypywh" path="/pjpy/hndx/dypy/dypywh.jsp"></forward>
+ 			<forward name="dypyadd" path="/pjpy/hndx/dypy/dypyadd.jsp"></forward> 
+ 			<forward name="dypyview" path="/pjpy/hndx/dypy/dypyview.jsp"></forward> 		
+ 		</action>
+ 		
+ 		<!-- 海南大学智育 -->
+ 		<action path="/hndx_zycp" name="dypyForm"
+ 				parameter="method"
+ 		 		type="xgxt.pjpy.hntx.zycp.ZycpHndxAction"
+ 		 		scope="request">
+ 			<forward name="zycpwh" path="/pjpy/hndx/zycp/zycpwh.jsp"></forward>		
+ 		</action>
+ 		
+	</action-mappings>
+	<message-resources key="zjlgPjpy" parameter="xgxt.pjpy.zjlg.zjlgPjpy" />
+</struts-config>

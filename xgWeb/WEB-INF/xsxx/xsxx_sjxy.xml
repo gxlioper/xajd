@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>		
+		<form-bean name="shgzForm" type="xgxt.studentInfo.sjxy.shgz.ShgzForm"/>
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+		<!-- <<<<<<<<<<<<<<学生信息：三江学院社会工作履历表>>>>>>>>>>>>> -->		
+		<action path="/sjxy_shgzwh" type="xgxt.studentInfo.sjxy.shgz.ShgzSjxyAction"
+			name="shgzForm" scope="request" parameter="method">
+			<forward name="shgzadd" path="/xsxx/sjxy/shgz/shgzadd.jsp"></forward>	
+			<forward name="shgzsh" path="/xsxx/sjxy/shgz/shgzsh.jsp"></forward>
+			<forward name="shgzcx" path="/xsxx/sjxy/shgz/shgzcx.jsp"></forward>
+			<forward name="shgzprint" path="/xsxx/sjxy/shgz/shgzprint.jsp"></forward>
+			<forward name="shgzcxforstu" path="/xsxx/sjxy/shgz/shgzcxforstu.jsp"></forward>
+		</action>
+	</action-mappings>	
+</struts-config>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="browserForm" type="com.zfsoft.xgxt.comm.browser.BrowserForm" />
+	</form-beans>
+	<action-mappings>
+  		<action path="/browser" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.comm.browser.BrowserAction" 
+    			name="browserForm"
+    			parameter="method">
+    		<forward name="show" path="/xsgzgl/comm/browser/browser.jsp"></forward>
+    		<forward name="message" path="/comm/message/message.jsp"></forward>
+    		<forward name="progressbar" path="/comm/message/progressBar.jsp"></forward>
+    		<forward name="demolist" path="/xsgzgl/comm/browser/progressDemo.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>

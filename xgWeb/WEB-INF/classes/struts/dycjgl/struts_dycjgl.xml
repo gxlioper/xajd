@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+
+    <form-beans>
+                                 <!-- 德育成绩管理 -->
+        <!-- 基础设置-->
+        <form-bean name="JcszForm" type="com.zfsoft.xgxt.dycjgl.jcsz.JcszForm" />
+        <!-- 代码维护-->
+        <form-bean name="DydmwhForm" type="com.zfsoft.xgxt.dycjgl.jcsz.DydmwhForm" />
+        <!-- 德育成绩管理-->
+        <form-bean name="DycjglForm" type="com.zfsoft.xgxt.dycjgl.dycjwh.DycjglForm" />
+        <!-- 我的德育-->
+        <form-bean name="WddyForm" type="com.zfsoft.xgxt.dycjgl.wddy.WddyForm" />
+        <!-- 数据查询-->
+        <form-bean name="SjcxForm" type="com.zfsoft.xgxt.dycjgl.sjcx.SjcxForm" />
+
+    </form-beans>
+
+    <action-mappings>
+                                    <!-- 德育成绩管理 -->
+        <!-- 基础设置-->
+        <action path="/dycjgl_jcsz_jcsz" forward="/dycjgl_jcsz.do?method=dycjglJcsz"/>
+
+        <action path="/dycjgl_jcsz" scope="request"
+                         type="com.zfsoft.xgxt.dycjgl.jcsz.JcszAction" name="JcszForm"
+                         parameter="method">
+        <forward name="dycjglJcsz" path="/xsgzgl/dycjgl/jcsz/dycjglJcsz.jsp" />
+    </action>
+
+        <!-- 代码维护-->
+        <action path="/dycjgl_jcsz_dmwh" forward="/dycjgl_dmwh.do?method=dycjglDmwh"/>
+
+        <action path="/dycjgl_dmwh" scope="request"
+                type="com.zfsoft.xgxt.dycjgl.jcsz.DydmwhAction" name="DydmwhForm"
+                parameter="method">
+            <forward name="dycjglDmwh" path="/xsgzgl/dycjgl/dmwh/dmwh.jsp" />
+            <forward name="addDmwh" path="/xsgzgl/dycjgl/dmwh/addDmwh.jsp" />
+            <forward name="updateDmwh" path="/xsgzgl/dycjgl/dmwh/updateDmwh.jsp" />
+        </action>
+
+        <!-- 德育成绩管理-->
+        <action path="/dycjgl_dycjwh_dycjgl" forward="/dycjwh_dycjgl.do?method=dycjglList"/>
+
+        <action path="/dycjwh_dycjgl" scope="request"
+                type="com.zfsoft.xgxt.dycjgl.dycjwh.DycjglAction" name="DycjglForm"
+                parameter="method">
+            <forward name="dycjglList" path="/xsgzgl/dycjgl/dycjgl/dycjglList.jsp" />
+            <forward name="bjmdfswh" path="/xsgzgl/dycjgl/dycjgl/bjmdfswh.jsp" />
+            <forward name="toImport" path="/xsgzgl/dycjgl/dycjgl/toImport.jsp" />
+            <forward name="importBHG" path="/xsgzgl/dycjgl/dycjgl/importBHG.jsp" />
+            <forward name="viewBjmd" path="/xsgzgl/dycjgl/dycjgl/viewBjmd.jsp" />
+        </action>
+
+        <!-- 我的德育-->
+        <action path="/dycjgl_wddy_wddy" forward="/dycjgl_wddy.do?method=wddyList"/>
+
+        <action path="/dycjgl_wddy" scope="request"
+                type="com.zfsoft.xgxt.dycjgl.wddy.WddyAction" name="WddyForm"
+                parameter="method">
+            <forward name="wddyList" path="/xsgzgl/dycjgl/wddy/wddyList.jsp" />
+        </action>
+
+        <!-- 数据查询-->
+        <action path="/dycjgl_sjcx_sjcx" forward="/dycjgl_sjcx.do?method=sjcxList"/>
+
+        <action path="/dycjgl_sjcx" scope="request"
+                type="com.zfsoft.xgxt.dycjgl.sjcx.SjcxAction" name="SjcxForm"
+                parameter="method">
+            <forward name="sjcxList" path="/xsgzgl/dycjgl/sjcx/SjcxList.jsp" />
+        </action>
+
+
+
+
+
+
+    </action-mappings>
+</struts-config>

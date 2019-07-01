@@ -1,0 +1,36 @@
+<project name="xgxt" default="all" basedir=".">
+
+  <property name="zfsoft" value="xgWeb/WEB-INF/classes/com/zfsoft/test"/>
+  <property name="files" value="xgWeb/"/>	
+  <property name="wars" value="../xgxtwar_pakage/wars"/>
+
+	
+	
+  <property name="warfile" value="${wars}/xgxt.war"/>
+
+  <target name="clean">
+    <delete dir="${wars}"/>
+  </target>
+
+  <target name="prepare" depends="clean">
+    <mkdir dir="${wars}"/>
+  </target>
+
+
+  <target name="war" depends="prepare">
+    <war warfile="${warfile}">
+      <fileset dir="${files}">
+        <exclude name="WEB-INF/classes/com/zfsoft/test/*.class"/>	
+      	<exclude name="pictures/*.jpg"/>
+      	<exclude name="pictures/*.bmp"/>
+      	<exclude name="pictures/*.jpeg"/>
+      	<exclude name="pictures/yxgl/**"/>
+      	<exclude name="pictures/fdyZp/**"/>
+      </fileset>
+    </war>
+  </target>
+	
+  <target name="all" depends="war"/>
+
+</project>
+

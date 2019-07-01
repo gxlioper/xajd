@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="cdtyGfjyForm" type="xgxt.jxgl.cdty.gfjy.CdtyGfjyForm"/>
+	</form-beans>
+	
+	<action-mappings>	
+
+		<action path="/cdtyGfjy" 
+        		parameter="method"  
+        		name="cdtyGfjyForm" 
+        		scope="request"
+		        type="xgxt.jxgl.cdty.gfjy.CdtyGfjyAction">		
+		                
+			<!-- 国防教育课程维护 begin -->
+			<forward name="kcwhManage"    path="/jxgl/cdty/gfjy/kcwhManage.jsp" />
+			<!-- 国防教育课程维护 end -->
+			
+			<!-- 国防教育课程新增、修改、查看 begin -->
+			<forward name="kcwhUpdate"    path="/jxgl/cdty/gfjy/kcwhUpdate.jsp" />
+			<!-- 国防教育课程新增、修改、查看 end -->
+			
+			<!-- 课程分维护 begin -->
+			<forward name="kcfManage"    path="/jxgl/cdty/gfjy/kcfManage.jsp" />
+			<!-- 课程分维护 end -->
+			
+			<!-- 国防教育查询 begin -->
+			<forward name="gfjycxManage"    path="/jxgl/cdty/gfjy/gfjycxManage.jsp" />
+			<!-- 国防教育查询 end -->
+			
+			<!-- 国防教育查询 begin -->
+			<forward name="checkorimport"    path="/jxgl/cdty/gfjy/checkOrImportData.jsp"/><!-- 显示选择数据检测还是数据最终导入的页面 -->
+			<!-- 国防教育查询 end -->
+			
+			<forward name="dataMatching"  path="/jxgl/cdty/gfjy/dataMatching.jsp"/><!-- 显示字段对照的页面 -->
+		</action>
+	</action-mappings>
+
+</struts-config>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+<form-beans>
+		<form-bean name="whlghxxyForm" type="xgxt.xsgygl.whlghxxy.GyglWhlghxxyForm"/>
+</form-beans>
+	<global-forwards />
+	<action-mappings>	    
+		<action path="/nwwsStat" forward="/whlghxxy_Gygl.do?method=nwwsStatIndex"/>
+		<action path="/nwwsAztj" forward="/whlghxxy_Gygl.do?method=nwwsAztj" />
+		<action path="/nwwsAytj" forward="/whlghxxy_Gygl.do?method=nwwsAytj" />
+		<action path="/nwwsAyExpData" forward="/whlghxxy_Gygl.do?method=nwwsAyExpData" />
+		<action path="/nwwsAzExpData" forward="/whlghxxy_Gygl.do?method=nwwsAzExpData" />									
+		<action path="/whlghxxy_Gygl" parameter="method"  name="whlghxxyForm" scope="request"
+		        type="xgxt.xsgygl.whlghxxy.GyglWhlghxxyAction">
+		        <forward name="nwstatindex" path="/gygl/whlghxxy/nwwsTjIndex.jsp"></forward>
+		        <forward name="nwwsAztj" path="/gygl/whlghxxy/aztj.jsp"></forward>	
+		        <forward name="anzxfdy" path="/gygl/whlghxxy/anzxfdyTj.jsp"></forward>
+		        <forward name="anzxty" path="/gygl/whlghxxy/anzxTj.jsp"></forward>
+		        <forward name="success" path="/about:blank" />	
+		        <forward name="nwwsAztj" path="/gygl/whlghxxy/nwwsAztj.jsp"></forward>
+		        <forward name="nwwsAytj" path="/gygl/whlghxxy/nwwsAytj.jsp"></forward>
+		        <forward name="nwwsAyExpData" path="/gygl/whlghxxy/nwwsAyExpData.jsp"></forward>
+		        <forward name="nwwsAzExpData" path="/gygl/whlghxxy/nwwsAzExpData.jsp"></forward>		       
+                <forward name="wsjcInput" path="/gygl/whlghxxy/wsjcInput.jsp"></forward>	
+		</action>	
+	</action-mappings>	
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources" />
+</struts-config>

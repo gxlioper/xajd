@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+	<!-- 日常事务模块 -周报-->
+	<struts-config>
+		<form-beans>
+	    	<form-bean name="xsgzzbJcszForm" type="com.zfsoft.xgxt.rcsw.xsgzzb.xsgzzbjcsz.XsgzzbJcszForm" />
+	    	<form-bean name="xsgzzbsqForm" type="com.zfsoft.xgxt.rcsw.xsgzzb.xsgzzbsq.XsgzzbsqForm" />
+	    	<form-bean name="xsgzzbshForm" type="com.zfsoft.xgxt.rcsw.xsgzzb.xsgzzbsh.XsgzzbshForm" />
+	    	<form-bean name="xsgzzbjgForm" type="com.zfsoft.xgxt.rcsw.xsgzzb.xsgzzbjg.XsgzzbjgForm" />
+	    	<form-bean name="xsgzzbCsszForm" type="com.zfsoft.xgxt.rcsw.xsgzzb.xsgzzbcssz.CsszForm" />
+		</form-beans>
+		
+		<action-mappings>
+		<action path="/rcsw_xsgzzb_cssz" forward="/rcsw_xsgzzb_csszgl.do?method=getCsszList"/>	<!-- 周报基础设置 -->
+		<action path="/rcsw_xsgzzb_csszgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.xsgzzb.xsgzzbcssz.CsszAction" 
+	   			name="xsgzzbCsszForm"         
+	   			parameter="method">	
+	   		<forward name="csszlist" path="/xsgzgl/rcsw/xsgzzb/xsgzzbcssz/wjlx/getCsszList.jsp"></forward>
+	   		<!-- 班级周报参数设置 -->
+			<forward name="add" path="/xsgzgl/rcsw/xsgzzb/xsgzzbcssz/wjlx/add.jsp"></forward>
+			<forward name="edit" path="/xsgzgl/rcsw/xsgzzb/xsgzzbcssz/wjlx/edit.jsp"></forward>
+		</action>  
+		
+		<action path="/rcsw_xsgzzb_jcsz" forward="/rcsw_xsgzzb_jcszgl.do?method=xsgzzbJcsz"/>	<!-- 周报基础设置 -->
+		<action path="/rcsw_xsgzzb_jcszgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.xsgzzb.xsgzzbjcsz.XsgzzbJcszAction" 
+	   			name="xsgzzbJcszForm"         
+	   			parameter="method">	
+	   		<forward name="xsgzzbJcsz" path="/xsgzgl/rcsw/xsgzzb/xsgzzbjcsz/xsgzzbJcsz.jsp"></forward>
+	   		<!-- 班级周报基础设置 -->
+			<forward name="bjgzzbJcsz" path="/xsgzgl/rcsw/bjgzzb/bjgzzbjcsz/bjgzzbJcsz.jsp"></forward>
+		</action>  
+		
+		<action path="/rcsw_xsgzzb_xsgzzbsq" forward="/rcsw_xsgzzb_xsgzzbsqgl.do?method=xsgzzbsqManage"/>	<!-- 周报申请 -->
+		<action path="/rcsw_xsgzzb_xsgzzbsqgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.xsgzzb.xsgzzbsq.XsgzzbsqAction" 
+	   			name="xsgzzbsqForm"         
+	   			parameter="method">	
+	   		<forward name="xsgzzbsqManage" path="/xsgzgl/rcsw/xsgzzb/xsgzzbsq/xsgzzbsqManage.jsp"></forward>
+	   		<forward name="addXsgzzbsq" path="/xsgzgl/rcsw/xsgzzb/xsgzzbsq/addXsgzzbsq.jsp"></forward>
+	   		<forward name="updateXsgzzbsq" path="/xsgzgl/rcsw/xsgzzb/xsgzzbsq/updateXsgzzbsq.jsp"></forward>
+	   		<forward name="viewXsgzzbsq" path="/xsgzgl/rcsw/xsgzzb/xsgzzbsq/viewXsgzzbsq.jsp"></forward>
+	   		<!-- 班级周报申请 -->
+	   		<forward name="bjManage" path="/xsgzgl/rcsw/bjgzzb/bjgzzbsq/bjManage.jsp"></forward>
+	   		<forward name="bjgzzbsqManage" path="/xsgzgl/rcsw/bjgzzb/bjgzzbsq/bjgzzbsqManage.jsp"></forward>
+	   		<forward name="addBjgzzbsq" path="/xsgzgl/rcsw/bjgzzb/bjgzzbsq/addBjgzzbsq.jsp"></forward>
+	   		<forward name="updateBjgzzbsq" path="/xsgzgl/rcsw/bjgzzb/bjgzzbsq/updateBjgzzbsq.jsp"></forward>
+	   		<forward name="viewBjgzzbsq" path="/xsgzgl/rcsw/bjgzzb/bjgzzbsq/viewBjgzzbsq.jsp"></forward>
+		</action>  
+		
+		<action path="/rcsw_xsgzzb_xsgzzbsh" forward="/rcsw_xsgzzb_xsgzzbshgl.do?method=xsgzzbshManage"/>	<!-- 周报审核 -->
+		<action path="/rcsw_xsgzzb_xsgzzbshgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.xsgzzb.xsgzzbsh.XsgzzbshAction" 
+	   			name="xsgzzbshForm"         
+	   			parameter="method">	
+	   		<forward name="xsgzzbshManage" path="/xsgzgl/rcsw/xsgzzb/xsgzzbsh/xsgzzbshManage.jsp"></forward>
+	   		<forward name="xsgzzbDgsh" path="/xsgzgl/rcsw/xsgzzb/xsgzzbsh/xsgzzbDgsh.jsp"></forward>
+	   		<forward name="xsgzzbPlsh" path="/xsgzgl/rcsw/xsgzzb/xsgzzbsh/xsgzzbPlsh.jsp"></forward>
+	   		<!-- 班级周报审核 -->
+	   		<forward name="bjgzzbshManage" path="/xsgzgl/rcsw/bjgzzb/bjgzzbsh/bjgzzbshManage.jsp"></forward>
+	   		<forward name="bjgzzbDgsh" path="/xsgzgl/rcsw/bjgzzb/bjgzzbsh/bjgzzbDgsh.jsp"></forward>
+	   		<forward name="bjgzzbPlsh" path="/xsgzgl/rcsw/bjgzzb/bjgzzbsh/bjgzzbPlsh.jsp"></forward>
+		</action> 
+		
+		<action path="/rcsw_xsgzzb_xsgzzbjg" forward="/rcsw_xsgzzb_xsgzzbjggl.do?method=xsgzzbjgManage"/>	<!-- 周报结果 -->
+		<action path="/rcsw_xsgzzb_xsgzzbjggl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.xsgzzb.xsgzzbjg.XsgzzbjgAction" 
+	   			name="xsgzzbjgForm"         
+	   			parameter="method">	
+	   		<forward name="xsgzzbjgManage" path="/xsgzgl/rcsw/xsgzzb/xsgzzbjg/xsgzzbjgManage.jsp"></forward>
+	   		<forward name="viewXsgzzbjg" path="/xsgzgl/rcsw/xsgzzb/xsgzzbjg/viewXsgzzbjg.jsp"></forward>
+	   		<!-- 班级周报结果 -->
+	   		<forward name="bjgzzbjgManage" path="/xsgzgl/rcsw/bjgzzb/bjgzzbjg/bjgzzbjgManage.jsp"></forward>
+	   		<forward name="viewBjgzzbjg" path="/xsgzgl/rcsw/bjgzzb/bjgzzbjg/viewBjgzzbjg.jsp"></forward>
+		</action> 
+		
+		</action-mappings>
+	</struts-config>

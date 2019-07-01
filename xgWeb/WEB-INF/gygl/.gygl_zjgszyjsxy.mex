@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/zjgszy_gygl.do" location="770,0" dimension="280,84" />
+  <StrutsActivity path="/gygl/zjgszyjsxy/mjqsDefault.jsp" location="0,204" dimension="232,48" />
+  <StrutsActivity path="/gygl/zjgszyjsxy/mjqsAdd.jsp" location="332,204" dimension="208,48" />
+  <StrutsActivity path="/gygl/zjgszyjsxy/mjqsModi.jsp" location="640,204" dimension="214,48" />
+  <StrutsActivity path="/gygl/zjgszyjsxy/gyTzzDefault.jsp" location="954,204" dimension="238,48" />
+  <StrutsActivity path="/gygl/zjgszyjsxy/gyTzzxxModi.jsp" location="1292,204" dimension="232,48" />
+  <StrutsActivity path="/gygl/zjgszyjsxy/gyTzzxxAdd.jsp" location="1624,204" dimension="226,48" />
+  <StrutsTransition id="/zjgszy_gygl.do,mjqsAdd,/gygl/zjgszyjsxy/mjqsAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="840,84" />
+      <AbsolutePoint location="840,144" />
+      <AbsolutePoint location="436,144" />
+      <AbsolutePoint location="436,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjgszy_gygl.do,mjqsDefault,/gygl/zjgszyjsxy/mjqsDefault.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="793,84" />
+      <AbsolutePoint location="793,114" />
+      <AbsolutePoint location="116,114" />
+      <AbsolutePoint location="116,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjgszy_gygl.do,tzzDefault,/gygl/zjgszyjsxy/gyTzzDefault.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="933,84" />
+      <AbsolutePoint location="933,174" />
+      <AbsolutePoint location="1073,174" />
+      <AbsolutePoint location="1073,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjgszy_gygl.do,tzzxxAdd,/gygl/zjgszyjsxy/gyTzzxxAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1026,84" />
+      <AbsolutePoint location="1026,114" />
+      <AbsolutePoint location="1737,114" />
+      <AbsolutePoint location="1737,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjgszy_gygl.do,tzzxxModi,/gygl/zjgszyjsxy/gyTzzxxModi.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="980,84" />
+      <AbsolutePoint location="980,144" />
+      <AbsolutePoint location="1408,144" />
+      <AbsolutePoint location="1408,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjgszy_gygl.do,mjqsModi,/gygl/zjgszyjsxy/mjqsModi.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="886,84" />
+      <AbsolutePoint location="886,174" />
+      <AbsolutePoint location="747,174" />
+      <AbsolutePoint location="747,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

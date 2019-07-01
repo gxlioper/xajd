@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="sztzActionForm" type="xgxt.sztz.SztzForm"/>
+	</form-beans>
+	<action-mappings>
+		<action path="/sztz_kmsl" forward="/sztz.do?method=kmslManage"/>
+		<action path="/sztz_xmcx" forward="/sztz.do?method=xmglManage"/>
+		<action path="/sztz_xmsh" forward="/sztz.do?method=xmshManage"/>
+		<action path="/sztz_sjsz" forward="/sztz.do?method=sjszManage"/>
+		<action path="/sztz_xmdy" forward="/sztz.do?method=xmdyManage"/>
+		
+		<action path="/sztz_xssq" forward="/sztz.do?method=xssqManage"/>
+		<action path="/sztz_xfsh" forward="/sztz.do?method=xfshQuery"/>
+		<action path="/sztz_xfcx" forward="/sztz.do?method=xfglManage"/>
+		<action path="/sztz_zxff" forward="/sztz.do?method=xsffManage"/>
+		
+		<action path="/sztz" 
+				parameter="method"  
+				name="sztzActionForm" 
+				scope="request"
+		        type="xgxt.sztz.SztzAction">
+		    <forward name="kmslManage" path="/sztz/kmslManage.jsp"></forward>		        
+		    <forward name="kmslUpdate" path="/sztz/kmslUpdate.jsp"></forward>		        
+		    <forward name="kmslView" path="/sztz/kmslView.jsp"></forward>		        
+		    <forward name="xmglManage" path="/sztz/xmglManage.jsp"></forward>	
+		    <forward name="xmdyManage" path="/sztz/xmdyManage.jsp"></forward>		        
+		    <forward name="xmshManage" path="/sztz/xmshManage.jsp"></forward>		        
+		    <forward name="xmsb" path="/sztz/xmsb.jsp"></forward>		        
+		    <forward name="xmsq" path="/sztz/xmsq.jsp"></forward>		        
+		    <forward name="xssqQuery" path="/sztz/xssqQuery.jsp"></forward>		        
+		    <forward name="xfshQuery" path="/sztz/xfshQuery.jsp"></forward>		        
+		    <forward name="sztzDgshView" path="/sztz/sztzDgshView.jsp"></forward>		        
+		    <forward name="xfglManage" path="/sztz/xfglManage.jsp"></forward>		        
+		    <forward name="sztzUpdate" path="/sztz/sztzUpdate.jsp"></forward>		        
+		    <forward name="xsffManage" path="/sztz/xsffManage.jsp"></forward>		        
+		    <forward name="sztzLcgz" path="/sztz/sztzLcgz.jsp"></forward>		        
+		    <forward name="sztzXmshView" path="/sztz/sztzXmshView.jsp"></forward>		        
+		    <forward name="xssqManage" path="/sztz/xssqManage.jsp"></forward>		        
+		    <forward name="sjszManage" path="/sztz/sjszManage.jsp"></forward>
+		    <forward name="sztzXmsq" path="/sztz/sztzXmsq.jsp"></forward>
+		    <forward name="ckXmsq" path="/sztz/ckXmsq.jsp"></forward>	
+		    <forward name="ckxmsb" path="/sztz/ckxmsb.jsp"></forward>	
+		    	        
+		</action>
+		
+		<action path="/sztzAjax"
+				parameter="method"  
+				name="sztzActionForm" 
+				scope="request"
+		        type="xgxt.sztz.SztzAjaxAction"
+				>
+		
+		</action>
+		
+	</action-mappings>
+</struts-config>

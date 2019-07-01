@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpySdrForm" type="xgxt.pjpy.comm.pjpy.sjcl.sjdr.PjpySjdrForm"/>
+	</form-beans>
+	
+	
+	
+	<action-mappings>
+		<action path="/pjpy_sjcl_sjdr" forward="/pjpy_comm_sjdr.do?method=pjsjdr"/>  
+		<action path="/pjpy_sjcl_sjjc" forward="/pjpy_comm_sjjc.do?method=ycsjjc"/>  
+		
+		<action path="/pjpy_comm_sjjc" 
+				parameter="method"
+				scope="request"
+				type="xgxt.pjpy.comm.pjpy.sjcl.sjjc.PjpySjjcAction"
+				>
+				<forward name="pjsjjc" path="/pjpy/comm/pjpy/sjcl/pjsjjc.jsp"/>
+		</action>
+		
+		<action path="/pjpy_comm_sjdr" 
+				name="pjpySdrForm"
+				parameter="method"
+				scope="request"
+				type="xgxt.pjpy.comm.pjpy.sjcl.sjdr.PjpySjdrAction"
+				>
+				<forward name="pjsjdr" path="/pjpy/comm/pjpy/sjcl/pjsjdr.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config>

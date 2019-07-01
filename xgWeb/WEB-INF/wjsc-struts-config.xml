@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjscForm" type="xgxt.wjsc.WjscForm" />
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/wjffManage" 
+				parameter="method"
+				name="commanForm" 
+				scope="request" 
+				type="xgxt.wjsc.WjscOperactionAction">
+				
+			<forward name="fileQuery" path="/wjsc/wjsc_fileput.jsp"></forward>
+			<forward name="wjffAdd" path="/wjsc/wjffAdd.jsp"></forward>
+			<forward name="wjffUpdate" path="/wjsc/wjffUpdate.jsp"></forward>
+		</action>
+	
+	
+		<action path="/filePutOut" parameter="filePutOut"
+			name="commanForm" scope="request" type="xgxt.wjsc.WjscAction">
+			<forward name="success" path="/wjsc/wjsc_fileput.jsp"></forward>
+			<forward name="false" path=""></forward>
+		</action>
+		<action path="/fileIncept" parameter="fileIncept"
+			name="wjscForm" scope="request" type="xgxt.wjsc.WjscAction">
+			<forward name="success" path="/wjsc/wjsc_filelist.jsp"></forward>
+			<forward name="false" path=""></forward>
+		</action>
+		<action path="/fileSave" parameter="fileSave" name="wjscForm"
+			scope="request" type="xgxt.wjsc.WjscAction">
+			<forward name="success" path="/wjffManage.do?method=wjffAdd"></forward>
+		</action>
+		<action path="/fileView" parameter="fileView" name="wjscForm"
+			scope="request" type="xgxt.wjsc.WjscAction">
+			<forward name="success" path="/wjsc/wjsc_fileincept.jsp"></forward>
+			<forward name="huizhi" path="/wjsc/wjsc_filehuizhi.jsp"></forward>
+		</action>
+		<action path="/fileDownload" parameter="fileDownload"
+			name="wjscForm" scope="request" type="xgxt.wjsc.WjscAction">
+		</action>
+		<action path="/fileManager" parameter="fileManager"
+			name="wjscForm" scope="request" type="xgxt.wjsc.WjscAction">
+			<forward name="success" path="/wjsc/wjsc_filemanager.jsp"></forward>
+		</action>
+		<action path="/fileDel" parameter="fileDel" name="wjscForm"
+			scope="request" type="xgxt.wjsc.WjscAction">
+			<forward name="success" path="/filePutOut.do"></forward>
+		</action>
+		<action path="/gwjsView" parameter="gwjsView" name="wjscForm"
+			scope="request" type="xgxt.wjsc.WjscAction">
+			<forward name="success" path="/gwjs.jsp"></forward>
+		</action>
+		
+		<action path="/gwjsMore" parameter="gwjsMore" name="wjscForm"
+			scope="request" type="xgxt.wjsc.WjscAction">
+			<forward name="success" path="/gwjsMore.jsp"></forward>
+		</action>
+		<action path="/fileExpData" parameter="fileExpData"
+			name="commanForm" scope="request" type="xgxt.wjsc.WjscAction">
+		</action>
+	</action-mappings>
+
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

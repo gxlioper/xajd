@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+	
+		<form-bean name="FyffxmForm" type="com.zfsoft.xgxt.rcsw.fyff.dmwh.ffxm.FyffxmForm"></form-bean>
+		<form-bean name="FyfftjForm" type="com.zfsoft.xgxt.rcsw.fyff.dmwh.fftj.FyfftjForm"></form-bean>
+		<form-bean name="FyffjgForm" type="com.zfsoft.xgxt.rcsw.fyff.ffjg.FyffjgForm"></form-bean>
+
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/rcsw_fyff_dmwh_ffxm" forward="/rcsw_fyff_ffxm.do?method=viewFfxm"></action>
+		<action path="/rcsw_fyff_dmwh_fftj" forward="/rcsw_fyff_fftj.do?method=viewFftj"></action>
+		
+		
+		<action path="/rcsw_fyff_fyffjg" forward="/rcsw_fyff_ffjg.do?method=viewFyffjgList"></action>
+		
+		
+		<!-- ===================================== 发放项目代码维护 ===================================================== -->	
+		
+		<action path="/rcsw_fyff_ffxm" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.fyff.dmwh.ffxm.FyffxmAction"
+    			name="FyffxmForm"
+    			parameter="method">
+    		
+    		<forward name="viewFfxm" path="/xsgzgl/rcsw/fyff/dmwh/ffxm/viewFfxm.jsp"></forward>  		<!-- 查询 -->
+	 		<forward name="addFfxm" path="/xsgzgl/rcsw/fyff/dmwh/ffxm/addFfxm.jsp"></forward>			<!-- 增加 -->
+	 		<forward name="updateFfxm" path="/xsgzgl/rcsw/fyff/dmwh/ffxm/updateFfxm.jsp"></forward>		<!-- 修改 -->
+	 		
+	 	</action>
+	 	
+	 		
+	 	<!-- ===================================== 发放项目代码维护end=================================================== -->	
+	 	
+	 	<!-- ===================================== 发放途径代码维护 ===================================================== -->	
+		
+		<action path="/rcsw_fyff_fftj" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.fyff.dmwh.fftj.FyfftjAction"
+    			name="FyfftjForm"
+    			parameter="method">
+    			
+    		<forward name="viewFftj" path="/xsgzgl/rcsw/fyff/dmwh/fftj/viewFftj.jsp"></forward>  		<!-- 查询 -->
+	 		<forward name="addFftj" path="/xsgzgl/rcsw/fyff/dmwh/fftj/addFftj.jsp"></forward>			<!-- 增加 -->
+	 		<forward name="updateFftj" path="/xsgzgl/rcsw/fyff/dmwh/fftj/updateFftj.jsp"></forward>		<!-- 修改 -->
+    		
+		</action>
+		
+	 	<!-- ===================================== 发放途径代码维护end=================================================== -->
+	 	
+	 	<!-- ===================================== 费用发放结果  ========================================================= -->	
+		
+		<action path="/rcsw_fyff_ffjg"
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.fyff.ffjg.FyffjgAction"
+    			name="FyffjgForm"
+    			parameter="method">
+    		
+    		<forward name="viewFyffjgList" path="/xsgzgl/rcsw/fyff/ffjg/viewFyffjgList.jsp"></forward>	<!-- 查询 -->
+    		<forward name="addFyffjg" 	   path="/xsgzgl/rcsw/fyff/ffjg/addFyffjg.jsp"></forward>		<!-- 增加 -->
+    		<forward name="updatePjxmjg"   path="/xsgzgl/rcsw/fyff/ffjg/updateFyffjg.jsp"></forward>	<!-- 修改 -->
+    		<forward name="oneFyffjgView" path="/xsgzgl/rcsw/fyff/ffjg/oneFyffjgView.jsp"></forward>	<!-- 单个查看发放结果 -->
+    		
+		</action>
+		
+	 	<!-- ===================================== 费用发放结果end======================================================= -->
+  
+	</action-mappings>
+	
+</struts-config>

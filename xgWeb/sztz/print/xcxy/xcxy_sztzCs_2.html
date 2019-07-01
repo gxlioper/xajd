@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<title>无标题文档</title>
+	<style>
+.weizhi{
+	position:absolute;
+	left:1cm;
+	top:1cm;
+	}
+.weizhi ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	
+	}
+.weizhi li{
+	list-style:none;
+	margin:5px 0px;
+	padding:0px;
+	}
+.weizhi h4{
+	float:left;
+	margin:10px 20px;
+	font-size:12px;
+	font-weight:normal;
+	break-all:keep-all
+	}	
+.youbianxia{
+	margin-top:5px;
+	}
+.htit{
+	font-size:14px;
+	font-style: oblique;
+	font-family:黑体;	
+	}
+div{
+   cursor:hand;
+   position: absolute; 
+   word-break:keep-all
+}	
+</style>
+	</head>
+	<script language="javascript" src="../js/jsFunction.js"></script>
+	    <script   language ="javascript" type ="text/javascript">
+var dragswitch=0
+var nsx
+function drag_dropns(name){
+temp=eval(name)
+temp.captureEvents(Event.MOUSEDOWN | Event.MOUSEUP)
+temp.onmousedown=gons
+temp.onmousemove=dragns
+temp.onmouseup=stopns
+}
+function gons(e){
+temp.captureEvents(Event.MOUSEMOVE)
+nsx=e.x
+nsy=e.y
+}
+function dragns(e){
+if (dragswitch==1){
+temp.moveBy(e.x-nsx,e.y-nsy)
+return false
+}
+}
+function stopns(){
+temp.releaseEvents(Event.MOUSEMOVE)
+}
+var dragapproved=false
+
+function drag_dropie(showimage2){
+if (dragapproved==true){
+document.getElementById(showimage2).style.pixelLeft=tempx+event.clientX-iex
+document.getElementById(showimage2).style.pixelTop=tempy+event.clientY-iey
+return false
+}
+}
+function initializedragie(showimage2){
+iex=event.clientX
+iey=event.clientY
+tempx=document.getElementById(showimage2).style.pixelLeft
+tempy=document.getElementById(showimage2).style.pixelTop
+dragapproved=true
+}
+if (document.all){
+document.onmouseup=new Function("dragapproved=false")
+}
+</script>
+	<body>
+		<table width="500" class="weizhi" style="margin-top: 60px ">
+			<tr>
+				<td align="center">
+					<ul style="margin-left: 10em;">
+						<li>
+							<h4>
+								<div class="htit" title="拓展科目">
+									社会实践与社团活动
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="拓展项目">
+									2004-2005 春 ＂大学生三下乡＂暑期社会实践活动 成果一等奖
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="拓展项目">
+									2006-2007 春 ＂大学生三下乡＂暑期社会实践活动 成果一等奖
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="拓展项目">
+									2007-2008 春 ＂大学生三下乡＂暑期社会实践活动 成果一等奖
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div class="htit" title="拓展科目">
+									思想政治与道德素养
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="拓展项目">
+									2004-2005 春 ＂大学生三下乡＂暑期社会实践活动 成果一等奖
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="拓展项目">
+									2006-2007 春 ＂大学生三下乡＂暑期社会实践活动 成果一等奖
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="拓展项目">
+									2007-2008 春 ＂大学生三下乡＂暑期社会实践活动 成果一等奖
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div class="htit" title="拓展项目">
+									文体艺术与身心发展
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="拓展项目">
+									2004-2005 春 ＂大学生三下乡＂暑期社会实践活动 成果一等奖
+								</div title="拓展项目">
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="拓展项目">
+									2006-2007 春 ＂大学生三下乡＂暑期社会实践活动 成果一等奖
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="拓展项目">
+									2007-2008 春 ＂大学生三下乡＂暑期社会实践活动 成果一等奖
+								</div>
+							</h4>
+						</li>
+					</ul>
+				</td>
+			</tr>
+
+		</table>
+		<div style="margin-top:650px;margin-left: 150px" id="zsbh"
+			nmousedown="initializedragie('zsbh')"
+			onMousemove="drag_dropie('zsbh')"
+			onMouseover="dragswitch=1;drag_dropns(zsbh)"
+			onMouseout="dragswitch=0"  title="证书编号"/>
+			123456789
+		</div>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="xwhjCsszForm" type="com.zfsoft.xgxt.xpjpy.xwhj.cssz.XwhjCsszForm"></form-bean>
+		<form-bean name="dmwhJxlbForm" type="com.zfsoft.xgxt.xpjpy.xwhj.dmwh.jxlb.DmwhJxlbForm"></form-bean>
+		<form-bean name="dmwhJxdjForm" type="com.zfsoft.xgxt.xpjpy.xwhj.dmwh.jxdj.DmwhJxdjForm"></form-bean>
+		<form-bean name="dmwhJxmcForm" type="com.zfsoft.xgxt.xpjpy.xwhj.dmwh.jxmc.DmwhJxmcForm"></form-bean>
+		
+		<form-bean name="hjsqForm" type="com.zfsoft.xgxt.xpjpy.xwhj.sq.HjsqForm"></form-bean>
+		<form-bean name="hjshForm" type="com.zfsoft.xgxt.xpjpy.xwhj.sh.HjshForm"></form-bean>
+		<form-bean name="hjjgForm" type="com.zfsoft.xgxt.xpjpy.xwhj.jg.HjjgForm"></form-bean>
+	</form-beans>
+	<action-mappings>	
+		<!-- 展现路径 -->
+		<action path="/pjpy_xwhj_cssz" forward="/xwhj_cssz.do?method=cssz"></action><!-- 参数设置查询页面 -->
+		<action path="/pjpy_hjgl_dmwh" forward="/xpj_jxlb.do?method=jxlbList"></action><!-- 奖项类别查询页面 -->
+		<action path="/pjpy_hjgl_jxdj" forward="/xpj_jxdj.do?method=jxdjList"></action><!-- 奖项等级查询页面 -->
+		<action path="/pjpy_hjgl_jxmc" forward="/xpj_jxmc.do?method=jxmcList"></action><!-- 奖项名次查询页面 -->
+		
+		<action path="/pjpy_hjgl_sq" forward="/xpj_hjsq.do?method=hjsqList"></action><!-- 获奖申请查询页面 -->
+		<action path="/pjpy_hjgl_sh" forward="/xpj_hjsh.do?method=hjshList"></action><!-- 获奖审核查询页面 -->
+		<action path="/pjpy_hjgl_jg" forward="/xpj_hjjg.do?method=hjjgList"></action><!-- 获奖结果查询页面 -->
+		
+		<!-- 实际路径 -->	
+		<action name="xwhjCsszForm" 
+				parameter="method" 
+				path="/xwhj_cssz"
+				scope="request"	
+				type="com.zfsoft.xgxt.xpjpy.xwhj.cssz.CsszAction">
+			<forward name="cssz" path="/xsgzgl/xpjpy/xwhj/cssz/cssz.jsp" /><!-- 参数设置查询页面  -->
+		</action>
+		
+		<action name="dmwhJxlbForm" 
+				parameter="method" 
+				path="/xpj_jxlb"
+				scope="request"	
+				type="com.zfsoft.xgxt.xpjpy.xwhj.dmwh.jxlb.DmwhJxlbAction">
+			<forward name="jxlbList" path="/xsgzgl/xpjpy/xwhj/dmwh/jxlb/jxlbList.jsp" /><!-- 奖项类别查询页面  -->
+			<forward name="addJxlb" path="/xsgzgl/xpjpy/xwhj/dmwh/jxlb/addJxlb.jsp" />
+			<forward name="updateJxlb" path="/xsgzgl/xpjpy/xwhj/dmwh/jxlb/updateJxlb.jsp" />
+			
+		</action>
+		
+		<action name="dmwhJxdjForm" 
+				parameter="method" 
+				path="/xpj_jxdj"
+				scope="request"	
+				type="com.zfsoft.xgxt.xpjpy.xwhj.dmwh.jxdj.DmwhJxdjAction">
+			<forward name="jxdjList" path="/xsgzgl/xpjpy/xwhj/dmwh/jxdj/jxdjList.jsp" /><!-- 奖项等级查询页面  -->
+			<forward name="addJxdj" path="/xsgzgl/xpjpy/xwhj/dmwh/jxdj/addJxdj.jsp" />
+			<forward name="updateJxdj" path="/xsgzgl/xpjpy/xwhj/dmwh/jxdj/updateJxdj.jsp" />
+		</action>
+		
+		<action name="dmwhJxmcForm" 
+				parameter="method" 
+				path="/xpj_jxmc"
+				scope="request"	
+				type="com.zfsoft.xgxt.xpjpy.xwhj.dmwh.jxmc.DmwhJxmcAction">
+			<forward name="jxmcList" path="/xsgzgl/xpjpy/xwhj/dmwh/jxmc/jxmcList.jsp" /><!-- 奖项名次查询页面  -->
+			<forward name="addJxmc" path="/xsgzgl/xpjpy/xwhj/dmwh/jxmc/addJxmc.jsp" />
+			<forward name="updateJxmc" path="/xsgzgl/xpjpy/xwhj/dmwh/jxmc/updateJxmc.jsp" />
+		</action>
+		
+		<action name="hjsqForm" 
+				parameter="method" 
+				path="/xpj_hjsq"
+				scope="request"	
+				type="com.zfsoft.xgxt.xpjpy.xwhj.sq.HjsqAction">
+			<forward name="hjsqList" path="/xsgzgl/xpjpy/xwhj/sq/hjsqList.jsp" />
+			<forward name="addHjSq" path="/xsgzgl/xpjpy/xwhj/sq/addHjSq.jsp" />
+			<forward name="editHjsq" path="/xsgzgl/xpjpy/xwhj/sq/editHjsq.jsp" />
+			<forward name="viewHjsq" path="/xsgzgl/xpjpy/xwhj/sq/viewHjsq.jsp" />
+		</action>
+		
+		<action name="hjshForm" 
+				parameter="method" 
+				path="/xpj_hjsh"
+				scope="request"	
+				type="com.zfsoft.xgxt.xpjpy.xwhj.sh.HjshAction">
+			<forward name="hjshList" path="/xsgzgl/xpjpy/xwhj/sh/hjshList.jsp" />
+			<forward name="sbDgsh" path="/xsgzgl/xpjpy/xwhj/sh/hjDgsh.jsp" />
+			<forward name="sbPlsh" path="/xsgzgl/xpjpy/xwhj/sh/hjPlsh.jsp" />
+		</action>
+		
+		<action name="hjjgForm" 
+				parameter="method" 
+				path="/xpj_hjjg"
+				scope="request"	
+				type="com.zfsoft.xgxt.xpjpy.xwhj.jg.HjjgAction">
+			<forward name="hjjgList" path="/xsgzgl/xpjpy/xwhj/jg/hjjgList.jsp" />
+			<forward name="addHjjg" path="/xsgzgl/xpjpy/xwhj/jg/addHjjg.jsp" />
+			<forward name="editHjjg" path="/xsgzgl/xpjpy/xwhj/jg/editHjjg.jsp" />
+			<forward name="viewHjjg" path="/xsgzgl/xpjpy/xwhj/jg/viewHjjg.jsp" />
+		</action>
+		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

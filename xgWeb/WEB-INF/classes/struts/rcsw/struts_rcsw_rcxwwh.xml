@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -日常行为维护-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="rcxwdmwhForm" type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwdmwh.RcxwdmwhForm" />
+    	<form-bean name="rcxwxxwhForm" type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwxxwh.RcxwxxwhForm" />
+    	<form-bean name="rcxwshForm" type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwsh.RcxwshForm" />
+    	<form-bean name="rcxwjgForm" type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwjg.RcxwjgForm" />
+    	<form-bean name="rcxwThjlForm" type="com.zfsoft.xgxt.rcsw.rcxwwh.thjl.ThjlModel" />
+    	<form-bean name="rcxwykhForm" type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwykh.RcxwykhForm" />
+    	<form-bean name="rcxwxqkhForm" type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwxqkh.RcxwxqkhForm" />
+    	
+    	<!-- 日常行为维护 new begin-->
+    	<form-bean name="rcxwdmwhNewForm" type="com.zfsoft.xgxt.rcsw.rcxwwhnew.rcxwdmwh.RcxwdmwhForm" />
+    	<form-bean name="rcxwxxwhNewForm" type="com.zfsoft.xgxt.rcsw.rcxwwhnew.rcxwxxwh.RcxwxxwhForm" />
+    	<form-bean name="rcxwshNewForm" type="com.zfsoft.xgxt.rcsw.rcxwwhnew.rcxwsh.RcxwshForm" />
+    	<form-bean name="rcxwjgNewForm" type="com.zfsoft.xgxt.rcsw.rcxwwhnew.rcxwjg.RcxwjgForm" />
+    	<!-- 日常行为维护 new end-->
+	</form-beans>
+	
+	
+	<action-mappings>
+	
+		<action path="/rcsw_rcxwwh_rcxwdmwh" forward="/rcsw_rcxwwh_rcxwdmwhgl.do?method=rcxwdlManage"/>	<!-- 日常行为代码维护 -->
+		<action path="/rcsw_rcxwwh_rcxwxxwh" forward="/rcsw_rcxwwh_rcxwxxwhgl.do?method=rcxwxxwhManage"/>	<!-- 日常行为信息维护 -->
+		<action path="/rcsw_rcxwwh_rcxwsh" forward="/rcsw_rcxwwh_rcxwshgl.do?method=rcxwshManage"/>	<!-- 日常行为信息维护 -->
+		<action path="/rcsw_rcxwwh_rcxwjg" forward="/rcsw_rcxwwh_rcxwjggl.do?method=rcxwjgManage"/>	<!-- 日常行为信息维护 -->
+		<action path="/rcsw_rcxwwh_thjl" forward="/rcsw_thjl.do?method=list"/>
+		<action path="/rcsw_rcxwwh_tjcx" forward="/rcsw_rcxwwh_rcxwjggl.do?method=getXwdlfList"/>	
+		<action path="/rcsw_rcxwwhnew_tjcx" forward="/rcsw_rcxwwhnew_rcxwjggl.do?method=getXwdlfList"/>	
+			
+		<action path="/rcsw_thjl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.rcxwwh.thjl.ThjlAction" 
+	   			name="rcxwThjlForm"         
+	   			parameter="method">	
+	   			<forward name="list" path="/xsgzgl/rcsw/rcxwwh/thjl/list.jsp"/>
+	   			<forward name="add" path="/xsgzgl/rcsw/rcxwwh/thjl/add.jsp"/>
+	   			<forward name="edit" path="/xsgzgl/rcsw/rcxwwh/thjl/edit.jsp"/>
+	   			<forward name="view" path="/xsgzgl/rcsw/rcxwwh/thjl/view.jsp"/>
+		</action>
+		
+		
+		<action path="/rcsw_rcxwwh_rcxwdmwhgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwdmwh.RcxwdmwhAction" 
+	   			name="rcxwdmwhForm"         
+	   			parameter="method">	
+	   		<forward name="rcxwdlManage" path="/xsgzgl/rcsw/rcxwwh/rcxwdmwh/rcxwdllListManage.jsp"></forward>
+	   		<forward name="rcxwlbdldmSjkg" path="/xsgzgl/rcsw/rcxwwh/rcxwdmwh/rcxwlbdldmSjkg.jsp"></forward>
+	   		<forward name="rcxwlbManage" path="/xsgzgl/rcsw/rcxwwh/rcxwdmwh/rcxwlbListManage.jsp"/>
+	   		<forward name="addRcxwdl" path="/xsgzgl/rcsw/rcxwwh/rcxwdmwh/addRcxwdl.jsp"/>
+	   		<forward name="updateRcxwdl" path="/xsgzgl/rcsw/rcxwwh/rcxwdmwh/updateRcxwdl.jsp"/>
+	   		<forward name="addRcxwlb" path="/xsgzgl/rcsw/rcxwwh/rcxwdmwh/addRcxwlb.jsp"/>
+	   		<forward name="updateRcxwlb" path="/xsgzgl/rcsw/rcxwwh/rcxwdmwh/updateRcxwlb.jsp"/>
+	   		<forward name="getXwlbList" path="/xsgzgl/rcsw/rcxwwh/rcxxxxwh/getXwlbList.jsp"/>
+		</action>
+		
+		<action path="/rcsw_rcxwwh_rcxwxxwhgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwxxwh.RcxwxxwhAction" 
+	   			name="rcxwxxwhForm"         
+	   			parameter="method">	
+	   		<forward name="rcxwxxwhManage" path="/xsgzgl/rcsw/rcxwwh/rcxxxxwh/rcxwxxwhManage.jsp"></forward>
+	   		<forward name="addXwxxwh" path="/xsgzgl/rcsw/rcxwwh/rcxxxxwh/addXwxx.jsp"></forward>
+	   		<forward name="updateXwxxwh" path="/xsgzgl/rcsw/rcxwwh/rcxxxxwh/updateXwxxwh.jsp"></forward>
+	   		<forward name="viewXwxx" path="/xsgzgl/rcsw/rcxwwh/rcxxxxwh/viewXwxx.jsp"></forward>
+		</action>
+		
+		<action path="/rcsw_rcxwwh_rcxwshgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwsh.RcxwshAction" 
+	   			name="rcxwshForm"        
+	   			parameter="method">	
+	   		<forward name="rcxwshManage" path="/xsgzgl/rcsw/rcxwwh/rcxwsh/rcxwshManage.jsp"></forward>
+	   		<forward name="rcxwDgsh" path="/xsgzgl/rcsw/rcxwwh/rcxwsh/rcxwDgsh.jsp"></forward>
+	   		<forward name="viewXwxx" path="/xsgzgl/rcsw/rcxwwh/comm/viewXwxx.jsp"></forward>
+	   		<forward name="toPlsh" path="/xsgzgl/rcsw/rcxwwh/comm/toPlsh.jsp"></forward>
+		</action>
+		
+		<action path="/rcsw_rcxwwh_rcxwjggl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwjg.RcxwjgAction" 
+	   			name="rcxwjgForm"        
+	   			parameter="method">	
+	   		<forward name="rcxwjgManage" path="/xsgzgl/rcsw/rcxwwh/rcxwjg/rcxwjgManage.jsp"></forward>
+	   		<forward name="addXwjg" path="/xsgzgl/rcsw/rcxwwh/rcxwjg/addXwjg.jsp"></forward>
+	   		<forward name="updateXwjg" path="/xsgzgl/rcsw/rcxwwh/rcxwjg/updateXwjg.jsp"></forward>
+	   		<forward name="viewXwjg" path="/xsgzgl/rcsw/rcxwwh/rcxwjg/viewXwjg.jsp"></forward>
+	   		<forward name="viewXwdljg" path="/xsgzgl/rcsw/rcxwwh/rcxwjg/viewXwdljg.jsp"></forward>
+	   		<forward name="getXwdlfList" path="/xsgzgl/rcsw/rcxwwh/rcxwjg/getXwdlfList.jsp"></forward>
+	   		<forward name="viewXwjgZjly" path="/xsgzgl/rcsw/rcxwwh/rcxwjg/viewXwjgZjly.jsp"></forward>
+		</action>
+		
+		<action path="/rcsw_rcxwwh_rcxwykh" forward="/rcsw_rcxwwh_rcxwykhgl.do?method=rcxwykhManage"/>	<!-- 日常行为月考核 -->
+		<action path="/rcsw_rcxwwh_rcxwykhgl" 
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwykh.RcxwykhAction" 
+					name="rcxwykhForm"        
+					parameter="method">	
+				<forward name="rcxwykhManage" path="/xsgzgl/rcsw/rcxwwh/rcxwykh/rcxwykhManage.jsp"></forward>
+				<forward name="viewRcxwykh" path="/xsgzgl/rcsw/rcxwwh/rcxwykh/viewRcxwykh.jsp"></forward>
+		</action>
+		
+		<action path="/rcsw_rcxwwh_rcxwxqkh" forward="/rcsw_rcxwwh_rcxwxqkhgl.do?method=rcxwxqkhManage"/>	<!-- 日常行为学期考核 -->
+		<action path="/rcsw_rcxwwh_rcxwxqkhgl" 
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.rcxwwh.rcxwxqkh.RcxwxqkhAction" 
+					name="rcxwxqkhForm"        
+					parameter="method">	
+				<forward name="rcxwxqkhManage" path="/xsgzgl/rcsw/rcxwwh/rcxwxqkh/rcxwxqkhManage.jsp"></forward>
+		</action>
+		
+		<!-- 日常行为维护 new begin-->
+		<action path="/rcsw_rcxwwhnew_rcxwdmwh" forward="/rcsw_rcxwwhnew_rcxwdmwhgl.do?method=rcxwlbManage"/>	<!-- 日常行为代码维护 -->
+		<action path="/rcsw_rcxwwhnew_rcxwdmwhgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.rcxwwhnew.rcxwdmwh.RcxwdmwhAction" 
+	   			name="rcxwdmwhNewForm"         
+	   			parameter="method">	
+	   		<forward name="rcxwdlManage" path="/xsgzgl/rcsw/rcxwwhnew/rcxwdmwh/rcxwdllListManage.jsp"></forward>
+	   		<forward name="rcxwlbdldmSjkg" path="/xsgzgl/rcsw/rcxwwhnew/rcxwdmwh/rcxwlbdldmSjkg.jsp"></forward>
+	   		<forward name="rcxwlbManage" path="/xsgzgl/rcsw/rcxwwhnew/rcxwdmwh/rcxwlbListManage.jsp"/>
+	   		<forward name="addRcxwdl" path="/xsgzgl/rcsw/rcxwwhnew/rcxwdmwh/addRcxwdl.jsp"/>
+	   		<forward name="updateRcxwdl" path="/xsgzgl/rcsw/rcxwwhnew/rcxwdmwh/updateRcxwdl.jsp"/>
+	   		<forward name="addRcxwlb" path="/xsgzgl/rcsw/rcxwwhnew/rcxwdmwh/addRcxwlb.jsp"/>
+	   		<forward name="updateRcxwlb" path="/xsgzgl/rcsw/rcxwwhnew/rcxwdmwh/updateRcxwlb.jsp"/>
+	   		<forward name="getXwlbList" path="/xsgzgl/rcsw/rcxwwhnew/rcxxxxwh/getXwlbList.jsp"/>
+	   		<forward name="rcxwxlManage" path="/xsgzgl/rcsw/rcxwwhnew/rcxwdmwh/rcxwxlListManage.jsp"/>
+	   		<forward name="addRcxwxl" path="/xsgzgl/rcsw/rcxwwhnew/rcxwdmwh/addRcxwxl.jsp"/>
+	   		<forward name="updateRcxwxl" path="/xsgzgl/rcsw/rcxwwhnew/rcxwdmwh/updateRcxwxl.jsp"/>
+		</action>
+		
+		<action path="/rcsw_rcxwwhnew_rcxwxxwh" forward="/rcsw_rcxwwhnew_rcxwxxwhgl.do?method=rcxwxxwhManage"/>	<!-- 日常行为信息维护 -->
+		<action path="/rcsw_rcxwwhnew_rcxwxxwhgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.rcxwwhnew.rcxwxxwh.RcxwxxwhAction" 
+	   			name="rcxwxxwhNewForm"         
+	   			parameter="method">	
+	   		<forward name="rcxwxxwhManage" path="/xsgzgl/rcsw/rcxwwhnew/rcxxxxwh/rcxwxxwhManage.jsp"></forward>
+	   		<forward name="addXwxxwh" path="/xsgzgl/rcsw/rcxwwhnew/rcxxxxwh/addXwxx.jsp"></forward>
+	   		<forward name="updateXwxxwh" path="/xsgzgl/rcsw/rcxwwhnew/rcxxxxwh/updateXwxxwh.jsp"></forward>
+	   		<forward name="viewXwxx" path="/xsgzgl/rcsw/rcxwwhnew/rcxxxxwh/viewXwxx.jsp"></forward>
+		</action>
+		
+		<action path="/rcsw_rcxwwhnew_rcxwsh" forward="/rcsw_rcxwwhnew_rcxwshgl.do?method=rcxwshManage"/>	<!-- 日常行为信息维护 -->
+		<action path="/rcsw_rcxwwhnew_rcxwshgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.rcxwwhnew.rcxwsh.RcxwshAction" 
+	   			name="rcxwshNewForm"        
+	   			parameter="method">	
+	   		<forward name="rcxwshManage" path="/xsgzgl/rcsw/rcxwwhnew/rcxwsh/rcxwshManage.jsp"></forward>
+	   		<forward name="rcxwDgsh" path="/xsgzgl/rcsw/rcxwwhnew/rcxwsh/rcxwDgsh.jsp"></forward>
+	   		<forward name="viewXwxx" path="/xsgzgl/rcsw/rcxwwhnew/comm/viewXwxx.jsp"></forward>
+	   		<forward name="toPlsh" path="/xsgzgl/rcsw/rcxwwhnew/comm/toPlsh.jsp"></forward>
+		</action>
+		
+		<action path="/rcsw_rcxwwhnew_rcxwjg" forward="/rcsw_rcxwwhnew_rcxwjggl.do?method=rcxwjgManage"/>	<!-- 日常行为信息维护 -->
+		<action path="/rcsw_rcxwwhnew_rcxwjggl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.rcxwwhnew.rcxwjg.RcxwjgAction" 
+	   			name="rcxwjgNewForm"        
+	   			parameter="method">	
+	   		<forward name="rcxwjgManage" path="/xsgzgl/rcsw/rcxwwhnew/rcxwjg/rcxwjgManage.jsp"></forward>
+	   		<forward name="addXwjg" path="/xsgzgl/rcsw/rcxwwhnew/rcxwjg/addXwjg.jsp"></forward>
+	   		<forward name="updateXwjg" path="/xsgzgl/rcsw/rcxwwhnew/rcxwjg/updateXwjg.jsp"></forward>
+	   		<forward name="viewXwjg" path="/xsgzgl/rcsw/rcxwwhnew/rcxwjg/viewXwjg.jsp"></forward>
+	   		<forward name="viewXwdljg" path="/xsgzgl/rcsw/rcxwwhnew/rcxwjg/viewXwdljg.jsp"></forward>
+	   		<forward name="getXwdlfList" path="/xsgzgl/rcsw/rcxwwhnew/rcxwjg/getXwdlfList.jsp"></forward>
+		</action>
+
+		<action path="/rcsw_rcxwwhnew_wjyl"
+				scope="request"
+				type="com.zfsoft.xgxt.rcsw.rcxwwhnew.comm.YlAction"
+				parameter="method">
+			<forward name="previewPdf" path="/xsgzgl/rcsw/rcxwwhnew/comm/yl_pdf.jsp"></forward>
+			<forward name="previewImage" path="/xsgzgl/rcsw/rcxwwhnew/comm/yl_image.jsp"></forward>
+		</action>
+		<!-- 日常行为维护 new end-->
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		 <form-bean name="bjlhCsszForm" type="xgxt.szdw.bjlh.cssz.BjlhCsszForm" />	
+		 <form-bean name="bjlhFdyzpForm" type="xgxt.szdw.bjlh.fdyzp.BjlhFdyzpForm" />	
+		 <form-bean name="bjlhFdycpwjForm" type="xgxt.szdw.bjlh.fdycpwj.BjlhFdycpwjForm" />	
+		 <form-bean name="bjlhFdykhForm" type="xgxt.szdw.bjlh.fdykh.BjlhFdykhForm" />				
+	</form-beans>
+
+	<global-forwards />
+	
+	<action-mappings>
+	<!-- <<<<<<<<<<<<<<<<<<思政队伍【北京联合大学】>>>>>>>>>>>>>>>>>> -->	
+
+	<!-- <<<<<<<<<<<<<<<<<<思政队伍【参数设置】>>>>>>>>>>>>>>>>>> -->		
+	<action path="/bjlh_fdykh_cssz" forward="/bjlh_cssz.do?method=fdykhCssz"/>		
+    <action 
+    	path="/bjlh_cssz" 
+    	name="bjlhCsszForm"
+    	type="xgxt.szdw.bjlh.cssz.BjlhCsszAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="cssz" path="/szdw/bjlh/cssz/fdykhCssz.jsp"/>
+    </action>
+    
+    <!-- <<<<<<<<<<<<<<<<<<思政队伍【辅导员自评】>>>>>>>>>>>>>>>>>> -->		
+	<action path="/bjlh_fdykh_fdyzp" forward="/bjlh_fdyzp.do?method=fdyzpManage"/>	
+	<action path="/bjlh_fdykh_fdyzplr" forward="/bjlh_fdyzp.do?method=fdyzpFdylr"/>
+	<action path="/bjlh_fdykh_fdyzpcx" forward="/bjlh_fdyzp.do?method=fdyzpQuery"/>	
+	<action path="/bjlh_fdykh_fdyzpdy" forward="/bjlh_fdyzp.do?method=fdyzpPrint"></action>		
+    <action 
+    	path="/bjlh_fdyzp" 
+    	name="bjlhFdyzpForm"
+    	type="xgxt.szdw.bjlh.fdyzp.BjlhFdyzpAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="manage" path="/szdw/bjlh/fdyzp/fdyzpManage.jsp"/>
+    	<forward name="edit" path="/szdw/bjlh/fdyzp/fdyzpEdit.jsp"/>
+    	<forward name="fdylr" path="/szdw/bjlh/fdyzp/fdyzpFdylr.jsp"/>
+    	<forward name="query" path="/szdw/bjlh/fdyzp/fdyzpQuery.jsp"/>
+    	<forward name="view" path="/szdw/bjlh/fdyzp/fdyzpView.jsp"/>
+    	<forward name="print" path="/szdw/bjlh/fdyzp/fdyzpPrint.jsp"></forward>
+    </action>
+    
+    <!-- <<<<<<<<<<<<<<<<<<思政队伍【辅导员测评问卷】>>>>>>>>>>>>>>>>>> -->		
+	<action path="/bjlh_fdykh_cpwjgl" forward="/bjlh_fdycpwj.do?method=cpwjglManage"/>	
+	<action path="/bjlh_fdykh_cpwjlr" forward="/bjlh_fdycpwj.do?method=cpwjglWjlr"/>
+	<action path="/bjlh_fdykh_cpwjcx" forward="/bjlh_fdycpwj.do?method=cpwjglQuery"/>
+    <action 
+    	path="/bjlh_fdycpwj" 
+    	name="bjlhFdycpwjForm"
+    	type="xgxt.szdw.bjlh.fdycpwj.BjlhFdycpwjAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="manage" path="/szdw/bjlh/fdycpwj/cpwjglManage.jsp"/>
+    	<forward name="edit" path="/szdw/bjlh/fdycpwj/cpwjglEdit.jsp"/>
+    	<forward name="stwh" path="/szdw/bjlh/fdycpwj/cpwjglStwh.jsp"/>
+    	<forward name="stwhOne" path="/szdw/bjlh/fdycpwj/cpwjglStwhOne.jsp"/>
+    	<forward name="view" path="/szdw/bjlh/fdycpwj/cpwjglView.jsp"/>
+    	<forward name="wjlr" path="/szdw/bjlh/fdycpwj/cpwjglWjlr.jsp"/>
+    	<forward name="cpwjglWjlrSingle" path="/szdw/bjlh/fdycpwj/cpwjglWjlr.jsp"/>
+    	<forward name="cpFdyList" path="/szdw/bjlh/fdycpwj/cpFdyList.jsp"/>
+    	<forward name="query" path="/szdw/bjlh/fdycpwj/cpwjglQuery.jsp"/>
+    	<forward name="tj" path="/szdw/bjlh/fdycpwj/cpwjglTj.jsp"/>
+    </action>	
+    
+    <!-- <<<<<<<<<<<<<<<<<<思政队伍【辅导员考核】>>>>>>>>>>>>>>>>>> -->	
+    <action path="/bjlh_fdykh_khdxsz" forward="/bjlh_fdykh.do?method=fdykhKhdxsz"/>	
+	<action path="/bjlh_fdykh_khcpbgl" forward="/bjlh_fdykh.do?method=fdykhKhcpbgl"/>
+	<action path="/bjlh_fdykh_xskhcp" forward="/bjlh_fdykh.do?method=fdykhXskhcp"/>	
+	<action path="/bjlh_fdykh_jskhcp" forward="/bjlh_fdykh.do?method=fdykhJskhcp"/>	
+	<action path="/bjlh_fdykh_khcptj" forward="/bjlh_fdykh.do?method=fdykhKhcptj"/>
+	<!-- 辅导员考核新版 -->
+	<action path="/bjlh_fdykh_khcptj_new" forward="/bjlh_fdykh.do?method=fdykhKhcptjNew"/>
+	<!-- 辅导员考核新版 -->	
+    <action 
+    	path="/bjlh_fdykh" 
+    	name="bjlhFdykhForm"
+    	type="xgxt.szdw.bjlh.fdykh.BjlhFdykhAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="khdxsz" path="/szdw/bjlh/fdykh/fdykhKhdxsz.jsp"/>
+    	<forward name="szedit" path="/szdw/bjlh/fdykh/fdykhEdit.jsp"/>
+    	<forward name="fdykhKhcpbgl" path="/szdw/bjlh/fdykh/fdykhKhcpbgl.jsp"/>
+    	<forward name="fdykhXskhcp" path="/szdw/bjlh/fdykh/fdykhXskhcp.jsp"/>
+    	<forward name="fdykhXskhpf" path="/szdw/bjlh/fdykh/fdykhXskhpf.jsp"/>
+    	<forward name="khFdyList" path="/szdw/bjlh/fdykh/khFdyList.jsp"></forward>
+    	<forward name="fdykhJskhcp" path="/szdw/bjlh/fdykh/fdykhJskhcp.jsp"/>
+    	<forward name="fdykhJskhpf" path="/szdw/bjlh/fdykh/fdykhJskhpf.jsp"/>
+    	<forward name="fdykhKhcptj" path="/szdw/bjlh/fdykh/fdykhKhcptj.jsp"/>
+    	<forward name="fdykhKhcptjnew" path="/szdw/bjlh/fdykh/fdykhKhcptj_new.jsp"/><!--统计查询 页面 新！-->
+    	<forward name="fdykhKhMxNew" path="/szdw/bjlh/fdykh/fdykhKhcpMx_new.jsp"/><!-- 统计查询明细页面 新开发-->
+    	<forward name="pfmxCk" path="/szdw/bjlh/fdykh/pfmxCk.jsp"/>
+
+    	<forward name="fdykhXmwh" path="/szdw/bjlh/fdykh/fdykhXmwh.jsp"/>
+    	<forward name="fdykhXmwhOne" path="/szdw/bjlh/fdykh/fdykhXmwhOne.jsp"/>
+    	<forward name="fdykhXmView" path="/szdw/bjlh/fdykh/fdykhXmView.jsp"/>
+    	<forward name="fdycjTjWh" path="/szdw/bjlh/fdykh/fdycjTjWh.jsp"/>
+    	<forward name="fdycjTjCk" path="/szdw/bjlh/fdykh/fdycjTjCk.jsp"/>
+    	
+    </action>	
+	</action-mappings>
+  <message-resources parameter="xgxt.base.ApplicationResources" /> 
+</struts-config>

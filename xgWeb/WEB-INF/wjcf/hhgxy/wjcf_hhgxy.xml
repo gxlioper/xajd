@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfHhgxyActionForm" type="xgxt.wjcf.hhgxy.WjcfHhgxyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/wjcfhhgxywh"
+				type="xgxt.wjcf.hhgxy.WjcfHhgxyAction"
+				name="wjcfHhgxyActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="cfbprint"     path="/wjcf/hhgxy/wjcfysbprint.jsp" />
+			<forward name="jdprint"      path="/wjcf/hhgxy/wjcfjdprint.jsp"></forward>
+			<forward name="ssPrint"      path="/wjcf/hhgxy/wjcfssprint.jsp"></forward>
+			<forward name="ssjdPrint"    path="/wjcf/hhgxy/wjcfssjdprint.jsp"></forward>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="wjcfgdby" parameter="xgxt.wjcf.gdby.wjcfgdby" />
+
+</struts-config>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="jyglTablesForm" type="xgxt.jygl.tables.JyglTablesForm" />
+	</form-beans>
+	
+	<action-mappings>
+		<action path="/njjs_jytjb" forward="/jyglTables.do?method=showStudents"/>
+		<action 
+			name="jyglTablesForm" 
+			parameter="method"
+			path="/jyglTables" 
+			scope="request"
+			type="xgxt.jygl.tables.JyglTablesAction">
+			
+			<forward name="showStudents" path="/jygl/tables/showStudents.jsp"/>
+			<forward name="njjsJytjbUpdate" path="/jygl/tables/njjsJytjbUpdate.jsp"/>
+			<forward name="plszDykc" path="/jygl/tables/plszDykc.jsp"/>
+			<forward name="dgszDykc" path="/jygl/tables/dgszDykc.jsp"/>
+			<forward name="printNjjsJytjb" path="/jygl/tables/printNjjsJytjb.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config>

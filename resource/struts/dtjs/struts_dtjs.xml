@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<!-- 学生党团信息管理 -->
+    	<form-bean name="dtjsDtxxglForm" type="xsgzgl.dtjs.dtxxgl.DtxxglForm" />
+    	
+    	<!-- =====================================伟大的骆 begin===================================================== -->	
+		<form-bean name="dtjsGeneralForm" type="xsgzgl.dtjs.general.DtjsGeneralForm" />
+		<!-- =====================================伟大的骆 end===================================================== -->	
+	</form-beans>
+
+	<action-mappings>
+		<action path="/dtjs_dtxxgl_dtxxgl" 	forward="/dtjs_dtxxgl.do?method=dtxxglManage"/>			<!-- 党团信息管理 -->
+		<action path="/dtjs_dtxxgl_dtxxcx" 	forward="/dtjs_dtxxgl.do?method=dtxxglQuery"/>			<!-- 党团信息管理 -->
+		<action path="/dtjs_dtxxgl_dtxxtj" 	forward="/dtjs_dtxxgl.do?method=dtxxtj"/>				<!-- 党团信息统计 -->
+		
+		<!-- =====================================伟大的骆 begin===================================================== -->	
+		<action path="/dtjs_general_tyjf" 	forward="/general_dtjs.do?method=tyjfManage"/>			<!-- 团员缴费 -->
+		<!-- =====================================伟大的骆 end===================================================== -->	
+		
+    	<!-- =====================================党团信息管理===================================================== -->	
+    	<action path="/dtjs_dtxxgl" 
+    			scope="request"
+    			type="xsgzgl.dtjs.dtxxgl.DtxxglAction" 
+    			name="dtjsDtxxglForm"
+    			parameter="method">	
+    		<forward name="dtxxglManage" path="/xsgzgl/dtjs/dtxxgl/dtxxglManage.jsp"/>
+    		<forward name="dtxxAdd" path="/xsgzgl/dtjs/dtxxgl/dtxxAdd.jsp"/>
+    		<forward name="dtxxUpdate" path="/xsgzgl/dtjs/dtxxgl/dtxxUpdate.jsp"/>
+    		<forward name="dtxxView" path="/xsgzgl/dtjs/dtxxgl/dtxxView.jsp"/>
+    		<forward name="dtxxglQuery" path="/xsgzgl/dtjs/dtxxgl/dtxxglQuery.jsp"/>
+    		<forward name="importData" path="/xsgzgl/dtjs/dtxxgl/dtxxImportData.jsp"/>
+    		<forward name="dtxxtj"	 path="/xsgzgl/dtjs/cxtj/xsdtxxtj.jsp"/>
+		</action>		
+		
+		<!-- =====================================伟大的骆 begin=================================================== -->	
+		<action path="/general_dtjs" 
+    			scope="request"
+    			type="xsgzgl.dtjs.general.DtjsGeneralAction" 
+    			name="dtjsGeneralForm"
+    			parameter="method">	
+		</action>
+		
+		<!-- 团员缴费 -->
+		<action path="/general_dtjs_tyjf_ajax" 
+    			scope="request"
+    			type="xsgzgl.dtjs.general.tyjf.DtjsTyjfAction" 
+    			name="dtjsGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		<!-- =====================================伟大的骆 end===================================================== -->	
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+ 		
+<struts-config>
+	<form-beans>
+		<form-bean name="TsxsglForm" type="com.zfsoft.xgxt.xsxx.tsxsgl.tsxswh.TsxsglForm"/>
+		<form-bean name="XslxwhForm" type="com.zfsoft.xgxt.xsxx.tsxsgl.xslxwh.XslxwhForm"/>
+	</form-beans>
+ 	<action-mappings>
+		
+ 		  <!-- 特殊学生管理 -->
+ 		 <action path="/tsxsgl_tsxswh"  forward="/tsxs_tsxswh.do?method=tsxsglManage" /> 
+		<action path="/tsxsgl_xslxwh"  forward="/tsxs_xslxwh.do?method=xslxwhManage" /> 
+ 	      <!-- 特殊学生管理 -->
+ 	     <action path="/tsxs_tsxswh"
+ 	     		 name="TsxsglForm"
+ 	     		 type="com.zfsoft.xgxt.xsxx.tsxsgl.tsxswh.TsxsglAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	       <forward name="tsxsglManage" path="/xsgzgl/xsxx/tsxsgl/tsxsglManage.jsp"/>
+ 	       <forward name="tsxsAdd" path="/xsgzgl/xsxx/tsxsgl/tsxsAdd.jsp"/>
+ 	       <forward name="tsxsUpdate" path="/xsgzgl/xsxx/tsxsgl/tsxsUpdate.jsp"/>
+ 	       <forward name="setBatchGzzt" path="/xsgzgl/xsxx/tsxsgl/setBatchGzzt.jsp"/>
+ 	       <forward name="tsxsView" path="/xsgzgl/xsxx/tsxsgl/tsxsView.jsp"/>
+ 	     </action> 
+ 	     <!-- 学生类型维护 -->
+ 	     <action path="/tsxs_xslxwh"
+ 	     		 name="XslxwhForm"
+ 	     		 type="com.zfsoft.xgxt.xsxx.tsxsgl.xslxwh.XslxwhAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+			<forward name="xslxManage" path="/xsgzgl/xsxx/tsxsgl/xslxwh/xslxglManage.jsp"/>
+			<forward name="addXslx" path="/xsgzgl/xsxx/tsxsgl/xslxwh/addXslx.jsp"/>
+			<forward name="updateXslx" path="/xsgzgl/xsxx/tsxsgl/xslxwh/updateXslx.jsp"/>
+			
+ 	     </action>   
+ 	  
+	</action-mappings>
+
+</struts-config>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/loftyReport.do" location="50,50" dimension="280,84" />
+  <StrutsActivity path="/xsxx/zzdx/printGjbb.jsp" location="650,150" dimension="184,48" />
+  <StrutsActivity path="/errMsg.do" location="950,50" dimension="106,72" />
+  <StrutsActivity path="/sjcz/stu_info_query.jsp" location="650,50" dimension="184,48" />
+  <StrutsActivity path="about:blank" />
+  <StrutsTransition id="/loftyReport.do,success,/xsxx/zzdx/printGjbb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="190,134" />
+      <AbsolutePoint location="190,174" />
+      <AbsolutePoint location="650,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loftyReport.do,toexcel,about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="190,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loftyReport.do,false,/errMsg.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="330,113" />
+      <AbsolutePoint location="950,113" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

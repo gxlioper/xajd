@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到安徽建工的配置文件,pjpy_xnmz.xml    -->
+		<action path="/pjpy_xnmz_xscjwh" 	   forward="/pjpyxnmzwh.do?method=xjcjjdSjtb"></action><!-- 学生成绩绩点数据同步默认页面 -->
+		<action path="/pjpy_xnmz_xjcjjttb"     forward="/pjpyxnmzwh.do?method=xjcjjtTb"></action>
+		<action path="/pjpy_xnmz_cjjdqry"      forward="/pjpyxnmzwh.do?method=cjjdQry"></action>
+		<action path="/pjpy_xnmz_zhszcp"       forward="/pjpyxnmzwh.do?method=zhszcp"></action>
+		<action path="/pjpy_xnmz_zhszcpqry"    forward="/pjpyxnmzwh.do?method=zhszcpQry"></action>
+		<action path="/pjpy_xnmz_tjsz"         forward="/pjpyxnmzwh.do?method=tjsz"></action>
+		<action path="/pjpy_xnmz_tjszqry"      forward="/pjpyxnmzwh.do?method=tjszQry"></action>
+		<action path="/pjpy_xnmz_zyxfadd"      forward="/pjpyxnmzwh.do?method=zyxfAdd"></action>
+		<action path="/xnmz_zyxfsave"          forward="/pjpyxnmzwh.do?method=zyxfsave"></action>
+		<action path="/pjpy_xnmz_zyxfmodi"     forward="/pjpyxnmzwh.do?method=zyxfmodi"></action>
+		<action path="/xnmz_zyxfmodisave"      forward="/pjpyxnmzwh.do?method=zyxfmodisave"></action>
+		<action path="/xnmz_xfdel"             forward="/pjpyxnmzwh.do?method=xfdel"></action>
+		<action path="/pjpy_xnmz_jxjsh"        forward="/pjpyxnmzwh.do?method=jxjSh"></action>
+		<action path="/pjpy_xnmz_jxjshqry"     forward="/pjpyxnmzwh.do?method=jxjshQry"></action>
+		<action path="/pjpy_xnmz_jxjshres"     forward="/pjpyxnmzwh.do?method=jxjshres"></action>
+	</action-mappings>
+</struts-config>

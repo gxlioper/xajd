@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyHzzyActionForm" type="xgxt.pjpy.hzy.PjpyHzzyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpyhzzywh"
+				type="xgxt.pjpy.hzy.PjpyHzzyAction"
+				name="pjpyHzzyActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="cjimp"             path="/pjpy/hzy/cjimp.jsp" />
+			<forward name="zhszcpdefault"     path="/pjpy/hzy/zhszcp/default.jsp"></forward>
+			<forward name="zhszcpadd"         path="/pjpy/hzy/zhszcp/add.jsp"></forward>
+			<forward name="zhszcpview"        path="/pjpy/hzy/zhszcp/view.jsp"></forward>	
+			<forward name="hzyrychprint"      path="/pjpy/hzy/hzyrychprint.jsp"></forward>
+			<forward name="jxjmodiview"       path="/pjpy/hzy/jxj/edit.jsp"></forward>
+			<forward name="rychmodiview"      path="/pjpy/hzy/rych/edit.jsp"></forward>
+			<forward name="hzzyzsld"          path="/pjpy/hzy/zsld.jsp"></forward>
+			<forward name="hzzyrychld"        path="/pjpy/hzy/rychld.jsp"></forward>
+			<forward name="plqmpage"          path="/pjpy/hzy/plqmpage.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources key="pjpyhzzy" parameter="xgxt.pjpy.hzy.pjpyhzzy" />
+</struts-config>

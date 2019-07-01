@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE exports[
+	<!ELEMENT exports (entry*)>
+	<!ELEMENT entry (title,sql)>
+	<!ATTLIST entry id CDATA "">
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title en CDATA "">
+	<!ELEMENT sql (#PCDATA)>
+	<!ATTLIST sql parameter CDATA "">
+]>
+<exports>
+	<entry id="gyglnew_cwgl_cwgl.do">
+		<title en="ldmc-qsh-cwh-nj-xymc-bjmc-xh-xm-jg-lxdh-bzr-sfbl-blbz">
+			楼栋名称-寝室号-床位号-年级-学院-班级-学号-姓名-籍贯-联系电话-班主任-是否保留-保留备注
+		</title>
+		<sql>
+			<![CDATA[
+			select rownum r,a.* from (select lddm||qsh||cwh pkValue,a.ch,a.lddm,a.qsxb,a.sfrz,a.sffpxy,a.ldmc,a.qsh,a.cwh,a.xh,a.sfbl,a.blbz,
+              b.nj,b.xymc,b.xydm,b.zydm,b.bjdm,b.bjmc,b.xm,(select qxmc from dmk_qx c where c.qxdm= b.jg) jg,
+              c.bzr,sjhm||' '||jtdh lxdh,
+              (case when a.xydm is not null or a.nj is not null or a.xh is not null then 'disabled' else '' end) dis
+              from view_xg_gygl_new_cwxx a left join view_xsxxb b on a.xh=b.xh left join 
+              (select bjdm,wmsys.wm_concat(bzr) bzr from 
+              (select a.bjdm,b.xm||b.lxdh bzr from bzrbbb a left join fdyxxb b on a.zgh=b.zgh) group by bjdm) c on a.bjdm=c.bjdm
+              order by a.lddm,to_number(a.ch),a.qsh,a.cwh) a where 1=1
+			]]>
+		</sql>
+	</entry>
+	<entry id="gyglnew_zsxxgl_zsxxgl.do">
+		<title en="ldmc-qsh-cwh-nj-xymc-bjmc-xh-xm-sfbl-bzr"> 
+			楼栋名称-寝室号-床位号-年级-学院-班级-学号-姓名-是否保留-班主任
+		</title>
+		<sql>
+			<![CDATA[
+			select rownum r,a.* from (select lddm||qsh||cwh pkValue,a.*,b.xm, case when substr(jg,3,2) = '00' then substr(jg,1,2) 
+        		else substr(jg,3,2) end jg, 
+        		(case when a.xydm is not null or a.nj is not null or a.xh is not null then 'disabled' else '' end) dis,
+        		sjhm||'  '||lxdh lxfs,bzr from view_xg_gygl_new_cwxx a left join xsxxb b on a.xh=b.xh 
+        		left join (select wmsys.wm_concat(bzr) bzr,bjdm from
+        		(select a.bjdm,b.xm||b.lxdh||' '||yddh bzr from bzrbbb a left join fdyxxb b on a.zgh=b.zgh )  group by bjdm ) c 
+           		 on b.bjdm=c.bjdm  order by a.lddm,to_number(a.ch),a.qsh,a.cwh) a where 1=1   
+			]]>
+		</sql>
+	</entry>
+	
+	<!-- 南通职业大学个性化导出部分 -->
+	<entry id="gyglnew_zsxxgl_zsxxgl_ntzydx.do">
+		<title en="ldmc-qsh-cwh-nj-xymc-xh-xm-sfbl-rxfsmc">
+			楼栋名称-寝室号-床位号-年级-学院-学号-姓名-是否保留-入学方式
+		</title>
+		<sql>
+			<![CDATA[
+				select rownum r,a.* from (select lddm||qsh||cwh pkValue,a.*,b.xm,b.rxfs rxfsdm,
+				(select rxfsmc from xg_xsxx_rxfsdmb x where x.rxfsdm=b.rxfs) rxfsmc,
+				(case when a.xydm is not null or a.nj is not null or a.xh is not null then 'disabled' else '' end) dis
+				from view_xg_gygl_new_cwxx a left join view_xsxxb b on a.xh=b.xh order by a.lddm,to_number(a.ch),a.qsh,a.cwh) a
+				where 1=1 
+			]]>
+		</sql>
+	</entry>
+	
+	<entry id="gyglnew_xszstj_xszstj.do">
+		<title en="xymc-nj-zrs-zxrs-zxrsbfb-wzxrs-wzxrsbfb-mrs-mrsbfb-zxmrs-zxmrsbfb-wzxmrs-wzxmrsbfb-wrs-wrsbfb-zxwrs-zxwrsbfb-wzxwrs-wzxwrsbfb">
+			学院-年级-总人数-住校总人数-住校总人数百分比-未住校总人数-未住校总人数百分比-
+			男生数-男生数百分比-住校男生数-住校男生百分比-未住校男生数-未住校男生数百分比-
+			女生数-女生数百分比-住校女生数-住校女生百分比-未住校女生数-未住校女生数百分比
+		</title>
+		<sql>
+			<![CDATA[
+				     select a.*,
+					(case when zrs<>0 then to_char(round(zxrs/zrs*100,2),'990.99') else '0' end)||'%' zxrsbfb, 
+					(case when zrs<>0 then to_char(round(wzxrs/zrs*100,2),'990.99') else '0' end)||'%' wzxrsbfb, 
+					(case when zrs<>0 then to_char(round(mrs/zrs*100,2),'990.99') else '0' end)||'%' mrsbfb, 
+					(case when zrs<>0 then to_char(round(wrs/zrs*100,2),'990.99') else '0' end)||'%' wrsbfb, 
+					(case when zxrs<>0 then to_char(round(zxmrs/zxrs*100,2),'990.99') else '0' end)||'%' zxmrsbfb, 
+					(case when zxrs<>0 then to_char(round(zxwrs/zxrs*100,2),'990.99') else '0' end)||'%' zxwrsbfb, 
+					(case when wzxrs<>0 then to_char(round(wzxmrs/wzxrs*100,2),'990.99') else '0' end)||'%' wzxmrsbfb, 
+					(case when wzxrs<>0 then to_char(round(wzxwrs/wzxrs*100,2),'990.99') else '0' end)||'%' wzxwrsbfb 
+					from (select a.nj,a.xydm,a.xymc,count(1) zrs, 
+					count(case when a.xb='男' then 1 end) mrs, 
+					count(case when a.xb='女' then 1 end) wrs, 
+					count(case when b.xh is not null then 1 end) zxrs, 
+					count(case when a.xb='男' and b.xh is not null then 1 end) zxmrs, 
+					count(case when a.xb='女' and b.xh is not null then 1 end) zxwrs, 
+					count(case when b.xh is null then 1 end) wzxrs, 
+					count(case when a.xb='男' and b.xh is null then 1 end) wzxmrs, 
+					count(case when a.xb='女' and b.xh is null then 1 end) wzxwrs 
+					from view_xsjbxx a left join xg_gygl_new_cwxxb b on a.xh=b.xh 
+					group by a.nj,a.xydm,a.xymc 
+					order by a.xydm,a.nj) a where 1=1 
+			]]>
+		</sql>
+	</entry>
+	
+	<entry id="gyglnew_xszstj_xszstj_cqgs.do">
+		<title en="xymc-nj-zrs-zxrs-zxrsbfb-fzfzrs-fzfzrsbfb-zdrs-zdrsbfb-mrs-mrsbfb-zxmrs-zxmrsbfb-fzfzmrs-fzfzmrsbfb-zdmrs-zdmrsbfb-wrs-wrsbfb-zxwrs-zxwrsbfb-fzfzwrs-fzfzwrsbfb-zdwrs-zdwrsbfb">
+			学院-年级-总人数-住校总人数-住校总人数百分比-未走读未住宿总人数-未走读未住宿总人数-走读总人数-走读总人数百分比-
+			男生数-男生数百分比-住校男生数-住校男生百分比-未走读未住宿男生人数-未走读未住宿男生人数百分比-走读男生人数-走读男生人数百分比-
+			女生数-女生数百分比-住校女生数-住校女生百分比-未走读未住宿女生人数-未走读未住宿女生人数百分比-走读女生人数-走读女生人数百分比
+		</title>
+		<sql>
+			<![CDATA[
+				     select a.*,
+					(case when zrs<>0 then to_char(round(zxrs/zrs*100,2),'990.99') else '0' end)||'%' zxrsbfb, 
+					(case when zrs<>0 then to_char(round(wzxrs/zrs*100,2),'990.99') else '0' end)||'%' wzxrsbfb, 
+					(case when zrs<>0 then to_char(round(mrs/zrs*100,2),'990.99') else '0' end)||'%' mrsbfb, 
+					(case when zrs<>0 then to_char(round(wrs/zrs*100,2),'990.99') else '0' end)||'%' wrsbfb, 
+					(case when zxrs<>0 then to_char(round(zxmrs/zxrs*100,2),'990.99') else '0' end)||'%' zxmrsbfb, 
+					(case when zxrs<>0 then to_char(round(zxwrs/zxrs*100,2),'990.99') else '0' end)||'%' zxwrsbfb, 
+					(case when wzxrs<>0 then to_char(round(wzxmrs/wzxrs*100,2),'990.99') else '0' end)||'%' wzxmrsbfb, 
+					(case when wzxrs<>0 then to_char(round(wzxwrs/wzxrs*100,2),'990.99') else '0' end)||'%' wzxwrsbfb,
+				    (case when zrs<>0 and fzfzrs <> 0 then to_char(round(fzfzrs/zrs*100,2),'990.99') else '0%' end) fzfzrsbfb,
+					(case when zrs<>0 and zdrs <> 0 then to_char(round(zdrs/zrs*100,2),'990.99') else '0%' end) zdrsbfb,
+					(case when mrs<>0 and fzfzmrs <> 0 then to_char(round(fzfzmrs/mrs*100,2),'990.99') else '0%' end) fzfzmrsbfb,
+					(case when mrs<>0 and zdmrs <> 0 then to_char(round(zdmrs/mrs*100,2),'990.99') else '0%' end) zdmrsbfb,
+					(case when wrs<>0 and fzfzwrs <> 0 then to_char(round(fzfzwrs/wrs*100,2),'990.99') else '0%' end) fzfzwrsbfb,
+					(case when wrs<>0 and zdwrs <> 0 then to_char(round(zdwrs/wrs*100,2),'990.99') else '0%' end) zdwrsbfb 
+					from (select a.nj,a.xydm,a.xymc,count(1) zrs, 
+					count(case when a.xb='男' then 1 end) mrs, 
+					count(case when a.xb='女' then 1 end) wrs, 
+					count(case when b.xh is not null then 1 end) zxrs, 
+					count(case when a.xb='男' and b.xh is not null then 1 end) zxmrs, 
+					count(case when a.xb='女' and b.xh is not null then 1 end) zxwrs, 
+					count(case when b.xh is null then 1 end) wzxrs, 
+					count(case when a.xb='男' and b.xh is null then 1 end) wzxmrs, 
+					count(case when a.xb='女' and b.xh is null then 1 end) wzxwrs,
+					count(case when b.xh is null and c.xh is null then 1 end) fzfzrs,
+				    count(case when c.xh is not null then 1 end) zdrs,
+				    count(case when a.xb='男' and b.xh is null and c.xh is null then 1 end) fzfzmrs,
+				    count(case when a.xb='男' and c.xh is not null then 1 end) zdmrs,
+				    count(case when a.xb='女' and b.xh is null and c.xh is null then 1 end) fzfzwrs,
+				    count(case when a.xb='女' and c.xh is not null then 1 end) zdwrs
+					from view_xsjbxx a left join xg_gygl_new_cwxxb b on a.xh=b.xh
+					left join xg_gygl_new_bzxbzb c on a.xh = c.xh and c.bzxbz is not null
+					group by a.nj,a.xydm,a.xymc 
+					order by a.xydm,a.nj) a where 1=1 
+			]]>
+		</sql>
+	</entry>
+	
+	<entry id="gyglnew_xszstj_detail.do">
+		<title en="xymc-nj-bjmc-zrs-zxrs-zxrsbfb-wzxrs-wzxrsbfb-mrs-mrsbfb-zxmrs-zxmrsbfb-wzxmrs-wzxmrsbfb-wrs-wrsbfb-zxwrs-zxwrsbfb-wzxwrs-wzxwrsbfb">
+			学院-年级-班级-总人数-住校总人数-住校总人数百分比-未住校总人数-未住校总人数百分比-
+			男生数-男生数百分比-住校男生数-住校男生百分比-未住校男生数-未住校男生数百分比-
+			女生数-女生数百分比-住校女生数-住校女生百分比-未住校女生数-未住校女生数百分比
+		</title>
+		<sql parameter="nj-xydm">
+			<![CDATA[
+				     select a.*, 
+			  		(case when zrs<>0 then to_char(round(zxrs/zrs*100,2),'990.99') else '0' end)||'%' zxrsbfb, 
+			  		(case when zrs<>0 then to_char(round(wzxrs/zrs*100,2),'990.99') else '0' end)||'%' wzxrsbfb, 
+			  		(case when zrs<>0 then to_char(round(mrs/zrs*100,2),'990.99') else '0' end)||'%' mrsbfb, 
+			  		(case when zrs<>0 then to_char(round(wrs/zrs*100,2),'990.99') else '0' end)||'%' wrsbfb, 
+			  		(case when zxrs<>0 then to_char(round(zxmrs/zxrs*100,2),'990.99') else '0' end)||'%' zxmrsbfb, 
+			  		(case when zxrs<>0 then to_char(round(zxwrs/zxrs*100,2),'990.99') else '0' end)||'%' zxwrsbfb, 
+			  		(case when wzxrs<>0 then to_char(round(wzxmrs/wzxrs*100,2),'990.99') else '0' end)||'%' wzxmrsbfb, 
+			  		(case when wzxrs<>0 then to_char(round(wzxwrs/wzxrs*100,2),'990.99') else '0' end)||'%' wzxwrsbfb 
+			  		from ( select a.nj,a.xydm,a.xymc,a.bjdm,a.bjmc,count(1) zrs, 
+					count(case when a.xb='男' then 1 end) mrs, 
+					count(case when a.xb='女' then 1 end) wrs, 
+					count(case when b.xh is not null then 1 end) zxrs, 
+					count(case when a.xb='男' and b.xh is not null then 1 end) zxmrs, 
+					count(case when a.xb='女' and b.xh is not null then 1 end) zxwrs, 
+					count(case when b.xh is null then 1 end) wzxrs, 
+					count(case when a.xb='男' and b.xh is null then 1 end) wzxmrs, 
+					count(case when a.xb='女' and b.xh is null then 1 end) wzxwrs 
+					from view_xsjbxx a left join xg_gygl_new_cwxxb b on a.xh=b.xh 
+					where a.nj=? and a.xydm=? 
+					group by a.nj,a.xydm,a.xymc,a.bjdm,a.bjmc 
+					order by a.xydm,a.nj,bjdm) a where 1=1 
+			]]>
+		</sql>
+	</entry>
+	
+	<entry id="gyglnew_xszstj_detail_cqgs.do">
+		<title en="xymc-nj-zrs-zxrs-zxrsbfb-fzfzrs-fzfzrsbfb-zdrs-zdrsbfb-mrs-mrsbfb-zxmrs-zxmrsbfb-fzfzmrs-fzfzmrsbfb-zdmrs-zdmrsbfb-wrs-wrsbfb-zxwrs-zxwrsbfb-fzfzwrs-fzfzwrsbfb-zdwrs-zdwrsbfb">
+			学院-年级-总人数-住校总人数-住校总人数百分比-未走读未住宿总人数-未走读未住宿总人数-走读总人数-走读总人数百分比-
+			男生数-男生数百分比-住校男生数-住校男生百分比-未走读未住宿男生人数-未走读未住宿男生人数百分比-走读男生人数-走读男生人数百分比-
+			女生数-女生数百分比-住校女生数-住校女生百分比-未走读未住宿女生人数-未走读未住宿女生人数百分比-走读女生人数-走读女生人数百分比
+		</title>
+		<sql parameter="nj-xydm">
+			<![CDATA[
+				     select a.*, 
+			  		(case when zrs<>0 then to_char(round(zxrs/zrs*100,2),'990.99') else '0' end)||'%' zxrsbfb, 
+			  		(case when zrs<>0 then to_char(round(wzxrs/zrs*100,2),'990.99') else '0' end)||'%' wzxrsbfb, 
+			  		(case when zrs<>0 then to_char(round(mrs/zrs*100,2),'990.99') else '0' end)||'%' mrsbfb, 
+			  		(case when zrs<>0 then to_char(round(wrs/zrs*100,2),'990.99') else '0' end)||'%' wrsbfb, 
+			  		(case when zxrs<>0 then to_char(round(zxmrs/zxrs*100,2),'990.99') else '0' end)||'%' zxmrsbfb, 
+			  		(case when zxrs<>0 then to_char(round(zxwrs/zxrs*100,2),'990.99') else '0' end)||'%' zxwrsbfb, 
+			  		(case when wzxrs<>0 then to_char(round(wzxmrs/wzxrs*100,2),'990.99') else '0' end)||'%' wzxmrsbfb, 
+			  		(case when wzxrs<>0 then to_char(round(wzxwrs/wzxrs*100,2),'990.99') else '0' end)||'%' wzxwrsbfb,
+			  		(case when zrs<>0 and fzfzrs <> 0 then to_char(round(fzfzrs/zrs*100,2),'990.99') else '0%' end) fzfzrsbfb,
+					(case when zrs<>0 and zdrs <> 0 then to_char(round(zdrs/zrs*100,2),'990.99') else '0%' end) zdrsbfb,
+					(case when mrs<>0 and fzfzmrs <> 0 then to_char(round(fzfzmrs/mrs*100,2),'990.99') else '0%' end) fzfzmrsbfb,
+					(case when mrs<>0 and zdmrs <> 0 then to_char(round(zdmrs/mrs*100,2),'990.99') else '0%' end) zdmrsbfb,
+					(case when wrs<>0 and fzfzwrs <> 0 then to_char(round(fzfzwrs/wrs*100,2),'990.99') else '0%' end) fzfzwrsbfb,
+					(case when wrs<>0 and zdwrs <> 0 then to_char(round(zdwrs/wrs*100,2),'990.99') else '0%' end) zdwrsbfb 
+			  		from ( select a.nj,a.xydm,a.xymc,a.bjdm,a.bjmc,count(1) zrs, 
+					count(case when a.xb='男' then 1 end) mrs, 
+					count(case when a.xb='女' then 1 end) wrs, 
+					count(case when b.xh is not null then 1 end) zxrs, 
+					count(case when a.xb='男' and b.xh is not null then 1 end) zxmrs, 
+					count(case when a.xb='女' and b.xh is not null then 1 end) zxwrs, 
+					count(case when b.xh is null then 1 end) wzxrs, 
+					count(case when a.xb='男' and b.xh is null then 1 end) wzxmrs, 
+					count(case when a.xb='女' and b.xh is null then 1 end) wzxwrs,
+					count(case when b.xh is null and c.xh is null then 1 end) fzfzrs,
+				    count(case when c.xh is not null then 1 end) zdrs,
+				    count(case when a.xb='男' and b.xh is null and c.xh is null then 1 end) fzfzmrs,
+				    count(case when a.xb='男' and c.xh is not null then 1 end) zdmrs,
+				    count(case when a.xb='女' and b.xh is null and c.xh is null then 1 end) fzfzwrs,
+				    count(case when a.xb='女' and c.xh is not null then 1 end) zdwrs 
+					from view_xsjbxx a left join xg_gygl_new_cwxxb b on a.xh=b.xh
+					left join xg_gygl_new_bzxbzb c on a.xh = c.xh and c.bzxbz is not null
+					where a.nj=? and a.xydm=? 
+					group by a.nj,a.xydm,a.xymc,a.bjdm,a.bjmc 
+					order by a.xydm,a.nj,bjdm) a where 1=1 
+			]]>
+		</sql>
+	</entry>
+	
+	
+	<entry id="gzdx_gygl_wmqs_qsgl.do">
+		<title en="nd-lddm-qsh-wspjf-sqsm-sqr-sqsj-fdyshzt-fdyshr-fdyshr-fdyshsj-xxshzt-xxshr-xxshsj-fdyshbz-xxshbz-ch-xqdm-yqdm-xydm-xymc-bjdm-bjdm-ldmc-qsrs">
+			年度-楼栋代码-寝室号-卫生平均分-申请说明-申请人-申请时间-辅导员审核状态-辅导员审核人-
+			辅导员审核时间-学校审核状态-学校审核人-学校审核时间-辅导员审核备注-学校审核备注-层号-
+			校区代码-园区代码-学院代码-学院名称-班级名称-班级代码-楼栋名称-寝室人数
+		</title>
+		<sql parameter="">
+			<![CDATA[
+				     select * from view_xg_gygl_new_gzdx_wmqssq a where 1=1 
+			]]>
+		</sql>
+	</entry>
+	<entry id="gyglnew_gybxgl_gybxgl.do">
+		<title en="ldmc-qsh-cwh-xh-xm-bxsj-bxnr-wxsj-jjcd-clzt-mycd">
+			楼栋-寝室-床位-学号-姓名-报修时间-报修内容-维修时间-紧急程度-处理状态-满意程度
+		</title>
+		<sql>
+			<![CDATA[
+				select rownum r,a.* from (select a.xh||a.bxsj pk,a.*,a.qwwxsj_ks||'-'||a.qwwxsj_js qwwxsj,
+				b.xm,b.xydm,b.xymc,b.zydm,b.zymc,b.bjdm,b.bjmc,b.nj,c.ldmc,c.qsdh from xg_gygl_new_gybxb a left join view_xsjbxx b 
+				on a.xh = b.xh left join view_xg_gygl_new_cwxx c on a.lddm=c.lddm and a.qsh=c.qsh and a.cwh=c.cwh) a where 1=1 
+			]]>
+		</sql>
+	</entry>
+	<entry id="gyglnew_gyjlgl_gyjlgl.do">
+		<title en="xh-xm-nj-xymc-xb-ldmc-qsh-cwh-wjcs">
+			学号-姓名-年级-学院-性别-楼栋名称-寝室号-床位号-违纪次数
+		</title>
+		<sql>
+			<![CDATA[
+				select rownum r,a.* from (select a.*,case when to_number(wjcs)>0 then '是' else '否' end sfwj 
+				from (select a.*,(select count(*) from xg_gygl_new_gyjlb where a.xh = xh) wjcs 
+				from xg_view_gygl_new_xszsgl a where sfzs='是') a) a where 1=1
+			]]>
+		</sql>
+	</entry>
+	<entry id="gyglnew_gyjlgl_gyjlcx.do">
+		<title en="xh-xm-nj-xymc-xb-wjsj-wjlb">
+			学号-姓名-年级-学院-性别-违纪时间-违纪类别
+		</title>
+		<sql>
+			<![CDATA[
+				select rownum r,a.* from(select  a.*,substr(wjsj,0,10) wjrq ,b.xm,b.xb,
+				(select gyjllbdlmc from xg_gygl_new_gyjllbdlb where gyjllbdldm = a.gyjllbdldm)||'('||
+				(select gyjllbmc from xg_gygl_new_gyjllbdmb where gyjllbdm = a.gyjllbdm )||')' wjlb 
+				from xg_gygl_new_gyjlb a left join ( select a.xh,a.xm,(case a.xb when '1' then '男' when '2' 
+				then '女' else a.xb end) xb, a.nj,a.xydm,a.zydm,a.bjdm from (select xh,xm,xbm xb,to_char(nj) nj, 
+				bmdm xydm,zydm,bjdm from bks_xsjbxx a where not exists (select 1 from xsxxb b where a.xh = b.xh) 
+				union all select a.xh,a.xm,a.xb,a.nj,a.xydm,a.zydm,a.bjdm from xsxxb a where 
+				(sfyby = '否' or sfyby is null) and (sfzx = '在校' or sfzx is null)) a ) b on a.xh = b.xh) a where 1=1 
+			]]>
+		</sql>
+	</entry>
+	
+	<!-- 浙江工贸职业技术学院个性化导出部分 -->
+	<entry id="gyglnew_zsxxgl_zsxxgl_zjgmzy.do">
+		<title en="ldmc-qsh-xymc-bjmc-ch1-ch2-ch3-ch4-ch5-ch6-bzr">
+			楼栋名称-寝室号-系别-班级-1号床-2号床-3号床-4号床-5号床-6号床-班主任
+		</title>
+		<sql>
+			<![CDATA[
+			select lddm,ldmc,qsh,xymc,bjmc,max(ch1) ch1,max(ch2) ch2,max(ch3) ch3,max(ch4) ch4,max(ch5) ch5,max(ch6) ch6,bzr from(
+            select lddm,ldmc,qsh,xymc,bjmc,case when cwh = '1' then xm end ch1 ,case when cwh = '2' then xm end ch2,
+            case when cwh = '3' then xm end ch3,case when cwh = '4' then xm end ch4,case when cwh = '5' then xm end ch5,
+            case when cwh = '6' then xm end ch6,bzr from (select a.lddm,a.ldmc,a.qsh,(select xymc from view_xsjbxx b where a.xh=b.xh) xymc,
+            b.bjmc,a.cwh,(select xm from view_xsjbxx b where a.xh=b.xh) xm,b.bzr from view_xg_gygl_new_cwxx a 
+            left join (select bjmc,bjdm,wmsys.wm_concat(bzr) bzr ,xh from (select a.bjdm,c.bjmc,b.xm||b.lxdh bzr,c.xh from bzrbbb a 
+            left join fdyxxb b on a.zgh=b.zgh left join view_xsxxb c on a.bjdm=c.bjdm) group by bjdm,xh,bjmc) b on a.xh=b.xh)) 
+            where bjmc is not null group by ldmc,qsh,xymc,bjmc,bzr order by ldmc,qsh,xymc,bjmc
+			]]>
+		</sql>
+	</entry>
+	
+	<!-- 黑龙江农垦简表个性化导出 -->
+	<entry id="gyglnew_zsxxgl_zsxxgl_hljnk.do">
+		<title en="ldmc-qsh-cwh-xh-xm-bjmc-rzsjs"> 
+			楼栋名称-寝室号-床位号-学号-姓名-班级-入住时间
+		</title>
+		<sql>
+			<![CDATA[
+				select rownum r, a.*
+	          from (select lddm || qsh || cwh pkValue,
+	               a.*,
+	                decode(a.sfrz,'是',a.rzsj,'') rzsjs,
+	               b.xm,
+	               case
+	                 when substr(jg, 3, 2) = '00' then
+	                  substr(jg, 1, 2)
+	                 else
+	                  substr(jg, 3, 2)
+	               end jg,
+	               (case
+	                 when a.xydm is not null or a.nj is not null or
+	                      a.xh is not null then
+	                  'disabled'
+	                 else
+	                  ''
+	               end) dis,
+	               sjhm || '  ' || lxdh lxfs,
+	               bzr
+	          from view_xg_gygl_new_cwxx a
+	          left join xsxxb b
+	            on a.xh = b.xh
+	          left join (select wmsys.wm_concat(bzr) bzr, bjdm
+	                      from (select a.bjdm, b.xm || b.lxdh || ' ' || yddh bzr
+	                              from bzrbbb a
+	                              left join fdyxxb b
+	                                on a.zgh = b.zgh)
+	                     group by bjdm) c
+	            on b.bjdm = c.bjdm
+	         order by a.lddm, to_number(a.ch), a.qsh, a.cwh) a
+	          where 1 = 1
+			]]>
+		</sql>
+	</entry>
+</exports>

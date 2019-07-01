@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xgxt>
+	<!-- 就业管理  -->
+	<gnmk id="jygl"> 
+		<!-- 就业协议value :值为“1”时下级审核通过上级才能看到记录，否则全部可以看到 -->
+		<param>
+			<key>jyxy</key> 
+			<value>0</value>
+		</param>
+		<!-- 默认报到开始时间 (格式：mmdd,请按照指定格式修改)-->
+		<param>
+			<key>jyxy_mrbdkssj</key> 
+			<value>0701</value>
+		</param>
+		<!-- 默认报到结束时间 (格式：mmdd,请按照指定格式修改)-->
+		<param>
+			<key>jyxy_mrbdjssj</key> 
+			<value>0831</value>
+		</param>
+		
+		
+		
+		<!-- 就业协议书补领 value :值为“1”时下级审核通过上级才能看到记录，否则全部可以看到 -->
+		<param>
+			<key>jyxysbl</key> 
+			<value>1</value>
+		</param>
+	</gnmk>
+	
+	<!-- 通用版本 -->
+	<gnmk id="comm"> 
+	
+		<!-- 高级查询 -->
+		<!-- 应用：yes 不应用：no -->
+		<param>
+			<key>superSearch</key> 
+			<value>yes</value>
+		</param>
+		
+		<!-- 用户角色应用 -->
+		<!-- 应用：yes 不应用：no -->
+		<param>
+			<key>userRolesApply</key> 
+			<value>no</value>
+		</param>
+		
+		<!-- bks_xsjbxx表中的性别：男（1），女（2） -->
+		<param>
+			<key>男</key> 
+			<value>1</value>
+		</param>
+		
+		<param>
+			<key>女</key> 
+			<value>2</value>
+		</param>
+		
+		<!-- 通用：0 金华职业：1 -->
+		<param>
+			<key>userChange</key> 
+			<value>0</value>
+		</param>
+		
+		<!-- 服务器地址 -->
+		<param>
+			<key>host</key> 
+			<value>http://localhost:8080</value>
+		</param>
+	</gnmk>
+	
+	<!-- 学生信息维护 value:值为“kwh”时启用“可配置”版学生信息，否则启用老版本 -->
+	<gnmk id="xsxx"> 
+		<param>
+			<key>xsxxwh</key> 
+			<value>bkwh</value>
+		</param>
+		<!-- 登录检测 需要：yes 不需要：no-->
+		<param>
+			<key>dljc</key> 
+			<value>no</value>
+		</param>
+	</gnmk>
+	
+	<!-- 用户登陆类型 value:值为“xs”时默认为"学生" 否则为老师 -->
+	<gnmk id="login"> 
+		<param>
+			<key>userLogin</key> 
+			<value>ls</value>
+		</param>
+	</gnmk>
+	
+	<!-- 公寓管理  -->
+	<gnmk id="gygl"> 
+		<!-- 层数 默认值 -->
+		<param>
+			<key>cs</key> 
+			<value>15</value>
+		</param>
+		
+		<!-- 床位数 默认值 -->
+		<param>
+			<key>cws</key> 
+			<value>12</value>
+		</param>
+		
+		<!-- 卫生检查 数据源抽取 new:新版本 old:老版本 -->
+		<param>
+			<key>edition</key> 
+			<value>new</value>
+		</param>
+		
+		<!-- 寝室自动生成 自动生成寝室编号规则 gdws:固定位数 blxs：补零形式 -->
+		<!-- 如不需要显示多种编码格式只需配置一个，需要配置多个的情况请以“!!@@!!”格式间隔 例：gdws!!@@!!blxs-->
+		<param>
+			<key>bhgz</key> 
+			<value>gdws</value>
+		</param>
+		<!-- 公寓管理员权限判断，以下路径需判断用户是否为公寓管理员，其他不需要-->
+		<param>
+			<key>gygly_path</key>
+			<value>gyglnew_gyglry_gyglry.do,gyglnew_zsxxgl_zsxxgl.do,gyglnew_gybxgl_gybxgl.do,gzdx_gygl_wmqs_qssh.do,gzdx_gygl_wmqs_qsgl.do,gzdx_gygl_wsjc_fslr.do,gzdx_gygl_wsjc_fscx.do,gyglnew_gyjlgl_gyjlgl.do,gyglnew_wsjc_jcrcgl.do,gyglnew_wsjc_fslr.do,gyglnew_wsjc_fslr.do?searchType=fslrcz,gyglnew_wsjc_fscx.do,
+					gygl_gypygl_gypywh.do,gygl_gypywh.do?method=pyqsCx,gygl_gyjlglnew_gyjlxxwh.do,gygl_gyjlglnew_gyjlxxcl.do,gygl_gyjlglnew_gyjlxxsh.do,gyjl_gyjlglnew_gyjlxscx.do,gypyyxxs.do,gygl_jxjggl.do,gyglnew_qsgl_qsgl.do,gyglnew_cwgl_cwgl.do,gyglnew_gybxgl_gybxgl_bxfp.do,gyglnew_zsxxgl_zsxxgl_hljnk.do,ydxxgl.do,gygl_gypynew_gypysq.do</value>
+		</param>
+	</gnmk>
+	
+	<!-- 学生资助N32 -->
+	<gnmk id="xszz">
+		<!-- 学生资助下项目"困难生认定"是否作为独立的功能模块，true：是,false:否 -->
+		<param>
+			<key>knsdl</key>
+			<value>false</value>
+		</param>
+		<!-- "家庭情况调查"是否合并在"困难生认定"项目里，
+			 true:是，false:否 （knsdl设置为true有效） -->
+		<param>
+			<key>jtqkdc</key>
+			<value>false</value>
+		</param>
+		<!-- 显示评奖信息 -->
+		<param>
+			<key>xspjxx</key>
+			<value>true</value>
+		</param>
+	</gnmk>
+	
+	<!-- 评奖评优 -->
+	<gnmk id="pjpy"> 
+	
+		<!-- 综测周期：xn： 学年：xq：学期 -->
+		<param>
+			<key>zczq</key> 
+			<value>xn</value>
+		</param>
+		
+		<!-- 人员库：(pj： 评奖人员库：ss：实时人员库) -->
+		<param>
+			<key>ryk</key> 
+			<value>pj</value>
+		</param>
+		
+		<!-- 综测加分：jf： 仅加分：jjf：加减分 -->
+		<param>
+			<key>zcjflx</key> 
+			<value>jf</value>
+		</param>
+		
+		<!-- 综测排名：1:年级学院排名 2:年级专业排名 3：班级排名
+					  4:年级专业排名 +班级排名 5:年级学院排名 + 班级排名
+					  6.年级学院排名 + 年级专业排名 7.年级学院排名 +年级专业排名+ 班级排名
+					  目前只开放1、2、3
+		-->
+		<param>
+			<key>zcpm</key> 
+			<value>3</value>
+		</param>
+		<!-- 智育排名：1:年级学院排名 2:年级专业排名 3：班级排名
+					  4:年级专业排名 +班级排名 5:年级学院排名 + 班级排名
+					  6.年级学院排名 + 年级专业排名 7.年级学院排名 +年级专业排名+ 班级排名
+					  目前只开放1、2、3
+		-->
+		<param>
+			<key>zypm</key> 
+			<value>3</value>
+		</param>
+		<!-- 课程性质 
+		     用于统计分析中的评奖汇总，该字段对应cjb表中的kcxz
+		  该处采用的是 kcxz in()模式
+		 -->
+		<param>
+			<key>kcxz</key> 
+			<value>'必修'</value>
+		</param>
+		<!-- 综测项目设置模块流程图展示效果 1：纵向  2：横向  -->
+		<param>
+			<key>zcxmzs</key> 
+			<value>1</value>
+		</param>
+	</gnmk>
+	
+	<!-- 素质拓展 -->
+	<gnmk id="sztz"> 
+		<!-- 奖项上报：xssb： 学生上报 ； lssb：老师上报 -->
+		<param>
+			<key>jxsb</key> 
+			<value>xssb</value>
+		</param>
+	</gnmk>
+</xgxt>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到湖南工业的配置文件,wjcf_hngy.xml    -->
+		<action path="/wjcf_hngy_rcxwjl"     forward="/wjcfhngywh.do?method=rcxwjl"></action> <!-- 日常行为记录默认页面 -->
+		<action path="/wjcf_hngy_rcxwjlqry"  forward="/wjcfhngywh.do?method=rcxwjlQry"></action>
+		<action path="/wjcf_hngy_rcxwadd"    forward="/wjcfhngywh.do?method=rcxwAdd"></action>
+		<action path="/wjcf_hngy_rcxwsave"   forward="/wjcfhngywh.do?method=rcxwSave"></action>
+		<action path="/wjcf_hngy_rcxwmodi"   forward="/wjcfhngywh.do?method=rcxwModi"></action>
+		<action path="/wjcf_hngy_rcxwmodisave" forward="/wjcfhngywh.do?method=rcxwmodiSave"></action>
+		<action path="/wjcf_hngy_rcxwdel"    forward="/wjcfhngywh.do?method=rcxwdel"></action> 
+	</action-mappings>
+</struts-config>

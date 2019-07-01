@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+	<!-- 科研创新项目-->
+	<struts-config>
+		<form-beans>
+	    	<form-bean name="kycxxmwhForm" type="com.zfsoft.xgxt.kycxgl.kycxxm.kycxxmwh.KycxxmwhForm" />
+	    	<form-bean name="kycxxmsqForm" type="com.zfsoft.xgxt.kycxgl.kycxxm.kycxxmsq.KycxxmsqForm" />
+	    	<form-bean name="kycxxmshForm" type="com.zfsoft.xgxt.kycxgl.kycxxm.kycxxmsh.KycxxmshForm" />
+	    	<form-bean name="kycxxmjgForm" type="com.zfsoft.xgxt.kycxgl.kycxxm.kycxxmjg.KycxxmjgForm" />
+		</form-beans>
+		
+		<action-mappings>
+		
+		<action path="/kycxgl_kycxxm_kycxxmwh" forward="/kycxgl_kycxxm_kycxxmwhgl.do?method=kycxxmwhManage"/>	<!-- 科研创新项目类别 -->
+		<action path="/kycxgl_kycxxm_kycxxmwhgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.kycxgl.kycxxm.kycxxmwh.KycxxmwhAction" 
+	   			name="kycxxmwhForm"         
+	   			parameter="method">	
+	   		<forward name="kycxxmwhManage" path="/xsgzgl/kycxgl/kycxxm/kycxxmwh/kycxxmwhManage.jsp"></forward>
+	   		<forward name="addKycxxmwh" path="/xsgzgl/kycxgl/kycxxm/kycxxmwh/addKycxxmwh.jsp"></forward>
+	   		<forward name="updateKycxxmwh" path="/xsgzgl/kycxgl/kycxxm/kycxxmwh/updateKycxxmwh.jsp"></forward>
+	   		<forward name="kycxxmwhSjkg" path="/xsgzgl/kycxgl/kycxxm/kycxxmwh/kycxxmwhSjkg.jsp"></forward>
+		</action>  
+		
+		<action path="/kycxgl_kycxxm_kycxxmsq" forward="/kycxgl_kycxxm_kycxxmsqgl.do?method=kycxxmsqManage"/>	<!-- 科研创新项目申请 -->
+		<action path="/kycxgl_kycxxm_kycxxmsqgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.kycxgl.kycxxm.kycxxmsq.KycxxmsqAction" 
+	   			name="kycxxmsqForm"         
+	   			parameter="method">	
+	   		<forward name="kycxxmsqManage" path="/xsgzgl/kycxgl/kycxxm/kycxxmsq/kycxxmsqManage.jsp"></forward>
+	   		<forward name="addKycxxmsq" path="/xsgzgl/kycxgl/kycxxm/kycxxmsq/addKycxxmsq.jsp"></forward>
+	   		<forward name="updateKycxxmsq" path="/xsgzgl/kycxgl/kycxxm/kycxxmsq/updateKycxxmsq.jsp"></forward>
+	   		<forward name="viewKycxxmsq" path="/xsgzgl/kycxgl/kycxxm/kycxxmsq/viewKycxxmsq.jsp"></forward>
+		</action>  
+		
+		<action path="/kycxgl_kycxxm_kycxxmsh" forward="/kycxgl_kycxxm_kycxxmshgl.do?method=kycxxmshManage"/>	<!-- 科研创新项目审核 -->
+		<action path="/kycxgl_kycxxm_kycxxmshgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.kycxgl.kycxxm.kycxxmsh.KycxxmshAction" 
+	   			name="kycxxmshForm"         
+	   			parameter="method">	
+	   		<forward name="kycxxmshManage" path="/xsgzgl/kycxgl/kycxxm/kycxxmsh/kycxxmshManage.jsp"></forward>
+	   		<forward name="kycxxmDgsh" path="/xsgzgl/kycxgl/kycxxm/kycxxmsh/kycxxmDgsh.jsp"></forward>
+	   		<forward name="kycxxmPlsh" path="/xsgzgl/kycxgl/kycxxm/kycxxmsh/kycxxmPlsh.jsp"></forward>
+		</action> 
+		
+		<action path="/kycxgl_kycxxm_kycxxmjg" forward="/kycxgl_kycxxm_kycxxmjggl.do?method=kycxxmjgManage"/>	<!-- 科研创新项目结果 -->
+		<action path="/kycxgl_kycxxm_kycxxmjggl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.kycxgl.kycxxm.kycxxmjg.KycxxmjgAction" 
+	   			name="kycxxmjgForm"         
+	   			parameter="method">	
+	   		<forward name="kycxxmjgManage" path="/xsgzgl/kycxgl/kycxxm/kycxxmjg/kycxxmjgManage.jsp"></forward>
+	   		<forward name="kycxxmjgManageCx" path="/xsgzgl/kycxgl/kycxxm/kycxxmjg/kycxxmjgManageCx.jsp"></forward>
+	   		<forward name="addKycxxmjg" path="/xsgzgl/kycxgl/kycxxm/kycxxmjg/addKycxxmjg.jsp"></forward>
+	   		<forward name="updateKycxxmjg" path="/xsgzgl/kycxgl/kycxxm/kycxxmjg/updateKycxxmjg.jsp"></forward>
+	   		<forward name="viewKycxxmjg" path="/xsgzgl/kycxgl/kycxxm/kycxxmjg/viewKycxxmjg.jsp"></forward>
+	   		<forward name="getStu" path="/xsgzgl/kycxgl/kycxxm/kycxxmjg/getStu.jsp"></forward>
+		</action> 
+		
+		</action-mappings>
+	</struts-config>

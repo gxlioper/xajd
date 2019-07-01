@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/xsgbxxwh.do" location="855,0" dimension="100,60" />
+  <StrutsActivity path="/zjlg_gzzj.do" location="1055,0" dimension="106,60" />
+  <StrutsActivity path="/zjlg_pdyj.do" location="1261,0" dimension="106,60" />
+  <StrutsActivity path="/zjlg_hdch.do" location="1467,0" dimension="106,60" />
+  <StrutsActivity path="/xsgbxx.do" location="1112,160" dimension="202,84" />
+  <StrutsActivity path="/shgz/zjlg/pdyjManage.jsp" location="0,394" dimension="190,48" />
+  <StrutsActivity path="/shgz/zjlg/pdyjAdd.jsp" location="289,394" dimension="172,48" />
+  <StrutsActivity path="/shgz/zjlg/hdchManage.jsp" location="561,394" dimension="190,48" />
+  <StrutsActivity path="/shgz/zjlg/xsgbAdd.jsp" location="851,394" dimension="172,48" />
+  <StrutsActivity path="/shgz/zjlg/shgzsczp.jsp" location="1124,394" dimension="178,48" />
+  <StrutsActivity path="/shgz/zjlg/gzzjAdd.jsp" location="1402,394" dimension="172,48" />
+  <StrutsActivity path="/shgz/zjlg/gzzjManage.jsp" location="1674,394" dimension="190,48" />
+  <StrutsActivity path="/shgz/zjlg/hdchAdd.jsp" location="1964,394" dimension="172,48" />
+  <StrutsActivity path="/shgz/zjlg/xsgbManage.jsp" location="2236,394" dimension="190,48" />
+  <StrutsTransition id="/zjlg_hdch.do,null,/xsgbxx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1520,60" />
+      <AbsolutePoint location="1520,125" />
+      <AbsolutePoint location="1288,125" />
+      <AbsolutePoint location="1288,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsgbxx.do,sczp,/shgz/zjlg/shgzsczp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1213,244" />
+      <AbsolutePoint location="1213,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsgbxx.do,xsgbxxwhAdd,/shgz/zjlg/xsgbAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1190,244" />
+      <AbsolutePoint location="1190,364" />
+      <AbsolutePoint location="937,364" />
+      <AbsolutePoint location="937,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsgbxx.do,hdchManage,/shgz/zjlg/hdchManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1168,244" />
+      <AbsolutePoint location="1168,334" />
+      <AbsolutePoint location="656,334" />
+      <AbsolutePoint location="656,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjlg_pdyj.do,null,/xsgbxx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1314,60" />
+      <AbsolutePoint location="1314,95" />
+      <AbsolutePoint location="1238,95" />
+      <AbsolutePoint location="1238,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjlg_gzzj.do,null,/xsgbxx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1108,60" />
+      <AbsolutePoint location="1108,95" />
+      <AbsolutePoint location="1187,95" />
+      <AbsolutePoint location="1187,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsgbxx.do,gzzjManage,/shgz/zjlg/gzzjManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1257,244" />
+      <AbsolutePoint location="1257,334" />
+      <AbsolutePoint location="1769,334" />
+      <AbsolutePoint location="1769,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsgbxxwh.do,null,/xsgbxx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="905,60" />
+      <AbsolutePoint location="905,125" />
+      <AbsolutePoint location="1137,125" />
+      <AbsolutePoint location="1137,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsgbxx.do,gzzjAdd,/shgz/zjlg/gzzjAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1235,244" />
+      <AbsolutePoint location="1235,364" />
+      <AbsolutePoint location="1488,364" />
+      <AbsolutePoint location="1488,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsgbxx.do,pdyjManage,/shgz/zjlg/pdyjManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1123,244" />
+      <AbsolutePoint location="1123,274" />
+      <AbsolutePoint location="95,274" />
+      <AbsolutePoint location="95,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsgbxx.do,hdchAdd,/shgz/zjlg/hdchAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1280,244" />
+      <AbsolutePoint location="1280,304" />
+      <AbsolutePoint location="2050,304" />
+      <AbsolutePoint location="2050,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsgbxx.do,pdyjAdd,/shgz/zjlg/pdyjAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1145,244" />
+      <AbsolutePoint location="1145,304" />
+      <AbsolutePoint location="375,304" />
+      <AbsolutePoint location="375,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsgbxx.do,xsgbxxwhManage,/shgz/zjlg/xsgbManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1302,244" />
+      <AbsolutePoint location="1302,274" />
+      <AbsolutePoint location="2331,274" />
+      <AbsolutePoint location="2331,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

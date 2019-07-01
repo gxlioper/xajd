@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- 志愿服务管理-->
+		<form-bean name="zyfwJcszForm" type="com.zfsoft.xgxt.xsxx.zyfwgl.zyfwjcsz.ZyfwJcszForm" />
+		<form-bean name="zyfwSqForm" type="com.zfsoft.xgxt.xsxx.zyfwgl.zyfwsq.ZyfwSqForm" />
+		<form-bean name="zyfwShForm" type="com.zfsoft.xgxt.xsxx.zyfwgl.zyfwsh.ZyfwShForm" />
+		<form-bean name="zyfwJgForm" type="com.zfsoft.xgxt.xsxx.zyfwgl.zyfwjg.ZyfwJgForm" />
+	</form-beans>
+	
+	<action-mappings>
+		
+		<!-- 志愿服务管理-参数设置-->
+		<action path="/xsxx_zyfwgl_jcsz" name="zyfwJcszForm" type="com.zfsoft.xgxt.xsxx.zyfwgl.zyfwjcsz.ZyfwJcszAction"
+			parameter="method" scope="request">
+			<forward name="zyfwJcsz" path="/xsgzgl/xsxx/zyfwgl/zyfwjcsz/zyfwJcsz.jsp" />
+		</action>
+		<!-- 志愿服务管理-志愿服务申请-->
+		<action path="/xsxx_zyfwgl_sq" name="zyfwSqForm" type="com.zfsoft.xgxt.xsxx.zyfwgl.zyfwsq.ZyfwSqAction"
+			parameter="method" scope="request">
+			<forward name="zyfwSqList" path="/xsgzgl/xsxx/zyfwgl/zyfwsq/zyfwSqList.jsp" />
+			<forward name="zyfwSqAdd" path="/xsgzgl/xsxx/zyfwgl/zyfwsq/zyfwSqAdd.jsp" />
+			<forward name="zyfwSqEdit" path="/xsgzgl/xsxx/zyfwgl/zyfwsq/zyfwSqEdit.jsp" />
+			<forward name="zyfwSqShow" path="/xsgzgl/xsxx/zyfwgl/zyfwsq/zyfwSqShow.jsp" />
+		</action>
+		<!-- 志愿服务管理-志愿服务审核-->
+		<action path="/xsxx_zyfwgl_sh" name="zyfwShForm" type="com.zfsoft.xgxt.xsxx.zyfwgl.zyfwsh.ZyfwShAction"
+			parameter="method" scope="request">
+			<forward name="zyfwShList" path="/xsgzgl/xsxx/zyfwgl/zyfwsh/zyfwShList.jsp" />
+			<forward name="zyfwShDgsh" path="/xsgzgl/xsxx/zyfwgl/zyfwsh/zyfwShDgsh.jsp" />
+			<forward name="zyfwShPlsh" path="/xsgzgl/xsxx/zyfwgl/zyfwsh/zyfwShPlsh.jsp" />
+		</action>
+		<!-- 志愿服务管理-志愿服务结果-->
+		<action path="/xsxx_zyfwgl_jg" name="zyfwJgForm" type="com.zfsoft.xgxt.xsxx.zyfwgl.zyfwjg.ZyfwJgAction"
+			parameter="method" scope="request">
+			<forward name="zyfwJgList" path="/xsgzgl/xsxx/zyfwgl/zyfwjg/zyfwJgList.jsp" />
+			<forward name="zyfwJgAdd" path="/xsgzgl/xsxx/zyfwgl/zyfwjg/zyfwJgAdd.jsp" />
+			<forward name="zyfwJgEdit" path="/xsgzgl/xsxx/zyfwgl/zyfwjg/zyfwJgEdit.jsp" />
+			<forward name="zyfwJgShow" path="/xsgzgl/xsxx/zyfwgl/zyfwjg/zyfwJgShow.jsp" />
+		</action>
+		
+	</action-mappings>
+</struts-config>

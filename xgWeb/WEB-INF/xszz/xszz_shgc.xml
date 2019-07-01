@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzShgcActionForm"
+			type="xgxt.xszz.shgc.XszzShgcActionForm" /><!-- test.forms.DynaActionFormTest -->
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+
+		<action name="xszzShgcActionForm" parameter="method"
+			path="/shgc_xszz_new" scope="request"
+			type="xgxt.xszz.shgc.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!--"困难资助项目"-->
+			<forward name="knslsk_data" path="/xszz/shgc/knslsk_data.jsp"/>
+			<forward name="knslskExp" path="/about:blank" />
+			<forward name="knslskOne" path="/xszz/shgc/knslskOne.jsp"/>
+			<forward name="knslskEdit" path="/xszz/shgc/knslskEdit.jsp"/>
+			<forward name="knslskEditSave" path="/xszz/shgc/knslskEdit.jsp"/>
+		</action>
+		
+		
+
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp" />
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

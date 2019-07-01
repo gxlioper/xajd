@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzGzdxActionForm" type="xgxt.xszz.gzdx.XszzGzdxActionForm">
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="xszzGzdxActionForm" parameter="method" path="/gzdx_xszz"
+				scope="request"	type="xgxt.xszz.gzdx.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- "学生贷款信息" -->
+			<forward name="xsdkxxDate" path="/xszz/gzdx/xsdkxxDate.jsp" />
+			<forward name="xsdkxxOne" path="/xszz/gzdx/xsdkxxOne.jsp" />
+			<forward name="xsdkxxEdit" path="/xszz/gzdx/xsdkxxEdit.jsp" />
+			<forward name="xsdkxxEditSave" path="/xszz/gzdx/xsdkxxEdit.jsp" />
+			<forward name="xsdkxxExp" path="/about:blank" />
+			<!-- "学生就业信息" -->
+			<forward name="xsjyxxDate" path="/xszz/gzdx/xsjyxxDate.jsp" />
+			<forward name="xsjyxxOne" path="/xszz/gzdx/xsjyxxOne.jsp" />
+			<forward name="xsjyxxEdit" path="/xszz/gzdx/xsjyxxEdit.jsp" />
+			<forward name="xsjyxxEditSave" path="/xszz/gzdx/xsjyxxEdit.jsp" />
+			<forward name="xsjyxxExp" path="/about:blank" />
+			<!-- "学生还款信息" -->
+			<forward name="xshkxxDate" path="/xszz/gzdx/xshkxxDate.jsp" />
+			<forward name="xshkxxOne" path="/xszz/gzdx/xshkxxOne.jsp" />
+			<forward name="xshkxxEdit" path="/xszz/gzdx/xshkxxEdit.jsp" />
+			<forward name="xshkxxEditSave" path="/xszz/gzdx/xshkxxEdit.jsp" />
+			<forward name="xshkxxExp" path="/about:blank" />
+			<!-- "临时补贴信息" -->
+			<forward name="lsbtDate" path="/xszz/gzdx/lsbtDate.jsp" />
+			<forward name="lsbtEdit" path="/xszz/gzdx/lsbtEdit.jsp" />
+			<forward name="lsbtEditSave" path="/xszz/gzdx/lsbtEdit.jsp" />
+			<forward name="lsbtExp" path="/about:blank" />
+		</action>
+		
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>		
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+    	<form-bean name="xsxxYnysForm" type="xgxt.studentInfo.ynys.XsxxYnysForm" />
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+	<!-- <<<<<<<<<<<<<<学生信息： 云南艺术学生信息查询>>>>>>>>>>>>> -->
+    <action 
+    	path="/xsxxYnys" 
+        type="xgxt.studentInfo.ynys.XsxxYnysAction" 
+        parameter="method"
+        name="xsxxYnysForm"
+        scope="request">
+        <forward name="success" path="/xsxx/ynys/ynys_xsxxcx.jsp"/>
+		</action> 
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

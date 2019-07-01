@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/xljk_whlgdx_xskhdxwh.do" location="50,50" dimension="304,84" />
+  <StrutsActivity path="/xljk/whlgdx/xskhdxwh_add.jsp" location="950,250" dimension="214,48" />
+  <StrutsActivity path="/xljk/whlgdx/xskhdxwh_index.jsp" location="650,250" dimension="226,48" />
+  <StrutsActivity path="/xljk/whlgdx/xskhdxwh_stuinfo.jsp" location="350,350" dimension="238,48" />
+  <StrutsActivity path="/xljk/whlgdx/xskhdxwh_modi.jsp" location="50,350" dimension="220,48" />
+  <StrutsActivity path="/xljk.whlgdx.index.jsp" location="66,184" dimension="172,48" />
+  <StrutsActivity path="/xljk/whlgdx/index.jsp" location="650,50" dimension="172,48" />
+  <StrutsActivity path="/xljk/whlgdx/xskhsdxwh_index.jsp" location="950,50" dimension="232,48" />
+  <StrutsActivity path="/xljk/whlgdx/xskhsdxwh_add.jsp" location="650,150" dimension="220,48" />
+  <StrutsActivity path="/xljk/whlgdx/xskhsdxwh_oparete.jsp" location="950,150" dimension="244,48" />
+  <StrutsActivity path="/xljk/whlgdx/xskhsdxwh_modi.jsp" location="350,250" dimension="226,48" />
+  <StrutsActivity path="/xljk/whlgdx/xskhdxwh_add2.jsp" location="650,350" dimension="220,48" />
+  <StrutsActivity path="/whlgdx_xljk.do" location="950,350" dimension="334,84" />
+  <StrutsActivity path="/xljk/whlgdx/xlzxper_queryOne.jsp" location="50,450" dimension="238,48" />
+  <StrutsActivity path="/xljk/whlgdx/xlzxjyhd_queryOne.jsp" />
+  <StrutsActivity path="/xljk/whlgdx/data_xlzxjyhd.jsp" />
+  <StrutsTransition id="/whlgdx_xljk.do,xlzxjyhd_queryOne,/xljk/whlgdx/xlzxjyhd_queryOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1117,392" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xljk_whlgdx_xskhdxwh.do,view,/xljk/whlgdx/xskhdxwh_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="202,92" />
+      <AbsolutePoint location="1057,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xljk_whlgdx_xskhdxwh.do,del,/xljk/whlgdx/xskhdxwh_index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="202,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/whlgdx_xljk.do,xlzxper_queryOne,/xljk/whlgdx/xlzxper_queryOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1117,434" />
+      <AbsolutePoint location="1117,474" />
+      <AbsolutePoint location="288,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xljk_whlgdx_xskhdxwh.do,stu_info,/xljk/whlgdx/xskhdxwh_stuinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="202,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/whlgdx_xljk.do,data_xlzxjyhd,/xljk/whlgdx/data_xlzxjyhd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1117,392" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xljk_whlgdx_xskhdxwh.do,index,/xljk/whlgdx/xskhdxwh_index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="202,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xljk_whlgdx_xskhdxwh.do,add,/xljk/whlgdx/xskhdxwh_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="202,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xljk_whlgdx_xskhdxwh.do,modi,/xljk/whlgdx/xskhdxwh_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="202,92" />
+      <AbsolutePoint location="1057,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

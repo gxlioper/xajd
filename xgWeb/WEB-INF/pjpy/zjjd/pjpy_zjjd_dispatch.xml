@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到浙江机电的配置文件,pjpy_zjjd.xml    -->
+		<action path="/pjpy_zjjd_xybxfwh"   forward="/pjpyzjjdwh.do?method=xybxfAdd"></action><!-- 学生校园表现分维护 -->
+		<action path="/xybxfqry"            forward="/pjpyzjjdwh.do?method=xybxfQry"></action><!-- 学生校园表现分查询 -->
+		<action path="/xybxfadd"            forward="/pjpyzjjdwh.do?method=xybxfnewAdd"></action><!-- 学生校园表现分单个增加 -->
+		<action path="/xybxfModi"           forward="/pjpyzjjdwh.do?method=xybxfView"></action><!-- 学生校园表现分修改 -->
+		<action path="/xybxfDel"            forward="/pjpyzjjdwh.do?method=xybxfDel"></action><!-- 学生校园表现分删除 -->
+		<action path="/xybxfsave"           forward="/pjpyzjjdwh.do?method=xybxfSave"></action><!-- 学生校园表现分单个保存 -->
+		<action path="/xybxfmodi"           forward="/pjpyzjjdwh.do?method=xybxfModi"></action><!-- 学生校园表现分单个修改 -->
+		<action path="/pjpy_zjjd_xybxfsh"   forward="/pjpyzjjdwh.do?method=xybxfshDefault"></action><!-- 学生校园表现分审核 -->
+		<action path="/xybxfsh"             forward="/pjpyzjjdwh.do?method=xybxfSh"></action><!-- 学生校园表现分审核结果 -->
+		<action path="/xybxfshqry"          forward="/pjpyzjjdwh.do?method=xybxfshQry"></action><!-- 学生校园表现分审核查询 -->
+		<action path="/xybxfshview"         forward="/pjpyzjjdwh.do?method=xybxfshView"></action><!-- 学生校园表现分审核显示详细信息 -->
+		<action path="/xybxfshone"          forward="/pjpyzjjdwh.do?method=xybxfshOne"></action><!-- 学生校园表现分单个审核 -->
+		<action path="/pjpy_zjjd_xxgbdyfjfwh" forward="/pjpyzjjdwh.do?method=xxgbdyfjfWh"></action><!-- 学生干部德育附加分维护 -->
+		<action path="/xxgbdyfjfqry"        forward="/pjpyzjjdwh.do?method=xxgbdyfjfQry"></action><!-- 学生干部德育附加分查询 -->
+		<action path="/xsgbdyfjfadd"        forward="/pjpyzjjdwh.do?method=xsgbdyfjfAdd"></action><!-- 学生干部德育附加分单个增加 -->
+		<action path="/xsgbdysave"          forward="/pjpyzjjdwh.do?method=xsgbdySave"></action><!-- 学生干部德育附加分单个保存 -->
+		<action path="/xsgbdyfmodi"         forward="/pjpyzjjdwh.do?method=xsgbdyfModi"></action><!-- 学生干部德育附加分修改 -->
+		<action path="/xsgbdyedit"          forward="/pjpyzjjdwh.do?method=xsgbdyEdit"></action><!-- 学生干部德育附加分单个修改保存 -->
+		<action path="/xsgbdyfdel"          forward="/pjpyzjjdwh.do?method=xsgbdyfDel"></action><!-- 学生干部德育附加分批量删除 -->
+		<action path="/pjpy_zjjd_zhszcpwh"  forward="/pjpyzjjdwh.do?method=zhszcpWh"></action><!-- 综合素质测评维护首页 -->
+		<action path="/zjjd_zhszcpadd"           forward="/pjpyzjjdwh.do?method=zhszcpAdd"></action><!-- 综合素质测评增加页面 -->
+		<action path="/zjjd_zhszcpqry"           forward="/pjpyzjjdwh.do?method=zhszcpQry"></action><!-- 综合素质测评查询 -->
+		<action path="/zjjd_zhszcpsave"          forward="/pjpyzjjdwh.do?method=zhszcpSave"></action><!-- 综合素质测评单个保存 -->
+		<action path="/zjjd_zhszcpdel"           forward="/pjpyzjjdwh.do?method=zhszcpDel"></action><!-- 综合素质测评批量删除 -->
+		<action path="/zjjd_zhszcpview"          forward="/pjpyzjjdwh.do?method=zhszcpView"></action><!-- 综合素质测评批量修改显示 -->
+		<action path="/zjjd_zhszcpmodi"          forward="/pjpyzjjdwh.do?method=zhszcpModi"></action><!-- 综合素质测评批量单个保存 -->
+		<action path="/zjjd_zhszcpdataexp"       forward="/pjpyzjjdwh.do?method=zhszcpDataExp"></action><!-- 综合素质测评批量数据导出 -->
+		<action path="/pjpy_zjjd_jxjsqdefault"     forward="/pjpyzjjdwh.do?method=jxjsqDefault"></action><!-- 奖学金申请 -->
+		<action path="/zjjd_jxjsqsave"           forward="/pjpyzjjdwh.do?method=jxjsqSave"></action><!-- 奖学金申请保存 -->
+		<action path="/pjpy_zjjd_jxjsqqry"  forward="/pjpyzjjdwh.do?method=jxjsqqryDefault"></action><!-- 奖学金申请查询首页 -->
+		<action path="/jxjsqqry"            forward="/pjpyzjjdwh.do?method=jxjsqQry"></action><!-- 奖学金申请查询 -->
+		<action path="/jxjadd"              forward="/pjpyzjjdwh.do?method=jxjAdd"></action><!-- 奖学金增加 -->
+		<action path="/jxjdel"              forward="/pjpyzjjdwh.do?method=jxjDel"></action><!-- 奖学金删除 -->
+		<action path="/jxjmodiview"         forward="/pjpyzjjdwh.do?method=jxjmodiView"></action><!-- 奖学金修改显示详细信息 -->
+		<action path="/jxjmodi"             forward="/pjpyzjjdwh.do?method=jxjModi"></action><!-- 奖学金修改 -->
+		<action path="/jxjdataexp"          forward="/pjpyzjjdwh.do?method=jxjdataExp"></action><!-- 奖学金数据导出 -->
+		<action path="/jxjsave"             forward="/pjpyzjjdwh.do?method=jxjSave"></action><!-- 奖学金保存 -->
+		<action path="/pjpy_zjjd_rychsq"    forward="/pjpyzjjdwh.do?method=rychSq"></action><!-- 荣誉称号申请页面 -->
+		<action path="/rychsave"            forward="/pjpyzjjdwh.do?method=rychSave"></action><!-- 荣誉称号保存 -->
+		<action path="/rychsqqry"           forward="/pjpyzjjdwh.do?method=rychsqQry"></action><!-- 荣誉称号申请查询 -->
+		<action path="/rychadd"             forward="/pjpyzjjdwh.do?method=rychAdd"></action><!-- 荣誉称号增加 -->
+		<action path="/rychqry"             forward="/pjpyzjjdwh.do?method=rychQry"></action><!-- 荣誉称号查询 -->
+		<action path="/rychsaveres"         forward="/pjpyzjjdwh.do?method=rychsaveRes"></action><!-- 荣誉称号保存 -->
+		<action path="/rychmodiview"        forward="/pjpyzjjdwh.do?method=rychmodiView"></action><!-- 荣誉称号修改显示详细信息 -->
+		<action path="/rychmodi"            forward="/pjpyzjjdwh.do?method=rychModi"></action><!-- 荣誉称号修改 -->
+		<action path="/rychdel"             forward="/pjpyzjjdwh.do?method=rychDel"></action><!-- 荣誉称号删除 -->
+		<action path="/stujxjqry"           forward="/pjpyzjjdwh.do?method=stujxjQry"></action><!-- 学生奖学金申请查询 -->
+	</action-mappings>
+</struts-config>

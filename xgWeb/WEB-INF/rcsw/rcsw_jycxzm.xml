@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="jycxzmForm" type="xgxt.rcgl.jycxzm.JycxzmForm">
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+	<!--教育储蓄证明管理-->
+		<action name="jycxzmForm" parameter="method" path="/jycxzmgl"
+				scope="request"	type="xgxt.rcgl.jycxzm.JycxzmAction">
+			<forward name="jycxzmsq" path="/rcsw/jycxzm/jycxzmSq.jsp" />
+			<forward name="jycxzmcx" path="/rcsw/jycxzm/jycxzmSearch.jsp" />
+			<forward name="jycxzmsh" path="/rcsw/jycxzm/jycxzmShSearch.jsp" />
+			<forward name="jycxzmView" path="/rcsw/jycxzm/jycxzmView.jsp" />
+			<forward name="jycxzmUpdate" path="/rcsw/jycxzm/jycxzmUpdate.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

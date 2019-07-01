@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/zhszcjImportDefaul.do" location="50,50" dimension="160,60" />
+  <StrutsActivity path="/zhszcjImportSearch.do" location="350,50" dimension="160,60" />
+  <StrutsActivity path="/njtdzhszcj.do" location="650,50" dimension="130,72" />
+  <StrutsTransition id="/xsZhSzCjDetails.do,null,/njtdzhszcj.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="715,86" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zhszcjImportSearch.do,null,/njtdzhszcj.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="510,80" />
+      <AbsolutePoint location="650,80" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zhszcjImportDefaul.do,null,/njtdzhszcj.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="130,50" />
+      <AbsolutePoint location="130,-25" />
+      <AbsolutePoint location="715,-25" />
+      <AbsolutePoint location="715,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

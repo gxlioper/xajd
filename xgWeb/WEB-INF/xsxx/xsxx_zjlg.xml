@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="zjlgXsxxForm" type="xgxt.studentInfo.zjlg.ZjlgXsxxForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+	<action path="/zjlg_xsxx_rwxx" forward="/zjlgXsxxRwxx.do?method=rwxxManage"/>	<!-- 入伍信息 -->
+    <action path="/zjlg_xsxx_dwjl" forward="/zjlgXsxxDwjl.do?method=dwjlManage"/>	<!-- 对外交流 -->
+    <action path="/zjlg_xsxx_cxqk" forward="/zjlgXsxxCxqk.do?method=cxqkManage"/>	<!-- 诚信情况 -->
+    
+    <!-- 实际路径 -->
+        <action path="/zjlgXsxxRwxx" 
+        		parameter="method"  
+        		name="zjlgXsxxForm" 
+        		scope="request"
+		        type="xgxt.studentInfo.zjlg.rwxx.RwxxAction">		        
+		<!-- 入伍信息 -->
+		<forward name="rwxxManage" path="/xsxx/zjlg/rwxx/rwxxManage.jsp" />
+		<forward name="rwxxUpdate" path="/xsxx/zjlg/rwxx/rwxxUpdate.jsp" />
+		</action>
+		
+        <action path="/zjlgXsxxDwjl" 
+        		parameter="method"  
+        		name="zjlgXsxxForm" 
+        		scope="request"
+		        type="xgxt.studentInfo.zjlg.dwjl.DwjlAction">		        
+		<!-- 对外交流 -->
+		<forward name="dwjlManage" path="/xsxx/zjlg/dwjl/dwjlManage.jsp" />
+		<forward name="dwjlUpdate" path="/xsxx/zjlg/dwjl/dwjlUpdate.jsp" />
+		</action>
+	
+        <action path="/zjlgXsxxCxqk" 
+        		parameter="method"  
+        		name="zjlgXsxxForm" 
+        		scope="request"
+		        type="xgxt.studentInfo.zjlg.cxqk.CxqkAction">		        
+		<!-- 诚信情况 -->
+		<forward name="cxqkManage" path="/xsxx/zjlg/cxqk/cxqkManage.jsp" />
+		<forward name="cxqkUpdate" path="/xsxx/zjlg/cxqk/cxqkUpdate.jsp" />
+		</action>
+	</action-mappings>
+
+</struts-config>

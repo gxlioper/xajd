@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="gyglTyForm" type="xgxt.xsgygl.GyglTyForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+	
+	<!-- 信息维护 -->
+    <action path="/gygl_fyk" 	 forward="/gygl_forward.do?method=fykForward"/>		<!-- 房源库维护 -->
+    
+    <!-- 宿舍分配 -->
+	<action path="/gygl_cxfp_ss" forward="/gygl_forward.do?method=cxfpSsForward"/>	<!-- 撤销分配（宿舍） -->
+	
+	<!-- 公寓报修 -->
+	<action path="/gygl_bxsqManage" forward="/gygl_forward.do?method=bxsqForward"/>	<!-- 申请 -->
+	<action path="/gygl_bxshManage" forward="/gygl_forward.do?method=bxshForward"/>	<!-- 审核 -->
+	<action path="/gygl_bxjgManage" forward="/gygl_forward.do?method=bxjgForward"/>	<!-- 结果 -->
+	<action path="/gygl_bxtjManage" forward="/gygl_forward.do?method=bxtjForward"/>	<!-- 统计 -->
+	
+	<!-- 卫生检查 -->
+	<action path="/gygl_wsjc_cssz" forward="/gygl_forward.do?method=wsjcSzForward"/>	<!-- 参数设置 -->
+	<action path="/gygl_wsjc_kbbb" forward="/gygl_forward.do?method=wsjcBbForward"/>	<!-- 空白报表 -->
+	<action path="/gygl_wsjc_fslr" forward="/gygl_forward.do?method=wsjcLrForward"/>	<!-- 卫生分录入 -->
+	<action path="/gygl_wsjc_fscx" forward="/gygl_forward.do?method=wsjcCxForward"/>	<!-- 卫生分查询 -->
+	<action path="/gygl_wsjc_tsqs" forward="/gygl_forward.do?method=wsjcTsForward"/>	<!-- 特殊寝室 -->
+	<action path="/gygl_wsjc_fstj" forward="/gygl_forward.do?method=wsjcTjForward"/>	<!-- 卫生分统计 -->
+	<action path="/gygl_wsjc_xsfslr" forward="/gygl_forward.do?method=wsjcXsfslrForward"/>		<!-- 学生分数录入 -->
+	<action path="/gygl_wsjc_xsfsck" forward="/gygl_forward.do?method=wsjcXsfsckForward"/>		<!-- 学生分数查看-->
+	
+    <!-- 实际路径 -->
+    <action path="/gygl_forward"  parameter="method"   name="gyglTyForm"  scope="request"  type="xgxt.xsgygl.GyglTyAction"/>
+    
+	</action-mappings>
+
+</struts-config>

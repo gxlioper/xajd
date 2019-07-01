@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzXmlgxyActionForm" type="xgxt.xszz.xmlgxy.XszzXmlgxyActionForm"><!-- test.forms.DynaActionFormTest -->
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="xszzXmlgxyActionForm" parameter="method" path="/xmlgxy_xszz"
+				scope="request"	type="xgxt.xszz.xmlgxy.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- "国家励志奖学金"-->
+			<forward name="gjlzjxjsq" path="/xszz/xmlgxy/gjlzjxjsq.jsp" />
+			<forward name="gjlzjxjsqSave" path="/xszz/xmlgxy/gjlzjxjsq.jsp" />
+			<forward name="gjlzjxjsqb" path="/xszz/xmlgxy/gjlzjxjsqb.jsp" />
+			<forward name="gjlzjxjsh" path="/xszz/xmlgxy/gjlzjxjsh.jsp" />
+			<forward name="gjlzjxjshOne" path="/xszz/xmlgxy/gjlzjxjshOne.jsp" />
+			<forward name="gjlzjxjshSave" path="/xszz/xmlgxy/gjlzjxjshOne.jsp" />
+			<forward name="gjlzjxjExp" path="/about:blank" />
+			<!-- "国家奖学金"-->
+			<forward name="gjjxjsq" path="/xszz/xmlgxy/gjjxjsq.jsp" />
+			<forward name="gjjxjsqSave" path="/xszz/xmlgxy/gjjxjsq.jsp" />
+			<forward name="gjjxjsqb" path="/xszz/xmlgxy/gjjxjsqb.jsp" />
+			<forward name="gjjxjsh" path="/xszz/xmlgxy/gjjxjsh.jsp" />
+			<forward name="gjjxjshOne" path="/xszz/xmlgxy/gjjxjshOne.jsp" />
+			<forward name="gjjxjshSave" path="/xszz/xmlgxy/gjjxjshOne.jsp" />
+			<forward name="gjjxjExp" path="/about:blank" />
+		</action>
+		
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

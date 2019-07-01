@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		 <form-bean name="zwlxForm" type="com.zfsoft.xgxt.szdw.xsgbgl.zwlx.ZwlxForm" />	
+		 <form-bean name="zwwhForm" type="com.zfsoft.xgxt.szdw.xsgbgl.zwwh.ZwwhForm" />	
+		 <form-bean name="zwsqForm" type="com.zfsoft.xgxt.szdw.xsgbgl.zwsq.ZwsqForm" />		
+		 <form-bean name="zwshForm" type="com.zfsoft.xgxt.szdw.xsgbgl.zwsh.ZwshForm" />		
+		 <form-bean name="dwwhForm" type="com.zfsoft.xgxt.szdw.xsgbgl.gbdw.DwwhForm" />			
+		 <form-bean name="rzkhjgForm" type="com.zfsoft.xgxt.szdw.xsgbgl.rzkh.rzkhjgForm" />			
+	</form-beans>
+
+	<global-forwards />
+	<action-mappings>
+	<!--学生干部管理 职务类型-->
+    <action 
+    	path="/szdw_xsgb_zwlx" 
+    	name="zwlxForm"
+    	type="com.zfsoft.xgxt.szdw.xsgbgl.zwlx.ZwlxActon" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="list" path="/xsgzgl/szdw/xsgbgl/zwlx/zwlxList.jsp"/>
+    	<forward name="add" path="/xsgzgl/szdw/xsgbgl/zwlx/zwlxAdd.jsp"/>
+    	<forward name="update" path="/xsgzgl/szdw/xsgbgl/zwlx/zwlxUpdate.jsp"/>
+    	<forward name="view" path="/xsgzgl/szdw/xsgbgl/zwlx/zwlxView.jsp"/>
+    	<forward name="zwlxck" path="/xsgzgl/szdw/xsgbgl/zwlx/ckzwlx.jsp"/>
+    </action>
+     <!--学生干部管理 职务-->
+    <action 
+    	path="/szdw_xsgb_zwwh" 
+    	name="zwwhForm"
+    	type="com.zfsoft.xgxt.szdw.xsgbgl.zwwh.ZwwhActon" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="list" path="/xsgzgl/szdw/xsgbgl/zwwh/zwwhList.jsp"/>
+    	<forward name="add" path="/xsgzgl/szdw/xsgbgl/zwwh/zwwhAdd.jsp"/>
+    	<forward name="update" path="/xsgzgl/szdw/xsgbgl/zwwh/zwwhUpdate.jsp"/>
+    	<forward name="view" path="/xsgzgl/szdw/xsgbgl/zwwh/zwwhView.jsp"/>
+    	<forward name="zwck" path="/xsgzgl/szdw/xsgbgl/zwwh/zwck.jsp"/>
+    </action>	
+    <!--学生干部管理 职务申请-->
+    <action 
+    	path="/szdw_zwsq" 
+    	name="zwsqForm"
+    	type="com.zfsoft.xgxt.szdw.xsgbgl.zwsq.ZwsqAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="list" path="/xsgzgl/szdw/xsgbgl/zwsq/zwsqList.jsp"/>
+    	<forward name="add" path="/xsgzgl/szdw/xsgbgl/zwsq/zwsqAdd.jsp"/>
+    	<forward name="zwsqXg" path="/xsgzgl/szdw/xsgbgl/zwsq/zwsqXg.jsp"/>
+    	<forward name="view" path="/xsgzgl/szdw/fdypx/xmsq/fdypxxmView.jsp"/>
+    </action>
+    <!--学生干部管理 职务审核-->
+	 <action 
+    	path="/szdw_zwsh" 
+    	name="zwshForm"
+    	type="com.zfsoft.xgxt.szdw.xsgbgl.zwsh.ZwshAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="list" path="/xsgzgl/szdw/xsgbgl/zwsh/zwshList.jsp"/>
+    	<forward name="zwsh" path="/xsgzgl/szdw/xsgbgl/zwsh/zwsh.jsp"/>
+    	<forward name="zwck" path="/xsgzgl/szdw/xsgbgl/zwsh/zwck.jsp"/>
+    	<forward name="zwPlsh" path="/xsgzgl/szdw/xsgbgl/zwsh/zwPlsh.jsp"/>
+    </action>
+    <!--学生干部管理 队伍维护-->
+    <action 
+    	path="/szdw_xsgb_dwwh" 
+    	name="dwwhForm"
+    	type="com.zfsoft.xgxt.szdw.xsgbgl.gbdw.DwwhAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="list" path="/xsgzgl/szdw/xsgbgl/dwwh/dwwhList.jsp"/>
+    	<forward name="add" path="/xsgzgl/szdw/xsgbgl/dwwh/dwwhAdd.jsp"/>
+    	<forward name="update" path="/xsgzgl/szdw/xsgbgl/dwwh/dwwhUpdate.jsp"/>
+    	<forward name="view" path="/xsgzgl/szdw/xsgbgl/dwwh/dwwhView.jsp"/>
+		<forward name="xsxxList" path="/xsgzgl/szdw/xsgbgl/dwwh/xsxxList.jsp"/>
+		<forward name="dwwhxsList" path="/xsgzgl/szdw/xsgbgl/dwwh/dwwhxsList.jsp"/>
+    </action>
+    <action 
+    	path="/szdw_xsgb_rzkhjg"
+        name="rzkhjgForm" 
+        type="com.zfsoft.xgxt.szdw.xsgbgl.rzkh.RzkhAction"
+        parameter="method"
+        scope="request">
+        <forward name="list" path="/xsgzgl/szdw/xsgbgl/rzkh/rzkhList.jsp"/>
+        <forward name="add" path="/xsgzgl/szdw/xsgbgl/rzkh/addRzkhjg.jsp"/>
+        <forward name="view" path="/xsgzgl/szdw/xsgbgl/rzkh/viewRzkhjg.jsp"/>
+        <forward name="update" path="/xsgzgl/szdw/xsgbgl/rzkh/updateRzkhjg.jsp"/>
+    </action>
+	</action-mappings>
+  <message-resources parameter="xgxt.base.ApplicationResources" /> 
+</struts-config>

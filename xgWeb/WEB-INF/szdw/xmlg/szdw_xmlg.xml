@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xmlgSzdwForm" type="xgxt.szdw.xmlg.XmlgSzdwForm" />
+	</form-beans>
+ 	<action-mappings>
+ 		<!-- 显示路径 -->
+        <action path="/xmlg_wmbj_sz" forward="/xmlgwmbj.do?method=csszManage"/>		<!-- 文明班级设置 -->
+     	<action path="/xmlg_wmbj_sb" forward="/xmlgwmbj.do?method=wmbjSb"/>			<!-- 文明班级申报 -->
+     	<action path="/xmlg_wmbj_ck" forward="/xmlgwmbj.do?method=sbckManage"/>		<!-- 文明班级查看 -->
+		<action path="/xmlg_fdyyp_sz" forward="/xmlgfdyyp.do?method=csszManage"/>	<!-- 辅导员考核月评设置 -->
+     	<action path="/xmlg_fdyyp_sb" forward="/xmlgfdyyp.do?method=fdyypSb"/>		<!-- 辅导员考核月评申报 -->
+     	<action path="/xmlg_fdyyp_ck" forward="/xmlgfdyyp.do?method=sbckManage"/>	<!-- 辅导员考核月评查看 -->
+		<action path="/xmlg_fdyyp_gsjl" forward="/xmlgfdyyp.do?method=gsjlManage"/>	<!-- 辅导员重大过失记录 -->
+		<action path="/xmlg_szdw_aqbg" forward="/xmlgszbgtj.do?method=aqbgUpdate"/>	<!-- 安全报告提交 -->
+     	<action path="/xmlg_szdw_jhzj" forward="/xmlgszbgtj.do?method=jhzjUpdate"/>	<!-- 计划、总结提交 -->
+     	<action path="/xmlg_szdw_gzal" forward="/xmlgszbgtj.do?method=gzalUpdate"/>	<!-- 工作案例提交 -->
+		<action path="/xmlg_szdw_gzjy" forward="/xmlgszbgtj.do?method=gzjyUpdate"/>	<!-- 工作建议提交 -->
+		
+		<!-- 实际路径 -->
+        <action path="/xmlgwmbj" 
+        		parameter="method"  
+        		name="xmlgSzdwForm" 
+        		scope="request"
+		        type="xgxt.szdw.xmlg.wmbj.WmbjAction">
+		        
+		<!-- 文明班级设置 -->
+		<forward name="csszManage" path="/szdw/xmlg/cssz/wmbjManage.jsp" />
+		<forward name="csszUpdate" path="/szdw/xmlg/cssz/wmbjUpdate.jsp" />	
+		<!-- 文明班级申报 -->
+		<forward name="wmbjSb" path="/szdw/xmlg/wmbj/wmbjSb.jsp" />
+		<!-- 文明班级查看 -->
+		<forward name="sbckManage" path="/szdw/xmlg/wmbj/sbckManage.jsp" />
+		<forward name="wmbjCk" path="/szdw/xmlg/wmbj/wmbjCk.jsp" />
+		</action>
+
+        <action path="/xmlgfdyyp" 
+        		parameter="method"  
+        		name="xmlgSzdwForm" 
+        		scope="request"
+		        type="xgxt.szdw.xmlg.fdyyp.FdyypAction">
+		        
+		<!-- 辅导员考核月评设置 -->
+		<forward name="csszManage" path="/szdw/xmlg/cssz/fdyypManage.jsp" />
+		<forward name="csszUpdate" path="/szdw/xmlg/cssz/fdyypUpdate.jsp" />	
+		<!-- 辅导员考核月评申报 -->
+		<forward name="fdyypSb" path="/szdw/xmlg/fdyyp/fdyypSb.jsp" />
+		<!-- 辅导员考核月评查看 -->
+		<forward name="sbckManage" path="/szdw/xmlg/fdyyp/sbckManage.jsp" />
+		<forward name="fdyypCk" path="/szdw/xmlg/fdyyp/fdyypCk.jsp" />
+		<!-- 辅导员信息查询 -->
+		<forward name="fdyxxSearch" path="/szdw/xmlg/fdyyp/fdyxxSearch.jsp" />
+		<!-- 辅导员重大过失记录 -->
+		<forward name="gsjlManage" path="/szdw/xmlg/fdyyp/gsjlManage.jsp" />
+		<forward name="gsjlUpdate" path="/szdw/xmlg/fdyyp/gsjlUpdate.jsp" />
+		</action>
+		
+		<action path="/xmlgszbgtj" 
+        		parameter="method"  
+        		name="xmlgSzdwForm" 
+        		scope="request"
+		        type="xgxt.szdw.xmlg.bgtj.BgtjAction">
+		        
+		<!-- 安全报告提交 -->
+		<forward name="aqbgManage" path="/szdw/xmlg/bgtj/aqbgManage.jsp" />
+		<forward name="aqbgUpdate" path="/szdw/xmlg/bgtj/aqbgUpdate.jsp" />	  
+		<!-- 计划、总结提交 -->
+		<forward name="aqbgManage" path="/szdw/xmlg/bgtj/aqbgManage.jsp" />
+		<forward name="jhzjUpdate" path="/szdw/xmlg/bgtj/jhzjUpdate.jsp" />	  
+		<!-- 工作案例提交 -->
+		<forward name="aqbgManage" path="/szdw/xmlg/bgtj/aqbgManage.jsp" />
+		<forward name="gzalUpdate" path="/szdw/xmlg/bgtj/gzalUpdate.jsp" />	  
+		<!-- 工作建议提交 -->
+		<forward name="aqbgManage" path="/szdw/xmlg/bgtj/aqbgManage.jsp" />
+		<forward name="gzjyUpdate" path="/szdw/xmlg/bgtj/gzjyUpdate.jsp" />	  	 
+		</action>
+	</action-mappings>
+	<message-resources key="szdw" parameter="xgxt.base.ApplicationResources"/>
+</struts-config>

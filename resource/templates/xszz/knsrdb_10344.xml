@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?mso-application progid="Word.Document"?>
+<w:wordDocument xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
+<o:DocumentProperties>
+<o:Title>${xxmc!}高等学校学生及其家庭情况调查表111</o:Title>
+<o:Author>zhou</o:Author>
+<o:LastAuthor>微软用户</o:LastAuthor>
+<o:Revision>2</o:Revision>
+<o:TotalTime>0</o:TotalTime>
+<o:LastPrinted>2007-01-09T08:29:00Z</o:LastPrinted>
+<o:Created>2014-02-18T02:01:00Z</o:Created>
+<o:LastSaved>2014-02-18T02:01:00Z</o:LastSaved>
+<o:Pages>1</o:Pages>
+<o:Words>192</o:Words>
+<o:Characters>1098</o:Characters>
+<o:Bytes>0</o:Bytes>
+<o:Lines>9</o:Lines>
+<o:Paragraphs>2</o:Paragraphs>
+<o:CharactersWithSpaces>1288</o:CharactersWithSpaces>
+<o:Version>11.5604</o:Version>
+</o:DocumentProperties>
+<o:CustomDocumentProperties>
+<o:KSOProductBuildVer dt:dt="string">2052-9.1.0.4468</o:KSOProductBuildVer>
+</o:CustomDocumentProperties>
+<w:fonts>
+<w:defaultFonts w:ascii="Times New Roman" w:fareast="宋体" w:h-ansi="Times New Roman" w:cs="Times New Roman"/>
+<w:font w:name="宋体">
+<w:altName w:val="SimSun"/>
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="黑体">
+<w:altName w:val="SimHei"/>
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000001" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="新宋体">
+<w:panose-1 w:val="02010609030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="00000003" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@新宋体">
+<w:panose-1 w:val="02010609030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="00000003" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@宋体">
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@黑体">
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000001" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+</w:fonts>
+<w:styles>
+<w:versionOfBuiltInStylenames w:val="4"/>
+<w:latentStyles w:defLockedState="off" w:latentStyleCount="156"/>
+<w:style w:type="paragraph" w:default="on" w:styleId="a">
+<w:name w:val="Normal"/>
+<wx:uiName wx:val="正文"/>
+<w:pPr>
+<w:widowControl w:val="off"/>
+<w:jc w:val="both"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:kern w:val="2"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="24"/>
+<w:lang w:val="EN-US" w:fareast="ZH-CN" w:bidi="AR-SA"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:default="on" w:styleId="a0">
+<w:name w:val="Default Paragraph Font"/>
+<wx:uiName wx:val="默认段落字体"/>
+<w:semiHidden/>
+</w:style>
+<w:style w:type="table" w:default="on" w:styleId="a1">
+<w:name w:val="Normal Table"/>
+<wx:uiName wx:val="普通表格"/>
+<w:semiHidden/>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+</w:rPr>
+<w:tblPr>
+<w:tblInd w:w="0" w:type="dxa"/>
+<w:tblCellMar>
+<w:top w:w="0" w:type="dxa"/>
+<w:left w:w="108" w:type="dxa"/>
+<w:bottom w:w="0" w:type="dxa"/>
+<w:right w:w="108" w:type="dxa"/>
+</w:tblCellMar>
+</w:tblPr>
+</w:style>
+<w:style w:type="list" w:default="on" w:styleId="a2">
+<w:name w:val="No List"/>
+<wx:uiName wx:val="无列表"/>
+<w:semiHidden/>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a3">
+<w:name w:val="Body Text"/>
+<wx:uiName wx:val="正文文本"/>
+<w:basedOn w:val="a"/>
+<w:pPr>
+<w:pStyle w:val="a3"/>
+<w:spacing w:before-lines="50"/>
+<w:jc w:val="center"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体"/>
+<wx:font wx:val="新宋体"/>
+</w:rPr>
+</w:style>
+</w:styles>
+<w:shapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="2050" fillcolor="#9cbee0" strokecolor="#739cc3">
+<v:fill color="#9cbee0" color2="#bbd5f0" type="gradient">
+<o:fill v:ext="view" type="gradientUnscaled"/>
+</v:fill>
+<v:stroke color="#739cc3" weight="1.25pt"/>
+</o:shapedefaults>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1"/>
+</o:shapelayout>
+</w:shapeDefaults>
+<w:docPr>
+<w:view w:val="print"/>
+<w:zoom w:percent="100"/>
+<w:doNotEmbedSystemFonts/>
+<w:bordersDontSurroundHeader/>
+<w:bordersDontSurroundFooter/>
+<w:proofState w:grammar="clean"/>
+<w:attachedTemplate w:val=""/>
+<w:defaultTabStop w:val="420"/>
+<w:drawingGridVerticalSpacing w:val="156"/>
+<w:displayHorizontalDrawingGridEvery w:val="0"/>
+<w:displayVerticalDrawingGridEvery w:val="2"/>
+<w:punctuationKerning/>
+<w:characterSpacingControl w:val="CompressPunctuation"/>
+<w:webPageEncoding w:val="x-cp20936"/>
+<w:optimizeForBrowser/>
+<w:validateAgainstSchema w:val="off"/>
+<w:saveInvalidXML w:val="off"/>
+<w:ignoreMixedContent w:val="off"/>
+<w:alwaysShowPlaceholderText w:val="off"/>
+<w:doNotUnderlineInvalidXML/>
+<w:compat>
+<w:spaceForUL/>
+<w:balanceSingleByteDoubleByteWidth/>
+<w:doNotLeaveBackslashAlone/>
+<w:ulTrailSpace/>
+<w:doNotExpandShiftReturn/>
+<w:adjustLineHeightInTable/>
+<w:snapToGridInCell/>
+<w:useFELayout/>
+</w:compat>
+</w:docPr>
+<w:body>
+<wx:sect>
+<w:p>
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:fareast="黑体" w:hint="fareast"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="36"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="36"/>
+</w:rPr>
+<w:t><#if xslb! =="滨江">浙江中医药大学滨江校区<#else>${xxmc!}</#if>家庭经济困难学生认定申请表</w:t>
+</w:r>
+</w:p>
+<w:p>
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:fareast="黑体" w:hint="fareast"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:fareast="黑体" w:hint="fareast"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>${knsqInfo.xn!}</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>学年）</w:t>
+</w:r>
+</w:p>
+<w:tbl><w:tblPr><w:tblW
+	w:w="0" w:type="auto" /><w:jc w:val="center" /><w:tblBorders><w:top
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /><w:left
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /><w:right
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /><w:insideH
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /><w:insideV
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tblBorders><w:tblLayout
+	w:type="Fixed" /></w:tblPr><w:tblGrid><w:gridCol w:w="662" /><w:gridCol
+	w:w="894" /><w:gridCol w:w="716" /><w:gridCol w:w="729" /><w:gridCol
+	w:w="366" /><w:gridCol w:w="159" /><w:gridCol w:w="219" /><w:gridCol
+	w:w="557" /><w:gridCol w:w="189" /><w:gridCol w:w="536" /><w:gridCol
+	w:w="353" /><w:gridCol w:w="352" /><w:gridCol w:w="6" /><w:gridCol
+	w:w="358" /><w:gridCol w:w="722" /><w:gridCol w:w="539" /><w:gridCol
+	w:w="916" /><w:gridCol w:w="882" /><w:gridCol w:w="720" /><w:gridCol
+	w:w="21" /></w:tblGrid>
+	<w:tr><w:tblPrEx><w:tblCellMar><w:top w:w="0"
+	w:type="dxa" /><w:bottom w:w="0" w:type="dxa" /></w:tblCellMar></w:tblPrEx><w:trPr><w:gridAfter
+	w:val="1" /><w:wAfter w:w="21" w:type="dxa" /><w:cantSplit /><w:trHeight
+	w:val="454" /><w:jc w:val="center" /></w:trPr><w:tc><w:tcPr><w:tcW
+	w:w="662" w:type="dxa" /><w:vmerge w:val="restart" /><w:textFlow
+	w:val="tb-rl-v" /><w:vAlign w:val="center" /></w:tcPr><w:p><w:pPr><w:ind
+	w:left="113" w:right="113" /><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /></w:rPr><w:t>学生本人基本情况</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1610" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>姓  名</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1254" w:type="dxa" /><w:gridSpan w:val="3" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${xm!}</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="965" w:type="dxa" /><w:gridSpan w:val="3" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>性 别</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1247" w:type="dxa" /><w:gridSpan w:val="4" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${xb!}</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1080" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>出生年月</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1455" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${csrq!}</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="882" w:type="dxa" /><w:vAlign w:val="center" /></w:tcPr><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>民 族</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="720" w:type="dxa" /><w:vAlign w:val="center" /></w:tcPr><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${mzmc!}</w:t></w:r></w:p></w:tc></w:tr>
+	
+	<w:tr><w:tblPrEx><w:tblCellMar><w:top
+	w:w="0" w:type="dxa" /><w:bottom w:w="0" w:type="dxa" /></w:tblCellMar></w:tblPrEx><w:trPr><w:gridAfter
+	w:val="1" /><w:wAfter w:w="21" w:type="dxa" /><w:cantSplit /><w:trHeight
+	w:val="454" /><w:jc w:val="center" /></w:trPr><w:tc><w:tcPr><w:tcW
+	w:w="662" w:type="dxa" /><w:vmerge /></w:tcPr><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1610" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>身份证号码</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="2219" w:type="dxa" /><w:gridSpan w:val="6" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${sfzh!}</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1247" w:type="dxa" /><w:gridSpan w:val="4" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>政治面貌</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1080" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${zzmmmc!}</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1455" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>家庭人均</w:t></w:r></w:p><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>年收入</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1602" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:ind w:first-line-chars="500" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${jtqk.jtrjnsr!}元</w:t></w:r></w:p></w:tc></w:tr>
+	
+	<w:tr><w:tblPrEx><w:tblCellMar><w:top
+	w:w="0" w:type="dxa" /><w:bottom w:w="0" w:type="dxa" /></w:tblCellMar></w:tblPrEx><w:trPr><w:gridAfter
+	w:val="1" /><w:wAfter w:w="21" w:type="dxa" /><w:cantSplit /><w:trHeight
+	w:val="454" /><w:jc w:val="center" /></w:trPr><w:tc><w:tcPr><w:tcW
+	w:w="662" w:type="dxa" /><w:vmerge /></w:tcPr><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1610" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>生源地</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1095" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${sydmc!}</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="935" w:type="dxa" /><w:gridSpan w:val="3" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>家庭人口数</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="725" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${jtqk.jtrs!}</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="705" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>学院</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1625" w:type="dxa" /><w:gridSpan w:val="4" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${xymc!}</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="916" w:type="dxa" /><w:vAlign w:val="center" /></w:tcPr><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>专业</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1602" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${zymc!}</w:t></w:r></w:p></w:tc></w:tr>
+	
+	<w:tr><w:tblPrEx><w:tblCellMar><w:top
+	w:w="0" w:type="dxa" /><w:bottom w:w="0" w:type="dxa" /></w:tblCellMar></w:tblPrEx><w:trPr><w:gridAfter
+	w:val="1" /><w:wAfter w:w="21" w:type="dxa" /><w:cantSplit /><w:trHeight
+	w:val="454" /><w:jc w:val="center" /></w:trPr><w:tc><w:tcPr><w:tcW
+	w:w="662" w:type="dxa" /><w:vmerge /></w:tcPr><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1610" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>年  级</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="729" w:type="dxa" /><w:vAlign w:val="center" /></w:tcPr><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${nj!}</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="744" w:type="dxa" /><w:gridSpan w:val="3" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>班级</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="746" w:type="dxa" /><w:gridSpan w:val="2" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${bjmc!}</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1605" w:type="dxa" /><w:gridSpan w:val="5" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>在校联系电话</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="3779" w:type="dxa" /><w:gridSpan w:val="5" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${sjhm!}</w:t></w:r></w:p></w:tc></w:tr>
+	
+	
+<w:tr w:rsidR="007F6610" w:rsidTr="000B72B6">
+<w:trPr>
+<w:gridAfter w:val="1"/>
+<w:wAfter w:w="21" w:type="dxa"/>
+<w:cantSplit/>
+<w:trHeight w:val="454"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="662" w:type="dxa"/>
+<w:vMerge/>
+</w:tcPr>
+<w:p w:rsidR="007F6610" w:rsidRDefault="007F6610">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:eastAsia="新宋体" w:hAnsi="新宋体"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1610" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p w:rsidR="007F6610" w:rsidRDefault="007F6610">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:eastAsia="新宋体" w:hAnsi="新宋体"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:eastAsia="新宋体" w:hAnsi="新宋体" w:hint="eastAsia"/>
+</w:rPr>
+<w:t>校区</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2219" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p w:rsidR="007F6610" w:rsidRDefault="007F6610">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:eastAsia="新宋体" w:hAnsi="新宋体"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:eastAsia="新宋体" w:hAnsi="新宋体" w:hint="eastAsia"/>
+</w:rPr>
+<w:t>${xqmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2327" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p w:rsidR="007F6610" w:rsidRDefault="007F6610" w:rsidP="007F6610">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:eastAsia="新宋体" w:hAnsi="新宋体"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:eastAsia="新宋体" w:hAnsi="新宋体" w:hint="eastAsia"/>
+</w:rPr>
+<w:t>学生类别</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3057" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p w:rsidR="007F6610" w:rsidRDefault="007F6610" w:rsidP="007F6610">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:eastAsia="新宋体" w:hAnsi="新宋体"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="新宋体" w:eastAsia="新宋体" w:hAnsi="新宋体" w:hint="eastAsia"/>
+</w:rPr>
+<w:t>${xslb!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+
+
+	
+	<w:tr><w:tblPrEx><w:tblCellMar><w:top
+	w:w="0" w:type="dxa" /><w:bottom w:w="0" w:type="dxa" /></w:tblCellMar></w:tblPrEx><w:trPr><w:gridAfter
+	w:val="1" /><w:wAfter w:w="21" w:type="dxa" /><w:cantSplit /><w:trHeight
+	w:val="2922" /><w:jc w:val="center" /></w:trPr><w:tc><w:tcPr><w:tcW
+	w:w="662" w:type="dxa" /><w:tcBorders><w:bottom w:val="single"
+	w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders><w:textFlow
+	w:val="tb-rl-v" /><w:vAlign w:val="center" /></w:tcPr><w:p><w:pPr><w:ind
+	w:left="113" w:right="113" /><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /></w:rPr><w:t>学生陈述申请认定理由</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="9213" w:type="dxa" /><w:gridSpan w:val="18" /><w:tcBorders><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders></w:tcPr><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${sqrdly!}</w:t></w:r></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>                                        学生签字：          </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:u w:val="single" /></w:rPr><w:t>         </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>年</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /><w:u w:val="single" /></w:rPr><w:t>   </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>月</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:u w:val="single" /></w:rPr><w:t>   </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>日</w:t></w:r></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /></w:rPr><w:t>注：可另附详细情况说明。</w:t></w:r></w:p></w:tc></w:tr>
+	
+	<w:tr>
+	<w:tblPrEx><w:tblCellMar><w:top
+	w:w="0" w:type="dxa" /><w:bottom w:w="0" w:type="dxa" /></w:tblCellMar></w:tblPrEx>
+	<w:trPr><w:gridAfter
+	w:val="1" /><w:wAfter w:w="21" w:type="dxa" /><w:cantSplit /><w:trHeight
+	w:val="700" /><w:jc w:val="center" /></w:trPr>
+	<w:tc><w:tcPr><w:tcW
+	w:w="662" w:type="dxa" /><w:vmerge w:val="restart" /><w:textFlow
+	w:val="tb-rl-v" /><w:vAlign w:val="center" /></w:tcPr><w:p><w:pPr><w:ind
+	w:left="113" w:right="113" /><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /></w:rPr><w:t>班组评议</w:t></w:r></w:p></w:tc>
+	<w:tc><w:tcPr><w:tcW
+	w:w="894" w:type="dxa" /><w:vmerge w:val="restart" /><w:textFlow
+	w:val="tb-rl-v" /><w:vAlign w:val="center" /></w:tcPr><w:p><w:pPr><w:ind
+	w:left="113" w:right="113" /><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>推荐档次</w:t></w:r></w:p></w:tc>
+	
+	<w:tc><w:tcPr><w:tcW
+	w:w="1970" w:type="dxa" /><w:gridSpan w:val="4" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t><#list kndc as map>
+<#if map_index == 0 >
+${map.dcmc!}
+<#if map.dcdm==rddc>
+■
+<#else>
+□
+</#if>
+</#if></#list></w:t></w:r></w:p></w:tc>
+	
+	
+	<w:tc><w:tcPr><w:tcW
+	w:w="965" w:type="dxa" /><w:gridSpan w:val="3" /><w:vmerge
+	w:val="restart" /><w:textFlow w:val="tb-rl-v" /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:ind w:left="113"
+	w:right="113" /><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>组长意见</w:t></w:r></w:p></w:tc>
+	<w:tc><w:tcPr><w:tcW
+	w:w="5384" w:type="dxa" /><w:gridSpan w:val="10" /><w:vmerge
+	w:val="restart" /></w:tcPr><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p><w:p><w:pPr><w:spacing
+	w:after-lines="50" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>评议小组组长签字：      </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:u w:val="single" /></w:rPr><w:t>         </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>年</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:u w:val="single" /></w:rPr><w:t>   </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>月</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:u w:val="single" /></w:rPr><w:t>   </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>日</w:t></w:r></w:p></w:tc></w:tr>
+<#list kndc as map>
+<#if map_index gt 0 &&  map_index lt 3>
+	<w:tr><w:tblPrEx><w:tblCellMar><w:top
+	w:w="0" w:type="dxa" /><w:bottom w:w="0" w:type="dxa" /></w:tblCellMar></w:tblPrEx><w:trPr><w:gridAfter
+	w:val="1" /><w:wAfter w:w="21" w:type="dxa" /><w:cantSplit /><w:trHeight
+	w:val="700" /><w:jc w:val="center" /></w:trPr><w:tc><w:tcPr><w:tcW
+	w:w="662" w:type="dxa" /><w:vmerge /></w:tcPr><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="894" w:type="dxa" /><w:vmerge /><w:vAlign w:val="center" /></w:tcPr><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1970" w:type="dxa" /><w:gridSpan w:val="4" /><w:tcBorders><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>${map.dcmc!}<#if map.dcdm==rddc>
+■
+<#else>
+□
+</#if>
+</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="965" w:type="dxa" /><w:gridSpan w:val="3" /><w:vmerge /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="5384" w:type="dxa" /><w:gridSpan w:val="10" /><w:vmerge /><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc></w:tr>
+	</#if>
+	</#list>
+	
+	<#assign kndcsize = kndc?size -1 >
+	<#assign max = 2>
+	<#list 1..max as i>
+	<#if i gt kndcsize>
+	<w:tr><w:tblPrEx><w:tblCellMar><w:top
+	w:w="0" w:type="dxa" /><w:bottom w:w="0" w:type="dxa" /></w:tblCellMar></w:tblPrEx><w:trPr><w:gridAfter
+	w:val="1" /><w:wAfter w:w="21" w:type="dxa" /><w:cantSplit /><w:trHeight
+	w:val="700" /><w:jc w:val="center" /></w:trPr><w:tc><w:tcPr><w:tcW
+	w:w="662" w:type="dxa" /><w:vmerge /><w:tcBorders><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders></w:tcPr><w:p><w:pPr><w:jc
+	w:val="center" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="894" w:type="dxa" /><w:vmerge /><w:tcBorders><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="1970" w:type="dxa" /><w:gridSpan w:val="4" /><w:tcBorders><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>  </w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="965" w:type="dxa" /><w:gridSpan w:val="3" /><w:vmerge /><w:tcBorders><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="5384" w:type="dxa" /><w:gridSpan w:val="10" /><w:vmerge /><w:tcBorders><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr></w:p></w:tc></w:tr>
+	</#if>
+	</#list>
+	<w:tr><w:tblPrEx><w:tblCellMar><w:top
+	w:w="0" w:type="dxa" /><w:bottom w:w="0" w:type="dxa" /></w:tblCellMar></w:tblPrEx><w:trPr><w:cantSplit /><w:trHeight
+	w:val="2180" /><w:jc w:val="center" /></w:trPr><w:tc><w:tcPr><w:tcW
+	w:w="662" w:type="dxa" /><w:tcBorders><w:bottom w:val="single"
+	w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders><w:textFlow
+	w:val="tb-rl-v" /><w:vAlign w:val="center" /></w:tcPr><w:p><w:pPr><w:ind
+	w:left="113" w:right="113" /><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:b /><w:b-cs /></w:rPr><w:t>认定决定</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="894" w:type="dxa" /><w:tcBorders><w:bottom w:val="single"
+	w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>学院</w:t></w:r></w:p><w:p><w:pPr><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>意见</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="2935" w:type="dxa" /><w:gridSpan w:val="7" /><w:tcBorders><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders></w:tcPr><w:p><w:pPr><w:pStyle
+	w:val="a3" /><w:spacing w:before-lines="0" /><w:jc
+	w:val="both" /><w:rPr><w:rFonts w:hint="fareast" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr><w:t>经评议小组推荐、本院认真审核后，</w:t></w:r></w:p><w:p><w:pPr><w:pStyle
+	w:val="a3" /><w:spacing w:before-lines="0" /><w:jc
+	w:val="both" /><w:rPr><w:rFonts w:hint="fareast" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr><w:t>□  同意评议小组意见。</w:t></w:r></w:p><w:p><w:pPr><w:pStyle
+	w:val="a3" /><w:spacing w:before-lines="0" /><w:jc
+	w:val="both" /><w:rPr><w:rFonts w:hint="fareast" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr><w:t>□  不同意评议小组意见。调整为</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /><w:u w:val="single" /></w:rPr><w:t>               </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr><w:t>。</w:t></w:r></w:p><w:p><w:pPr><w:pStyle
+	w:val="a3" /><w:spacing w:after-lines="50" /><w:jc
+	w:val="both" /><w:rPr><w:rFonts w:hint="fareast" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr><w:t>工作组组长签字：</w:t></w:r></w:p><w:p><w:pPr><w:pStyle
+	w:val="a3" /><w:spacing w:after-lines="50" /><w:ind
+	w:first-line-chars="200" /><w:jc w:val="both" /><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /><w:u w:val="single" /></w:rPr><w:t>         </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr><w:t>年</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /><w:u w:val="single" /></w:rPr><w:t>   </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr><w:t>月</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /><w:u w:val="single" /></w:rPr><w:t>   </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr><w:t>日</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="889" w:type="dxa" /><w:gridSpan w:val="2" /><w:tcBorders><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders><w:vAlign
+	w:val="center" /></w:tcPr><w:p><w:pPr><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>校学生资助管理机构意见</w:t></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW
+	w:w="4516" w:type="dxa" /><w:gridSpan w:val="9" /><w:tcBorders><w:bottom
+	w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto" /></w:tcBorders></w:tcPr><w:p><w:pPr><w:spacing
+	w:before-lines="50" /><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>经学生所在学院提请，本机构认真核实，</w:t></w:r></w:p><w:p><w:pPr><w:spacing
+	w:before-lines="50" /><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:hint="fareast" /><wx:font
+	wx:val="宋体" /></w:rPr><w:t>□</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr><w:t>  </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>同意工作组和评议小组意见。</w:t></w:r></w:p><w:p><w:pPr><w:spacing
+	w:after-lines="50" /><w:rPr><w:rFonts w:ascii="新宋体" w:fareast="新宋体"
+	w:h-ansi="新宋体" w:hint="fareast" /><wx:font wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /><wx:font wx:val="宋体" /></w:rPr><w:t>□</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /></w:rPr><w:t>  </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:hint="fareast" /><wx:font wx:val="宋体" /></w:rPr><w:t>不</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>同意工作组和评议小组意见。调整为：</w:t></w:r></w:p><w:p><w:pPr><w:spacing
+	w:before-lines="50" w:after-lines="50" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:u w:val="single" /></w:rPr><w:t>                                      </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>。</w:t></w:r></w:p><w:p><w:pPr><w:spacing
+	w:before-lines="50" w:after-lines="50" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>负责人签字：        </w:t></w:r></w:p><w:p><w:pPr><w:spacing
+	w:before-lines="50" w:after-lines="50" /><w:ind
+	w:first-line-chars="800" /><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:u w:val="single" /></w:rPr><w:t>         </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>年</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:u w:val="single" /></w:rPr><w:t>   </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>月</w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /><w:u w:val="single" /></w:rPr><w:t>   </w:t></w:r><w:r><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>日</w:t></w:r></w:p><w:p><w:pPr><w:spacing
+	w:before-lines="50" w:after-lines="50" /><w:jc w:val="center" /><w:rPr><w:rFonts
+	w:ascii="新宋体" w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="新宋体"
+	w:fareast="新宋体" w:h-ansi="新宋体" w:hint="fareast" /><wx:font
+	wx:val="新宋体" /></w:rPr><w:t>（加盖部门公章）</w:t></w:r></w:p></w:tc></w:tr></w:tbl>
+<w:p>
+<w:pPr>
+<w:rPr>
+<w:rFonts w:fareast="黑体" w:hint="fareast"/>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:b-cs/>
+</w:rPr>
+<w:t>（本表一式二份，学院、学生处分别存档）</w:t>
+</w:r>
+</w:p>
+<w:sectPr>
+<w:pgSz w:w="11906" w:h="16838"/>
+<w:pgMar w:top="1440" w:right="1134" w:bottom="851" w:left="1134" w:header="851" w:footer="992" w:gutter="0"/>
+<w:cols w:space="720"/>
+<w:docGrid w:type="lines" w:line-pitch="312"/>
+</w:sectPr>
+</wx:sect>
+</w:body>
+</w:wordDocument>

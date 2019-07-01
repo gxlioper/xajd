@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<!-- 我的应用 -->
+		<form-bean name="KsdhForm" type="com.zfsoft.xgxt.xtwh.ksdh.KsdhForm" />
+	
+	</form-beans>
+	<action-mappings>
+	<!-- 基础设置 -->
+	<action path="/wdyy_wdyygl" forward="/wdyygl.do?method=test" />
+		<!-- 我的站内信 -->
+		<action path="/wdyygl" name="KsdhForm" type="com.zfsoft.xgxt.xtwh.ksdh.KsdhAction"
+			parameter="method" scope="request">
+			<forward name="test" path="/xtwh/wdyy/wdyyedit.jsp" />
+		</action>
+		
+		
+		
+	</action-mappings>
+</struts-config>

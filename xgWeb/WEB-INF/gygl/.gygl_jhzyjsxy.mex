@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/dormCheckManage.do" location="0,0" dimension="142,60" />
+  <StrutsActivity path="/fdyrzInfoManage.do" location="242,0" dimension="142,60" />
+  <StrutsActivity path="/gydjInfoManage.do" location="484,0" dimension="136,60" />
+  <StrutsActivity path="/zghryInfoManage.do" location="720,0" dimension="142,60" />
+  <StrutsActivity path="/zzxdjcInfoManage.do" location="962,0" dimension="148,60" />
+  <StrutsActivity path="/xqInfoManage.do" location="1210,0" dimension="124,60" />
+  <StrutsActivity path="/gyfdyInfoManage.do" location="1434,0" dimension="142,60" />
+  <StrutsActivity path="/gyfdyCheckManage.do" location="1676,0" dimension="148,60" />
+  <StrutsActivity path="/yxlcqsSq.do" location="1924,0" dimension="100,60" />
+  <StrutsActivity path="/yxlcqsSh.do" location="2124,0" dimension="100,60" />
+  <StrutsActivity path="/yxlcqsManage.do" location="2324,0" dimension="124,60" />
+  <StrutsActivity path="/wmgylSq.do" location="2548,0" dimension="94,60" />
+  <StrutsActivity path="/wmgylSh.do" location="2742,0" dimension="94,60" />
+  <StrutsActivity path="/wmgylManage.do" location="2936,0" dimension="118,60" />
+  <StrutsActivity path="/jhzy_gygl.do" location="1499,300" dimension="256,84" />
+  <StrutsTransition id="/zghryInfoManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="791,60" />
+      <AbsolutePoint location="791,180" />
+      <AbsolutePoint location="1563,180" />
+      <AbsolutePoint location="1563,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wmgylManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2995,60" />
+      <AbsolutePoint location="2995,270" />
+      <AbsolutePoint location="1746,270" />
+      <AbsolutePoint location="1746,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxlcqsSq.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1974,60" />
+      <AbsolutePoint location="1974,120" />
+      <AbsolutePoint location="1654,120" />
+      <AbsolutePoint location="1654,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dormCheckManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="71,60" />
+      <AbsolutePoint location="71,270" />
+      <AbsolutePoint location="1508,270" />
+      <AbsolutePoint location="1508,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zzxdjcInfoManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1036,60" />
+      <AbsolutePoint location="1036,150" />
+      <AbsolutePoint location="1581,150" />
+      <AbsolutePoint location="1581,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fdyrzInfoManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="313,60" />
+      <AbsolutePoint location="313,240" />
+      <AbsolutePoint location="1526,240" />
+      <AbsolutePoint location="1526,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gydjInfoManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="552,60" />
+      <AbsolutePoint location="552,210" />
+      <AbsolutePoint location="1545,210" />
+      <AbsolutePoint location="1545,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gyfdyInfoManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1505,60" />
+      <AbsolutePoint location="1505,90" />
+      <AbsolutePoint location="1618,90" />
+      <AbsolutePoint location="1618,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gyfdyCheckManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1750,60" />
+      <AbsolutePoint location="1750,90" />
+      <AbsolutePoint location="1636,90" />
+      <AbsolutePoint location="1636,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxlcqsSh.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2174,60" />
+      <AbsolutePoint location="2174,150" />
+      <AbsolutePoint location="1673,150" />
+      <AbsolutePoint location="1673,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wmgylSh.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2789,60" />
+      <AbsolutePoint location="2789,240" />
+      <AbsolutePoint location="1728,240" />
+      <AbsolutePoint location="1728,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xqInfoManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1272,60" />
+      <AbsolutePoint location="1272,120" />
+      <AbsolutePoint location="1600,120" />
+      <AbsolutePoint location="1600,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxlcqsManage.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2386,60" />
+      <AbsolutePoint location="2386,180" />
+      <AbsolutePoint location="1691,180" />
+      <AbsolutePoint location="1691,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wmgylSq.do,null,/jhzy_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2595,60" />
+      <AbsolutePoint location="2595,210" />
+      <AbsolutePoint location="1709,210" />
+      <AbsolutePoint location="1709,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

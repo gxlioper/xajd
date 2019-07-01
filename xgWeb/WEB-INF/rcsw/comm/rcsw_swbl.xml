@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="rcswSwblForm" type="xgxt.rcsw.comm.swbl.RcswSwblForm"/>
+		<form-bean name="zjjsJxqkForm" type="xgxt.rcsw.zjjs.jxqk.ZjjsJxqkForm"/>
+		<form-bean name="zjjsRwzbForm" type="xgxt.rcsw.zjjs.rwzb.ZjjsRwzbForm"/>
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/rcsw_zjjs_rwzb" 		forward="/zjjsRcswRwzb.do?method=rwzbManage"/>	
+  		<action path="/rcsw_zjjs_rwzb_fdy" 	forward="/zjjsRcswRwzb.do?method=rwzbFdyManage"/>		
+  		<action path="/rcsw_zjjs_jxqk" 		forward="/zjjsRcswJxqk.do?method=jxqkManage"/>
+  		
+		<!-- 通用版本_事务办理_事务申请 -->
+		<action path="/rcswSwbl" 
+				type="xgxt.rcsw.comm.swbl.RcswSwblAction"
+				name="rcswSwblForm"
+				scope="request"
+				parameter="method">
+			<forward name="swblSq" path="/rcsw/comm/swbl/swblSq.jsp" />	<!-- 事务办理申请 -->
+			<forward name="swblCx" path="/rcsw/comm/swbl/swblCx.jsp" />  <!-- 事务办理查询 -->
+			<forward name="swblSh" path="/rcsw/comm/swbl/swblSh.jsp" />	<!-- 事务办理审核 -->
+			<forward name="swblSz" path="/rcsw/comm/swbl/swblSz.jsp" />	<!-- 事务办理审核 -->
+		</action>
+		
+		<!-- 浙江建设 -->
+		<action path="/zjjsRcswRwzb" 
+				type="xgxt.rcsw.zjjs.rwzb.ZjjsRwzbAction"
+				name="zjjsRwzbForm"
+				scope="request"
+				parameter="method">
+				
+			<forward name="rwzbManage" path="/rcsw/zjjs/rwzb/rwzbManage.jsp" />	
+			<forward name="rwzbUpdate" path="/rcsw/zjjs/rwzb/rwzbUpdate.jsp" />	
+			<forward name="rwzbFdyManage" path="/rcsw/zjjs/rwzb/rwzbFdyManage.jsp" />	
+			<forward name="rwzbFdyUpdate" path="/rcsw/zjjs/rwzb/rwzbFdyUpdate.jsp" />	
+		</action>
+		
+		<action path="/zjjsRcswJxqk" 
+				type="xgxt.rcsw.zjjs.jxqk.ZjjsJxqkAction"
+				name="zjjsJxqkForm"
+				scope="request"
+				parameter="method">
+				
+			<forward name="jxqkManage" path="/rcsw/zjjs/jxqk/jxqkManage.jsp" />	
+			<forward name="jxqkAdd" path="/rcsw/zjjs/jxqk/jxqkAdd.jsp" />	
+			<forward name="jxqkUpdate" path="/rcsw/zjjs/jxqk/jxqkUpdate.jsp" />	
+		</action>
+		
+	</action-mappings>
+
+</struts-config>

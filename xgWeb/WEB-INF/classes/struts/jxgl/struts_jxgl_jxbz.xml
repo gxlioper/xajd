@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="jxglJxbzForm" type="xgxt.jxgl.comm.jxbz.JxglJxbzForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/jxgl_jxbz" 		forward="/jxglJxbz.do?method=jxbzManage"/>		<!-- 军训编制 -->
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 军训编制 -->
+    	<action path="/jxglJxbz" 
+        		parameter="method"  
+        		name="jxglJxbzForm" 
+        		scope="request"
+		        type="xgxt.jxgl.comm.jxbz.JxglJxbzAction">	
+		       
+			<forward name="jxbzManage"    	path="/jxgl/comm/jxbz/jxbzManage.jsp" />	<!-- 管理 -->
+			<forward name="jxbzUpdate"    	path="/jxgl/comm/jxbz/jxbzUpdate.jsp" />	<!-- 维护 -->
+			<forward name="jxbzBjfp"    	path="/jxgl/comm/jxbz/jxbzBjfp.jsp" />		<!-- 分配 -->
+		</action>
+		
+	</action-mappings>
+</struts-config>

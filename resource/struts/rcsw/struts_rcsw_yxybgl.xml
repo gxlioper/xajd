@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="yxybCsszForm" type="com.zfsoft.xgxt.rcsw.yxybgl.cssz.YxybCsszForm" />
+		<form-bean name="yxybsqForm" type="com.zfsoft.xgxt.rcsw.yxybgl.sq.YxybsqForm" />
+		<form-bean name="yxybshForm" type="com.zfsoft.xgxt.rcsw.yxybgl.sh.YxybshForm" />
+		<form-bean name="yxybjgForm" type="com.zfsoft.xgxt.rcsw.yxybgl.jg.YxybjgForm" />
+	</form-beans>
+	
+	<action-mappings>	
+		<action path="/rcsw_yxybgl_cssz" forward="/yxybgl_cssz.do?method=cssz"/>
+		<action path="/rcsw_yxybgl_sq" forward="/yxybgl_sq.do?method=getYxybsqList"/>
+		<action path="/rcsw_yxybgl_sh" forward="/yxybgl_sh.do?method=getYxybshList"/>
+		<action path="/rcsw_yxybgl_jg" forward="/yxybgl_jg.do?method=getYxybjgList"/>
+		
+		<!-- 参数设置 -->	
+		<action path="/yxybgl_cssz" name="yxybCsszForm" type="com.zfsoft.xgxt.rcsw.yxybgl.cssz.YxybCsszAction"
+			parameter="method" scope="request">
+			<forward name="cssz" path="/xsgzgl/rcsw/yxybgl/cssz/cssz.jsp" />
+		</action>
+		
+		<!-- 院级月报填写 -->
+		<action path="/yxybgl_sq" name="yxybsqForm" type="com.zfsoft.xgxt.rcsw.yxybgl.sq.YxybsqAction"
+			parameter="method" scope="request">
+			<forward name="getYxybsqList" path="/xsgzgl/rcsw/yxybgl/sq/getYxybsqList.jsp" />
+			<forward name="addYxybsq" path="/xsgzgl/rcsw/yxybgl/sq/addYxybsq.jsp" />
+			<forward name="editYxybsq" path="/xsgzgl/rcsw/yxybgl/sq/editYxybsq.jsp" />
+			<forward name="viewYxybsq" path="/xsgzgl/rcsw/yxybgl/sq/viewYxybsq.jsp" />
+		</action>
+		
+		<!-- 院级月报审核 -->
+		<action path="/yxybgl_sh" name="yxybshForm" type="com.zfsoft.xgxt.rcsw.yxybgl.sh.YxybshAction"
+			parameter="method" scope="request">
+			<forward name="getYxybshList" path="/xsgzgl/rcsw/yxybgl/sh/getYxybshList.jsp" />
+			<forward name="sbDgsh" path="/xsgzgl/rcsw/yxybgl/sh/yxybshDgsh.jsp" />
+			<forward name="sbPlsh" path="/xsgzgl/rcsw/yxybgl/sh/yxybshPlsh.jsp" />
+		</action>
+		
+		<!-- 院级月报结果 -->
+		<action path="/yxybgl_jg" name="yxybjgForm" type="com.zfsoft.xgxt.rcsw.yxybgl.jg.YxybjgAction"
+			parameter="method" scope="request">
+			<forward name="getYxybjgList" path="/xsgzgl/rcsw/yxybgl/jg/getYxybjgList.jsp" />
+			<forward name="addYxybjg" path="/xsgzgl/rcsw/yxybgl/jg/addYxybjg.jsp" />
+			<forward name="editYxybjg" path="/xsgzgl/rcsw/yxybgl/jg/editYxybjg.jsp" />
+			<forward name="viewYxybjg" path="/xsgzgl/rcsw/yxybgl/jg/viewYxybjg.jsp" />
+		</action>
+		
+		
+		
+	</action-mappings>
+</struts-config>

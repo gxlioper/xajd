@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+    	<form-bean name="cdtyXsstForm" type="xgxt.xsh.stgl.cdty.CdtyXsstForm" />
+	</form-beans>
+ 	<action-mappings>
+ 	
+ 	<!-- 学生社团申请审核 -->
+ 	<action path="/stgl_stxxwh"  forward="/xsh_stwh.do"/> <!-- 社团信息维护 -->
+ 	<action path="/stgl_xsstsq"  forward="/cdtyXsst.do?method=xsstSq"/> <!-- 学生社团申请 -->
+ 	<action path="/stgl_stgl"  forward="/cdtyXsst.do?method=xsstManage"/>   <!-- 学生社团管理 -->
+ 	<action path="/stgl_xssqsh"  forward="/cdtyXsst.do?method=xsstsqSh"/> <!-- 学生申请审核 -->
+ 	
+ 	<!-- 学生社团干部申请审核 -->
+ 	<action path="/stgl_stgbsq"  forward="/cdtyXsst.do?method=xsstgbSq"/>  <!-- 学生社团干部申请 -->
+ 	<action path="/stgl_stgbcx"  forward="/cdtyXsst.do?method=stgbManage"/> <!-- 学生社团干部管理 -->
+ 	<action path="/stgl_stgbsh"  forward="/cdtyXsst.do?method=xsstgbSh"/> <!-- 学生社团干部审核 -->
+ 	
+    <action path="/cdtyXsst" 
+    		type="xgxt.xsh.stgl.cdty.CdtyXsstAction" 
+    		name="cdtyXsstForm"
+    		parameter="method"
+    		scope="request"
+    		>
+    		
+    	<forward name="stxxWh" path="/xsh/stgl/cdty/stxxWh.jsp"></forward>
+    	<forward name="xsstSq" path="/xsh/stgl/cdty/xsstSq.jsp"></forward>
+    	<forward name="xsstManage" path="/xsh/stgl/cdty/xsstManage.jsp"></forward>
+    	<forward name="xsstsqSh" path="/xsh/stgl/cdty/xsstsqSh.jsp"></forward>
+    	<forward name="xsstgbSq" path="/xsh/stgl/cdty/xsstgbSq.jsp"></forward>
+    	<forward name="stgbManage" path="/xsh/stgl/cdty/stgbManage.jsp"></forward>
+    	<forward name="xsstgbSh" path="/xsh/stgl/cdty/xsstgbSh.jsp"></forward>
+    	<forward name="xmxxInfo" path="/xsh/stgl/cdty/xmxxInfo.jsp"></forward>
+    </action>
+ 		
+ 	 <action path="/cdtyAjax"  type="xgxt.xsh.stgl.cdty.CdtyXsstAjax" name="cdtyXsstForm"/>
+ 	</action-mappings>
+</struts-config>

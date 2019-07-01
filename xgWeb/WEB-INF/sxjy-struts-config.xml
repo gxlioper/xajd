@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="SxjyForm" type="xgxt.form.SxjyForm" />
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+		<form-bean name="fdyglForm" type="xgxt.form.FdyglForm" />
+		<form-bean name="fdypyForm" type="xgxt.szdw.form.shgc.JspyForm" />
+		<form-bean name="dtjsForm" type="xgxt.dtjs.form.DtjsForm" />
+		<form-bean name="dtjszjcmForm" type="xgxt.dtjs.zjcm.form.DtjszjcmForm" />
+		<form-bean name="xsgzglForm" type="xgxt.szdw.form.zjjj.XsgzglForm" />
+	</form-beans>
+
+	<global-forwards />
+
+	<action-mappings>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学校计划显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_xxjh_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/Xxjh.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学校计划保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/xx_plan_Save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_xxjh_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学校计划删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/xx_plan_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学校计划修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/xx_plan_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_xxjh_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学院计划显示,修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_xyjh_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/sxjy/Xyjh.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学院计划查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/check_xyjh_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/sxjy/Xyjh.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学院计划删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/xy_plan_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学院计划保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/xy_plan_Save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_xyjh_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学院计划总结>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_xyzj_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/sxjy/Xyjh_zj.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学院计划总结保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/xyzj_Save" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="savePlans" scope="request">
+			<forward name="success" path="/show_xyzj_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学院计划总结查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/check_xyzj_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/sxjy/Xyjh_zj.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学院计划总结删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/xy_summarizes_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-每月教育主题显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_jyzt_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/Jyzt.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-教育主题修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/xx_motif_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_jyzt_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-教育主题删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/xx_motif_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-教育主题保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/jyzt_Save" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="savePlans" scope="request">
+			<forward name="success" path="/show_jyzt_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-单个文档详细显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_One_Clob" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showOneClob" scope="request">
+			<forward name="success" path="/sxjy/showClob_one.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动策划显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_hdch_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/sxjy/Jyhd_ch.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动策划修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/hd_plot_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/show_hdch_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动策划删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/hd_plot_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动策划保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/hdch_Save" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="savePlans" scope="request">
+			<forward name="success" path="/show_hdch_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动总结显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_hdzj_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/sxjy/Jyhd_zj.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动总结修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/xy_hdzj_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/show_hdzj_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动总结删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/xy_hdzj_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动总结保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/hdzj_Save" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="savePlans" scope="request">
+			<forward name="success" path="/show_hdzj_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动总结汇报显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_hdzj_report" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/Jyhd_zjhb.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动总结汇报保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/hdzj_report_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/Jyhd_zjhb.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动总结汇报增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/hdzj_report_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/Jyhd_zjhb_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-活动总结汇报删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/hdzj_report_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/show_hdzj_report.do?act=hdzjhb" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-报表打印>>>>>>>>>>>>>>>>>> -->
+		<action path="/sxjy_report" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="reportDis" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-政治学习材料显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_zzxxcl_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/Zzxx_stuff.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-政治学习材料修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/zzxx_stuff_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_zzxxcl_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-政治学习材料删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/zzxx_stuff_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-政治学习材料保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/zzxxcl_Save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_zzxxcl_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-政治学习记录显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_zzxx_note" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/Zzxx_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-政治学习记录保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/zzxx_note_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/Jyhd_zjhb.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-政治学习记录增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/zzxx_note_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/Zzxx_note_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-政治学习记录删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/zzxx_note_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/show_hdzj_report.do?act=hdzjhb" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学生思政考核文档显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_szkhwj_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/Jyhd_szwd.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学生思政考核文档保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/szkhwj_Save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_szkhwj_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学生思政考核文档删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/szkhwj_del" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学生思政考核文档修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/szkhwj_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_szkhwj_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学风讲评记录显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_xfjp_note" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/Xfjs_xfjp.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学风讲评记录保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/xfjp_note_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/Xfjs_xfjp.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学风讲评记录增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/xfjp_note_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/Xfjs_xfjp_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学风讲评记录删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/xfjp_note_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/show_xfjp_note.do?act=hdzjhb" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-突发事件处理记录显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_tfsj_note" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/Xfjs_tfsj.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-突发事件处理记录保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/tfsj_note_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/Xfjs_tfsj.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-突发事件处理记录增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/tfsj_note_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/Xfjs_tfsj_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-突发事件处理记录删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/tfsj_note_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/show_tfsj_note.do?act=hdzjhb" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学风检查处理记录显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_swCheck_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/StudyWind_check.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学风检查处理记录保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/studyWind_check_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/StudyWind_check.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学风检查处理记录增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/studyWind_check_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/StudyWind_check_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-学风检查处理记录删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/studyWind_check_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/show_swCheck_list.do?act=swCheck" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-考核办法及教育活动通知显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_assessAndInform_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/AssessAndInform.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-考核办法及教育活动通知通知保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/assess_Inform_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_assessAndInform_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-考核办法及教育活动通知删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/assess_Inform_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-考核办法及教育活动通知修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/assess_Inform_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_assessAndInform_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-社会帮困信息管理显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_shbkInfo_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/PenuryHelp_info.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-社会帮困信息管理保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/penuryHelp_info_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/PenuryHelp_info.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-社会帮困信息管理增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/penuryHelp_info_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/PenuryHelp_info_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-社会帮困信息管理删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/penuryHelp_info_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/show_shbkInfo_list.do?act=shbk" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-社会帮困活动记录显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_shbkNote_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/PenuryHelp_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-社会帮困活动记录保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/penuryHelp_note_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/PenuryHelp_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-社会帮困活动记录增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/penuryHelp_note_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/PenuryHelp_note_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-社会帮困活动记录删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/penuryHelp_note_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/show_shbkNote_list.do?act=shbkjl" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-艺术教育信息管理显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_artEducateInfo_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/ArtEducate_info.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-艺术教育信息管理保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/artEducate_info_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/sxjy/ArtEducate_info.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-艺术教育信息管理删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/artEducate_info_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-艺术教育信息管理修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/artEducate_info_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_artEducateInfo_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-艺术教育活动记录管理显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_artEducateNote_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/ArtEducate_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-艺术教育活动记录管理保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/artEducate_note_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/ArtEducate_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-艺术教育活动记录管理增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/artEducate_note_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/ArtEducate_note_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-艺术教育活动记录管理删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/artEducate_note_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/show_artEducateNote_list.do?act=shbkjl" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-思想状况调研计划显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_dyjh_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/Research_plan.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-思想状况调研计划保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_plan_Save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_dyjh_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-思想状况调研计划删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_plan_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-思想状况调研计划修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_plan_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_dyjh_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<深圳信息-思想教育-党建模块-更新保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/party_member_save" name="commanForm"
+			type="xgxt.sxjy.action.PartyMemberAction" parameter="partyMemberSave"
+			scope="request">
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-党建模块-全局统计模块>>>>>>>>>>>>>>>>>> -->
+		<action path="/party_allStatistic" name="SxjyForm"
+			type="xgxt.sxjy.action.PartyMemberAction" parameter="allStatistic"
+			scope="request">
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷维护显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_testPaper_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/Research_testPaper.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷维护更新>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_testPaper_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="testPaperUpdata"
+			scope="request">
+			<forward name="success" path="/sxjy/Research_testPaper_one.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷维护更新保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_testPaper_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/research_testPaper_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷得到试题>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_getTestQuestions" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="getTestQuestions"
+			scope="request">
+			<forward name="success" path="/sxjy/GetTestQuestions.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷试题维护>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_question_search" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/Research_questionDepot.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷试题维护更新>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_question_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/Research_question_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷试题维护保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_question_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/research_question_search.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷试题删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_question_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/research_question_search.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷试题答案更新>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_answer_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/Research_answer_one.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷试卷删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_testPaper_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/research_testPaper_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷试题答案更新>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_answer_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/Research_answer_one.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷试题答案删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_answer_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/research_question_updata.do?act=dyst" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷试题选择>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_question_choose" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="questionChoose"
+			scope="request">
+			<forward name="success" path="/sxjy/research_question_updata.do?act=dyst" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷试题选择删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_questionChoose_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneJyChooseQuestion"
+			scope="request">
+			<forward name="success" path="/sxjy/research_testPaper_updata.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-思想状况调研总结报告显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_sxdyzj_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/sxjy/research_summarize.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-思想状况调研总结报告修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_summarize_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/show_hdzj_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-思想状况调研总结报告删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_summarize_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-思想状况调研总结报告保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_summarize_Save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_hdzj_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷录入>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_testPaper_fillIn" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="testPaperFillIn"
+			scope="request">
+			<forward name="success" path="/sxjy/Research_testPaper_fillIn.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷录入显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_testPaperFillIn_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/Research_testPaper.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷录入保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_testPaperFillIn_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="testPaperFillInSave"
+			scope="request">
+			<forward name="success" path="/sxjy/Research_testPaper.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷录入结果统计>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_testPaperResult_statistic" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="testPaperResultStatisticList"
+			scope="request">
+			<forward name="success"
+				path="/sxjy/statistic/Research_testPaper_statistic.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-调研问卷录入结果统计显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/research_testPaperResult_statistic_one" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="testPaperResultStatisticOne"
+			scope="request">
+			<forward name="success"
+				path="/sxjy/statistic/Research_testPaper_statistic_one.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-安全教育通知显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_safetyEducationInform_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/SafetyEducationInform.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-安全教育通知保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/safetyEducation_Inform_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_safetyEducationInform_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-安全教育通知删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/safetyEducation_Inform_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-安全教育通知修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/safetyEducation_Inform_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_safetyEducationInform_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-新生教育活动通知显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_sfreshmanEducationPloy_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/SfreshmanEducationPloy.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-新生教育活动通知保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/sfreshman_educationPloy_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_sfreshmanEducationPloy_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-新生教育活动通知删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/sfreshman_educationPloy_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-新生教育活动通知修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/sfreshman_educationPloy_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_sfreshmanEducationPloy_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-专题讲座情况上报显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_specialChair_note" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/SpecialChair_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-专题讲座情况上报保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/specialChair_note_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/SpecialChair_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-专题讲座情况上报增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/specialChair_note_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/SpecialChair_note_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-专题讲座情况上报删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/specialChair_note_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/show_specialChair_note.do?act=ztjzqksb" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-安全法制教育显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_aqfzjyqkb" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/aqfzjyqk.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-安全法制教育保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/aqfzjyqk_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/aqfzjyqk.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-安全法制教育增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/aqfzjyqk_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/aqfzjyqk_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-安全法制教育删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/aqfzjyqk_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/sxjy/show_aqfzjyqk.do?act=aqfzjyqk" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-辅导员培训信息显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_counsellorFosterInfo_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/sxjy/CounsellorFosterInfo.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-辅导员培训信息保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_fosterInfo_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_counsellorFosterInfo_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-辅导员培训信息删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_fosterInfo_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-辅导员培训信息修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_fosterInfo_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_counsellorFosterInfo_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-辅导员与学生谈话记录显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_counsellorAndStuSpeak_note" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/CounsellorAndStuSpeak_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-辅导员与学生谈话记录保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellorAndStuSpeak_note_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/CounsellorAndStuSpeak_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-辅导员与学生谈话记录增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellorAndStuSpeak_note_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/CounsellorAndStuSpeak_note_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-辅导员与学生谈话记录删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellorAndStuSpeak_note_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success"
+				path="/sxjy/show_counsellorAndStuSpeak_note.do?act=fdyxxth" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-与教师沟通记录记录显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_counsellorCommunicate_note" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/sxjy/CounsellorCommunicate_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-与教师沟通记录保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellorCommunicate_note_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/sxjy/CounsellorCommunicate_note.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-与教师沟通记录增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellorCommunicate_note_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/sxjy/CounsellorCommunicate_note_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-与教师沟通记录删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellorCommunicate_note_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success"
+				path="/sxjy/show_counsellorCommunicate_note.do?act=jsgtjl" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-江苏信息-新生问卷调查>>>>>>>>>>>>>>>>>> -->
+		<action path="/jsxx_xswjdc" name="SxjyForm" type="xgxt.sxjy.jsxx.SxjyAction"
+			parameter="method" scope="request">
+			<forward name="xswjdc" path="/sxjy/jsxx/xswjdc.jsp" />
+			<forward name="xswjdcOne" path="/sxjy/jsxx/xswjdcOne.jsp" />
+			<forward name="xswjdcNr" path="/sxjy/jsxx/xswjdcNr.jsp" />
+			<forward name="stzj" path="/sxjy/jsxx/stzj.jsp" />
+			<forward name="xswjdctx" path="/sxjy/jsxx/xswjdctx.jsp" />
+			<forward name="xswjdctxOne" path="/sxjy/jsxx/xswjdctxOne.jsp" />
+			<forward name="xswjdcqk" path="/sxjy/jsxx/xswjdcqk.jsp" />
+			<forward name="xswjdcqkOne" path="/sxjy/jsxx/xswjdcqkOne.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-辅导员考核评优办法显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_counsellorAssessInfo_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/CounsellorAssessInfo.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-辅导员考核评优办法保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_AssessInfo_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_counsellorAssessInfo_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-辅导员考核评优办法删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_AssessInfo_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-辅导员考核评优办法修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_AssessInfo_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_counsellorAssessInfo_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-辅导员值班安排通知显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_counsellorOnDuty_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/sxjy/CounsellorOnDuty.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-辅导员值班安排通知保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_onDuty_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_counsellorOnDuty_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-辅导员值班安排通知删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_onDuty_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-辅导员值班安排通知修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_onDuty_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_counsellorOnDuty_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-班级风采信息显示,修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_classElegant_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/szdw/ClassElegant.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-班级风采信息保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/class_elegant_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_classElegant_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-班级风采信息删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/class_elegant_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-工作交流信息表显示,修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_workIntercourse_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/szdw/WorkIntercourse.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-工作交流信息保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/class_workIntercourse_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_workIntercourse_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-工作交流信息删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/class_workIntercourse_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-优秀导师风采信息显示,修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_excellenceTeacherElegant_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkList" scope="request">
+			<forward name="success" path="/szdw/ExcellenceTeacherElegant.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-优秀导师风采信息保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/excellenceTeacher_elegant_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_excellenceTeacherElegant_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-优秀导师风采信息删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/excellenceTeacher_elegant_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-导师意见箱显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_teacherAttitudeBox_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/szdw/TeacherAttitudeBox.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-导师意见箱保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/teacherAttitudeBox_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/szdw/TeacherAttitudeBox.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-导师意见箱增加，修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/teacherAttitudeBox_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/szdw/TeacherAttitudeBox_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-导师意见箱删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/teacherAttitudeBox_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="/show_teacherAttitudeBox_list.do?act=dsyjx" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-思政制度信息显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_counsellorSystem_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/szdw/CounsellorSystem.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-思政制度信息保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_system_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="savePlans" scope="request">
+			<forward name="success" path="/show_counsellorSystem_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-思政制度信息删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_system_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delPlans" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-思政制度信息修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellor_system_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="showLists" scope="request">
+			<forward name="success" path="/show_counsellorSystem_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-班级学生人数统计模块>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_classStudentSumStatistic_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="classStudentStatistic"
+			scope="request">
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-班级干部显示,查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_classStudentCadre_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/szdw/ClassStudentCadre.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<思政-班级干部-班级学生干部队伍自定义导出>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_xsgbdwExport_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="export" scope="request">	
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生干部设置>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_classDutyConfig_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/szdw/ClassDutyConfig.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生干部更新>>>>>>>>>>>>>>>>>> -->
+		<action path="/classDuty_Cadre_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/szdw/ClassDuty_Cadre_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生干部保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/classDuty_Cadre_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/szdw/ClassDuty_Cadre_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生干部删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/classDuty_Cadre_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="success" path="show_classDutyConfig_list.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生干部设置更新>>>>>>>>>>>>>>>>>> -->
+		<action path="/classDuty_config_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/szdw/ClassDuty_config_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生干部设置保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/classDuty_config_save" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="saveWindows" scope="request">
+			<forward name="success" path="/szdw/ClassDutyConfig.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生干部设置删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/classDuty_config_del" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="delOneRow" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-得到学生信息>>>>>>>>>>>>>>>>>> -->
+		<action path="/sxjy_stu_info" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="get_stu_info" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政-党建相关报表>>>>>>>>>>>>>>>>>> -->
+		<action path="/djxgOne" name="commanForm"
+			type="xgxt.sxjy.action.PartyMemberAction" parameter="djxgOne" scope="request">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-参数设置显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/remindParameter_Setup_dis" name="SxjyForm"
+			type="xgxt.sxjy.action.RemindParameterSetupAction" parameter="remindParameterSetupdis"
+			scope="request">
+			<forward name="success" path="/sxjy/setup/RemindParameter_Setup.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-时间参数设置显示>>>>>>>>>>>>>>>>>> -->
+		<action path="/remindParameterTime_Setup" name="SxjyForm"
+			type="xgxt.sxjy.action.RemindParameterSetupAction" parameter="remindParameterTime"
+			scope="request">
+			<forward name="success" path="/sxjy/setup/remindParameterTime.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-参数设置保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/remindParameter_Setup_Save" name="SxjyForm"
+			type="xgxt.sxjy.action.RemindParameterSetupAction" parameter="remindParameterSetupSave"
+			scope="request">
+			<forward name="success" path="/remindParameter_Setup_dis.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-上交报表统计>>>>>>>>>>>>>>>>>> -->
+		<action path="/turnInReport_Statistic" name="SxjyForm"
+			type="xgxt.sxjy.action.RemindParameterSetupAction" parameter="turnInReport_Statistic"
+			scope="request">
+			<forward name="success" path="/sxjy/statistic/TurnInReport_Statistic.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-辅导员带教记录>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellorLeadTeach" name="SxjyForm"
+			type="xgxt.sxjy.action.szdw.FdydjAction" parameter="method" scope="request"
+			validate="false">
+			<forward name="success" path="/sxjy/fdy/counsellorLeadTeach.jsp" />
+			<forward name="modiOne" path="/sxjy/fdy/counsellorLeadTeach_table.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政队伍-辅导员相关>>>>>>>>>>>>>>>>>> -->
+		<action path="/counsellorXg" name="fdyglForm"
+			type="xgxt.sxjy.action.szdw.FdyxgAction" parameter="method" scope="request"
+			validate="false">
+			<forward name="fdykhjgOne" path="/sxjy/fdy/fdykhjgOne.jsp" />
+			<forward name="fdykhjg" path="/sxjy/fdy/fdykhjgList.jsp" />
+			<forward name="fdybb" path="/sxjy/fdy/setBzrBj.jsp" />
+			<forward name="fdyPx" path="/sxjy/fdy/fdyPx.jsp" />
+			<forward name="fdyPxOne" path="/sxjy/fdy/fdyPxOne.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思政队伍-学生干部>>>>>>>>>>>>>>>>>> -->
+		<action path="/stuCadre" name="SxjyForm"
+			type="xgxt.sxjy.action.szdw.XsgbAction" parameter="method" scope="request"
+			validate="false">
+			<forward name="msjglr" path="/sxjy/fdy/stuCadreMs.jsp" />
+			<forward name="msjgcx" path="/sxjy/fdy/stuCadreMsCx.jsp" />
+			<forward name="qzConf" path="/sxjy/fdy/qzConf.jsp" />
+			<forward name="pjqzConf" path="/sxjy/fdy/pjqzConf.jsp" />
+			<forward name="xsgbgzjhForStu" path="/sxjy/fdy/xsgbgzjhForStu.jsp" />
+			<forward name="xsgbgzjhForTea" path="/sxjy/fdy/xsgbgzjhForTea.jsp" />
+			<forward name="postilOne" path="/sxjy/fdy/xsgbPzOne.jsp" />
+			<forward name="pbjglr" path="/sxjy/fdy/stuCadrePb.jsp" />
+			<forward name="getBjgb" path="/sxjy/fdy/stuCadreQuery.jsp" />
+			<forward name="pbjgcx" path="/sxjy/fdy/stuCadrePbCx.jsp" />
+			<forward name="xsgbgrzhforTea" path="/sxjy/fdy/xsgbgrzhforTea.jsp" />
+			<forward name="xsgbgrzhOne" path="/sxjy/fdy/xsgbgrzhOne.jsp" />
+			<forward name="xsgbgrzhConf" path="/sxjy/fdy/bdpz.jsp" />
+			<forward name="bjgbxbOne" path="/sxjy/fdy/bjgbxbOne.jsp" />
+			<forward name="bjgbxbCx" path="/sxjy/fdy/bjgbxbCx.jsp" />
+			<forward name="bdxg" path="/sxjy/fdy/bdxg.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-数据维护-团员信息>>>>>>>>>>>>>>>>>> -->
+		<action path="/member_List" name="commanForm"
+			type="xgxt.sxjy.action.PartyMemberAction" parameter="member_List"
+			scope="request">
+			<forward name="success" path="/szdw/member_List.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-数据维护-团员信息删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/member_Del" name="commanForm"
+			type="xgxt.sxjy.action.PartyMemberAction" parameter="member_Del"
+			scope="request">
+			<forward name="success" path="/szdw/member_List.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-数据维护-团员信息修改增加>>>>>>>>>>>>>>>>>> -->
+		<action path="/member_modi" name="commanForm"
+			type="xgxt.sxjy.action.PartyMemberAction" parameter="member_modi"
+			scope="request">
+			<forward name="success" path="/szdw/member_List.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-数据维护-党员到学生信息的转换>>>>>>>>>>>>>>>>>> -->
+		<action path="/party_stuinfo" name="commanForm"
+			type="xgxt.sxjy.action.PartyMemberAction" parameter="party_stuinfo"
+			scope="request">
+			<forward name="success" path="/data_search.do?act=party" />
+			<forward name="ybdyxx" path="/data_search.do?act=prepare" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<思想教育-数据维护-团员信息修改增加>>>>>>>>>>>>>>>>>> -->
+		<action path="/xsgbzjfb" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="savePlans" scope="request">
+			<forward name="success" path="/stuCadre.do?method=xsgbgzjh" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程-辅导员评价>>>>>>>>>>>>>>>>>> -->
+		<action path="/fdypjOther" name="SxjyForm"
+			type="xgxt.sxjy.action.FdypjForShgcAction" parameter="method" scope="request"
+			validate="false">
+			<forward name="fdyzp" path="/sxjy/fdy/fdypj/fdyzp.jsp" />
+			<forward name="fdyzpList" path="/sxjy/fdy/fdypj/fdyzpList.jsp" />
+			<forward name="fdyhp" path="/sxjy/fdy/fdypj/fdyhp.jsp" />
+			<forward name="fdyhpList" path="/sxjy/fdy/fdypj/fdyhpList.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程-辅导员评优>>>>>>>>>>>>>>>>>> -->
+		<action path="/fdypyforShgc" name="fdypyForm"
+			type="xgxt.szdw.action.shgc.JspyAction" parameter="method" scope="request"
+			validate="false">
+			<forward name="fdypy" path="/szdw/shgc/fdypy.jsp" />
+			<forward name="fdypySh" path="/szdw/shgc/fdypySh.jsp" />
+			<forward name="fdypyShOne" path="/szdw/shgc/fdypyShOne.jsp" />
+			<forward name="fdypsb" path="/szdw/shgc/fdypsb.jsp" />
+			<forward name="bzrpsb" path="/szdw/shgc/bzrpsb.jsp" />
+			<forward name="fdypyjgcx" path="/szdw/shgc/fdypyjgcx.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<党团建设>>>>>>>>>>>>>>>>>> -->
+		<action path="/dtjs" name="dtjsForm" type="xgxt.dtjs.action.DtjsAction"
+			parameter="method" scope="request" validate="false">
+			<forward name="rtjjfz" path="/dtjs/rtjjfz.jsp" />
+			<forward name="rtjjfzOne" path="/dtjs/rtjjfzOne.jsp" />
+			<forward name="tkqkjl" path="/dtjs/shgc/tkqkjl.jsp" />
+			<forward name="tkqkjlOne" path="/dtjs/shgc/tkqkjlOne.jsp" />
+			<!-- <<<<<<<<<<<<<<<<<<武汉理工 学院素质教育论坛 学院主题教育活动>>>>>>>>>>>>>>>>>> -->
+			<forward name="szjylt" path="/dtjs/whlg/szjylt.jsp" />
+			<forward name="ztjyhd" path="/dtjs/whlg/ztjyhz.jsp" />
+			<forward name="ztjyhdOne" path="/dtjs/whlg/ztjyhzOne.jsp" />
+			<forward name="szjyltOne" path="/dtjs/whlg/szjyltOne.jsp" />
+			<forward name="mlzyyjhfhxx" path="/dtjs/whlg/mlzyyjhfhxx.jsp" />
+			<forward name="mlzyyjhfhxxOne" path="/dtjs/whlg/mlzyyjhfhxxOne.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<浙江传媒学院 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/dtjs_zjcm" name="dtjszjcmForm"
+			type="xgxt.dtjs.zjcm.action.DtjszjcmAction" parameter="method" scope="request"
+			validate="false">
+			<forward name="swcl" path="/dtjs/zjcm/swcl.jsp" />
+			<forward name="swclShq" path="/dtjs/zjcm/swclShq.jsp" />
+			<forward name="swclShh" path="/dtjs/zjcm/swclShh.jsp" />
+			<forward name="dnjc" path="/dtjs/zjcm/dnjc.jsp" />
+			<forward name="dnjcShq" path="/dtjs/zjcm/dnjcShq.jsp" />
+			<forward name="dnjcShh" path="/dtjs/zjcm/dnjcShh.jsp" />
+			<forward name="delSwcl" path="/dtjs_zjcm.do?method=swcl" />
+			<forward name="delDnjc" path="/dtjs_zjcm.do?method=dnjc" />
+			<forward name="zzgx" path="/dtjs/zjcm/zzgx.jsp" />
+			<forward name="fzdx" path="/dtjs/zjcm/fzdx.jsp" />
+			<forward name="fzdxOne" path="/dtjs/zjcm/fzdxOne.jsp" />
+			<forward name="delFzdx" path="/dtjs_zjcm.do?method=fzdx" />
+			<forward name="addDyxx" path="/dtjs_zjcm.do?method=zzYb" />
+			<forward name="zzYb" path="/dtjs/zjcm/ybtb.jsp" />
+			<forward name="fzdxAll" path="/dtjs/zjcm/fzdxAll.jsp" />
+			<forward name="addFzdx" path="/dtjs/zjcm/fzdxAll.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<浙江经济思政队伍>>>>>>>>>>>>>>>>>> -->
+		<action path="/zjjj_xsgzdw" name="xsgzglForm"
+			type="xgxt.szdw.action.zjjj.XsgzdwAction" parameter="method" scope="request"
+			validate="false">
+			<forward name="fgldxx" path="/szdw/zjjj/fgldxx.jsp" />
+			<forward name="fgldxxOne" path="/szdw/zjjj/fgldxxOne.jsp" />
+			<forward name="xgbryxx" path="/szdw/zjjj/xgbryxx.jsp" />
+			<forward name="xgbryxxOne" path="/szdw/zjjj/xgbryxxOne.jsp" />
+			<forward name="dzzsj" path="/szdw/zjjj/dzzsj.jsp" />
+			<forward name="dzzsjOne" path="/szdw/zjjj/dzzsjOne.jsp" />
+			<forward name="zlbzrxx" path="/szdw/zjjj/zlbzrxx.jsp" />
+			<forward name="zlbzrxxOne" path="/szdw/zjjj/zlbzrxxOne.jsp" />
+			<forward name="xshzzxx" path="/szdw/zjjj/xshzzxx.jsp" />
+			<forward name="xshzzxxOne" path="/szdw/zjjj/xshzzxxOne.jsp" />
+			<!-- <<<<<<<<宁波理工单独思政队伍>>>>>>>> -->
+			<forward name="nblgSzdwxx" path="/szdw/nblg/szdwxx.jsp" />
+			<forward name="nblgSzdwxxOne" path="/szdw/nblg/szdwxxOne.jsp" />
+			<!-- <<<<<<<<<通用的班级情况>>>>>>>>>>>>>> -->
+			<forward name="bjqkxx" path="/szdw/bjqkxx.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<盐城师范>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生会干部显示,查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_xshgb_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/szdw/jsyc/xshgb.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生会干部更新>>>>>>>>>>>>>>>>>> -->
+		<action path="/xshgb_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/szdw/jsyc/xshgbTable.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生会干部删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/xshgb_del" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="delOneRow" scope="request">
+			<forward name="success" path="show_xshgb_list.do" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<思政-学生会干部保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/xshgb_save" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="saveWindows" scope="request">
+			<forward name="success" path="xshgb_updata.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<金华职业>>>>>>>>>>>>>>>>>> -->
+		<!-- <<<<<<<<<<<<<<<<<<思政-学院学生会干部显示,查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_xyXshgb_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/szdw/jhzy/xyXshgb.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<思政-学院学生会干部更新>>>>>>>>>>>>>>>>>> -->
+		<action path="/xyXshgb_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/szdw/jhzy/xyXshgbTable.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<思政-学院学生会干部删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/xyXshgb_del" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="delOneRow" scope="request">
+			<forward name="success" path="show_xyXshgb_list.do" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<思政-学院学生会干部保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/xyXshgb_save" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="saveWindows" scope="request">
+			<forward name="success" path="xyXshgb_updata.do" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<思政-心理健康学生会干部显示,查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_xljkXshgb_list" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="checkdis" scope="request">
+			<forward name="success" path="/szdw/jhzy/xljkXshgb.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<思政-心理健康学生会干部更新>>>>>>>>>>>>>>>>>> -->
+		<action path="/xljkXshgb_updata" name="SxjyForm"
+			type="xgxt.sxjy.action.SxPlanAction" parameter="updataWindows" scope="request">
+			<forward name="success" path="/szdw/jhzy/xljkXshgbTable.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<思政-心理健康学生会干部删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/xljkXshgb_del" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="delOneRow" scope="request">
+			<forward name="success" path="show_xljkXshgb_list.do" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<思政-心理健康学生会干部保存>>>>>>>>>>>>>>>>>> -->
+		<action path="/xljkXshgb_save" name="SxjyForm" type="xgxt.sxjy.action.SxPlanAction"
+			parameter="saveWindows" scope="request">
+			<forward name="success" path="xljkXshgb_updata.do" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<安徽建工五特群体 >>>>>>>>>>>>>>>>>> -->
+		<action path="/ahjg_wtqtgl" name="commanForm"
+			type="xgxt.dtjs.ahjg.AhjgWtqtAction" parameter="wtqtgl" scope="request">
+			<forward name="success" path="/dtjs/ahjg/wtqt_query.jsp" />
+			<forward name="add" path="/dtjs/ahjg/stu_info_add.jsp" />
+			<forward name="view" path="/dtjs/ahjg/stu_info_view.jsp" />
+			<forward name="update" path="/dtjs/ahjg/stu_info_update.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<安徽建工五特群体 >>>>>>>>>>>>>>>>>> -->
+		<action path="/ahjg_wtqttj" name="commanForm"
+			type="xgxt.dtjs.ahjg.AhjgWtqtAction" parameter="wtqttj" scope="request">
+			<forward name="success" path="/dtjs/ahjg/yxjzyjs_query.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

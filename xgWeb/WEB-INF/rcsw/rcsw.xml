@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="rcswForm" type="xgxt.rcsw.RcswForm"/>
+		<form-bean name="bxlpForm" type="xgxt.rcsw.bxlp.BxlpForm"/>
+		<form-bean name="kqglForm" type="xgxt.rcsw.kqgl.KqglForm"/>
+		<form-bean name="hcyhkForm" type="xgxt.rcsw.hcyhk.HcyhkForm"/>
+		<form-bean name="xhglForm" type="xgxt.rcsw.xhgl.XhglForm"/>
+		
+	</form-beans>
+	
+	<action-mappings>	
+
+		<!-- 广州大学(貌似开为通用版本) -->
+		
+		<!-- 留言版 -->
+		<action path="/gzdx_rcsw_xsly" 		forward="/gzdxRcsw.do?method=xslyManage"/>		<!-- 学生留言 -->
+    	<action path="/gzdx_rcsw_fbtz" 		forward="/gzdxRcsw.do?method=fbtzManage"/>		<!-- 发布通知 -->
+    	<action path="/gzdx_rcsw_hfly" 		forward="/gzdxRcsw.do?method=hflyManage"/>		<!-- 回复留言 -->
+    	<action path="/gzdx_rcsw_hftj" 		forward="/gzdxRcsw.do?method=hftjManage"/>		<!-- 回复统计 -->
+    	
+    	
+		<action path="/gzdxRcsw" 
+        		parameter="method"  
+        		name="rcswForm" 
+        		scope="request"
+		        type="xgxt.rcsw.gzdx.RcswGzdxAction">		
+		       
+		    <!-- 留言发布 -->
+		    <forward name="lyfbManage"   	path="/rcsw/gzdx/lyfbManage.jsp" />
+		    <!-- 回复留言管理 -->
+			<forward name="hflyManage"   	path="/rcsw/gzdx/hflyManage.jsp" />
+			<!-- 回复留言 -->
+			<forward name="xslyUpdate"   	path="/rcsw/gzdx/xslyUpdate.jsp" />
+			<!-- 老师回复被评统计 -->
+			<forward name="hftjManage"   	path="/rcsw/gzdx/hftjManage.jsp" />
+		</action>
+		
+		<!-- 浙工大之江学院 -->
+		
+		<!-- 实物发放 -->
+		<action path="/zjxy_rcsw_swff_xmwh" forward="/zjxyRcsw.do?method=swffXmwhManage"/>	<!-- 发放项目维护 -->
+		<action path="/zjxy_rcsw_swff_xsff" forward="/zjxyRcsw.do?method=swffXsffManage"/>	<!-- 学生发放 -->
+		<action path="/zjxy_rcsw_swff_lsff" forward="/zjxyRcsw.do?method=swffLsffManage"/>	<!-- 老师发放 -->
+		<action path="/zjxy_rcsw_swff_jgcx" forward="/zjxyRcsw.do?method=swffJgcxManage"/>	<!-- 结果查询 -->
+		<action path="/zjxy_rcsw_swff_jgtj" forward="/zjxyRcsw.do?method=swffJgTjManage"/>	<!-- 事物办理结果统计 -->
+		<action path="/zjxy_rcsw_swff_ffjg" forward="/zjxyRcsw.do?method=swffFfjgManage"/>	<!-- 结果查询 -->
+		<action path="/zjxy_rcsw_swff_xmff" scope="request" forward="/zjxyRcsw.do?method=swffXmxz"/>	<!-- 实物发放人员 -->
+		<action path="/zjxy_rcsw_swff_ffry" scope="request" forward="/zjxyRcsw.do?method=swffFfryManage"/>	<!-- 实物发放人员 -->
+		<action path="/zjxy_rcsw_swff_ffpj" scope="request" forward="/zjxyRcsw.do?method=swffFfpjManage"/>	<!-- 发放评价 -->
+		<action path="/zjxy_rcsw_swff_pjtj" scope="request" forward="/zjxyRcsw.do?method=swffPjTjManage"/>	<!-- 评价统计 -->
+		<action path="/zjxy_rcsw_swff_dxtz" scope="request" forward="/zjxyRcsw.do?method=swffDxtzManage"/>	<!-- 评价统计 -->
+		<action path="/zjxy_rcsw_swff_ffryqr" scope="request" forward="/zjxyRcsw.do?method=swffFfryqrManage"/>	<!-- 实物发放人员确认 -->
+		
+			<action path="/zjxyRcsw" 
+        		parameter="method"  
+        		name="rcswForm" 
+        		scope="request"
+		        type="xgxt.rcsw.zjxy.RcswZjxyAction">
+		       
+		    <!-- 发放项目维护 -->
+		    <forward name="swffXmwhManage"   	path="/rcsw/zjxy/swffXmwhManage.jsp" />
+			<forward name="swffXmwhUpdate"   	path="/rcsw/zjxy/swffXmwhUpdate.jsp" />
+			<forward name="swffRqwhManage"   	path="/rcsw/zjxy/swffRqwhManage.jsp" />
+			<forward name="swffRqwhUpdate"   	path="/rcsw/zjxy/swffRqwhUpdate.jsp" />
+			<forward name="bffrManage"   		path="/rcsw/zjxy/bffrManage.jsp" />
+			<forward name="swffJgcxManage"   	path="/rcsw/zjxy/swffJgcxManage.jsp" />
+			<forward name="swffJgTjManage"   	path="/rcsw/zjxy/swffJgTjManage.jsp" />
+			<forward name="swffJgTjOne"   		path="/rcsw/zjxy/swffJgTjOne.jsp" />
+			<forward name="swffFfpjManage"   	path="/rcsw/zjxy/swffFfpjManage.jsp" />
+			<forward name="swffOnePjManage"   	path="/rcsw/zjxy/swffOnePjManage.jsp" />
+			<forward name="swffPjTjManage"   	path="/rcsw/zjxy/swffPjTjManage.jsp" />
+			<forward name="swffFfryManage"   	path="/rcsw/zjxy/swffFfryManage.jsp" />
+			<forward name="swffFfrytjManage"   	path="/rcsw/zjxy/swffFfrytjManage.jsp" />
+			<forward name="swffFfrytjUpdate"   	path="/rcsw/zjxy/swffFfrytjUpdate.jsp" />
+			<forward name="swffXmxz"   	path="/rcsw/zjxy/swffXmxz.jsp" />
+			<forward name="swffDxtzManage"   	path="/rcsw/zjxy/swffDxtzManage.jsp" />
+			<forward name="swffFfryqrManage"   	path="/rcsw/zjxy/swffFfryqrManage.jsp" />
+			<forward name="ffrManage"   		path="/rcsw/zjxy/ffrManage.jsp" />
+		</action>
+		
+		
+		
+		
+		<!-- 保险、理赔  采用自定义表单形式-->
+    	<action path="/rcsw_bxwh"      forward="/rcsw_bxlp.do?method=bxwhManage"/>      <!-- 保险维护 -->
+    	<action path="/rcsw_lpwh"       forward="/rcsw_bxlp.do?method=lpwhManage"/>       <!-- 理赔维护 -->
+    	<action path="/rcsw_bxhz"       forward="/rcsw_bxlp.do?method=bxhzManage"/>	 	<!-- 保险汇总 -->
+    	<action path="/rcsw_bxsq"       forward="/rcsw_bxlp.do?method=bxwhSave"/>	 	<!-- 保险申请 -->
+    	<action path="/rcsw_bxsh"       forward="/rcsw_bxlp.do?method=bxshManage"/>	 	<!-- 保险审核 -->
+    	
+    	<action path="/rcsw_bxlp" 
+        		parameter="method"  
+        		name="bxlpForm" 
+        		scope="request"
+		        type="xgxt.rcsw.bxlp.BxlpAction">
+		       
+		    <forward name="bxwhManage" path="/rcsw/bxlp/bxwhManage.jsp"/>
+		    <forward name="bxwhSave" path="/rcsw/bxlp/bxwhSave.jsp"/>
+		    <forward name="lpwhManage" path="/rcsw/bxlp/lpwhManage.jsp"/>
+		    <forward name="lpwhSave" path="/rcsw/bxlp/lpwhSave.jsp"/>
+		    <forward name="bxhzManage" path="/rcsw/bxlp/bxhzManage.jsp"/>
+		    <forward name="bxhzShow" path="/rcsw/bxlp/bxhzShow.jsp"/>
+		    <forward name="bxshManage" path="/rcsw/bxlp/bxshManage.jsp"/>
+		    <forward name="bxshSave" path="/rcsw/bxlp/bxshSave.jsp"/>
+		</action>
+		
+		<!--学生证管理-->
+		<action path="/rcsw_xszgl" 
+        		parameter="method"  
+        		name="rcswForm" 
+        		scope="request"
+		        type="xgxt.rcsw.xszgl.XszglAction">		       
+		    <forward name="xszbbsq" path="/rcsw/xszbbsqManage.jsp"/>
+		    <forward name="xszblManage" path="/rcsw/xszblManage.jsp"/> <!-- 学生证办理 -->
+		    <forward name="xszzcManage" path="/rcsw/xszzcManage.jsp"/> <!-- 学生证注册 -->
+		    <forward name="xszzcUpdate" path="/rcsw/xszzcUpdate.jsp"/> <!-- 学生证注册 -->
+		    <forward name="xszzxManage" path="/rcsw/xszzxManage.jsp"/> <!-- 学生证注销 -->
+		    <forward name="xszzxUpdate" path="/rcsw/xszzxUpdate.jsp"/> <!-- 学生证注销 -->
+		    <forward name="xszbbsqAdd" path="/rcsw/xszbbsqAdd.jsp"/>
+		    <forward name="xszbbsqModi" path="/rcsw/xszbbsqModi.jsp"/>
+		    <forward name="xszbbsh" path="/rcsw/xszbbsh.jsp"/>
+		    <forward name="xszbbshOne" path="/rcsw/xszbbshOne.jsp"/>
+		    
+		    <forward name="xszdj" path="/rcsw/xszdjManage.jsp"/>
+		    <forward name="xszdjAdd" path="/rcsw/xszdjAdd.jsp"/>
+		    <forward name="xszdjModi" path="/rcsw/xszdjModi.jsp"/>
+		    <forward name="xszdjsh" path="/rcsw/xszdjsh.jsp"/>
+		    <forward name="xszdjshOne" path="/rcsw/xszdjshOne.jsp"/>
+		    <forward name="xszbb_cn_one" path="/print/xszbb_cn_one.jsp" />
+		</action>
+		
+		
+		<action path="/rcsw_cccx" forward="/rcsw_pwgl.do?method=cccx"/>
+		
+		<action path="/rcsw_pwgl" 
+        		parameter="method"  
+        		name="rcswForm" 
+        		scope="request"
+		        type="xgxt.rcsw.pwgl.PwglAction">	
+				
+				<forward name="cccx" path="/sjcz/train_time_search.jsp"/>
+				<forward name="ccUpdate" path="/sjcz/hcccb.jsp"/>
+		</action>
+		
+		
+		<!--学生考勤管理 by 鲁大 2011.4.19 -->
+		<action path="/xskqManage" forward="/kqglManage.do?method=xskqQuery"/>
+		<action path="/xskqTj" forward="/kqglManage.do?method=xskqTj"/>
+		
+		<action path="/kqglManage" 
+        		parameter="method"  
+        		name="kqglForm" 
+        		scope="request"
+		        type="xgxt.rcsw.kqgl.KqglAction">	
+			<forward name="xskqQuery" path="/rcsw/kqgl/xskqQuery.jsp"/>
+			<forward name="xskqAdd" path="/rcsw/kqgl/xskqAdd.jsp"/>
+			<forward name="xskqUpdate" path="/rcsw/kqgl/xskqUpdate.jsp"/>
+			<forward name="xskqTj" path="/rcsw/kqgl/xskqTj.jsp"/>
+		</action>
+		
+		
+		<!-- 火车优惠卡管理 by鲁大 2011-06-17-->
+		<action path="/hcyhk" 
+        		parameter="method"  
+        		name="hcyhkForm" 
+        		scope="request"
+		        type="xgxt.rcsw.hcyhk.HcyhkAction">	
+		        
+		        
+		    <forward name="hcyhkAdd" path="/rcsw/hcyhk/hcyhkAdd.jsp"/>
+		    <forward name="yhkManage" path="/rcsw/hcyhk/yhkManage.jsp"/>
+		    <forward name="yhkAuditing" path="/rcsw/hcyhk/yhkAuditing.jsp"/>
+		    <forward name="hcyhkDgsh" path="/rcsw/hcyhk/hcyhkDgsh.jsp"/>
+		    <forward name="hcyhkbbUpdate" path="/rcsw/hcyhk/hcyhkbbUpdate.jsp"/>
+		</action>
+		
+		<!-- 火车优惠卡发放管理 by qlj 2011-12-26-->
+		<action path="/hcyhkff" 
+        		parameter="method"  
+        		name="rcswForm" 
+        		scope="request"
+		        type="xgxt.rcsw.hcyhk.hcyhkff.HcyhkffAction">	
+		     
+		    <forward name="hcyhkffManage" path="/rcsw/hcyhk/hcyhkffManage.jsp"/> <!-- 火车优惠卡发放管理 -->
+		    <forward name="hcyhkffUpdate" path="/rcsw/hcyhk/hcyhkffUpdate.jsp"/> <!-- 火车优惠卡发放 -->
+		</action>
+		
+		<!-- 校徽管理 by qlj 2011-12-26-->
+		<action path="/xhgl" 
+        		parameter="method"  
+        		name="xhglForm" 
+        		scope="request"
+		        type="xgxt.rcsw.xhgl.XhglAction">	
+		     
+		    <forward name="xhffManage" path="/rcsw/xhgl/xhffManage.jsp"/> <!-- 校徽发放管理 -->
+		    <forward name="xhffUpdate" path="/rcsw/xhgl/xhffUpdate.jsp"/> <!-- 校徽发放 -->
+		    
+		    <forward name="xhbbManage" path="/rcsw/xhgl/xhbbManage.jsp"/> <!-- 校徽补办管理 -->
+		    <forward name="xhbbUpdate" path="/rcsw/xhgl/xhbbUpdate.jsp"/> <!-- 校徽补办 -->
+		    
+		    <forward name="xhbbShManage" path="/rcsw/xhgl/xhbbShManage.jsp"/> <!-- 校徽补办审核 -->
+		    <forward name="xhbbSh" path="/rcsw/xhgl/xhbbSh.jsp"/> <!-- 校徽补办审核 -->
+		</action>
+		
+	</action-mappings>
+
+</struts-config>

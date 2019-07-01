@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 第二课堂 -西安交通大学-->
+<struts-config>
+	<form-beans>
+		<form-bean name="smwhForm" type="com.zfsoft.xgxt.dekt.dsgl.smwh.SmwhForm" />
+    	<form-bean name="dsglsqForm" type="com.zfsoft.xgxt.dekt.dsgl.dsglsq.DsglsqForm" />
+    	<form-bean name="dsglshForm" type="com.zfsoft.xgxt.dekt.dsgl.dsglsh.DsglshForm" />
+    	<form-bean name="dsgljgForm" type="com.zfsoft.xgxt.dekt.dsgl.dsgljg.DsgljgForm" />
+		<!--<form-bean name="onHundredBookForm" type="com.zfsoft.xgxt.dekt.dsgl.onehundredbook.OnHundredBookForm" />-->
+		
+		<form-bean name="jswhForm" type="com.zfsoft.xgxt.dekt.jspj.jswh.JswhForm" />
+		<form-bean name="jspjyyxxForm" type="com.zfsoft.xgxt.dekt.jspj.jspjyyxx.JspjyyxxForm" />
+		<form-bean name="jspjsqForm" type="com.zfsoft.xgxt.dekt.jspj.jspjsq.JspjsqForm" />
+		<form-bean name="jspjshForm" type="com.zfsoft.xgxt.dekt.jspj.jspjsh.JspjshForm" />
+		<form-bean name="jspjjgForm" type="com.zfsoft.xgxt.dekt.jspj.jspjjg.JspjjgForm" />
+		
+		<form-bean name="stjcszForm" type="com.zfsoft.xgxt.ttgl.stgl.jcsz.JcszForm" /><!-- 社团管理-->
+		<form-bean name="stglsqForm" type="com.zfsoft.xgxt.ttgl.stgl.stglsq.StglsqForm" />
+		<form-bean name="stglshForm" type="com.zfsoft.xgxt.ttgl.stgl.stglsh.StglshForm" />
+		<form-bean name="stglForm" type="com.zfsoft.xgxt.ttgl.stgl.stgljg.StglForm" />
+		<form-bean name="strtsqForm" type="com.zfsoft.xgxt.ttgl.stgl.strtsq.StrtsqForm" /><!-- 社团成员管理-->
+		<form-bean name="stcyglForm" type="com.zfsoft.xgxt.ttgl.stgl.stcygl.StcyglForm" /><!-- 社团成员管理-->
+	</form-beans>
+	
+	<action-mappings>
+	<action path="/xg_dekt_smwhgl" forward="/dekt_smwhgl.do?method=smwhList"/>	<!--书目维护 -->
+	<action path="/dekt_smwhgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.dekt.dsgl.smwh.SmwhAction" 
+   			name="smwhForm"         
+   			parameter="method">	
+   		<forward name="smwhList" path="/xsgzgl/dekt/dsgl/smwh/smwhList.jsp"></forward>
+   		<forward name="smzj" path="/xsgzgl/dekt/dsgl/smwh/smzj.jsp"></forward>
+   		<forward name="smxg" path="/xsgzgl/dekt/dsgl/smwh/smxg.jsp"></forward>
+   		<forward name="smck" path="/xsgzgl/dekt/dsgl/smwh/smck.jsp"></forward>
+	</action>
+
+    <!-- 4个100完成状态图 -->
+    <action path="/hdgl_hdgl_xsdbt" forward="/dekt_dsglsq.do?method=viewDbt"/>
+	<action path="/xg_dekt_dsglsq" forward="/dekt_dsglsq.do?method=onehundredBookList"/>	<!-- 读书管理申请 -->
+	<action path="/dekt_dsglsq"
+   			scope="request"
+   			type="com.zfsoft.xgxt.dekt.dsgl.dsglsq.DsglsqAction"
+   			name="dsglsqForm"
+   			parameter="method">
+		<forward name="100booklist" path="/xsgzgl/dekt/dsgl/100bsk_xsd/dsglsqList_xajd.jsp"></forward>
+   		<forward name="dssqcx" path="/xsgzgl/dekt/dsgl/dsglsq/dsglsqList.jsp"></forward>
+   		<forward name="dssqzj" path="/xsgzgl/dekt/dsgl/dsglsq/dssqzj.jsp"></forward>
+   		<forward name="dssqxg" path="/xsgzgl/dekt/dsgl/dsglsq/dssqxg.jsp"></forward>
+   		<forward name="dssqck" path="/xsgzgl/dekt/dsgl/dsglsq/dssqck.jsp"></forward>
+        <forward name="viewDbt" path="/xsgzgl/hdgl/cssz/viewDbt.jsp"/>
+	</action> 
+	<action path="/xg_dekt_dsglsh" forward="/dekt_dsglsh.do?method=dsglShList"/>	<!-- 读书管理审核 -->
+	<action path="/dekt_dsglsh" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.dekt.dsgl.dsglsh.DsglshAction" 
+	   			name="dsglshForm"         
+	   			parameter="method">
+	   		<forward name="dsglSh" path="/xsgzgl/dekt/dsgl/dsglsh/dsglshList.jsp"></forward>
+	   		<forward name="dsglck" path="/xsgzgl/dekt/dsgl/dsglsh/dsglck.jsp"></forward>
+	   		<forward name="dsglDgsh" path="/xsgzgl/dekt/dsgl/dsglsh/dsglDgsh.jsp"></forward>
+	   		<forward name="dsglPlsh" path="/xsgzgl/dekt/dsgl/dsglsh/dsglPlsh.jsp"></forward>
+	</action>
+	<action path="/xg_dekt_dsgljg" forward="/dekt_dsgljg.do?method=dsglJgList"/>	<!-- 读书管理结果 -->
+	<action path="/dekt_dsgljg" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.dekt.dsgl.dsgljg.DsgljgAction" 
+   			name="dsgljgForm"         
+   			parameter="method">	
+   		<forward name="dsjgcx" path="/xsgzgl/dekt/dsgl/dsgljg/dsgljgList.jsp"></forward>
+   		<forward name="dsjgydxqck" path="/xsgzgl/dekt/dsgl/dsgljg/dsjgydxqck.jsp"></forward>
+	</action> 
+	
+	<action path="/xg_dekt_jswhgl" forward="/dekt_jswhgl.do?method=jswhList"/>	<!--教师维护 -->
+	<action path="/dekt_jswhgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.dekt.jspj.jswh.JswhAction" 
+   			name="jswhForm"         
+   			parameter="method">	
+   		<forward name="jswhList" path="/xsgzgl/dekt/jspj/jswh/jswhList.jsp"></forward>
+   		<forward name="dekt_10698" path="/xsgzgl/dekt/jspj/jswh/dekt_10698.jsp"/>	
+	</action> 
+	<action path="/xg_dekt_jspjglyyxx" forward="/dekt_jspjglyyxx.do?method=jspjyyxxList"/>	<!-- 教师预约消息 -->
+	<action path="/dekt_jspjglyyxx" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.dekt.jspj.jspjyyxx.JspjyyxxAction" 
+   			name="jspjyyxxForm"         
+   			parameter="method">	
+   		<forward name="jspjhfcx" path="/xsgzgl/dekt/jspj/jspjhf/jspjhfList.jsp"></forward>
+   		<forward name="jspjzj" path="/xsgzgl/dekt/jspj/jspjsq/jspjzj.jsp"></forward>
+   		<forward name="jspjxg" path="/xsgzgl/dekt/jspj/jspjsq/jspjxg.jsp"></forward>
+   		<forward name="jspjck" path="/xsgzgl/dekt/jspj/jspjhf/jspjck.jsp"></forward>
+	</action> 
+	<action path="/xg_dekt_jspjglsq" forward="/dekt_jspjglsq.do?method=jspjSqList"/>	<!-- 教师评价申请 -->
+	<action path="/dekt_jspjglsq" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.dekt.jspj.jspjsq.JspjsqAction" 
+   			name="jspjsqForm"         
+   			parameter="method">	
+   		<forward name="jspjcx" path="/xsgzgl/dekt/jspj/jspjsq/jspjsqList.jsp"></forward>
+   		<forward name="jspjzj" path="/xsgzgl/dekt/jspj/jspjsq/jspjzj.jsp"></forward>
+   		<forward name="jspjxg" path="/xsgzgl/dekt/jspj/jspjsq/jspjxg.jsp"></forward>
+   		<forward name="jspjck" path="/xsgzgl/dekt/jspj/jspjsq/jspjck.jsp"></forward>
+   		<forward name="jspjyy_10698" path="/xsgzgl/dekt/jspj/jspjsq/jspjyy_10698.jsp"></forward>
+	</action> 
+	<action path="/xg_dekt_jspjglsh" forward="/dekt_jspjglsh.do?method=jspjShList"/>	<!-- 教师评价审核 -->
+	<action path="/dekt_jspjglsh" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.dekt.jspj.jspjsh.JspjshAction" 
+   			name="jspjshForm"         
+   			parameter="method">	
+   		<forward name="jspjSh" path="/xsgzgl/dekt/jspj/jspjsh/jspjshList.jsp"></forward>
+   		<forward name="jspjck" path="/xsgzgl/dekt/jspj/jspjsh/jspjck.jsp"></forward>
+   		<forward name="jspjDgsh" path="/xsgzgl/dekt/jspj/jspjsh/jspjDgsh.jsp"></forward>
+   		<forward name="jspjPlsh" path="/xsgzgl/dekt/jspj/jspjsh/jspjPlsh.jsp"></forward>
+	</action> 
+	<action path="/xg_dekt_jspjgljg" forward="/dekt_jspjgljg.do?method=jspjJgList"/>	<!-- 教师评价结果 -->
+	<action path="/dekt_jspjgljg" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.dekt.jspj.jspjjg.JspjjgAction" 
+   			name="jspjjgForm"         
+   			parameter="method">	
+   		<forward name="jspjJg" path="/xsgzgl/dekt/jspj/jspjjg/jspjjgList.jsp"></forward>
+   		<forward name="jspjxqck" path="/xsgzgl/dekt/jspj/jspjjg/jspjxqck.jsp"></forward>
+	</action> 
+	
+	
+	<action path="/xg_ttgl_stgljcsz" forward="/ttgl_stgljcsz.do?method=stglJcsz"/>	<!-- 社团管理基础设置 -->
+		<action path="/ttgl_stgljcsz" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.ttgl.stgl.jcsz.JcszAction" 
+	   			name="stjcszForm"         
+	   			parameter="method">	
+	   		<forward name="stglJcsz" path="/xsgzgl/ttgl/stgl/jcsz/stglJcsz.jsp"></forward>
+		</action>
+	<action path="/xg_ttgl_stglsq" forward="/ttgl_stglsq.do?method=stglsqList"/>	<!-- 社团管理申请 -->
+	<action path="/ttgl_stglsq" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.ttgl.stgl.stglsq.StglsqAction" 
+   			name="stglsqForm"         
+   			parameter="method">	
+   		<forward name="stglsqList" path="/xsgzgl/ttgl/stgl/stglsq/stglsqList.jsp"></forward>
+   		<forward name="stsqzj" path="/xsgzgl/ttgl/stgl/stglsq/stsqzj.jsp"></forward>
+   		<!--<forward name="selectStu" path="/xsgzgl/ttgl/stgl/stglsq/selectStu.jsp"></forward>-->
+   		<forward name="stsqxg" path="/xsgzgl/ttgl/stgl/stglsq/stsqxg.jsp"></forward>
+   		<forward name="stsqck" path="/xsgzgl/ttgl/stgl/stglsq/stsqck.jsp"></forward>
+	</action>
+	
+	<action path="/xg_ttgl_stglsh" forward="/ttgl_stglsh.do?method=stglShList"/>	<!-- 社团管理审核 -->
+	<action path="/ttgl_stglsh" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.ttgl.stgl.stglsh.StglshAction" 
+	   			name="stglshForm"         
+	   			parameter="method">
+	   		<forward name="stglSh" path="/xsgzgl/ttgl/stgl/stglsh/stglshList.jsp"></forward>
+	   		<forward name="stglck" path="/xsgzgl/ttgl/stgl/stglsh/stglck.jsp"></forward>
+	   		<forward name="stglDgsh" path="/xsgzgl/ttgl/stgl/stglsh/stglDgsh.jsp"></forward>
+	   		<forward name="stzzDgsh" path="/xsgzgl/ttgl/stgl/stglsh/stzzDgsh.jsp"></forward>
+	   		<forward name="stglPlsh" path="/xsgzgl/ttgl/stgl/stglsh/stglPlsh.jsp"></forward>
+	</action>
+	<action path="/xg_ttgl_stgl" forward="/ttgl_stgl.do?method=stglList"/>	<!-- 社团管理结果 -->
+	<action path="/ttgl_stgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.ttgl.stgl.stgljg.StglAction" 
+   			name="stglForm"         
+   			parameter="method">	
+   		<forward name="stglList" path="/xsgzgl/ttgl/stgl/stgljg/stglList.jsp"></forward>
+   		<forward name="add" path="/xsgzgl/ttgl/stgl/stgljg/add.jsp"></forward>
+   		<forward name="selectStu" path="/xsgzgl/ttgl/stgl/stgljg/selectStu.jsp"></forward>
+   		<forward name="xg" path="/xsgzgl/ttgl/stgl/stgljg/xg.jsp"></forward>
+   		<forward name="ck" path="/xsgzgl/ttgl/stgl/stgljg/ck.jsp"></forward>
+   		<forward name="cyck" path="/xsgzgl/ttgl/stgl/stgljg/cyck.jsp"></forward>
+	</action> 
+	
+	
+	<action path="/xg_ttgl_strtsq" forward="/ttgl_strtsq.do?method=stList"/>	<!-- 社团入团申请-->
+	<action path="/ttgl_strtsq" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.ttgl.stgl.strtsq.StrtsqAction" 
+   			name="strtsqForm"         
+   			parameter="method">	
+   		<forward name="stList" path="/xsgzgl/ttgl/stgl/strtsq/stList.jsp"></forward>
+   		<forward name="stsq" path="/xsgzgl/ttgl/stgl/strtsq/stsq.jsp"></forward>
+   		<forward name="ck" path="/xsgzgl/ttgl/stgl/strtsq/ck.jsp"></forward>
+	</action>
+	
+	<action path="/xg_ttgl_stcygl" forward="/ttgl_stcygl.do?method=stcyglList"/>	<!-- 社团成员管理-->
+	<action path="/ttgl_stcygl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.ttgl.stgl.stcygl.StcyglAction" 
+   			name="stcyglForm"         
+   			parameter="method">	
+   		<forward name="stcyglList" path="/xsgzgl/ttgl/stgl/stcygl/stcyglList.jsp"></forward>
+   		<forward name="ck" path="/xsgzgl/ttgl/stgl/stcygl/ck.jsp"></forward>
+   		<forward name="ryManage" path="/xsgzgl/ttgl/stgl/stcygl/ryManage.jsp"></forward>
+   		<forward name="stzzsq" path="/xsgzgl/ttgl/stgl/stcygl/stzzsq.jsp"></forward>
+   		<forward name="sqxxck" path="/xsgzgl/ttgl/stgl/stcygl/sqxxck.jsp"></forward>
+	</action>
+	<!--组织结构管理-->
+	<action path="/xg_ttgl_stjggl" forward="/ttgl_stjggl.do?method=stjgglList"/>
+	<action path="/ttgl_stjggl"
+			scope="request"
+			type="com.zfsoft.xgxt.ttgl.stgl.stjggl.StjgglAction"
+			name="stcyglForm"
+			parameter="method">
+		<forward name="stjgglList" path="/xsgzgl/ttgl/stgl/stjggl/stjgglList.jsp"/>
+		<forward name="stjggl" path="/xsgzgl/ttgl/stgl/stjggl/stjggl.jsp"/>
+	</action>
+	</action-mappings>
+</struts-config>

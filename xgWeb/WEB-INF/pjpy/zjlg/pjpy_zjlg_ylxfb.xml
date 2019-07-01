@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="ylxfbActionForm" type="xgxt.pjpy.zjlg.ylxfb.YlxfbActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_zjlg_ylxfbsq" 	   forward="/zjlgPjpyylxfb.do?method=ylxfbsq"/> <!-- 优良学风班级申请 -->
+	    <action path="/pjpy_zjlg_ylxfbwh"      forward="/zjlgPjpyylxfb.do?method=ylxfbwh"/> <!-- 优良学风班级申请结果查询 -->
+	    <action path="/pjpy_zjlg_ylxfbModi"    forward="/zjlgPjpyylxfb.do?method=ylxfbModi"/> <!-- 优良学风班级申请修改 --> 
+	    <action path="/pjpy_zjlg_ylxfbsh"      forward="/zjlgPjpyylxfb.do?method=ylxfbsh"/> <!-- 优良学风班级审核 -->
+	    <action path="/pjpy_zjlg_ylxfbdgsh"    forward="/zjlgPjpyylxfb.do?method=ylxfbdgsh"/> <!-- 优良学风班级单个审核 -->
+	    <action path="/pjpy_zjlg_ylxfbhz"      forward="/zjlgPjpyylxfb.do?method=ylxfbhz"/> <!-- 优良学风班级评比汇总 -->
+	    
+	  
+	    <!-- 实际路径 -->	
+		<action path="/zjlgPjpyylxfb"
+				type="xgxt.pjpy.zjlg.ylxfb.YlxfbAction"
+				name="ylxfbActionForm"
+				parameter="method"
+				scope="request">
+				
+		
+		<forward name="ylxfbsq" path="/pjpy/zjlg/ylxfb/sq.jsp" /> <!-- 优良学风班级申请页面 -->
+		<forward name="ylxfbwh" path="/pjpy/zjlg/ylxfb/query.jsp" /> <!-- 优良学风班级申请结果查询页面 -->
+		<forward name="ylxfbmodi" path="/pjpy/zjlg/ylxfb/ylxfbmodi.jsp"/> <!-- 优良学风班级修改页面 -->
+		<forward name="ylxfbsh" path="/pjpy/zjlg/ylxfb/ylxfbsh.jsp"/> <!-- 优良学风班级审核 -->  
+		<forward name="ylxfbdgsh" path="/pjpy/zjlg/ylxfb/ylxfbdgsh.jsp"/> <!-- 优良学风班级单个审核 --> 
+			
+		</action>
+	</action-mappings>
+
+</struts-config>

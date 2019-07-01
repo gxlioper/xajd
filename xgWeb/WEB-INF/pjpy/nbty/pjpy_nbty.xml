@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    <form-bean name="nbtyPjpyForm" type="xgxt.pjpy.nbty.NbtyPjpyForm" />
+	<form-bean name="qhtsjxjForm" type="xgxt.pjpy.nbty.jxj.QhtsjxjForm" />
+    <form-bean name="nbtyWmqsForm" type="xgxt.pjpy.nbty.wmqs.NbtyWmqsForm" />
+    <form-bean name="nbtyWmbjForm" type="xgxt.pjpy.nbty.wmbj.NbtyWmbjForm" />
+   
+	</form-beans>
+ 	<action-mappings>
+ 	<!--宁波天一 荣誉称号申请审核 -->
+    <action name="nbtyPjpyForm"
+    		path="/nbty_rych" 
+    		type="xgxt.pjpy.nbty.rych.NbtyPjpyAction" 
+    		parameter="method"
+    		scope="request">
+    <forward name="showRych" path="/pjpy/nbty/rych/showRych.jsp" />
+    <forward name="rychResult" path="/pjpy/nbty/rych/rychResult.jsp" />
+    <forward name="rychSh" path="/pjpy/nbty/rych/shManage.jsp" />
+    <forward name="rychSq" path="/pjpy/nbty/rych/sqManage.jsp" />
+    <forward name="rychDj" path="/pjpy/nbty/rych/xmPrint.jsp" />
+    <forward name="shOne" path="/pjpy/nbty/rych/shOne.jsp" />
+    <forward name="showOne" path="/pjpy/nbty/rych/showOne.jsp" />
+    <forward name="stuInfo" path="/pjpy/nbty/rych/stuInfo.jsp" />
+    </action>
+    
+    <!--宁波天一 清寒天使奖学金申请 -->
+    <action path="/nbty_qhtsjxj" name="qhtsjxjForm"
+    		type="xgxt.pjpy.nbty.jxj.QhtsjxjAction"
+    		scope="request" parameter="method">
+    	<forward name="qhtsjxjsq" path="/pjpy/nbty/jxj/qhtsjxjsq.jsp"></forward>
+    	<forward name="qhtsjxjsh" path="/pjpy/nbty/jxj/qhtsjxjsh.jsp"></forward>
+    	<forward name="qhtsjxjmodi" path="/pjpy/nbty/jxj/qhtsjxjmodi.jsp"></forward>
+    	<forward name="qhtsjxjshone" path="/pjpy/nbty/jxj/qhtsjxjshone.jsp"></forward>
+    	<forward name="qhtsjxjprint" path="/pjpy/nbty/jxj/qhtsjxjprint.jsp"></forward>
+    	<forward name="qhtsjxjcx" path="/pjpy/nbty/jxj/qhtsjxjcx.jsp" />
+    </action>
+   
+    
+    <!--宁波天一 文明寝室申请审核 -->
+    <action path="/nbtyWmqs" 
+    		name="nbtyWmqsForm"
+    		type="xgxt.pjpy.nbty.wmqs.NbtyWmqsAction" 
+    		parameter="method"
+    		scope="request">
+      <forward name="sqWmqs" path="/pjpy/nbty/wmqs/sqWmqs.jsp"/>
+      <forward name="shWmqs" path="/pjpy/nbty/wmqs/shWmqs.jsp"/>
+      <forward name="resultWmqs" path="/pjpy/nbty/wmqs/resultWmqs.jsp"/>
+      <forward name="oneWmqs" path="/pjpy/nbty/wmqs/oneWmqs.jsp"/>
+      <forward name="shOneWmqs" path="/pjpy/nbty/wmqs/shOneWmqs.jsp"/>
+      <forward name="printWmqs" path="/pjpy/nbty/wmqs/printWmqs.jsp"/>
+      <forward name="stuInfo" path="/pjpy/nbty/wmqs/stuWmqs.jsp"/>
+     </action>
+    
+     <!--宁波天一 文明班级申请审核 -->
+    <action path="/nbtyWmbj" 
+    		type="xgxt.pjpy.nbty.wmbj.NbtyWmbjAction" 
+    		name="nbtyWmbjForm"
+			parameter="method"
+    		scope="request">
+      <forward name="nbtySqWmbj" path="/pjpy/nbty/wmbj/nbtySqWmbj.jsp"/>
+      <forward name="nbtyShWmbj" path="/pjpy/nbty/wmbj/nbtyShWmbj.jsp"/>
+      <forward name="nbtyResultWmbj" path="/pjpy/nbty/wmbj/nbtyResultWmbj.jsp"/>
+      <forward name="nbtyOneWmbj" path="/pjpy/nbty/wmbj/nbtyOneWmbj.jsp"/>
+      <forward name="nbtyShOneWmbj" path="/pjpy/nbty/wmbj/nbtyShOneWmbj.jsp"/>
+      <forward name="nbtyPrintWmbj" path="/pjpy/nbty/wmbj/nbtyPrintWmbj.jsp"/>
+      <forward name="stuInfo" path="/pjpy/nbty/wmbj/nbtyStuWmbj.jsp"/>
+	</action>
+ 	</action-mappings>
+</struts-config>

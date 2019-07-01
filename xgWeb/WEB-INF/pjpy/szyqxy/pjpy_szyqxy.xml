@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpySzyqxyZhszcpActionForm" type="xgxt.pjpy.szyqxy.zhszcp.PjpySzyqxyZhszcpActionForm"/>
+	</form-beans>
+	<action-mappings>
+	    <!--展现的路径  苏州工业园区-->
+		<!--例如<action path="/xfSb" forward="/pjpyszyqwh.do?method=xfSb"/>-->	
+		<action path="/szyc_5sManage" forward="/pjpyszyqwh.do?method=szyc_5sManage"/>	
+	 	<action path="/szyc_zznlManage" forward="/pjpyszyqwh.do?method=szyc_zznlManage"/>
+		<action path="/szyc_xthdManage" forward="/pjpyszyqwh.do?method=szyc_xthdManage"/>
+		<action path="/szyc_xthdManage" forward="/pjpyszyqwh.do?method=szyc_XthdChk"/>
+		<action path="/szyc_xthdManage" forward="/pjpyszyqwh.do?method=szyc_xthdManage"/>
+		<action path="/szyc_shsjManage" forward="/pjpyszyqwh.do?method=szyc_shsjManage"/>		
+		<action path="/szyc_zznlManage" forward="/pjpyszyqwh.do?method=szyc_zznlManage"/>
+		<action path="/szyc_zhszcphzManage" forward="/pjpyszyqwh.do?method=szyc_zhszcphzManage"/>
+		<!--分数设置-->
+	    <action path="/szyc_pointSetting" forward="/pjpyszyqwh.do?method=szyc_pointSetting"/>	
+	    
+		<!--实际的路径 -->
+		<action path="/pjpyszyqwh"
+				type="xgxt.pjpy.szyqxy.zhszcp.PjpySzyqxyZhszcpAction"
+				name="pjpySzyqxyZhszcpActionForm"
+				parameter="method"
+				scope="request">
+		<!--组织能力加分审核-->	
+		 <forward name="zznlChk" path="/pjpy/szyqxy/zhszcp/zznlChk.jsp"></forward>
+		 <forward name="zznlViewAndChk" path="/pjpy/szyqxy/zhszcp/zznlViewAndChk.jsp"></forward>			
+		 <!--组织能力加分记载表-->
+		 <forward name="zznlQuery" path="/pjpy/szyqxy/zhszcp/zznl_query.jsp"></forward>
+		 <forward name="zznlAdd" path="/pjpy/szyqxy/zhszcp/zznl_Add.jsp"></forward>	
+		 <forward name="zznlupdate" path="/pjpy/szyqxy/zhszcp/zznl_update.jsp"></forward>		
+		 <forward name="zznlView" path="/pjpy/szyqxy/zhszcp/zznl_view.jsp"></forward>
+		 <forward name="zznlBzrAdd" path="/pjpy/szyqxy/zhszcp/zznl_BzrAdd.jsp"></forward>		
+		 <!--5s模块-->								
+		 <forward name="5sQuery"  path="/pjpy/szyqxy/zhszcp/5s_query.jsp"></forward>
+		 <forward name="5sAdd" 	  path="/pjpy/szyqxy/zhszcp/5s_Add.jsp"></forward>
+		 <forward name="5sBzrAdd" path="/pjpy/szyqxy/zhszcp/5s_BzrAdd.jsp"></forward>
+		 <forward name="5supdate" path="/pjpy/szyqxy/zhszcp/5s_Add.jsp"></forward>
+		 <forward name="5sView"   path="/pjpy/szyqxy/zhszcp/5s_view.jsp"></forward>
+		 <forward name="5sSh"     path="/pjpy/szyqxy/zhszcp/5s_Sh.jsp"></forward>
+		 <forward name="5sBzrUpdate" path="/pjpy/szyqxy/zhszcp/5s_BzrUpdate.jsp"></forward>
+		 <forward name="5sbb"     path="/pjpy/szyqxy/zhszcp/5s_bb.jsp"></forward>
+		 <!--IVT读书活动记载-->
+		 <forward name="dshdQuery" path="/pjpy/szyqxy/zhszcp/xthd/dshd/dshd_query.jsp"></forward>
+		 <forward name="dshdAdd" path="/pjpy/szyqxy/zhszcp/xthd/dshd/dshd_Add.jsp"></forward>										
+		 <forward name="dshdupdate" path="/pjpy/szyqxy/zhszcp/xthd/dshd/dshd_update.jsp"></forward>	
+		 <forward name="dshdView" path="/pjpy/szyqxy/zhszcp/xthd/dshd/dshd_view.jsp"></forward>	
+		 <forward name="szyq_dshdjzb" path="/pjpy/szyqxy/zhszcp/xthd/dshd/dshd_BzrAdd.jsp"></forward>
+		  <!--语言表达记载-->
+		 <forward name="yybdQuery" path="/pjpy/szyqxy/zhszcp/xthd/yybd/yybd_query.jsp"></forward>
+		 <forward name="yybdAdd" path="/pjpy/szyqxy/zhszcp/xthd/yybd/yybd_Add.jsp"></forward>										
+		 <forward name="yybdupdate" path="/pjpy/szyqxy/zhszcp/xthd/yybd/yybd_update.jsp"></forward>	
+		 <forward name="yybdView" path="/pjpy/szyqxy/zhszcp/xthd/yybd/yybd_view.jsp"></forward>		
+		 <forward name="szyq_yybdjzb" path="/pjpy/szyqxy/zhszcp/xthd/yybd/yybd_BzrAdd.jsp"></forward>		
+		  <!--IVT论坛记载表-->
+		 <forward name="ivltQuery" path="/pjpy/szyqxy/zhszcp/xthd/ltjz/ivlt_query.jsp"></forward>
+		 <forward name="ivltAdd" path="/pjpy/szyqxy/zhszcp/xthd/ltjz/ivlt_Add.jsp"></forward>										
+		 <forward name="ivltupdate" path="/pjpy/szyqxy/zhszcp/xthd/ltjz/ivlt_update.jsp"></forward>
+		 <forward name="ivltView" path="/pjpy/szyqxy/zhszcp/xthd/ltjz/ivlt_view.jsp"></forward>	
+		 <forward name="szyq_ivtltb" path="/pjpy/szyqxy/zhszcp/xthd/ltjz/ivlt_BzrAdd.jsp"></forward>	
+		  <!--IVT学团活动登记表-->
+		 <forward name="xthdQuery" path="/pjpy/szyqxy/zhszcp/xthd/xthddj/xthd_query.jsp"></forward>
+		 <forward name="xthdAdd" path="/pjpy/szyqxy/zhszcp/xthd/xthddj/xthd_Add.jsp"></forward>										
+		 <forward name="xthdupdate" path="/pjpy/szyqxy/zhszcp/xthd/xthddj/xthd_update.jsp"></forward>
+		 <forward name="xthdView" path="/pjpy/szyqxy/zhszcp/xthd/xthddj/xthd_view.jsp"></forward>	
+		 <forward name="szyq_xthddjb" path="/pjpy/szyqxy/zhszcp/xthd/xthddj/xthd_BzrAdd.jsp"></forward>
+		 <!--IVT学团活动审核-->
+		 <forward name="dshdChk" path="/pjpy/szyqxy/zhszcp/xthd/dshd/dshdChk.jsp"></forward>
+		 <forward name="dshdViewAndChk" path="/pjpy/szyqxy/zhszcp/xthd/dshd/dshdViewAndChk.jsp"></forward>
+		 
+		 <forward name="yybdChk" path="/pjpy/szyqxy/zhszcp/xthd/yybd/yybdChk.jsp"></forward>
+		 <forward name="yybdViewAndChk" path="/pjpy/szyqxy/zhszcp/xthd/yybd/yybdViewAndChk.jsp"></forward>
+		 
+		 <forward name="ivltChk" path="/pjpy/szyqxy/zhszcp/xthd/ltjz/ivltChk.jsp"></forward>
+		 <forward name="ivltViewAndChk" path="/pjpy/szyqxy/zhszcp/xthd/ltjz/ivltViewAndChk.jsp"></forward>
+		 
+		 <forward name="wthdChk" path="/pjpy/szyqxy/zhszcp/xthd/xthddj/xthdChk.jsp"></forward>
+		 <forward name="wthdViewAndChk" path="/pjpy/szyqxy/zhszcp/xthd/xthddj/xthdViewAndChk.jsp"></forward>											
+ 		
+		 <!--分数设定-->	
+		 <forward name="szyc_pointSetting" path="/pjpy/szyqxy/zhszcp/fssz/szyc_pointSetting.jsp"></forward>		
+		  <!--综合素质测评-->	
+		 <forward name="szyc_zhszcphzManage" path="/pjpy/szyqxy/zhszcp/zhszcphz/szyc_zhszcphzManage.jsp"></forward>		
+		 <forward name="jsfsUpdate" path="/pjpy/szyqxy/zhszcp/zhszcphz/jsfsUpdate.jsp"></forward>	
+         <!--社会实践管理-->
+         <forward name="shsjQuery" path="/pjpy/szyqxy/zhszcp/shsjQuery.jsp"></forward>
+         <forward name="shsjAdd" path="/pjpy/szyqxy/zhszcp/shsjAdd.jsp"></forward>
+         <forward name="shsjChk" path="/pjpy/szyqxy/zhszcp/shsjChk.jsp"></forward>
+         <forward name="shsjViewAndChk" path="/pjpy/szyqxy/zhszcp/shsjViewAndChk.jsp"></forward>
+         <forward name="shsjBzrAdd" path="/pjpy/szyqxy/zhszcp/shsj_BzrAdd.jsp"></forward>		
+</action>
+	</action-mappings>
+	<message-resources key="pjpyshcbys" parameter="xgxt.pjpy.shcbys.pjpyshcbys" />
+</struts-config>

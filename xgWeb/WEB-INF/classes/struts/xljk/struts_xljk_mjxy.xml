@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xljkMjxyXlztbsForm" type="xgxt.xljk.mjxy.XljkMjxyXlztbsForm"/>
+		<form-bean name="xljkMjxyXlwjForm" type="xgxt.xljk.mjxy.xlwj.XljkMjxyXlwjForm"/>
+		<form-bean name="xljkMjxyXlkhbsForm" type="xgxt.xljk.mjxy.xlkh.XljkMjxyXlkhForm"/>
+		<form-bean name="xljkMjxyXlkhxsForm" type="xgxt.xljk.mjxy.xlkh.XljkMjxyXlkhxsForm"/>
+		<form-bean name="xljkMjxyKhxsftForm" type="xgxt.xljk.mjxy.xlkh.XljkMjxyKhxsftForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 		<!-- 心理健康 心理状态报送 -->
+ 	     <action path="/xljkMjxyXlztbs"     
+ 	     		 name="xljkMjxyXlztbsForm"
+ 	     		 type="xgxt.xljk.mjxy.XljkMjxyXlztbsAction"
+ 	     		 scope="request"
+ 	     		 parameter="method"
+ 	      >
+ 	       <forward name="xlztbsWh" path="/shgc/xljk/mjxy/xlztbsWh.jsp"/>
+ 	       <forward name="xlztbsCx" path="/shgc/xljk/mjxy/xlztbsCx.jsp"/>
+ 	       <forward name="xsxlztbsb" path="/shgc/xljk/mjxy/xsxlztbsb.jsp"/>
+ 	     </action> 
+ 	     <!-- 心理健康 心理危机 -->
+ 	      <action path="/xljkMjxyXlwj"     
+ 	     		 name="xljkMjxyXlwjForm"
+ 	     		 type="xgxt.xljk.mjxy.xlwj.XljkMjxyXlwjAction"
+ 	     		 scope="request"
+ 	     		 parameter="method"
+ 	      >
+ 	       <forward name="xlwjyjWh" path="/shgc/xljk/mjxy/xlwjyjWh.jsp"/>
+ 	       <forward name="xlwjCx" path="/shgc/xljk/mjxy/xlwjyjCx.jsp"/>
+ 	       <forward name="xlwjyjb" path="/shgc/xljk/mjxy/xlwjyjb.jsp"/>
+ 	     </action> 
+ 	     
+ 	      <!-- 心理健康 心理危机 -->
+ 	      <action path="/xljkMjxyXlkhbs"     
+ 	     		 name="xljkMjxyXlkhbsForm"
+ 	     		 type="xgxt.xljk.mjxy.xlkh.XljkMjxyXlkhAction"
+ 	     		 scope="request"
+ 	     		 parameter="method"
+ 	      >
+	      <forward name="xlkhWh" path="/shgc/xljk/mjxy/xlkhbsWh.jsp"/>
+	      <forward name="xlkhCx" path="/shgc/xljk/mjxy/xlkhbsCx.jsp"/>
+	      <forward name="xlkhbsb" path="/shgc/xljk/mjxy/xlkhbsb.jsp"/>
+ 	     </action> 
+ 	     
+ 	      <!-- 心理健康 心理困惑学生 -->
+ 	       <action path="/xljkMjxyXlkhxs"     
+ 	     		 name="xljkMjxyXlkhxsForm"
+ 	     		 type="xgxt.xljk.mjxy.xlkh.XljkMjxyXlkhxsAction"
+ 	     		 scope="request"
+ 	     		 parameter="method"
+ 	      >
+	      <forward name="xlkhxsWh" path="/shgc/xljk/mjxy/xlkhxsWh.jsp"/>
+	      <forward name="xlkhxsCx" path="/shgc/xljk/mjxy/xlkhxsCx.jsp"/>
+	      <forward name="khxsdtb" path="/shgc/xljk/mjxy/khxsdtb.jsp"/>
+ 	     </action> 
+ 	     
+ 	       <!-- 心理健康 心理困惑学生访谈 -->
+ 	       <action path="/xljkMjxyKhxsft"     
+ 	     		 name="xljkMjxyKhxsftForm"
+ 	     		 type="xgxt.xljk.mjxy.xlkh.XljkMjxyKhxsftAction"
+ 	     		 scope="request"
+ 	     		 parameter="method"
+ 	      >
+	      <forward name="khxsftJl" path="/shgc/xljk/mjxy/khxsftJl.jsp"/>
+	      <forward name="khxsftCx" path="/shgc/xljk/mjxy/khxsftCx.jsp"/>
+	      <forward name="xlkhxsb" path="/shgc/xljk/mjxy/xlkhbsb.jsp"/>
+	      <forward name="khxsftjlb" path="/shgc/xljk/mjxy/khxsftjlb.jsp"/>
+	      <forward name="fdygzftb" path="/shgc/xljk/mjxy/fdygzftb.jsp"/>
+ 	     </action> 
+ 	     
+	</action-mappings>
+
+</struts-config>

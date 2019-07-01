@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    <form-bean name="commanForm" type="xgxt.form.CommanForm" />
+    <form-bean name="qgzxZgdzdxForm" type="xgxt.qgzx.zgdzdx.QgzxZgdzdxForm" />
+	</form-beans>
+
+	<global-forwards />
+
+	<action-mappings>
+    <action 
+    	path="/qgzxZgdzdx" 
+    	type="xgxt.qgzx.zgdzdx.QgzxZgdzdxAction"
+    	parameter="method"    	
+    	name="qgzxZgdzdxForm"
+    	scope="request">
+    	<forward name="hmd_main" path="/qgzx/zgdzdx/zgdzdx_hmd_main.jsp"/>
+    	<forward name="addHmd" path="/qgzx/zgdzdx/addHmd.jsp"/>
+    	<forward name="gwxxb" path="/qgzx/zgdzdx/gwxxb.jsp"/>   
+    	<forward name="xwgwSearch" path="/qgzx/zgdzdx/xwgwxxSearch.jsp"/>
+    	<forward name="sqxwgw" path="/qgzx/zgdzdx/xwgwsq.jsp"/>
+    	<forward name="gwsqgl" path="/qgzx/zgdzdx/xsgwsqxxSearch.jsp"/>
+    	<forward name="gwsqsh" path="/qgzx/zgdzdx/xsgwsqshSearch.jsp"/>    	 
+    	<forward name="gwsqshPage" path="/qgzx/zgdzdx/xsgwsqsh.jsp"/>
+    	<forward name="gwxxDetail" path="/qgzx/zgdzdx/gwxxDetail.jsp"/>    	
+    	<forward name="disPerson" path="/qgzx/zgdzdx/distributePerson.jsp"/>    
+    	<forward name="distributePage" path="/qgzx/zgdzdx/distributePPage.jsp"/>    		   
+    	<forward name="qgzxsq" path="/qgzx/zgdzdx/qgzxsq.jsp"/> 
+    	<forward name="qgzxsqAudi" path="/qgzx/zgdzdx/qgzxsqAuditing.jsp"/> 
+    	<forward name="qgzxsqSearch" path="/qgzx/zgdzdx/qgzxsqSearch.jsp"/>
+    	<forward name="qgzxsqsh" path="/qgzx/zgdzdx/qgzxsqsh.jsp"/>
+    	<forward name="gzdx_qgzxsqsh" path="/qgzx/gzdx/gzdx_qgzxsqsh.jsp"/>  
+    	<forward name="qgzxzx" path="/qgzx/zgdzdx/qgzxzxsq.jsp"/> 
+    	<forward name="qgzxzxSearch" path="/qgzx/zgdzdx/qgzxzxSearch.jsp"/>   
+    	<forward name="qgzxzxsh" path="/qgzx/zgdzdx/qgzxzxshSearch.jsp"/>   
+    	<forward name="qgzxzxshPage" path="/qgzx/zgdzdx/qgzxzxshPage.jsp"/>    
+    	<forward name="workPayAudit" path="/qgzx/zgdzdx/work_pay_auditing.jsp"/>
+    	<forward name="gwfp" path="/qgzx/zgdzdx/qgzx_gwzjfp.jsp"/>        	
+    	<forward name="gwfpPage" path="/qgzx/zgdzdx/qgzx_gwfp.jsp"/>
+    	<forward name="exportGwzjfp" path="/qgzx/zgdzdx/showExportGwzjfp.jsp"/>
+    	<forward name="qgzxzxPrint" path="/qgzx/zgdzdx/qgzxzxPrint.jsp"/>
+    	
+    	<!--广州大学勤工助学申请页面-->    	
+    	<forward name="gzdx_qgzxsq" path="/qgzx/gzdx/gzdx_qgzxsq.jsp"/>
+    	<forward name="gzdxQgzxsqb" path="/qgzx/gzdx/qgzxsqb.jsp"/>
+    	
+    	<!--地质大学勤工助学消息提示-->
+    	<forward name="xxts" path="/qgzx/zgdzdx/xxts.jsp"/>
+    	<forward name="xxtsUpdate" path="/qgzx/zgdzdx/xxtsUpdate.jsp"/>
+    </action>		
+	</action-mappings>
+</struts-config>
+

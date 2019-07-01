@@ -1,0 +1,156 @@
+<public:attach event=oncontentready onevent=initSelect()>
+<script>
+function initSelect()
+{
+ //
+ element.style.display="none";
+ //模拟组合框
+ vComboxDiv=document.createElement("div");
+ vOptionInput=document.createElement("input");
+ vOptionInput.style.border="1px solid #6699CC";
+ vOptionInput.style.borderWidth="1 0 1 1";
+ vOptionInput.style.cursor="default";
+ vOptionInput.style.width=element.offsetWidth+80;
+ vOptionInput.value=element.options[element.selectedIndex].text;
+ vComboxDiv.appendChild(vOptionInput);
+ vOptionInput.attachEvent("onblur",onOptionInputBlur);
+ vComboxInput=document.createElement("input");
+ vComboxInput.style.border="1px solid #6699CC";
+ vComboxInput.style.borderWidth="1 1 1 0";
+ vComboxInput.style.cursor="default";
+ vComboxInput.type="text";
+ vComboxInput.style.backgroundColor="#D0E0EE";
+ vComboxInput.style.font="normal 11pt Marlett";
+ vComboxInput.value="6";
+ vComboxInput.readOnly=true;
+ vComboxInput.style.width=15;
+ vComboxDiv.appendChild(vComboxInput);
+ vComboxInput.attachEvent("onclick",onComboxInputClick);
+ window.document.body.insertAdjacentElement("afterbegin",vComboxDiv);
+ vComboxDiv.style.position="absolute";
+ vComboxDiv.style.left=getElementDefineLeft(element);
+ vComboxDiv.style.top=getElementDefineTop(element);
+ //模拟列表框
+ vListDiv=document.createElement("div");
+ vListDiv.style.display="none";
+ vListDiv.style.cursor="default";
+ vListDiv.style.border="0px solid #6699CC";
+ vListDiv.style.width=vComboxDiv.offsetWidth;
+ vTable=document.createElement("table");
+ vTable.border="0";
+ vTable.cellSpacing="0";
+ vTable.cellPadding="0";
+ vTable.width="100%";
+ for(kIndex=0;kIndex<element.length;kIndex++)
+ {
+  var vTr=vTable.insertRow(kIndex);
+  var vTd=vTr.insertCell(0);
+  vTd.style.font="normal 9pt 宋体";
+  vTd.style.backgroundColor="#FFFFFF";
+  vTd.innerHTML=element.options[kIndex].text;
+  vTd.attachEvent("onmousedown",onListMouseDown);
+  vTd.attachEvent("onmouseover",onListMouseOver);
+  vTd.attachEvent("onmouseout",onListMouseOut);
+ }
+ vListDiv.appendChild(vTable);
+ window.document.body.insertAdjacentElement("afterbegin",vListDiv);
+ vListDiv.style.position="absolute";
+ vListDiv.style.left=getElementDefineLeft(element);
+ vListDiv.style.top=getElementDefineTop(element)+vOptionInput.offsetHeight;
+ //
+}
+//鼠标丢失焦点组合框
+function onOptionInputBlur()
+{
+ if(!isSelectOption(element,window.event.srcElement.value))
+ {
+  element.length=element.length+1;
+  element.options[element.length-1].text=window.event.srcElement.value;
+ }
+}
+//鼠标按下组合框
+function onComboxInputClick()
+{
+ vListDiv.style.display="";
+ for(iRowCount=vTable.rows.length-1;iRowCount>=0;iRowCount--)
+ {
+  vTable.deleteRow(iRowCount);
+ }
+ for(kIndex=0;kIndex<element.length;kIndex++)
+ {
+  var vTr=vTable.insertRow(kIndex);
+  var vTd=vTr.insertCell(0);
+  vTd.style.font="normal 9pt 宋体";
+  vTd.style.backgroundColor="#FFFFFF";
+  vTd.innerHTML=element.options[kIndex].text;
+  vTd.attachEvent("onmousedown",onListMouseDown);
+  vTd.attachEvent("onmouseover",onListMouseOver);
+  vTd.attachEvent("onmouseout",onListMouseOut);
+ }
+ element.document.attachEvent('onmousedown',onDocumentMouseDown); 
+}
+//鼠标按下列表框项目
+function onListMouseDown()
+{
+ element.options[window.event.srcElement.parentElement.rowIndex].value=window.event.srcElement.innerHTML;
+ vOptionInput.value=window.event.srcElement.innerHTML;
+ vListDiv.style.display="none";
+ element.document.detachEvent("onmousedown",onDocumentMouseDown);
+}
+//鼠标移至列表框项目
+function onListMouseOver()
+{
+ window.event.srcElement.style.backgroundColor="#D0E0EE";
+}
+//鼠标移出列表框项目
+function onListMouseOut()
+{
+ window.event.srcElement.style.backgroundColor="#FFFFFF";
+}
+//文档中鼠标按下[隐藏列表框]
+function onDocumentMouseDown()
+{
+ if(vListDiv.contains(event.srcElement))
+ {
+  return;
+ }
+ vListDiv.style.display="none";
+ element.document.detachEvent("onmousedown",onDocumentMouseDown);
+}
+//通用库函数
+//取元素绝对位置Left
+function getElementDefineLeft(vObject)
+{
+ var iElementLeft=vObject.offsetLeft;
+ while(vObject=vObject.offsetParent)
+ {
+  iElementLeft+=vObject.offsetLeft;
+ }
+ return iElementLeft;
+}
+//取元素绝对位置Top
+function getElementDefineTop(vObject)
+{
+ var iElementTop=vObject.offsetTop;
+ while(vObject=vObject.offsetParent)
+ {
+     iElementTop+=vObject.offsetTop;
+ }
+ return iElementTop;
+}
+//判断是否是列表子项
+function isSelectOption(vObject,strOption)
+{
+ var bIsOption=false;
+ for(kIndex=0;kIndex<vObject.length;kIndex++)
+ {
+  if(vObject.options[kIndex].text==strOption)
+  {
+   bIsOption=true;
+  }
+ }
+ return bIsOption;
+}
+</script>
+</public:attach>
+

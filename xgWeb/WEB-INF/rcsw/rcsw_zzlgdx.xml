@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="rcswZzlgdxActionForm" type="xgxt.rcsw.zzlgdx.RcswZzlgdxActionForm"/>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="rcswZzlgdxActionForm" parameter="method" path="/zzlgdx_rcsw"
+				scope="request"	type="xgxt.rcsw.zzlgdx.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- "日常事务"-"在校证明" -->
+			<forward name="zxzmDate" path="/rcsw/zzlgdx/zxzmDate.jsp" />
+			<forward name="zxzmEdit" path="/rcsw/zzlgdx/zxzmEdit.jsp" />
+			<forward name="zxzmEditSave" path="/rcsw/zzlgdx/zxzmEdit.jsp" />
+			<forward name="zxzmDy" path="/rcsw/zzlgdx/zxzmDy.jsp" />
+			<forward name="zxzmExp" path="/about:blank" />
+			<forward name="xszxzmPrint_one" path="/print/xszxzm.jsp" />
+			<forward name="xszxzmPrint_all" path="/print/xszxzm.jsp" />
+			<forward name="zxzmFalse" path="/logicError.jsp" />
+			<!-- "日常事务"-"出国(境)信息" -->
+			<forward name="cgjDate" path="/rcsw/zzlgdx/cgjDate.jsp" />
+			<forward name="cgjStuDate" path="/rcsw/zzlgdx/cgjStuDate.jsp" />
+			<forward name="cgjsq" path="/rcsw/zzlgdx/cgjsq.jsp" />
+			<forward name="cgjsqSave" path="/rcsw/zzlgdx/cgjsq.jsp" />
+			<forward name="cgjExp" path="/about:blank" />
+			<forward name="cgjQuery" path="/rcsw/zzlgdx/cgjQuery.jsp" />
+			<forward name="cgjDy" path="/rcsw/zzlgdx/cgjDy.jsp" />
+			<forward name="cgjsh" path="/rcsw/zzlgdx/cgjsh.jsp" />
+			<forward name="cgjshOne" path="/rcsw/zzlgdx/cgjshOne.jsp" />
+			<forward name="cgjshSave" path="/rcsw/zzlgdx/cgjshOne.jsp" />
+			<!-- "日常事务"-"请假申请信息" -->
+			<forward name="qjDate" path="/rcsw/zzlgdx/qjDate.jsp" />
+			<forward name="qjStuDate" path="/rcsw/zzlgdx/qjStuDate.jsp" />
+			<forward name="qjsq" path="/rcsw/zzlgdx/qjsq.jsp" />
+			<forward name="qjsqSave" path="/rcsw/zzlgdx/qjsq.jsp" />
+			<forward name="qjExp" path="/about:blank" />
+			<forward name="qjQuery" path="/rcsw/zzlgdx/qjQuery.jsp" />
+			<forward name="qjDy" path="/rcsw/zzlgdx/qjDy.jsp" />
+			<forward name="qjsh" path="/rcsw/zzlgdx/qjsh.jsp" />
+			<forward name="qjshOne" path="/rcsw/zzlgdx/qjshOne.jsp" />
+			<forward name="qjshSave" path="/rcsw/zzlgdx/qjshOne.jsp" />
+			<!-- "日常事务"-"入伍信息" -->
+			<forward name="rwDate" path="/rcsw/zzlgdx/rwDate.jsp" />
+			<forward name="rwStuDate" path="/rcsw/zzlgdx/rwStuDate.jsp" />
+			<forward name="rwsq" path="/rcsw/zzlgdx/rwsq.jsp" />
+			<forward name="rwsqSave" path="/rcsw/zzlgdx/rwsq.jsp" />
+			<forward name="rwExp" path="/about:blank" />
+			<forward name="rwQuery" path="/rcsw/zzlgdx/rwQuery.jsp" />
+			<forward name="rwDy" path="/rcsw/zzlgdx/rwDy.jsp" />
+			<forward name="rwsh" path="/rcsw/zzlgdx/rwsh.jsp" />
+			<forward name="rwshOne" path="/rcsw/zzlgdx/rwshOne.jsp" />
+			<forward name="rwshSave" path="/rcsw/zzlgdx/rwshOne.jsp" />
+			
+			<forward name="zxzmSq" path="/rcsw/zzlgdx/zxzmSq.jsp"/>
+			<forward name="zxzmManage" path="/rcsw/zzlgdx/zxzmManage.jsp"/>
+			<forward name="zxzmSh" path="/rcsw/zzlgdx/zxzmSh.jsp"/>
+			<forward name="zxzmPrint" path="/rcsw/zzlgdx/zxzmPrint.jsp" />
+		</action>
+		
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

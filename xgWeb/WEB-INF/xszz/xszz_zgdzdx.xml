@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzZgdzdxActionForm"
+			type="xgxt.xszz.zgdzdx.XszzZgdzdxActionForm" /><!-- test.forms.DynaActionFormTest -->
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+
+		<action path="/xssz" forward="/zgdzdx_xszz.do?method=xssz" />
+		<action path="/xssjsz" forward="/zgdzdx_xszz.do?method=xssjsz"/>
+
+
+		<action name="xszzZgdzdxActionForm" parameter="method"
+			path="/zgdzdx_xszz" scope="request"
+			type="xgxt.xszz.zgdzdx.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- <<<<<<<<<<<<<<<困难生模块>>>>>>>>>>>>> -->
+			<!-- "困难生时间维护"-->
+			<forward name="knssjcsh" path="/about:blank" />
+			<forward name="data_knssj" path="/xszz/zgdzdx/data_knssj.jsp" />
+			<forward name="knssjEdit" path="/xszz/zgdzdx/knssjEdit.jsp"/>
+			<forward name="knssjPlsz" path="/xszz/zgdzdx/knssjPlEdit.jsp"/>
+			<!-- "家庭情况调查"-->
+			<forward name="jtqkdcsq" path="/xszz/zgdzdx/jtqkdcsq.jsp" />
+			<forward name="jtqkdcsqSave" path="/xszz/zgdzdx/jtqkdcsq.jsp" />
+			<forward name="jtqkdcsqb" path="/xszz/zgdzdx/jtqkdcsqb.jsp" />
+			<forward name="jtqkdcsh" path="/xszz/zgdzdx/jtqkdcsh.jsp" />
+			<forward name="jtqkdcshOne" path="/xszz/zgdzdx/jtqkdcshOne.jsp" />
+			<forward name="jtqkdcshSave" path="/xszz/zgdzdx/jtqkdcshOne.jsp" />
+			<forward name="jtqkdcExp" path="/about:blank" />
+			<!-- "困难生认定"-->
+			<forward name="knsrdsq" path="/xszz/zgdzdx/knsrdsq.jsp" />
+			<forward name="knsrdsqSave" path="/xszz/zgdzdx/knsrdsq.jsp" />
+			<forward name="knsrdsqb" path="/xszz/zgdzdx/knsrdsqb.jsp" />
+			<forward name="knsrdplsh" path="/xszz/zgdzdx/knsrdplsh.jsp" />
+			<forward name="knsrdsh" path="/xszz/zgdzdx/knsrdsh.jsp" />
+			<forward name="knsrdshOne" path="/xszz/zgdzdx/knsrdshOne.jsp" />
+			<forward name="knsrdshSave" path="/xszz/zgdzdx/knsrdshOne.jsp" />
+			<forward name="knsrdExp" path="/about:blank" />
+			<!-- <<<<<<<<<<<<<<<助学贷款模块>>>>>>>>>>>>> -->
+			<!-- "学生贷款年限维护"-->
+			<forward name="zxdknxcsh" path="/about:blank" />
+			<forward name="data_zxdknx" path="/xszz/zgdzdx/data_zxdknx.jsp" />
+			<forward name="zxdknxEdit" path="/xszz/zgdzdx/zxdknxEdit.jsp"/>
+			<forward name="zxdknxPlsz" path="/xszz/zgdzdx/zxdknxPlEdit.jsp"/>
+			<!-- "学院合同编号维护"-->
+			<forward name="htbhcsh" path="/about:blank" />
+			<forward name="data_htbh" path="/xszz/zgdzdx/data_htbh.jsp" />
+			<forward name="htbhEdit" path="/xszz/zgdzdx/htbhEdit.jsp"/>
+			<!-- "助学贷款时间维护"-->
+			<forward name="zxdksjcsh" path="/about:blank" />
+			<forward name="data_zxdksj" path="/xszz/zgdzdx/data_zxdksj.jsp" />
+			<forward name="zxdksjEdit" path="/xszz/zgdzdx/zxdksjEdit.jsp"/>
+			<forward name="zxdksjPlsz" path="/xszz/zgdzdx/zxdksjPlEdit.jsp"/>
+			<!-- "生源地贷款数据维护"-->
+			<forward name="data_syddk" path="/xszz/zgdzdx/data_syddk.jsp" />
+			<forward name="syddkExp" path="/about:blank" />
+			<!-- "生源地贷款数据维护_武汉铁路"-->
+			<forward name="data_syddk_whtl" path="/xszz/whtl/data_syddk.jsp" />
+			<forward name="syddkUpdate_whtl" path="/xszz/whtl/syddkUpdate.jsp" />
+			<!-- "国家助学贷款"-->
+			<forward name="gjzxdksq" path="/xszz/zgdzdx/gjzxdksq.jsp" />
+			<forward name="gjzxdksqjg" path="/xszz/zgdzdx/gjzxdksqjg.jsp" />
+			<forward name="gjzxdkgrxx" path="/xszz/zgdzdx/gjzxdkgrxx.jsp" />
+			<forward name="gjzxdksqSave" path="/xszz/zgdzdx/gjzxdksq.jsp" />
+			<forward name="gjzxdksqb" path="/xszz/zgdzdx/gjzxdksqb.jsp" />
+			<forward name="gjzxdksh" path="/xszz/zgdzdx/gjzxdksh.jsp" />
+			<forward name="gjzxdkshOne" path="/xszz/zgdzdx/gjzxdkshOne.jsp" />
+			<forward name="gjzxdkshSave" path="/xszz/zgdzdx/gjzxdkshOne.jsp" />
+			<forward name="gjzxdkExp" path="/about:blank" />
+			<forward name="gjzxdkQuery" path="/xszz/zgdzdx/gjzxdkQuery.jsp" />
+			<forward name="gjzxdkQueryOne" path="/xszz/zgdzdx/gjzxdkQueryOne.jsp" />
+			<forward name="gjzxdkQueryOneSave" path="/xszz/zgdzdx/gjzxdkQueryOne.jsp" />
+			<forward name="gjzxdkgs" path="/xszz/zgdzdx/gjzxdkgs.jsp" />
+			<forward name="gjzxdkjjsz" path="/xszz/zgdzdx/gjzxdkjjsz.jsp" />
+			<forward name="gjzxdkjjdy" path="/xszz/zgdzdx/gjzxdkjjdy.jsp" />
+			<!-- "资料确认书"-->
+			<forward name="zlqrssq" path="/xszz/zgdzdx/zlqrssq.jsp" />
+			<forward name="zlqrssqSave" path="/xszz/zgdzdx/zlqrssq.jsp" />
+			<forward name="zlqrssqb" path="/xszz/zgdzdx/zlqrssqb.jsp" />
+			<!-- "还款协议"-->
+			<forward name="hkxysq" path="/xszz/zgdzdx/hkxysq.jsp" />
+			<forward name="hkxysqSave" path="/xszz/zgdzdx/hkxysq.jsp" />
+			<forward name="hkxysqb" path="/xszz/zgdzdx/hkxysqb.jsp" />
+			<forward name="hkxysh" path="/xszz/zgdzdx/hkxysh.jsp" />
+			<forward name="hkxyExp" path="/about:blank" />
+			<!-- "展期协议"-->
+			<forward name="zqxysq" path="/xszz/zgdzdx/zqxysq.jsp" />
+			<forward name="zqxysqSave" path="/xszz/zgdzdx/zqxysq.jsp" />
+			<forward name="zqxysqb" path="/xszz/zgdzdx/zqxysqb.jsp" />
+			<forward name="zqxysh" path="/xszz/zgdzdx/zqxysh.jsp" />
+			<forward name="zqxyExp" path="/about:blank" />
+			<!-- "展期后还款协议"-->
+			<forward name="zqhhkxysq" path="/xszz/zgdzdx/zqhhkxysq.jsp" />
+			<forward name="zqhhkxysqSave" path="/xszz/zgdzdx/zqhhkxysq.jsp" />
+			<forward name="zqhhkxysqb" path="/xszz/zgdzdx/zqhhkxysqb.jsp" />
+			<forward name="zqhhkxysh" path="/xszz/zgdzdx/zqhhkxysh.jsp" />
+			<forward name="zqhhkxyExp" path="/about:blank" />
+			<!-- "国家助学贷款历史信息"-->
+			<forward name="gjzxdkls" path="/xszz/zgdzdx/gjzxdkls.jsp" />
+			<forward name="gjzxdklsExp" path="/about:blank" />
+			<forward name="gjzxdklsOne" path="/xszz/zgdzdx/gjzxdklsOne.jsp" />
+			<forward name="gjzxdklsOneSave" path="/xszz/zgdzdx/gjzxdklsOne.jsp" />
+			<!-- "提前还款"-->
+			<forward name="tqhk" path="/xszz/zgdzdx/tqhk.jsp" />
+			<!-- <<<<<<<<<<<<<<<奖助学金模块>>>>>>>>>>>>> -->
+			<!-- "项目维护"-->
+			<forward name="jzxj_xmwf" path="/xszz/zgdzdx/data_jzxj_xmwf.jsp" />
+			<forward name="jzxj_xmwfEdit" path="/xszz/zgdzdx/jzxj_xmwfEdit.jsp"/>
+			<forward name="jzxj_xmwfDel" path="/about:blank"/>
+			<!-- "项目模版上传"-->
+			<forward name="jzxj_xmmbsc" path="/xszz/zgdzdx/data_jzxj_xmmbsc.jsp" />
+			<forward name="jzxj_mbsc" path="/xszz/zgdzdx/jzxj_mbsc.jsp" />
+			<forward name="jzxj_mbscdo" path="/about:blank" />
+			<!-- "项目金额维护"-->
+			<forward name="jzxj_xmjewh" path="/xszz/zgdzdx/data_jzxj_xmjewh.jsp" />
+			<forward name="jzxj_xmjeEdit" path="/xszz/zgdzdx/jzxj_xmjeEdit.jsp"/>
+			<forward name="jzxj_xmjeDel" path="/about:blank"/>
+			<!-- "项目时间维护"-->
+			<forward name="jzxj_xmsjwh" path="/xszz/zgdzdx/data_jzxj_xmsjwh.jsp" />
+			<forward name="jzxj_xmsjcsh" path="/xszz/zgdzdx/data_jzxj_xmsjwh.jsp"/>
+			<forward name="jzxj_xmsjEdit" path="/xszz/zgdzdx/jzxj_xmsjEdit.jsp"/>
+			<forward name="jzxj_xmsjPlsz" path="/xszz/zgdzdx/jzxj_xmsjPlEdit.jsp"/>
+			<!-- "项目人数维护"-->
+			<forward name="jzxj_xmrswh" path="/xszz/zgdzdx/data_jzxj_xmrswh.jsp" />
+			<forward name="jzxj_xmrscsh" path="/xszz/zgdzdx/data_jzxj_xmrswh.jsp"/>
+			<forward name="jzxj_xmrsPlsz" path="/xszz/zgdzdx/jzxj_xmrsPlEdit.jsp"/>
+			<forward name="jzxj_xmrsEdit" path="/xszz/zgdzdx/jzxj_xmrsEdit.jsp"/>
+			<!-- "项目报表自定义字段维护"-->
+			<forward name="jzxj_xmbbzdyzd" path="/xszz/zgdzdx/data_jzxj_xmbbzdyzd.jsp" />
+			<forward name="jzxj_xmbbzdyzdEdit" path="/xszz/zgdzdx/jzxj_xmbbzdyzdEdit.jsp"/>
+			<forward name="jzxj_xmbbzdyzdDel" path="/about:blank"/>
+			<!-- "项目其他维护"-->
+			<forward name="jzxj_xmqtsz" path="/xszz/zgdzdx/data_jzxj_xmqtsz.jsp" />
+			<forward name="jzxj_xmqtEdit" path="/xszz/zgdzdx/jzxj_xmqtEdit.jsp"/>
+			<forward name="jzxj_xmqtPlEdit" path="/xszz/zgdzdx/jzxj_xmqtPlEdit.jsp"/>
+			<forward name="jzxj_xmqtDel" path="/about:blank"/>
+			<!-- "综合测评信息维护"-->
+			<forward name="jzxj_zhcpwh" path="/xszz/zgdzdx/jzxj_zhcpwh.jsp" />
+			<forward name="jzxj_zhcpEdit" path="/xszz/zgdzdx/jzxj_zhcpEdit.jsp"/>
+			<forward name="jzxj_zhcpEditSave" path="/xszz/zgdzdx/jzxj_zhcpEdit.jsp"/>
+			<forward name="jzxj_zhcpExp" path="/about:blank" />
+			<!-- "项目申请页面"-->
+			<forward name="jzxj_xmsq" path="/xszz/zgdzdx/jzxj_xmsq.jsp" />
+			<forward name="jzxj_xmmbxz" path="/about:blank" />
+			<!-- "项目申请结果查询页面"-->
+			<forward name="jzxj_xmsqjg" path="/xszz/zgdzdx/jzxj_xmsqjg.jsp" />
+			<!-- "项目审核页面"-->
+			<forward name="jzxj_xmsh" path="/xszz/zgdzdx/jzxj_xmsh.jsp" />
+			<forward name="jzxj_xmshXxxx" path="/xszz/zgdzdx/jzxj_xmshXxxx.jsp" />
+			<forward name="jzxj_xmshExp" path="/about:blank" />
+			<!-- "奖助学金证书打印"-->
+			<forward name="zsPrintDef" path="/xszz/zgdzdx/zsPrintDef.jsp" />
+			<!-- "证书格式设置"-->
+			<forward name="zsGsSz" path="/xszz/zgdzdx/zsGsSz.jsp" />	
+			<!-- "奖助学金证书打印时间设置"-->
+			<forward name="jzxjZsPrintDate" path="/xszz/zgdzdx/jzxjZsPrintDate.jsp" />	
+			<!-- "奖助学金证书打印时间设置"-->
+			<forward name="zsPrint" path="/xszz/zgdzdx/zsPrint.jsp" />	
+			<!-- "奖助学金申请结果打印页面"-->
+			<forward name="jzxjshBb" path="/xszz/zgdzdx/jzxjshBb.jsp" />	
+			
+			
+			<forward name="xssz" path="/xszz/zgdzdx/xssz.jsp"/>
+			<forward name="xssjsz" path="/xszz/zgdzdx/xssjsz.jsp"/>
+			<forward name="xssjszOne" path="/xszz/zgdzdx/xssjszOne.jsp"/>
+		</action>
+
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp" />
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

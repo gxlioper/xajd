@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpyzjcmwh.do" location="439,1778" dimension="256,84" />
+  <StrutsActivity path="/zjcm_pjpy_cpxzz.do" location="36,924" dimension="142,60" />
+  <StrutsActivity path="/zjcm_pjpy_zhf.do" location="1527,487" dimension="130,60" />
+  <StrutsActivity path="/zjcm_pjpy_xnjxjsb.do" location="2488,0" dimension="154,60" />
+  <StrutsActivity path="/zjcm_pjpy_xnjxjsh.do" location="2742,0" dimension="154,60" />
+  <StrutsActivity path="/zjcm_pjpy_xwjxjsh.do" location="179,487" dimension="154,60" />
+  <StrutsActivity path="/zjcm_pjpy_jxjjg.do" location="2996,0" dimension="142,60" />
+  <StrutsActivity path="/zjcm_pjpy_tjbb.do" location="1009,487" dimension="136,60" />
+  <StrutsActivity path="/pjpy_zjcm_jxjshDetails.do" location="3238,0" dimension="184,60" />
+  <StrutsActivity path="/pjpy_zjcm_rychDetails.do" location="929,0" dimension="178,60" />
+  <StrutsActivity path="/pjpy_zjcm_xwjxjshDetails.do" location="433,487" dimension="196,60" />
+  <StrutsActivity path="/zjcm_cpz.do" location="0,1084" dimension="214,84" />
+  <StrutsActivity path="/zjcm_tjsz.do" location="964,647" dimension="226,84" />
+  <StrutsActivity path="/zjcm_zhf.do" location="1485,647" dimension="214,84" />
+  <StrutsActivity path="/zjcm_xnjxj.do" location="2828,160" dimension="238,84" />
+  <StrutsActivity path="/zjcm_xwjxj.do" location="275,647" dimension="238,84" />
+  <StrutsActivity path="/zjcm_rych.do" location="905,160" dimension="226,84" />
+  <StrutsActivity path="/pjpyxfjs.do" location="2201,1361" dimension="250,84" />
+  <StrutsActivity path="/zjcmCprsAction.do" location="350,950" dimension="286,84" />
+  <StrutsActivity path="/pjpy/zjcm/zhszcp/default.jsp" location="0,1982" dimension="214,48" />
+  <StrutsActivity path="/pjpy/zjcm/zhszcp/update.jsp" location="313,1982" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/zhszcp/add.jsp" location="622,1982" dimension="190,48" />
+  <StrutsActivity path="/pjpy/zjcm/jxjprint.jsp" location="912,1982" dimension="178,48" />
+  <StrutsActivity path="/pjpy/zjcm/zhszcp/blsz.jsp" location="1190,1982" dimension="196,48" />
+  <StrutsActivity path="/pjpy/zjcm/cpzManage.jsp" location="15,1268" dimension="184,48" />
+  <StrutsActivity path="/pjpy/zjcm/tjszManage.jsp" location="839,831" dimension="190,48" />
+  <StrutsActivity path="/pjpy/zjcm/tjbbPrint.jsp" location="1129,831" dimension="184,48" />
+  <StrutsActivity path="/pjpy/zjcm/zhfUpdate.jsp" location="1358,831" dimension="184,48" />
+  <StrutsActivity path="/pjpy/zjcm/zhfManage.jsp" location="1642,831" dimension="184,48" />
+  <StrutsActivity path="/pjpy/zjcm/xnjxjShManage.jsp" location="2102,394" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/xmPrint.jsp" location="1829,394" dimension="172,48" />
+  <StrutsActivity path="/pjpy/zjcm/xnjxjSbManage.jsp" location="2410,394" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/xnjxjSh.jsp" location="2718,394" dimension="172,48" />
+  <StrutsActivity path="/pjpy/zjcm/jxjshDetails.jsp" location="2990,394" dimension="202,48" />
+  <StrutsActivity path="/pjpy/zjcm/jxjJg.jsp" location="3292,394" dimension="160,48" />
+  <StrutsActivity path="/pjpy/zjcm/xnjxjSb.jsp" location="3552,394" dimension="172,48" />
+  <StrutsActivity path="/pjpy/zjcm/jxjJgManage.jsp" location="3824,394" dimension="196,48" />
+  <StrutsActivity path="/pjpy/zjcm/xwjxjShManage.jsp" location="0,831" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/xwjxjSh.jsp" location="308,831" dimension="172,48" />
+  <StrutsActivity path="/pjpy/zjcm/xwjxjshDetails.jsp" location="580,831" dimension="214,48" />
+  <StrutsActivity path="/pjpy/zjcm/rych/shManage.jsp" location="0,394" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/rych/sqManage.jsp" location="307,394" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/rych/jgOne.jsp" location="615,394" dimension="190,48" />
+  <StrutsActivity path="/pjpy/zjcm/rych/rychDetails.jsp" location="905,394" dimension="226,48" />
+  <StrutsActivity path="/pjpy/zjcm/rych/shOne.jsp" location="1231,394" dimension="190,48" />
+  <StrutsActivity path="/pjpy/zjcm/rych/jgManage.jsp" location="1521,394" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/xskqtjDetails.jsp" location="0,1685" dimension="238,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/bjccqkZj.jsp" location="338,1685" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/xsccqkxx.jsp" location="646,1685" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/xsccqkXg.jsp" location="954,1685" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/bjccqktjDetails.jsp" location="1262,1685" dimension="250,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/ccqksh.jsp" location="1612,1685" dimension="196,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/bjccqkxx.jsp" location="1908,1685" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/bjccqkshxx.jsp" location="2216,1685" dimension="220,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/showxfjstjcx.jsp" location="2536,1685" dimension="232,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/modiBjccqk.jsp" location="2868,1685" dimension="220,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/bjccqkSearch.jsp" location="3188,1685" dimension="232,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/xskqcx.jsp" location="3520,1685" dimension="196,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/xscxkqxx.jsp" location="3816,1685" dimension="208,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/xskqqkSearch.jsp" location="4124,1685" dimension="232,48" />
+  <StrutsActivity path="/pjpy/zjcm/xfjs/xsccqkWh.jsp" location="4456,1685" dimension="208,48" />
+  <StrutsTransition id="/zjcm_xnjxj.do,jxjDj,/pjpy/zjcm/xmPrint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2843,244" />
+      <AbsolutePoint location="2843,274" />
+      <AbsolutePoint location="1958,274" />
+      <AbsolutePoint location="1958,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,bjccqkxx,/pjpy/zjcm/xfjs/bjccqkxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2309,1445" />
+      <AbsolutePoint location="2309,1655" />
+      <AbsolutePoint location="2012,1655" />
+      <AbsolutePoint location="2012,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_xnjxj.do,jgManage,/pjpy/zjcm/jxjJgManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3051,244" />
+      <AbsolutePoint location="3051,274" />
+      <AbsolutePoint location="3922,274" />
+      <AbsolutePoint location="3922,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,xskqtjDetails,/pjpy/zjcm/xfjs/xskqtjDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2209,1445" />
+      <AbsolutePoint location="2209,1475" />
+      <AbsolutePoint location="119,1475" />
+      <AbsolutePoint location="119,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_pjpy_jxjjg.do,null,/zjcm_xnjxj.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3067,60" />
+      <AbsolutePoint location="3067,95" />
+      <AbsolutePoint location="2977,95" />
+      <AbsolutePoint location="2977,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_xwjxj.do,xwjxjshDetails,/pjpy/zjcm/xwjxjshDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="473,731" />
+      <AbsolutePoint location="473,781" />
+      <AbsolutePoint location="687,781" />
+      <AbsolutePoint location="687,831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpy_zjcm_jxjshDetails.do,null,/zjcm_xnjxj.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3330,60" />
+      <AbsolutePoint location="3330,125" />
+      <AbsolutePoint location="3036,125" />
+      <AbsolutePoint location="3036,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_pjpy_zhf.do,null,/zjcm_zhf.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1592,547" />
+      <AbsolutePoint location="1592,647" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,bjccqkshxx,/pjpy/zjcm/xfjs/bjccqkshxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2326,1445" />
+      <AbsolutePoint location="2326,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_rych.do,jgManage,/pjpy/zjcm/rych/jgManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1083,244" />
+      <AbsolutePoint location="1083,304" />
+      <AbsolutePoint location="1625,304" />
+      <AbsolutePoint location="1625,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_rych.do,jgOne,/pjpy/zjcm/rych/jgOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="986,244" />
+      <AbsolutePoint location="986,334" />
+      <AbsolutePoint location="710,334" />
+      <AbsolutePoint location="710,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_pjpy_xwjxjsh.do,null,/zjcm_xwjxj.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="256,547" />
+      <AbsolutePoint location="256,597" />
+      <AbsolutePoint location="334,597" />
+      <AbsolutePoint location="334,647" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_rych.do,shManage,/pjpy/zjcm/rych/shManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="922,244" />
+      <AbsolutePoint location="922,274" />
+      <AbsolutePoint location="104,274" />
+      <AbsolutePoint location="104,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,xsccqk,/pjpy/zjcm/xfjs/xsccqkWh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2442,1445" />
+      <AbsolutePoint location="2442,1475" />
+      <AbsolutePoint location="4560,1475" />
+      <AbsolutePoint location="4560,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_xwjxj.do,shManage,/pjpy/zjcm/xwjxjShManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="314,731" />
+      <AbsolutePoint location="314,781" />
+      <AbsolutePoint location="104,781" />
+      <AbsolutePoint location="104,831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_cpz.do,cpzManage,/pjpy/zjcm/cpzManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="107,1168" />
+      <AbsolutePoint location="107,1268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,bjccqktjDetails,/pjpy/zjcm/xfjs/bjccqktjDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2276,1445" />
+      <AbsolutePoint location="2276,1595" />
+      <AbsolutePoint location="1387,1595" />
+      <AbsolutePoint location="1387,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_xnjxj.do,jxjJg,/pjpy/zjcm/jxjJg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2992,244" />
+      <AbsolutePoint location="2992,334" />
+      <AbsolutePoint location="3372,334" />
+      <AbsolutePoint location="3372,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_xnjxj.do,xnJxjSh,/pjpy/zjcm/xnjxjSh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2932,244" />
+      <AbsolutePoint location="2932,364" />
+      <AbsolutePoint location="2804,364" />
+      <AbsolutePoint location="2804,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzjcmwh.do,zhszcppage,/pjpy/zjcm/zhszcp/default.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="503,1862" />
+      <AbsolutePoint location="503,1922" />
+      <AbsolutePoint location="160,1922" />
+      <AbsolutePoint location="160,1982" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_pjpy_cpxzz.do,null,/zjcm_cpz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="107,984" />
+      <AbsolutePoint location="107,1084" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_rych.do,sqManage,/pjpy/zjcm/rych/sqManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="954,244" />
+      <AbsolutePoint location="954,304" />
+      <AbsolutePoint location="411,304" />
+      <AbsolutePoint location="411,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_zhf.do,zhfManage,/pjpy/zjcm/zhfManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1645,731" />
+      <AbsolutePoint location="1645,781" />
+      <AbsolutePoint location="1734,781" />
+      <AbsolutePoint location="1734,831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,bjccqkSearch,/pjpy/zjcm/xfjs/bjccqkSearch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2376,1445" />
+      <AbsolutePoint location="2376,1595" />
+      <AbsolutePoint location="3304,1595" />
+      <AbsolutePoint location="3304,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpy_zjcm_xwjxjshDetails.do,null,/zjcm_xwjxj.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="531,547" />
+      <AbsolutePoint location="531,597" />
+      <AbsolutePoint location="453,597" />
+      <AbsolutePoint location="453,647" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpy_zjcm_rychDetails.do,null,/zjcm_rych.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1018,60" />
+      <AbsolutePoint location="1018,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,xskqqkSearch,/pjpy/zjcm/xfjs/xskqqkSearch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2426,1445" />
+      <AbsolutePoint location="2426,1505" />
+      <AbsolutePoint location="4240,1505" />
+      <AbsolutePoint location="4240,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,xsccqkxg,/pjpy/zjcm/xfjs/xsccqkXg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2259,1445" />
+      <AbsolutePoint location="2259,1565" />
+      <AbsolutePoint location="1058,1565" />
+      <AbsolutePoint location="1058,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,xsccqkxx,/pjpy/zjcm/xfjs/xsccqkxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2242,1445" />
+      <AbsolutePoint location="2242,1535" />
+      <AbsolutePoint location="750,1535" />
+      <AbsolutePoint location="750,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_xnjxj.do,shManage,/pjpy/zjcm/xnjxjShManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2873,244" />
+      <AbsolutePoint location="2873,304" />
+      <AbsolutePoint location="2206,304" />
+      <AbsolutePoint location="2206,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,xskqcx,/pjpy/zjcm/xfjs/xskqcx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2392,1445" />
+      <AbsolutePoint location="2392,1565" />
+      <AbsolutePoint location="3618,1565" />
+      <AbsolutePoint location="3618,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,xskqxxcx,/pjpy/zjcm/xfjs/xscxkqxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2409,1445" />
+      <AbsolutePoint location="2409,1535" />
+      <AbsolutePoint location="3920,1535" />
+      <AbsolutePoint location="3920,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_xwjxj.do,xwJxjSh,/pjpy/zjcm/xwjxjSh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="394,731" />
+      <AbsolutePoint location="394,831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_rych.do,rychDetails,/pjpy/zjcm/rych/rychDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1018,244" />
+      <AbsolutePoint location="1018,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_tjsz.do,tjszManage,/pjpy/zjcm/tjszManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1021,731" />
+      <AbsolutePoint location="1021,781" />
+      <AbsolutePoint location="934,781" />
+      <AbsolutePoint location="934,831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,ccqksh,/pjpy/zjcm/xfjs/ccqksh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2292,1445" />
+      <AbsolutePoint location="2292,1625" />
+      <AbsolutePoint location="1710,1625" />
+      <AbsolutePoint location="1710,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_xnjxj.do,sbManage,/pjpy/zjcm/xnjxjSbManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2902,244" />
+      <AbsolutePoint location="2902,334" />
+      <AbsolutePoint location="2514,334" />
+      <AbsolutePoint location="2514,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_xnjxj.do,jxjshDetails,/pjpy/zjcm/jxjshDetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2962,244" />
+      <AbsolutePoint location="2962,364" />
+      <AbsolutePoint location="3091,364" />
+      <AbsolutePoint location="3091,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,modiBjccqk,/pjpy/zjcm/xfjs/modiBjccqk.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2359,1445" />
+      <AbsolutePoint location="2359,1625" />
+      <AbsolutePoint location="2978,1625" />
+      <AbsolutePoint location="2978,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_pjpy_xnjxjsh.do,null,/zjcm_xnjxj.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2819,60" />
+      <AbsolutePoint location="2819,95" />
+      <AbsolutePoint location="2917,95" />
+      <AbsolutePoint location="2917,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_rych.do,shOne,/pjpy/zjcm/rych/shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1051,244" />
+      <AbsolutePoint location="1051,334" />
+      <AbsolutePoint location="1326,334" />
+      <AbsolutePoint location="1326,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_pjpy_tjbb.do,null,/zjcm_tjsz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1077,547" />
+      <AbsolutePoint location="1077,647" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_tjsz.do,tjbbPrint,/pjpy/zjcm/tjbbPrint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1134,731" />
+      <AbsolutePoint location="1134,781" />
+      <AbsolutePoint location="1221,781" />
+      <AbsolutePoint location="1221,831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_xnjxj.do,xnJxjSb,/pjpy/zjcm/xnjxjSb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3021,244" />
+      <AbsolutePoint location="3021,304" />
+      <AbsolutePoint location="3638,304" />
+      <AbsolutePoint location="3638,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzjcmwh.do,cpzsz,/pjpy/zjcm/zhszcp/default.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="460,1862" />
+      <AbsolutePoint location="460,1892" />
+      <AbsolutePoint location="53,1892" />
+      <AbsolutePoint location="53,1982" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzjcmwh.do,szfaddpage,/pjpy/zjcm/zhszcp/add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="588,1862" />
+      <AbsolutePoint location="588,1952" />
+      <AbsolutePoint location="717,1952" />
+      <AbsolutePoint location="717,1982" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,showxfjstjcx,/pjpy/zjcm/xfjs/showxfjstjcx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2342,1445" />
+      <AbsolutePoint location="2342,1655" />
+      <AbsolutePoint location="2652,1655" />
+      <AbsolutePoint location="2652,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzjcmwh.do,szfmodipage,/pjpy/zjcm/zhszcp/update.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="546,1862" />
+      <AbsolutePoint location="546,1952" />
+      <AbsolutePoint location="417,1952" />
+      <AbsolutePoint location="417,1982" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzjcmwh.do,jxjprint,/pjpy/zjcm/jxjprint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="631,1862" />
+      <AbsolutePoint location="631,1922" />
+      <AbsolutePoint location="1001,1922" />
+      <AbsolutePoint location="1001,1982" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyxfjs.do,bjccqkzj,/pjpy/zjcm/xfjs/bjccqkZj.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2226,1445" />
+      <AbsolutePoint location="2226,1505" />
+      <AbsolutePoint location="442,1505" />
+      <AbsolutePoint location="442,1685" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_rych.do,rychDj,/pjpy/zjcm/xmPrint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1115,244" />
+      <AbsolutePoint location="1115,274" />
+      <AbsolutePoint location="1872,274" />
+      <AbsolutePoint location="1872,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzjcmwh.do,zhszblszpage,/pjpy/zjcm/zhszcp/blsz.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="674,1862" />
+      <AbsolutePoint location="674,1892" />
+      <AbsolutePoint location="1288,1892" />
+      <AbsolutePoint location="1288,1982" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_zhf.do,zhfUpdate,/pjpy/zjcm/zhfUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1538,731" />
+      <AbsolutePoint location="1538,781" />
+      <AbsolutePoint location="1450,781" />
+      <AbsolutePoint location="1450,831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjcm_pjpy_xnjxjsb.do,null,/zjcm_xnjxj.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2565,60" />
+      <AbsolutePoint location="2565,125" />
+      <AbsolutePoint location="2858,125" />
+      <AbsolutePoint location="2858,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

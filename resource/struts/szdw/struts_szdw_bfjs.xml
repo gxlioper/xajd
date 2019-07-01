@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		 <form-bean name="bfjsglForm" type="com.zfsoft.xgxt.szdw.bfjs.bfjsgl.BfjsglForm" />				
+	</form-beans>
+	
+	<action-mappings>
+	
+		<action path="/szdw_bfjsgl_bfjsglwh"  forward="/bfjsgl_bfjsglwh.do?method=bfjsglwhList"/>		<!-- 转走读管理_参数设置 -->
+
+    	
+    	<action path="/bfjsgl_bfjsglwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.bfjs.bfjsgl.BfjsglAction" 
+    			name="bfjsglForm"
+    			parameter="method">	
+    		<forward name="bfjsglwhList" path="/xsgzgl/szdw/bfjsgl/bfjsglwhList.jsp"/>
+    		<forward name="addBfjs" path="/xsgzgl/szdw/bfjsgl/addBfjs.jsp"/>
+    		<forward name="updateBfjs" path="/xsgzgl/szdw/bfjsgl/updateBfjs.jsp"/>
+    		<forward name="viewBfjs" path="/xsgzgl/szdw/bfjsgl/viewBfjs.jsp"/>  		  		
+    		<forward name="bjManage" path="/xsgzgl/szdw/bfjsgl/bjManage.jsp"/>
+    		<forward name="getStu" path="/xsgzgl/szdw/bfjsgl/getStu.jsp"/>
+		</action>
+				
+		
+	</action-mappings>
+</struts-config>

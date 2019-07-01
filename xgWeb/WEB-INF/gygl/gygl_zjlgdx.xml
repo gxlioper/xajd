@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+	<form-bean name="jhzy_gyglForm" type="xgxt.xsgygl.jhzyjsxy.GyglJhzyForm"/>	
+	<form-bean name="zjlg_gyglForm" type="xgxt.xsgygl.zjlgdx.GyglZjlgForm"/>	
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+		<!--展现的路径  浙江理工大学-->	
+<!--	<action path="/dormCheckManage" forward="/jhzy_gygl.do?method=dormCheckManage"/>寝室卫生检查 -->
+		<action path="/ajqssq" forward="/zjlg_gygl.do?method=ajqssq"/><!--A寝室申请-->
+		<action path="/ajqssh" forward="/zjlg_gygl.do?method=ajqssh"/><!--A寝室审核-->	
+		<action path="/ajqsshcx" forward="/zjlg_gygl.do?method=ajqsshcx"/><!--A寝室审核查询-->
+		<action path="/wmqssq" forward="/zjlg_gygl.do?method=wmqssq"/><!--文明寝室申请-->
+		<action path="/wmqssh" forward="/zjlg_gygl.do?method=wmqssh"/><!--文明寝室审核-->	
+		<action path="/wmqsshcx" forward="/zjlg_gygl.do?method=wmqsshcx"/><!--文明寝室审核查询-->
+		<action path="/tsqssq" forward="/zjlg_gygl.do?method=tsqssq"/><!--特色寝室申请-->
+		<action path="/tsqssh" forward="/zjlg_gygl.do?method=tsqssh"/><!--特色寝室审核-->	
+		<action path="/tsqsshcx" forward="/zjlg_gygl.do?method=tsqsshcx"/><!--特色寝室审核查询-->
+		<action path="/dormCadreStat" forward="/zjlg_gygl.do?method=dormCadreStat"/><!--楼层长队伍查询-->
+		<!--		实际的路径 -->
+		<!--<action path="/jhzy_gygl" parameter="method"  name="jhzy_gyglForm" scope="request"-->
+		<!--	 type="xgxt.xsgygl.jhzyjsxy.GyglJhzyAction">-->
+		<!--<forward name="gyfdyInfoQuery" path="/gygl/jhzyjsxy/gyfdyInfo/gyfdyInfo_manager.jsp"></forward>   -->
+		<!--</action>-->
+		<action path="/zjlg_gygl" parameter="method"  name="zjlg_gyglForm" scope="request"
+		        type="xgxt.xsgygl.zjlgdx.GyglZjlgAction">
+		<forward name="ajqssq" path="/gygl/zjlgdx/ajqsSq.jsp"></forward>  
+		<forward name="ajqssqb" path="/gygl/zjlgdx/ajqsSqb.jsp"></forward> 
+		<forward name="viewAjqsxx" path="/gygl/zjlgdx/viewAjqsxx.jsp"></forward>
+		<forward name="ajqsShManage" path="/gygl/zjlgdx/ajqsShManage.jsp"></forward>
+		<forward name="ajqsManage" path="/gygl/zjlgdx/ajqsManage.jsp"></forward>
+		<forward name="xsajqsShcx" path="/gygl/zjlgdx/xsajqsShcx.jsp"></forward>
+		<forward name="wmqssq" path="/gygl/zjlgdx/wmqsSq.jsp"></forward>  
+		<forward name="wmqssqb" path="/gygl/zjlgdx/wmqsSqb.jsp"></forward> 
+		<forward name="viewWmqsxx" path="/gygl/zjlgdx/viewWmqsxx.jsp"></forward>
+		<forward name="wmqsShManage" path="/gygl/zjlgdx/wmqsShManage.jsp"></forward>
+		<forward name="wmqsManage" path="/gygl/zjlgdx/wmqsManage.jsp"></forward> 
+		<forward name="xswmqsShcx" path="/gygl/zjlgdx/xswmqsShcx.jsp"></forward>
+		<forward name="tsqssq" path="/gygl/zjlgdx/tsqsSq.jsp"></forward>  
+		<forward name="tsqssqb" path="/gygl/zjlgdx/tsqsSqb.jsp"></forward> 
+		<forward name="viewTsqsxx" path="/gygl/zjlgdx/viewTsqsxx.jsp"></forward>
+		<forward name="tsqsShManage" path="/gygl/zjlgdx/tsqsShManage.jsp"></forward>
+		<forward name="tsqsManage" path="/gygl/zjlgdx/tsqsManage.jsp"></forward>
+		<forward name="xstsqsShcx" path="/gygl/zjlgdx/xstsqsShcx.jsp"></forward> 
+		<forward name="ajqsManage" path="/gygl/zjlgdx/ajqsManage.jsp"></forward> 
+		<forward name="dormCadreStat" path="/gygl/zjlgdx/dormCadreStat.jsp"></forward>    
+		</action>
+	</action-mappings>
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources"/>
+</struts-config>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+	<form-bean name="stglForm" type="xgxt.shgz.form.StglForm" />
+	<form-bean name="xsgbForNblgForm" type="xgxt.shgz.form.XsgbForNblgForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		 <action name="stglForm" parameter="method"
+		 	path="/stgl" scope="request"
+		 	type="xgxt.shgz.SocialWorkAction">
+		 	<forward name="false" path="/errMsg.do" />
+		 	<forward name="oneDis" path="/sxjy/portallet/oneDis.jsp" />
+		 	<forward name="stsq" path="/shgz/stsq.jsp" />
+		 	<forward name="stsh" path="/shgz/stsh.jsp" />
+		 	<forward name="sthdsq" path="/shgz/sthdsq.jsp" />
+		 	<forward name="sthdsh" path="/shgz/sthdsh.jsp" />
+		 	<forward name="sthdjfsq" path="/shgz/sthdjfsq.jsp" />
+		 	<forward name="sthdjfsh" path="/shgz/sthdjfsh.jsp" />
+		 	<forward name="stpylr" path="/shgz/stpylr.jsp" />	
+		 	<forward name="stpyqzConf" path="/shgz/stpyqzConf.jsp" />	
+		 	<forward name="stpbjgcx" path="/shgz/stpbjgcx.jsp" />	
+		 	<forward name="sqjgcx" path="/shgz/sqjgcx.jsp" />	
+		 </action>
+		 <!-- 宁波城市职业技术学院 begin-->
+		 <action path="/NbcsShsjManage" forward="/nbcsShgzgl.do?method=shsjManage"></action>
+		 <action name="stglForm" parameter="method"
+		 	path="/nbcsShgzgl" scope="request"
+		 	type="xgxt.shgz.action.nbcszyjsxy.ShgzAction">
+		 	<forward name="shsjManage" path="/shgz/nbcszyjsxy/shsjManage.jsp"></forward>
+		 	<forward name="shsjAdd" path="/shgz/nbcszyjsxy/shsjAdd.jsp"></forward>
+		 </action>
+		 <!--  end-->
+		 <action path="/xjqnzyzManage" forward="/stcygl.do?method=xjqnzyzManage"></action>
+		 <action name="stglForm" parameter="method"
+		 	path="/stcygl" scope="request"
+		 	type="xgxt.shgz.action.StglAction">
+		 	<forward name="rtsq" path="/shgz/rssq.jsp" />
+		 	<forward name="rtsqsh" path="/shgz/rssqsh.jsp" />
+		 	<forward name="rtsqjg" path="/shgz/rssqjg.jsp" />
+		 	<forward name="sjcssz" path="/shgz/nblg/xsgbsjsz.jsp" />
+		 	<forward name="xjqnzyzManage" path="/shgz/nbcszyjsxy/xjqnzyzManage.jsp"></forward>
+		 </action>
+		 
+		  <action name="xsgbForNblgForm" parameter="method"
+		 	path="/xsgbForNblg" scope="request"
+		 	type="xgxt.shgz.action.XsgbForNblgAction">
+		 	<forward name="xshzzxx" path="/shgz/nblg/xshzzsb.jsp" />
+		 	<forward name="xshzzxxSb" path="/shgz/nblg/xshzzsbOne.jsp" />
+		 	<forward name="xsgbsq" path="/shgz/nblg/xsgbsq.jsp" />
+		 	<forward name="xsgbsqCx" path="/shgz/nblg/xsgbCx.jsp" />
+		 	<forward name="xsgbsqOne" path="/shgz/nblg/xsgbshOne.jsp" />
+		 	<forward name="printXshzz" path="/shgz/nblg/printXshzz.jsp" />
+		 </action>		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="zhcpSjdrForm" type="xgxt.pjpy.comm.zhcp.sjdr.ZhcpSjdrForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/zhcp_sjcl_sjdr" 		forward="/zhcpSjdr.do?method=sjdrManage"/>		<!-- 综测数据导入 -->
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 综测数据导入 -->
+    	<action path="/zhcpSjdr" 
+        		parameter="method"  
+        		name="zhcpSjdrForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.zhcp.sjdr.ZhcpSjdrAction">	
+		       
+			<forward name="sjdrManage"    	path="/pjpy/comm/zhcp/sjdr/sjdrManage.jsp" />	<!-- 管理 -->
+			<forward name="sjdrImp"    		path="/pjpy/comm/zhcp/sjdr/sjdrImp.jsp" />		<!-- 导入 -->
+			<forward name="sjdrExp"    		path="/pjpy/comm/zhcp/sjdr/sjdrExp.jsp" />		<!-- 导出 -->
+		</action>
+		
+	</action-mappings>
+</struts-config>

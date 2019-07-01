@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyCzxxActionForm" type="xgxt.pjpy.czxx.PjpyCzxxActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_czxx_zyfjfb" 	   forward="/czxxPjpyZycj.do?method=zyfjfb"/> <!-- 智育附加分表维护 -->
+	   	<action path="/pjpy_czxx_addZyfjfxx"   forward="/czxxPjpyZycj.do?method=addZyfjfxx"/> <!-- 增加智育附加分信息 -->
+	   	<action path="/pjpy_czxx_zycjb"        forward="/czxxPjpyZycj.do?method=zycjb"/>  <!-- 智育成绩查询 -->
+		
+	    <!-- 实际路径 -->	
+		<action path="/czxxPjpyZycj"
+				type="xgxt.pjpy.czxx.zycj.PjpyZycjAction"
+				name="pjpyCzxxActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 条件设置 -->
+		<forward name="zyfjfb" path="/pjpy/czxx/zycj/zyfjfb.jsp" />
+		<forward name="addZyfjfxx" path="/pjpy/czxx/zycj/addZyfjfxx.jsp"/>
+		<forward name="zycjb"  path="/pjpy/czxx/zycj/zycjb.jsp"/>
+
+		</action>
+	</action-mappings>
+
+</struts-config>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="fdsForm" type="com.zfsoft.xgxt.xyfd.fdswh.FdsForm"/>
+    </form-beans>
+    <action-mappings>
+        <!--辅导室管理-->
+        <action path="/xyfd_xyfd_fdswh" forward="/xyfd_fdswh.do?method=fdsList"/>
+
+        <action path="/xyfd_fdswh"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.fdswh.FdsAction"
+                name="fdsForm"
+                parameter="method">
+            <forward name="fdsList" path="/xsgzgl/xyfd/fdswh/fdsList.jsp"/>
+            <forward name="addfds" path="/xsgzgl/xyfd/fdswh/addfds.jsp"/>
+            <forward name="updatefds" path="/xsgzgl/xyfd/fdswh/updatefds.jsp"/>
+        </action>
+    </action-mappings>
+
+</struts-config>

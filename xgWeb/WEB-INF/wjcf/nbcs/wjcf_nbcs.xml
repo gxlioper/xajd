@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfNbcsActionForm" type="xgxt.wjcf.nbcs.WjcfNbcsActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<action path="/wjcf_nbcs_xfcf" 	   forward="/wjcfnbcswh.do?method=xfcf"/> <!-- 下发拟通知表 -->
+		<action path="/wjcf_nbcs_writeNcftz" forward="/wjcfnbcswh.do?method=writeNcftz"/><!-- 填写下发处分通知 -->
+		<action path="/wjcf_nbcs_txcftzs"  forward="/wjcfnbcswh.do?method=txcftzs"/><!-- 填写处分通知书 -->
+		<action path="/wjcf_nbcs_tzsPrint"  forward="/wjcfnbcswh.do?method=tzsPrint"/><!-- 处分通知书打印 -->
+		<action path="/wjcf_nbcs_cbbprint"  forward="/wjcfnbcswh.do?method=cbbprint"/>
+
+        <!-- 实际路径 -->	
+		<action path="/wjcfnbcswh"
+				type="xgxt.wjcf.nbcs.WjcfNbcsAction"
+				name="wjcfNbcsActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="writeNcftz"       path="/wjcf/nbcs/writeNcftz.jsp" /><!-- 填写下发处分通知 -->
+			<forward name="txcftzs"          path="/wjcf/nbcs/txcftzs.jsp"/><!-- 填写处分通知书 -->
+			<forward name="tzsPrint"         path="/wjcf/nbcs/tzsPrint.jsp"/><!-- 处分通知书打印 -->
+			<forward name="cbbprint"         path="/wjcf/nbcs/cbbprint.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

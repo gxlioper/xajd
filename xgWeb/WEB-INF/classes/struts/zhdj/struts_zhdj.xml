@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- 学生支部活动发布 -->
+		<form-bean name="zbhdfbForm" type="com.zfsoft.xgxt.zhdj.xszbhd.zbhdfb.ZbhdfbForm" />
+		<!-- 学生支部活动上报 -->
+		<form-bean name="zbhdsbForm" type="com.zfsoft.xgxt.zhdj.xszbhd.zbhdsb.ZbhdsbForm" />
+		<!-- 学生支部活动结果 -->
+		<form-bean name="zbhdjgForm" type="com.zfsoft.xgxt.zhdj.xszbhd.zbhdjg.ZbhdjgForm" />
+		<!-- 学生党支部和党员管理 -->
+		<!-- 代码配置 -->
+		<form-bean name="dzbdmpzForm" type="com.zfsoft.xgxt.zhdj.xsdzbhdygl.dzbdmpzForm" />
+		<!-- 党支部管理 -->
+		<form-bean name="DzbglForm" type="com.zfsoft.xgxt.zhdj.xsdzbhdygl.DzbglForm" />
+		<!--  职务代码维护 -->
+	    <form-bean name="DzbzwwhForm" type="com.zfsoft.xgxt.zhdj.xsdzbhdygl.DzbzwwhForm"/>
+		<!-- 学生党支部成员管理 -->
+		<form-bean name="CyglForm" type="com.zfsoft.xgxt.zhdj.xsdzbhdygl.CyglForm" />
+		<!-- 教工党支部成员管理 -->
+		<form-bean name="JgdcyglForm" type="com.zfsoft.xgxt.zhdj.xsdzbhdygl.JgdcyglForm" />
+		<!-- 党建预警 -->
+		<!-- 支部换届预警 -->
+		<form-bean name="ZbhjyjForm" type="com.zfsoft.xgxt.zhdj.djyj.ZbhjyjForm" />
+		<!-- 党员失联预警 -->
+		<form-bean name="DyslyjForm" type="com.zfsoft.xgxt.zhdj.djyj.DyslyjForm" />
+		<!-- 流动党员预警 -->
+		<form-bean name="LddyyjForm" type="com.zfsoft.xgxt.zhdj.djyj.LddyyjForm" />
+		<!-- 转正预警 -->
+		<form-bean name="ZzyjForm" type="com.zfsoft.xgxt.zhdj.djyj.ZzyjForm" />
+		<!-- 支部人数预警 -->
+		<form-bean name="ZbrsyjForm" type="com.zfsoft.xgxt.zhdj.djyj.ZbrsyjForm" />
+		<!-- 党员资料下载 -->
+		<form-bean name="DyzlxzForm" type="com.zfsoft.xgxt.zhdj.dyzlxz.DyzlxzForm" />
+		<!-- 积极分子帮扶管理 -->
+		<form-bean name="JjfzbfForm" type="com.zfsoft.xgxt.zhdj.jjfzbfgl.JjfzbfForm" />
+
+
+
+		<!-- 学院学生党建工作记录 -->
+		<form-bean name="djgzjlForm" type="com.zfsoft.xgxt.zhdj.djgzjl.DjgzjlForm" />
+
+		<!-- 党支部班级管理 -->
+		<form-bean name="dzbbjglForm" type="com.zfsoft.xgxt.zhdj.xsdjsgygc.dzbbjgl.DzbbjglForm" />
+		<!-- 党支员宿舍管理 -->
+		<form-bean name="dyssglForm" type="com.zfsoft.xgxt.zhdj.xsdjsgygc.dyssgl.DyssglForm" />
+
+		<form-bean name="DzbydForm" type="com.zfsoft.xgxt.zhdj.dzbyd.DzbydForm"/>
+
+	</form-beans>
+	<action-mappings>
+
+
+		<action path="/zhdj_dzdy_dmpz" forward="/dzdy_dmpz.do?method=getDmpzList" /><!-- 代码配置-->
+		<action path="/zhdj_dzdy_dzbgl" forward="/dzdy_dzbgl.do?method=getDzbList" /><!-- 党支部管理-->
+		<action path="/zhdj_dzdy_dzbyd" forward="/dzdy_dzbyd.do?method=getDzbydList" /><!-- 党支部管理-->
+		<action path="/zhdj_dzdy_cygl" forward="/dzdy_cygl.do?method=getCyList" /><!-- 学生党支部成员管理-->
+		<action path="/zhdj_dzdy_jgdcygl" forward="/dzdy_jgdcygl.do?method=getCyList" /><!-- 教工党支部成员管理-->
+		<action path="/zhdj_djyj_zbhjyj" forward="/djyj_zbhjyj.do?method=getZbhjyjList" /><!-- 支部换届预警-->
+		<action path="/zhdj_dzdy_sldyyj" forward="/dzdy_sldyyj.do?method=getDyslyjList" /><!-- 失联党员预警-->
+		<action path="/zhdj_dzdy_lddyyj" forward="/dzdy_lddyyj.do?method=getLddyyjList" /><!-- 流动党员预警-->
+		<action path="/zhdj_dzdy_zzsjyj" forward="/dzdy_zzsjyj.do?method=getZzyjList" /><!--  转正预警 -->
+		<action path="/zhdj_dzdy_zbrs" forward="/dzdy_zbrs.do?method=getZbrsList" /><!--  支部人数预警 -->
+		<action path="/zhdj_dzdy_dyzlxz" forward="/dzdy_dyzlxz.do?method=getDyzlList" /><!--  党员资料下载 -->
+		<action path="/zhdj_sgygc_jjfzbfgl" forward="/sgygc_jjfzbfgl.do?method=getJjfzbfList" /><!--  积极分子帮扶管理 -->
+		<action path="/zhdj_dzdy_zwwh" forward="/dzdy_zwwh.do?method=getZwwhList" />		<!--  职务代码维护 -->
+
+
+		<!-- 代码配置-->
+		<action path="/dzdy_dmpz" name="dzbdmpzForm" type="com.zfsoft.xgxt.zhdj.xsdzbhdygl.dzbdmpzAction"
+				parameter="method" scope="request">
+
+			<forward name="search" path="/xsgzgl/zhdj/xsdzbhdygl/dmpz/getDzbdmList.jsp" />
+			<forward name="addPage" path="/xsgzgl/zhdj/xsdzbhdygl/dmpz/addDzbdm.jsp" />
+			<forward name="getSy" path="/xsgzgl/zhdj/xsdzbhdygl/dmpz/getSy.jsp" />
+			<forward name="update" path="/xsgzgl/zhdj/xsdzbhdygl/dmpz/updateDzbdm.jsp" />
+			<forward name="hjDzz" path="/xsgzgl/zhdj/xsdzbhdygl/dmpz/hjDzz.jsp"/>
+			<forward name="ljDzz" path="/xsgzgl/zhdj/xsdzbhdygl/dmpz/ljDzz.jsp"/>
+
+		</action>
+		<!-- 党支部管理-->
+		<action path="/dzdy_dzbgl" name="DzbglForm" type="com.zfsoft.xgxt.zhdj.xsdzbhdygl.DzbglAction"
+				parameter="method" scope="request">
+
+			<forward name="search" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/getDzbList.jsp" />
+			<forward name="addPage" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/addDzb.jsp" />
+			<forward name="getZg" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/getZg.jsp" />
+			<forward name="update" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/updateDzb.jsp" />
+			<forward name="hjDzb" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/hjDzb.jsp" />
+			<forward name="ljDzb" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/ljDzb.jsp" />
+			<forward name="dzbCk" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/dzbCk.jsp" />
+			<forward name="getXx" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/getXx.jsp" />
+
+		</action>
+
+		<!-- 党支部管理-->
+		<action path="/dzdy_dzbyd"
+				name="DzbydForm"
+				type="com.zfsoft.xgxt.zhdj.dzbyd.DzbydAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/xsdzbhdygl/dzbyd/getDzbydList.jsp" />
+			<forward name="dzbydCk" path="/xsgzgl/zhdj/xsdzbhdygl/dzbyd/dzbydCk.jsp" />
+			<forward name="dzbydUpdate" path="/xsgzgl/zhdj/xsdzbhdygl/dzbyd/dzbydUpdate.jsp" />
+		</action>
+		
+		<!-- 职务维护 -->
+		<action path="/dzdy_zwwh" name="DzbzwwhForm" type="com.zfsoft.xgxt.zhdj.xsdzbhdygl.DzbzwwhAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/getZwwhList.jsp"/>
+			<forward name="addPage" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/addZw.jsp" />
+			<forward name="update" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/updateZw.jsp" />
+			
+		</action>
+
+		<!-- 学生党支部成员管理-->
+		<action path="/dzdy_cygl" name="CyglForm" type="com.zfsoft.xgxt.zhdj.xsdzbhdygl.CyglAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/xsdzbhdygl/cygl/getCyList.jsp" />
+			<forward name="addPage" path="/xsgzgl/zhdj/xsdzbhdygl/cygl/addCy.jsp" />
+			<forward name="getXx" path="/xsgzgl/zhdj/xsdzbhdygl/cygl/getXx.jsp" />
+			<forward name="update" path="/xsgzgl/zhdj/xsdzbhdygl/cygl/updateCy.jsp" />
+			<forward name="hjDzb" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/hjDzb.jsp" />
+			<forward name="ljDzb" path="/xsgzgl/zhdj/xsdzbhdygl/dzbgl/ljDzb.jsp" />
+		</action>	
+		
+		<!-- 教工党支部成员管理-->
+		<action path="/dzdy_jgdcygl" name="JgdcyglForm" type="com.zfsoft.xgxt.zhdj.xsdzbhdygl.JgdcyglAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/xsdzbhdygl/cygl/getJgdcyList.jsp" />
+			<forward name="addPage" path="/xsgzgl/zhdj/xsdzbhdygl/cygl/addJgdcy.jsp" />
+			<forward name="update" path="/xsgzgl/zhdj/xsdzbhdygl/cygl/updateJgdcy.jsp" />
+			<forward name="getJg" path="/xsgzgl/zhdj/xsdzbhdygl/cygl/getJg.jsp" />
+			
+		</action>
+
+		<!-- 支部换届预警-->
+		<action path="/djyj_zbhjyj" name="ZbhjyjForm" type="com.zfsoft.xgxt.zhdj.djyj.ZbhjyjAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/djyj/zbhjyj/getZbhjyjList.jsp" />
+		</action>
+
+		<!-- 失联党员预警-->
+		<action path="/dzdy_sldyyj" name="DyslyjForm" type="com.zfsoft.xgxt.zhdj.djyj.DyslyjAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/djyj/sldyyj/getDyslyjList.jsp" />
+		</action>
+
+		<!-- 流动党员预警-->
+		<action path="/dzdy_lddyyj" name="LddyyjForm" type="com.zfsoft.xgxt.zhdj.djyj.LddyyjAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/djyj/lddyyj/getLddyyjList.jsp" />
+		</action>
+
+		<!-- 转正预警-->
+		<action path="/dzdy_zzsjyj" name="ZzyjForm" type="com.zfsoft.xgxt.zhdj.djyj.ZzyjAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/djyj/zzyj/getZzyjList.jsp" />
+		</action>
+
+		<!-- 支部人数预警-->
+		<action path="/dzdy_zbrs" name="ZbrsyjForm" type="com.zfsoft.xgxt.zhdj.djyj.ZbrsyjAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/djyj/zbrsyj/getZbrsyjList.jsp" />
+		</action>
+
+		<!-- 党员资料下载-->
+		<action path="/dzdy_dyzlxz" name="DyzlxzForm" type="com.zfsoft.xgxt.zhdj.dyzlxz.DyzlxzAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/dyzlxz/getDyzlxzList.jsp" />
+		</action>
+
+		<!-- 积极分子帮扶管理-->
+		<action path="/sgygc_jjfzbfgl" name="JjfzbfForm" type="com.zfsoft.xgxt.zhdj.jjfzbfgl.JjfzbfAction"
+				parameter="method" scope="request">
+			<forward name="search" path="/xsgzgl/zhdj/jjfzbfgl/getJjfzbfList.jsp" />
+			<forward name="update" path="/xsgzgl/zhdj/jjfzbfgl/updateJjfzbf.jsp" />
+			<forward name="addPage" path="/xsgzgl/zhdj/jjfzbfgl/addJjfzbf.jsp" />
+			<forward name="getBfr" path="/xsgzgl/zhdj/jjfzbfgl/getBfr.jsp" />
+			<forward name="getJjfz" path="/xsgzgl/zhdj/jjfzbfgl/getJjfz.jsp" />
+			<forward name="ckBfjh" path="/xsgzgl/zhdj/jjfzbfgl/ckJjfzbf.jsp" />
+			<forward name="whSsqk" path="/xsgzgl/zhdj/jjfzbfgl/whSsqk.jsp" />
+			<forward name="ckSsqk" path="/xsgzgl/zhdj/jjfzbfgl/ckSsqk.jsp" />
+		</action>
+	
+	<action path="/zhdj_zbhd_zbhdfb" forward="/xszbhd_hdfb.do?method=getHdfbList" /><!-- 学生支部活动发布-->
+
+        <!-- 支部活动发布-->
+		<action path="/xszbhd_hdfb" name="zbhdfbForm" type="com.zfsoft.xgxt.zhdj.xszbhd.zbhdfb.ZbhdfbAction"
+			parameter="method" scope="request">
+			
+			<forward name="hdfbList" path="/xsgzgl/zhdj/xszbhd/zbhdfb/hdfbList.jsp" />
+			<forward name="add" path="/xsgzgl/zhdj/xszbhd/zbhdfb/hdfbAdd.jsp" />
+			<forward name="update" path="/xsgzgl/zhdj/xszbhd/zbhdfb/hdfbUpdate.jsp" />
+			<forward name="hdDetail" path="/xsgzgl/zhdj/xszbhd/zbhdfb/hdDetail.jsp" />
+			<forward name="hdjdDetail" path="/xsgzgl/zhdj/xszbhd/zbhdfb/hdjdDetail.jsp" />
+			<forward name="selectDzb" path="/xsgzgl/zhdj/xszbhd/zbhdfb/selectDzb.jsp" />
+			<forward name="showDzb" path="/xsgzgl/zhdj/xszbhd/zbhdfb/showDzb.jsp" />
+		</action>
+
+		<action path="/zhdj_zbhd_zbhdsb" forward="/xszbhd_hdsb.do?method=getSbList" /><!-- 学生支部活动上报-->
+		<!-- 支部活动上报-->
+		<action path="/xszbhd_hdsb" name="zbhdsbForm" type="com.zfsoft.xgxt.zhdj.xszbhd.zbhdsb.ZbhdsbAction"
+				parameter="method" scope="request">
+			<forward name="hdsbList" path="/xsgzgl/zhdj/xszbhd/zbhdsb/hdsbList.jsp" />
+			<forward name="add" path="/xsgzgl/zhdj/xszbhd/zbhdsb/hdsbAdd.jsp" />
+			<forward name="update" path="/xsgzgl/zhdj/xszbhd/zbhdsb/hdsbUpdate.jsp" />
+			<forward name="view" path="/xsgzgl/zhdj/xszbhd/zbhdsb/hdsbView.jsp" />
+		</action>
+
+		<action path="/zhdj_zbhd_zbhdjg" forward="/xszbhd_hdjg.do?method=getJgList" /><!-- 学生支部活动结果-->
+		<!-- 支部活动结果-->
+		<action path="/xszbhd_hdjg" name="zbhdjgForm" type="com.zfsoft.xgxt.zhdj.xszbhd.zbhdjg.ZbhdjgAction"
+				parameter="method" scope="request">
+			<forward name="hdjgList" path="/xsgzgl/zhdj/xszbhd/zbhdjg/hdjgList.jsp" />
+			<forward name="view" path="/xsgzgl/zhdj/xszbhd/zbhdjg/view.jsp" />
+		</action>
+
+
+		<action path="/zhdj_djgzjl_djgzjl" forward="/zhdj_djgzjl.do?method=getList" /><!-- 学生支部活动结果-->
+		<!-- 支部活动结果-->
+		<action path="/zhdj_djgzjl" name="djgzjlForm" type="com.zfsoft.xgxt.zhdj.djgzjl.DjgzjlAction"
+				parameter="method" scope="request">
+			<forward name="hdjgList" path="/xsgzgl/zhdj/djgzjl/djgzjlList.jsp" />
+			<forward name="add" path="/xsgzgl/zhdj/djgzjl/djgzjlAdd.jsp" />
+			<forward name="update" path="/xsgzgl/zhdj/djgzjl/djgzjlUpdate.jsp" />
+			<forward name="view" path="/xsgzgl/zhdj/djgzjl/djgzjlView.jsp" />
+		</action>
+
+		<action path="/zhdj_sgygc_dzbbjgl" forward="/zhdj_dzbbjgl.do?method=getList" /><!-- 党支部班级管理-->
+		<!-- 党支部班级管理-->
+		<action path="/zhdj_dzbbjgl" name="dzbbjglForm" type="com.zfsoft.xgxt.zhdj.xsdjsgygc.dzbbjgl.DzbbjglAction"
+				parameter="method" scope="request">
+			<forward name="dzbbjglList" path="/xsgzgl/zhdj/sgygc/dzbbjgl/dzbbjglList.jsp" />
+			<forward name="dzbbjglAdd" path="/xsgzgl/zhdj/sgygc/dzbbjgl/dzbbjglAdd.jsp" />
+			<forward name="selectDzb" path="/xsgzgl/zhdj/sgygc/dzbbjgl/selectDzb.jsp" />
+			<forward name="selectBj" path="/xsgzgl/zhdj/sgygc/dzbbjgl/selectBj.jsp" />
+			<forward name="dzbbjglUpdate" path="/xsgzgl/zhdj/sgygc/dzbbjgl/dzbbjglUpdate.jsp" />
+		</action>
+
+		<action path="/zhdj_sgygc_dyssgl" forward="/zhdj_dyssgl.do?method=getList" /><!-- 党员宿舍管理-->
+		<!-- 党员宿舍管理-->
+		<action path="/zhdj_dyssgl" name="dyssglForm" type="com.zfsoft.xgxt.zhdj.xsdjsgygc.dyssgl.DyssglAction"
+				parameter="method" scope="request">
+			<forward name="dyssglList" path="/xsgzgl/zhdj/sgygc/dyssgl/dyssglList.jsp" />
+			<forward name="dyssglAdd" path="/xsgzgl/zhdj/sgygc/dyssgl/dyssglAdd.jsp" />
+			<forward name="dyssglUpdate" path="/xsgzgl/zhdj/sgygc/dyssgl/dyssglUpdate.jsp" />
+			<forward name="dyssglView" path="/xsgzgl/zhdj/sgygc/dyssgl/dyssglView.jsp" />
+			<forward name="dyssglTjzj" path="/xsgzgl/zhdj/sgygc/dyssgl/dyssglTjzj.jsp" />
+			<forward name="selectDy" path="/xsgzgl/zhdj/sgygc/dyssgl/selectDy.jsp" />
+			<forward name="selectQs" path="/xsgzgl/zhdj/sgygc/dyssgl/selectQs.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

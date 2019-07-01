@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="yrglForm" type="com.zfsoft.xgxt.xsxx.yrgl.YrglForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/yrgl_list" forward="/xsxx_yrgl.do?method=Yrgllist" /> 
+		<action path="/xsxx_yrgl" 
+				parameter="method" 
+				name="yrglForm" 
+				scope="request"
+				type="com.zfsoft.xgxt.xsxx.yrgl.YrglAction">
+			<forward name="Yrgllist" path="/xsgzgl/xsxx/yrgl/Yrgllist.jsp" />
+			<forward name="Yrgladd" path="/xsgzgl/xsxx/yrgl/Yrgladd.jsp" />   <!-- 增加 -->
+			<forward name="Yrgledit" path="/xsgzgl/xsxx/yrgl/Yrgledit.jsp" /> <!-- 修改 -->
+			<forward name="Yrglview" path="/xsgzgl/xsxx/yrgl/Yrglview.jsp" /> <!-- 查看 -->
+		</action>
+	</action-mappings>
+</struts-config>

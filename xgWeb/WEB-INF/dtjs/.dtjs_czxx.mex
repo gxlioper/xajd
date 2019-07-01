@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/czxx_dtjs_tyxx.do" location="166,0" dimension="136,60" />
+  <StrutsActivity path="/czxx_dtjs_ftypx.do" location="402,0" dimension="142,60" />
+  <StrutsActivity path="/czxx_dtjs_typx.do" location="644,0" dimension="136,60" />
+  <StrutsActivity path="/czxx_dtjs_tnty.do" location="880,0" dimension="136,60" />
+  <StrutsActivity path="/czxx_dtjs_rdsq.do" location="45,437" dimension="136,60" />
+  <StrutsActivity path="/czxxDtjsTyxx.do" location="478,160" dimension="226,84" />
+  <StrutsActivity path="/czxxDtjsDyxx.do" location="0,597" dimension="226,84" />
+  <StrutsActivity path="/dtjs/czxx/tyxx/tyxxManage.jsp" location="0,344" dimension="220,48" />
+  <StrutsActivity path="/dtjs/czxx/tyxx/typxManage.jsp" location="320,344" dimension="220,48" />
+  <StrutsActivity path="/dtjs/czxx/tyxx/ftypxManage.jsp" location="640,344" dimension="226,48" />
+  <StrutsActivity path="/dtjs/czxx/tyxx/tntyManage.jsp" location="966,344" dimension="220,48" />
+  <StrutsActivity path="/dtjs/czxx/dyxx/rdsqManage.jsp" location="3,781" dimension="220,48" />
+  <StrutsTransition id="/czxxDtjsDyxx.do,rdsqManage,/dtjs/czxx/dyxx/rdsqManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="113,681" />
+      <AbsolutePoint location="113,781" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/czxx_dtjs_tyxx.do,null,/czxxDtjsTyxx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="234,60" />
+      <AbsolutePoint location="234,125" />
+      <AbsolutePoint location="506,125" />
+      <AbsolutePoint location="506,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/czxx_dtjs_ftypx.do,null,/czxxDtjsTyxx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="473,60" />
+      <AbsolutePoint location="473,95" />
+      <AbsolutePoint location="563,95" />
+      <AbsolutePoint location="563,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/czxx_dtjs_rdsq.do,null,/czxxDtjsDyxx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="113,497" />
+      <AbsolutePoint location="113,597" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/czxxDtjsTyxx.do,tyxxManage,/dtjs/czxx/tyxx/tyxxManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="506,244" />
+      <AbsolutePoint location="506,279" />
+      <AbsolutePoint location="110,279" />
+      <AbsolutePoint location="110,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/czxx_dtjs_tnty.do,null,/czxxDtjsTyxx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="948,60" />
+      <AbsolutePoint location="948,125" />
+      <AbsolutePoint location="676,125" />
+      <AbsolutePoint location="676,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/czxx_dtjs_typx.do,null,/czxxDtjsTyxx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="712,60" />
+      <AbsolutePoint location="712,95" />
+      <AbsolutePoint location="619,95" />
+      <AbsolutePoint location="619,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/czxxDtjsTyxx.do,tntyManage,/dtjs/czxx/tyxx/tntyManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="676,244" />
+      <AbsolutePoint location="676,279" />
+      <AbsolutePoint location="1076,279" />
+      <AbsolutePoint location="1076,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/czxxDtjsTyxx.do,typxManage,/dtjs/czxx/tyxx/typxManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="563,244" />
+      <AbsolutePoint location="563,309" />
+      <AbsolutePoint location="430,309" />
+      <AbsolutePoint location="430,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/czxxDtjsTyxx.do,ftypxManage,/dtjs/czxx/tyxx/ftypxManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="619,244" />
+      <AbsolutePoint location="619,309" />
+      <AbsolutePoint location="753,309" />
+      <AbsolutePoint location="753,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

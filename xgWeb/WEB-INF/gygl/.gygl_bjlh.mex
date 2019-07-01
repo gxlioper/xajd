@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/bjlh_gygl_tws.do" location="1237,0" dimension="130,60" />
+  <StrutsActivity path="/bjlh_gygl_tys.do" location="1467,0" dimension="130,60" />
+  <StrutsActivity path="/bjlh_gygl_yjs.do" location="1697,0" dimension="130,60" />
+  <StrutsActivity path="/bjlh_gygl_cjs.do" location="1927,0" dimension="130,60" />
+  <StrutsActivity path="/bjlh_gygl_fyk.do" location="2157,0" dimension="130,60" />
+  <StrutsActivity path="/bjlh_gygl_zsxx.do" location="2387,0" dimension="136,60" />
+  <StrutsActivity path="/bjlh_gygl_xlcw.do" location="2623,0" dimension="136,60" />
+  <StrutsActivity path="/bjlh_gygl_ssfp.do" location="0,1004" dimension="136,60" />
+  <StrutsActivity path="/bjlh_gygl_cwfp.do" location="978,1004" dimension="136,60" />
+  <StrutsActivity path="/bjlh_gygl_fpjg.do" location="381,567" dimension="136,60" />
+  <StrutsActivity path="/bjlh_gygl_expfpjg.do" location="617,567" dimension="154,60" />
+  <StrutsActivity path="/bjlh_gygl_tjbb.do" location="51,1441" dimension="136,60" />
+  <StrutsActivity path="/bjlh_gygl_saveSsfp.do" location="236,1004" dimension="160,60" />
+  <StrutsActivity path="/bjlh_gygl_ssfpquery.do" location="496,1004" dimension="166,60" />
+  <StrutsActivity path="/bjlh_gygl_deleteSsfp.do" location="762,1004" dimension="172,60" />
+  <StrutsActivity path="/bjlh_gygl_saveCwfp.do" location="1215,1004" dimension="160,60" />
+  <StrutsActivity path="/bjlh_gygl_saveXlCwfp.do" location="1475,1004" dimension="172,60" />
+  <StrutsActivity path="/bjlh_sjwh.do" location="1878,180" dimension="238,84" />
+  <StrutsActivity path="/bjlh_fyk.do" location="459,727" dimension="226,84" />
+  <StrutsActivity path="/bjlh_ssfp.do" location="328,1164" dimension="238,84" />
+  <StrutsActivity path="/bjlh_cwfp.do" location="1176,1164" dimension="238,84" />
+  <StrutsActivity path="/bjlh_gybb.do" location="0,1601" dimension="238,84" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/zsxxView.jsp" location="0,474" dimension="208,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/yjsUpdate.jsp" location="308,474" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/zsxxManage.jsp" location="622,474" dimension="220,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/fykManage.jsp" location="942,474" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/tysManage.jsp" location="1256,474" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/xlcwManage.jsp" location="1570,474" dimension="220,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/cjsManage.jsp" location="1890,474" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/yjsManage.jsp" location="2204,474" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/twsManage.jsp" location="2518,474" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/zsxxUpdate.jsp" location="2832,474" dimension="220,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/cjsUpdate.jsp" location="3152,474" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/fykUpdate.jsp" location="3466,474" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/sjwh/xsxxManage.jsp" location="3780,474" dimension="220,48" />
+  <StrutsActivity path="/gygl/bjlh/fyk/tbtjManage.jsp" location="0,911" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/fyk/fykUpdate.jsp" location="314,911" dimension="208,48" />
+  <StrutsActivity path="/gygl/bjlh/fyk/fykManage.jsp" location="622,911" dimension="208,48" />
+  <StrutsActivity path="/gygl/bjlh/fyk/jjtjManage.jsp" location="930,911" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/ssfp/ssfpManage.jsp" location="179,1348" dimension="220,48" />
+  <StrutsActivity path="/gygl/bjlh/ssfp/ssfpquery.jsp" location="499,1348" dimension="214,48" />
+  <StrutsActivity path="/gygl/bjlh/cwfp/cwfpManage.jsp" location="1185,1348" dimension="220,48" />
+  <StrutsActivity path="/gygl/bjlh/tjbb/tjbbPrint.jsp" location="12,1785" dimension="214,48" />
+  <StrutsTransition id="/bjlh_gygl_fpjg.do,null,/bjlh_fyk.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="449,627" />
+      <AbsolutePoint location="449,677" />
+      <AbsolutePoint location="515,677" />
+      <AbsolutePoint location="515,727" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_fyk.do,tbtjManage,/gygl/bjlh/fyk/tbtjManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="487,811" />
+      <AbsolutePoint location="487,846" />
+      <AbsolutePoint location="107,846" />
+      <AbsolutePoint location="107,911" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_saveCwfp.do,null,/bjlh_cwfp.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1295,1064" />
+      <AbsolutePoint location="1295,1164" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,twsManage,/gygl/bjlh/sjwh/twsManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2033,264" />
+      <AbsolutePoint location="2033,414" />
+      <AbsolutePoint location="2625,414" />
+      <AbsolutePoint location="2625,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_zsxx.do,null,/bjlh_sjwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2455,60" />
+      <AbsolutePoint location="2455,120" />
+      <AbsolutePoint location="2065,120" />
+      <AbsolutePoint location="2065,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,zsxxManage,/gygl/bjlh/sjwh/zsxxManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1923,264" />
+      <AbsolutePoint location="1923,354" />
+      <AbsolutePoint location="732,354" />
+      <AbsolutePoint location="732,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gybb.do,tjbbPrint,/gygl/bjlh/tjbb/tjbbPrint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="119,1685" />
+      <AbsolutePoint location="119,1785" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,xsxxManage,/gygl/bjlh/sjwh/xsxxManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2106,264" />
+      <AbsolutePoint location="2106,294" />
+      <AbsolutePoint location="3890,294" />
+      <AbsolutePoint location="3890,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,zsxxView,/gygl/bjlh/sjwh/zsxxView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1887,264" />
+      <AbsolutePoint location="1887,294" />
+      <AbsolutePoint location="104,294" />
+      <AbsolutePoint location="104,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_ssfp.do,null,/bjlh_ssfp.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="68,1064" />
+      <AbsolutePoint location="68,1129" />
+      <AbsolutePoint location="358,1129" />
+      <AbsolutePoint location="358,1164" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,fykManage,/gygl/bjlh/sjwh/fykManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1942,264" />
+      <AbsolutePoint location="1942,384" />
+      <AbsolutePoint location="1049,384" />
+      <AbsolutePoint location="1049,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,fykUpdate,/gygl/bjlh/sjwh/fykUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2088,264" />
+      <AbsolutePoint location="2088,324" />
+      <AbsolutePoint location="3573,324" />
+      <AbsolutePoint location="3573,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,xlcwManage,/gygl/bjlh/sjwh/xlcwManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1978,264" />
+      <AbsolutePoint location="1978,444" />
+      <AbsolutePoint location="1680,444" />
+      <AbsolutePoint location="1680,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_cwfp.do,null,/bjlh_cwfp.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1047,1064" />
+      <AbsolutePoint location="1047,1114" />
+      <AbsolutePoint location="1215,1114" />
+      <AbsolutePoint location="1215,1164" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_tws.do,null,/bjlh_sjwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1302,60" />
+      <AbsolutePoint location="1302,150" />
+      <AbsolutePoint location="1895,150" />
+      <AbsolutePoint location="1895,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_ssfp.do,ssfpquery,/gygl/bjlh/ssfp/ssfpquery.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="507,1248" />
+      <AbsolutePoint location="507,1298" />
+      <AbsolutePoint location="606,1298" />
+      <AbsolutePoint location="606,1348" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_yjs.do,null,/bjlh_sjwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1762,60" />
+      <AbsolutePoint location="1762,90" />
+      <AbsolutePoint location="1963,90" />
+      <AbsolutePoint location="1963,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_fyk.do,jjtjManage,/gygl/bjlh/fyk/jjtjManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="656,811" />
+      <AbsolutePoint location="656,846" />
+      <AbsolutePoint location="1037,846" />
+      <AbsolutePoint location="1037,911" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_fyk.do,null,/bjlh_sjwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2222,60" />
+      <AbsolutePoint location="2222,90" />
+      <AbsolutePoint location="2031,90" />
+      <AbsolutePoint location="2031,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_ssfpquery.do,null,/bjlh_ssfp.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="579,1064" />
+      <AbsolutePoint location="579,1099" />
+      <AbsolutePoint location="477,1099" />
+      <AbsolutePoint location="477,1164" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_fyk.do,fykUpdate,/gygl/bjlh/fyk/fykUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="543,811" />
+      <AbsolutePoint location="543,876" />
+      <AbsolutePoint location="418,876" />
+      <AbsolutePoint location="418,911" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_saveSsfp.do,null,/bjlh_ssfp.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="316,1064" />
+      <AbsolutePoint location="316,1099" />
+      <AbsolutePoint location="417,1099" />
+      <AbsolutePoint location="417,1164" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,cjsUpdate,/gygl/bjlh/sjwh/cjsUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2070,264" />
+      <AbsolutePoint location="2070,354" />
+      <AbsolutePoint location="3259,354" />
+      <AbsolutePoint location="3259,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,yjsManage,/gygl/bjlh/sjwh/yjsManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2015,264" />
+      <AbsolutePoint location="2015,444" />
+      <AbsolutePoint location="2311,444" />
+      <AbsolutePoint location="2311,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_ssfp.do,ssfpManage,/gygl/bjlh/ssfp/ssfpManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="388,1248" />
+      <AbsolutePoint location="388,1298" />
+      <AbsolutePoint location="289,1298" />
+      <AbsolutePoint location="289,1348" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_tys.do,null,/bjlh_sjwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1532,60" />
+      <AbsolutePoint location="1532,120" />
+      <AbsolutePoint location="1929,120" />
+      <AbsolutePoint location="1929,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_fyk.do,fykManage,/gygl/bjlh/fyk/fykManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="600,811" />
+      <AbsolutePoint location="600,876" />
+      <AbsolutePoint location="726,876" />
+      <AbsolutePoint location="726,911" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_deleteSsfp.do,null,/bjlh_ssfp.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="848,1064" />
+      <AbsolutePoint location="848,1129" />
+      <AbsolutePoint location="536,1129" />
+      <AbsolutePoint location="536,1164" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_tjbb.do,null,/bjlh_gybb.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="119,1501" />
+      <AbsolutePoint location="119,1601" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_cjs.do,null,/bjlh_sjwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1992,60" />
+      <AbsolutePoint location="1992,90" />
+      <AbsolutePoint location="1997,90" />
+      <AbsolutePoint location="1997,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,cjsManage,/gygl/bjlh/sjwh/cjsManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1997,264" />
+      <AbsolutePoint location="1997,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,tysManage,/gygl/bjlh/sjwh/tysManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1960,264" />
+      <AbsolutePoint location="1960,414" />
+      <AbsolutePoint location="1363,414" />
+      <AbsolutePoint location="1363,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_expfpjg.do,null,/bjlh_fyk.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="694,627" />
+      <AbsolutePoint location="694,677" />
+      <AbsolutePoint location="628,677" />
+      <AbsolutePoint location="628,727" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,yjsUpdate,/gygl/bjlh/sjwh/yjsUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1905,264" />
+      <AbsolutePoint location="1905,324" />
+      <AbsolutePoint location="415,324" />
+      <AbsolutePoint location="415,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_sjwh.do,zsxxUpdate,/gygl/bjlh/sjwh/zsxxUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2051,264" />
+      <AbsolutePoint location="2051,384" />
+      <AbsolutePoint location="2942,384" />
+      <AbsolutePoint location="2942,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_saveXlCwfp.do,null,/bjlh_cwfp.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1561,1064" />
+      <AbsolutePoint location="1561,1114" />
+      <AbsolutePoint location="1374,1114" />
+      <AbsolutePoint location="1374,1164" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_gygl_xlcw.do,null,/bjlh_sjwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2691,60" />
+      <AbsolutePoint location="2691,150" />
+      <AbsolutePoint location="2099,150" />
+      <AbsolutePoint location="2099,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlh_cwfp.do,cwfpManage,/gygl/bjlh/cwfp/cwfpManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1295,1248" />
+      <AbsolutePoint location="1295,1348" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

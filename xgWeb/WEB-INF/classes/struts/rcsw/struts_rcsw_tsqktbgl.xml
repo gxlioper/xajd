@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="xqdmForm" type="com.zfsoft.xgxt.rcsw.tsqktbgl.xqdmwh.XqdmForm" />
+		<form-bean name="xqflCsszForm" type="com.zfsoft.xgxt.rcsw.tsqktbgl.cssz.XqflCsszForm" />
+		<form-bean name="tsqktbForm" type="com.zfsoft.xgxt.rcsw.tsqktbgl.sq.TsqktbForm" />
+		<form-bean name="tsqkshForm" type="com.zfsoft.xgxt.rcsw.tsqktbgl.sh.TsqkshForm" />
+		<form-bean name="tsqkjgForm" type="com.zfsoft.xgxt.rcsw.tsqktbgl.jg.TsqkjgForm" />
+	</form-beans>
+	
+	<action-mappings>	
+		<action path="/rcsw_tsqktbgl_xqdmwh" forward="/xqdmwh.do?method=getXqdmList"/>
+		<action path="/rcsw_tsqktbgl_cssz" forward="/tsqktbgl_cssz.do?method=cssz"/>
+		<action path="/rcsw_tsqktbgl_tb" forward="/tsqktbgl_tb.do?method=getTsqktbList"/>
+		<action path="/rcsw_tsqktbgl_sh" forward="/tsqktbgl_sh.do?method=getTsqkshList"/>
+		<action path="/rcsw_tsqktbgl_jg" forward="/tsqktbgl_jg.do?method=getTsqkjgList"/>
+		
+		<!-- 学情代码维护 -->	
+		<action path="/xqdmwh" name="xqdmForm" type="com.zfsoft.xgxt.rcsw.tsqktbgl.xqdmwh.XqdmAction"
+			parameter="method" scope="request">
+			<forward name="getXqdmList" path="/xsgzgl/rcsw/tsqktbgl/xqdmwh/getXqdmList.jsp" />
+			<forward name="addXqdm" path="/xsgzgl/rcsw/tsqktbgl/xqdmwh/addXqdm.jsp" />
+			<forward name="updateXqdm" path="/xsgzgl/rcsw/tsqktbgl/xqdmwh/updateXqdm.jsp" />
+		</action>
+		
+		<!-- 参数设置 -->
+		<action path="/tsqktbgl_cssz" name="xqflCsszForm" type="com.zfsoft.xgxt.rcsw.tsqktbgl.cssz.XqflCsszAction"
+			parameter="method" scope="request">
+			<forward name="cssz" path="/xsgzgl/rcsw/tsqktbgl/cssz/cssz.jsp" />
+		</action>
+		
+		<!-- 特殊情况通报 -->
+		<action path="/tsqktbgl_tb" name="tsqktbForm" type="com.zfsoft.xgxt.rcsw.tsqktbgl.sq.TsqktbAction"
+			parameter="method" scope="request">
+			<forward name="getTsqktbList" path="/xsgzgl/rcsw/tsqktbgl/sq/getTsqktbList.jsp" />
+			<forward name="addTsqktb" path="/xsgzgl/rcsw/tsqktbgl/sq/addTsqktb.jsp" />
+			<forward name="editTsqktb" path="/xsgzgl/rcsw/tsqktbgl/sq/editTsqktb.jsp" />
+			<forward name="viewTsqktb" path="/xsgzgl/rcsw/tsqktbgl/sq/viewTsqktb.jsp" />
+		</action>
+		
+		<!-- 特殊情况审核 -->
+		<action path="/tsqktbgl_sh" name="tsqkshForm" type="com.zfsoft.xgxt.rcsw.tsqktbgl.sh.TsqkshAction"
+			parameter="method" scope="request">
+			<forward name="getTsqkshList" path="/xsgzgl/rcsw/tsqktbgl/sh/getTsqkshList.jsp" />
+			<forward name="sbDgsh" path="/xsgzgl/rcsw/tsqktbgl/sh/tsqkshDgsh.jsp" />
+			<forward name="sbPlsh" path="/xsgzgl/rcsw/tsqktbgl/sh/tsqkshPlsh.jsp" />
+		</action>
+		
+		<!-- 特殊情况结果 -->
+		<action path="/tsqktbgl_jg" name="tsqkjgForm" type="com.zfsoft.xgxt.rcsw.tsqktbgl.jg.TsqkjgAction"
+			parameter="method" scope="request">
+			<forward name="getTsqkjgList" path="/xsgzgl/rcsw/tsqktbgl/jg/getTsqkjgList.jsp" />
+			<forward name="addTsqkjg" path="/xsgzgl/rcsw/tsqktbgl/jg/addTsqkjg.jsp" />
+			<forward name="editTsqkjg" path="/xsgzgl/rcsw/tsqktbgl/jg/editTsqkjg.jsp" />
+			<forward name="viewTsqkjg" path="/xsgzgl/rcsw/tsqktbgl/jg/viewTsqkjg.jsp" />
+		</action>
+		
+		
+		
+	</action-mappings>
+</struts-config>

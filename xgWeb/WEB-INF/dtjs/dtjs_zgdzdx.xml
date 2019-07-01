@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="zgdzdxDtjsForm" type="xgxt.dtjs.zgdzdx.ZgdzdxDtjsForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+	    <!-- 显示路径 -->
+	    <!-- 信息维护 -->
+        <action path="/zgdzdxSxjyhd" forward="/zgdzdxXxwh.do?method=sxjyhdManage"/>	<!-- 思想教育活动 -->
+        <action path="/zgdzdxDyjh" forward="/zgdzdxXxwh.do?method=dyjhManage"/><!-- 调研计划 -->		 
+        <action path="/zgdzdxJyyjxx" forward="/zgdzdxXxwh.do?method=fblwManage"/><!-- 教育研究信息库 -->	  
+    	<action path="/zgdzdxZbr" forward="/zgddZbr.do?method=zbrManage"/><!-- 值班人管理 -->	    
+    	<action path="/zgdzdxWlxx" forward="/zgddWlxx.do?method=wlxxManage"/><!-- 网络信息管理 -->	
+		<action path="/zgdzdxDzbqk" forward="/zgddDzb.do?method=dzbManage"/><!-- 党支部管理 -->
+		<action path="/zgdzdxXgxx" forward="/zgdzdxXxwh.do?method=xgxxManage"/><!-- 学工信息 -->		   
+		<action path="/zgdzdxXgxxTj" forward="/zgdzdxXxwh.do?method=xgxxTjManage"/><!-- 学工信息统计 -->		 	 
+		   
+    	<!-- 党员活动室管理-->
+        <action path="/zgdzdxDyhds" forward="/zgdzdxXxwh.do?method=dyhdsgl_Index"/>	
+        <!-- 调研计划-->
+        <action path="/zgdzdxDyjh" forward="/zgdzdxXxwh.do?method=dyjhManage"/>	
+        
+        <!-- 实际路径 -->
+        <action path="/zgdzdxXxwh" parameter="method"  name="zgdzdxDtjsForm" scope="request"
+		        type="xgxt.dtjs.zgdzdx.xxwh.XxwhAction">
+		<!-- 合作教育介绍显示页面 -->	
+		<forward name="sxjyhdManage" path="/dtjs/zgdzdx/xxwh/sxjyhd/sxjyhdManage.jsp" />
+		<forward name="sxjyhdUpdata" path="/dtjs/zgdzdx/xxwh/sxjyhd/sxjyhdUpdate.jsp" />
+		<!-- 教育研究信息库 -->	
+		<forward name="fblwManage" path="/dtjs/zgdzdx/xxwh/fblw/fblwManage.jsp" />
+		<forward name="fblwUpdata" path="/dtjs/zgdzdx/xxwh/fblw/fblwUpdate.jsp" />
+		<forward name="kyxmManage" path="/dtjs/zgdzdx/xxwh/kyxm/kyxmManage.jsp" />
+		<forward name="kyxmUpdata" path="/dtjs/zgdzdx/xxwh/kyxm/kyxmUpdate.jsp" />
+		<forward name="fdyzzManage" path="/dtjs/zgdzdx/xxwh/fdyzz/fdyzzManage.jsp" />
+		<forward name="fdyzzUpdata" path="/dtjs/zgdzdx/xxwh/fdyzz/fdyzzUpdate.jsp" />
+		<forward name="yjzlManage" path="/dtjs/zgdzdx/xxwh/yjzl/yjzlManage.jsp" />
+		<forward name="yjzlUpdata" path="/dtjs/zgdzdx/xxwh/yjzl/yjzlUpdate.jsp" />
+		
+		<!-- 调研计划 -->
+		<forward name="dyjhManage" path="/dtjs/zgdzdx/xxwh/dyjh/dyjhManage.jsp" />
+		<forward name="dyjhUpdata" path="/dtjs/zgdzdx/xxwh/dyjh/dyjhUpdate.jsp" />
+		
+		<!-- 学工信息 -->
+		<forward name="xgxxManage" path="/dtjs/zgdzdx/xxwh/xgxx/xgxxManage.jsp" />
+		<forward name="xgxxUpdata" path="/dtjs/zgdzdx/xxwh/xgxx/xgxxUpdate.jsp" />
+		<forward name="xgxxTjManage" path="/dtjs/zgdzdx/xxwh/xgxx/xgxxTjManage.jsp" />
+		
+		<!-- 党员活动室管理-->
+		<forward name="cdsbsy_index" path="/dtjs/zgdzdx/dyhdsgl/cdsbsy.jsp" /><!-- 场地、设备使用 -->	
+		<forward name="zcgl_index" path="/dtjs/zgdzdx/dyhdsgl/zcgl.jsp" /><!-- 资产管理 -->	
+		<forward name="xxzl_index" path="/dtjs/zgdzdx/dyhdsgl/xxzl.jsp" /><!-- 学习资料 -->	
+		<forward name="zljy_index" path="/dtjs/zgdzdx/dyhdsgl/zljy.jsp" /><!-- 资料借阅 -->	
+		<forward name="cdsbsy_add" path="/dtjs/zgdzdx/dyhdsgl/cdsbsy_add.jsp" /><!-- 场地、设备使用申请 -->	
+		<forward name="zcgl_add" path="/dtjs/zgdzdx/dyhdsgl/zcgl_add.jsp" /><!-- 资产管理申请 -->	
+		<forward name="xxzl_add" path="/dtjs/zgdzdx/dyhdsgl/xxzl_add.jsp" /><!-- 学习资料 申请-->	
+		<forward name="zljy_add" path="/dtjs/zgdzdx/dyhdsgl/zljy_add.jsp" /><!-- 资料借阅申请 -->	
+		</action>
+		
+		<action path="/zgddZbr" parameter="method"  name="zgdzdxDtjsForm" scope="request"
+		        type="xgxt.dtjs.zgdzdx.zbr.ZbrAction">
+		<!-- 值班人管理页面 -->	
+		<forward name="zbrManage" path="/dtjs/zgdzdx/zbr/zbrManage.jsp" />
+		<forward name="zbrUpdate" path="/dtjs/zgdzdx/zbr/zbrUpdate.jsp" />
+        </action>
+        
+        <action path="/zgddWlxx" parameter="method"  name="zgdzdxDtjsForm" scope="request"
+		        type="xgxt.dtjs.zgdzdx.wlxx.WlxxAction">
+		<!-- 网络信息管理页面 -->	
+		<forward name="wlxxManage" path="/dtjs/zgdzdx/wlxx/wlxxManage.jsp" />
+		<forward name="wlxxUpdate" path="/dtjs/zgdzdx/wlxx/wlxxUpdate.jsp" />
+        </action>
+        
+        <action path="/zgddDzb" parameter="method"  name="zgdzdxDtjsForm" scope="request"
+		        type="xgxt.dtjs.zgdzdx.dzb.DzbAction">
+		<!-- 党支部管理页面 -->	
+		<forward name="dzbManage" path="/dtjs/zgdzdx/dzb/dzbManage.jsp" />
+		<forward name="dzbUpdate" path="/dtjs/zgdzdx/dzb/dzbUpdate.jsp" />
+        </action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

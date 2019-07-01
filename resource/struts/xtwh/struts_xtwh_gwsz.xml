@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+    <form-bean name="xtwhGwszForm" type="xgxt.xtwh.comm.gwsz.XtwhGwszForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+    <action path="/xtwhGwsz" 
+    		type="xgxt.xtwh.comm.gwsz.XtwhGwszAction" 
+    		scope="request"
+    		name="xtwhGwszForm"
+    		parameter="method"
+    		>		
+		
+		<forward name="gwszManage" path="/xtwh/comm/gwsz/gwszManage.jsp"/>
+		<forward name="gwszUpdate" path="/xtwh/comm/gwsz/gwszUpdate.jsp"/>
+		<forward name="query" path="/xtwhGwsz.do?method=gwszManage"/>
+	</action>	
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

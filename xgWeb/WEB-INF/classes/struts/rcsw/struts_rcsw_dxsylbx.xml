@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -大学生医疗保险-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="ylbxJcszForm" type="com.zfsoft.xgxt.rcsw.dxsylbx.ylbxjcsz.YlbxJcszForm" />
+    	<form-bean name="ylbxwhForm" type="com.zfsoft.xgxt.rcsw.dxsylbx.ylbxwh.YlbxwhForm" />
+    	<form-bean name="ylbxsqForm" type="com.zfsoft.xgxt.rcsw.dxsylbx.ylbxsq.YlbxsqForm" />
+    	<form-bean name="ylbxshForm" type="com.zfsoft.xgxt.rcsw.dxsylbx.ylbxsh.YlbxshForm" />
+    	<form-bean name="ylbxjgForm" type="com.zfsoft.xgxt.rcsw.dxsylbx.ylbxjg.YlbxjgForm" />
+	</form-beans>
+	
+	
+	
+	<action-mappings>
+	
+	<action path="/rcsw_dxsylbx_jcsz" forward="/rcsw_dxsylbx_jcszgl.do?method=ylbxJcsz"/>	<!-- 医疗保险审批流设置 -->
+	<action path="/rcsw_dxsylbx_jcszgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.dxsylbx.ylbxjcsz.YlbxJcszAction" 
+   			name="ylbxJcszForm"         
+   			parameter="method">	
+   		<forward name="ylbxJcsz" path="/xsgzgl/rcsw/dxsylbx/ylbxjcsz/ylbxJcsz.jsp"></forward>
+	</action>  
+	
+	<action path="/rcsw_dxsylbx_ylbxwh" forward="/rcsw_dxsylbx_ylbxwhgl.do?method=czqebzlxListManage"/>	<!--医疗保险维护 -->
+	<action path="/rcsw_dxsylbx_ylbxwhgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.dxsylbx.ylbxwh.YlbxwhAction" 
+   			name="ylbxwhForm"         
+   			parameter="method">	
+   		<forward name="czqebzlxListManage" path="/xsgzgl/rcsw/dxsylbx/ylbxwh/czqebzlxListManage.jsp"></forward>
+   		<forward name="cbzklxListManage" path="/xsgzgl/rcsw/dxsylbx/ylbxwh/cbzklxListManage.jsp"></forward>
+   		<forward name="addCzqebzlx" path="/xsgzgl/rcsw/dxsylbx/ylbxwh/addCzqebzlx.jsp"></forward>
+   		<forward name="updateCzqebzlx" path="/xsgzgl/rcsw/dxsylbx/ylbxwh/updateCzqebzlx.jsp"></forward>
+   		<forward name="addCzqebzlx" path="/xsgzgl/rcsw/dxsylbx/ylbxwh/addCzqebzlx.jsp"></forward>
+   		<forward name="updateCzqebzlx" path="/xsgzgl/rcsw/dxsylbx/ylbxwh/updateCzqebzlx.jsp"></forward>
+   		<forward name="addCbzklx" path="/xsgzgl/rcsw/dxsylbx/ylbxwh/addCbzklx.jsp"></forward>
+   		<forward name="updateCbzklx" path="/xsgzgl/rcsw/dxsylbx/ylbxwh/updateCbzklx.jsp"></forward>
+	</action>  
+	
+	<action path="/rcsw_dxsylbx_ylbxsq" forward="/rcsw_dxsylbx_ylbxsqgl.do?method=ylbxsqManage"/>	<!-- 医疗保险申请 -->
+	<action path="/rcsw_dxsylbx_ylbxsqgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.dxsylbx.ylbxsq.YlbxsqAction" 
+   			name="ylbxsqForm"         
+   			parameter="method">	
+   		<forward name="ylbxsqManage" path="/xsgzgl/rcsw/dxsylbx/ylbxsq/ylbxsqManage.jsp"></forward>
+   		<forward name="addYlbxsq" path="/xsgzgl/rcsw/dxsylbx/ylbxsq/addYlbxsq.jsp"></forward>
+   		<forward name="updateYlbxsq" path="/xsgzgl/rcsw/dxsylbx/ylbxsq/updateYlbxsq.jsp"></forward>
+   		<forward name="viewYlbxsq" path="/xsgzgl/rcsw/dxsylbx/ylbxsq/viewYlbxsq.jsp"></forward>
+   		<forward name="viewCbzk" path="/xsgzgl/rcsw/dxsylbx/comm/viewCbzk.jsp"></forward>
+	</action>  
+	
+	<action path="/rcsw_dxsylbx_ylbxsh" forward="/rcsw_dxsylbx_ylbxshgl.do?method=ylbxshManage"/>	<!-- 医疗保险审核 -->
+	<action path="/rcsw_dxsylbx_ylbxshgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.dxsylbx.ylbxsh.YlbxshAction" 
+   			name="ylbxshForm"         
+   			parameter="method">	
+   		<forward name="ylbxshManage" path="/xsgzgl/rcsw/dxsylbx/ylbxsh/ylbxshManage.jsp"></forward>
+   		<forward name="ylbxDgsh" path="/xsgzgl/rcsw/dxsylbx/ylbxsh/ylbxDgsh.jsp"></forward>
+   		<forward name="viewYlbxsh" path="/xsgzgl/rcsw/dxsylbx/ylbxsh/viewYlbxsh.jsp"></forward>
+   		<forward name="viewCbzk" path="/xsgzgl/rcsw/dxsylbx/comm/viewCbzk.jsp"></forward>
+   		<forward name="ylbxPlsh" path="/xsgzgl/rcsw/dxsylbx/comm/ylbxPlsh.jsp"></forward>
+	</action> 
+	
+	<action path="/rcsw_dxsylbx_ylbxjg" forward="/rcsw_dxsylbx_ylbxjggl.do?method=ylbxjgManage"/>	<!-- 医疗保险结果 -->
+	<action path="/rcsw_dxsylbx_ylbxjggl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.dxsylbx.ylbxjg.YlbxjgAction" 
+   			name="ylbxjgForm"         
+   			parameter="method">	
+   		<forward name="ylbxjgManage" path="/xsgzgl/rcsw/dxsylbx/ylbxjg/ylbxjgManage.jsp"></forward>
+   		<forward name="addYlbxjg" path="/xsgzgl/rcsw/dxsylbx/ylbxjg/addYlbxjg.jsp"></forward>
+   		<forward name="updateYlbxjg" path="/xsgzgl/rcsw/dxsylbx/ylbxjg/updateYlbxjg.jsp"></forward>
+   		<forward name="viewYlbxjg" path="/xsgzgl/rcsw/dxsylbx/ylbxjg/viewYlbxjg.jsp"></forward>
+   		<forward name="viewCbzk" path="/xsgzgl/rcsw/dxsylbx/comm/viewCbzk.jsp"></forward>
+	</action> 
+	
+	</action-mappings>
+</struts-config>

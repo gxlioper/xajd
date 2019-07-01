@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/xysbjxj.do" location="194,0" dimension="232,84" />
+  <StrutsActivity path="/pjpy/xibeierminyuan/pjpy_xbemy_xysbjxj.jsp" location="0,196" dimension="298,48" />
+  <StrutsActivity path="/xysbjxjSearch.do" location="398,184" dimension="148,72" />
+  <StrutsActivity path="/pjpy/xibeierminyuan/pjpy_xbemy_jxjjgqry.jsp" />
+  <StrutsTransition id="/xysbjxj.do,xyjxjjgqry,/pjpy/xibeierminyuan/pjpy_xbemy_jxjjgqry.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="310,42" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xysbjxj.do,xysbjxjsh,/xysbjxjSearch.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="368,84" />
+      <AbsolutePoint location="368,134" />
+      <AbsolutePoint location="472,134" />
+      <AbsolutePoint location="472,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xysbjxj.do,xysbjxj,/pjpy/xibeierminyuan/pjpy_xbemy_xysbjxj.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="252,84" />
+      <AbsolutePoint location="252,134" />
+      <AbsolutePoint location="149,134" />
+      <AbsolutePoint location="149,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

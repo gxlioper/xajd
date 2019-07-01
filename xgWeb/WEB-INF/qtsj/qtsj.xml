@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>		
+	    <form-bean name="commanForm" type="xgxt.form.CommanForm" />
+	    <form-bean name="insureForm" type="xgxt.qtsj.InsureForm" />
+        <form-bean name="shgcTbxxForm" type="xgxt.qtsj.shgc.form.ShgcTbxxForm" />        
+	</form-beans>
+	
+	<global-forwards/>
+	<action-mappings>
+		<!-- <<<<<<<<<<<<<其它数据：投保信息清单>>>>>>>>>>>>>>>>>>>> -->
+			<action path="/bxgl"
+					type="xgxt.qtsj.action.InsureAction"
+					name="insureForm"
+					parameter="method"
+					scope="request"
+					validate="false">
+				<forward name="success" path="/qtsj/tbxxwh.jsp" />
+				<forward name="tbxxAdd" path="/qtsj/tbxxAdd.jsp" />
+				<forward name="tbxxModi" path="/qtsj/tbxxModi.jsp" />		
+							
+				<forward name="false" path="/errMsg.jsp" />
+			</action>
+			<action path="/insureChargeList"
+					type="xgxt.qtsj.action.InsureAction"
+					name="commanForm"
+					parameter="method"
+					scope="request"
+					validate="false">
+				<forward name="initpage" path="/qtsj/xcxy/insureChargeList.jsp" />	
+				<forward name="sucess" path="/qtsj/xcxy/insureChargePage.jsp" />
+				<forward name="false" path="/errMsg.jsp" />
+			</action>
+			<!-- <<<<<<<<<<<<<保险参数设置：上海工程保险>>>>>>>>>>>>>>>>>>>> -->
+			<action path="/shgcConf"
+					type="xgxt.qtsj.action.InsureAction" 
+					name="commanForm"
+					parameter="method"
+					scope="request"
+					validate="false">	
+				<forward name="success" path="/qtsj/shgc/shgc_conf.jsp" />			
+				<forward name="false" path="/errMsg.jsp" />
+			</action>
+			<!-- <<<<<<<<<<<<<保险管理：上海工程保险>>>>>>>>>>>>>>>>>>>> -->
+			<action path="/insureLogic"
+					type="xgxt.qtsj.action.InsureAction" 
+					name="commanForm"
+					parameter="method"
+					scope="request"
+					validate="false">	
+				<forward name="sucess" path="/qtsj/shgc/bxlc.jsp" />
+				<forward name="totalinfo" path="/qtsj/shgc/insure_totalinfo.jsp" />
+				<forward name="insureDatapub" path="/qtsj/nblg/bxglPub.jsp" />	
+				<forward name="infoContent" path="/qtsj/nblg/pubInfoContent.jsp" />				
+				<forward name="false" path="/errMsg.jsp" />
+			</action>
+			<!-- <<<<<<<<<<<<<保险管理：上海工程投保信息维护>>>>>>>>>>>>>>>>>>>> -->
+			<action path="/shgc_tbxxwh"
+					type="xgxt.qtsj.shgc.action.TbxxwhAction"
+					name="shgcTbxxForm"
+					parameter="method"
+					scope="request"
+					validate="false">				
+				<forward name="search" path="/qtsj/shgc/insure_search.jsp" />
+				<forward name="addTbxx" path="/qtsj/shgc/tbxxAdd.jsp" />					
+				<forward name="modTbxx" path="/qtsj/shgc/tbxxMod.jsp" />					
+				<forward name="false" path="/errMsg.jsp" />
+			</action>
+			<!-- <<<<<<<<<<<<<保险管理：上海工程保险申请结果查询>>>>>>>>>>>>>>>>>>>> -->
+			<action path="/shgc_sqjgcx"
+					type="xgxt.qtsj.shgc.action.TbsqcxAction"
+					name="shgcTbxxForm"
+					parameter="method"
+					scope="request"
+					validate="false">				
+				<forward name="search" path="/qtsj/shgc/insureApp_search.jsp" />
+				<forward name="addTbsq" path="/qtsj/shgc/tbsqAdd.jsp" />					
+				<forward name="modTbsq" path="/qtsj/shgc/tbsqMod.jsp" />					
+				<forward name="false" path="/errMsg.jsp" />
+			</action>   
+		  
+		  <!-- <<<<<<<<<<<<<其它数据：投保申请批量审核>>>>>>>>>>>>>>>>>>>> -->
+		  	<action path="/insurePassAuditing" forward="/insureAuditing.do?method=excuteAuditing"></action> 
+			
+			<action path="/insureAuditing"
+					type="xgxt.qtsj.action.InsureAction"
+					name="commanForm"
+					parameter="method"
+					scope="request"
+					validate="false">
+				<forward name="false" path="/errMsg.jsp" />
+				<forward name="success" path="/sjcz/insureAppAudit.jsp" />				
+			</action> 
+			
+			
+			<!-- <<<<<<<<<南京技师 2010.7.22 quph>>>>>>>>>> -->
+			<action path="/bxxx_dmwh" forward="/bxxx.do?method=lpdmwh"/>
+			<action path="/bxxx_lpsq" forward="/bxxx.do?method=lpsqUpdate"/>
+			<action path="/bxxx_lpsh" forward="/bxxx.do?method=lpsh"/>
+			<action path="/bxxx_lpjg" forward="/bxxx.do?method=lpjg"/>
+			
+			<action path="/bxxx"
+					type="xgxt.qtsj.action.InsureAction"
+					name="commanForm"
+					parameter="method"
+					scope="request"
+					validate="false">
+					
+					<forward name="lpdmwh" path="/qtsj/njjs/lpdmwh.jsp" />
+					<forward name="cldmwh" path="/qtsj/njjs/cldmwh.jsp" />
+					<forward name="lpxmUpdate" path="/qtsj/njjs/lpxmUpdate.jsp"/>		
+					<forward name="clxmUpdate" path="/qtsj/njjs/clxmUpdate.jsp"/>
+					<forward name="lpsqUpdate" path="/qtsj/njjs/lpsqUpdate.jsp"/>
+					<forward name="lpsh" path="/qtsj/njjs/lpsh.jsp"/>
+					<forward name="lpInfo" path="/qtsj/njjs/lpInfo.jsp"/>
+					<forward name="lpjg" path="/qtsj/njjs/lpjg.jsp"/>
+			</action> 
+	</action-mappings>
+</struts-config>

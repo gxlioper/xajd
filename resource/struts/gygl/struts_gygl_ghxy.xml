@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		
+		 <form-bean name="ghxyQyfdywhForm" type="xgxt.xsgygl.ghxy.qyfdywh.GhxyQyfdywhForm" />	
+	</form-beans>
+
+	<action-mappings>
+		<action
+			name="ghxyQyfdywhForm"
+			path="/ghxyQyfdywh"		
+			type="xgxt.xsgygl.ghxy.qyfdywh.GhxyQyfdywhAction"
+			parameter="method"
+			scope="request"
+		>
+		<forward name="resultQyfdy" path="/gygl/ghxy/qyfdy/resultQyfdy.jsp"/>
+		</action>	
+	</action-mappings>
+
+</struts-config>

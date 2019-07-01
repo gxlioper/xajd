@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>番茄花园</Author>
+  <LastAuthor>china</LastAuthor>
+  <LastPrinted>2013-10-08T07:21:23Z</LastPrinted>
+  <Created>2007-10-23T06:46:21Z</Created>
+  <LastSaved>2018-09-13T02:55:36Z</LastSaved>
+  <Company>番茄花园</Company>
+  <Version>12.00</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8580</WindowHeight>
+  <WindowWidth>7395</WindowWidth>
+  <WindowTopX>480</WindowTopX>
+  <WindowTopY>165</WindowTopY>
+  <TabRatio>521</TabRatio>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s17">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+  </Style>
+  <Style ss:ID="s18">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s19">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s20">
+   <Alignment ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s22">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s24">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134"/>
+  </Style>
+  <Style ss:ID="s27">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Bold="1"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s28">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s29">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s30">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s32">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134"/>
+  </Style>
+  <Style ss:ID="s33">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134"/>
+  </Style>
+  <Style ss:ID="s34">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s35">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s36">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s37">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s38">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s39">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s40">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s43">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="华文中宋" x:CharSet="134" ss:Size="16" ss:Bold="1"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="奖学金">
+  <Names>
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=奖学金!R2C1:R3C61"
+    ss:Hidden="1"/>
+   <NamedRange ss:Name="Print_Titles" ss:RefersTo="=奖学金!R1:R2"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="20" ss:ExpandedRowCount="5" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s17" ss:DefaultColumnWidth="54"
+   ss:DefaultRowHeight="14.25">
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="24.75"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="42"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="26.25"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="61.5"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="64.5"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="39.75"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="43.5"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="158.25"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="172.5"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="118.5"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="60"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="58.5" ss:Span="3"/>
+   <Column ss:Index="16" ss:StyleID="s28" ss:AutoFitWidth="0" ss:Width="120.75"/>
+   <Column ss:StyleID="s28" ss:AutoFitWidth="0" ss:Width="201"/>
+   <Column ss:StyleID="s29" ss:AutoFitWidth="0" ss:Width="204"/>
+   <Column ss:StyleID="s29" ss:AutoFitWidth="0" ss:Span="1"/>
+   <Row ss:AutoFitHeight="0" ss:Height="33.75">
+    <Cell ss:MergeAcross="17" ss:StyleID="s43"><Data ss:Type="String">附件4：2018感恩中国近现代科学家 奖学金 推荐学生情况汇总表</Data><NamedCell
+      ss:Name="Print_Titles"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="45.75" ss:StyleID="s19">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">序号</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">姓名</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">性别</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">政治面貌</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">所在学校</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">专业</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">年级</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">学生工作情况</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">获奖情况</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">其它表现或事迹</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">专业排名</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">基础分</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">面试分</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">笔试分</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">最后成绩</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">身份证号</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">开户行信息</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">银行卡号（19位，借记卡，不空格）</Data><NamedCell
+      ss:Name="Print_Titles"/><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s30"><NamedCell ss:Name="Print_Titles"/><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s30"><NamedCell ss:Name="Print_Titles"/><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="226.5" ss:StyleID="s40">
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s33"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s33"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s33"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s32"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s35"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s35"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s35"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s39"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s39"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75" ss:StyleID="s40">
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"/>
+    <Cell ss:StyleID="s35"/>
+    <Cell ss:StyleID="s37"/>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s39"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">【注】：银行卡号请务必提供本人卡号。</Data></Cell>
+    <Cell ss:StyleID="s20"/>
+    <Cell ss:StyleID="s20"/>
+    <Cell ss:StyleID="s20"/>
+    <Cell ss:StyleID="s20"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Layout x:Orientation="Landscape" x:CenterHorizontal="1"/>
+    <Header x:Margin="0.31496062992125984"/>
+    <Footer x:Margin="0.31496062992125984" x:Data="&amp;C&amp;P"/>
+    <PageMargins x:Bottom="0.31496062992125984" x:Left="0.11811023622047245"
+     x:Right="0.11811023622047245" x:Top="0.31496062992125984"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>300</HorizontalResolution>
+    <VerticalResolution>300</VerticalResolution>
+   </Print>
+   <Zoom>85</Zoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>2</ActiveRow>
+     <ActiveCol>7</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="助学金">
+  <Table ss:ExpandedColumnCount="19" ss:ExpandedRowCount="5" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="26.25"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="42"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="26.25"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="57"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="63"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="39.75"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="43.5"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="158.25"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="172.5"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="118.5"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="60" ss:Span="1"/>
+   <Column ss:Index="13" ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="58.5"
+    ss:Span="2"/>
+   <Column ss:Index="16" ss:StyleID="s24" ss:AutoFitWidth="0" ss:Width="58.5"/>
+   <Column ss:StyleID="s29" ss:AutoFitWidth="0" ss:Width="120.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="189.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="201.75"/>
+   <Row ss:AutoFitHeight="0" ss:Height="33">
+    <Cell ss:MergeAcross="16" ss:StyleID="s43"><Data ss:Type="String">附件4：2018感恩近代中国科学家 助学金 推荐学生情况汇总表</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="47.25">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">序号</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">姓名</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">性别</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">政治面貌</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">所在学校</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">专业</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">年级</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">学生工作情况</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">获奖情况</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">其它表现或事迹</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">专业排名</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">家庭经济困难程度</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">基础分</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">面试分</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">笔试分</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">最后成绩</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">身份证号</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">开户行信息</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">银行卡号（19位，借记卡，不空格）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="222.75" ss:StyleID="s36">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">例</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">张三</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">男</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">中共党员</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">西南交通大学</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">交通运输类</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">2016级</Data></Cell>
+    <Cell ss:StyleID="s33"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><B>2016-2017年</B><Font>&#10;运输3班班长&#10;</Font><B>2016-2017年</B><Font>&#10;校学生会事务部部长&#10;班主任助理&#10;</Font><B>2017-2018年</B><Font>&#10;运输学院团总支学生干部&#10;</Font><Font
+       html:Color="#FF0000">（请按年份将参加社会工作情况一一列举）</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s33"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><B>2016-2017年</B><Font>&#10;校级二等奖学金&#10;</Font><B>2017-2018年</B><Font>&#10;校三好学生&#10;校优秀学生干部&#10;2017年数学建模竞赛 二等奖&#10;全国大学生艺术展 一等奖&#10;国家奖学金二等奖&#10;“挑战杯”四川省 二等奖&#10;</Font><Font
+       html:Color="#FF0000">（请按年份将所获奖项一一列举）</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">2016年9月至今，发表论文15篇，其中第1作者(含并列)X篇，SCI2区 X篇，SCI3区 X篇。&#10;&#10;2018年3月，《xxxxx》取得国家专利 三等奖</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">1/300</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">一般困难/困难/特别困难</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="Number">26</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s34" ss:Formula="=RC[-3]+RC[-2]+RC[-1]"><Data
+      ss:Type="Number">81</Data></Cell>
+    <Cell ss:StyleID="s34"><Data ss:Type="String" x:Ticked="1">123456199808087890</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String" x:Ticked="1">中国建设银行成都西南交大新校区支行</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String" x:Ticked="1">1234567890123456789</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="67.5" ss:StyleID="s36">
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s32"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s37"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">【注】：银行卡号请务必提供本人卡号。</Data></Cell>
+    <Cell ss:StyleID="s20"/>
+    <Cell ss:StyleID="s20"/>
+    <Cell ss:StyleID="s20"/>
+    <Cell ss:StyleID="s20"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1</ActiveRow>
+     <ActiveCol>8</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

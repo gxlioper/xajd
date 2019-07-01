@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyTyForm" type="xgxt.pjpy.PjpyTyForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+	
+	<!-- 参数设置 -->
+	<action path="/pjpy_cpxz" 		forward="/pjpy_forward.do?method=cpxzForward"/>		<!-- 测评小组维护 -->
+	<action path="/pjpy_tjsz" 		forward="/pjpy_forward.do?method=tjszForward"/>		<!-- 条件设置 -->
+	<action path="/pjpy_jdsz" 		forward="/pjpy_forward.do?method=jdszForward"/>		<!-- 奖学金兼得设置 -->
+	<action path="/pjpy_rssz" 		forward="/pjpy_forward.do?method=rsszForward"/>		<!-- 人数设置 -->
+	
+	<!-- 信息维护 -->
+	<action path="/pjpy_zyf" 		forward="/pjpy_forward.do?method=zyfForward"/>		<!-- 智育分维护 -->
+    <action path="/pjpy_zhf" 		forward="/pjpy_forward.do?method=zhfForward"/>		<!-- 综合分维护 -->
+	<action path="/pjpy_bbtj" 		forward="/pjpy_forward.do?method=bbtjForward"/>		<!-- 报表统计 -->
+	<action path="/pjpy_jxjsq_xn" 	forward="/pjpy_forward.do?method=jxjsqXnForward"/>	<!-- 奖学金申请(校内) -->
+	<action path="/pjpy_jxjsq_xw" 	forward="/pjpy_forward.do?method=jxjsqXwForward"/>	<!-- 奖学金申请(校外) -->
+	<action path="/pjpy_jxjjg" 		forward="/pjpy_forward.do?method=jxjjgForward"/>	<!-- 奖学金申请结果 -->
+	<action path="/pjpy_rychsq" 	forward="/pjpy_forward.do?method=rychsqForward"/>	<!-- 荣誉称号申请 -->
+	<action path="/pjpy_rychjg" 	forward="/pjpy_forward.do?method=rychjgForward"/>	<!-- 荣誉称号申请结果 -->
+	
+	<!-- 操行分 -->
+	<action path="/pjpy_cxfwh" 		forward="/pjpy_forward.do?method=cxfwhForward"/>	<!-- 操行分维护 -->
+	<action path="/pjpy_cxfsh" 		forward="/pjpy_forward.do?method=cxfshForward"/>	<!-- 操行分审核 -->
+	<action path="/pjpy_cxfjg" 		forward="/pjpy_forward.do?method=cxfjgForward"/>	<!-- 操行分结果 -->
+	<action path="/pjpy_cxflr" 		forward="/pjpy_forward.do?method=cxflrForward"/>	<!-- 操行分录入 -->
+	<action path="/pjpy_cxfcx" 		forward="/pjpy_forward.do?method=cxfcxForward"/>	<!-- 操行分查询 -->
+	<action path="/pjpy_cxftj" 		forward="/pjpy_forward.do?method=cxftjForward"/>	<!-- 操行分统计 -->
+	
+	<!-- 问卷调查 -->
+	<action path="/pjpy_wjManage" 	forward="/pjpy_forward.do?method=wjwhForward"/>		<!-- 问卷维护 -->
+	<action path="/pjpy_stManage" 	forward="/pjpy_forward.do?method=stwhForward"/>		<!-- 试题维护 -->
+	<action path="/pjpy_zjManage" 	forward="/pjpy_forward.do?method=zjwhForward"/>		<!-- 组卷维护 -->
+	<action path="/pjpy_hdwjManage" forward="/pjpy_forward.do?method=hdwjForward"/>		<!-- 回答问卷 -->
+	<action path="/pjpy_hdtjManage" forward="/pjpy_forward.do?method=hdtjForward"/>		<!-- 回答统计 -->
+	<action path="/pjpy_hdpjManage" forward="/pjpy_forward.do?method=hdpjForward"/>		<!-- 回答批卷 -->
+	<action path="/pjpy_wjfpManage" forward="/pjpy_forward.do?method=wjfpForward"/>		<!-- 问卷分配 -->
+	
+	<!-- 学生品行评价 -->
+	<action path="/pjpy_pxpj_djrManage" forward="/pjpy_forward.do?method=djrForward"/>		<!-- 答卷人管理 -->
+	<action path="/pjpy_pxpj_wjfp" 		forward="/pjpy_forward.do?method=pxwjfpForward"/>	<!-- 问卷分配 -->
+	<action path="/pjpy_pxpj_pxpj" 		forward="/pjpy_forward.do?method=pxpjForward"/>		<!-- 品行评价 -->
+	<action path="/pjpy_pxpj_pjjg" 		forward="/pjpy_forward.do?method=pjjgForward"/>		<!-- 评价结果 -->
+	
+	<!-- 发展性素质 -->
+	<action path="/fzxszflr" forward="/pjpy_forward.do?method=fzxszflr"/>		<!-- 发展性素质分录入 -->
+	<action path="/fzxszfcx" forward="/pjpy_forward.do?method=fzxszfcx"/>	<!-- 发展性素质分查询 -->
+    
+    <!-- 综合素质总分 -->
+    <action path="/zhszfcx" forward="/pjpy_forward.do?method=zhszfcx" />
+    
+    <!-- 实际路径 -->
+    <action path="/pjpy_forward"  parameter="method"   name="pjpyTyForm"  scope="request"  type="xgxt.pjpy.PjpyTyAction"/>
+    
+	</action-mappings>
+
+</struts-config>

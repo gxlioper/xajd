@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 北京中医药_学情月报-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="bjxqybcsszForm" type="com.zfsoft.xgxt.rcsw.xqybgl.bjxqybgl.bjxqybcssz.BjxqybcsszForm" />
+    	<form-bean name="bjxqybsqForm" type="com.zfsoft.xgxt.rcsw.xqybgl.bjxqybgl.bjxqyb.BjxqybsqForm" />
+    	<form-bean name="bjxqybshForm" type="com.zfsoft.xgxt.rcsw.xqybgl.bjxqybgl.bjxqybsh.BjxqybshForm" />
+		<form-bean name="bjxqybjgForm" type="com.zfsoft.xgxt.rcsw.xqybgl.bjxqybgl.bjxqybjg.BjxqybjgForm" />   
+	</form-beans>
+
+	<action-mappings>
+	
+	<action path="/rcsw_xqybgl_bjxqybgl_bjxqybcssz" forward="/rcsw_xqybgl_bjxqybgl_bjxqybcsszgl.do?method=bjxqybcssz"/>	<!-- 北京中医药_学情月报_班级月报参数设置 -->
+	<action path="/rcsw_xqybgl_bjxqybgl_bjxqybcsszgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.xqybgl.bjxqybgl.bjxqybcssz.BjxqybcsszAction" 
+   			name="bjxqybcsszForm"         
+   			parameter="method">	
+   		<forward name="bjxqybcssz" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybcssz/xqybbjybcssz.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_xqybgl_bjxqybgl_bjxqybsq" forward="/rcsw_xqybgl_bjxqybgl_bjxqybsqgl.do?method=bjxqybsqManage"/>	<!-- 北京中医药_学情月报_班级学情月报申请 -->
+	<action path="/rcsw_xqybgl_bjxqybgl_bjxqybsqgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.xqybgl.bjxqybgl.bjxqyb.BjxqybsqAction" 
+   			name="bjxqybsqForm"         
+   			parameter="method">	
+   		<forward name="bjxqybsqManage" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybsq/bjxqybsqManage.jsp"></forward>
+   		<forward name="addBjxqybsq" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybsq/addBjxqybsq.jsp"></forward> 
+   		<forward name="updateBjxqybsq" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybsq/updateBjxqybsq.jsp"></forward> 	
+   		<forward name="viewBjxqybsq" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybsq/viewBjxqybsq.jsp"></forward> 
+   		<forward name="bjManage" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/comm/bjManage.jsp"></forward>			  		
+	</action>
+	
+	<action path="/rcsw_xqybgl_bjxqybgl_bjxqybsh" forward="/rcsw_xqybgl_bjxqybgl_bjxqybshgl.do?method=bjxqybshManage"/>	<!-- 北京中医药_学情月报_班级学情月报审核 -->
+	<action path="/rcsw_xqybgl_bjxqybgl_bjxqybshgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.xqybgl.bjxqybgl.bjxqybsh.BjxqybshAction" 
+   			name="bjxqybshForm"         
+   			parameter="method">	
+   		<forward name="bjxqybshManage" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybsh/bjxqybshManage.jsp"></forward>	
+   		<forward name="bjxqybDgsh" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybsh/bjxqybDgsh.jsp"></forward>	
+   		<forward name="bjxqybPlsh" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybsh/bjxqybPlsh.jsp"></forward>	  		
+	</action>
+	
+	<action path="/rcsw_xqybgl_bjxqybgl_bjxqybjg" forward="/rcsw_xqybgl_bjxqybgl_bjxqybjggl.do?method=bjxqybjgManage"/>	<!-- 北京中医药_学情月报_班级学情月报审核 -->
+	<action path="/rcsw_xqybgl_bjxqybgl_bjxqybjggl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.xqybgl.bjxqybgl.bjxqybjg.BjxqybjgAction" 
+   			name="bjxqybjgForm"         
+   			parameter="method">	
+   		<forward name="bjxqybjgManage" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybjg/bjxqybjgManage.jsp"></forward>	
+   		<forward name="addBjxqybjg" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybjg/addBjxqybjg.jsp"></forward>  	 
+   		<forward name="updateBjxqybjg" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybjg/updateBjxqybjg.jsp"></forward>
+   		<forward name="viewBjxqybjg" path="/xsgzgl/rcsw/xqybgl/bjxqybgl/bjxqybjg/viewBjxqybjg.jsp"></forward>
+   		  	
+	</action>
+	
+	</action-mappings>
+</struts-config>

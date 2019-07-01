@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="zhcpZcjfForm" type="xgxt.pjpy.comm.zhcp.zcjf.ZhcpZcjfForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/zhcp_zcjf_jfsq" 		forward="/zhcpJfsq.do?method=zcjfsq"/>		<!-- 综测加分申请 -->
+		<action path="/zhcp_zcjf_jfsh" 		forward="/zhcpJfsq.do?method=zcjfsh"/>		<!-- 综测加分审核 -->
+		<action path="/zhcp_zcjf_jfcx" 		forward="/zhcpJfsq.do?method=zcjfcx"/>		<!-- 综测加分查询 -->
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 综测加分 -->
+    	<action path="/zhcpJfsq" 
+        		parameter="method"  
+        		name="zhcpZcjfForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.zhcp.zcjf.ZhcpZcjfAction">	
+		       
+			<forward name="zcjfsq"    			path="/pjpy/comm/zhcp/zcjf/zcjfsq.jsp" />		<!-- 加分申请 -->
+			<forward name="zcjfsh"    			path="/pjpy/comm/zhcp/zcjf/zcjfsh.jsp" />		<!-- 加分审核 -->
+			<forward name="zcjfshDetail"    	path="/pjpy/comm/zhcp/zcjf/zcjfshDetail.jsp" />	<!-- 加分审核详细 -->
+			<forward name="zcjfcx"    			path="/pjpy/comm/zhcp/zcjf/zcjfcx.jsp" />		<!-- 加分查询 -->
+		</action>
+		
+	</action-mappings>
+</struts-config>

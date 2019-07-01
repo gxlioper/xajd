@@ -1,0 +1,17 @@
+#说明：这个文件用于本地与webservice数据对接
+#     以下"="前后不能有空格,并且各个列之间必须是","分隔,一定要用<<半角>>格式
+#     在同一行上的用";"分隔的前一个是必须是本地表，后一个必须是远程提供的service的key；每个"="后面是对应的字段
+# eg:  bks_dwdmb=dwdm,dwmc;zxbz_xxbmdm=bmh,bmmc,id,bmfqid
+#    bks_dwdmb是本地表，zxbz_xxbmdm是远程的webservice提供的用于查询的key
+#    "bks_dwdmb="后的";"之前的是本地表bks_dwdmb的列，"zxbz_xxbmdm="后的"bmh,bmmc,id,bmfqid"是远程的webservice查询过来的数据对应列顺序
+#
+# ★★注意★★：   Ⅰ、在此应严格注意bmh,bmmc,id,bmfqid的排列顺序，要跟getData方法获得的数据的字段顺序对应。如果不能确定顺序，请不要做数据更新操作,否则，就会出现数据混乱的情况！！！
+#			     Ⅱ、必须跟webservice提供方确定用于查询数据的key是不是zxbz_xxbmdm；
+#               Ⅲ、前后的字段必须一一对应，字段数也要一致
+# 
+  zxbz_xxbmdm=bmdm,bmmc,bmjb,bmlb;   zxbz_xxbmdm=bmh,bmmc,id,bmfqid
+  bks_zydm=zydm,bmdm,zymc,zyywmc,xkmldm;   bks_zydm = zydm,bmdm,zymc,zyywmc,xkmldm
+  bks_xsjbxx=xh,xm,xmpy,bmdm,bjdm,xkmldm,zydm,jzgh,mm,cym,pyfs,xslbm,xfzbz,xz,rxny,nj,zjlbm,sfzh,xbm,gatqm,jgm,yydj,xxnx,xjztm,pyfx,zyfx,eje,yxxsbz,lqh,rxfsm,xsdl,ywxtbh,zhgxsj,bz;   bks_xsjbxx=xh,xm,xmpy,bmdm,bjdm,xkmldm,zydm,jzgh,mm,cym,pyfs,xslbm,xfzbz,xz,rxny,nj,zjlbm,sfzh,xbm,gatqm,jgm,yydj,xxnx,xjztm,pyfx,zyfx,eje,yxxsbz,lqh,rxfsm,xsdl,ywxtbh,zhgxsj,bz
+  bks_bjdm=bjdm,bjmc,jzgh,zydm,nj,bmdm,ywxtbh,zhgxsj;bks_bjdm=bjdm,bjmc,jzgh,zydm,nj,bmdm,ywxtbh,zhgxsj;  bks_bjdm_temp=bjdm,bjmc,jzgh,zydm,nj,bmdm,ywxtbh,zhgxsj;bks_bjdm=bjdm,bjmc,jzgh,zydm,nj,bmdm,ywxtbh,zhgxsj
+  bks_xjydxx= xh,ydlbm,ydyy,ydsj,ydsm,ydqxydm,ydqxymc,ydqzydm,ydqzymc,ydqbdm,ydqbjmc,ydqnj,ydhxydm,ydhxymc,ydhzydm,ydhzymc,ydhbdm,ydhbjmc,ydhnj,xn,xq,ydrq,ywxtbh,zhgxsj,ydqxz,ydqxjztm,ydhxz,ydhxjztm;     bks_xjyd=xh,ydlbm,ydyy,ydsj,ydsm,ydqxydm,ydqxymc,ydqzydm,ydqzymc,ydqbdm,ydqbjmc,ydqnj,ydhxydm,ydhxymc,ydhzydm,ydhzymc,ydhbdm,ydhbjmc,ydhnj,xn,xq,ydrq,ywxtbh,zhgxsj,ydqxz,ydqxjztm,ydhxz,ydhxjztm
+  bks_xsqtxx= xh,mzdm,csrq,xxm,zzmmm,hkszd,hyzkm,gbm,jrny,cwrdjjfzrq,tc,hkxzm,lydq,csdm,zjxy,jkzkm,gfsbz,rdjjfz,bybz,bsldbz,bbldbz,pksbz,dpsbz,exwbz,jhsbz,lxsbz,ybybz,ybynf,byzx,ywxtbh,zhgxsj,bz; 	bks_xsqtxx= xh,mzdm,xxm,csrq,zzmmm,hkszd,hyzkm,gbm,jrny,cwrdjjfzrq,tc,hkxzm,lydq,csdm,zjxy,jkzkm,gfsbz,rdjjfz,bybz,bsldbz,bbldbz,pksbz,dpsbz,exwbz,jhsbz,lxsbz,ybybz,ybynf,byzx,ywxtbh,zhgxsj,bz

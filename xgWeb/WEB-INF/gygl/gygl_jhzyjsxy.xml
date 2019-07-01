@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+	<form-bean name="jhzy_gyglForm" type="xgxt.xsgygl.jhzyjsxy.GyglJhzyForm"/>		
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+		<!--展现的路径  金华职业技术学院-->	
+		<action path="/dormCheckManage" forward="/jhzy_gygl.do?method=dormCheckManage"/><!--寝室卫生检查-->	
+		<action path="/fdyrzInfoManage" forward="/jhzy_gygl.do?method=fdyrzInfoManage"/><!--辅导员入住信息-->			
+		<action path="/gydjInfoManage" forward="/jhzy_gygl.do?method=gydjInfoManage"/><!--公寓党建管理-->					
+		<action path="/zghryInfoManage" forward="/jhzy_gygl.do?method=zghryInfoManage"/><!--自管会工作人员管理-->					
+		<action path="/zzxdjcInfoManage" forward="/jhzy_gygl.do?method=zzxdjcInfoManage"/><!--自主熄灯检查管理-->					
+		<action path="/xqInfoManage" forward="/jhzy_gygl.do?method=xqInfoManage"/><!--下寝管理-->					
+		<action path="/gyfdyInfoManage" forward="/jhzy_gygl.do?method=gyfdyInfoManage"/><!--公寓辅导员信息-->					
+		<action path="/gyfdyCheckManage" forward="/jhzy_gygl.do?method=gyfdyCheckManage"/><!--公寓辅导员考核-->					
+		<action path="/wmgylSq" forward="/jhzy_gygl.do?method=wmgylSq"/><!--文明公寓楼申请-->					
+		<action path="/wmgylSh" forward="/jhzy_gygl.do?method=wmgylSh"/><!--文明公寓楼审核-->					
+		<action path="/wmgylManage" forward="/jhzy_gygl.do?method=wmgylManage"/><!--文明公寓楼结果查询-->
+		<action path="/qszManage" forward="/jhzy_gygl.do?method=qszManage"/><!--文明公寓楼结果查询-->	
+		<!--星级文明寝室申请 -->
+		<action path="/xjwmqsSq" forward="/jhzy_gygl.do?method=xjwmqsSq"/><!--星级文明寝室申请-->	
+		<action path="/xjwmqsSh" forward="/jhzy_gygl.do?method=xjwmqsSh"/><!--星级文明寝室审核-->	
+		<action path="/xjwmqsManage" forward="/jhzy_gygl.do?method=xjwmqsManage"/><!--星级文明寝室结果查询-->	
+		<!--行政公寓辅导员 -->
+		<action path="/jhzygyfdy" forward="/jhzy_gygl.do?method=xzgyfdyManager"/>	
+							
+		<!--实际的路径 -->
+		<action path="/jhzy_gygl" parameter="method"  name="jhzy_gyglForm" scope="request"
+		        type="xgxt.xsgygl.jhzyjsxy.GyglJhzyAction">
+		<forward name="gyfdyInfoQuery" path="/gygl/jhzyjsxy/gyfdyInfo/gyfdyInfo_manager.jsp"></forward>   
+		<forward name="gyfdyInfoModify" path="/gygl/jhzyjsxy/gyfdyInfo/gyfdyInfo_modi.jsp"></forward>   
+		<forward name="synFdy" path="/gygl/jhzyjsxy/gyfdyInfo/check_date.jsp"></forward>   
+		<forward name="wmgylsq" path="/gygl/jhzyjsxy/wmgyl/wmgylsq.jsp"></forward> 
+		<forward name="wmgylQuery" path="/gygl/jhzyjsxy/wmgyl/wmgylQuery.jsp"></forward>   
+		<forward name="gyfdyupdate" path="/gygl/jhzyjsxy/wmgyl/gyfdyupdate.jsp"></forward> 
+		<forward name="wmgylSh" path="/gygl/jhzyjsxy/wmgyl/wmgylSh.jsp"></forward>  
+		<forward name="gyfdydgsh" path="/gygl/jhzyjsxy/wmgyl/gyfdydgsh.jsp"></forward>  
+		<forward name="wmgylsqb" path="/gygl/jhzyjsxy/wmgyl/wmgylsqb.jsp"></forward>  
+		<forward name="fdyrzInfoManage" path="/gygl/jhzyjsxy/fdyrzInfoManage.jsp"></forward> 
+		<forward name="fdyRzInfoAdd" path="/gygl/jhzyjsxy/fdyRzInfoAdd.jsp"></forward> 
+		<forward name="qszManage" path="/gygl/jhzyjsxy/qszManage.jsp"></forward>      
+		<forward name="qszAdd" path="/gygl/jhzyjsxy/qszAdd.jsp"></forward>      
+	    <forward name="gydjInfoManage" path="/gygl/jhzyjsxy/gydjInfoManage.jsp"></forward>
+		<forward name="gydjInfoAdd" path="/gygl/jhzyjsxy/gydjInfoAdd.jsp"></forward>
+		<forward name="xjwmqsSq" path="/gygl/jhzyjsxy/xjwmqsSq.jsp"></forward>
+		<forward name="xjwmqsSh" path="/gygl/jhzyjsxy/xjwmqsSh.jsp"></forward>
+		<forward name="xjwmqsManage" path="/gygl/jhzyjsxy/xjwmqsManage.jsp"></forward>
+		<forward name="xjqsSq" path="/gygl/jhzyjsxy/xjqsSq.jsp"></forward>
+		<forward name="xjqsSqb" path="/gygl/jhzyjsxy/xjqsSqb.jsp"></forward>
+		<forward name="xjqsManange" path="/gygl/jhzyjsxy/xjqsManange.jsp"></forward>
+		<forward name="xjqsShManage" path="/gygl/jhzyjsxy/xjqsShManage.jsp"></forward>
+		<forward name="xjqsChek" path="/gygl/jhzyjsxy/xjqsChek.jsp"></forward>				
+        <forward name="gydjInfoManage" path="/gygl/jhzyjsxy/gydjInfoManage.jsp"></forward>
+		<forward name="gydjInfoAdd" path="/gygl/jhzyjsxy/gydjInfoAdd.jsp"></forward>
+		<forward name="qswsjcManage" path="/gygl/jhzyjsxy/qswsjc/qswsjcManage.jsp"></forward> 
+		<forward name="qswsjcManagecx" path="/gygl/jhzyjsxy/qswsjc/qswsjcQuery.jsp"></forward> 
+		<forward name="zghryInfoManage" path="/gygl/jhzyjsxy/zghryInfoManage.jsp"></forward>
+		<forward name="zghryInfoAdd" path="/gygl/jhzyjsxy/zghryInfoAdd.jsp"></forward>			
+        <forward name="qszModi" path="/gygl/jhzyjsxy/qszModi.jsp"></forward>
+        <forward name="gyfdyCheckManage" path="/gygl/jhzyjsxy/gyfdyCheckManage.jsp"></forward>
+        <forward name="gyfdyCheckAdd" path="/gygl/jhzyjsxy/gyfdyCheckAdd.jsp"></forward>				
+	    <forward name="qszModi" path="/gygl/jhzyjsxy/qszModi.jsp"></forward>
+        <forward name="zzxdjcInfoManage" path="/gygl/jhzyjsxy/zzxdjcInfoManage.jsp"></forward>
+        <forward name="zzxdjcQueryDate" path="/gygl/jhzyjsxy/zzxdjcQueryDate.jsp"></forward>	
+        <forward name="xjwmqsXsSqJg" path="/gygl/jhzyjsxy/xjwmqsXsSqJg.jsp"></forward>	
+        <forward name="zzxdjcTj" path="/gygl/jhzyjsxy/zzxdjcTj.jsp"></forward>
+        <forward name="xzgyfdy" path="/gygl/jhzyjsxy/gyfdyInfo/xzgyfdyManager.jsp"></forward>
+		</action>
+		<!--优秀楼层寝室长 -->
+		<action path="/yxlcqszSq" forward="/jhzy_yxlcqsz.do?method=yxlcqszSq"/><!--优秀楼层寝室申请-->					
+		<action path="/yxlcqszSh" forward="/jhzy_yxlcqsz.do?method=yxlcqszSh"/><!--优秀楼层寝室审核-->					
+		<action path="/yxlcqszManage" forward="/jhzy_yxlcqsz.do?method=yxlcqszManage"/><!--优秀楼层寝室结果查询-->							
+		<!--实际的路径 -->
+		 <action path="/jhzy_yxlcqsz" parameter="method"  name="jhzy_gyglForm" scope="request"
+		        type="xgxt.xsgygl.jhzyjsxy.yxlcqsz.YxlcqszAction">
+		 <forward name="yxlcqszSq" path="/gygl/jhzyjsxy/yxlcqsz/yxlcqszSq.jsp" /> 
+		 <forward name="yxlcqszSh" path="/gygl/jhzyjsxy/yxlcqsz/yxlcqszSh.jsp" /> 
+		 <forward name="yxlcqszManage" path="/gygl/jhzyjsxy/yxlcqsz/yxlcqszManage.jsp" />
+		 <forward name="bjqszSq" path="/gygl/jhzyjsxy/yxlcqsz/bjqszSq.jsp" />   
+		 <forward name="bjqszManange" path="/gygl/jhzyjsxy/yxlcqsz/bjqszManange.jsp" /> 
+		 <forward name="bjqszShManage" path="/gygl/jhzyjsxy/yxlcqsz/bjqszShManage.jsp" /> 
+		 <forward name="bjqszChek" path="/gygl/jhzyjsxy/yxlcqsz/bjqszChek.jsp" /> 
+		 <forward name="esjczSq" path="/gygl/jhzyjsxy/yxlcqsz/esjczSq.jsp" /> 
+		 <forward name="esjczManange" path="/gygl/jhzyjsxy/yxlcqsz/esjczManange.jsp" /> 
+		 <forward name="esjczShManage" path="/gygl/jhzyjsxy/yxlcqsz/esjczShManage.jsp" /> 
+		 <forward name="esjczChek" path="/gygl/jhzyjsxy/yxlcqsz/esjczChek.jsp" /> 
+		 <forward name="wjlzSq" path="/gygl/jhzyjsxy/yxlcqsz/wjlzSq.jsp" /> 
+		 <forward name="wjlzManange" path="/gygl/jhzyjsxy/yxlcqsz/wjlzManange.jsp" />
+		 <forward name="wjlzShManage" path="/gygl/jhzyjsxy/yxlcqsz/wjlzShManage.jsp" /> 
+		 <forward name="wjlzChek" path="/gygl/jhzyjsxy/yxlcqsz/wjlzChek.jsp" />  
+		 <forward name="bjqszSqb" path="/gygl/jhzyjsxy/yxlcqsz/bjqszSqb.jsp" /> 
+		 <forward name="esjczSqb" path="/gygl/jhzyjsxy/yxlcqsz/esjczSqb.jsp" /> 
+		 <forward name="wjlzSqb" path="/gygl/jhzyjsxy/yxlcqsz/wjlzSqb.jsp" /> 
+		 <forward name="yxlcqszXsSqJg" path="/gygl/jhzyjsxy/yxlcqsz/yxlcqszXsSqJg.jsp" />                             
+		</action>
+	</action-mappings>
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources"/>
+</struts-config>

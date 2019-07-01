@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/studentHkzt.do" location="650,250" dimension="322,84" />
+  <StrutsActivity path="/xsxx/csmzzyjsxy/stu_hkzt_mod.jsp" location="350,50" dimension="238,48" />
+  <StrutsActivity path="/xsxx/csmzzyjsxy/stu_hkzt_add.jsp" location="950,150" dimension="238,48" />
+  <StrutsActivity path="/xsxx/csmzzyjsxy/stu_hkzt_query.jsp" location="650,150" dimension="250,48" />
+  <StrutsActivity path="/xsxx/zzdx/printGjbb.jsp" location="0,196" dimension="184,48" />
+  <StrutsActivity path="about:blank" location="490,196" dimension="106,48" />
+  <StrutsActivity path="/xsxx/csmzzyjsxy/stu_hkzt_querry.jsp" location="50,350" dimension="256,48" />
+  <StrutsTransition id="/studentHkzt.do,hkztAdd,/xsxx/csmzzyjsxy/stu_hkzt_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="965,250" />
+      <AbsolutePoint location="965,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentHkzt.do,hkztMod,/xsxx/csmzzyjsxy/stu_hkzt_mod.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="811,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentHkzt.do,success,/xsxx/csmzzyjsxy/stu_hkzt_query.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="811,250" />
+      <AbsolutePoint location="811,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

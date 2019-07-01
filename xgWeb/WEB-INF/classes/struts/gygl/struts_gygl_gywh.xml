@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="gyglGywhForm" type="xgxt.gygl.gywh.GyglGywhForm"/>
+		<form-bean name="gyglZjjsXszdForm" type="xgxt.gygl.zjjs.xszd.GyglXszdForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/gygl_gywh_jcsj" 	forward="/gyglGywh.do?method=jcsjwhManage"/>		<!-- 公寓分配_基础数据维护 -->
+		<action path="/gygl_gywh_ywsj" 	forward="/gyglGywh.do?method=ywsjwhManage"/>		<!-- 公寓分配_业务数据维护 -->
+		<action path="/gygl_gywh_ldwh" 	forward="/gyglGywh.do?method=ldwhManage"/>			<!-- 公寓分配_楼栋维护 -->
+		<action path="/gygl_gywh_qswh" 	forward="/gyglGywh.do?method=qswhManage"/>			<!-- 公寓分配_寝室维护 -->
+		<action path="/gygl_gywh_zdsc" 	forward="/gyglGywh.do?method=zdscManage"/>			<!-- 公寓分配_自动生成寝室 -->
+		
+		<action path="/gygl_zjjs_zdsq" 	forward="/gyglZjjs.do?method=xszdsq"/>				<!-- 浙江建设_走读申请 -->
+		<action path="/gygl_zjjs_zdsh" 	forward="/gyglZjjs.do?method=xszdsh"/>				<!-- 浙江建设_走读审核 -->
+		<action path="/gygl_zjjs_zdjg" 	forward="/gyglZjjs.do?method=xszdManage"/>			<!-- 浙江建设_走读结果 -->
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 公寓维护 -->
+    	<action path="/gyglGywh" 
+        		parameter="method"  
+        		name="gyglGywhForm" 
+        		scope="request"
+		        type="xgxt.gygl.gywh.GyglGywhAction">	
+		       
+		    <forward name="jcsjwh"    	path="/gygl/comm/gywh/jcsjwhManage.jsp" />		<!-- 基础数据维护管理 -->
+		    <forward name="ywsjwh"    	path="/gygl/comm/gywh/ywsjwhManage.jsp" />		<!-- 业务数据维护管理 -->
+		    <forward name="ldwhManage"  path="/gygl/comm/gywh/ldwhManage.jsp" />		<!-- 楼栋数据维护管理 -->
+		    <forward name="xqxxwh"    	path="/gygl/comm/gywh/xqxxwh.jsp" />			<!-- 校区信息维护 -->
+			<forward name="yqxxwh"    	path="/gygl/comm/gywh/yqxxwh.jsp" />			<!-- 园区信息维护 -->
+			<forward name="ldxxwh"    	path="/gygl/comm/gywh/ldxxwh.jsp" />			<!-- 楼栋信息维护 -->
+			<forward name="qswhManage"  path="/gygl/comm/gywh/qswhManage.jsp" />		<!-- 寝室信息维护管理 -->
+			<forward name="qsxxwh"    	path="/gygl/comm/gywh/qsxxwh.jsp" />			<!-- 寝室信息维护 -->
+			<forward name="updateQsxx"  path="/gygl/comm/gywh/updateQsxx.jsp" />		<!-- 寝室信息维护(详细) -->
+			<forward name="zdscManage"  path="/gygl/comm/gywh/zdscManage.jsp" />		<!-- 自动生成寝室 -->
+			<forward name="ldxxxx"		path="/gygl/comm/gywh/ldxxxx.jsp" />			<!-- 楼栋详细信息 -->
+			<forward name="zsxxInfo"    path="/gygl/comm/gywh/zsxxInfo.jsp" />			<!-- 学生住宿信息（详细） -->
+		</action>
+		
+		<!-- 浙江建设 -->
+    	<action path="/gyglZjjs" 
+        		parameter="method"  
+        		name="gyglZjjsXszdForm" 
+        		scope="request"
+		        type="xgxt.gygl.zjjs.xszd.GyglXszdAction">	
+		       
+		    <forward name="xszdsq"    	path="/gygl/zjjs/xszd/xszdsq.jsp" />
+		    <forward name="xszdsh"    	path="/gygl/zjjs/xszd/xszdsh.jsp" />
+		    <forward name="xszdManage"  path="/gygl/zjjs/xszd/xszdManage.jsp" />
+		    <forward name="xszdDetail"  path="/gygl/zjjs/xszd/xszdDetail.jsp" />
+		    <forward name="printSqb"  path="/gygl/zjjs/xszd/printSqb.jsp" />
+		</action>
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>
+		<!--	转移到西北二民院的配置文件,pjpy_xbemy.xml    -->
+		<action path="/xysbjxjDefault" 	forward="/xysbjxj.do?method=xysbjxjDefault"></action>
+		<action path="/xysbjxjSearch"  	forward="/xysbjxj.do?method=xysbjxjSearch" ></action>
+		<action path="/xyjxjSh"  	    forward="/xysbjxj.do?method=xyjxjSh" ></action>
+		<action path="/xyjxjshjgDefault"    forward="/xysbjxj.do?method=xyjxjshjgDefault"></action>
+		<action path="/xyshjxjjgQry" forward="/xysbjxj.do?method=xyshjxjjgQry"></action>
+	</action-mappings>
+</struts-config>

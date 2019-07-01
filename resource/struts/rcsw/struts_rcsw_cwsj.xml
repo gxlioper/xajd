@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+    	<form-bean name="cwsjForm" type="com.zfsoft.xgxt.rcsw.cwsjcx.CwsjForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/rcsw_cwsj_qfsjcx" 		forward="/rcsw_cwsj.do?method=getCwsjList"/>		<!--  -->
+	
+		<action path="/rcsw_cwsj" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.cwsjcx.CwsjAction" 
+    			name="cwsjForm"
+    			parameter="method">	
+    			<forward name="cwsjlist" path="/xsgzgl/rcsw/cwsj/general/cwsjList.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+</struts-config>

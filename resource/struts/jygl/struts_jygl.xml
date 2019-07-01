@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="jyglActionForm" type="xgxt.jygl.comman.JyglForm" />
+	</form-beans>
+	
+	<action-mappings>
+		
+		<!--参数设置 -->
+		<action path="/jygl_cssz" forward="/jygl.do?method=cssz"/>
+	
+		<action path="/jygl_bdsz" forward="/bdsz.do?method=bdszManage&amp;mkmc=jygl"/>
+		<action path="/jygl_sqbb" forward="/jygl.do?method=tjbBb"/>
+		<action path="/jygl_bbsh" forward="/jygl.do?method=tjbSh"/>
+		<action path="/jygl_bbcx" forward="/jygl.do?method=tjbcx"/>
+		<action path="/jygl_byssb" forward="/jygl.do?method=byssbManage"/>
+		<action path="/jygl_bysxc" forward="/jygl.do?method=bysxc"/>
+		<action path="/jygl_byssh" forward="/jygl.do?method=bysshcx"/>
+		<action path="/jygl_jyxywh" forward="/jygl.do?method=jyxywh"/>
+		<action path="/jygl_jyxysh" forward="/jygl.do?method=jyxysh"/>
+		<action path="/jygl_jyxycx" forward="/jygl.do?method=jyxycx"/>
+		<action path="/jygl_jysbkg" forward="/jygl.do?method=jysbkg"/>
+		<action path="/jygl_xyslq" forward="/jygl.do?method=xyslqManage"/>
+		<action path="/jygl_xysbb" forward="/jygl.do?method=xysbbsq"/>
+		<action path="/jygl_xysbbsh" forward="/jygl.do?method=xysbbsh"/>
+		<action path="/jygl_xysbbjg" forward="/jygl.do?method=xysbbjg"/>
+		<action path="/jyxgtj" forward="/jygl.do?method=jyxgtj"/>
+		
+		<!--就业协议书管理 -->
+		<action path="/jygl_jyxybhwh" forward="/jygl.do?method=jyxybhwh"/>
+		<action path="/jygl_xyslqdj" forward="/jygl.do?method=xyslqdj"/>
+		<action path="/jygl_xysblsq" forward="/jygl.do?method=xysblsq&amp;flg=sq"/>
+		<action path="/jygl_xysblsh" forward="/jygl.do?method=xysblsh"/>
+		<action path="/jygl_xysblcx" forward="/jygl.do?method=xysblcx"/>
+		
+		
+		<!--北京协和个性化菜单 -->
+		<action path="/jygl_gp" forward="/jygl.do?method=jygp"/>
+		<action path="/jygl_ecfp" forward="/jygl.do?method=ecfpManage"/>
+		
+		<!---地质大学就业-->
+		<action path="/jygl_zgdd_bysxc" forward="/jygl.do?method=zgddByscx"/>
+		<action path="/jygl_zgdd_byssh" forward="/jygl.do?method=zgddByssh"/>
+		<action path="/jygl_zgdd_jyxywh" forward="/jygl.do?method=zgddJyxywh"/>
+		<action path="/jygl_zgdd_jyxycx" forward="/jygl.do?method=zgddJyxycx"/>
+		<action path="/jygl_zgdd_jyxysh" forward="/jygl.do?method=zgddJyxysh"/>
+		
+		<!--浙江科技个性化菜单 -->
+		<action path="/jygl_jytjbdj" forward="/jygl.do?method=jytjbdj"/>
+		<action path="/jygl_jytjbsh" forward="/jygl.do?method=jytjbsh"/>
+		<action path="/jygl_jytjbjg" forward="/jygl.do?method=jytjbjg"/>
+		<action path="/jygl_dawksb" forward="/jygl.do?method=dawksb"/>
+		<action path="/jygl_dawksh" forward="/jygl.do?method=dawksh"/>
+		<action path="/jygl_dawkcx" forward="/jygl.do?method=dawkcx"/>
+		<action path="/jygl_fclr" forward="/jygl.do?method=fclr"/>
+		<action path="/jygl_fcsh" forward="/jygl.do?method=fcsh"/>
+		<action path="/jygl_fccx" forward="/jygl.do?method=fccx"/>
+		<action path="/jygl_yxbyssb" forward="/jygl.do?method=yxbyssb"/>
+		<action path="/jygl_yxbyssh" forward="/jygl.do?method=yxbyssh"/>
+		<action path="/jygl_yxbyscx" forward="/jygl.do?method=yxbyscx"/>
+		
+		
+		<!--浙江科技就业工作数据汇总 -->
+		<action path="/jygl_jysjjdsb" forward="/jygl.do?method=jysjjdsb"/>
+		<action path="/jygl_jysjjdsh" forward="/jygl.do?method=jysjjdsh"/>
+		<action path="/jygl_jysjjdcx" forward="/jygl.do?method=jysjjdcx"/>
+		<action path="/jygl_jygzzphsb" forward="/jygl.do?method=jygzzphsb"/>
+		<action path="/jygl_jygzzphsh" forward="/jygl.do?method=jygzzphsh"/>
+		<action path="/jygl_jygzzphcx" forward="/jygl.do?method=jygzzphcx"/>
+		<action path="/jygl_jygzhysb" forward="/jygl.do?method=jygzhysb"/>
+		<action path="/jygl_jygzhysh" forward="/jygl.do?method=jygzhysh"/>
+		<action path="/jygl_jygzhycx" forward="/jygl.do?method=jygzhycx"/>
+		<action path="/jygl_jyzdjzsb" forward="/jygl.do?method=jyzdjzsb"/>
+		<action path="/jygl_jyzdjzsh" forward="/jygl.do?method=jyzdjzsh"/>
+		<action path="/jygl_jyzdjzcx" forward="/jygl.do?method=jyzdjzcx"/>
+		<action path="/jygl_jysszsb" forward="/jygl.do?method=jysszsb"/>
+		<action path="/jygl_jysszsh" forward="/jygl.do?method=jysszsh"/>
+		<action path="/jygl_jysszcx" forward="/jygl.do?method=jysszcx"/>
+		<action path="/jygl_qyxxsb" forward="/jygl.do?method=qyxxsb"/>
+		<action path="/jygl_qyxxsh" forward="/jygl.do?method=qyxxsh"/>
+		<action path="/jygl_qyxxcx" forward="/jygl.do?method=qyxxcx"/>
+		<action path="/jygl_kykgsq" forward="/jygl.do?method=kykgsq"/>
+		<action path="/jygl_kykgsh" forward="/jygl.do?method=bysksManage&amp;doType=sh"/>
+		<action path="/jygl_kykgcx" forward="/jygl.do?method=bysksManage&amp;doType=cx"/>
+		<action path="/jygl_jyyzsq" forward="/jygl.do?method=jyyzUpdate"/>
+		<action path="/jygl_jyyzsh" forward="/jygl.do?method=jyyzManage&amp;mk=sh"/>
+		<action path="/jygl_jyyzcx" forward="/jygl.do?method=jyyzManage&amp;mk=cx"/>
+		
+		<action 
+			name="jyglActionForm" 
+			parameter="method"
+			path="/jygl" 
+			scope="request"
+			type="xgxt.jygl.comman.JyglAction">
+			
+			<forward name="cssz" path="/jygl/jygl/cssz.jsp"/>
+			<forward name="syxxData" path="/jygl/jygl/syxxData.jsp"/>
+			<forward name="xysData" path="/jygl/jygl/xysData.jsp"/>
+			<forward name="tjbBb" path="/jygl/tjbbb/tjbbb.jsp" />
+			<forward name="tjbSh" path="/jygl/tjbbb/tjbSh.jsp"/>
+			<forward name="showTjb" path="/jygl/tjbbb/tjbbb.jsp"/>
+			<forward name="tjbcx" path="/jygl/tjbbb/tjbcx.jsp"/>
+			<forward name="jyglData" path="/jygl/tjbbb/jyglData.jsp"/>
+			<forward name="byssbManage" path="/jygl/jygl/byssbManage.jsp"/>
+			<forward name="byssb" path="/jygl/jygl/byssb.jsp"/>
+			<forward name="bysxc" path="/jygl/jygl/bysxc.jsp"/>
+			<forward name="bysUpdate" path="/jygl/jygl/ty_bysUpdate.jsp"/>
+			<forward name="byssh" path="/jygl/jygl/byssh.jsp"/>
+			<forward name="jyxywh" path="/jygl/jygl/ty_jyxywh.jsp"/>
+			<forward name="jyxysh" path="/jygl/jygl/jyxysh.jsp"/>
+			<forward name="jyxycx" path="/jygl/jygl/jyxycx.jsp"/>
+			<forward name="jyxyShow" path="/jygl/jygl/ty_jyxyShow.jsp"/>
+			<forward name="xyslqManage" path="/jygl/jygl/xyslqManage.jsp"/>
+			<forward name="xyslqUpdate" path="/jygl/jygl/xyslqUpdate.jsp"/>
+			<forward name="jyxyData" path="/jygl/jygl/jyxyData.jsp"/>
+			<forward name="xysbbsq" path="/jygl/jygl/xysbbsq.jsp"/>
+			<forward name="dmwh" path="/jygl/jygl/dmwh.jsp"/>
+			<forward name="zgdwUpdate" path="/jygl/jygl/zgdwUpdate.jsp"/>
+			<forward name="yrdwUpdate" path="/jygl/jygl/yrdwUpdate.jsp"/>
+			<forward name="jysbkg" path="/jygl/jygl/jysbkg.jsp"/>
+			<forward name="xysbbsh" path="/jygl/jygl/xysbbsh.jsp"/>
+			<forward name="xysbbjg" path="/jygl/jygl/xysbbjg.jsp"/>
+			<forward name="jygp" path="/jygl/bjxh/jygp.jsp"/>
+			<forward name="jygpUpdate" path="/jygl/bjxh/jygpUpdate.jsp"/>
+			<forward name="ecfpManage" path="/jygl/bjxh/ecfpManage.jsp"/>
+			<forward name="ecfpUpdate" path="/jygl/bjxh/ecfpUpdate.jsp"/>
+			<forward name="compayData" path="/jygl/jygl/compayData.jsp"/>
+			<forward name="companyUpdate" path="/jygl/jygl/companyUpdate.jsp"/>
+			<forward name="jyxgtj" path="/jygl/jygl/jyxgtj.jsp"/>
+			
+			<forward name="jyxybhwh" path="/jygl/jygl/jyxybhwh.jsp"/>
+			<forward name="xyslqdj" path="/jygl/jygl/xyslqdj.jsp"/>
+			<forward name="xysblsq" path="/jygl/jygl/xysblsq.jsp"/>
+			<forward name="xysblsh" path="/jygl/jygl/xysblsh.jsp"/>
+			<forward name="xysblcx" path="/jygl/jygl/xysblcx.jsp"/>
+			
+			<!--浙江科技个性化 -->
+			<forward name="jytjbdj" path="/jygl/zjkj/jytjbdj.jsp"/>
+			<forward name="jytjbsh" path="/jygl/zjkj/jytjbsh .jsp"/>
+			<forward name="jytjbjg" path="/jygl/zjkj/jytjbjg .jsp"/>
+			<forward name="pritnJytjb" path="/jygl/zjkj/pritnJytjb.jsp"/>
+			<forward name="dawksb" path="/jygl/zjkj/dawksb.jsp"/>
+			<forward name="dawksh" path="/jygl/zjkj/dawksh.jsp"/>
+			<forward name="dawkcx" path="/jygl/zjkj/dawkcx.jsp"/>
+			<forward name="dahkUpdate" path="/jygl/zjkj/dahkUpdate.jsp"/>
+			<forward name="fclr" path="/jygl/zjkj/fclr.jsp"/>
+			<forward name="fcsh" path="/jygl/zjkj/fcsh.jsp"/>
+			<forward name="fccx" path="/jygl/zjkj/fccx.jsp"/>
+			<forward name="printFcl" path="/jygl/zjkj/printFcl.jsp"/>
+			<forward name="yxbyssb" path="/jygl/zjkj/yxbyssb.jsp"/>
+			<forward name="yxbyssh" path="/jygl/zjkj/yxbyssh.jsp"/>
+			<forward name="yxbyscx" path="/jygl/zjkj/yxbyscx.jsp"/>
+			<forward name="jysjjdsb" path="/jygl/zjkj/jysjjdsb.jsp"/>
+			<forward name="jysjjdsh" path="/jygl/zjkj/jysjjdsh.jsp"/>
+			<forward name="jysjjdcx" path="/jygl/zjkj/jysjjdcx.jsp"/>
+			<forward name="jygzzphsb" path="/jygl/zjkj/jygzzphsb.jsp"/>
+			<forward name="jygzzphsh" path="/jygl/zjkj/jygzzphsh.jsp"/>
+			<forward name="jygzzphcx" path="/jygl/zjkj/jygzzphcx.jsp"/>
+			<forward name="jygzhysb" path="/jygl/zjkj/jygzhysb.jsp"/>
+			<forward name="jygzhysh" path="/jygl/zjkj/jygzhysh.jsp"/>
+			<forward name="jygzhycx" path="/jygl/zjkj/jygzhycx.jsp"/>
+			<forward name="jyzdjzsb" path="/jygl/zjkj/jyzdjzsb.jsp"/>
+			<forward name="jyzdjzsh" path="/jygl/zjkj/jyzdjzsh.jsp"/>
+			<forward name="jyzdjzcx" path="/jygl/zjkj/jyzdjzcx.jsp"/>
+			<forward name="jysszsb" path="/jygl/zjkj/jysszsb.jsp"/>
+			<forward name="jysszsh" path="/jygl/zjkj/jysszsh.jsp"/>
+			<forward name="jysszcx" path="/jygl/zjkj/jysszcx.jsp"/>
+			<forward name="qyxxsb" path="/jygl/zjkj/qyxxsb.jsp"/>
+			<forward name="qyxxsh" path="/jygl/zjkj/qyxxsh.jsp"/>
+			<forward name="qyxxcx" path="/jygl/zjkj/qyxxcx.jsp"/>
+			<forward name="kykgsq" path="/jygl/zjkj/kykgsq.jsp"/>
+			<forward name="bysksUpdate" path="/jygl/zjkj/bysksUpdate.jsp" />
+			<forward name="bysksView" path="/jygl/zjkj/bysksView.jsp" />
+			<forward name="bysksManage" path="/jygl/zjkj/bysksManage.jsp" />
+			<forward name="jyyzUpdate" path="/jygl/zjkj/jyyzUpdate.jsp"/>
+			<forward name="jyyzView" path="/jygl/zjkj/jyyzView.jsp" />
+			<forward name="jyyzManage" path="/jygl/zjkj/jyyzManage.jsp" />
+			
+			<!---地质大学就业-->
+			<forward name="zgddByscx" path="/jygl/zgdd/zgddByscx.jsp"/>
+			<forward name="zgddByssh" path="/jygl/zgdd/zgddByssh.jsp"/>
+			<forward name="zgddBysUpdate" path="/jygl/zgdd/zgddBysUpdate.jsp"/>
+			<forward name="zgddJyxywh" path="/jygl/zgdd/zgddJyxywh.jsp"/>
+			<forward name="zgddJyxycx" path="/jygl/zgdd/zgddJyxycx.jsp"/>
+			<forward name="zgddJyxysh" path="/jygl/zgdd/zgddJyxysh.jsp"/>
+			<forward name="zgddJyxyShow" path="/jygl/zgdd/zgddJyxyShow.jsp"/>
+		</action>
+		
+		
+		<action 
+			name="jyglActionForm" 
+			parameter="method"
+			path="/jyglAjax" 
+			scope="request"
+			type="xgxt.jygl.comman.JyglAjaxAction">
+			
+		</action>
+        
+	</action-mappings>
+
+</struts-config>

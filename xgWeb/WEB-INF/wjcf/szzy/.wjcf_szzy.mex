@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/szzykqxxwh.do" location="650,50" dimension="220,84" />
+  <StrutsActivity path="/wjcf/szzy/wjcf_szzy_addkqxx.jsp" location="950,150" dimension="232,48" />
+  <StrutsActivity path="/wjcf/szzy/wjcf_szzy_kqxxwh.jsp" location="350,150" dimension="226,48" />
+  <StrutsActivity path="wjcf/szzy/wjcf_szzy_kqxxwh.jsp" location="350,50" dimension="220,48" />
+  <StrutsActivity path="/pjpy/xibeierminyuan/pjpy_xbemy_xysbjxj.jsp" location="0,196" dimension="298,48" />
+  <StrutsActivity path="" location="950,50" dimension="40,48" />
+  <StrutsActivity path="/" location="350,250" dimension="46,48" />
+  <StrutsActivity path="/szzykqxxquery" location="650,250" dimension="124,48" />
+  <StrutsActivity path="//wjcf/szzy/wjcf_szzy_addkqxx.jsp" location="950,250" dimension="238,48" />
+  <StrutsActivity path="/wjcf/szzy/wjcf_szzy_kqxxcc.jsp" location="50,350" dimension="226,48" />
+  <StrutsActivity path="/wjcf/szzy/wjcf_szzy_kqxxview.jsp" />
+  <StrutsTransition id="/szzykqxxwh.do,szzy_kqxxcc,/wjcf/szzy/wjcf_szzy_kqxxcc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="790,134" />
+      <AbsolutePoint location="790,374" />
+      <AbsolutePoint location="276,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/szzykqxxwh.do,wjcfkqxxwh,/wjcf/szzy/wjcf_szzy_kqxxwh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="760,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/szzykqxxwh.do,szzy_savekqxx,/wjcf/szzy/wjcf_szzy_addkqxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="870,113" />
+      <AbsolutePoint location="1066,113" />
+      <AbsolutePoint location="1066,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/szzykqxxwh.do,szzy_addkqxx,/wjcf/szzy/wjcf_szzy_addkqxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="760,134" />
+      <AbsolutePoint location="760,174" />
+      <AbsolutePoint location="950,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/szzykqxxwh.do,szzy_kqxxview,/wjcf/szzy/wjcf_szzy_kqxxview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="760,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyZjjdActionForm" type="xgxt.pjpy.zjjd.PjpyZjjdActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+	    <!--展现的路径  浙江机电-->
+		<action path="/gybxfManage" forward="/pjpyzjjdwh.do?method=gybxfManage"/>		
+		<!--实际的路径 -->
+		<action path="/pjpyzjjdwh"
+				type="xgxt.pjpy.zjjd.PjpyZjjdAction"
+				name="pjpyZjjdActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="xybxfadd"       path="/pjpy/zjjd/xybxfadd.jsp" />
+			<forward name="add"            path="/pjpy/zjjd/xybxf/add.jsp"></forward>
+			<forward name="xybxfview"      path="/pjpy/zjjd/xybxf/modi.jsp"></forward>
+			<forward name="xybxfshdefault" path="/pjpy/zjjd/xybxf/sh.jsp"></forward>
+			<forward name="xybxfshview"    path="/pjpy/zjjd/xybxf/shview.jsp"></forward>
+			<forward name="xxgbdyfjfwh"    path="/pjpy/zjjd/xxgbdyfjf/default.jsp"></forward>
+			<forward name="xsgbdyfjfadd"   path="/pjpy/zjjd/xxgbdyfjf/add.jsp"></forward>
+			<forward name="xsgbdyfmodi"    path="/pjpy/zjjd/xxgbdyfjf/modi.jsp"></forward>
+			<forward name="zhszcpwh"       path="/pjpy/zjjd/zhszcp/default.jsp"></forward>
+			<forward name="zhszcpadd"      path="/pjpy/zjjd/zhszcp/add.jsp"></forward>
+			<forward name="zhszcpview"     path="/pjpy/zjjd/zhszcp/modi.jsp"></forward>
+			<forward name="jxjsqdefault"   path="/pjpy/zjjd/jxj/sq.jsp"></forward>
+			<forward name="jxjsqqrydefault" path="/pjpy/zjjd/jxj/sqqry.jsp"></forward>
+			<forward name="jxjadd"         path="/pjpy/zjjd/jxj/add.jsp"></forward>
+			<forward name="jxjmodiview"    path="/pjpy/zjjd/jxj/modi.jsp"></forward>
+			<forward name="rychsq"         path="/pjpy/zjjd/rych/sq.jsp"></forward>
+			<forward name="rychsqqry"      path="/pjpy/zjjd/rych/sqqry.jsp"></forward>
+			<forward name="rychadd"        path="/pjpy/zjjd/rych/add.jsp"></forward>
+			<forward name="rychview"       path="/pjpy/zjjd/rych/modi.jsp"></forward>
+			<forward name="stujxjqry"      path="/pjpy/zjjd/stujxjqry.jsp"></forward>
+			<forward name="gybxfManage"    path="/pjpy/zjjd/gybxf/gybxf.jsp"></forward>
+			<forward name="gybxfOne"       path="/pjpy/zjjd/gybxf/gybxfOne.jsp"></forward>
+		</action>
+
+	</action-mappings>
+	<message-resources key="pjpyzjjd" parameter="xgxt.pjpy.zjjd.pjpyzjjd" />
+</struts-config>

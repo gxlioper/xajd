@@ -1,0 +1,23 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xwzswhForm" type="xgxt.rcgl.nbty.XwzswhForm"></form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+		<!--宁波天一职业技术学院   校外住宿维护-->
+		<action path="/rcsw_xwzswh"
+				name="xwzswhForm"
+				type="xgxt.rcgl.nbty.XwzswhAction"
+				scope="request"
+				parameter="method">
+			<forward name="xwzswh" path="/rcsw/nbty/xwzswh.jsp"></forward>
+			<forward name="xwzsAdd" path="/rcsw/nbty/xwzsAdd.jsp"></forward>
+			<forward name="xwzsModi" path="/rcsw/nbty/xwzsModi.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

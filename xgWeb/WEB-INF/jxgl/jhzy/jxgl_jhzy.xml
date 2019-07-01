@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="jhzyJxglForm" type="xgxt.jxgl.jhzy.JxglJhzyForm" />
+	</form-beans>
+ 	<action-mappings>
+ 		<!-- 显示路径 -->
+        <action path="/jxglZzld" forward="/jxgl_jhzy.do?method=zzldManage"/>	<!-- 组织领导 -->
+        <action path="/jxrcZtManage" forward="/jxgl_jhzy.do?method=jxrcZtManage"/>	<!-- 整体安排 -->
+        <action path="/jxrcJtManage" forward="/jxgl_jhzy.do?method=jxrcJtManage"/>	<!-- 具体安排 -->
+        <action path="/jxrcBbManage" forward="/jxgl_jhzy.do?method=jxrcBbManage"/>	<!-- 日程表下载 -->
+		<!-- 实际路径 -->
+        <action path="/jxgl_jhzy" 
+        		parameter="method"  
+        		name="jhzyJxglForm" 
+        		scope="request"
+		        type="xgxt.jxgl.jhzy.JxglJhzyAction">
+		        
+		<!-- 组织领导管理 -->
+		<forward name="zzldManage" path="/jxgl/jhzy/zzld_Manage.jsp" />
+		<forward name="zzldUpdate" path="/jxgl/jhzy/zzld_Update.jsp" />
+		<!-- 军训日程管理 -->
+		<forward name="jxrcZtManage" path="/jxgl/jhzy/jxrc/jxrcZtManage.jsp"/>		
+		<forward name="jxztrcsz" path="/jxgl/jhzy/jxrc/jxztrcsz.jsp" />
+		<forward name="jxrcZtAdd" path="/jxgl/jhzy/jxrc/jxrcZtAdd.jsp" />
+		<forward name="jxrcJtManage" path="/jxgl/jhzy/jxrc/jxrcJtManage.jsp" />
+		<forward name="jxrcJtAdd" path="/jxgl/jhzy/jxrc/jxrcJtAdd.jsp" />
+		<forward name="jxrcBbManage" path="/jxgl/jhzy/jxrc/jxrcBbManage.jsp" />
+		<forward name="expdata" path="/about:blank" />
+		</action>
+	</action-mappings>
+	<message-resources key="zjlgPjpy" parameter="xgxt.pjpy.zjlg.zjlgPjpy" />
+
+</struts-config>

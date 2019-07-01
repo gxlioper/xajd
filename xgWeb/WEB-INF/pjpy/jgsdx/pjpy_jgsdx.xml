@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyJgsdxActionForm" type="xgxt.pjpy.jgsdx.PjpyJgsdxActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpyjgsdxwh"
+				type="xgxt.pjpy.jgsdx.PjpyJgsdxAction"
+				name="pjpyJgsdxActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="zyjxjsbdefault"       path="/pjpy/jgsdx/zyjxjsbdefault.jsp" />
+			<forward name="zhszandxxcj"          path="/pjpy/jgsdx/zhszandxxcj.jsp"></forward>
+			<forward name="zyjxjprint"           path="/pjpy/jgsdx/zyjxjprint.jsp"></forward>
+			<forward name="rysqdefault"          path="/pjpy/jgsdx/rysqdefault.jsp"></forward>
+			<forward name="wmbjsqdefault"        path="/pjpy/jgsdx/wmbjsqdefault.jsp"></forward>
+			<forward name="rychcxdefault"        path="/pjpy/jgsdx/rychcxdefault.jsp"></forward>
+			<forward name="wmbjcxdefault"        path="/pjpy/jgsdx/wmbjcxdefault.jsp"></forward>
+			<forward name="wmbjprint"            path="/pjpy/jgsdx/wmbjprint.jsp"></forward>
+			<forward name="rychshdefault"        path="/pjpy/jgsdx/rychshdefault.jsp"></forward>
+			<forward name="wmbjsh"               path="/pjpy/jgsdx/wmbjsh.jsp"></forward>
+			<forward name="wmbjshview"           path="/pjpy/jgsdx/wmbjshview.jsp"></forward>
+			<forward name="grrychshdefault"      path="/pjpy/jgsdx/grrychshdefault.jsp"></forward>
+			<forward name="yxdxsprint"           path="/pjpy/jgsdx/yxdxsprint.jsp"></forward>
+			<forward name="wmshxsprint"          path="/pjpy/jgsdx/wmshxsprint.jsp"></forward>
+			<forward name="grrychprint"          path="/pjpy/jgsdx/grrychprint.jsp"></forward>
+			<forward name="grrychview"           path="/pjpy/jgsdx/grrychview.jsp"></forward>
+			<forward name="grrychsjdefault"      path="/pjpy/jgsdx/grrychsjdefault.jsp"></forward>
+			<forward name="grrychsjadd"          path="/sjcz/xsrychb.jsp"></forward>
+			<forward name="grrychmodiview"       path="/pjpy/jgsdx/grrychmodiview.jsp"></forward>
+			<forward name="tjszdefault"          path="/pjpy/jgsdx/tjszdefault.jsp"></forward>
+			<forward name="jxjsztjmodi"          path="/pjpy/jgsdx/jxjsztjmodi.jsp"></forward>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="pjpyjgsdx" parameter="xgxt.pjpy.jgsdx.pjpyjgsdx" />
+
+</struts-config>

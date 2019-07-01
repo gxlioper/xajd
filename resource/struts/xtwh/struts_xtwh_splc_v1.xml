@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="splcForm" type="xgxt.audit.splc.SplcForm"/>
+		<form-bean name="spbzForm" type="xgxt.audit.spbz.SpbzForm"/>
+		<form-bean name="spgwForm" type="xgxt.audit.spgw.SpgwForm"/>
+		<form-bean name="spjlForm" type="xgxt.audit.spjl.SpjlForm"/>
+		<form-bean name="gnszForm" type="xgxt.audit.gnsz.ShgnszForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/xtwh_splc" 	forward="/xtwhSplc.do?method=splcManage"/>		<!-- 审批数据维护 -->
+		<action path="/xtwh_spbz" 	forward="/xtwhSpbz.do?method=spbzManage"/>		<!-- 审批数据维护 -->
+		<action path="/xtwh_spgw" 	forward="/xtwhSpgw.do?method=spgwManage"/>		<!-- 审批数据维护 -->
+		<action path="/xtwh_spgwyh" forward="/xtwhSpgwyh.do?method=spgwYhManage"/>	<!-- 审批数据维护 -->
+		<action path="/xtwh_spjl" 	forward="/xtwhSpjl.do?method=spjlManage"/>		<!-- 审批数据维护 -->
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 审批流程 -->
+    	<action path="/xtwhSplc"
+        		parameter="method"  
+        		name="splcForm" 
+        		scope="request"
+		        type="xgxt.audit.splc.SplcAction">	
+		       
+		    <forward name="splcwh"    	path="/audit/splc/splcManage.jsp" />		<!-- 审批流程数据维护管理 -->
+		    <forward name="splcUpdate" path="/audit/splc/splcUpdate.jsp" />
+			<forward name="splcView"   path="/audit/splc/splcView.jsp" />
+		</action>
+		
+		<!-- 审批步骤 -->
+		<action path="/xtwhSpbz"
+        		parameter="method"  
+        		name="spbzForm" 
+        		scope="request"
+		        type="xgxt.audit.spbz.SpbzAction">	
+		       
+		    <forward name="spbzwh"    	path="/audit/spbz/spbzManage.jsp" />		<!-- 审批步骤数据维护管理 -->
+		    <forward name="spbzUpdate" path="/audit/spbz/spbzUpdate.jsp" />
+			<forward name="spbzView"   path="/audit/spbz/spbzView.jsp" />
+		</action>
+		
+		<!-- 审批岗位 -->
+		<action path="/xtwhSpgw"
+        		parameter="method"  
+        		name="spgwForm" 
+        		scope="request"
+		        type="xgxt.audit.spgw.SpgwAction">	
+		       
+		    <forward name="spgwwh"     path="/audit/spgw/spgwManage.jsp" />		<!-- 审批岗位数据维护管理 -->
+		    <forward name="spgwUpdate" path="/audit/spgw/spgwUpdate.jsp" />
+			<forward name="spgwView"   path="/audit/spgw/spgwView.jsp" />
+			<forward name="spgwyhwh"   path="/audit/spgw/assessorUpdate.jsp" />		<!-- 审批岗位用户数据维护管理 -->
+			<forward name="spgwyhView" path="/audit/spgw/spgwUsers.jsp" />
+		</action>
+		
+		<!-- 审批记录 -->
+		<action path="/xtwhSpjl"
+        		parameter="method"  
+        		name="spjlForm" 
+        		scope="request"
+		        type="xgxt.audit.spjl.SpjlAction">	
+		       
+		    <forward name="spjlwh"     path="/audit/spjl/spjlManage.jsp" />		<!-- 审批记录数据维护管理 -->
+		    <forward name="spjlUpdate" path="/audit/spjl/spjlUpdate.jsp" />
+			<forward name="spjlView"   path="/audit/spjl/spjlView.jsp" />
+			<forward name="audit"      path="/audit/spjl/audit.jsp" />
+			
+		</action>
+		
+		<!-- 功能设置 -->
+		<action path="/xtwhGnsz" 
+				parameter="method"  
+        		name="gnszForm" 
+        		scope="request"
+		        type="xgxt.audit.gnsz.ShgnszAction">
+		      <forward name="gnszManage" path="/audit/gnsz/gnszManage.jsp"/>
+		      <forward name="gnszUpdate" path="/audit/gnsz/gnszUpdate.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

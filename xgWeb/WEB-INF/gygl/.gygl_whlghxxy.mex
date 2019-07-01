@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/nwwsStat.do" location="682,0" dimension="100,60" />
+  <StrutsActivity path="/nwwsAztj.do" location="882,0" dimension="100,60" />
+  <StrutsActivity path="/nwwsAytj.do" location="1082,0" dimension="100,60" />
+  <StrutsActivity path="/nwwsAyExpData.do" location="1282,0" dimension="130,60" />
+  <StrutsActivity path="/nwwsAzExpData.do" location="1512,0" dimension="130,60" />
+  <StrutsActivity path="/whlghxxy_Gygl.do" location="1015,160" dimension="280,84" />
+  <StrutsActivity path="/gygl/whlghxxy/anzxTj.jsp" location="0,394" dimension="190,48" />
+  <StrutsActivity path="/gygl/whlghxxy/nwwsAytj.jsp" location="290,394" dimension="202,48" />
+  <StrutsActivity path="/gygl/whlghxxy/nwwsAztj.jsp" location="592,394" dimension="202,48" />
+  <StrutsActivity path="/gygl/whlghxxy/anzxfdyTj.jsp" location="894,394" dimension="208,48" />
+  <StrutsActivity path="/gygl/whlghxxy/nwwsTjIndex.jsp" location="1202,394" dimension="220,48" />
+  <StrutsActivity path="/about:blank" location="1522,394" dimension="112,48" />
+  <StrutsActivity path="/gygl/whlghxxy/nwwsAzExpData.jsp" location="1734,394" dimension="232,48" />
+  <StrutsActivity path="/gygl/whlghxxy/nwwsAyExpData.jsp" location="2066,394" dimension="232,48" />
+  <StrutsActivity path="/gygl/whlghxxy/wsjcInpu.jsp" />
+  <StrutsTransition id="/whlghxxy_Gygl.do,wsjcInpu,/gygl/whlghxxy/wsjcInpu.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1155,202" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nwwsAzExpData.do,null,/whlghxxy_Gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1577,60" />
+      <AbsolutePoint location="1577,125" />
+      <AbsolutePoint location="1267,125" />
+      <AbsolutePoint location="1267,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/whlghxxy_Gygl.do,anzxty,/gygl/whlghxxy/anzxTj.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1032,244" />
+      <AbsolutePoint location="1032,274" />
+      <AbsolutePoint location="95,274" />
+      <AbsolutePoint location="95,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/whlghxxy_Gygl.do,nwwsAztj,/gygl/whlghxxy/nwwsAztj.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1102,244" />
+      <AbsolutePoint location="1102,334" />
+      <AbsolutePoint location="693,334" />
+      <AbsolutePoint location="693,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nwwsAytj.do,null,/whlghxxy_Gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1132,60" />
+      <AbsolutePoint location="1132,95" />
+      <AbsolutePoint location="1155,95" />
+      <AbsolutePoint location="1155,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/whlghxxy_Gygl.do,nwwsAyExpData,/gygl/whlghxxy/nwwsAyExpData.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1277,244" />
+      <AbsolutePoint location="1277,274" />
+      <AbsolutePoint location="2182,274" />
+      <AbsolutePoint location="2182,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nwwsAyExpData.do,null,/whlghxxy_Gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1347,60" />
+      <AbsolutePoint location="1347,95" />
+      <AbsolutePoint location="1211,95" />
+      <AbsolutePoint location="1211,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nwwsAztj.do,null,/whlghxxy_Gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="932,60" />
+      <AbsolutePoint location="932,95" />
+      <AbsolutePoint location="1099,95" />
+      <AbsolutePoint location="1099,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/whlghxxy_Gygl.do,nwstatindex,/gygl/whlghxxy/nwwsTjIndex.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1172,244" />
+      <AbsolutePoint location="1172,364" />
+      <AbsolutePoint location="1312,364" />
+      <AbsolutePoint location="1312,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nwwsStat.do,null,/whlghxxy_Gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="732,60" />
+      <AbsolutePoint location="732,125" />
+      <AbsolutePoint location="1043,125" />
+      <AbsolutePoint location="1043,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/whlghxxy_Gygl.do,nwwsAytj,/gygl/whlghxxy/nwwsAytj.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1067,244" />
+      <AbsolutePoint location="1067,304" />
+      <AbsolutePoint location="391,304" />
+      <AbsolutePoint location="391,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/whlghxxy_Gygl.do,anzxfdy,/gygl/whlghxxy/anzxfdyTj.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1137,244" />
+      <AbsolutePoint location="1137,364" />
+      <AbsolutePoint location="998,364" />
+      <AbsolutePoint location="998,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/whlghxxy_Gygl.do,success,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1207,244" />
+      <AbsolutePoint location="1207,334" />
+      <AbsolutePoint location="1578,334" />
+      <AbsolutePoint location="1578,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/whlghxxy_Gygl.do,nwwsAzExpData,/gygl/whlghxxy/nwwsAzExpData.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1242,244" />
+      <AbsolutePoint location="1242,304" />
+      <AbsolutePoint location="1850,304" />
+      <AbsolutePoint location="1850,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

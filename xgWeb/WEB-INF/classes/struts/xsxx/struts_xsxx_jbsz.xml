@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="xsxxJbszForm" type="xgxt.xsxx.comm.jbsz.XsxxJbszForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/xsxx_jbsz_xtzdsz" 	forward="/xsxxJbsz.do?method=xtzdsz"/>		<!-- 系统字段设置 -->
+    	<action path="/xsxx_jbsz_ymjbsz" 	forward="/xsxxJbsz.do?method=ymjbsz"/>		<!-- 页面基本设置 -->
+		<action path="/xsxx_jbsz_xsqsz" 	forward="/xsxxJbsz.do?method=xsqsz"/>		<!-- 显示区设置 -->
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 基本设置 -->
+    	<action path="/xsxxJbsz" 
+        		parameter="method"  
+        		name="xsxxJbszForm" 
+        		scope="request"
+		        type="xgxt.xsxx.comm.jbsz.XsxxJbszAction">	
+		       
+		    <forward name="xtzdsz"    	path="/xsxx/comm/jbsz/xtzdsz.jsp" />	<!-- 系统字段设置 -->
+			<forward name="ymjbsz"    	path="/xsxx/comm/jbsz/ymjbsz.jsp" />	<!-- 页面基本设置 -->
+			<forward name="xsqsz"    	path="/xsxx/comm/jbsz/xsqsz.jsp" />		<!-- 显示区设置 -->
+			
+		</action>
+		
+	</action-mappings>
+</struts-config>

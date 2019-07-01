@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+    <form-bean name="ntzyYlbxForm" type="xgxt.bxgl.ntzy.ylbx.NtzyYlbxForm" />
+		
+	</form-beans>
+	<action-mappings>
+    <action path="/ntzyYlbx" 
+    		type="xgxt.bxgl.ntzy.ylbx.NtzyYlbxAction" 
+    		name="ntzyYlbxForm"
+    		parameter="method"
+    		scope="request"
+    		>
+    	<forward name="ylbxSq" path="/bxgl/ntzy/ylbx/ylbxSq.jsp"/>
+    	<forward name="ylbxCx" path="/bxgl/ntzy/ylbx/ylbxCx.jsp"/>
+	</action>	
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

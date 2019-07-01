@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="gyglJbszForm" type="xgxt.gygl.jbsz.GyglJbszForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/gygl_jbsz_gylcxs" 	forward="/gyglJbsz.do?method=gylcDisplay"/>		<!-- 公寓流程显示 -->
+		<action path="/gygl_jbsz_gyjbsz" 	forward="/gyglJbsz.do?method=gyjbsz"/>			<!-- 公寓基本设置 -->
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 基本设置 -->
+    	<action path="/gyglJbsz" 
+        		parameter="method"  
+        		name="gyglJbszForm" 
+        		scope="request"
+		        type="xgxt.gygl.jbsz.GyglJbszAction">	
+		       
+			<forward name="gylcDisplay"    	path="/gygl/comm/jbsz/gylcDisplay.jsp" />	<!-- 公寓流程显示 -->
+		    <forward name="gyjbsz"    		path="/gygl/comm/jbsz/gyjbsz.jsp" />		<!-- 公寓基本设置 -->
+		</action>
+		
+	</action-mappings>
+</struts-config>

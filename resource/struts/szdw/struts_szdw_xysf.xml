@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		 <form-bean name="dyjstForm" type="xgxt.szdw.xysf.XysfDyjstglForm" />						
+	</form-beans>
+
+	<global-forwards />
+
+	<action-mappings>
+
+	<!-- 信阳师范德育讲师团 -->
+	<action path="/szdydyjswh" forward="/xysf_dyjsgl.do?method=dyjswh"/>	
+    <action path="/szdykcap" forward="/xysf_dyjsgl.do?method=jskcapwh"/>
+  
+    <!-- 信阳师范辅导员科研信息 -->
+    <action path="/kyxxwh" forward="/xysf_fdykywh.do?method=kyxxwh" />
+    <action path="/kyxxcx" forward="/xysf_fdykywh.do?method=kyxxcx" />
+ 	
+ 	<!-- 信阳师范辅导员科研信息 -->
+    <action path="/gczywh" forward="/xysf_qngczywh.do?method=qngczywh" />
+    <action path="/gczycx" forward="/xysf_qngczywh.do?method=qngczycx" />
+    
+    <!-- 信阳师范辅导员培训信息 -->
+    <action path="/xysf_fdypxwh" forward="/xysf_fdypx.do?method=fdypxUpdate" />
+    <action path="/xysf_fdypxcx" forward="/xysf_fdypx.do?method=fdypxManage" />
+    
+	<!-- <<<<<<<<<<<<<<<<<<思政队伍 信阳师范德育讲师团>>>>>>>>>>>>>>>>>> -->
+    <action 
+    	path="/xysf_dyjsgl" 
+    	name="dyjstForm"
+    	type="xgxt.szdw.xysf.XysfDyjstglAction" 
+    	parameter="method"
+    	scope="request">
+    	
+    	<forward name="dyjswh" path="/szdw/xysf/dyjswh.jsp"/>
+    	<forward name="jskcap" path="/szdw/xysf/jskcap.jsp"/>
+    	<forward name="jskcapwh" path="/szdw/xysf/jskcapwh.jsp"/> 	
+    	<forward name="dyjsadd" path="/szdw/xysf/dyjsadd.jsp"/>
+    	<forward name="teainfo" path="/szdw/xysf/teainfo.jsp"/>
+    	<forward name="jskcview" path="/szdw/xysf/jskcview.jsp"/>
+    	<forward name="dyjsglview" path="/szdw/xysf/dyjsglview.jsp"/>
+    </action>
+    
+    <!-- <<<<<<<<<<<<<<<<<<思政队伍 信阳师范科研信息>>>>>>>>>>>>>>>>>> -->
+    <action 
+    	path="/xysf_fdykywh" 
+    	name="dyjstForm" 
+    	type="xgxt.szdw.xysf.XysfDyjstglAction" 
+    	parameter="method"
+    	scope="request">
+    	
+    	<forward name="teainfo" path="/szdw/xysf/teainfo.jsp"/>
+  		<forward name="fdykywh" path="/szdw/xysf/fdykywh.jsp"/>
+  		<forward name="fdykycx" path="/szdw/xysf/fdykycx.jsp"/>
+  		<forward name="fdykyview" path="/szdw/xysf/fdykyview.jsp"/>
+    </action>
+    
+    <action path="/xysf_qngczywh"
+		name="dyjstForm" 
+    	type="xgxt.szdw.xysf.XysfDyjstglAction" 
+    	parameter="method"
+    	scope="request">
+  		<forward name="qngczywh" path="/szdw/xysf/qngczywh.jsp"/>
+  		<forward name="qngczycx" path="/szdw/xysf/qngczycx.jsp"/>
+  		<forward name="qngczyview" path="/szdw/xysf/qngczyview.jsp"/>
+    </action>
+	
+	 <!-- <<<<<<<<<<<<<<<<<<思政队伍  辅导员培训管理>>>>>>>>>>>>>>>>>> -->
+	  <action path="/xysf_fdypx"
+		name="dyjstForm" 
+    	type="xgxt.szdw.xysf.XysfFdypxAction" 
+    	parameter="method"
+    	scope="request">
+  		<forward name="fdypxUpdate" path="/szdw/xysf/fdypxUpdate.jsp"/>
+  		<forward name="fdypxManage" path="/szdw/xysf/fdypxManage.jsp"/>
+  		<forward name="fdypxView" path="/szdw/xysf/fdypxView.jsp"/>
+   	  </action>
+	 
+	 <!-- <<<<<<<<<<<<<<<<<< end >>>>>>>>>>>>>>>>>> -->	
+		
+	</action-mappings>
+  <message-resources parameter="xgxt.base.ApplicationResources" /> 
+</struts-config>

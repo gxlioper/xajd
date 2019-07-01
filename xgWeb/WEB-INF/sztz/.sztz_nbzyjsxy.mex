@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/tzInfoManage.do" location="0,0" dimension="124,60" />
+  <StrutsActivity path="/tzPrintManage.do" location="224,0" dimension="130,60" />
+  <StrutsActivity path="/nbzy_sztz.do" location="0,277" dimension="244,84" />
+  <StrutsActivity path="/sztz/bjlhdx/tzInfoManage.jsp" location="950,50" dimension="214,48" />
+  <StrutsActivity path="/sztz/nbzyjsxy/tzInfoManage.jsp" location="50,150" dimension="226,48" />
+  <StrutsTransition id="/nbzy_sztz.do,tzInfoManage,/sztz/nbzyjsxy/tzInfoManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="122,277" />
+      <AbsolutePoint location="122,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tzInfoManage.do,null,/nbzy_sztz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="35,60" />
+      <AbsolutePoint location="35,277" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbzy_sztz.do,creditPModi,/sztz/bjlhdx/tzInfoManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="244,319" />
+      <AbsolutePoint location="1057,319" />
+      <AbsolutePoint location="1057,98" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tzPrintManage.do,null,/nbzy_sztz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="291,60" />
+      <AbsolutePoint location="291,319" />
+      <AbsolutePoint location="244,319" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tzPrintManage.do,null,/bjlhdx_sztz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="289,60" />
+      <AbsolutePoint location="289,110" />
+      <AbsolutePoint location="209,110" />
+      <AbsolutePoint location="209,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbzy_sztz.do,tzInfoManage,/sztz/bjlhdx/tzInfoManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="244,319" />
+      <AbsolutePoint location="1057,319" />
+      <AbsolutePoint location="1057,98" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tzInfoManage.do,null,/bjlhdx_sztz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="62,60" />
+      <AbsolutePoint location="62,110" />
+      <AbsolutePoint location="141,110" />
+      <AbsolutePoint location="141,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

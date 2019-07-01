@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xsxxtjcxglForm" type="xgxt.studentInfo.model.XsxxtjcxglForm" />    	
+	</form-beans>
+	<global-forwards />
+	
+	
+	<action-mappings>
+		<action path="/xsxxtjcx" forward="/xsxxcx.do?method=xxtjcx"/>
+		
+		<!-- <<<<<<<<<<<<<<学生信息：学生信息统计查询>>>>>>>>>>>>> -->
+		<action 
+			name="xsxxtjcxglForm" 
+			parameter="method"
+			path="/xsxxcx" 
+			scope="request"
+			type="xgxt.studentInfo.action.XsxxtjcxglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xsxx/xxcx/xxtjcx.jsp" />
+		</action>    	
+	</action-mappings>
+</struts-config>

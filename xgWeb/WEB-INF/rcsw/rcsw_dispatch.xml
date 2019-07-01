@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="rcswForm" type="xgxt.rcsw.RcswForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+	
+	<!-- 留言板 -->
+    <action path="/rcsw_lyb_xsly" 	forward="/rcsw_forward.do?method=xslyForward"/>		<!-- 学生留言 -->
+	<action path="/rcsw_lyb_fbtz" 	forward="/rcsw_forward.do?method=fbtzForward"/>		<!-- 发布通知 -->
+	<action path="/rcsw_lyb_hfly" 	forward="/rcsw_forward.do?method=hflyForward"/>		<!-- 回复留言 -->
+	<action path="/rcsw_lyb_hftj" 	forward="/rcsw_forward.do?method=hftjForward"/>		<!-- 回复统计 -->
+	
+	<!-- 实物发放 -->
+	<action path="/rcsw_swff_xmwh" 	forward="/rcsw_forward.do?method=swffXmwhForward"/>	<!-- 项目维护 -->
+	<action path="/rcsw_swff_xsff" 	forward="/rcsw_forward.do?method=swffXsffForward"/>	<!-- 学生发放 -->
+	<action path="/rcsw_swff_lsff" 	forward="/rcsw_forward.do?method=swffLsffForward"/>	<!-- 老师发放 -->
+	<action path="/rcsw_swff_ffjg" 	forward="/rcsw_forward.do?method=swffFfjgForward"/>	<!-- 老师发放 -->
+	<action path="/rcsw_swff_jgcx" 	forward="/rcsw_forward.do?method=swffJgcxForward"/>	<!-- 结果查询 -->
+	<action path="/rcsw_swff_ffpj" 	forward="/rcsw_forward.do?method=swffFfpjForward"/>	<!-- 发放评价 -->
+	<action path="/rcsw_swff_pjtj" 	forward="/rcsw_forward.do?method=swffPjTjForward"/>	<!-- 评价统计 -->
+	<action path="/rcsw_swff_xmff" 	forward="/rcsw_forward.do?method=swffXmffForward"/>	<!-- 发放项目 -->
+	<action path="/rcsw_swff_ffry" 	forward="/rcsw_forward.do?method=swffFfryForward"/>	<!-- 项目维护 -->
+	<action path="/rcsw_swff_dxtz" 	forward="/rcsw_forward.do?method=swffDxtzForward"/>	<!-- 短信通知 -->
+	<action path="/rcsw_swff_ffryqr" forward="/rcsw_forward.do?method=swffFfryqrForward"/>	<!-- 项目维护 -->
+    <!-- 实际路径 -->
+    <action path="/rcsw_forward"  parameter="method"   name="rcswForm"  scope="request"  type="xgxt.rcsw.RcswAction"/>
+    
+	</action-mappings>
+
+</struts-config>

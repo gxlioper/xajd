@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+	<struts-config>
+		<form-beans>
+	    	<form-bean name="rcswZxzxZxbkszForm" type="com.zfsoft.xgxt.rcsw.zxzx.zxbksz.ZxbkszForm" />
+	    	<form-bean name="rcswZxzxCjwtszForm" type="com.zfsoft.xgxt.rcsw.zxzx.cjwtsz.CjwtszForm" />
+	    	<form-bean name="rcswZxzxXszxzxForm" type="com.zfsoft.xgxt.rcsw.zxzx.xszxzx.XszxzxForm" />
+	    	<form-bean name="rcswZxzxZxhfForm" type="com.zfsoft.xgxt.rcsw.zxzx.zxhf.ZxhfForm" />
+		</form-beans>
+		
+		<action-mappings>
+		
+		<!-- 咨询板块设置 -->
+		<action path="/rcsw_zxzx_zxbksz" forward="/rcsw_zxzx_zxbkszgl.do?method=zxbkszManage"/>
+		<action path="/rcsw_zxzx_zxbkszgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.zxzx.zxbksz.ZxbkszAction" 
+	   			name="rcswZxzxZxbkszForm"         
+	   			parameter="method">	
+	   		<forward name="zxbkszManage" path="/xsgzgl/rcsw/zxzx/zxbksz/zxbkszManage.jsp"></forward>
+	   		<forward name="addZxbksz" path="/xsgzgl/rcsw/zxzx/zxbksz/addZxbksz.jsp"></forward>
+	   		<forward name="updateZxbksz" path="/xsgzgl/rcsw/zxzx/zxbksz/updateZxbksz.jsp"></forward>
+	   		<forward name="viewZxbksz" path="/xsgzgl/rcsw/zxzx/zxbksz/viewZxbksz.jsp"></forward>
+		</action> 
+		<!-- 常见问题设置 -->
+		<action path="/rcsw_zxzx_cjwtsz" forward="/rcsw_zxzx_cjwtszgl.do?method=cjwtszManage"/>
+		<action path="/rcsw_zxzx_cjwtszgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.zxzx.cjwtsz.CjwtszAction" 
+	   			name="rcswZxzxCjwtszForm"         
+	   			parameter="method">	
+	   		<forward name="cjwtszManage" path="/xsgzgl/rcsw/zxzx/cjwtsz/cjwtszManage.jsp"></forward>
+	   		<forward name="addCjwtsz" path="/xsgzgl/rcsw/zxzx/cjwtsz/addCjwtsz.jsp"></forward>
+	   		<forward name="updateCjwtsz" path="/xsgzgl/rcsw/zxzx/cjwtsz/updateCjwtsz.jsp"></forward>
+	   		<forward name="viewCjwtsz" path="/xsgzgl/rcsw/zxzx/cjwtsz/viewCjwtsz.jsp"></forward>
+		</action> 
+		<!-- 在线咨询设置 -->
+		<action path="/rcsw_zxzx_xszxzx" forward="/rcsw_zxzx_xszxzxgl.do?method=xszxzxManage"/>
+		<action path="/rcsw_zxzx_xszxzxgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.zxzx.xszxzx.XszxzxAction" 
+	   			name="rcswZxzxXszxzxForm"         
+	   			parameter="method">	
+	   		<forward name="xszxzxManage" path="/xsgzgl/rcsw/zxzx/xszxzx/xszxzxManage.jsp"></forward>
+	   		<forward name="addXszxzx" path="/xsgzgl/rcsw/zxzx/xszxzx/addXszxzx.jsp"></forward>
+	   		<forward name="updateXszxzx" path="/xsgzgl/rcsw/zxzx/xszxzx/updateXszxzx.jsp"></forward>
+	   		<forward name="viewXszxzx" path="/xsgzgl/rcsw/zxzx/xszxzx/viewXszxzx.jsp"></forward>
+		</action>
+		<!-- 咨询回复 -->
+		<action path="/rcsw_zxzx_zxhf" forward="/rcsw_zxzx_zxhfgl.do?method=zxhfManage"/>
+		<action path="/rcsw_zxzx_zxhfgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.zxzx.zxhf.ZxhfAction" 
+	   			name="rcswZxzxZxhfForm"         
+	   			parameter="method">	
+	   		<forward name="zxhfManage" path="/xsgzgl/rcsw/zxzx/zxhf/zxhfManage.jsp"></forward>
+	   		<forward name="addZxhf" path="/xsgzgl/rcsw/zxzx/zxhf/addZxhf.jsp"></forward>
+	   		<forward name="updateZxhf" path="/xsgzgl/rcsw/zxzx/zxhf/updateZxhf.jsp"></forward>
+	   		<forward name="viewZxhf" path="/xsgzgl/rcsw/zxzx/zxhf/viewZxhf.jsp"></forward>
+		</action>
+		
+		</action-mappings>
+	</struts-config>

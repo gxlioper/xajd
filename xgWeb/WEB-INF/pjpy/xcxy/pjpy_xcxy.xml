@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyXcxyActionForm" type="xgxt.pjpy.xcxy.PjpyXcxyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<!-- insert your path code -->
+		<action path="/pjpy_xcxy_stucxfxxwh" 	   forward="/pjpyxcxywh.do?method=stuCxfxxwh"/>
+		<action path="/pjpy_xcxy_cxfadd"           forward="/pjpyxcxywh.do?method=cxfAdd"/>
+		<action path="/pjpy_xcxy_cxfupdate"        forward="/pjpyxcxywh.do?method=cxfUpdate"/>
+		<action path="/pjpy_xcxy_pjcjxxwh"         forward="/pjpyxcxywh.do?method=pjcjXxwh"/>
+		<action path="/pjpy_xcxy_jxjshone"         forward="/pjpyxcxywh.do?method=jxjshone"/>
+		<action path="/pjpy_xcxy_jxjffb"           forward="/pjpyxcxywh.do?method=jxjffb"/>
+		<action path="/pjpy_xcxy_yxxsjxjffb"       forward="/pjpyxcxywh.do?method=yxxsjxjffb"/>
+        <!-- 实际路径 -->	
+		<action path="/pjpyxcxywh"
+				type="xgxt.pjpy.xcxy.PjpyXcxyAction"
+				name="pjpyXcxyActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- insert your forward code -->	
+		<forward name="stucxfwh" path="/pjpy/xcxy/stucxfwh.jsp"></forward>
+		<forward name="tjsz"   path="/pjpy/xcxy/tjsz.jsp"/>
+		<forward name="cxfadd"   path="/pjpy/xcxy/cxfadd.jsp"/>
+		<forward name="cxfview"  path="/pjpy/xcxy/cxfview.jsp"/>
+		<forward name="pjcjxxwh" path="/pjpy/xcxy/pjcjxxwh.jsp"/>
+		<forward name="jxjshone" path="/pjpy/xcxy/jxjshone.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

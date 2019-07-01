@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>
+		<!--	转移到中国美术的配置文件,pjpy_zgms.xml    -->
+		<action path="/pjpy_zgms_kqwh" 	   forward="/pjpyzgmswh.do?method=kqWh"></action> <!-- 旷课记录维护页面 -->
+		<action path="/pjpy_zgms_kkjladd"  forward="/pjpyzgmswh.do?method=kkjlAdd"></action> <!-- 旷课记录增加页面 -->
+		<action path="/pjpy_zgms_kkjlmodi" forward="/pjpyzgmswh.do?method=kkjlModi"></action> <!-- 旷课记录修改 -->
+		<action path="/pjpy_zgms_kkjldel"  forward="/pjpyzgmswh.do?method=kkjlDel"></action> <!-- 旷课记录删除 -->
+		<action path="/pjpy_zgms_cjwh"     forward="/pjpyzgmswh.do?method=cjwh"></action> <!-- 成绩维护页面 -->
+		<action path="/pjpy_zgms_cjview"   forward="/pjpyzgmswh.do?method=cjview"></action> <!-- 成绩详细信息 -->
+		<action path="/pjpy_zgms_tydbwh"   forward="/pjpyzgmswh.do?method=tydbWh"></action> <!-- 体育达标维护 -->
+		<action path="/pjpy_zgms_tydbmodi" forward="/pjpyzgmswh.do?method=tydbmodi"></action> <!-- 体育达标修改 -->
+		<action path="/pjpy_zgms_tydbdel"  forward="/pjpyzgmswh.do?method=tydbdel"></action> <!-- 体育达标删除 -->
+		<action path="/pjpy_zgms_cjtb"     forward="/pjpyzgmswh.do?method=cjtb"></action> <!-- 教务成绩同步 -->
+</action-mappings>
+</struts-config>

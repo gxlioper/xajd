@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xjjtForm" type="xgxt.pjpy.wxsz.XjjtForm">
+		</form-bean>
+	</form-beans>
+	
+	<action-mappings>
+		<!-- 显示路径 -->
+		<action path="/wxsz_xjjt_sq" 	forward="/wxszXjjt.do?method=xjjtSq"/>
+		<action path="/wxsz_xjjt_cx" 	forward="/wxszXjjt.do?method=xjjtCx"/>
+		<action path="/wxsz_xjjt_sh" 	forward="/wxszXjjt.do?method=xjjtSh"/>
+		
+		<!-- 实际路径-->
+		<action path="/wxszXjjt"
+				parameter="method"
+				scope="request"
+				name="xjjtForm"
+				type="xgxt.pjpy.wxsz.XjjtPxAction">
+			
+			<forward name="xjjtsq" path="/pjpy/wxsz/xjjtsq.jsp"/>
+			<forward name="xjjtList" path="/pjpy/wxsz/xjjtcx.jsp"/>
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

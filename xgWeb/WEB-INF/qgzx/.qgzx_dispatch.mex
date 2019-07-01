@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/qgzx_lsgw_fp.do" location="0,0" dimension="124,60" />
+  <StrutsActivity path="/qgzx_lsgw_jg.do" location="224,0" dimension="124,60" />
+  <StrutsActivity path="/qgzx_forward.do" location="85,160" dimension="178,84" />
+  <StrutsTransition id="/qgzx_lsgw_fp.do,null,/qgzx_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="62,60" />
+      <AbsolutePoint location="62,110" />
+      <AbsolutePoint location="129,110" />
+      <AbsolutePoint location="129,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qgzx_lsgw_jg.do,null,/qgzx_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="286,60" />
+      <AbsolutePoint location="286,110" />
+      <AbsolutePoint location="218,110" />
+      <AbsolutePoint location="218,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

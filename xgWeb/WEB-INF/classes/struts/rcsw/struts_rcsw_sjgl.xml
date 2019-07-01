@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="TwsjForm" type="com.zfsoft.xgxt.rcsw.sjgl.twsj.TwsjForm"/>
+		<form-bean name="KqsjForm" type="com.zfsoft.xgxt.rcsw.sjgl.kqsj.KqsjForm"/>
+		<form-bean name="HqsjForm" type="com.zfsoft.xgxt.rcsw.sjgl.hqsj.HqsjForm"/>		
+	</form-beans>
+
+	<action-mappings>
+
+		<!-- 团委数据显示路径 -->
+		<action path="/rcswx_sjgl_twsj" forward="/twsj.do?method=twsjManage"/>		
+		<action path="/twsj"
+				scope="request"
+				type="com.zfsoft.xgxt.rcsw.sjgl.twsj.TwsjAction"
+				name="TwsjForm"
+				parameter="method">
+			<forward name="twsjManage" path="/xsgzgl/rcsw/sjgl/twsj/twsjList.jsp"></forward>
+			<forward name="twsjAdd" path="/xsgzgl/rcsw/sjgl/twsj/twsjAdd.jsp"></forward>
+			<forward name="twsjUpdate" path="/xsgzgl/rcsw/sjgl/twsj/twsjUpdate.jsp"></forward>
+			<forward name="twsjView" path="/xsgzgl/rcsw/sjgl/twsj/twsjView.jsp"></forward>
+		</action>
+		
+		
+		<!-- 考勤数据显示路径 -->
+		<action path="/rcswx_sjgl_kqsj" forward="/kqsj.do?method=kqsjManage"/>		
+		<action path="/kqsj"
+				scope="request"
+				type="com.zfsoft.xgxt.rcsw.sjgl.kqsj.KqsjAction"
+				name="KqsjForm"
+				parameter="method">
+			<forward name="kqsjManage" path="/xsgzgl/rcsw/sjgl/kqsj/kqsjList.jsp"></forward>
+			<forward name="kqsjAdd" path="/xsgzgl/rcsw/sjgl/kqsj/kqsjAdd.jsp"></forward>
+			<forward name="kqsjUpdate" path="/xsgzgl/rcsw/sjgl/kqsj/kqsjUpdate.jsp"></forward>
+			<forward name="kqsjView" path="/xsgzgl/rcsw/sjgl/kqsj/kqsjView.jsp"></forward>
+		</action>
+		
+		<!-- 后勤数据显示路径 -->
+		<action path="/rcswx_sjgl_hqsj" forward="/hqsj.do?method=hqsjManage"/>		
+		<action path="/hqsj"
+				scope="request"
+				type="com.zfsoft.xgxt.rcsw.sjgl.hqsj.HqsjAction"
+				name="HqsjForm"
+				parameter="method">
+			<forward name="hqsjManage" path="/xsgzgl/rcsw/sjgl/hqsj/hqsjList.jsp"></forward>
+			<forward name="hqsjAdd" path="/xsgzgl/rcsw/sjgl/hqsj/hqsjAdd.jsp"></forward>
+			<forward name="hqsjUpdate" path="/xsgzgl/rcsw/sjgl/hqsj/hqsjUpdate.jsp"></forward>
+			<forward name="hqsjView" path="/xsgzgl/rcsw/sjgl/hqsj/hqsjView.jsp"></forward>
+		</action>
+		
+					
+	</action-mappings>
+		
+
+</struts-config>

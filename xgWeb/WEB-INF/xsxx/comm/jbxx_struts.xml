@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    <form-bean name="studentInfoForm" type="xgxt.studentInfo.model.StudentInfoForm" />
+		
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/xsxx_jbxx_xsxxwh" 	forward="/xsxxJbxx.do?method=xsxxwh"/>		<!-- 学生基本信息维护 -->
+    	<action path="/xsxx_jbsz_xsxxcx" 	forward="/xsxxJbxx.do?method=xsxxcx"/>		<!-- 学生基本信息查询 -->
+    
+    <!-- ====================================我是万恶的分割线============================================== -->
+    
+    <!-- 学生信息显示 -->
+    <action 
+    		name="studentInfoForm"
+    		path="/xsxxJbxx" 
+    		type="xgxt.xsxx.comm.jbxx.XsxxJbxxAction"
+    		scope="request"
+    		parameter="method" 
+    		>		
+		<forward name="xsxxwh" path="/xsxx/comm/jbxx/xsxxwh.jsp"/>
+    	<forward name="xsxxcx" path="/xsxx/comm/jbxx/xsxxcx.jsp"/>
+    </action>	
+     
+	<!-- =====处理ajax请求======== -->
+	<action path="/xsxx_ajax"
+        		parameter="method"  
+        		name="studentInfoForm" 
+        		scope="request"
+		        type="xgxt.xsxx.comm.ajax.XsxxAjaxAction">	
+    </action>	
+		
+	</action-mappings>
+</struts-config>

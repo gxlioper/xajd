@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -医疗保险-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="xylbxjcszForm" type="com.zfsoft.xgxt.rcsw.ylbx.ylbxjcsz.YlbxjcszForm" />
+    	<form-bean name="xylbxsqForm" type="com.zfsoft.xgxt.rcsw.ylbx.ylbxsq.YlbxsqForm" />
+    	<form-bean name="xylbxshForm" type="com.zfsoft.xgxt.rcsw.ylbx.ylbxsh.YlbxshForm" />
+    	<form-bean name="xylbxjgForm" type="com.zfsoft.xgxt.rcsw.ylbx.ylbxjg.YlbxjgForm" />
+    	<form-bean name="xylbxglForm" type="com.zfsoft.xgxt.rcsw.ylbx.ylbxgl.YlbxglForm" />
+	</form-beans>
+	
+	<action-mappings>
+	
+	<action path="/rcsw_ylbx_jcsz" forward="/rcsw_ylbx_jcszgl.do?method=ylbxJcsz"/>	<!-- 医疗保险设置 -->
+	<action path="/rcsw_ylbx_jcszgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.ylbx.ylbxjcsz.YlbxjcszAction" 
+   			name="xylbxjcszForm"         
+   			parameter="method">	
+   		<forward name="ylbxJcsz" path="/xsgzgl/rcsw/ylbx/ylbxjcsz/ylbxJcsz.jsp"></forward>
+	</action>  
+	
+	<action path="/rcsw_ylbx_ylbxsq" forward="/rcsw_ylbx_ylbxsqgl.do?method=ylbxsqManage"/>	<!-- 医疗保险申请 -->
+	<action path="/rcsw_ylbx_ylbxsqgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.ylbx.ylbxsq.YlbxsqAction" 
+   			name="xylbxsqForm"         
+   			parameter="method">	
+   		<forward name="ylbxsqManage" path="/xsgzgl/rcsw/ylbx/ylbxsq/ylbxsqManage.jsp"></forward>
+   		<forward name="addYlbxsq" path="/xsgzgl/rcsw/ylbx/ylbxsq/addYlbxsq.jsp"></forward>
+   		<forward name="updateYlbxsq" path="/xsgzgl/rcsw/ylbx/ylbxsq/updateYlbxsq.jsp"></forward>
+   		<forward name="viewYlbxsq" path="/xsgzgl/rcsw/ylbx/ylbxsq/viewYlbxsq.jsp"></forward>
+	</action>  
+	
+	<action path="/rcsw_ylbx_ylbxsh" forward="/rcsw_ylbx_ylbxshgl.do?method=ylbxshManage"/>	<!-- 医疗保险审核 -->
+	<action path="/rcsw_ylbx_ylbxshgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.ylbx.ylbxsh.YlbxshAction" 
+   			name="xylbxshForm"         
+   			parameter="method">	
+   		<forward name="ylbxshManage" path="/xsgzgl/rcsw/ylbx/ylbxsh/ylbxshManage.jsp"></forward>
+   		<forward name="ylbxDgsh" path="/xsgzgl/rcsw/ylbx/ylbxsh/ylbxDgsh.jsp"></forward>
+   		<forward name="ylbxPlsh" path="/xsgzgl/rcsw/ylbx/ylbxsh/ylbxPlsh.jsp"></forward>
+	</action> 
+	<action path="/rcsw_ylbx_ylbxmd" forward="/rcsw_ylbx_ylbxjggl.do?method=ylbxmdManage"/>	<!-- 医疗保险结果 -->
+	<action path="/rcsw_ylbx_ylbxjg" forward="/rcsw_ylbx_ylbxjggl.do?method=ylbxjgManage"/>	<!-- 医疗保险结果 -->
+	<action path="/rcsw_ylbx_ylbxjggl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.ylbx.ylbxjg.YlbxjgAction" 
+   			name="xylbxjgForm"         
+   			parameter="method">	
+   		<forward name="ylbxjgManage" path="/xsgzgl/rcsw/ylbx/ylbxjg/ylbxjgManage.jsp"></forward>
+   		<forward name="ylbxmdManage" path="/xsgzgl/rcsw/ylbx/ylbxjg/ylbxmdManage.jsp"></forward>
+   		<forward name="addYlbxjg" path="/xsgzgl/rcsw/ylbx/ylbxjg/addYlbxjg.jsp"></forward>
+   		<forward name="updateYlbxjg" path="/xsgzgl/rcsw/ylbx/ylbxjg/updateYlbxjg.jsp"></forward>
+   		<forward name="viewYlbxjg" path="/xsgzgl/rcsw/ylbx/ylbxjg/viewYlgxjg.jsp"></forward>
+   		<forward name="zpdc" path="/xsgzgl/rcsw/ylbx/ylbxjg/zpdc.jsp" />
+   		<forward name="dszmdy" path="/xsgzgl/rcsw/ylbx/ylbxjg/dszmdy.jsp" />
+	</action> 
+	
+	<action path="/rcsw_ylbx_ylbxgl" forward="/rcsw_ylbx_ylbxglgl.do?method=ylbxglManage"/>	<!-- 医疗保险管理 -->
+	<action path="/rcsw_ylbx_ylbxglgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.ylbx.ylbxgl.YlbxglAction" 
+   			name="xylbxglForm"         
+   			parameter="method">	
+   		<forward name="ylbxglManage" path="/xsgzgl/rcsw/ylbx/ylbxgl/ylbxglManage.jsp"></forward>
+   		<forward name="addYlbxgl" path="/xsgzgl/rcsw/ylbx/ylbxgl/addYlbxgl.jsp"></forward>
+   		<forward name="addYlbxglPl" path="/xsgzgl/rcsw/ylbx/ylbxgl/addYlbxglPl.jsp"></forward>
+   		<forward name="updateYlbxgl" path="/xsgzgl/rcsw/ylbx/ylbxgl/updateYlbxgl.jsp"></forward>
+   		<forward name="viewYlbxgl" path="/xsgzgl/rcsw/ylbx/ylbxgl/viewYlbxgl.jsp"></forward>
+   		<forward name="viewlsYlbxgl" path="/xsgzgl/rcsw/ylbx/ylbxgl/viewlsYlbxgl.jsp"></forward>
+	</action>
+	
+	</action-mappings>
+</struts-config>

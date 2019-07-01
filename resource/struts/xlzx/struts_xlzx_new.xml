@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- 参数设置 -->
+		<form-bean name="XlzxSbJcszForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.zqsz.jcsz.XlzxSbJcszForm"/>
+		<!-- 学生授权管理 -->
+		<form-bean name="XssqFormNew" type="com.zfsoft.xgxt.xlzx.xlzxnew.zqsz.xssq.XssqForm"/>
+		<!-- 周期设置 -->
+		<form-bean name="ZqszForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.zqsz.zqsz.ZqszForm"/>
+		<!-- 周报上报 -->
+		<form-bean name="ZbsbForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.xlzbgl.zbsb.ZbsbForm"/>
+		<!-- 周报上报结果 -->
+		<form-bean name="ZbjgForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.xlzbgl.zbjg.ZbjgForm"/>
+		<!-- 周报审核 -->
+		<form-bean name="ZbshForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.xlzbgl.zbsh.ZbshForm"/>
+		<!-- 月报上报 -->
+		<form-bean name="YbsbForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.xlybgl.ybsb.YbsbForm"/>
+		<!-- 月报审核 -->
+		<form-bean name="YbshForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.xlybgl.ybsh.YbshForm"/>
+		<!-- 月报结果 -->
+		<form-bean name="YbjgForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.xlybgl.ybjg.YbjgForm"/>
+		<!--新生心理普测管理-->
+		<form-bean name="XsxlpcForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.xsxlpc.XsxlpcForm"/>
+	</form-beans>
+	<action-mappings>
+		<!-- 参数设置 -->
+		<action path="/xg_xlzxnew_cssz" forward="/xlzxnew_cssz.do?method=getJcsszCx"/>
+		<action path="/xlzxnew_cssz" parameter="method" name="XlzxSbJcszForm" scope="request"
+			type="com.zfsoft.xgxt.xlzx.xlzxnew.zqsz.jcsz.XlzxSbAction">
+		
+			<forward name="csszcx" path="/xljkwzdx/xlzxnew/zqAndxssq/cssz/getCsszCx.jsp"/>
+		</action>
+	    <!-- 学生授权管理 -->
+	    <action path="/xg_xlzxnew_xssq" forward="/xlzxnew_xssq.do?method=getXssqList"/>
+	    <action path="/xlzxnew_xssq"  
+	    		parameter="method" 
+	    		name="XssqFormNew"
+	    		scope="request"  
+	    		type="com.zfsoft.xgxt.xlzx.xlzxnew.zqsz.xssq.XssqAction">
+	    		<forward name="xssq" path="/xljkwzdx/xlzxnew/zqAndxssq/xssq/getXssqListCx.jsp"/>
+	    		<forward name="addstu" path="/xljkwzdx/xlzxnew/zqAndxssq/xssq/addStu.jsp"/>
+	    		<forward name="editstu" path="/xljkwzdx/xlzxnew/zqAndxssq/xssq/editStu.jsp"/>
+	    		<forward name="ck" path="/xljkwzdx/xlzxnew/zqAndxssq/xssq/ckXssq.jsp"/>
+	    </action>
+	    
+	    <!-- 周期设置 -->
+	    <action path="/xg_xlzxnew_zqrcgl" forward="/xlzxnew_zqrcgl.do?method=getZrcList"/>
+	    <action path="/xlzxnew_zqrcgl"
+	    		parameter="method"
+	    		name="ZqszForm"
+	    		scope="request"
+	    		type="com.zfsoft.xgxt.xlzx.xlzxnew.zqsz.zqsz.ZqszAction"  >
+	  			<forward name="zbrc" path="/xljkwzdx/xlzxnew/zqAndxssq/zq/getZqszList.jsp"/>
+	  			<forward name="ybrc" path="/xljkwzdx/xlzxnew/zqAndxssq/zq/getYzqszList.jsp"/>
+	  			<forward name="add" path="/xljkwzdx/xlzxnew/zqAndxssq/zq/addzq.jsp"/>
+	  			<forward name="edit" path="/xljkwzdx/xlzxnew/zqAndxssq/zq/editzq.jsp"/>
+	  			<forward name="ckzqsz" path="/xljkwzdx/xlzxnew/zqAndxssq/zq/ckzq.jsp"/>
+	  			<forward name="addyzqsz" path="/xljkwzdx/xlzxnew/zqAndxssq/zq/addyzq.jsp"/>
+	  			<forward name="edityzqsz" path="/xljkwzdx/xlzxnew/zqAndxssq/zq/edityzq.jsp"/>
+	  			<forward name="ckyzqsz" path="/xljkwzdx/xlzxnew/zqAndxssq/zq/ckyzq.jsp"/>
+	  			<forward name="ckzqdetailxx" path="/xljkwzdx/xlzxnew/zqAndxssq/zq/ckzqdetailxx.jsp"/>
+	    </action>
+	    
+	    <!-- 周报上报 -->
+	    <action path="/xg_xlzxnew_zbsb" forward="/xlzxnew_zbsb.do?method=getZbsbListCx"/>
+	    <action path="/xlzxnew_zbsb" parameter="method" name="ZbsbForm" scope="request"
+	    	type="com.zfsoft.xgxt.xlzx.xlzxnew.xlzbgl.zbsb.ZbsbAction"  >
+	    	<forward name="zbsbcx" path="/xljkwzdx/xlzxnew/zbgl/zbsq/getZbsqCxList.jsp"/>
+	    	<forward name="zbsb" path="/xljkwzdx/xlzxnew/zbgl/zbsq/addzbsq.jsp"/>
+	    	<forward name="zbsbedit" path="/xljkwzdx/xlzxnew/zbgl/zbsq/editzbsq.jsp"/>
+	    	<forward name="zbsbview" path="/xljkwzdx/xlzxnew/zbgl/zbsq/ckzbsq.jsp"/>
+	    	<forward name="addstu" path="/xljkwzdx/xlzxnew/zbgl/comm/addStu.jsp"/>
+	    </action>
+	    
+	    <!-- 周报结果 -->
+	    <action path="/xg_xlzxnew_zbjg" forward="/xlzxnew_zbjg.do?method=getZbjgListCx"/>
+	    <action path="/xlzxnew_zbjg" parameter="method" name="ZbjgForm" scope="request"
+	        type="com.zfsoft.xgxt.xlzx.xlzxnew.xlzbgl.zbjg.ZbjgAction">
+	    	<forward name="zbjgcx" path="/xljkwzdx/xlzxnew/zbgl/zgjg/getZbjgCxList.jsp"/>
+	    	<forward name="zbjg" path="/xljkwzdx/xlzxnew/zbgl/zgjg/addzbjg.jsp"/>
+	    	<forward name="zbjgedit" path="/xljkwzdx/xlzxnew/zbgl/zgjg/editzbjg.jsp"/>
+	    	<forward name="zbjgview" path="/xljkwzdx/xlzxnew/zbgl/zgjg/ckzbjg.jsp"/>
+	    </action>  
+	    
+	   	<!-- 周报审核 -->
+	   	<action path="/xg_xlzxnew_zbsh" forward="/xlzxnew_zbsh.do?method=getZbshListCx"/>
+	   	<action path="/xlzxnew_zbsh" parameter="method" name="ZbshForm" scope="request"
+	   	   type="com.zfsoft.xgxt.xlzx.xlzxnew.xlzbgl.zbsh.ZbshAction">
+	   	   <forward name="zbshcx" path="/xljkwzdx/xlzxnew/zbgl/zbsh/getZbshcxList.jsp"/>
+	   	   <forward name="zbsh" path="/xljkwzdx/xlzxnew/zbgl/zbsh/zbsh.jsp"/>
+	   	   <forward name="zbplsh" path="/xljkwzdx/xlzxnew/zbgl/zbsh/zbplsh.jsp"/>
+	   	</action>
+	   	
+	   	<!-- 月报上报 -->
+	   	<action path="/xg_xlzxnew_ybsb" forward="/xlzxnew_ybsb.do?method=getYbsbCxList"/>
+	   	<action path="/xlzxnew_ybsb" parameter="method"  name="YbsbForm" scope="request" type="com.zfsoft.xgxt.xlzx.xlzxnew.xlybgl.ybsb.YbsbAction">
+	   		<forward name="ybsbcx" path="/xljkwzdx/xlzxnew/ybgl/ybsq/getYbsqCxList.jsp"/>
+			<forward name="editybsb" path="/xljkwzdx/xlzxnew/ybgl/ybsq/editybsq.jsp"/>
+			<forward name="addybsb" path="/xljkwzdx/xlzxnew/ybgl/ybsq/addYbsq.jsp"/>
+			<forward name="ckybsb" path="/xljkwzdx/xlzxnew/ybgl/ybsq/ckYbsq.jsp"/>
+	   	</action>
+	   	
+	   	<!-- 月报审核 -->
+	   	<action path="/xg_xlzxnew_ybsh" forward="/xlzxnew_ybsh.do?method=getYbshListCx"/>
+	   	<action path="/xlzxnew_ybsh" parameter="method" name="YbshForm" scope="request"
+	   	  type="com.zfsoft.xgxt.xlzx.xlzxnew.xlybgl.ybsh.YbshAction">
+	   	  	<forward name="ybshcx" path="/xljkwzdx/xlzxnew/ybgl/ybsh/getYbshcxList.jsp"/>
+	   	  	<forward name="ybsh" path="/xljkwzdx/xlzxnew/ybgl/ybsh/ybsh.jsp"/>
+	   	  	<forward name="ybplsh" path="/xljkwzdx/xlzxnew/ybgl/ybsh/ybplsh.jsp"/>
+	   	</action>
+	   	
+	   	<!-- 月报结果 -->
+		<action path="/xg_xlzxnew_ybjg" forward="/xlzxnew_ybjg.do?method=getYbjgCxList"/>
+		<action path="/xg_xlzxnew_ybhz" forward="/xlzxnew_ybjg.do?method=getYbhzCxList"/><!-- 月报汇总 西安科技大学个性化 -->
+		<action path="/xlzxnew_ybjg" parameter="method" scope="request"  name="YbjgForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.xlybgl.ybjg.YbjgAction">
+			<forward name="ybjgcx" path="/xljkwzdx/xlzxnew/ybgl/ybjg/getYbjgCxList.jsp"/>
+			<forward name="addstu" path="/xljkwzdx/xlzxnew/ybgl/comm/addStu.jsp"/>
+			<forward name="addxy" path="/xljkwzdx/xlzxnew/ybgl/comm/addXy.jsp"/>
+			<forward name="editybjg" path="/xljkwzdx/xlzxnew/ybgl/ybjg/editybjg.jsp"/>
+			<forward name="addybjg" path="/xljkwzdx/xlzxnew/ybgl/ybjg/addYbjg.jsp"/>
+			<forward name="ckybjg" path="/xljkwzdx/xlzxnew/ybgl/ybjg/ckYbjg.jsp"/>
+			<forward name="ybhzcx" path="/xljkwzdx/xlzxnew/ybgl/ybjg/ybhzCxList.jsp"/>			
+		</action>
+		
+		<!--新生心理普测管理-->
+		<action path="/xg_xlzxnew_xsxlpc" forward="/xlzxnew_xsxlpc.do?method=getXsxlpcList" />
+		<action path="/xlzxnew_xsxlpc" parameter="method" scope="request" name="XsxlpcForm" type="com.zfsoft.xgxt.xlzx.xlzxnew.xsxlpc.XsxlpcAction">
+			<forward name="cx" path="/xljkwzdx/xlzxnew/xlpc/getxlpclist.jsp"/>
+			<forward name="add" path="/xljkwzdx/xlzxnew/xlpc/addxlpc.jsp"/>
+			<forward name="update" path="/xljkwzdx/xlzxnew/xlpc/updatexlpc.jsp"/>
+			<forward name="ck" path="/xljkwzdx/xlzxnew/xlpc/ckxlpc.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

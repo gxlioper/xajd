@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="generalJyglGeneralForm" type="xsgzgl.jygl.general.JyglGeneralForm" />
+	</form-beans>
+
+	<action-mappings>
+  
+  		<action path="/jygl_general_sxjy" 	forward="/general_jygl.do?method=sxjyManage"/>	<!-- 实习就业 -->
+  		
+		<action path="/general_jygl" 
+    			scope="request"
+    			type="xsgzgl.jygl.general.JyglGeneralAction" 
+    			name="generalJyglGeneralForm"
+    			parameter="method">
+		</action>
+		
+		<!-- 实习教育 -->
+		<action path="/general_jygl_sxjy_ajax" 
+    			scope="request"
+    			type="xsgzgl.jygl.general.sxjy.JyglSxjyAction" 
+    			name="generalJyglGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+	</action-mappings>
+</struts-config>

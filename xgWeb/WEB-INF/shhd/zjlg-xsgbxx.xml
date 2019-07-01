@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xsgbxxForm" type="xgxt.shgz.zjlg.XsgbxxForm" />
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+		<!--学生干部维护-->
+		<action path="/xsgbxxwh" forward="/xsgbxx.do?method=xsgbxxwhManage" />
+		<!--工作总结-->
+		<action path="/zjlg_gzzj" forward="/xsgbxx.do?method=gzzjManage" />
+		<!--评定意见-->
+		<action path="/zjlg_pdyj" forward="/xsgbxx.do?method=pdyjManage" />
+		<!--活动策划-->
+		<action path="/zjlg_hdch" forward="/xsgbxx.do?method=hdchManage" />
+<!--		<action path="/zjlgXljkzdls" forward="/zjlg_xljk.do?method=xljkzdlsManage" />-->
+<!--		<action path="/zjlgXljkzdls" forward="/zjlg_xljk.do?method=xlzxsManage&amp;tableName=zjlg_xljkzdls" />-->
+		<!--公用-->
+		<action path="/xsgbxx" parameter="method" name="xsgbxxForm"
+			scope="request" type="xgxt.shgz.zjlg.XsgbxxAtion">
+			<!--学生干部-->
+			<forward name="xsgbxxwhAdd" path="/shgz/zjlg/xsgbAdd.jsp"></forward>
+			<forward name="xsgbxxwhManage" path="/shgz/zjlg/xsgbManage.jsp"></forward>
+			<!--工作总结-->
+			<forward name="gzzjAdd" path="/shgz/zjlg/gzzjAdd.jsp"></forward>
+			<forward name="gzzjManage" path="/shgz/zjlg/gzzjManage.jsp"></forward>
+			<!--活动策划-->
+			<forward name="hdchAdd" path="/shgz/zjlg/hdchAdd.jsp"></forward>
+			<forward name="hdchManage" path="/shgz/zjlg/hdchManage.jsp"></forward>
+			<!--评定意见-->
+			<forward name="pdyjAdd" path="/shgz/zjlg/pdyjAdd.jsp"></forward>
+			<forward name="pdyjManage" path="/shgz/zjlg/pdyjManage.jsp"></forward>
+			<!--上传照片-->
+			<forward name="sczp" path="/shgz/zjlg/shgzsczp.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources key="xsgb"
+		parameter="xgxt.base.ApplicationResources" />
+</struts-config>

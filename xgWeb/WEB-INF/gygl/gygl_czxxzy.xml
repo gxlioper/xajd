@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    <form-bean name="czxxXsgyglForm" type="xgxt.xsgygl.czxxzyjsxy.CzxxzyGyglForm" />
+	</form-beans>
+	<action-mappings>
+	   <action path="/dormcheckManage" forward="/czxxGygl.do?method=dormcheckManage" />
+	    <action path="/dormpointManage" forward="/czxxGygl.do?method=dormpointManage" />
+       <action path="/czxxGygl" type="xgxt.xsgygl.czxxzyjsxy.CzxxzyGyglAction" parameter="method" scope="request" name="czxxXsgyglForm">
+         <forward name="dormcheckManage" path="/gygl/czxxzyjsxy/dormcheckManage.jsp"></forward>
+         <forward name="dormcheckResult" path="/gygl/czxxzyjsxy/dormcheckResult.jsp"></forward>
+         <forward name="dormpointManage" path="/gygl/czxxzyjsxy/dormpointManage.jsp"></forward>
+         <forward name="gffAutoCount" path="/gygl/czxxzyjsxy/gffAutoCount.jsp"></forward>
+       </action>	   
+	</action-mappings>		
+	<message-resources key="gygl" parameter="xgxt.base.gygl" />
+</struts-config>

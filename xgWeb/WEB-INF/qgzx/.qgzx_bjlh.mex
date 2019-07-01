@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/qgzxUpload.do" location="50,50" dimension="232,84" />
+  <StrutsActivity path="/qgzx/bjlhdx/data_import.jsp" location="350,50" dimension="208,48" />
+  <StrutsActivity path="/errMsg.jsp" location="650,50" dimension="106,48" />
+  <StrutsActivity path="/importData.do" location="950,50" dimension="130,72" />
+  <StrutsActivity path="/qgzx/bjlhdx/dataUpLoad.jsp" location="350,150" dimension="202,48" />
+  <StrutsTransition id="/qgzxUpload.do,success,/qgzx/bjlhdx/data_import.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,83" />
+      <AbsolutePoint location="350,83" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qgzxUpload.do,loadSuccess,/importData.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,113" />
+      <AbsolutePoint location="950,113" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qgzxUpload.do,l,/importData.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,113" />
+      <AbsolutePoint location="950,113" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qgzxUpload.do,import,/qgzx/bjlhdx/dataUpLoad.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,134" />
+      <AbsolutePoint location="166,174" />
+      <AbsolutePoint location="350,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qgzxUpload.do,false,/errMsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="703,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qgzxUpload.do,success,/importData.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,113" />
+      <AbsolutePoint location="950,113" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

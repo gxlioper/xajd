@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="zhcpJbszForm" type="xgxt.pjpy.comm.zhcp.jbsz.ZhcpJbszForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/zhcp_jbsz_jbsz" 		forward="/zhcpJbsz.do?method=zcjbsz"/>		<!-- 综测基本设置 -->
+		<action path="/zhcp_jbsz_dypf" 		forward="/zhcpJbsz.do?method=dypfsz"/>		<!-- 德育评分设置 -->
+		<action path="/zhcp_jbsz_zcjf" 		forward="/zhcpJbsz.do?method=zcjfsz"/>		<!-- 综测加分设置 -->
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 基本设置 -->
+    	
+    	<!-- 综测基本设置 -->
+    	<action path="/zhcpJbsz" 
+        		parameter="method"  
+        		name="zhcpJbszForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.zhcp.jbsz.ZhcpJbszAction">	
+		       
+			<forward name="zcjbsz"    	path="/pjpy/comm/zhcp/jbsz/zcjbsz.jsp" />
+			<forward name="dypfsz"    	path="/pjpy/comm/zhcp/jbsz/dypfsz.jsp" />
+			<forward name="zcjfsz"    	path="/pjpy/comm/zhcp/jbsz/zcjfsz.jsp" />
+		</action>
+		
+	</action-mappings>
+</struts-config>

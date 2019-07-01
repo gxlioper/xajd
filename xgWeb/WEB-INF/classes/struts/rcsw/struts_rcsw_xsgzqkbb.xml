@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+	<!-- 安徽农业大学：日常事务模块 -学生工作情况报表-->
+	<struts-config>
+		<form-beans>
+	    	<form-bean name="xsgzqkCgbbForm" type="com.zfsoft.xgxt.rcsw.xsgzqkbb.xsgzqkcgbb.XsgzqkCgbbForm" />
+	    	<form-bean name="xsgzqkZbbForm" type="com.zfsoft.xgxt.rcsw.xsgzqkbb.xsgzqkzbb.XsgzqkZbbForm" />
+	    	<form-bean name="xsgzqkBjYbbForm" type="com.zfsoft.xgxt.rcsw.xsgzqkbb.xsgzqkybb.bjybb.XsgzqkBjYbbForm" />
+	    	<form-bean name="xsgzqkXyYbbForm" type="com.zfsoft.xgxt.rcsw.xsgzqkbb.xsgzqkybb.xyybb.XsgzqkXyYbbForm" />
+		</form-beans>
+
+		<action-mappings>
+			<!--学生工作常规报表-->
+			<action path="/rcsw_xsgzqkbb_cgbb" forward="/rcsw_xsgzqkbb_cgbbgl.do?method=cgbbList"/>
+			<action path="/rcsw_xsgzqkbb_cgbbgl"
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.xsgzqkbb.xsgzqkcgbb.XsgzqkCgbbAction"
+					name="xsgzqkCgbbForm"
+					parameter="method">
+				<forward name="cgbbList" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkcgbb/cgbbList.jsp"></forward>
+				<forward name="cgbbAdd" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkcgbb/cgbbAdd.jsp"></forward>
+				<forward name="cgbbEdit" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkcgbb/cgbbEdit.jsp"></forward>
+				<forward name="cgbbView" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkcgbb/cgbbView.jsp"></forward>
+			</action>
+
+			<!--学生工作周报表-->
+			<action path="/rcsw_xsgzqkbb_zbb" forward="/rcsw_xsgzqkbb_zbbgl.do?method=zbbList"/>
+			<action path="/rcsw_xsgzqkbb_zbbgl"
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.xsgzqkbb.xsgzqkzbb.XsgzqkZbbAction"
+					name="xsgzqkZbbForm"
+					parameter="method">
+				<forward name="zbbList" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkzbb/zbbList.jsp"></forward>
+				<forward name="zbbAdd" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkzbb/zbbAdd.jsp"></forward>
+				<forward name="zbbEdit" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkzbb/zbbEdit.jsp"></forward>
+				<forward name="zbbView" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkzbb/zbbView.jsp"></forward>
+			</action>
+
+			<!--学生工作班级月报表-->
+			<action path="/rcsw_xsgzqkbb_bjybb" forward="/rcsw_xsgzqkbb_bjybbgl.do?method=bjYbbList"/>
+			<action path="/rcsw_xsgzqkbb_bjybbgl"
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.xsgzqkbb.xsgzqkybb.bjybb.XsgzqkBjYbbAction"
+					name="xsgzqkBjYbbForm"
+					parameter="method">
+				<forward name="bjYbbList" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkybb/bjybb/bjYbbList.jsp"></forward>
+				<forward name="bjYbbAdd" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkybb/bjybb/bjYbbAdd.jsp"></forward>
+				<forward name="bjYbbEdit" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkybb/bjybb/bjYbbEdit.jsp"></forward>
+				<forward name="bjManage" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkybb/bjybb/bjManage.jsp"></forward>
+			</action>
+
+			<!--学生工作学院月报表-->
+			<action path="/rcsw_xsgzqkbb_xyybb" forward="/rcsw_xsgzqkbb_xyybbgl.do?method=xyYbbList"/>
+			<action path="/rcsw_xsgzqkbb_xyybbgl"
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.xsgzqkbb.xsgzqkybb.xyybb.XsgzqkXyYbbAction"
+					name="xsgzqkXyYbbForm"
+					parameter="method">
+				<forward name="xyYbbList" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkybb/xyybb/xyYbbList.jsp"></forward>
+				<forward name="xyYbbAdd" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkybb/xyybb/xyYbbAdd.jsp"></forward>
+				<forward name="xyYbbEdit" path="/xsgzgl/rcsw/xsgzqkbb/xsgzqkybb/xyybb/xyYbbEdit.jsp"></forward>
+			</action>
+		
+		</action-mappings>
+	</struts-config>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -学生行为考核-->
+<struts-config>
+	<form-beans>
+    	<!-- 学生行为考核 -->
+    	
+    	<form-bean name="xsxwCsszForm" type="com.zfsoft.xgxt.rcsw.xsxwkh.cssz.XsxwCsszForm" /><!-- 时间设置 -->
+    	<form-bean name="xsxwJcxmwhForm" type="com.zfsoft.xgxt.rcsw.xsxwkh.jcxmwh.XsxwJcxmwhForm" />
+    	<form-bean name="jcfsbForm" type="com.zfsoft.xgxt.rcsw.xsxwkh.jcfgl.jcfsb.JcfsbForm" />
+    	<form-bean name="fjfglForm" type="com.zfsoft.xgxt.rcsw.xsxwkh.fjfgl.FjfglForm" />
+    	<form-bean name="pddjForm" type="com.zfsoft.xgxt.rcsw.xsxwkh.pddj.PddjForm" />
+    	<form-bean name="JbfglForm" type="com.zfsoft.xgxt.rcsw.xsxwkh.jbfgl.JbfglForm" />
+	</form-beans>
+	
+	
+	<action-mappings>
+		<action path="/xsxwkh_cssz" forward="/xsxwkhCssz.do?method=cssz"/><!--终评时间设置 -->
+		<action path="/xsxwkhCssz" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.xsxwkh.cssz.XsxwCsszAction" 
+	   			name="xsxwCsszForm"         
+	   			parameter="method">	
+	   			<forward name="cssz" path="/xsgzgl/rcsw/xsxwkh/cssz/cssz.jsp"/>
+		</action>		
+		<action path="/xsxwkh_jbfgl" forward="/xsxwkhJbfgl.do?method=getjbflist"/><!--基本分管理 -->
+		<action path="/xsxwkhJbfgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.xsxwkh.jbfgl.JbfglAction" 
+	   			name="JbfglForm"         
+	   			parameter="method">	
+	   			<forward name="getjbflist" path="/xsgzgl/rcsw/xsxwkh/jbfgl/jbfxx.jsp"/>
+	   			<forward name="jbfAdd" path="/xsgzgl/rcsw/xsxwkh/jbfgl/addjbf.jsp"/>
+	   			<forward name="jbfUpdate" path="/xsgzgl/rcsw/xsxwkh/jbfgl/editjbf.jsp"/>
+	   			<forward name="jbfView" path="/xsgzgl/rcsw/xsxwkh/jbfgl/viewjbf.jsp"/>	   			
+		</action>				
+		<action path="/xsxwkh_jcxmwh" forward="/xsxwkhJcxmwh.do?method=jlxmManage"/><!--奖惩项目设置 -->
+		<action path="/xsxwkhJcxmwh" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.xsxwkh.jcxmwh.XsxwJcxmwhAction" 
+	   			name="xsxwJcxmwhForm"         
+	   			parameter="method">	
+	   			<forward name="jlxmManage" path="/xsgzgl/rcsw/xsxwkh/jcxmwh/jlxmManage.jsp"/>
+	   			<forward name="addJlxm" path="/xsgzgl/rcsw/xsxwkh/jcxmwh/addJlxm.jsp"/>
+	   			<forward name="updateJlxm" path="/xsgzgl/rcsw/xsxwkh/jcxmwh/updateJlxm.jsp"/>
+	   			<forward name="cfxmManage" path="/xsgzgl/rcsw/xsxwkh/jcxmwh/cfxmManage.jsp"/>
+	   			<forward name="addCfxm" path="/xsgzgl/rcsw/xsxwkh/jcxmwh/addCfxm.jsp"/>
+	   			<forward name="updateCfxm" path="/xsgzgl/rcsw/xsxwkh/jcxmwh/updateCfxm.jsp"/>
+		</action>
+		<action path="/xsxwkh_fjfgl" forward="/xsxwkhFjfgl.do?method=getFjfglList"/><!--附加分管理 -->
+		<action path="/xsxwkhFjfgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.xsxwkh.fjfgl.FjfglAction" 
+	   			name="fjfglForm"         
+	   			parameter="method">	
+	   			<forward name="getFjfglList" path="/xsgzgl/rcsw/xsxwkh/fjfgl/getFjfglList.jsp"/>
+	   			<forward name="addFjfgl" path="/xsgzgl/rcsw/xsxwkh/fjfgl/addFjfgl.jsp"/>
+	   			<forward name="editFjfgl" path="/xsgzgl/rcsw/xsxwkh/fjfgl/editFjfgl.jsp"/>
+	   			<forward name="viewFjfgl" path="/xsgzgl/rcsw/xsxwkh/fjfgl/viewFjfgl.jsp"/>
+		</action>
+		
+		<action path="/xsxwkh_djpd" forward="/xsxwkhDjpd.do?method=getPddjList"/><!--等级评定 -->
+		<action path="/xsxwkhDjpd" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.rcsw.xsxwkh.pddj.PddjAction" 
+	   			name="pddjForm"         
+	   			parameter="method">	
+	   			<forward name="getPddjList" path="/xsgzgl/rcsw/xsxwkh/pddj/getPddjList.jsp"/>
+	   			<forward name="pddjSingle" path="/xsgzgl/rcsw/xsxwkh/pddj/pddjSingle.jsp"/>
+	   			<forward name="pddjPl" path="/xsgzgl/rcsw/xsxwkh/pddj/pddjPl.jsp"/>
+	   			<forward name="pddjView" path="/xsgzgl/rcsw/xsxwkh/pddj/pddjView.jsp"/>
+		</action>
+		
+		
+		
+	</action-mappings>
+</struts-config>

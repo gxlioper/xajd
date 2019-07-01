@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="dyxjCsszModel" type="com.zfsoft.xgxt.xsxx.dyxj.cssz.CsszModel"/>
+		<form-bean name="dyxjZpdjModel" type="com.zfsoft.xgxt.xsxx.dyxj.dmwh.ZpdjModel"/>
+		<form-bean name="dyxjDyzpModel" type="com.zfsoft.xgxt.xsxx.dyxj.dyzp.DyzpModel"/>
+		<form-bean name="dyxjZpjgModel" type="com.zfsoft.xgxt.xsxx.dyxj.zpjg.ZpjgModel"/>
+		<form-bean name="zgkForm" type="com.zfsoft.xgxt.xsxx.dyxj.zgk.zgkForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/xsxx_dyxj_cssz" 	forward="/xsxxDyxjCssz.do?method=cssz"/>	
+    	<action path="/xsxx_dyxj_dmwh" 	forward="/xsxxDyxjZpdj.do?method=zpdjList"/>
+		<action path="/xsxx_dyxj_pysq" 	forward="/xsxxDyxjDyzp.do?method=zpsqList"/>
+		<action path="/xsxx_dyxj_pysh" 	forward="/xsxxDyxjDyzp.do?method=zpshList"/>
+		<action path="/xsxx_dyxj_pyjg" 	forward="/xsxxDyxjZpjg.do?method=zpjgList"/>
+		<action path="/xsxx_dyxj_dyzgk" forward="/dyxj_dyzgk.do?method=getDyzgkCx"/>
+		
+    	<action path="/xsxxDyxjCssz" 
+        		parameter="method"  
+        		name="dyxjCsszModel" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.dyxj.cssz.CsszAction">	
+		       <forward name="cssz" path="/xsgzgl/xsxx/dyxj/cssz/cssz.jsp"/>
+		</action>
+		
+    	<action path="/xsxxDyxjZpdj" 
+        		parameter="method"  
+        		name="dyxjZpdjModel" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.dyxj.dmwh.ZpdjAction">	
+		        <forward name="zpdjList" path="/xsgzgl/xsxx/dyxj/zpdj/zpdjList.jsp"/>
+		        <forward name="zpdjAdd" path="/xsgzgl/xsxx/dyxj/zpdj/zpdjAdd.jsp"/>
+		        <forward name="zpdjEdit" path="/xsgzgl/xsxx/dyxj/zpdj/zpdjEdit.jsp"/>
+		</action>
+		
+    	<action path="/xsxxDyxjDyzp" 
+        		parameter="method"  
+        		name="dyxjDyzpModel" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.dyxj.dyzp.DyzpAction">	
+	         	<forward name="zpsqList" path="/xsgzgl/xsxx/dyxj/dyzp/zpsqList.jsp"/>
+		        <forward name="zpsq" path="/xsgzgl/xsxx/dyxj/dyzp/zpsq.jsp"/>
+		        <forward name="xgsq" path="/xsgzgl/xsxx/dyxj/dyzp/xgsq.jsp"/>
+		        <forward name="zpshList" path="/xsgzgl/xsxx/dyxj/dyzp/zpshList.jsp"/>
+		        <forward name="zpsh" path="/xsgzgl/xsxx/dyxj/dyzp/zpsh.jsp"/>
+		        <forward name="dyzpPlSh" path="/xsgzgl/xsxx/dyxj/dyzp/dyzpPlSh.jsp"/>
+		        <forward name="cksq" path="/xsgzgl/xsxx/dyxj/dyzp/cksq.jsp"/>
+		</action>
+		
+    	<action path="/xsxxDyxjZpjg" 
+        		parameter="method"  
+        		name="dyxjZpjgModel" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.dyxj.zpjg.ZpjgAction">	
+		        <forward name="zpjgList" path="/xsgzgl/xsxx/dyxj/zpjg/zpjgList.jsp"/>
+		        <forward name="zpjgAdd" path="/xsgzgl/xsxx/dyxj/zpjg/zpjgAdd.jsp"/>
+		        <forward name="zpjgEdit" path="/xsgzgl/xsxx/dyxj/zpjg/zpjgEdit.jsp"/>
+		        <forward name="zpjgView" path="/xsgzgl/xsxx/dyxj/zpjg/zpjgView.jsp"/>
+		</action>
+		
+		<action path="/dyxj_dyzgk"
+        		parameter="method"  
+        		name="zgkForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.dyxj.zgk.zgkAction">
+			<forward name="cx" path="/xsgzgl/xsxx/dyxj/zgk/getZgkCxList.jsp"/>
+			<forward name="showdyStudents" path="/xsgzgl/xsxx/dyxj/zgk/showdystudent.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

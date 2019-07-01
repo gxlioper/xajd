@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="zhcpZczfForm" type="xgxt.pjpy.comm.zhcp.zczf.ZhcpZczfForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		<action path="/zhcp_zczf_zccx" 		forward="/zhcpZczf.do?method=zcfManage"/>		<!-- 综测总分 -->
+		
+		<!-- 综测基本设置 -->
+    	<action path="/zhcpZczf" 
+        		parameter="method"  
+        		name="zhcpZczfForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.zhcp.zczf.ZhcpZczfAction">	
+		       
+			<forward name="zcfManage"    	path="/pjpy/comm/zhcp/zczf/zcfManage.jsp" />
+			<forward name="kindChoose"    	path="/pjpy/comm/zhcp/zczf/kindChoose.jsp" />
+			<forward name="getZhcpPrintData" path="/pjpy/jsxx/pjpy_jsxx_zhszcphz.jsp" />
+		</action>
+		
+	</action-mappings>
+</struts-config>

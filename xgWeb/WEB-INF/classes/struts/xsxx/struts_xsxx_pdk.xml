@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xsxxCommForm" type="xgxt.xsxx.comm.XsxxCommForm" />
+		<form-bean name="tsbjForm" type="xgxt.xsxx.tsbj.TsbjForm" />
+	</form-beans>
+	<global-forwards />
+	<!-- 个性化功能 -->
+	<action-mappings>
+		
+		
+		<action path="/moralCardIndex" forward="/moralCard.do?method=showStudents"/>
+		<action path="/dyddgl" forward="/moralCard.do?method=dyddManage"/>
+		<action path="/bbdy_njjs" forward="/njjsbb.do?method=showStudents&amp;mkmc=njjs"/>
+		
+		<!-- <<<<<<<<<<<<<<学生信息： 浙江职业学生品德卡（个性化需求）>>>>>>>>>>>>> -->
+		<action 
+			name="xsxxCommForm" 
+			parameter="method"
+			path="/moralCard" 
+			scope="request"
+			type="xgxt.xsxx.pdk.MoralCardAction">
+			
+			<forward name="dyddManage" path="/xsxx/gxh/pdk/dyddManage.jsp"/>
+			<forward name="showStudents" path="/xsxx/gxh/pdk/showStudents.jsp"/>
+			<forward name="dyddPage" path="/xsxx/gxh/pdk/dyddPage.jsp"/>
+			<forward name="jcjlPage" path="/xsxx/gxh/pdk/jcjlPage.jsp"/>
+			<forward name="viewMoralCard" path="/xsxx/gxh/pdk/viewMoralCard.jsp"/>
+			<forward name="xjqrdPrint" path="/xsxx/gxh/hbjt/xjqrdPrint.jsp"/>
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<学生信息： 南京技师报表>>>>>>>>>>>>> -->
+		<action 
+			name="xsxxCommForm" 
+			parameter="method"
+			path="/njjsbb" 
+			scope="request"
+			type="xgxt.xsxx.pdk.MoralCardAction">
+			
+			<forward name="showStudents" path="/xsxx/gxh/njjs/showStudents.jsp"/>
+			<forward name="xsdjb" path="/xsxx/gxh/njjs/xsdjb.jsp"/>
+			<forward name="xjk_three" path="/xsxx/gxh/njjs/xjk_three.jsp"/>
+			<forward name="xjk_five" path="/xsxx/gxh/njjs/xjk_five.jsp"/>
+			<forward name="xjk_seven" path="/xsxx/gxh/njjs/xjk_seven.jsp"/>
+			
+		</action>
+		
+		<!-- 学生信息-特色班级 -->
+		
+		<action path="/tsbjgl" forward="/tsbj.do?method=tsbjgl"/>
+		<action path="/tsbjxsgl" forward="/tsbj.do?method=tsbjxsgl"/>
+		
+		<action 
+			name="tsbjForm" 
+			parameter="method"
+			path="/tsbj" 
+			scope="request"
+			type="xgxt.xsxx.tsbj.TsbjAction">
+			
+			<forward name="tsbjgl" path="/xsxx/gxh/tsbj/tsbjgl.jsp"/>
+			<forward name="tsbjAdd" path="/xsxx/gxh/tsbj/tsbjAdd.jsp"/>
+			<forward name="tsbjxsgl" path="/xsxx/gxh/tsbj/tsbjxsgl.jsp"/>
+			<forward name="tsbjxssz" path="/xsxx/gxh/tsbj/tsbjxssz.jsp"/>
+			<forward name="tsbjView" path="/xsxx/gxh/tsbj/tsbjView.jsp"/>
+		</action>
+		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xtwhForm" type="xsgzgl.xtwh.jhzy.XtwhForm">
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="xtwhForm" parameter="method" path="/jhzy_xtwh"
+				scope="request"	type="xsgzgl.xtwh.jhzy.XtwhAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="fdyqxfp" path="/xsgzgl/xtwh/jhzy/fdyqxfp.jsp" />
+			<forward name="bzrqxfp" path="/xsgzgl/xtwh/jhzy/bzrqxfp.jsp" />
+			<forward name="fdyQuery" path="/xsgzgl/xtwh/jhzy/fdyQuery.jsp" />
+			<forward name="bzrQuery" path="/xsgzgl/xtwh/jhzy/bzrQuery.jsp" />
+		</action>
+		
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

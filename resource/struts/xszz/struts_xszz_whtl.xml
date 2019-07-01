@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzYbbxForm" type="xgxt.xszz.whtl.ybbx.XszzYbbxForm">
+		</form-bean>
+	</form-beans>
+		
+	<action-mappings>		
+		
+		<action  path="/xszz_ybbx_sq" forward="/xszzYbbx.do?method=ybbxDetail"/>
+		<action  path="/xszz_ybbx_cx" forward="/xszzYbbx.do?method=ybbxcxManage"/>	
+		<action  path="/xszz_ybbx_sh" forward="/xszzYbbx.do?method=ybbxshManage"/>
+		
+		<action name="xszzYbbxForm" parameter="method" path="/xszzYbbx"
+				scope="request"	type="xgxt.xszz.whtl.ybbx.XszzYbbxAction">	
+			<forward name="ybbxDetail" path="/xszz/whtl/ybbx/ybbxDetail.jsp" />
+			<forward name="ybbxcxManage" path="/xszz/whtl/ybbx/ybbxcxManage.jsp" />
+			<forward name="ybbxshManage" path="/xszz/whtl/ybbx/ybbxshManage.jsp" />
+		</action>
+		
+		<action name="xszzYbbxForm" parameter="method" path="/xszzYbbxAjax"
+				scope="request"	type="xgxt.xszz.whtl.ybbx.XszzYbbxAjax">
+			
+		</action>
+
+	</action-mappings>
+
+</struts-config>

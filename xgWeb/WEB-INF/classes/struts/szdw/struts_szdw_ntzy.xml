@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		 <form-bean name="fdypxForm" type="xgxt.szdw.ntzy.NtzyFdypxForm" />						
+	</form-beans>
+
+	<global-forwards />
+
+	<action-mappings>
+
+	<action path="/fdyfk" forward="/ntzy_fdyfk.do?method=fdypxfk"/>	
+	<action path="/fdypxsh" forward="/ntzy_fdyfk.do?method=fdypxsh"/>
+	<action path="/fdypxcx" forward="/ntzy_fdyfk.do?method=fdypxcx"/>
+		
+	<!-- <<<<<<<<<<<<<<<<<<思政队伍 南通职业>>>>>>>>>>>>>>>>>> -->
+    <action 
+    	path="/ntzy_fdyfk" 
+    	name="fdypxForm"
+    	type="xgxt.szdw.ntzy.NtzyFdypxAction" 
+    	parameter="method"
+    	scope="request">
+    	
+    	<forward name="fdypxfk" path="/szdw/ntzy/fdyfk/fdypxfk.jsp"/>
+    	<forward name="fdypxcx" path="/szdw/ntzy/fdyfk/fdypxcx.jsp"/>
+    	<forward name="fdypxsh" path="/szdw/ntzy/fdyfk/fdypxsh.jsp"/>
+    	<forward name="fdypxshone" path="/szdw/ntzy/fdyfk/fdypxshone.jsp"/>
+    	<forward name="fdypxview" path="/szdw/ntzy/fdyfk/fdypxview.jsp"/>
+    </action>
+		
+	</action-mappings>
+  <message-resources parameter="xgxt.base.ApplicationResources" /> 
+</struts-config>

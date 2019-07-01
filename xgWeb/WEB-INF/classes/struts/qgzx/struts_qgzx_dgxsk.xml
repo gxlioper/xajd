@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 勤工助学模块 -->
+<struts-config>
+    <form-beans>
+        <form-bean name="dgxskForm" type="com.zfsoft.xgxt.qgzx.dgxsk.DgxskForm" /><!--待岗学生库-->
+        <form-bean name="wycjqgzxForm" type="com.zfsoft.xgxt.qgzx.wycjqgzx.WycjqgzxForm" /><!--我要参加勤工助学-->
+    </form-beans>
+    <action-mappings>
+
+        <!--待岗学生库-->
+        <action path="/qgzx_gwglnew_dgxsk" forward="/qgzx_dgxsk.do?method=dgxskManage"/>
+        <action path="/qgzx_dgxsk"
+                scope="request"
+                type="com.zfsoft.xgxt.qgzx.dgxsk.DgxskAction"
+                name="dgxskForm"
+                parameter="method">
+            <forward name="dgxskManage" path="/xsgzgl/qgzx/dgxsk/dgxskManage.jsp"></forward>
+            <forward name="dgxskView" path="/xsgzgl/qgzx/dgxsk/dgxskView.jsp"></forward>
+        </action>
+
+
+
+        <!--我要参加勤工助学-->
+        <action path="/qgzx_gwglnew_wycjqgzx" forward="/qgzx_wycjqgzx.do?method=wycjqgzxManage"/>
+        <action path="/qgzx_wycjqgzx"
+                scope="request"
+                type="com.zfsoft.xgxt.qgzx.wycjqgzx.WycjqgzxAction"
+                name="dgxskForm"
+                parameter="method">
+            <forward name="wycjqgzxManage" path="/xsgzgl/qgzx/wycjqgzx/wycjqgzxManage.jsp"></forward>
+        </action>
+
+    </action-mappings>
+</struts-config>

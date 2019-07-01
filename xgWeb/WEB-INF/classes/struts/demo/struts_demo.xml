@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+	
+    	<form-bean name="demoForm" type="com.zfsoft.xgxt.demo.SimpleForm" />
+    	
+	</form-beans>
+
+	<action-mappings>
+  
+		<action path="/demo" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.demo.SimpleAction" 
+    			name="demoForm"
+    			parameter="method">	
+    			
+    		<forward name="studentList" path="/xsgzgl/customForm/test/studentList.jsp"></forward>
+			<forward name="getStudents" path="/xsgzgl/customForm/test/getStudents.jsp"></forward>
+			<forward name="addStudent" path="/xsgzgl/customForm/test/addStudent.jsp"></forward>
+			<forward name="updateStudent" path="/xsgzgl/customForm/test/updateStudent.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+</struts-config>

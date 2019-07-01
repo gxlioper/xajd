@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到宁波职业的配置文件,pjpy_nbzy.xml    -->
+		<action path="/pjpy_nbzy_xjbjprint" 	   forward="/pjpynbzywh.do?method=xjbjPrint"></action><!-- 先进班级报表打印 -->
+		<action path="/pjpy_nbzy_zhszcp"           forward="/pjpynbzywh.do?method=zhszcp"></action><!-- 综合素质测评页面 -->
+		<action path="/pjpy_nbzy_szqry"            forward="/pjpynbzywh.do?method=szqry"></action><!--综合素质测评查询  -->
+		<action path="/pjpy_nbzy_zyszfAdd"         forward="/pjpynbzywh.do?method=zyszfAdd"></action>
+		<action path="/pjpy_nbzy_zysyfsave"        forward="/pjpynbzywh.do?method=zysyfSave"></action>
+		<action path="/pjpy_nbzy_zysyfmodi"        forward="/pjpynbzywh.do?method=zysyfModi"></action>
+		<action path="/pjpy_nbzy_zysyfmodisave"    forward="/pjpynbzywh.do?method=zysyfModisave"></action>
+		<action path="/pjpy_nbzy_szfdel"           forward="/pjpynbzywh.do?method=szfdel"></action>
+		<action path="/pjpy_nbzy_zhszcpcount"      forward="/pjpynbzywh.do?method=zhszcpCount"></action>
+		<action path="/pjpy_nbzy_jxjsq"            forward="/pjpynbzywh.do?method=jxjSq"></action>
+		<action path="/pjpy_nbzy_jxjsqsave"        forward="/pjpynbzywh.do?method=jxjSqsave"></action>
+		<action path="/pjpy_nbzy_jxjqry"           forward="/pjpynbzywh.do?method=jxjqry"></action>
+		<action path="/pjpy_nbzy_sqqryres"         forward="/pjpynbzywh.do?method=sqqryres"></action>
+		<action path="/pjpy_nbzy_jxjmodi"          forward="/pjpynbzywh.do?method=jxjModi"></action>
+		<action path="/pjpy_nbzy_jxjmodisave"      forward="/pjpynbzywh.do?method=jxjModisave"></action>
+		<action path="/pjpy_nbzy_jxjdel"           forward="/pjpynbzywh.do?method=jxjDel"></action>
+		<action path="/pjpy_nbzy_jxjsh"            forward="/pjpynbzywh.do?method=jxjsh"></action>
+		<action path="/pjpy_nbzy_shres"            forward="/pjpynbzywh.do?method=shRes"></action>
+		<action path="/pjpy_nbzy_shone"            forward="/pjpynbzywh.do?method=shone"></action>
+		<action path="/pjpy_nbzy_tjsz"             forward="/pjpynbzywh.do?method=tjsz"></action>
+		<action path="/pjpy_nbzy_tjszsave"         forward="/pjpynbzywh.do?method=tjszsave"></action>
+		<action path="/tjDelres"                   forward="/pjpynbzywh.do?method=tjDelres"></action>
+		<action path="/pjpy_nbzy_jxjprint"         forward="/pjpynbzywh.do?method=jxjPrint"></action>
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,589 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana, arial, helvetica, sans-serif, 宋体;
+	color: #000;
+	font-size: 12px;
+}
+
+body { /*
+    scrollbar-shadow-color:#666666;
+	scrollbar-darkshadow-color:#F0F0F0;
+	scrollbar-arrow-color: #000000;
+	scrollbar-base-color: #CCCCCC;
+	scrollbar-highlight-color: #F0F0F0;
+    */
+	SCROLLBAR-FACE-COLOR: #004487;
+	SCROLLBAR-HIGHLIGHT-COLOR: #002f5d;
+	SCROLLBAR-SHADOW-COLOR: #e8e8e8;
+	SCROLLBAR-3DLIGHT-COLOR: #bfdefb;
+	SCROLLBAR-ARROW-COLOR: #00ccff;
+	PADDING-TOP: 0px;
+	SCROLLBAR-TRACK-COLOR: #004487;
+	SCROLLBAR-DARKSHADOW-COLOR: #004487;
+}
+
+td {
+	font-size: 12px;
+}
+
+th {
+	font-size: 12px;
+}
+
+strong,b {
+	font-weight: bold;
+}
+
+img map {
+	border: 0;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table td {
+	border: 1px #97B7DB solid;
+	padding: 3px;
+}
+
+table thead {
+	background: #D0E0EE;
+}
+
+/*全局表单定义*/
+input {
+	background: #F7F9FC;
+	border: 1px solid #6699CC;
+}
+
+textarea {
+	background: #F7F9FC;
+	border: 1px solid #6699CC;
+}
+
+.button2 {
+	border: #002D96 1px solid;
+	padding: 2px 0px 0px 2px;
+	filter: progid : DXImageTransform . Microsoft .
+		Gradient(GradientType = 0, StartColorStr = #FFFFFF, EndColorStr =
+		#9DBCEA);
+	cursor: hand;
+	color: #003366;
+	margin: 0px 5px;
+	height: 19px;
+}
+
+.goodselect {
+	behavior: url('style/select.htc');
+}
+
+/*默认的超连接样式*/
+A:link {
+	COLOR: #000;
+	TEXT-DECORATION: none
+}
+
+A:visited {
+	COLOR: #003366;
+	TEXT-DECORATION: none
+}
+
+A:active {
+	COLOR: #003366;
+	TEXT-DECORATION: none
+}
+
+A:hover {
+	COLOR: red;
+	TEXT-DECORATION: underline
+}
+
+#head {
+	background: url(../images/top_bg.gif);
+	height: 75px;
+	width: 100%;
+}
+
+#toplogo {
+	background: url(../images/top_logo.gif) no-repeat;
+	height: 75px;
+	width: 376px;
+}
+
+#welcome {
+	width: 100%;
+	position: absolute;
+	color: #fff;
+	top: 55px;
+	left: 40%;
+	height: 14px;
+}
+
+#top {
+	background: url(../images/menu_bg.gif);
+	height: 28px;
+}
+
+#menu_out_l {
+	background: url(../images/menu_more_l.gif);
+	float: left;
+	width: 18px;
+	height: 18px;
+	cursor: hand;
+}
+
+#menu_out_r {
+	background: url(../images/menu_more_r.gif);
+	float: left;
+	width: 18px;
+	height: 18px;
+	cursor: hand;
+}
+
+#menu {
+	cursor: hand;
+	heigt: 20px;
+	width: 85%;
+	float: left;
+}
+
+#menuTxt {
+	position: relative;
+	top: 8px;
+	font-weight: bold;
+	text-indent: 15px;
+	color: #fff;
+}
+
+#menuTxt A:link {
+	COLOR: #fff;
+	TEXT-DECORATION: none
+}
+
+#menuTxt A:visited {
+	COLOR: #fff;
+	TEXT-DECORATION: none
+}
+
+#menuTxt A:active {
+	COLOR: #fff;
+	TEXT-DECORATION: none
+}
+
+#menuTxt A:hover {
+	COLOR: #fff;
+	TEXT-DECORATION: underline
+}
+
+/*========================菜单=======================*/
+.left_title {
+	background: url(../images/left_title.gif) no-repeat;
+	height: 22px;
+	width: 179px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+}
+
+/*.tit为每个菜单的标题样式 .list 为菜单项目的样式*/
+.tit  , .list {
+	width: 174px; /*菜单的宽度*/
+	margin-left: 2px;
+}
+
+.tit { /*菜单标题的样式*/
+	height: 22px;
+	border: 1px solid #5E88B8; /*边框颜色*/
+	border-bottom-style: none; /*底部边框没有*/
+	background: #EEF4F9 url(../images/menu_head_bg.gif) repeat-x;
+	/*背景样式依次为：颜色，图片路径，横向重复*/
+	color: #D9E1F6; /*前景色*/
+	text-indent: 30px;
+	font: bold 12px/ 22px "lucida Grande", verdana, lucida, Arial, helvetica,
+		"宋体", sans-serif; /*文字样式依次为：粗体 大小/行高 字族*/
+	margin-top: 2px; /*外填充*/
+	position: relative;
+}
+
+.tit a  ,.tit a:link  , .tit a hover { /*菜单标题中的链接的样式，共同的部分*/
+	color: #003366;
+	display: block;
+	text-decoration: none;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: 10px 3px;
+}
+
+.tit a:hover {
+	color: #5E88B8; /*鼠标经过时的颜色*/
+}
+
+/*====================
+    菜单标题中的箭头图片
+======================*/
+.on {
+	background-image: url(../images/arrow_down.gif); /*向上的箭头-暗色*/
+}
+
+.on:hover {
+	background-image: url(../images/arrow_down_o.gif); /*向上的箭头-亮色*/
+}
+
+.off {
+	background-image: url(../images/arrow_up.gif); /*向下的箭头-暗色*/
+}
+
+.off:hover {
+	background-image: url(../images/arrow_up_o.gif); /*向下的箭头-亮色*/
+}
+
+/*====================
+    菜单列表的样式
+======================*/
+.list {
+	font-size: 12px;
+	color: #002280;
+	filter: progid : DXImageTransform . Microsoft .
+		Gradient(GradientType = 0, StartColorStr = #FFFFFF, EndColorStr =
+		#E7EDF9);
+	background: #fff no-repeat right bottom;
+	width: 154px; /*宽度*/
+	border: 1px solid #5E88B8;
+	text-align: left;
+	padding: 10px 10px;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	overflow: hidden;
+	margin-left: 2px;
+}
+
+html>body .list {
+	width: 156px;
+}
+
+.list ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	padding-left: 15px;
+}
+
+.list li {
+	margin: 5px;
+	padding: 0;
+	padding-left: 5px;
+}
+
+/*============
+菜单链接的样式
+==============*/
+.list a {
+	color: #002280;
+	text-decoration: none;
+}
+
+.list a:link {
+	color: #002280;
+}
+
+.list a:hover {
+	color: #296DC1;
+	text-decoration: underline;
+}
+
+.list a:active {
+	color: #296DC1;
+}
+
+/*标题图标样式*/
+.titpic {
+	position: absolute;
+	height: 32px;
+	width: 32px;
+	left: 0px;
+	bottom: 0px;
+}
+
+.lipic {
+	list-style-image: url("../images/lipic.gif");
+}
+
+/*每一个标题图标*/
+#pc1 {
+	background: url(images/pepo.png) no-repeat;
+}
+
+#pc2 {
+	background: url(images/st.png) no-repeat;
+}
+
+#pc3 {
+	background: url(images/ring.png) no-repeat;
+}
+
+#pc4 {
+	background: url(images/pic.png) no-repeat;
+}
+
+#pc5 {
+	background: url(images/mv.png) no-repeat;
+}
+
+#pc6 {
+	background: url(images/up.png) no-repeat;
+}
+
+#pc7 {
+	background: url(images/help.png) no-repeat;
+}
+
+#menu1_child {
+	background-image: url(images/bgmv.png);
+}
+
+/*#menu2_child{
+    background-image:url(images/bgring.png);
+}
+*/
+#menu3_child {
+	background-image: url(images/bgring.png);
+}
+
+#menu4_child {
+	background-image: url(images/bgpic.png);
+}
+
+#menu5_child {
+	background-image: url(images/bgmv.png);
+}
+
+#title {
+	width: 100%;
+	border-width: 0px 0px 2px 0px;
+	border: solid #86B7D7;
+	background: #2268AB;
+	height: 20px;
+	text-align: center;
+}
+
+#title_l {
+	background: url(../images/right_title.gif) no-repeat;
+	float: left;
+	height: 16px;
+	width: 16px;
+	margin: 2px 2px 0px 3px;
+}
+
+#title_m {
+	height: 15px;
+	float: left;
+	position: relative;
+	top: 2px;
+	color: #fff;
+}
+
+/*右边整体白底蓝框*/
+#main {
+	width: 99%;
+	height: 350px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #5E88B8;
+	margin: 2px 0px 2px 1px;
+	text-align: center;
+}
+
+/*查询的整体*/
+#search {
+	background: url(../images/search_bg.gif) repeat-x;
+	height: 3px;
+	margin: 4px 1px 0px 0px;
+	width: 100%;
+	text-align: left;
+}
+
+#result {
+	background: url(../images/search_bg.gif) repeat-x;
+	margin: 0px 1px 0px 0px;
+	width: 100%;
+	height: 350px;
+	text-align: left;
+}
+
+/*查询的左面*/
+#search_llllllllll {
+	background: url(../images/search_l.gif) no-repeat;
+	width: 9px;
+	float: left;
+	height: 60px;
+}
+
+/*查询的中*/
+#search_m {
+	height: 4px;
+	float: left;
+}
+
+/*查询的顶端字*/
+.searchfont {
+	color: #003366;
+	margin: 4px 0px 0px 5px;
+}
+
+/*查询工具栏的表单*/
+.searchcontent {
+	margin: 4px 0px 0px 8px;
+}
+
+/*查询的右*/
+#search_rrrrrrrrrrrr {
+	background: url(../images/search_r.gif) no-repeat;
+	width: 9px;
+	float: right;
+	height: 60px;
+}
+
+#button {
+	border: 1px solid #F6EFE9;
+	background: #FEFDFA;
+	width: 99%;
+	height: 30px;
+	padding-top: 6px;
+}
+
+.searchcontent ul {
+	list-style: none;
+	margin: 0px;
+	float: left
+}
+
+.searchcontent li {
+	float: left;
+	margin: 0px 0px 3px 3px;
+}
+
+.selectwidth {
+	width: 100px;
+}
+
+.selecttitle {
+	padding-top: 4px;
+}
+
+.selectbutton {
+	width: 60px;
+}
+
+.content {
+	margin: 4px;
+}
+
+#bottom {
+	width: 100%;
+	height: 27px;
+	margin: 1px;
+	background: url(../images/bottom_bg.gif);
+}
+
+.zflogo {
+	float: right;
+}
+
+.oldtable {
+	border: 0px;
+}
+
+/*------------------------------选项的整体--------开始---------------*/
+#xxk {
+	width: 100%;
+	height: 36px;
+	background: url(../images/xxk_bg.gif);
+	margin-top: 9px;
+}
+
+#xxk_on {
+	
+}
+
+#xxk_off {
+	
+}
+
+/*选中的菜单样式*/
+.xxk_on_l {
+	background: url(../images/xxk_on_l.gif) no-repeat;
+	height: 36px;
+	width: 5px;
+}
+
+.xxk_on_r {
+	background: url(../images/xxk_on_r.gif) no-repeat;
+	height: 36px;
+	width: 5px;
+}
+
+.xxk_on_m {
+	height: 36px;
+	font-weight: bold;
+	color: #053E7A;
+	filter: glow(color = white, strength = 1);
+	background: url(../images/xxk_on_m.gif) repeat-x;
+	padding-top: 3px;
+}
+
+/*未选中的菜单样式*/
+.xxk_off_l {
+	background: url(../images/xxk_off_l.gif) no-repeat;
+	height: 36px;
+	width: 5px;
+}
+
+.xxk_off_r {
+	background: url(../images/xxk_off_r.gif) no-repeat;
+	height: 36px;
+	width: 5px;
+}
+
+.xxk_off_m {
+	height: 36px;
+	font-weight: bold;
+	color: #053E7A;
+	filter: glow(color = white, strength = 1);
+	background: url(../images/xxk_off_m.gif) repeat-x;
+	padding-top: 5px;
+}
+
+#xxk ul {
+	list-style: none;
+	margin: 0px 1px;
+	float: left;
+}
+
+#xxk li {
+	list-style: none;
+	float: left;
+	cursor: hand;
+}
+
+/*------------------结束------------选项的整体--------结束---------------*/
+#repTit {
+	font-size: 24px;
+}
+
+#jxjtmp {
+	LEFT: 0px;
+	POSITION: absolute;
+	TOP: -500px;
+	VISIBILITY: visible;
+	Z-INDEX: 999
+}
+
+.logout {
+	background: url(../images/resloign.gif) repeat-x;
+	cursor: hand;
+	width: 90px;
+	height: 28px;
+	float: right
+}

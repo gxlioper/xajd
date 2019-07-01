@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="ryjfForm" type="xgxt.pjpy.ghxy.ryjf.PjpyRyjfForm" />
+	</form-beans>
+ 	<action-mappings>
+ 		<!-- 显示路径 -->
+        <action path="/pjpyryjfsq" forward="/pjpy_ryjf.do?method=grjfsq"/>	
+     	<action path="/pjpyryjfsh" forward="/pjpy_ryjf.do?method=grjfsh"/>
+		<action path="/pjpyryjfcx" forward="/pjpy_ryjf.do?method=grjfcx"/>
+     	<action path="/pjpybjbzflr" forward="/pjpy_ryjf.do?method=bjbzflr"/>	
+     	<action path="/pjpybjbzfsh" forward="/pjpy_ryjf.do?method=bjbzfsh"/>	
+     	<action path="/pjpybjbzfcx" forward="/pjpy_ryjf.do?method=bjbzfcx"/>	
+     	<action path="/pjpyjflr" forward="/pjpy_ryjf.do?method=ryjflr"/>
+     	<action path="/pjpyjfsh" forward="/pjpy_ryjf.do?method=ryjfsh"/>
+     	<action path="/pjpyjfcx" forward="/pjpy_ryjf.do?method=ryjfcx"/>
+     	<action path="/pjpyhzcx" forward="/pjpy_ryjf.do?method=ryjfhz"/>
+     	
+		<!-- 实际路径 -->
+        <action path="/pjpy_ryjf" 
+        		parameter="method"
+        		name="ryjfForm"  
+		        type="xgxt.pjpy.ghxy.ryjf.PjpyRyjfAction">
+		</action>
+       
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

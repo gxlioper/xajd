@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/dtjs_zbgl.do" location="0,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_rdsq.do" location="206,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_jjfz.do" location="412,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_fzdx.do" location="618,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_ybdy.do" location="824,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_zsdy.do" location="1030,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_sjtj.do" location="1236,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_pxxx.do" location="1442,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_dkmd.do" location="1648,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_sxhb.do" location="1854,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_tyxx.do" location="2060,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_ftypx.do" location="2266,0" dimension="112,60" />
+  <StrutsActivity path="/dtjs_typx.do" location="2478,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_tnty.do" location="2684,0" dimension="106,60" />
+  <StrutsActivity path="/dtjs_forward.do" location="1309,300" dimension="166,84" />
+  <StrutsTransition id="/dtjs_jjfz.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="465,60" />
+      <AbsolutePoint location="465,210" />
+      <AbsolutePoint location="1338,210" />
+      <AbsolutePoint location="1338,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_sjtj.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1289,60" />
+      <AbsolutePoint location="1289,90" />
+      <AbsolutePoint location="1386,90" />
+      <AbsolutePoint location="1386,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_rdsq.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="259,60" />
+      <AbsolutePoint location="259,240" />
+      <AbsolutePoint location="1326,240" />
+      <AbsolutePoint location="1326,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_tyxx.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2113,60" />
+      <AbsolutePoint location="2113,180" />
+      <AbsolutePoint location="1433,180" />
+      <AbsolutePoint location="1433,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_dkmd.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1701,60" />
+      <AbsolutePoint location="1701,120" />
+      <AbsolutePoint location="1409,120" />
+      <AbsolutePoint location="1409,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_typx.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2531,60" />
+      <AbsolutePoint location="2531,240" />
+      <AbsolutePoint location="1457,240" />
+      <AbsolutePoint location="1457,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_tnty.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2737,60" />
+      <AbsolutePoint location="2737,270" />
+      <AbsolutePoint location="1469,270" />
+      <AbsolutePoint location="1469,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_fzdx.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="671,60" />
+      <AbsolutePoint location="671,180" />
+      <AbsolutePoint location="1350,180" />
+      <AbsolutePoint location="1350,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_zsdy.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1083,60" />
+      <AbsolutePoint location="1083,120" />
+      <AbsolutePoint location="1374,120" />
+      <AbsolutePoint location="1374,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_ftypx.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2322,60" />
+      <AbsolutePoint location="2322,210" />
+      <AbsolutePoint location="1445,210" />
+      <AbsolutePoint location="1445,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_zbgl.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="53,60" />
+      <AbsolutePoint location="53,270" />
+      <AbsolutePoint location="1314,270" />
+      <AbsolutePoint location="1314,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_pxxx.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1495,60" />
+      <AbsolutePoint location="1495,90" />
+      <AbsolutePoint location="1397,90" />
+      <AbsolutePoint location="1397,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_sxhb.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1907,60" />
+      <AbsolutePoint location="1907,150" />
+      <AbsolutePoint location="1421,150" />
+      <AbsolutePoint location="1421,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dtjs_ybdy.do,null,/dtjs_forward.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="877,60" />
+      <AbsolutePoint location="877,150" />
+      <AbsolutePoint location="1362,150" />
+      <AbsolutePoint location="1362,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

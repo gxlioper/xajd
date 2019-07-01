@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzForm" type="xgxt.form.XszzForm" />
+		<form-bean name="dynaForm" type="org.apache.struts.action.DynaActionForm"><!-- test.forms.DynaActionFormTest -->
+			
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="dynaForm" parameter="method" path="/bjlhdx_xszz"
+				scope="request"	type="xgxt.action.bjlhdx.XszzAction">
+			<!-- 北京联合大学 "学生资助"-"学生补助"-"报表统计" -->
+			<forward name="false" path="/errMsg.do" />
+			<forward name="fsbzmx" path="/bjlhdx/xszz/fsbzmx.jsp" />
+			<!-- 北京联合大学 "学生资助"-"国家助学贷款学费金额设置" -->
+			<forward name="gjzxdkjecsh" path="/about:blank" />
+			<forward name="gjzxdkjesd" path="/xszz/bjlhdx/data_gjzxdkje.jsp" />
+			<forward name="gjzxdkjeEdit" path="/xszz/bjlhdx/gjzxdkjeEdit.jsp"/>
+			<forward name="gjzxdkjePlsz" path="/xszz/bjlhdx/gjzxdkjePlEdit.jsp"/>
+			<!-- 北京联合大学 "学生资助"-"国家助学贷款申请页面"-->
+			<forward name="gjzxdksq" path="/xszz/bjlhdx/gjzxdksq.jsp" />
+			<forward name="gjzxdksqb" path="/xszz/bjlhdx/gjzxdksqb.jsp" />
+			<!-- 北京联合大学 "学生资助"-"国家助学贷款审核页面"-->
+			<forward name="gjzxdksh" path="/xszz/bjlhdx/gjzxdksh.jsp" />
+			<forward name="gjzxdkshXxxx" path="/xszz/bjlhdx/gjzxdkshXxxx.jsp" />
+			<forward name="gjzxdkshExp" path="/about:blank" />
+			<!-- 北京联合大学 "学生资助"-"困难生申请页面"-->
+			<forward name="knssq" path="/xszz/bjlhdx/knssq.jsp" />
+			<!-- 北京联合大学 "学生资助"-"困难生审核页面"-->
+			<forward name="knssh" path="/xszz/bjlhdx/knssh.jsp" />
+			<forward name="knsshXxxx" path="/xszz/bjlhdx/knsshXxxx.jsp" />
+			<forward name="knsshExp" path="/about:blank" />
+		</action>
+		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="commForm" type="xgxt.comm.CommForm"/>
+		<form-bean name="commXtwhForm" type="xgxt.comm.xtwh.CommXtwhForm"/>
+		<form-bean name="kjfsForm" type="xgxt.xtwh.kjfs.KjfsForm"/>	<!-- 快捷方式 -->
+		<form-bean name="xmzdszForm" type="xgxt.comm.xmzdsz.XmzdszForm"/>
+		<form-bean name="searchForm" type="xgxt.comm.search.SearchForm"/>	<!-- 高级查询 -->
+		<form-bean name="chartForm" type="xgxt.comm.chart.operation.ChartForm"/>	<!-- 图表统计 -->
+		<form-bean name="menuManageForm" type="xgxt.comm.menuManage.MenuManageForm"/>	<!-- 功能菜单管理 -->
+    	<form-bean name="customGnmkForm" type="xsgzgl.customForm.gnmk.CustomGnmkForm" /> <!-- 自定义功能 -->
+	</form-beans>
+	
+	<action-mappings>	
+		
+		<!-- 相关设置 -->
+		<action path="/xgxt_data_imp" 	forward="/commImpExp.do?method=commImpExp"/>	<!-- 导入字段 -->
+		
+		<!-- 系统维护 -->
+		<action path="/xtwh_sywh" 		forward="/commXtwh.do?method=syManage"/>	<!-- 首页设置 -->	
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+
+		<!-- 导入导出 -->
+		<action path="/commImpExp" 
+        		parameter="method"  
+        		name="commForm" 
+        		scope="request"
+		        type="xgxt.comm.impexp.CommImpExpAction">
+		        	
+			<forward name="commImp"  path="/comm/commImp.jsp" />	<!-- 导入字段 -->
+		  
+		</action>
+		
+		<!-- 相关设置 -->
+		<action path="/commXgInfo" 
+        		parameter="method"  
+        		name="commForm" 
+        		scope="request"
+		        type="xgxt.comm.xginfo.CommXgInfoAction">
+		        	
+			<forward name="commImp"  path="/comm/xgInfo/xsxxManage.jsp" />	<!-- 学生信息 -->
+			<forward name="choiceXy"  path="/comm/other/choiceXy.jsp" />	<!-- 选择学院 -->
+			<forward name="choiceZy"  path="/comm/other/choiceZy.jsp" />	<!-- 选择专业 -->
+			<forward name="choiceBj"  path="/comm/other/choiceBj.jsp" />	<!-- 选择班级 -->
+			<forward name="choiceLc"  path="/comm/other/choiceLc.jsp" />	<!-- 选择流程 -->
+			<forward name="xzBj"  path="/comm/other/xzBj.jsp" />	<!-- 选择班级 -->
+		</action>
+		
+		<!-- 系统维护 -->
+		<action path="/commXtwh" 
+        		parameter="method"  
+        		name="commXtwhForm" 
+        		scope="request"
+		        type="xgxt.comm.xtwh.CommXtwhAction">
+		        	
+			<forward name="syManage"  	path="/comm/xtwh/syManage.jsp" />	<!-- 首页设置 -->
+		  	<forward name="kjfsUpdate"  path="/comm/xtwh/kjfsUpdate.jsp" />	<!-- 快捷方式 -->
+		</action>
+		
+		<!-- 快捷方式 -->
+		<action path="/kjfsSet" 
+        		parameter="method"  
+        		name="kjfsForm" 
+        		scope="request"
+		        type="xgxt.xtwh.kjfs.KjfsAction">
+		        	
+			<forward name="kjfsManage"  	path="/xtwh/kjfs/kjfsManage.jsp" />	<!-- 快捷方式 -->
+			
+		</action>
+		
+		<!-- 高级查询 -->
+    	<action path="/seachTjManage" 
+        		parameter="method"  
+        		name="searchForm" 
+        		scope="request"
+		        type="xgxt.comm.search.SearchAction">	
+			
+			<forward name="seachTj"    	path="/comm/search/searchTj.jsp" />
+			<forward name="xmPlcxDiv"   path="/comm/search/xmPlcxDiv.jsp" />
+			<forward name="xhPlcxDiv"   path="/comm/search/xhPlcxDiv.jsp" />
+		</action>
+		<!-- 高级查询 end-->
+		
+		<!-- 项目字段设置 -->
+		
+		<action path="/xszz_xmzdszManage" 	forward="/xmzdsz.do?method=xmzdszManage&amp;mkmc=xszz"/>
+		
+		<action path="/xmzdsz" 
+        		parameter="method"  
+        		name="xmzdszForm" 
+        		scope="request"
+		        type="xgxt.comm.xmzdsz.XmzdszAction">
+		        	
+				<forward name="xmzdszManage"  path="/comm/xmzdsz/xmzdszManage.jsp" />
+				<forward name="xmzdszUpdate"  path="/comm/xmzdsz/xmzdszUpdate.jsp" />
+		</action>
+		
+		<!--图表统计 -->
+		<action path="/chart" 
+        		parameter="method"  
+        		name="chartForm" 
+        		scope="request"
+		        type="xgxt.comm.chart.operation.ChartAction">	
+			
+			<forward name="stuChart"  path="/comm/chart/stuChart.jsp" />
+			
+		</action>
+		<!--图表统计 -->
+		
+		
+		<!--功能菜单管理 2011.4.13 qph -->
+		<action path="/menuQuery" 	forward="/menuManage.do?method=menuQuery"/>
+		<action path="/menuTree" 	forward="/menuManage.do?method=menuTree"/>
+		
+		<action path="/menuManage" 
+        		parameter="method"  
+        		scope="request"
+        		name="menuManageForm" 
+		        type="xgxt.comm.menuManage.MenuManageAction">	
+			
+			<forward name="menuQuery"  path="/comm/menuManage/menuQuery.jsp" />
+			<forward name="menuUpdate"  path="/comm/menuManage/menuUpdate.jsp" />
+			<forward name="setShortcutPic"  path="/comm/menuManage/setShortcutPic.jsp" />
+			<forward name="menuTree"  path="/comm/menuManage/menuTree.jsp" />
+		</action>
+
+		<!-- =====================================自定义功能===================================================== -->	 
+		
+		<action path="/customGnmk" 
+    			scope="request"
+    			type="xsgzgl.customForm.gnmk.CustomGnmkAction" 
+    			name="customGnmkForm"
+    			parameter="method">	
+    			
+    		<forward name="customGnmkManage" path="/xsgzgl/customForm/gnmk/customGnmkManage.jsp"/>
+    		<forward name="customGnmkDetail" path="/xsgzgl/customForm/gnmk/customGnmkDetail.jsp"/>	
+		</action>
+
+
+	</action-mappings>
+
+</struts-config>

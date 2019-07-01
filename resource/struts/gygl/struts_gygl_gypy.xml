@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- 参数设置 -->
+		<form-bean name="GypyCsszForm" type="com.zfsoft.xgxt.gygl.gypynew.cssz.CsszForm"/>
+		<!-- 申请 -->
+		<form-bean name="GypySqForm" type="com.zfsoft.xgxt.gygl.gypynew.gypysq.GypySqForm"/>
+		<!-- 结果 -->
+		<form-bean name="GypyJgForm" type="com.zfsoft.xgxt.gygl.gypynew.gypyjg.GypyJgForm"/>
+		<!-- 审核 -->
+		<form-bean name="GypyShForm" type="com.zfsoft.xgxt.gygl.gypynew.gypysh.GypyShForm"/>
+	</form-beans>
+	<action-mappings>
+		
+	    
+	    <!-- 参数设置 -->
+	    <action path="/gygl_gypynew_cssz" forward="/gypynew_cssz.do?method=cssz"/>
+	    <action path="/gypynew_cssz"  
+	    		parameter="method" 
+	    		name="GypyCsszForm"
+	    		scope="request"  
+	    		type="com.zfsoft.xgxt.gygl.gypynew.cssz.CsszAction">
+	    	<forward name="cssz" path="/xsgzgl/gygl/gypyx/cssz/cssz.jsp"/>
+	    </action>
+	    <!-- 申请 -->
+	    <action path="/gygl_gypynew_gypysq" forward="/gypynew_gypysq.do?method=getGypySqList"/>
+	    <action path="/gypynew_gypysq"  
+	    		parameter="method" 
+	    		name="GypySqForm"
+	    		scope="request"  
+	    		type="com.zfsoft.xgxt.gygl.gypynew.gypysq.GypySqAction">
+	    	<forward name="gypysqcx" path="/xsgzgl/gygl/gypyx/gypysq/gypysqcx.jsp"/>
+	    	<forward name="addsq" path="/xsgzgl/gygl/gypyx/gypysq/addsq.jsp"/>
+	    	<forward name="editsq" path="/xsgzgl/gygl/gypyx/gypysq/editsq.jsp"/>
+	    	<forward name="viewsq" path="/xsgzgl/gygl/gypyx/gypysq/viewsq.jsp"/>
+	    </action>
+	    <!-- 结果 -->
+	    <action path="/gygl_gypynew_gypyjg" forward="/gypynew_gypyjg.do?method=getGypyJgList"/>
+	    <action path="/gypynew_gypyjg"  
+	    		parameter="method" 
+	    		name="GypyJgForm"
+	    		scope="request"  
+	    		type="com.zfsoft.xgxt.gygl.gypynew.gypyjg.GypyJgAction">
+	    	<forward name="gypyjgcx" path="/xsgzgl/gygl/gypyx/gypyjg/getGypyJgCx.jsp"/>
+	    	<forward name="addjg" path="/xsgzgl/gygl/gypyx/gypyjg/addJg.jsp"/>
+	    	<forward name="editjg" path="/xsgzgl/gygl/gypyx/gypyjg/editJg.jsp"/>
+	    	<forward name="viewjg" path="/xsgzgl/gygl/gypyx/gypyjg/viewjg.jsp"/>
+	    	<forward name="cx" path="/xsgzgl/gygl/gypyx/gypyjg/cancelxj.jsp"/>
+	    </action>
+	    <!-- 审核 -->
+	    <action path="/gygl_gypynew_gypysh" forward="/gypynew_gypysh.do?method=getGypyShlist"/>
+	    <action path="/gypynew_gypysh"
+	    		parameter="method"
+	    		name="GypyShForm"
+	    		scope="request"
+	    		type="com.zfsoft.xgxt.gygl.gypynew.gypysh.GypyShAction">
+	    	<forward name="shcx" path="/xsgzgl/gygl/gypyx/gypysh/getGypyShList.jsp"/>
+	    	<forward name="gypysh" path="/xsgzgl/gygl/gypyx/gypysh/gypysh.jsp"/>
+	    	<forward name="gypyplsh" path="/xsgzgl/gygl/gypyx/gypysh/GypyPlsh.jsp"/>
+	    </action>
+	    
+	</action-mappings>
+</struts-config>

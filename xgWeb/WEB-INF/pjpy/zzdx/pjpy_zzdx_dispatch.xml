@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>
+		<!--	转移到中州大学的配置文件,pjpy_zzdx.xml    -->
+		<action path="/zzdxzsprint" 	forward="/pjpyzzdxwh.do?method=zzdxzsPrint"></action><!-- 证书打印(单打,测试页) -->
+		<action path="/zzdxzsprintmore" forward="/pjpyzzdxwh.do?method=zzdxzsPrintMore"></action><!-- 证书打印(连打) -->
+		<action path="/pjpy_rychzsprint" forward="/pjpyzzdxwh.do?method=rychzsPrint"></action><!-- 荣誉称号证书打印 -->
+		<action path="/rychzsprint"     forward="/pjpyzzdxwh.do?method=rychzsprint"></action>
+		<action path="/rychprintmore"   forward="/pjpyzzdxwh.do?method=rychPrintmore"></action>
+	</action-mappings>
+</struts-config>

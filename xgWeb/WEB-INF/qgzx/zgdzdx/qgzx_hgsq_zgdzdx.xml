@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    <form-bean name="commanForm" type="xgxt.form.CommanForm" />
+	</form-beans>
+
+	<action-mappings>
+    <!-- 换岗申请开始 -->
+    <action name="commanForm" parameter="qgzxHgsq" path="/qgzxHgsq" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/hgsq.jsp"/>    	
+    </action>
+    <action name="commanForm" parameter="zgdzdx_hg_Save" path="/zgdzdx_hg_Save" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/hgsq.jsp"/>    	
+    </action>
+    <!-- 换岗申请结束 -->
+    <!-- 换岗信息修改开始 -->
+    <action name="commanForm" parameter="qgzxhgsqModi" path="/qgzxhgsqModi" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/hgsqModi.jsp"/>    	
+    </action>    
+    <action name="commanForm" parameter="zgdzdx_hg_SaveOne" path="/zgdzdx_hg_SaveOne" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/hgsqModi.jsp"/>    	
+    </action>    
+    <!-- 换岗信息修改结束 -->
+    <!-- 换岗审核开始 -->
+    <action name="commanForm" parameter="qgzxHgsqsh" path="/qgzxHgsqsh" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/hgsh.jsp"/>    	
+    </action>
+    <action name="commanForm" parameter="hgsqsh" path="/hgsqsh" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/hgsh.jsp"/>    	
+    </action>
+    <!-- 换岗审核结束 -->
+    <!-- 辞岗开始 -->
+    <!-- 申请 -->
+    <action name="commanForm" parameter="qgzxCgsq" path="/qgzxCgsq" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/cgsq.jsp"/>
+    	<forward name="gwdx_xstgsq" path="/qgzx/gzdx/qgzx_xstgsq.jsp"/>   
+    	 	
+    </action>
+    <action name="commanForm" parameter="zgdzdx_cg_Save" path="/zgdzdx_cg_Save" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/cgsq.jsp"/>    	
+    </action>
+    <!-- 审核 -->
+    <action name="commanForm" parameter="qgzxCgsqsh" path="/qgzxCgsqsh" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/cgsh.jsp"/>    	
+    </action>
+    <action name="commanForm" parameter="cgsqsh" path="/cgsqsh" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/cgsh.jsp"/>    	
+    </action>
+    <!-- 信息修改 -->
+    <action name="commanForm" parameter="qgzxcgsqModi" path="/qgzxcgsqModi" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/cgsqModi.jsp"/>    	
+    </action>
+    <action name="commanForm" parameter="zgdzdx_cg_SaveOne" path="/zgdzdx_cg_SaveOne" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/cgsqModi.jsp"/>    	
+    </action>
+    <!-- 辞岗结束 -->
+    
+    <!-- 用人单位更换学生岗位申请开始 -->
+    <action name="commanForm" parameter="qgzxYrdwGhXsGwsq" path="/qgzxYrdwGhXsGwsq" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/yrdwGhXsGwsq.jsp"/>
+    	<forward name="gzdx_xyghgwsq" path="/qgzx/gzdx/gzdx_yrdwGhXsGwsq.jsp"/>  
+    </action>
+    <action name="commanForm" parameter="zgdzdx_yrdwghxssq_Save" path="/zgdzdx_yrdwghxssq_Save" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/yrdwGhXsGwsq.jsp"/>    	
+    </action>
+    <!-- 用人单位更换学生岗位申请结束 -->
+    <!-- 用人单位更换学生岗位审核开始 -->
+    <action name="commanForm" parameter="qgzxYrdwGhXsGwsh" path="/qgzxYrdwGhXsGwsh" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/yrdwGhXsGwsh.jsp"/>    	
+    </action>
+    <action name="commanForm" parameter="qgzxYrdwGhxsModi" path="/qgzxYrdwGhxsModi" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/yrdwGhXsGwshModi.jsp"/>    	
+    </action>
+    <action name="commanForm" parameter="qgzxYrdwGhxssh" path="/qgzxYrdwGhxssh" 
+		type="xgxt.qgzx.zgdzdx.QgzxHgsqAction" scope="request">
+    	<forward name="success" path="/qgzx/zgdzdx/hgsq/yrdwGhXsGwshModi.jsp"/>    	
+    </action>
+    <!-- 用人单位更换学生岗位审核结束 -->
+	</action-mappings>
+</struts-config>
+

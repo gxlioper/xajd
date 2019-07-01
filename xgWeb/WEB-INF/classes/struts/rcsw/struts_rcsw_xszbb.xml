@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -学生证补办-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="xszbbJcszForm" type="com.zfsoft.xgxt.rcsw.xszbb.xszbbjcsz.XszbbJcszForm" />
+    	<form-bean name="xszbblxwhForm" type="com.zfsoft.xgxt.rcsw.xszbb.xszbblxwh.XszbblxwhForm" />
+    	<form-bean name="xszbbsqForm" type="com.zfsoft.xgxt.rcsw.xszbb.xszbbsq.XszbbsqForm" />
+    	<form-bean name="xszbbshForm" type="com.zfsoft.xgxt.rcsw.xszbb.xszbbsh.XszbbshForm" />
+    	<form-bean name="xszbbjgForm" type="com.zfsoft.xgxt.rcsw.xszbb.xszbbjg.XszbbjgForm" />
+	</form-beans>
+	
+	
+	<action-mappings>
+	
+	<action path="/rcsw_xszbb_jcsz" forward="/rcsw_xszbb_jcszgl.do?method=xszbbJcsz"/>	<!-- 学生证补办基础设置 -->
+	<action path="/rcsw_xszbb_jcszgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.xszbb.xszbbjcsz.XszbbJcszAction" 
+   			name="xszbbJcszForm"         
+   			parameter="method">	
+   		<forward name="xszbbJcsz" path="/xsgzgl/rcsw/xszbb/xszbbjcsz/xszbbJcsz.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_xszbb_bblxwh" forward="/rcsw_xszbb_bblxwhgl.do?method=xszbblxwhManage"/>	<!-- 学生证补办类型维护 -->
+	<action path="/rcsw_xszbb_bblxwhgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.xszbb.xszbblxwh.XszbblxwhAction" 
+   			name="xszbblxwhForm"   
+   			parameter="method">	
+   		<forward name="xszbblxwhManage" path="/xsgzgl/rcsw/xszbb/xszbblxwh/xszbblxwhManage.jsp"></forward>
+   		<forward name="addXszbblx" path="/xsgzgl/rcsw/xszbb/xszbblxwh/addXszbblx.jsp"></forward>
+   		<forward name="updateXszbblx" path="/xsgzgl/rcsw/xszbb/xszbblxwh/updateXszbblx.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_xszbb_bbsq" forward="/rcsw_xszbb_bbsqgl.do?method=xszbbsqManage"/>	<!-- 学生证补办申请 -->
+	<action path="/rcsw_xszbb_bbsqgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.xszbb.xszbbsq.XszbbsqAction" 
+   			name="xszbbsqForm"   
+   			parameter="method">	
+   		<forward name="xszbbsqManage" path="/xsgzgl/rcsw/xszbb/xszbbsq/xszbbsqManage.jsp"></forward>
+   		<forward name="addXszbbsq" path="/xsgzgl/rcsw/xszbb/xszbbsq/addXszbbsq.jsp"></forward>
+   		<forward name="updateXszbbsq" path="/xsgzgl/rcsw/xszbb/xszbbsq/updateXszbbsq.jsp"></forward>
+   		<forward name="viewXszbbsq" path="/xsgzgl/rcsw/xszbb/xszbbsq/viewXszbbsq.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_xszbb_bbsh" forward="/rcsw_xszbb_bbshgl.do?method=xszbbshManage"/>	<!-- 学生证补办审核 -->
+	<action path="/rcsw_xszbb_bbshgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.xszbb.xszbbsh.XszbbshAction" 
+   			name="xszbbshForm"   
+   			parameter="method">	
+   		<forward name="xszbbshManage" path="/xsgzgl/rcsw/xszbb/xszbbsh/xszbbshManage.jsp"></forward>
+   		<forward name="xszbbDgsh" path="/xsgzgl/rcsw/xszbb/xszbbsh/xszbbDgsh.jsp"></forward>
+   		<forward name="viewXszbbsh" path="/xsgzgl/rcsw/xszbb/xszbbsh/viewXszbbsh.jsp"></forward>
+   		<forward name="zjbbPlsh" path="/xsgzgl/rcsw/xszbb/xszbbsh/zjbbPlsh.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_xszbb_bbjg" forward="/rcsw_xszbb_bbjggl.do?method=xszbbjgManage"/>	<!-- 学生证补办审核 -->
+	<action path="/rcsw_xszbb_bbjggl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.xszbb.xszbbjg.XszbbjgAction" 
+   			name="xszbbjgForm"   
+   			parameter="method">	
+   		<forward name="xszbbjgManage" path="/xsgzgl/rcsw/xszbb/xszbbjg/xszbbjgManage.jsp"></forward>
+   		<forward name="addXszbbjg" path="/xsgzgl/rcsw/xszbb/xszbbjg/addXszbbjg.jsp"></forward>
+   		<forward name="updateXszbbjg" path="/xsgzgl/rcsw/xszbb/xszbbjg/updateXszbbjg.jsp"></forward>
+   		<forward name="viewXszbbjg" path="/xsgzgl/rcsw/xszbb/xszbbjg/viewXszbbjg.jsp"></forward>
+   		<forward name="lingqXszbbjg" path="/xsgzgl/rcsw/xszbb/xszbbjg/lingqXszbbjg.jsp"></forward>
+	</action>
+	</action-mappings>
+</struts-config>

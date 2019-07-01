@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyHxxyActionForm" type="xgxt.pjpy.whlghxxy.PjpyHxxyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<!-- insert your path code -->
+		<action path="/pjpy_whlghxxy_zhszcpwh" 	   forward="/pjpyhxxywh.do?method=zhszcpWh"/>
+		<action path="/pjpy_whlghxxy_jxjsqdefault"     forward="/pjpyhxxywh.do?method=jxjsqDefault"></action><!-- 奖学金申请 -->
+		<action path="/jxjsqsave"           forward="/pjpyhxxywh.do?method=jxjsqSave"></action><!-- 奖学金申请保存 -->
+		<action path="/pjpy_whlghxxy_jxjsqqry"  forward="/pjpyhxxywh.do?method=jxjsqqryDefault"></action><!-- 奖学金申请查询首页 -->
+		<action path="/pjpy_hxxy_zhszcpmodi"       forward="/pjpyhxxywh.do?method=zhszcpModi"/>
+		<action path="/pjpy_hxxy_jxjshwh"       forward="/pjpyhxxywh.do?method=jxjshWh"/>
+		<action path="/pjpy_hxxy_jxjshone"      forward="/pjpyhxxywh.do?method=jxjshone"/>
+		<action path="/pjpy_whlghxxy_rychsh" 	   forward="/pjpyhxxywh.do?method=rychshWh"/>
+		<action path="/pjpy_whlghxxy_rychone" 	   forward="/pjpyhxxywh.do?method=rychshone"/>
+		<action path="/pjpy_hxxy_rychshwh"       forward="/pjpyhxxywh.do?method=rychshWh"/>
+		<action path="/pjpy_hxxy_rychshone"      forward="/pjpyhxxywh.do?method=rychshone"/>
+		<action path="/pjpy_hxxy_jxjmodi"       forward="/pjpyhxxywh.do?method=jxjmodi"/>
+		<action path="/pjpy_hxxy_jxjprint"      forward="/pjpyhxxywh.do?method=jxjPrint"/>
+        <!-- 实际路径 -->	
+		<action path="/pjpyhxxywh"
+				type="xgxt.pjpy.whlghxxy.PjpyHxxyAction"
+				name="pjpyHxxyActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- insert your forward code -->	
+		<forward name="zhszcpdefault" path="/pjpy/whlghxxy/zhszcp.jsp"></forward>
+		<forward name="whlghxxy_rychsq" path="/pjpy/whlghxxy/rychsq.jsp"></forward>
+		<forward name="whlghxxy_rychall" path="/pjpy/whlghxxy/rychall.jsp"></forward>
+		<forward name="whlghxxy_rychdel" path="/pjpy/whlghxxy/rychall.jsp"></forward>
+		<forward name="whlghxxy_rychOne" path="/pjpy/whlghxxy/rychsq.jsp"></forward>
+		<forward name="whlghxxy_rychPrint" path="/pjpy/whlghxxy/rychPrint.jsp"></forward>
+		<forward name="jxjsqDefault" path="/pjpy/whlghxxy/jxjsq.jsp"></forward>
+		<forward name="jxjsqqrydefault" path="/pjpy/whlghxxy/jxjsqqry.jsp"></forward>
+		<forward name="stujxjqry"      path="/pjpy/whlghxxy/stujxjqry.jsp"></forward>
+		<forward name="zhszcpmodi"    path="/pjpy/whlghxxy/zhszcpmodi.jsp"/>
+		<forward name="jxjshpage"     path="/pjpy/whlghxxy/jxjsh.jsp"/>
+		<forward name="jxjshone"      path="/pjpy/whlghxxy/jxjshone.jsp"/>
+		<forward name="rychshtz" path="/pjpy/whlghxxy/credit_check.jsp"></forward>
+		<forward name="rychshone" path="/pjpy/whlghxxy/rychshone.jsp"></forward>
+		<forward name="jxjmodipage"              path="/pjpy/whlghxxy/jxjmodi.jsp"/>
+		<forward name="jxjprint"     path="/pjpy/whlghxxy/jxjprint.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

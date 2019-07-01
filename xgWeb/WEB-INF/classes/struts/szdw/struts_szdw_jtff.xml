@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+ <form-beans>
+ 	<form-bean name="JtffForm" type="xsgzgl.szdw.jtff.jtff.JtffForm" />
+ 	<form-bean name="JtmdwhForm" type="xsgzgl.szdw.jtff.jtmdwh.JtmdwhForm" />
+ 	<form-bean name="JtffUtilForm" type="xsgzgl.szdw.jtff.util.JtffUtilForm" />
+ </form-beans>
+ <action-mappings>
+ 	<action path="/szdw_jtff_jtmdwh"  forward="/jtff_jtmdwh.do?method=getJtmdwhcx"/>
+		<action path="/jtff_jtmdwh" 
+    			scope="request"
+    			type="xsgzgl.szdw.jtff.jtmdwh.JtmdwhAction" 
+    			name="JtmdwhForm"
+    			parameter="method">
+    			
+    		<forward name="cx" path="/xsgzgl/szdw/jtff/jtmdwh/viewlist.jsp"/>
+    		<forward name="addzcjtff" path="/xsgzgl/szdw/jtff/jtmdwh/addzcjtff.jsp"/>
+    		<forward name="addgdjtff" path="/xsgzgl/szdw/jtff/jtmdwh/addgdjtff.jsp"/>
+    		<forward name="updatezcjtff" path="/xsgzgl/szdw/jtff/jtmdwh/updatezcjtff.jsp"/>
+    		<forward name="updategdjtff" path="/xsgzgl/szdw/jtff/jtmdwh/updategdjtff.jsp"/>
+    		<forward name="zcjtck" path="/xsgzgl/szdw/jtff/jtmdwh/zcjtck.jsp"/>
+    		<forward name="gdjtck" path="/xsgzgl/szdw/jtff/jtmdwh/gdjtck.jsp"/>
+		</action>
+		<action path="/szdw_jtff_jtff"  forward="/jtff_jtff.do?method=getJtffcx"/>
+		<action path="/jtff_jtff" 
+    			scope="request"
+    			type="xsgzgl.szdw.jtff.jtff.JtffAction" 
+    			name="JtffForm"
+    			parameter="method">
+    		<forward name="cx" path="/xsgzgl/szdw/jtff/jtff/viewlist.jsp"/>
+    		<forward name="jtsc" path="/xsgzgl/szdw/jtff/jtff/jtsc.jsp"/>
+    		<forward name="jtscck" path="/xsgzgl/szdw/jtff/jtff/jtscck.jsp"/>
+		</action>
+		<!--工具类配置 -->
+		<action path="/jtff_util" 
+    			scope="request"
+    			type="xsgzgl.szdw.jtff.util.JtffUtilAction" 
+    			name="JtffUtilForm"
+    			parameter="method">
+    			
+    		<forward name="showTeachers" path="/xsgzgl/szdw/jtff/comm/showTeachers.jsp"/>
+		</action>
+ </action-mappings>
+</struts-config>

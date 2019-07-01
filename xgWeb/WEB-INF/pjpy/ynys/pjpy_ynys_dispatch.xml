@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到云南艺术的配置文件,pjpy_ynys.xml    -->
+		<action path="/ynys_xjbjsq"          forward="/pjpyynyswh.do?method=xjbjSq"></action><!-- 先进班级申请页面 -->
+		<action path="/ynys_xjbjsave"        forward="/pjpyynyswh.do?method=xjbjSave"></action><!-- 先进班级保存 -->
+		<action path="/ynys_printxjbj"       forward="/pjpyynyswh.do?method=printXjbj"></action><!-- 先进班级打印 -->
+		<action path="/ynys_xjbjsh"          forward="/pjpyynyswh.do?method=xjbjSh"></action><!-- 先进班级审核 -->
+		<action path="/ynys_xjbjqry"         forward="/pjpyynyswh.do?method=xjbjqry"></action><!-- 先进班级审核查询 -->
+		<action path="/ynys_xjbjshres"       forward="/pjpyynyswh.do?method=xjbjShres"></action><!-- 先进班级审核 -->
+		<action path="/ynys_xjbjshone"       forward="/pjpyynyswh.do?method=xjbjShone"></action><!-- 先进班级单个审核显示 -->
+		<action path="/ynys_xjbjshoneres"    forward="/pjpyynyswh.do?method=xjbjShoneres"></action><!-- 先进班级单个审核结果 -->
+		<action path="/ynys_xjbjsqqry"       forward="/pjpyynyswh.do?method=xjbjsqQry"></action><!-- 先进班级申请结果查询 -->
+		<action path="/ynys_xjbjsqqryres"    forward="/pjpyynyswh.do?method=xjbjSqqryres"></action><!-- 先进班级申请结果查询结果 -->
+		<action path="/ynys_xjbjmodi"        forward="/pjpyynyswh.do?method=xjbjModi"></action><!-- 先进班级修改 -->
+		<action path="/ynys_xjbjmodisave"    forward="/pjpyynyswh.do?method=xjbjModisave"></action><!-- 先进班级修改保存 -->
+		<action path="/ynys_xjbjdel"         forward="/pjpyynyswh.do?method=xjbjDel"></action><!-- 先进班级删除 -->
+		<action path="/pjpy_yxbyssq"         forward="/pjpyynyswh.do?method=yxbysSq"></action><!-- 优秀毕业生申请 -->
+		<action path="/pjpy_yxbyssave"       forward="/pjpyynyswh.do?method=yxbysSave"></action><!-- 优秀毕业生申请保存 -->
+		<action path="/pjpy_yxbyssqqry"      forward="/pjpyynyswh.do?method=yxbyssqQry"></action><!-- 优秀毕业生申请结果查询 -->
+		<action path="/ynys_yxbyssqqryres"   forward="/pjpyynyswh.do?method=yxbyssqQryres"></action><!-- 优秀毕业生申请结果查询 -->
+		<action path="/ynys_yxbysmodi"       forward="/pjpyynyswh.do?method=yxbysmodi"></action><!-- 优秀毕业生申请修改显示 -->
+		<action path="/ynys_yxbysmodisave"   forward="/pjpyynyswh.do?method=yxbysModisave"></action><!-- 优秀毕业生申请修改 -->
+		<action path="/ynys_yxbysdel"        forward="/pjpyynyswh.do?method=yxbysDel"></action><!-- 优秀毕业生批量删除 -->
+		<action path="/ynys_yxbysshoneres"   forward="/pjpyynyswh.do?method=yxbysShoneres"></action><!-- 优秀毕业生单个审核 -->
+		<action path="/pjpy_ynys_zhszcpwh"   forward="/pjpyynyswh.do?method=zhszcpWh"></action><!-- 综合素质测评维护 -->
+		<action path="/ynys_zhszcpqry"       forward="/pjpyynyswh.do?method=zhszcpQry"></action><!-- 综合素质测评维护查询结果 -->
+		<action path="/ynys_zhszcpdel"       forward="/pjpyynyswh.do?method=zhszcpDel"></action><!-- 综合素质测评批量删除 -->
+		<action path="/ynys_zhszcpadd"       forward="/pjpyynyswh.do?method=zhszcpAdd"></action><!-- 综合单个增加页面 -->
+		<action path="/ynys_zhszcpsave"      forward="/pjpyynyswh.do?method=zhszcpSave"></action><!-- 综合素质测评保存 -->
+		<action path="/ynys_zhszcpview"      forward="/pjpyynyswh.do?method=zhszcpView"></action><!-- 综合素质测评修改显示 -->
+		<action path="/ynys_zhszcpmodi"      forward="/pjpyynyswh.do?method=zhszcpModi"></action><!-- 综合素质测评修改保存 -->
+		<action path="/ynys_zhszcpshres"     forward="/pjpyynyswh.do?method=zhszcpShres"></action><!-- 综合素质测评批量审核 -->
+		<action path="/pjpy_ynys_jxjsq"      forward="/pjpyynyswh.do?method=jxjSq"></action><!-- 奖学金申请页面 -->
+		<action path="/ynys_jxjsqsave"       forward="/pjpyynyswh.do?method=jxjsqSave"></action><!-- 奖学金申请保存 -->
+		<action path="/pjpy_ynys_jxjsqqry"   forward="/pjpyynyswh.do?method=jxjsqQry"></action><!-- 奖学金申请查询 -->
+		<action path="/ynys_jxjsqqryres"     forward="/pjpyynyswh.do?method=jxjsqqryRes"></action><!--奖学金申请查询结果 -->
+		<action path="/ynys_jxjdel"          forward="/pjpyynyswh.do?method=jxjDel"></action><!-- 奖学金批量删除 -->
+		<action path="/ynys_jxjsh"           forward="/pjpyynyswh.do?method=jxjSh"></action><!-- 奖学金审核页面 -->
+		<action path="/ynys_jxjshsave"       forward="/pjpyynyswh.do?method=jxjshSave"></action><!-- 奖学金审核结果 -->
+		<action path="/ynys_yxbysprint"      forward="/pjpyynyswh.do?method=yxbysPrint"></action><!-- 优秀毕业生报表打印 -->
+		<action path="/ynys_jxjmodi"         forward="/pjpyynyswh.do?method=jxjModi"></action><!-- 奖学金修改页面 -->
+		<action path="/ynys_jxjmodisave"     forward="/pjpyynyswh.do?method=jxjmodiSave"></action><!-- 奖学金修改保存 -->
+		<action path="/pjpy_ynys_szcpwh"     forward="/pjpyynyszhszcp.do?method=szcpWh"></action><!-- 学生素质测评维护页面 -->
+		<action path="/ynys_szcpqry"         forward="/pjpyynyszhszcp.do?method=szcpQry"></action><!-- 学生素质测评查询结果 -->
+		<action path="/ynys_sxzzddszfAdd"    forward="/pjpyynyszhszcp.do?method=sxzzddszfAdd"></action><!-- 思想政治道德素质分增加页面 -->
+		<action path="/ynys_sxzzddszbsave"   forward="/pjpyynyszhszcp.do?method=sxzzddszbSave"></action><!-- 思想政治道德素质分保存 -->
+		<action path="/ynys_szfdel"          forward="/pjpyynyszhszcp.do?method=sxzzddszbDel"></action><!-- 思想政治道德素质分批量删除 -->
+		<action path="/ynys_sxzzddfview"     forward="/pjpyynyszhszcp.do?method=sxzzddfView"></action><!-- 修改思想政治道德素质分显示 -->
+		<action path="/ynys_sxzzddszbmodi"   forward="/pjpyynyszhszcp.do?method=sxzzddszbModi"></action><!-- 修改思想政治道德素质分保存 -->
+		<action path="/ynys_sjlxcxfAdd"      forward="/pjpyynyszhszcp.do?method=sjlxcxfAdd"></action><!-- 实践素质分增加页面 -->
+		<action path="/ynys_sjlxcxszbsave"   forward="/pjpyynyszhszcp.do?method=sjlxcxszbSave"></action><!-- 实践素质分增加保存 -->
+		<action path="/ynys_sjlxcxfview"     forward="/pjpyynyszhszcp.do?method=sjlxcxfView"></action><!-- 实践素质分修改显示 -->
+		<action path="/ynys_sjlxcxszbmodi"   forward="/pjpyynyszhszcp.do?method=sjlxcxszbModi"></action><!-- 实践素质分修改保存 -->
+		<action path="/ynys_sjfdel"          forward="/pjpyynyszhszcp.do?method=sjfDel"></action><!-- 实践素质分批量删除 -->
+		<action path="/ynys_kxwhszfAdd"      forward="/pjpyynyszhszcp.do?method=kxwhszfAdd"></action><!-- 科学文化素质分增加页面 -->
+		<action path="/ynys_kxwhszfbsave"    forward="/pjpyynyszhszcp.do?method=kxwhszfbSave"></action><!-- 科学文化素质分保存 -->
+		<action path="/ynys_kxwhszfview"     forward="/pjpyynyszhszcp.do?method=kxwhszfView"></action>
+		<action path="/ynys_kxwhszfbmodisave" forward="/pjpyynyszhszcp.do?method=kxwhszfbmodisave"></action>
+		<action path="/ynys_sxszfDel"        forward="/pjpyynyszhszcp.do?method=sxszfDel"></action>
+		<action path="/ynys_sxlxszfAdd"      forward="/pjpyynyszhszcp.do?method=sxlxszfAdd"></action>
+		<action path="/ynys_sxllszbsave"     forward="/pjpyynyszhszcp.do?method=sxllszbsave"/>
+		<action path="/ynys_sxllfszbmodi"    forward="/pjpyynyszhszcp.do?method=sxllfszbmodi"/>
+		<action path="/ynys_sxllfDel"        forward="/pjpyynyszhszcp.do?method=sxllfDel"/>
+		<action path="/ynys_sxlxszfview"     forward="/pjpyynyszhszcp.do?method=sxllfView"/>
+		<action path="/ynys_zhszcpautoacount"  forward="/pjpyynyswh.do?method=zhszcpautoacount"/>
+	</action-mappings>
+</struts-config>

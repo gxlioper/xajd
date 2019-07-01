@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyCommForm" type="xgxt.pjpy.comm.pjpy.PjpyCommForm"/>
+		<form-bean name="pjpyXmsqForm" type="xgxt.pjpy.comm.pjpy.pjlc.xmsq.PjpyXmsqForm"/>
+		<form-bean name="pjpyXmsbForm" type="xgxt.pjpy.comm.pjpy.pjlc.xmsb.PjpyXmsbForm"/>
+		<form-bean name="pjpyXmshForm" type="xgxt.pjpy.comm.pjpy.pjlc.xmsh.PjpyXmshForm"/>
+		<form-bean name="pjpyJgcxForm" type="xgxt.pjpy.comm.pjpy.pjlc.jgcx.PjpyJgcxForm"/>
+		<form-bean name="pjpyMypjForm" type="xgxt.pjpy.comm.pjpy.mypj.PjpyMypjForm"/>	<!-- 我的评奖 -->
+		
+		<form-bean name="pjpyQtxxForm" type="xgxt.pjpy.comm.pjpy.pjlc.other.PjpyQtxxForm"/>	<!-- 我的评奖 -->
+	</form-beans>
+
+	<action-mappings>
+
+		<!-- 显示路径 -->
+		<action path="/pjpy_pjlc_xmsh" 	forward="/pjpyXmsh.do?method=xmshManage"/>			<!-- 项目审核 -->
+		<action path="/pjpy_pjlc_xmsb" 	forward="/pjpyXmsb.do?method=xmsbManage"/>			<!-- 项目上报 -->
+		<action path="/pjpy_pjlc_xssq" 	forward="/pjpy_comm_xmsq.do?method=xssqManage"/>	<!-- 项目申请 -->
+		<action path="/pjpy_mypj" 		forward="/pjpyMypj.do?method=mypjManage"/>			<!-- 我的评奖 -->
+		<action path="/pjpy_mypj_tea" 	forward="/pjpyMypj.do?method=myPjForTea"/>			<!-- 我的评奖（老师） -->
+		<action path="/pjpy_mypj_stu" 	forward="/pjpyMypj.do?method=myPjForStu"/>			<!-- 我的评奖（学生） -->
+		
+		<action path="/pjpy_qtxx_qtjl" 	forward="/pjpyQtxx.do?method=qtxxCx"/>			<!-- 评奖其他信息 -->
+		
+		<action path="/MD5Transfer" 		forward="/pjpyMypj.do?method=MD5Transfer"/>			<!-- 调用数据库存储过程 -->
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 项目上报 -->
+    	<action path="/pjpyXmsb" 
+        		parameter="method"  
+        		name="pjpyXmsbForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.pjpy.pjlc.xmsb.PjpyXmsbAction">	
+		       
+			<forward name="xmsbManage"    path="/pjpy/comm/pjpy/pjlc/xmsb/xmsbManage.jsp" />		<!-- 项目上报 -->
+			<forward name="sbfwChoose"    path="/pjpy/comm/pjpy/pjlc/xmsb/sbfwChoose.jsp" />		<!-- 上报范围选择 -->
+		</action>
+		
+    	<!-- 项目审核 -->
+    	<action path="/pjpyXmsh" 
+        		parameter="method"  
+        		name="pjpyXmshForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.pjpy.pjlc.xmsh.PjpyXmshAction">	
+		       
+			<forward name="xmshManage"    path="/pjpy/comm/pjpy/pjlc/xmsh/xmshManage.jsp" />		<!-- 项目审核 -->
+			<forward name="xmshDetail"    path="/pjpy/comm/pjpy/pjlc/xmsh/xmshDetail.jsp" />		<!-- 项目审核(详细) -->
+		</action>
+		
+		<!-- 我的评奖 -->
+    	<action path="/pjpyMypj" 
+        		parameter="method"  
+        		name="pjpyMypjForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.pjpy.mypj.PjpyMypjAction">	
+		       
+			<forward name="myPjForTea"    path="/pjpy/comm/pjpy/mypj/myPjForTea.jsp" />		<!-- 老师版 -->
+			<forward name="myPjForStu"    path="/pjpy/comm/pjpy/mypj/myPjForStu.jsp" />		<!-- 学生版 -->
+			<forward name="MD5Transfer"    path="/MD5Transfer.jsp" />	<!-- 调用数据库存储过程 -->
+		</action>
+		
+		<!--=========================== 通用评奖学生申请========================    -->
+		<action path="/pjpy_comm_xmsq" 
+        		parameter="method"  
+        		name="pjpyXmsqForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.pjpy.pjlc.xmsq.PjpyXmsqAction">	
+		       
+			<forward name="xssqManage"    path="/pjpy/comm/pjpy/pjlc/xmsq/xssqManage.jsp" />
+			<forward name="xssqUpdate"    path="/pjpy/comm/pjpy/pjlc/xmsq/xssqUpdate.jsp" />
+			<forward name="stuInfo"       path="/pjpy/comm/pjpy/pjlc/xmsq/stu_info.jsp"/>				
+		</action>
+		
+		
+		<action path="/pjpy_pjlc_jgcx" 	forward="/pjpyJgcx.do?method=pjpyQuery"/>
+		<action path="/pjpyJgcx" 
+				parameter="method"  
+				name="pjpyJgcxForm" 
+        		scope="request"
+				type="xgxt.pjpy.comm.pjpy.pjlc.jgcx.PjpyJgcxAction">
+			<forward name="pjpyQuery"    path="/pjpy/comm/pjpy/pjlc/jgcx/pjpyQuery.jsp" />
+		</action>
+		
+		 <!-- 我是打印的 -->
+		<action path="/pjpyCommPrint" parameter="method" 
+				name="pjpyJgcxForm" scope="request" 
+				type="xgxt.pjpy.comm.PjpyCommPrint"/>
+				
+		
+		
+		<!-- 评奖其他信息 -->
+		<action path="/pjpyQtxx" 
+				parameter="method" 
+				name="pjpyQtxxForm" scope="request" 
+				type="xgxt.pjpy.comm.pjpy.pjlc.other.PjpyQtxxAction">
+			<forward name="qtxxCx"    path="/pjpy/comm/pjpy/pjlc/other/qtxxCx.jsp" />	
+			<forward name="qtxxWh"    path="/pjpy/comm/pjpy/pjlc/other/qtxxWh.jsp" />	
+			<forward name="qtxxCk"    path="/pjpy/comm/pjpy/pjlc/other/qtxxCk.jsp" />	
+		</action>
+		
+		<action path="/pjpyQtxx_ajax" 
+				parameter="method" 
+				name="pjpyQtxxForm" scope="request" 
+				type="xgxt.pjpy.comm.pjpy.pjlc.other.PjpyQtxxAjax">
+			
+		</action>
+					
+		</action-mappings>
+		
+
+</struts-config>

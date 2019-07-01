@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="gyglJgtjForm" type="xgxt.gygl.jgtj.GyglJgtjForm"/>
+		<form-bean name="gyglTjfxForm" type="xgxt.gygl.tjfx.GyglTjfxForm"/>
+		<form-bean name="gyjltjForm" type="com.zfsoft.xgxt.gygl.gyjl.GyjltjForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/gygl_tjfx_jjtj" 	forward="/gyglTjfx.do?method=tjfxQscwtj"/>		<!-- 统计分析_寝室床位统计 -->
+    	
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+
+		<!-- 统计分析 -->
+    	<action path="/gyglTjfx" 
+        		parameter="method"  
+        		name="gyglTjfxForm" 
+        		scope="request"
+		        type="xgxt.gygl.tjfx.GyglTjfxAction">	
+		       
+		    <forward name="tjfxQscwtj"    	path="/gygl/comm/tjfx/tjfxQscwtj.jsp" />	<!-- 寝室床位统计 -->
+		    <forward name="tjfxQsrytj"    	path="/gygl/comm/tjfx/tjfxQsrytj.jsp" />	<!-- 寝室人员统计 -->
+		    <forward name="tjfxNjfbtj"    	path="/gygl/comm/tjfx/tjfxNjfbtj.jsp" />	<!-- 年级分布统计 -->
+			
+		</action>
+		<action path="/gygl_gyjl_wjtj" 
+        		parameter="method"  
+        		name="gyjltjForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.gygl.gyjl.GyjltjAction">	
+		</action>
+	</action-mappings>
+</struts-config>

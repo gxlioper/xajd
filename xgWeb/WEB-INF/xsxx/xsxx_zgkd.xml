@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>		
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+    	<form-bean name="zdwhqxfpForm" type="xgxt.studentInfo.zgkd.XsxxZgkdForm" />
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+	<!-- <<<<<<<<<<<<<<学生信息： 中国矿大学生信息字段维护权限分配>>>>>>>>>>>>> -->
+    <action 
+    	path="/xsxx_zgkd" 
+        type="xgxt.studentInfo.zgkd.XsxxZgkdAction" 
+        parameter="method"
+        name="zdwhqxfpForm"
+        scope="request">
+        <forward name="success" path="/xsxx/zgkd/dispatchPower.jsp"/>
+        <forward name="stumodi" path="/xsxx/zgkd/zgkd_stu_modinfo.jsp"/>
+        <forward name="stu_info" path="/xsxx/zgkd/stu_info_zgkd.jsp"/>   
+        <forward name="stu_family" path="/xsxx/zgkd/stu_family_zgkd.jsp"/>  
+        <forward name="stuInfoAudi" path="/xsxx/zgkd/stu_audi_zgkd.jsp"/> 
+        <forward name="stuCheckOne" path="/xsxx/zgkd/stu_check_one.jsp"/>
+        <forward name="xsxxshOne" path="/xsxx/xsxxshOne.jsp"/>   
+              		                    
+		</action> 
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

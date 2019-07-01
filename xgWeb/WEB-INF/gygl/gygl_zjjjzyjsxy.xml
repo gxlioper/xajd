@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+<form-beans>
+		<form-bean name="zjjjzyForm" type="xgxt.xsgygl.zjjjzyjsxy.GyglZjjjzyForm"/>
+	</form-beans>
+	<action-mappings>
+	    
+		<action path="/lzManage" forward="/zjjjzy_Gygl.do?method=lzManage"/>
+		<action path="/czManage" forward="/zjjjzy_Gygl.do?method=czManage"/>
+		<action path="/aqjbManage" forward="/zjjjzy_Gygl.do?method=aqjbManage"/>
+		<action path="/aqjbShManage" forward="/zjjjzy_Gygl.do?method=aqjbShManage"/>							
+		<action path="/zjjjzy_Gygl" parameter="method"  name="zjjjzyForm" scope="request"
+		        type="xgxt.xsgygl.zjjjzyjsxy.GyglZjjjzyAction"> 
+		        <forward name="lzM" path="/gygl/zjjjzyjsxy/lzManage.jsp"></forward>
+		        <forward name="lzAdd" path="/gygl/zjjjzyjsxy/lzAdd.jsp"></forward>		
+		        <forward name="lzModi" path="/gygl/zjjjzyjsxy/lzModi.jsp"></forward>
+		        <forward name="czM" path="/gygl/zjjjzyjsxy/czManage.jsp"></forward>	
+		        <forward name="czAdd" path="/gygl/zjjjzyjsxy/czAdd.jsp"></forward>
+		        <forward name="czModi" path="/gygl/zjjjzyjsxy/czModi.jsp"></forward>
+		        <forward name="aqjbM" path="/gygl/zjjjzyjsxy/aqjbManage.jsp"></forward> 
+		        <forward name="aqjbShow" path="/gygl/zjjjzyjsxy/gyjbContent.jsp"></forward> 
+		        <forward name="aqjbShM" path="/gygl/zjjjzyjsxy/aqjbShManage.jsp"></forward>        
+		</action>	
+	</action-mappings>	
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources" />
+</struts-config>

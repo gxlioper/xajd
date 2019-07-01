@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="xjydForm" type="com.zfsoft.xgxt.xsxx.xjyd.XjydForm"/>
+		<form-bean name="xjydsqForm" type="com.zfsoft.xgxt.xsxx.xjyd.xjydsq.XjydsqForm"/>
+		<form-bean name="xjydshForm" type="com.zfsoft.xgxt.xsxx.xjyd.xjydsh.XjydshForm"/>
+		<form-bean name="xjydjgForm" type="com.zfsoft.xgxt.xsxx.xjyd.xjydjg.XjydjgForm"/>
+		<form-bean name="byclForm" type="com.zfsoft.xgxt.xsxx.bycl.ByclForm"/>
+		<form-bean name="jcsjForm" type="com.zfsoft.xgxt.xsxx.jcsjwh.JcsjForm"/>
+		<form-bean name="ddwhForm" type="com.zfsoft.xgxt.xsxx.jcsjwh.ddwh.DdwhForm"/>
+		<form-bean name="zsyForm" type="com.zfsoft.xgxt.xsxx.xjyd.zsyjg.ZsyForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/xjyd_xjlbgl" 	forward="/xjyd.do?method=xjydlbList"/>		<!-- 异动类别代码维护 -->
+		<action path="/xjyd_xjlbshpz" 	forward="/xjyd.do?method=xjydlbShpzList"/>	<!-- 异动类别审核配置 -->
+		
+    	<!-- 学籍异动类别管理 -->
+    	<action path="/xjyd" 
+        		parameter="method"  
+        		name="xjydForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.xjyd.XjydAction">
+		    <forward name="xjydlbList"    		path="/xsxx/comm/xjydnew/xjlb/xjydlbList.jsp" />
+		    <forward name="xjydlbAdd"    		path="/xsxx/comm/xjydnew/xjlb/xjydlbAdd.jsp" />
+		    <forward name="xjydlbUpd"    		path="/xsxx/comm/xjydnew/xjlb/xjydlbUpd.jsp" />		    
+		    <forward name="xjydlbShpzList"    	path="/xsxx/comm/xjydnew/xjlb/xjydlbShpzList.jsp" />
+		    <forward name="xjydlbShpzAdd"    	path="/xsxx/comm/xjydnew/xjlb/xjydlbShpzAdd.jsp" />
+		    <forward name="xjydlbShpzUpd"    	path="/xsxx/comm/xjydnew/xjlb/xjydlbShpzUpd.jsp" />
+		</action>
+		
+		<action path="/xjyd_xjydsq" 	forward="/xjydsq.do?method=xjydsqList"/>	<!-- 学籍异动申请 -->
+		
+		<!-- 学籍异动 申请-->
+    	<action path="/xjydsq" 
+        		parameter="method"  
+        		name="xjydsqForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.xjyd.xjydsq.XjydsqAction">
+		    <forward name="xjydsqList"    		path="/xsxx/comm/xjydnew/ydsq/xjydsqList.jsp" />
+		    <forward name="xjydsqAdd"    		path="/xsxx/comm/xjydnew/ydsq/xjydsqAdd.jsp" />
+		    <forward name="xjydsqUpd"    		path="/xsxx/comm/xjydnew/ydsq/xjydsqUpd.jsp" />
+		    <forward name="xjydck"    			path="/xsxx/comm/xjydnew/ydsq/xjydck.jsp" />
+		</action>
+		
+		<action path="/xjyd_xjydsh" 	forward="/xjydsh.do?method=xjydshList"/>	<!-- 学籍异动审核 -->
+		
+		<!-- 学籍异动 审核-->
+    	<action path="/xjydsh" 
+        		parameter="method"  
+        		name="xjydshForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.xjyd.xjydsh.XjydshAction">
+		    <forward name="xjydshList"    		path="/xsxx/comm/xjydnew/ydsh/xjydshList.jsp" />
+		    <forward name="xjydsh"    			path="/xsxx/comm/xjydnew/ydsh/xjydsh.jsp" />
+		    <forward name="xjydshCk"    			path="/xsxx/comm/xjydnew/ydsh/xjydshCk.jsp" />
+		</action>
+		
+		<action path="/xjyd_xjydjg" 	forward="/xjydjg.do?method=xjydjgList"/>	<!-- 学籍异动结果 -->
+		
+		<!-- 学籍异动 结果-->
+    	<action path="/xjydjg" 
+        		parameter="method"  
+        		name="xjydjgForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.xjyd.xjydjg.XjydjgAction">
+		    <forward name="xjydjgList"    		path="/xsxx/comm/xjydnew/ydjg/xjydjgList.jsp" />
+		    <forward name="xjydjgAdd"    		path="/xsxx/comm/xjydnew/ydjg/xjydjgAdd.jsp" />
+		    <forward name="xjydjgUpd"    		path="/xsxx/comm/xjydnew/ydjg/xjydjgUpd.jsp" />
+		    <forward name="xjydjgCk"    		path="/xsxx/comm/xjydnew/ydjg/xjydjgCk.jsp" />
+		    <forward name="xjydXsInfoCk"    	path="/xsxx/comm/xjydnew/ydjg/xjydXsInfoCk.jsp" />
+		    <forward name="xjydPlcl"    		path="/xsxx/comm/xjydnew/ydjg/xjydPlcl.jsp" />
+		</action>
+		
+		
+		<action path="/xjyd_bycl" 	forward="/bycl.do?method=byclList"/>	<!-- 毕业处理-->
+		<!-- 毕业处理-->
+    	<action path="/bycl" 
+        		parameter="method"  
+        		name="byclForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.bycl.ByclAction">
+		    <forward name="byclList"    		path="/xsxx/comm/bycl/byclList.jsp" />
+		    <forward name="bycl"    			path="/xsxx/comm/bycl/bycl.jsp" />
+		    <forward name="byxsImport" path="/xsxx/comm/bycl/byxsImport.jsp" />
+		</action>
+		
+		<action path="/jcsjcl" 	forward="/jcsj.do?method=jcsjList"/>	<!-- 基础数据处理(年级学院专业班级)-->
+		<!-- 基础数据处理(年级学院专业班级)-->
+    	<action path="/jcsj" 
+        		parameter="method"  
+        		name="jcsjForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.jcsjwh.JcsjAction">
+		    <forward name="jcsjList"    		path="/xsxx/comm/jcsjwh/jcsjList.jsp" />
+		    <forward name="jcsjAdd"    			path="/xsxx/comm/jcsjwh/jcsjAdd.jsp" />
+		    <forward name="jcsjUpd"    			path="/xsxx/comm/jcsjwh/jcsjUpd.jsp" />
+		</action>
+		
+		<action path="/jcsj_ddwh" 	forward="/zjjcddwh.do?method=ddwhList"/>	<!--浙江警察大队维护-->
+    	<action path="/zjjcddwh" 
+        		parameter="method"  
+        		name="ddwhForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.jcsjwh.ddwh.DdwhAction">
+		    <forward name="ddwhList"    		path="/xsxx/comm/jcsjwh/ddwh/ddwhList.jsp" />
+		    <forward name="ddwhAdd"    			path="/xsxx/comm/jcsjwh/ddwh/ddwhAdd.jsp" />
+		    <forward name="ddwhUpdate"    		path="/xsxx/comm/jcsjwh/ddwh/ddwhUpdate.jsp" />
+		    <forward name="qdwhList"    		path="/xsxx/comm/jcsjwh/ddwh/qdwhList.jsp" />
+		    <forward name="view_QdList"    		path="/xsxx/comm/jcsjwh/ddwh/view_qdList.jsp" />
+		</action>
+		<!-- 转书院 -->
+		<action path="/xjyd_zsy"
+				parameter="method"
+				name="zsyForm"
+				scope="request"
+				type="com.zfsoft.xgxt.xsxx.xjyd.zsyjg.ZsyAction">
+			<forward name="zsyList" path="/xsxx/comm/xjydnew/zsy/zsyList.jsp"/>
+		</action>
+		
+	</action-mappings>
+</struts-config>

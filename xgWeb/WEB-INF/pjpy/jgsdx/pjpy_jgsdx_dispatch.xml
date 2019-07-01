@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到井冈山大学的配置文件,pjpy_jgsdx.xml    -->
+		<action path="/pjpy_jgsdx_zyjxjsb"     forward="/pjpyjgsdxwh.do?method=zyjxjSbDefault"></action> <!-- 专业奖学金上报默认页面 -->
+		<action path="/refreshjlje"            forward="/pjpyjgsdxwh.do?method=refreshJlje"></action><!-- 刷新奖励金额 -->
+		<action path="/zyjxjsbsearch"          forward="/pjpyjgsdxwh.do?method=zyjxjsbSearch"></action><!-- 专业奖学金上报查询 -->
+		<action path="/setzhszandxxcj"         forward="/pjpyjgsdxwh.do?method=setXhszAndXxcj"></action><!-- 设置综合素质和学习成绩 -->
+		<action path="/zhszandxxcjsave"        forward="/pjpyjgsdxwh.do?method=zhszandxxcjSave"></action><!-- 综合素质和学习成绩保存 -->
+		<action path="/zyjxjautosh"            forward="/pjpyjgsdxwh.do?method=zyjxjAutoSh"></action><!-- 专业奖学金自动审核 -->
+		<action path="/zyjxjprint"             forward="/pjpyjgsdxwh.do?method=zyjxjPrint"></action><!-- 专业奖学金打印 -->
+		<action path="/zyjxjsh"                forward="/pjpyjgsdxwh.do?method=zyjxjSh"></action><!-- 专业奖学金审核 -->
+		<action path="/zyjxjbldel"             forward="/pjpyjgsdxwh.do?method=zyjxjblDel"></action><!-- 专业奖学金批量删除 -->
+		<action path="/pjpy_jgsdx_rysqdefault" forward="/pjpyjgsdxwh.do?method=rysqDefault"></action><!-- 荣誉称号申请 -->
+		<action path="/pjpy_jgsdx_wmbjsq"      forward="/pjpyjgsdxwh.do?method=wmbjsqDefault"></action><!-- 文明班级申请 -->
+		<action path="/wmbjsqjg"               forward="/pjpyjgsdxwh.do?method=wmbjsqJg"></action><!-- 文明班级申请结果 -->
+		<action path="/pjpy_jgsdx_rychcxdefault" forward="/pjpyjgsdxwh.do?method=rychcxDefault"></action><!-- 荣誉称号查询默认页面 -->
+		<action path="/wmbjcxdefault"          forward="/pjpyjgsdxwh.do?method=wmbjcxDefault"></action><!-- 文明班级查询默认 -->
+		<action path="/wmbjcxjg"               forward="/pjpyjgsdxwh.do?method=wmbjcxJg"></action><!-- 文明班级查询结果 -->
+		<action path="/wmbjsqdel"              forward="/pjpyjgsdxwh.do?method=wmbjsqDel" ></action><!-- 文明班级批量删除 -->
+		<action path="/wmbjprint"              forward="/pjpyjgsdxwh.do?method=wmbjPrint"></action><!-- 文明班级打印 -->
+		<action path="/pjpy_jgsdx_rychshdefault" forward="/pjpyjgsdxwh.do?method=rychshDefault"></action><!-- 荣誉称号审核默认页面 -->
+		<action path="/wmbjsh"                 forward="/pjpyjgsdxwh.do?method=wmbjSh"></action><!-- 荣誉称号审核 -->
+		<action path="/wmbjshqry"              forward="/pjpyjgsdxwh.do?method=wmbjshQry"></action><!-- 荣誉称号审核查询 -->
+		<action path="/wmbjshview"             forward="/pjpyjgsdxwh.do?method=wmbjshView"></action><!-- 荣誉称号审核显示 -->
+		<action path="/wmbjshbyone"            forward="/pjpyjgsdxwh.do?method=wmbjShByone"></action><!-- 荣誉称号单个审核 -->
+		<action path="/wmbjjtsh"               forward="/pjpyjgsdxwh.do?method=wmbjjtSh"></action><!-- 荣誉称号集体审核 -->
+		<action path="/grrychshdefault"        forward="/pjpyjgsdxwh.do?method=grrychshDefault"></action><!-- 个人荣誉称号审核默认 -->
+		<action path="/grrychshqry"            forward="/pjpyjgsdxwh.do?method=grrychshQry"></action><!-- 个人荣誉称号审核查询 -->
+		<action path="/grrychsh"               forward="/pjpyjgsdxwh.do?method=grrychSh"></action><!-- 个人荣誉称号审核 -->
+		<action path="/grrychprint"            forward="/pjpyjgsdxwh.do?method=grrychPrint"></action><!-- 个人荣誉称号打印 -->
+		<action path="/grrychview"             forward="/pjpyjgsdxwh.do?method=grrychView"></action><!-- 个人荣誉称号显示详细信息 -->
+		<action path="/grrychmodi"             forward="/pjpyjgsdxwh.do?method=grrychModi"></action><!-- 个人荣誉称号审核 -->
+		<action path="/grrychsjdefault"        forward="/pjpyjgsdxwh.do?method=grrychsjDefault"></action><!-- 个人荣誉称号三级审核查询默认页面 -->
+		<action path="/grrychsjqry"            forward="/pjpyjgsdxwh.do?method=grrychsjQry"></action><!-- 个人荣誉称号三级审核查询 -->
+		<action path="/grrychsjadd"            forward="/pjpyjgsdxwh.do?method=grrychsjAdd"></action><!-- 个人荣誉称号增加 -->
+		<action path="/grrychmodiview"         forward="/pjpyjgsdxwh.do?method=grrychModiView"></action><!-- 个人荣誉称号申请修改页面 -->
+		<action path="/grrychmodijg"           forward="/pjpyjgsdxwh.do?method=grrychModijg"></action><!-- 个人荣誉称号申请信息修改 -->
+		<action path="/grrychsqdel"            forward="/pjpyjgsdxwh.do?method=grrychsqDel"></action><!-- 人个荣誉称号申请批量删除 -->
+		<action path="/pjpy_jgsdx_tjszdefault" forward="/pjpyjgsdxwh.do?method=tjszDefault"></action><!-- 条件设置首页 -->
+		<action path="/tjszqry"                forward="/pjpyjgsdxwh.do?method=tjszQry"></action><!-- 条件设置查询 -->
+		<action path="/jxjtjszsave"            forward="/pjpyjgsdxwh.do?method=jxjtjszSave"></action><!-- 条件设置保存 -->
+		<action path="/jxjszcjdel"             forward="/pjpyjgsdxwh.do?method=jxjszcjDel"></action><!-- 条件设置删除 -->
+		<action path="/jxjszcjmodi"            forward="/pjpyjgsdxwh.do?method=jxjszcjModi"></action><!-- 条件设置修改单个显示 -->
+		<action path="/jxjsztjedit"            forward="/pjpyjgsdxwh.do?method=jxjsztjEdit"></action><!-- 条件设置修改 -->
+	</action-mappings>
+</struts-config>

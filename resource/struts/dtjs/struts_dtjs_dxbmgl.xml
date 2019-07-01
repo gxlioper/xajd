@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="dxbmshlcszForm" type="com.zfsoft.xgxt.dtjs.dxbmgl.shlcsz.DxbmshlcszForm" />
+		<form-bean name="dxpxglForm" type="com.zfsoft.xgxt.dtjs.dxbmgl.pxgl.DxpxglForm" />
+		<form-bean name="dxpxbmForm" type="com.zfsoft.xgxt.dtjs.dxbmgl.pxbm.DxpxbmForm" />
+		<form-bean name="dxbmshForm" type="com.zfsoft.xgxt.dtjs.dxbmgl.bmsh.DxbmshForm" />
+		<form-bean name="dxpxjgForm" type="com.zfsoft.xgxt.dtjs.dxbmgl.pxjg.DxpxjgForm" />
+	</form-beans>
+	<action-mappings>
+		<!-- 审核流程配置-->
+		<action path="/dtjs_dxbmgl_dxbmshlcsz" forward="/dxbmgl_dxbmshlcsz.do?method=dxbmshlcsz" />
+		<action path="/dtjs_dxbmgl_dxbmshlcszBc" forward="/dxbmgl_dxbmshlcsz.do?method=dxbmshlcszBc" />
+		<action path="/dxbmgl_dxbmshlcsz" name="dxbmshlcszForm" parameter="method" scope="request" type="com.zfsoft.xgxt.dtjs.dxbmgl.shlcsz.DxbmshlcszAction">
+			<forward name="dxbmshlcsz" path="/xsgzgl/dtjs/dxbmgl/shlcpz/dxbmshlcsz.jsp" />
+		</action>		
+		<!-- 党校培训管理-->
+		<action path="/dtjs_dxbmgl_dxpxglCx" forward="/dxbmgl_dxpxgl.do?method=dxpxglCx" />
+		<action path="/dtjs_dxbmgl_dxpxglZj" forward="/dxbmgl_dxpxgl.do?method=dxpxglZj" />
+		<action path="/dtjs_dxbmgl_dxpxglXg" forward="/dxbmgl_dxpxgl.do?method=dxpxglXg" />
+		<action path="/dtjs_dxbmgl_dxpxglSc" forward="/dxbmgl_dxpxgl.do?method=dxpxglSc" />
+		<action path="/dtjs_dxbmgl_dxpxglSz" forward="/dxbmgl_dxpxgl.do?method=dxpxglSz" />
+		<action path="/dxbmgl_dxpxgl" name="dxpxglForm" parameter="method" scope="request" type="com.zfsoft.xgxt.dtjs.dxbmgl.pxgl.DxpxglAction">
+			<forward name="dxpxglCx" path="/xsgzgl/dtjs/dxbmgl/dxpxgl/dxpxglCx.jsp" />
+			<forward name="dxpxglZj" path="/xsgzgl/dtjs/dxbmgl/dxpxgl/dxpxglZj.jsp" />
+			<forward name="dxpxglXg" path="/xsgzgl/dtjs/dxbmgl/dxpxgl/dxpxglXg.jsp" />
+			<forward name="dxpxglSz" path="/xsgzgl/dtjs/dxbmgl/dxpxgl/dxpxglSz.jsp" />
+		</action>		
+		<!-- 党校培训报名-->
+		<action path="/dtjs_dxbmgl_dxpxbmCx" forward="/dxbmgl_dxpxbm.do?method=dxpxbmCx" />
+		<action path="/dtjs_dxbmgl_dxpxbmCk" forward="/dxbmgl_dxpxbm.do?method=dxpxbmCk" />
+		<action path="/dtjs_dxbmgl_dxpxbmBm" forward="/dxbmgl_dxpxbm.do?method=dxpxbmBm" />
+		<action path="/dxbmgl_dxpxbm" name="dxpxbmForm" parameter="method" scope="request" type="com.zfsoft.xgxt.dtjs.dxbmgl.pxbm.DxpxbmAction">
+			<forward name="dxpxbmCx" path="/xsgzgl/dtjs/dxbmgl/dxpxbm/dxpxbmCx.jsp" />
+			<forward name="dxpxbmCk" path="/xsgzgl/dtjs/dxbmgl/dxpxbm/dxpxbmCk.jsp" />
+		</action>		
+		<!-- 党校报名审核-->
+		<action path="/dtjs_dxbmgl_dxbmshCx" forward="/dxbmgl_dxbmsh.do?method=dxbmshCx" />
+		<action path="/dtjs_dxbmgl_dxbmshSh" forward="/dxbmgl_dxbmsh.do?method=dxbmshSh" />
+		<action path="/dtjs_dxbmgl_dxbmshBc" forward="/dxbmgl_dxbmsh.do?method=dxbmshBc" />
+		<action path="/dtjs_dxbmgl_dxbmshGz" forward="/dxbmgl_dxbmsh.do?method=dxbmshGz" />
+		<action path="/dtjs_dxbmgl_dxbmshDc" forward="/dxbmgl_dxbmsh.do?method=dxbmshDc" />
+		<action path="/dtjs_dxbmgl_dxbmshCk" forward="/dxbmgl_dxbmsh.do?method=dxbmshCk" />
+		<action path="/dxbmgl_dxbmsh" name="dxbmshForm" parameter="method" scope="request" type="com.zfsoft.xgxt.dtjs.dxbmgl.bmsh.DxbmshAction">
+			<forward name="dxbmshCx" path="/xsgzgl/dtjs/dxbmgl/dxbmsh/dxbmshCx.jsp" />
+			<forward name="dxbmshSh" path="/xsgzgl/dtjs/dxbmgl/dxbmsh/dxbmshSh.jsp" />
+			<forward name="dxbmshGz" path="/xsgzgl/dtjs/dxbmgl/dxbmsh/dxbmshGz.jsp" />
+			<forward name="dxbmshCk" path="/xsgzgl/dtjs/dxbmgl/dxbmsh/dxbmshCk.jsp" />
+		</action>		
+		<!-- 党校报名结果-->
+		<action path="/dtjs_dxbmgl_dxpxjgCx" forward="/dxbmgl_dxpxjg.do?method=dxpxjgCx" />
+		<action path="/dtjs_dxbmgl_dxpxjgZj" forward="/dxbmgl_dxpxjg.do?method=dxpxjgZj" />
+		<action path="/dtjs_dxbmgl_dxpxjgXg" forward="/dxbmgl_dxpxjg.do?method=dxpxjgXg" />
+		<action path="/dtjs_dxbmgl_dxpxjgSc" forward="/dxbmgl_dxpxjg.do?method=dxpxjgSc" />
+		<action path="/dtjs_dxbmgl_dxpxjgCk" forward="/dxbmgl_dxpxjg.do?method=dxpxjgCk" />
+		<action path="/dtjs_dxbmgl_dxpxxzCx" forward="/dxbmgl_dxpxjg.do?method=dxpxxzCx" />
+		<action path="/dxbmgl_dxpxjg" name="dxpxjgForm" parameter="method" scope="request" type="com.zfsoft.xgxt.dtjs.dxbmgl.pxjg.DxpxjgAction">
+			<forward name="dxpxjgCx" path="/xsgzgl/dtjs/dxbmgl/dxpxjg/dxpxjgCx.jsp" />
+			<forward name="dxpxjgZj" path="/xsgzgl/dtjs/dxbmgl/dxpxjg/dxpxjgZj.jsp" />
+			<forward name="dxpxjgXg" path="/xsgzgl/dtjs/dxbmgl/dxpxjg/dxpxjgXg.jsp" />
+			<forward name="dxpxjgCk" path="/xsgzgl/dtjs/dxbmgl/dxpxjg/dxpxjgCk.jsp" />
+			<forward name="dxpxxzCx" path="/xsgzgl/dtjs/dxbmgl/dxpxjg/dxpxxzCx.jsp" />
+		</action>		
+	</action-mappings>
+</struts-config>

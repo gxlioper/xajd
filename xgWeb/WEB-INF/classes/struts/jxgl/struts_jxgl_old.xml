@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+		<form-bean name="jxglForm" type="xgxt.jxgl.JxglForm" />
+		<form-bean name="jxglwhForm" type="xgxt.jxgl.jxglxxwh.JxglwhForm" />
+	</form-beans>
+
+	<action-mappings>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<军训日程安排>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/ArmyCalendarArrange" name="jxglForm"
+			parameter="ArmyCalendarArrange" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success"
+				path="/jxgl/jxgl_calendar_arrange.jsp">
+			</forward>
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+		<action path="/viewArmyCalendar" name="jxglForm"
+			parameter="viewArmyCalendar" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/jxrcxxb.jsp"></forward>
+			<forward name="false" path="errMsg.jsp"></forward>
+		</action>
+		<action path="/ArmyCalendarSave" name="jxglForm"
+			parameter="ArmyCalendarSave" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/viewArmyCalendar.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<军训名单维护>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/ArmyStuInfo" name="jxglForm"
+			parameter="ArmyStuInfo" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success"
+				path="/jxgl/jxgl_army_stuInfo.jsp">
+			</forward>
+			<forward name="success_nblg"
+				path="/jxgl/nblg/jxgl_army_stuInfo.jsp">
+			</forward>
+		</action>
+		<action path="/viewArmyStu" name="jxglForm"
+			parameter="viewArmyStu" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/jxmdb.jsp"></forward>
+			<forward name="success_nblg" path="/jxgl/nblg/jxmdb.jsp"></forward>
+		</action>
+		<action path="/ArmyStuInfoSave" name="jxglForm"
+			parameter="ArmyStuInfoSave" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/viewArmyStu.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<带队老师信息>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/fugleTeacherInfo" name="jxglForm"
+			parameter="fugleTeacherInfo" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success"
+				path="/jxgl/jxgl_teacher_info.jsp">
+			</forward>
+		</action>
+		<action path="/viewTeacherInfo" name="jxglForm"
+			parameter="viewTeacherInfo" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/ddjsxxb.jsp"></forward>
+			<forward name="nblg_ddjsxx" path="/jxgl/nblg/nblg_ddjsxxb.jsp"></forward>			
+		</action>
+		<action path="/TeacherInfoSave" name="jxglForm"
+			parameter="TeacherInfoSave" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/viewTeacherInfo.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<教官信息>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/drillmasterInfo" name="jxglForm"
+			parameter="drillmasterInfo" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success"
+				path="/jxgl/jxgl_drillmaster_info.jsp">
+			</forward>
+		</action>
+		<action path="/viewDrillmasterInfo" name="jxglForm"
+			parameter="viewDrillmasterInfo" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/jgxxb.jsp"></forward>
+		</action>
+		<action path="/DrillmasterInfoSave" name="jxglForm"
+			parameter="DrillmasterInfoSave" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/viewDrillmasterInfo.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<基干民兵信息>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/cadremanInfo" name="jxglForm"
+			parameter="cadremanInfo" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success"
+				path="/jxgl/jxgl_cadreman_Info.jsp">
+			</forward>
+		</action>
+		<action path="/viewCadremanInfo" name="jxglForm"
+			parameter="viewCadremanInfo" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/jgmbxxb.jsp"></forward>
+		</action>
+		<action path="/CadremanInfoSave" name="jxglForm"
+			parameter="CadremanInfoSave" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/viewCadremanInfo.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<军训表现－表彰－惩罚查询>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/Army" name="jxglForm" parameter="Army"
+			scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/jx_data.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<军训表现－表彰－惩罚显示操作>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/showArmy" name="jxglForm" parameter="showArmy"
+			scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/jx_data.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<军训表现－表彰－惩罚修改>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/modiArmy" name="jxglForm" parameter="modiArmy"
+			scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/jx_data.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<军训成绩录入>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/ArmyIntoAchievement" name="jxglForm"
+			parameter="ArmyIntoAchievement" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/jxgl_cjlr.jsp"></forward>
+		</action>
+		<action path="/ArmyAchievementSave" name="jxglForm"
+			parameter="ArmyAchievementSave" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/ArmyIntoAchievement.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<参数设置>>>>>>>>>>>>> -->
+		<action name="commanForm" parameter="TRAINCONF"
+			path="/train_conf" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/train_conf.jsp" />
+		</action>		
+		<!-- <<<<<<<<<<<<<<<<<<<<其它参数设置>>>>>>>>>>>>> -->
+		<action name="jxglwhForm" parameter="method"
+			path="/drill_conf" scope="request" type="xgxt.jxgl.jxglxxwh.JxglwhAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jxgl/drill_conf.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<军训管理>>>>>>>>>>>>> -->
+		<action name="jxglwhForm" parameter="method"
+			path="/jxgl" scope="request" type="xgxt.jxgl.jxglxxwh.JxglwhAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jxgl/nblg/jsgh_search.jsp" />
+			<forward name="nblg_ddjsxx" path="/jxgl/nblg/nblg_ddjsxxb.jsp"/>
+			<forward name="jxtdhjgl" path="/jxgl/nblg/jxtdhjgl.jsp"/>	
+			<forward name="jxtdhjxx" path="/jxgl/nblg/jxtdhjxx.jsp"/>			
+			<forward name="xsjxcxgbgl" path="/jxgl/nblg/jxxscxgbgl.jsp"/>			
+			<forward name="xsjxcxgbxx" path="/jxgl/nblg/xsjxcxgbxx.jsp"/>					
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<尺寸表查询>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/train_size" forward="/sjcz/train_size.jsp" />
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<军训服装申请>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action name="commanForm" parameter="TRAINCLOTHAPPLY"
+			path="/train_cloth" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/train_cloth.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<军训服装申请-提交申请>>>>>>>>>>>>>>>>>>>>> -->
+		<action name="commanForm" parameter="TRAINCLOTHINSERT"
+			path="/train_cloth_insert" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/train_cloth.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-军训建制 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="trainWeave"
+			path="/train_weave" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/train_weave.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-军训风采-照片上传 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="updatethephoto"
+			path="/updatethephoto" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jxgl/jxgl_input_photo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-军训风采-照片管理 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="jxglForm" parameter="jxglphotoquery"
+			path="/jxglphotoquery" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jxgl/jxgl_querry_photo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-军训风采-照片详细查看 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jxglphotoinfo"
+			path="/jxglphotoinfo" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jxgl/jxgl_view_photo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-军训风采-照片删除 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jxgldelphoto"
+			path="/jxgldelphoto" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/jxgl/do_false.jsp" />
+			<forward name="success" path="/jxgl/jxgl_view_photo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-军训风采-照片修改>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jxglupdatephoto"
+			path="/jxglupdatephoto" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/jxgl/do_false.jsp" />
+			<forward name="success" path="/jxgl/jxgl_update_photo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-军训风采-照片浏览>>>>>>>>>>>>>>>>>>>>-->
+		<action name="jxglForm" parameter="jxglphotobrowse"
+			path="/jxglphotobrowse" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/jxgl/do_false.jsp" />
+			<forward name="success" path="/jxgl/jxgl_browse_photo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-网上征兵-入伍报名登记>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jxglrwbm"
+			path="/jxglrwbm" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/hzjy/hzjy_cannottosee_stu.jsp" />
+			<forward name="success" path="/jxgl/jxgl_rwbm_input.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-网上征兵-单个学生照片上传>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jxglzpsc"
+			path="/jxglzpsc" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/hzjy/hzjy_cannottosee_stu.jsp" />
+			<forward name="success" path="/jxgl/jxgl_rwbm_photo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-网上征兵-入伍报名查询>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jxglrwbmquery"
+			path="/jxglrwbmquery" scope="request" type="xgxt.jxgl.JxglAction">
+			<!--  <forward name="false" path="/hzjy/hzjy_cannottosee_stu.jsp" />-->
+			<forward name="success" path="/jxgl/jxgl_rwbm_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-网上征兵-入伍报名详细查看>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jxglrwbmmorequery"
+			path="/jxglrwbmmorequery" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/jxgl_rwbm_viewmore.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-网上征兵-入伍报名学校审核>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jxglrwbmxxsh"
+			path="/jxglrwbmxxsh" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/jxgl_rwbm_xxsh.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-网上征兵-入伍报名审核结果查询>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jxglrwbmxxshresult"
+			path="/jxglrwbmxxshresult" scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="false" path="/hzjy/hzjy_cannottosee_stu.jsp" />
+			<forward name="success" path="/jxgl/jxgl_rwbm_result_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-西北2民院-建制维护>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/jxgljz" 
+				name="jxglForm" 
+				type="xgxt.jxgl.JxglJzAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+			<forward name="jxgljzwh" path="/jxgl/jxjzFor2my/jxgljzwh.jsp" />
+			<forward name="jxgljzwhOne" path="/jxgl/jxjzFor2my/jxgljzwhOne.jsp" />
+			<forward name="jxxxztcx" path="/jxgl/jxjzFor2my/jxxxztcx.jsp" />
+			<forward name="jxglxsjzOne" path="/jxgl/jxjzFor2my/jxglxsjzOne.jsp" />
+			<forward name="xsgrjxxxcx" path="/jxgl/jxjzFor2my/xsgrjxxxcx.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-西北民族-建制维护>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/jxgljz_xbmz" 
+				name="jxglForm" 
+				type="xgxt.jxgl.JxglJzAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+			<forward name="jxgljzwhXbmz" path="/jxgl/xbmz/jxgljzwh.jsp" />
+			<forward name="addYjjz" path="/jxgl/xbmz/addYjjz.jsp" />
+			<forward name="addQtjz" path="/jxgl/xbmz/addQtjz.jsp" />
+			<forward name="modJxjz" path="/jxgl/xbmz/modJxjz.jsp" />
+			<forward name="xbmzJxbj" path="/jxgl/xbmz/xbmzJxbj.jsp" />
+			<forward name="JxbjPrint" path="/jxgl/xbmz/jxbzPrint.jsp" />
+			<forward name="xbmzJxrc" path="/jxgl/xbmz/xbmzJxrc.jsp" />
+			<forward name="xbmzJxrcOne" path="/jxgl/xbmz/xbmzJxrcOne.jsp" />
+			<forward name="xbmzJxrcEdit" path="/jxgl/xbmz/xbmzJxrcEdit.jsp" />
+			<forward name="wszbDataExport" path="/about:blank" />
+			<forward name="xbmzConf" path="/jxgl/xbmz/drill_conf.jsp" />
+			<forward name="bmxxPrint" path="/jxgl/xbmz/bmxxPrint.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 长沙民政-新生体检-信息维护>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/jxglxxwh" 
+				name="jxglwhForm" 
+				type="xgxt.jxgl.jxglxxwh.JxglwhAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+			<forward name="jxglxstjwh" path="/jxgl/csmz/jxglxstjwh.jsp" />
+			<forward name="jxglxstjwhOne" path="/jxgl/csmz/jxglxstjwhOne.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-云南艺术-建制维护>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/jxgljz_ynys"
+				name="jxglForm" 
+				type="xgxt.jxgl.JxglJzAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+			<forward name="jxglldwh" path="/jxgl/ynys/jxglldwh.jsp" />
+			<forward name="jxglldwhOne" path="/jxgl/ynys/jxglLdwhOne.jsp" />
+			<forward name="jxglldfp" path="/jxgl/ynys/jxglldfp.jsp" />
+			<forward name="jxgljskqxx" path="/jxgl/ynys/jxgljskqxx.jsp" />
+			<forward name="jxgljskqxxOne" path="/jxgl/ynys/jxgljskqxxOne.jsp" />
+			<forward name="jxglzxsj" path="/jxgl/ynys/jxglzxsj.jsp" />
+			<forward name="jxglzxsjOne" path="/jxgl/ynys/jxglzxsjOne.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-宁波理工-建制维护>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/jxgljz_nblg" 
+				name="jxglForm" 
+				type="xgxt.jxgl.JxglJzAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+			<forward name="jxgljzwhNblg" path="/jxgl/nblg/jxgljzwh.jsp" />
+			<forward name="addYjjz" path="/jxgl/nblg/addYjjz.jsp" />
+			<forward name="addQtjz" path="/jxgl/nblg/addQtjz.jsp" />
+			<forward name="modJxjz" path="/jxgl/nblg/modJxjz.jsp" />
+			<forward name="nblgJxbj" path="/jxgl/nblg/nblgJxbj.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-宁波理工-教官信息>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/jgxxInfo_nblg" name="jxglForm"
+			parameter="drillmasterInfo" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success"
+				path="/jxgl/nblg/nblg_jgxx.jsp">
+			</forward>
+		</action>
+		<action path="/jgxxInfoOne_nblg" name="jxglForm"
+			parameter="viewDrillmasterInfo" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/nblg/nblg_jgxxOne.jsp"></forward>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-宁波理工-带队教师信息>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/jsxxInfo_nblg" name="jxglForm"
+			parameter="fugleTeacherInfo" scope="request"
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success"
+				path="/jxgl/nblg/nblg_jsxx.jsp">
+			</forward>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-宁波理工-参训干部信息>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/xsgbInfo_nblg" 
+			name="jxglForm" parameter="xscxgbInfo" 
+			scope="request" 
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/nblg/nblg_xsgb.jsp"></forward>
+		</action>
+		<action path="/viewXsgbInfo_nblg" 
+			name="jxglForm" parameter="viewXscxgbInfo" 
+			scope="request" 
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/nblg/nblg_xsgbOne.jsp"></forward>
+		</action>
+		<action path="/saveXscxgbInfo" 
+			name="jxglForm" parameter="saveXscxgbInfo" 
+			scope="request" 
+			type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/viewXsgbInfo_nblg.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<军训管理-宁波理工-军训表彰>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/nblg_showArmy" name="jxglForm" parameter="Army"
+			scope="request" type="xgxt.jxgl.JxglAction">
+			<forward name="success" path="/jxgl/nblg/nblg_jxbz.jsp"></forward>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 军训管理-通用>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/jxglgt"
+				name="jxglForm" 
+				type="xgxt.jxgl.gt.JxglAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+			<forward name="jgxx" path="/jxgl/gt/jgxx.jsp" />
+			<forward name="jgxxOne" path="/jxgl/gt/jgxxOne.jsp" />
+			<forward name="jsxx" path="/jxgl/gt/jsxx.jsp" />
+			<forward name="jsxxOne" path="/jxgl/gt/jsxxOne.jsp" />
+			<forward name="jxghSearch" path="/jxgl/gt/jsgh_search.jsp" />
+			<forward name="jxbz" path="/jxgl/gt/jxgljzwh.jsp" />
+			<forward name="addMaxjz" path="/jxgl/gt/addMaxjz.jsp" />
+			<forward name="addQtjz" path="/jxgl/gt/addQtjz.jsp" />
+			<forward name="addBjjz" path="/jxgl/gt/addBjjz.jsp" />
+			<forward name="modJxjz" path="/jxgl/gt/modJxjz.jsp" />
+			<forward name="ArmyStuInfo" path="/jxgl/gt/jxglStuInfo.jsp" />
+			<forward name="ArmyStuInfoOne" path="/jxgl/gt/jxglStuInfoOne.jsp" />
+			<forward name="ArmyIntoAchievement" path="/jxgl/gt/jxglcjlr.jsp" />
+			<forward name="jxcxgb" path="/jxgl/gt/jxcxgb.jsp" />
+			<forward name="jxcxgbOne" path="/jxgl/gt/jxcxgbOne.jsp" />
+			<forward name="jxtdhj" path="/jxgl/gt/jxtdhj.jsp"/>	
+			<forward name="jxtdhjOne" path="/jxgl/gt/jxtdhjOne.jsp"/>		
+		</action>
+	</action-mappings>
+
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

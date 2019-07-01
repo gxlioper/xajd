@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>		
+    <form-bean name="studentHkztForm" type="xgxt.studentInfo.csmzzyjsxy.StudentHkztForm" />
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+		<!-- <<<<<<<<<<<<<<学生信息：长沙民政户口状态>>>>>>>>>>>>> -->		
+	    <action 
+	    	path="/studentHkzt" 
+	    	name="studentHkztForm"
+	    	parameter="method"
+	    	type="xgxt.studentInfo.csmzzyjsxy.StudentHkztAction" 
+	    	scope="request">
+	    	<forward name="success" path="/xsxx/csmzzyjsxy/stu_hkzt_query.jsp" />
+	    	<forward name="hkztAdd" path="/xsxx/csmzzyjsxy/stu_hkzt_add.jsp" />
+	    	<forward name="hkztMod" path="/xsxx/csmzzyjsxy/stu_hkzt_mod.jsp" />
+	    </action>
+	</action-mappings>	
+</struts-config>

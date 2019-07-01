@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>
+		<!--	转移到上海出版印刷的配置文件,pjpy_shcbys.xml    -->
+		<action path="/pjpy_shcb_jxjsq" 	forward="/pjpyshcbyswh.do?method=jxjSq"></action><!-- 奖学金申请页面 -->
+		<action path="/pjpy_shcbys_kqxxwh"  forward="/pjpyshcbyswh.do?method=kqxxWh"></action><!-- 考勤信息维护 -->
+		<action path="/pjpy_shcbys_kqqry"   forward="/pjpyshcbyswh.do?method=kqQry"></action><!-- 考勤查询结果 -->
+		<action path="/pjpy_shcbys_kqxxview" forward="/pjpyshcbyswh.do?method=kqxxView"></action><!-- 考勤详细信息 -->
+		<action path="/pjpy_shcbys_kqxxmodi" forward="/pjpyshcbyswh.do?method=kqxxModi"></action><!-- 考勤信息修改 -->
+		<action path="/pjpy_shcbys_kqxxdel" forward="/pjpyshcbyswh.do?method=kqxxDel"></action><!-- 考勤信息批量删除 -->
+		<action path="/pjpy_shcbys_jxjsave" forward="/pjpyshcbyswh.do?method=jxjSave"></action><!-- 奖学金申请保存 -->
+		<action path="/pjpy_shcbys_jxjsh"   forward="/pjpyshcbyswh.do?method=jxjSh"></action><!-- 奖学金审核 -->
+		<action path="/pjpy_shcbys_jxjshqry" forward="/pjpyshcbyswh.do?method=jxjshQry"></action><!-- 奖学金审核查询 -->
+		<action path="/pjpy_shcbys_jxjshres"   forward="/pjpyshcbyswh.do?method=jxjShRes"></action><!-- 奖学金审核 -->
+		<action path="/pjpy_shcbys_jxjshone" forward="/pjpyshcbyswh.do?method=jxjShone"></action><!-- 奖学金单个审核 -->
+		<action path="/pjpy_shcbys_jxjshoneres" forward="/pjpyshcbyswh.do?method=jxjshoneRes"></action><!-- 奖学金单个审核结果 -->
+		<action path="/pjpy_shcb_jxjxg"   forward="/pjpyshcbyswh.do?method=jxjModi"></action><!-- 奖学金修改 -->	
+		<action path="/pjpy_shcbys_jxjsqxg_save"   forward="/pjpyshcbyswh.do?method=jxjModiSave"></action><!-- 奖学金修改保存 -->	
+		<action path="/pjpy_shcbys_jxjsqprint"   forward="/pjpyshcbyswh.do?method=jxjPrint"></action><!-- 打印奖学金申请表-->		
+		<action path="/pjpy_shcbys_cjprint"  forward="/pjpyshcbyswh.do?method=cjPrint"></action><!-- 成绩报表 -->
+		<action path="/pjpy_shcbys_jxjprintpk" forward="/pjpyshcbyswh.do?method=jxjPrintpk"></action>
+		<action path="/pjpy_shcbys_cjprintpk"  forward="/pjpyshcbyswh.do?method=cjPrintpk"></action>
+</action-mappings>
+</struts-config>

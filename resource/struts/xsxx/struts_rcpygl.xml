@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+ 		
+<struts-config>
+	<form-beans>
+		<form-bean name="csszForm" type="com.zfsoft.xgxt.xsxx.rcpy.cssz.CsszForm"/>
+		<form-bean name="rcpysqForm" type="com.zfsoft.xgxt.xsxx.rcpy.rcpysq.RcpysqForm"/>
+		<form-bean name="rcpyshForm" type="com.zfsoft.xgxt.xsxx.rcpy.rcpysh.RcpyshForm"/>
+		<form-bean name="rcpyjgForm" type="com.zfsoft.xgxt.xsxx.rcpy.rcpyjg.RcpyjgForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	  
+		<action path="/xsxx_rcpy_cssz" forward="/rcpy_cssz.do?method=rcpyCssz"/>	<!-- 参数设置 -->
+		<action path="/rcpy_cssz" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.xsxx.rcpy.cssz.CsszAction" 
+	   			name="csszForm"         
+	   			parameter="method">	
+	   		<forward name="rcpyCssz" path="/xsgzgl/xsxx/rcpy/cssz/rcpyCssz.jsp"></forward>
+		</action>
+		
+		<action path="/xsxx_rcpy_rcpysq" forward="/rcpy_rcpysq.do?method=getsqList"/>	<!-- 人才培养申请 -->
+		<action path="/rcpy_rcpysq" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.xsxx.rcpy.rcpysq.RcpysqAction" 
+	   			name="rcpysqForm"         
+	   			parameter="method">
+	   		<forward name="getsqList" path="/xsgzgl/xsxx/rcpy/rcpysq/getsqList.jsp"></forward>
+	   		<forward name="zjRcpysq" path="/xsgzgl/xsxx/rcpy/rcpysq/zjRcpysq.jsp"></forward>
+	   		<forward name="xgRcpysq" path="/xsgzgl/xsxx/rcpy/rcpysq/xgRcpysq.jsp"></forward>
+	   		<forward name="ckRcpysq" path="/xsgzgl/xsxx/rcpy/rcpysq/ckRcpysq.jsp"></forward>
+		</action>
+		
+		<action path="/xsxx_rcpy_rcpysh" forward="/rcpy_rcpysh.do?method=getshList"/>	<!-- 人才培养审核 -->
+		<action path="/rcpy_rcpysh" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.xsxx.rcpy.rcpysh.RcpyshAction" 
+	   			name="rcpyshForm"         
+	   			parameter="method">
+	   		<forward name="getshList" path="/xsgzgl/xsxx/rcpy/rcpysh/getshList.jsp"></forward>
+	   		<forward name="rcpyDgsh" path="/xsgzgl/xsxx/rcpy/rcpysh/rcpyDgsh.jsp"></forward>
+	   		<forward name="rcpyPlsh" path="/xsgzgl/xsxx/rcpy/rcpysh/rcpyPlsh.jsp"></forward>
+		</action>
+		
+		<action path="/xsxx_rcpy_rcpyjg" forward="/rcpy_rcpyjg.do?method=getjgList"/>	<!-- 人才培养结果-->
+		<action path="/rcpy_rcpyjg" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.xsxx.rcpy.rcpyjg.RcpyjgAction" 
+	   			name="rcpyjgForm"         
+	   			parameter="method">
+	   		<forward name="getjgList" path="/xsgzgl/xsxx/rcpy/rcpyjg/getjgList.jsp"></forward>
+	   		<forward name="zjRcpyjg" path="/xsgzgl/xsxx/rcpy/rcpyjg/zjRcpyjg.jsp"></forward>
+	   		<forward name="xgRcpyjg" path="/xsgzgl/xsxx/rcpy/rcpyjg/xgRcpyjg.jsp"></forward>
+	   		<forward name="ckRcpyjg" path="/xsgzgl/xsxx/rcpy/rcpyjg/ckRcpyjg.jsp"></forward>
+		</action>
+	</action-mappings>
+
+</struts-config>

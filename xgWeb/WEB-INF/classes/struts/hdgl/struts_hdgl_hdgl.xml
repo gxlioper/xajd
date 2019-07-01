@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<!-- 参数设置 -->
+    	<form-bean name="hdglCsszForm" type="com.zfsoft.xgxt.hdgl.cssz.CsszForm" />
+    	<form-bean name="hdblsqshForm" type="com.zfsoft.xgxt.hdgl.hdblsq.HdblsqshForm" />
+    	<form-bean name="hdbljgForm" type="com.zfsoft.xgxt.hdgl.hdbljg.HdbljgForm" />
+    	<form-bean name="hdxxForm" type="com.zfsoft.xgxt.hdgl.hdxx.HdxxForm" />
+		<form-bean name="jzjhForm" type="com.zfsoft.xgxt.hdgl.jzjh.JzjhForm" />
+		<form-bean name="tjForm" type="com.zfsoft.xgxt.hdgl.hdgltjcx.TjForm"/>
+		<form-bean name="hdqdForm" type="com.zfsoft.xgxt.hdgl.hdqd.HdqdForm"/>
+		<form-bean name="zjcyCkForm" type="com.zfsoft.xgxt.hdgl.zjcyck.ZjcyCkForm"/>
+	</form-beans>
+
+	<action-mappings>
+		
+
+    	<!-- 参数设置 -->
+    	<action path="/hdgl_hdbl_cssz" forward="/hdgl_cssz.do?method=cssz"/>
+    	<!-- 活动补录申请 -->
+    	<action path="/hdgl_hdbl_hdblsq" forward="/hdgl_hdblsq.do?method=getHdblsqList"/>
+    	<action path="/hdgl_hdbl_hdblsh" forward="/hdgl_hdblsh.do?method=getHdblshList"/>
+    	<action path="/hdgl_hdbl_hdbljg" forward="/hdgl_hdbljg.do?method=getHdbljgList"/>
+    	
+    	<!-- 活动信息 -->
+    	<action path="/hdgl_hdgl_hdxx" forward="/hdgl_hdxx.do?method=hdxxList"/>
+    	<!-- 第二课堂成绩单 -->
+    	<action path="/xg_dekt_xscjd" forward="/hdgl_hdxx.do?method=xscjdPri"/>
+    	
+    	<!-- 活动详情 -->
+    	<action path="/hdgl_hdgl_hdxq" forward="/hdgl_hdxq.do?method=hdxqList"/>
+
+		<!-- 活动管理-->
+    	<action path="/hdgl_hdgl_hdgl" forward="/hdgl_hdgl.do?method=hdglList"/>
+    	
+		<!-- 活动结果-->
+    	<action path="/hdgl_hdgl_hdjg" forward="/hdgl_hdjg.do?method=hdjgList"/>
+    	<action path="/hdgl_hdgl_hdxjg" forward="/hdgl_hdjg.do?method=hdxjgList"/>
+    	<action path="/hdgl_hdgl_jzjg" forward="/hdgl_hdjg.do?method=jzjgList"/>
+
+		<!-- 活动阶段审核-->
+    	<action path="/hdgl_hdgl_hdjdsh" forward="/hdgl_hdjdsh.do?method=getHdjdshList"/>
+    	
+    	<action path="/hdgl_cssz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.hdgl.cssz.CsszAction" 
+    			name="hdglCsszForm"
+    			parameter="method">	
+    		<forward name="cssz" path="/xsgzgl/hdgl/cssz/cssz.jsp"/>
+		</action>
+
+		<!-- 活动补录申请 -->
+		<action path="/hdgl_hdblsq" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.hdgl.hdblsq.HdblsqshAction" 
+    			name="hdblsqshForm"
+    			parameter="method">	
+    		<forward name="hdblsqList" path="/xsgzgl/hdgl/hdblsq/hdblsqList.jsp"/>
+    		<forward name="addHdblsq" path="/xsgzgl/hdgl/hdblsq/addHdblsq.jsp"/>
+    		<forward name="updateHdblsq" path="/xsgzgl/hdgl/hdblsq/updateHdblsq.jsp"/>
+    		<forward name="viewHdblsq" path="/xsgzgl/hdgl/hdblsq/viewHdblsq.jsp"/>
+		</action>
+		
+		<!-- 活动补录审核 -->
+		<action path="/hdgl_hdblsh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.hdgl.hdblsh.HdblshAction" 
+    			name="hdblsqshForm"
+    			parameter="method">	
+    		<forward name="hdblshList" path="/xsgzgl/hdgl/hdblsh/hdblshList.jsp"/>
+    		<forward name="hdblDgsh" path="/xsgzgl/hdgl/hdblsh/hdblDgsh.jsp"/>
+		</action>
+		
+		<!-- 活动补录结果 -->
+		<action path="/hdgl_hdbljg" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.hdgl.hdbljg.HdbljgAction" 
+    			name="hdbljgForm"
+    			parameter="method">	
+    		<forward name="hdbljgList" path="/xsgzgl/hdgl/hdbljg/hdbljgList.jsp"/>
+    		<forward name="addHdbljg" path="/xsgzgl/hdgl/hdbljg/addHdbljg.jsp"/>
+    		<forward name="updateHdbljg" path="/xsgzgl/hdgl/hdbljg/updateHdbljg.jsp"/>
+    		<forward name="viewHdbljg" path="/xsgzgl/hdgl/hdbljg/viewHdbljg.jsp"/>
+		</action>
+		
+		<!-- 活动信息 -->
+		<action path="/hdgl_hdxx" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.hdgl.hdxx.HdxxAction" 
+    			name="hdxxForm"
+    			parameter="method">	
+    		<forward name="hdxxList" path="/xsgzgl/hdgl/hdxx/hdxxList.jsp"/>
+    		<forward name="hdrybm" path="/xsgzgl/hdgl/hdxx/hdrybm.jsp"/>
+    		<forward name="jdtx" path="/xsgzgl/hdgl/hdxx/jdtx.jsp"/> 
+    		<forward name="showDw" path="/xsgzgl/hdgl/hdxx/showDw.jsp"/>
+    		<forward name="hdpl" path="/xsgzgl/hdgl/hdxx/hdpl.jsp"/>
+    		<forward name="ckjd" path="/xsgzgl/hdgl/hdxx/ckjd.jsp"/>
+    		<forward name="szHdxx" path="/xsgzgl/hdgl/hdxx/szHdxx.jsp"/>
+			<forward name="ckHdxx" path="/xsgzgl/hdgl/hdxx/ckHdxx.jsp"/>
+			<forward name="xscjd" path="/xsgzgl/hdgl/hdxx/xscjd.jsp"/>
+			<forward name="bm" path="/xsgzgl/hdgl/hdxx/bm.jsp"/>
+			<forward name="ckdw" path="/xsgzgl/hdgl/hdxx/ckdw.jsp"/>
+			<forward name="getBmEwm" path="/xsgzgl/hdgl/hdxx/getBmEwm.jsp"/>
+		</action>
+
+		<!-- 活动管理 -->
+		<action path="/hdgl_hdgl"
+				scope="request"
+				type="com.zfsoft.xgxt.hdgl.hdgl.HdglAction"
+				name="hdxxForm"
+				parameter="method">
+			<forward name="hdglList" path="/xsgzgl/hdgl/hdgl/hdglList.jsp"/>
+			<forward name="hdglView" path="/xsgzgl/hdgl/hdgl/hdglView.jsp"/>
+			<forward name="zjtcysz" path="/xsgzgl/hdgl/hdgl/zjtcysz.jsp"/>
+			<forward name="jdcysz" path="/xsgzgl/hdgl/hdgl/jdcysz.jsp"/>     <!-- 阶段成员设置 -->
+		</action>
+
+		<!-- 活动详情 -->
+		<action path="/hdgl_hdxq" 
+    			scope="request"
+                type="com.zfsoft.xgxt.hdgl.hdxq.HdxqAction"
+                name="hdxxForm"
+    			parameter="method">	
+    		<forward name="hdxqList" path="/xsgzgl/hdgl/hdxq/hdxqList.jsp"/>
+    		<forward name="hdcyList" path="/xsgzgl/hdgl/hdxq/hdcyList.jsp"/> 
+    		<forward name="hdxqgl" path="/xsgzgl/hdgl/hdxq/hdxqgl.jsp"/>
+    		<forward name="hdxx" path="/xsgzgl/hdgl/hdxq/hdxx.jsp"/>
+    		<forward name="hdplList" path="/xsgzgl/hdgl/hdxq/hdplList.jsp"/>
+    		<forward name="plReply" path="/xsgzgl/hdgl/hdxq/plReply.jsp"/>
+    		<forward name="ckPl" path="/xsgzgl/hdgl/hdxq/ckPl.jsp"/>
+			<forward name="hdxqpp" path="/xsgzgl/hdgl/hdxq/hdxqpp.jsp"/>
+			<forward name="bmsjgl" path="/xsgzgl/hdgl/hdxq/hdbmsjgl.jsp"/>
+			<forward name="sh" path="/xsgzgl/hdgl/hdxq/sh.jsp"/>
+			<forward name="plsh" path="/xsgzgl/hdgl/hdxq/plsh.jsp"/>
+			<forward name="getEwm" path="/xsgzgl/hdgl/hdxq/getEwm.jsp"/>
+		</action>
+		
+		<!-- 活动阶段审核 -->
+		<action path="/hdgl_hdjdsh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.hdgl.hdjdsh.HdjdshAction" 
+    			name="hdxxForm"
+    			parameter="method">	
+    		<forward name="hdjdshList" path="/xsgzgl/hdgl/hdjdsh/hdjdshList.jsp"/>
+    		<forward name="hdjdsh" path="/xsgzgl/hdgl/hdjdsh/hdjdsh.jsp"/>
+    		<forward name="hdcyjdshPage" path="/xsgzgl/hdgl/hdjdsh/hdcyjdshPage.jsp"/>
+    		<forward name="hdcyjdzjphPage" path="/xsgzgl/hdgl/hdjdsh/hdcyjdzjphPage.jsp"/>
+			<forward name="hdcyjdshView" path="/xsgzgl/hdgl/hdjdsh/hdcyjdshView.jsp"/>
+		</action>
+		
+		<action path="/hdgl_hdjg" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.hdgl.hdjg.HdjgAction" 
+    			name="hdxxForm"
+    			parameter="method">	
+    		<forward name="hdjgList" path="/xsgzgl/hdgl/hdjg/hdjgList.jsp"/>
+    		<forward name="hdxjgList" path="/xsgzgl/hdgl/hdjg/hdxjgList.jsp"/>
+    		<forward name="jzjgList" path="/xsgzgl/hdgl/hdjg/jzjgList.jsp"/>
+			<forward name="hdjgxqList" path="/xsgzgl/hdgl/hdjg/hdjgxqList.jsp"/>
+			<forward name="jzjgxqList" path="/xsgzgl/hdgl/hdjg/jzjgxqList.jsp"/>
+		</action>
+
+		<!--讲座计划-->
+		<action path="/hdgl_hdgl_jzbgjh" forward="/hdgl_hdgl_jzjh.do?method=jzbgjhList"/>
+		<action path="/hdgl_hdgl_jzjh"
+				scope="request"
+				type="com.zfsoft.xgxt.hdgl.jzjh.JzjhAction"
+				name="jzjhForm"
+				parameter="method">
+			<forward name="jzbgList" path="/xsgzgl/hdgl/jzbgjh/jzbgjhList.jsp"/>
+			<forward name="jzjh_add" path="/xsgzgl/hdgl/jzbgjh/jzjh_add.jsp"/>
+			<forward name="jzjh_update" path="/xsgzgl/hdgl/jzbgjh/jzjh_update.jsp"/>
+		</action>
+
+		<action path="/hdgl_hdgl_sgybtj" forward="/hdgl_hdgl_tj.do?method=tjList"/>
+		<action path="/hdgl_hdgl_tj"
+				scope="request"
+				type="com.zfsoft.xgxt.hdgl.hdgltjcx.TjAction"
+				name="tjForm"
+				parameter="method">
+			<forward name="tjcx" path="/xsgzgl/hdgl/hdgltjcx/tjcx.jsp"/>
+		</action>
+
+		<action path="/hdgl_hdgl_hdqd" forward="/hdgl_hdgl_hdqd_wh.do?method=hdqdList"/>
+		<action path="/hdgl_hdgl_hdqd_wh"
+				scope="request"
+				type="com.zfsoft.xgxt.hdgl.hdqd.HdqdAction"
+				name="hdqdForm"
+				parameter="method">
+			<forward name="hdqdList" path="/xsgzgl/hdgl/hdqd/hdqdList.jsp"/>
+			<forward name="add" path="/xsgzgl/hdgl/hdqd/add.jsp"/>
+			<forward name="updateqdView" path="/xsgzgl/hdgl/hdqd/updateqdView.jsp"/>
+			<forward name="hdxxList" path="/xsgzgl/hdgl/hdqd/hdxxList.jsp"/>
+			<forward name="showDw" path="/xsgzgl/hdgl/hdqd/showDw.jsp"/>
+		</action>
+
+		<action path="/hdgl_hdgl_zjcyck" forward="/hdgl_hdgl_zjcy.do?method=zjcyList"/>
+		<action path="/hdgl_hdgl_zjcy"
+				scope="request"
+				type="com.zfsoft.xgxt.hdgl.zjcyck.ZjcyCkAction"
+				name="zjcyCkForm"
+				parameter="method">
+			<forward name="zjcyList" path="/xsgzgl/hdgl/zjcyck/zjcyList.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

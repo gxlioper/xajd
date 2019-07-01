@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>		
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+    	<form-bean name="xsxxZgdzdxForm" type="xgxt.studentInfo.zgdzdx.XsxxZgdzdxForm" />
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+	<!-- <<<<<<<<<<<<<<学生信息： 中国地质学生信息保存>>>>>>>>>>>>> -->
+    <action 
+    	path="/xsxxZgdzdx" 
+        type="xgxt.studentInfo.zgdzdx.XsxxZgdzdxAction" 
+        parameter="method"
+        name="xsxxZgdzdxForm"
+        scope="request">
+        <forward name="success" path="/xsxx/zgkd/dispatchPower.jsp"/>                                
+        <forward name="stu_info_zgdzdx" path="/xsxx/zgdzdx/stu_info_zgdzdx.jsp"/>   
+        <forward name="stumodi" path="/xsxx/zgdzdx/zgdzdx_stu_modinfo.jsp"/>
+        <forward name="xsxxSearch" path="/xsxx/zgdzdx/xsxxSearch.jsp"/>
+        <forward name="fpbtzd" path="/xsxx/fpbtzd.jsp"/>
+        <forward name="bycl" path="/xsxx/zgdzdx/bycl.jsp"/>  
+		</action> 
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

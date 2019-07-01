@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyZjcmActionForm" type="xgxt.pjpy.zjcm.PjpyZjcmActionForm"/>
+		<form-bean name="pjpyXfjsForm" type="xgxt.pjpy.zjcm.xfjs.PjpyXfjsForm"/>
+    	<form-bean name="zjcmCprsForm" type="xgxt.pjpy.zjcm.cprs.ZjcmCprsForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpyzjcmwh"
+				type="xgxt.pjpy.zjcm.PjpyZjcmZhszcpAction"
+				name="pjpyZjcmActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="zhszcppage"       path="/pjpy/zjcm/zhszcp/default.jsp" />
+			<forward name="szfaddpage"       path="/pjpy/zjcm/zhszcp/add.jsp"/>
+			<forward name="szfmodipage"      path="/pjpy/zjcm/zhszcp/update.jsp"/>
+			<forward name="zhszblszpage"     path="/pjpy/zjcm/zhszcp/blsz.jsp"/>
+			<forward name="jxjprint"		 path="/pjpy/zjcm/jxjprint.jsp"/>
+			<forward name="cpzsz"       	 path="/pjpy/zjcm/zhszcp/default.jsp" />
+ 		</action>
+
+	<!-- 显示路径 -->
+    <action path="/zjcm_pjpy_cpxzz" forward="/zjcm_cpz.do?method=cpzManage"/>	<!-- 测评小组设置 -->
+    <action path="/zjcm_pjpy_zhf"  forward="/zjcm_zhf.do?method=zhfManage"/>	<!-- 综合素质分 -->
+    <action path="/zjcm_pjpy_xnjxjsb"  forward="/zjcm_xnjxj.do?method=sbManage"/>	<!-- 校内奖学金申报 -->
+    <action path="/zjcm_pjpy_xnjxjsh"  forward="/zjcm_xnjxj.do?method=shManage"/>	<!-- 校内奖学金审核 -->
+    <action path="/zjcm_pjpy_xwjxjsh"  forward="/zjcm_xwjxj.do?method=shManage"/>	<!-- 校外奖学金审核 -->
+	<action path="/zjcm_pjpy_jxjjg"  forward="/zjcm_xnjxj.do?method=jgManage"/>	<!-- 奖学金申报结果 -->
+    <!-- <action path="/zjcm_pjpy_tjsz"  forward="/zjcm_tjsz.do?method=tjszManage"/>-->	<!-- 条件设置 -->
+    <action path="/zjcm_pjpy_tjbb"  forward="/zjcm_tjsz.do?method=tjbbPrint"/>	<!-- 打印报表 -->
+    <action path="/pjpy_zjcm_jxjshDetails"  forward="/zjcm_xnjxj.do?method=jxjshDetails"/>  <!-- 奖学金审核显示详细信息 -->
+    <action path="/pjpy_zjcm_rychDetails"   forward="/zjcm_rych.do?method=rychDetails"/>    <!-- 荣誉称号显示详细信息 -->
+    <action path="/pjpy_zjcm_xwjxjshDetails" forward="/zjcm_xwjxj.do?method=xwjxjshDetails"/><!-- 校外奖学金单个审核 -->
+   
+    <!-- 实际路径 -->
+        <action path="/zjcm_cpz" 
+        		parameter="method"  
+        		name="pjpyZjcmActionForm" 
+        		scope="request"
+		        type="xgxt.pjpy.zjcm.cpz.CpzAction">		        
+		<!-- 测评组 -->
+		<forward name="cpzManage" path="/pjpy/zjcm/cpzManage.jsp" />
+		</action>
+		
+		 <action path="/zjcm_tjsz" 
+        		parameter="method"  
+        		name="pjpyZjcmActionForm" 
+        		scope="request"
+		        type="xgxt.pjpy.zjcm.tjsz.TjszAction">		        
+		<!-- 条件设置 -->
+		<forward name="tjszManage" path="/pjpy/zjcm/tjszManage.jsp" />
+		<!-- 报表打印 -->
+		<forward name="tjbbPrint" path="/pjpy/zjcm/tjbbPrint.jsp" />
+		</action>
+		
+		<action path="/zjcm_zhf" 
+        		parameter="method"  
+        		name="pjpyZjcmActionForm" 
+        		scope="request"
+		        type="xgxt.pjpy.zjcm.zhf.ZhfAction">		        
+		<!-- 综合分 -->
+		<forward name="zhfManage" path="/pjpy/zjcm/zhfManage.jsp" />
+		<forward name="zhfUpdate" path="/pjpy/zjcm/zhfUpdate.jsp" />
+		</action>
+		
+		<action path="/zjcm_xnjxj" 
+        		parameter="method"  
+        		name="pjpyZjcmActionForm" 
+        		scope="request"
+		        type="xgxt.pjpy.zjcm.xnjxj.XnjxjAction">		        
+		<!-- 校内奖学金申报 -->
+		<forward name="sbManage" path="/pjpy/zjcm/xnjxjSbManage.jsp" />
+		<forward name="xnJxjSb"  path="/pjpy/zjcm/xnjxjSb.jsp" />
+		<!-- 校内奖学金审核 -->
+		<forward name="shManage" path="/pjpy/zjcm/xnjxjShManage.jsp" />
+		<forward name="xnJxjSh"  path="/pjpy/zjcm/xnjxjSh.jsp" />
+		<!-- 奖学金申报结果 -->
+		<forward name="jgManage" path="/pjpy/zjcm/jxjJgManage.jsp" />
+		<forward name="jxjJg" 	 path="/pjpy/zjcm/jxjJg.jsp" />
+		<!-- 奖学金登记表 -->
+		<forward name="jxjDj" path="/pjpy/zjcm/xmPrint.jsp" />
+		<forward name="jxjshDetails" path="/pjpy/zjcm/jxjshDetails.jsp"/>
+		</action>
+		
+		<action path="/zjcm_xwjxj" 
+        		parameter="method"  
+        		name="pjpyZjcmActionForm" 
+        		scope="request"
+		        type="xgxt.pjpy.zjcm.xwjxj.XwjxjAction">		        
+		<!-- 校外奖学金审核 -->
+		<forward name="shManage" path="/pjpy/zjcm/xwjxjShManage.jsp" />
+		<forward name="xwJxjSh"  path="/pjpy/zjcm/xwjxjSh.jsp" />	
+		<forward name="xwjxjshDetails" path="/pjpy/zjcm/xwjxjshDetails.jsp"/>
+		</action>
+		
+		<action path="/zjcm_rych" 
+        		parameter="method"  
+        		name="pjpyZjcmActionForm" 
+        		scope="request"
+		        type="xgxt.pjpy.zjcm.rych.RychAction">		        
+		<!-- 荣誉称号申请 -->
+		<forward name="sqManage" path="/pjpy/zjcm/rych/sqManage.jsp" />
+		<!-- 荣誉称号审核 -->
+		<forward name="shManage" path="/pjpy/zjcm/rych/shManage.jsp" />
+		<!-- 荣誉称号审核 -->
+		<forward name="shOne" path="/pjpy/zjcm/rych/shOne.jsp" />
+		<!-- 荣誉称号申请结果 -->
+		<forward name="jgManage" path="/pjpy/zjcm/rych/jgManage.jsp" />
+		<forward name="jgOne" path="/pjpy/zjcm/rych/jgOne.jsp" />
+		<forward name="rychDj" path="/pjpy/zjcm/xmPrint.jsp" />
+		<forward name="rychDetails" path="/pjpy/zjcm/rych/rychDetails.jsp"/>
+		</action>
+		
+		
+		<!-- 学风建设 -->
+		<action path="/pjpyxfjs" 
+        		parameter="method"  
+        		name="pjpyXfjsForm" 
+        		scope="request"
+		        type="xgxt.pjpy.zjcm.xfjs.PjpyXfjsAction">
+		<forward name="xsccqk" path="/pjpy/zjcm/xfjs/xsccqkWh.jsp" />
+		<forward name="xskqcx" path="/pjpy/zjcm/xfjs/xskqcx.jsp" />
+		<forward name="xskqxxcx" path="/pjpy/zjcm/xfjs/xscxkqxx.jsp" />
+		<forward name="bjccqkzj" path="/pjpy/zjcm/xfjs/bjccqkZj.jsp" />
+		<forward name="xsccqkxg" path="/pjpy/zjcm/xfjs/xsccqkXg.jsp" />
+		<forward name="bjccqkxx" path="/pjpy/zjcm/xfjs/bjccqkxx.jsp" />
+		<forward name="xsccqkxx" path="/pjpy/zjcm/xfjs/xsccqkxx.jsp" />
+		<forward name="ccqksh" path="/pjpy/zjcm/xfjs/ccqksh.jsp" />
+		<forward name="showxfjstjcx" path="/pjpy/zjcm/xfjs/showxfjstjcx.jsp" />
+		<forward name="bjccqkSearch" path="/pjpy/zjcm/xfjs/bjccqkSearch.jsp" />
+		<forward name="xskqqkSearch" path="/pjpy/zjcm/xfjs/xskqqkSearch.jsp" />
+		<forward name="modiBjccqk" path="/pjpy/zjcm/xfjs/modiBjccqk.jsp" />
+		<forward name="bjccqkshxx" path="/pjpy/zjcm/xfjs/bjccqkshxx.jsp" />
+		<forward name="bjccqktjDetails" path="/pjpy/zjcm/xfjs/bjccqktjDetails.jsp" />	
+		<forward name="xskqtjDetails" path="/pjpy/zjcm/xfjs/xskqtjDetails.jsp" />		
+		</action>
+		
+		<!-- 浙江传媒 参评人数设置 -->
+   		<action path="/zjcmCprs" 
+   				type="xgxt.pjpy.zjcm.cprs.ZjcmCprsAction"
+   				name="zjcmCprsForm" 
+   				scope="request"
+   				parameter="method"
+   		>
+   			<forward name="cprsWh" path="/pjpy/zjcm/cprs/cprsWh.jsp"/>
+   		</action>
+		
+	</action-mappings>
+        
+	<message-resources key="pjpyzzdx" parameter="xgxt.pjpy.zjcm.pjpyzzdx" />
+
+</struts-config>

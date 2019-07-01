@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
+<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+<Author>MengWei</Author>
+<LastAuthor>MengWei</LastAuthor>
+<LastPrinted>2017-11-02T13:28:00Z</LastPrinted>
+<Created>2017-11-02T13:11:00Z</Created>
+<LastSaved>2017-11-03T11:55:54Z</LastSaved>
+<Version>12.00</Version>
+</DocumentProperties>
+<CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+<KSOProductBuildVer dt:dt="string">2052-10.1.0.6930</KSOProductBuildVer>
+</CustomDocumentProperties>
+<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+<WindowHeight>10500</WindowHeight>
+<WindowWidth>20880</WindowWidth>
+<WindowTopX>0</WindowTopX>
+<WindowTopY>0</WindowTopY>
+<ProtectStructure>False</ProtectStructure>
+<ProtectWindows>False</ProtectWindows>
+</ExcelWorkbook>
+<Styles>
+<Style ss:ID="Default" ss:Name="Normal">
+<Alignment ss:Vertical="Center"/>
+<Borders/>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+<Interior/>
+<NumberFormat/>
+<Protection/>
+</Style>
+<Style ss:ID="s64">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+</Style>
+<Style ss:ID="s65">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+</Style>
+<Style ss:ID="s68">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="14" ss:Color="#000000" ss:Bold="1"/>
+</Style>
+<Style ss:ID="s69">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="14" ss:Color="#000000" ss:Bold="1"/>
+<Interior/>
+</Style>
+<Style ss:ID="s70">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+</Style>
+<Style ss:ID="s71">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+</Style>
+<Style ss:ID="s72">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="20" ss:Color="#000000" ss:Underline="Single"/>
+</Style>
+</Styles>
+<Worksheet ss:Name="Sheet1">
+<Table ss:ExpandedColumnCount="8" ss:ExpandedRowCount="9999" x:FullColumns="1" x:FullRows="1" ss:StyleID="s65" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
+<Column ss:Index="2" ss:StyleID="s65" ss:AutoFitWidth="0" ss:Width="134.25"/>
+<Column ss:StyleID="s65" ss:AutoFitWidth="0" ss:Width="90.75"/>
+<Column ss:StyleID="s65" ss:AutoFitWidth="0" ss:Width="120"/>
+<Column ss:StyleID="s65" ss:AutoFitWidth="0" ss:Width="167.25"/>
+<Column ss:StyleID="s65" ss:AutoFitWidth="0" ss:Width="89.25"/>
+<Column ss:StyleID="s65" ss:AutoFitWidth="0" ss:Width="75.75"/>
+<Column ss:StyleID="s65" ss:AutoFitWidth="0" ss:Width="104.25"/>
+<Row ss:AutoFitHeight="0" ss:Height="42">
+<Cell ss:MergeAcross="7" ss:StyleID="s72">
+<ss:Data ss:Type="String" xmlns="http://www.w3.org/TR/REC-html40">
+<U>
+<Font html:Color="#000000"> </Font>
+</U>
+<Font html:Color="#000000">系</Font>
+<U>
+<Font html:Color="#000000">${xnFront!}</Font>
+</U>
+<Font html:Color="#000000">-</Font>
+<U>
+<Font html:Color="#000000">${xnBehind!}</Font>
+</U>
+<Font html:Color="#000000">学年奖学金获得者名单</Font>
+</ss:Data>
+</Cell>
+</Row>
+<Row ss:Height="18.75">
+<Cell ss:StyleID="s68"><Data ss:Type="String">序号</Data></Cell>
+<Cell ss:StyleID="s68"><Data ss:Type="String">区队</Data></Cell>
+<Cell ss:StyleID="s69"><Data ss:Type="String">学号</Data></Cell>
+<Cell ss:StyleID="s69"><Data ss:Type="String">奖学金等级</Data></Cell>
+<Cell ss:StyleID="s69"><Data ss:Type="String">工行卡号</Data></Cell>
+<Cell ss:StyleID="s69"><Data ss:Type="String">姓名</Data></Cell>
+<Cell ss:StyleID="s69"><Data ss:Type="String">金额(元)</Data></Cell>
+<Cell ss:StyleID="s69"><Data ss:Type="String">签名</Data></Cell>
+</Row>
+
+<#list hzmdList as rs>
+<Row ss:StyleID="s64">
+<Cell ss:StyleID="s70"><Data ss:Type="String">${rs.r!}</Data></Cell>
+<Cell ss:StyleID="s70"><Data ss:Type="String">${rs.xymc!}</Data></Cell>
+<Cell ss:StyleID="s70"><Data ss:Type="String">${rs.xh!}</Data></Cell>
+<Cell ss:StyleID="s70"><Data ss:Type="String">${rs.xmmc!}</Data></Cell>
+<Cell ss:StyleID="s70"><Data ss:Type="String">${rs.yhkh!}</Data></Cell>
+<Cell ss:StyleID="s70"><Data ss:Type="String">${rs.xm!}</Data></Cell>
+<Cell ss:StyleID="s70"><Data ss:Type="String">${rs.xmje!}</Data></Cell>
+<Cell ss:StyleID="s70"/>
+</Row>
+</#list>
+
+<Row ss:AutoFitHeight="0" ss:Height="27.9375">
+<Cell ss:MergeAcross="5" ss:StyleID="s68">
+<Data ss:Type="String">金额合计</Data>
+</Cell>
+<Cell ss:StyleID="s71">
+<Data ss:Type="String">${excleZje!}</Data>
+</Cell>
+<Cell ss:StyleID="s71"/>
+</Row>
+</Table>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+<PageSetup>
+<Layout x:Orientation="Landscape"/>
+<Header x:Margin="0.31458333333333299"/>
+<Footer x:Margin="0.31458333333333299"/>
+<PageMargins x:Bottom="0.74791666666666701" x:Left="0.70833333333333304" x:Right="0" x:Top="0.74791666666666701"/>
+</PageSetup>
+<Print>
+<ValidPrinterInfo/>
+<PaperSizeIndex>9</PaperSizeIndex>
+<HorizontalResolution>600</HorizontalResolution>
+<VerticalResolution>600</VerticalResolution>
+</Print>
+<Selected/>
+<Panes>
+<Pane>
+<Number>3</Number>
+<ActiveRow>7</ActiveRow>
+<ActiveCol>5</ActiveCol>
+</Pane>
+</Panes>
+<ProtectObjects>False</ProtectObjects>
+<ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+<Worksheet ss:Name="Sheet2">
+<Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
+  </Table>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+<PageSetup>
+<Header x:Margin="0.3"/>
+<Footer x:Margin="0.3"/>
+<PageMargins x:Bottom="0.75" x:Left="0.69930555555555596" x:Right="0.69930555555555596" x:Top="0.75"/>
+</PageSetup>
+<Print>
+<ValidPrinterInfo/>
+<PaperSizeIndex>9</PaperSizeIndex>
+<HorizontalResolution>600</HorizontalResolution>
+<VerticalResolution>600</VerticalResolution>
+</Print>
+<ProtectObjects>False</ProtectObjects>
+<ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+<Worksheet ss:Name="Sheet3">
+<Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
+  </Table>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+<PageSetup>
+<Header x:Margin="0.3"/>
+<Footer x:Margin="0.3"/>
+<PageMargins x:Bottom="0.75" x:Left="0.69930555555555596" x:Right="0.69930555555555596" x:Top="0.75"/>
+</PageSetup>
+<Print>
+<ValidPrinterInfo/>
+<PaperSizeIndex>9</PaperSizeIndex>
+<HorizontalResolution>600</HorizontalResolution>
+<VerticalResolution>600</VerticalResolution>
+</Print>
+<ProtectObjects>False</ProtectObjects>
+<ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+</Workbook>

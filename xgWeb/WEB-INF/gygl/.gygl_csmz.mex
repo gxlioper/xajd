@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/fdy_tb.do" location="650,150" dimension="88,60" />
+  <StrutsActivity path="/stu_fkxx.do" location="950,150" dimension="100,60" />
+  <StrutsActivity path="/fdy_xqtjcx.do" location="350,350" dimension="112,60" />
+  <StrutsActivity path="/csmz_gygl.do" location="50,150" dimension="238,84" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xqcx_default.jsp" location="950,350" dimension="238,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/stu_fkxxView.jsp" location="50,350" dimension="238,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/stu_fkxx.jsp" location="350,250" dimension="214,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xsDormDistribute.jsp" location="50,550" dimension="262,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/fdy_xqxx_add.jsp" location="50,450" dimension="238,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/fdy_xqxx_modi.jsp" location="650,450" dimension="244,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/fdy_wstb.jsp" location="650,50" dimension="214,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/cwsFp.jsp" location="50,750" dimension="196,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/fdy_xqxx_view.jsp" location="950,450" dimension="244,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xsBedDistribute.jsp" location="650,650" dimension="256,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xsDedDistribute.jsp" location="650,550" dimension="256,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xqcx_Default.jsp" location="650,350" dimension="238,48" />
+  <StrutsActivity path="/gygl/portallet/xxgyxx.jsp" location="950,50" dimension="196,48" />
+  <StrutsActivity path="/gygl/portallet/xxgyxx_view.jsp" location="350,150" dimension="226,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xsbedDistribute.jsp" location="50,650" dimension="256,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xsDormDataSearch.jsp" location="350,750" dimension="262,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xsZSXX.sjp" location="950,750" dimension="202,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xsZsXxAdd.sjp" location="50,850" dimension="220,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xsZsXxAdd.jsp" />
+  <StrutsTransition id="/fdy_xqtjcx.do,null,/csmz_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,380" />
+      <AbsolutePoint location="333,380" />
+      <AbsolutePoint location="333,183" />
+      <AbsolutePoint location="288,183" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,xsZSXX,/gygl/csmzzyjsxy/xsZSXX.sjp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="199,150" />
+      <AbsolutePoint location="199,-120" />
+      <AbsolutePoint location="1269,-120" />
+      <AbsolutePoint location="1269,774" />
+      <AbsolutePoint location="1152,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,fdy_xqxx_view,/gygl/csmzzyjsxy/fdy_xqxx_view.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,fdyxq_cxDef,/gygl/csmzzyjsxy/xqcx_default.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fdy_tb.do,null,/csmz_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="694,210" />
+      <AbsolutePoint location="694,309" />
+      <AbsolutePoint location="169,309" />
+      <AbsolutePoint location="169,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,stu_fkxxView,/gygl/csmzzyjsxy/stu_fkxxView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="139,234" />
+      <AbsolutePoint location="139,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,xsZSXX,/gygl/csmzzyjsxy/xsZsXxAdd.sjp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,222" />
+      <AbsolutePoint location="-195,222" />
+      <AbsolutePoint location="-195,874" />
+      <AbsolutePoint location="50,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,xsDDSCH,/gygl/csmzzyjsxy/xsDormDataSearch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="139,150" />
+      <AbsolutePoint location="139,-45" />
+      <AbsolutePoint location="591,-45" />
+      <AbsolutePoint location="591,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu_fkxx.do,null,/csmz_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="169,192" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,xsBedDistribute,/gygl/csmzzyjsxy/xsBedDistribute.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,162" />
+      <AbsolutePoint location="-120,162" />
+      <AbsolutePoint location="-120,613" />
+      <AbsolutePoint location="778,613" />
+      <AbsolutePoint location="778,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,fdy_xqxx_modi,/gygl/csmzzyjsxy/fdy_xqxx_modi.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="288,225" />
+      <AbsolutePoint location="621,225" />
+      <AbsolutePoint location="621,474" />
+      <AbsolutePoint location="650,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,gygl_fdywstb,/gygl/csmzzyjsxy/fdy_wstb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,150" />
+      <AbsolutePoint location="169,74" />
+      <AbsolutePoint location="650,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,cwsFp,/gygl/csmzzyjsxy/cwsFp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,xsZSXX,/gygl/csmzzyjsxy/xsZsXxAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,fdy_xqxx_add,/gygl/csmzzyjsxy/fdy_xqxx_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,192" />
+      <AbsolutePoint location="-45,192" />
+      <AbsolutePoint location="-45,474" />
+      <AbsolutePoint location="50,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,stu_fkxx,/gygl/csmzzyjsxy/stu_fkxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="199,234" />
+      <AbsolutePoint location="199,274" />
+      <AbsolutePoint location="350,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,xsDormDistribute,/gygl/csmzzyjsxy/xsDormDistribute.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmz_gygl.do,savefdy_tbxx,/csmz_gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,192" />
+      <AbsolutePoint location="169,192" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

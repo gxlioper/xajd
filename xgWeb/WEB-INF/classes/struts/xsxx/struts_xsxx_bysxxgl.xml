@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>				
+    	<form-bean name="BysXxForm" type="com.zfsoft.xgxt.xsxx.bysxxgl.bysxx.BysXxForm" />
+    	<form-bean name="BysXxXgSqForm" type="com.zfsoft.xgxt.xsxx.bysxxgl.xxxgsq.BysXxXgSqForm" />
+    	<form-bean name="BysXxXgShForm" type="com.zfsoft.xgxt.xsxx.bysxxgl.xxxgsh.BysXxXgShForm" />
+    	<form-bean name="BysXxCsSzForm" type="com.zfsoft.xgxt.xsxx.bysxxgl.cssz.BysXxCsSzForm" />
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+	
+		<action path="/xsxx_new_bysxx_cssz"   forward="/xsxx_bysxx_cssz.do?method=bysCsSz"/><!-- 参数设置 -->
+		<action path="/xsxx_new_bysxx_xxxgsq" forward="/xsxx_bysxx_xxxgsq.do?method=XgSqCk"/> <!-- 信息修改申请 -->
+		<action path="/xsxx_new_bysxx_xxxgsh" forward="/xsxx_bysxx_xxxgsh.do?method=xgSqShList"/> <!-- 信息修改审核 -->	
+		<action path="/xsxx_new_bysxx_xxgl"   forward="/xsxx_bysxx_xxgl.do?method=cxBysXxList"/><!-- 信息管理 -->
+
+    <action 
+    	path="/xsxx_bysxx_xxgl" 
+        type="com.zfsoft.xgxt.xsxx.bysxxgl.bysxx.BysXxAction" 
+        parameter="method"
+        name="BysXxForm"
+        scope="request">
+         <forward name="cxBysXxList" path="/xsgzgl/xsxx/bysxxgl/xxgl/bysXxList.jsp"/>  
+         <forward name="showStudents" path="/xsgzgl/xsxx/bysxxgl/xxgl/showStudents.jsp"/> 
+          <forward name="bysXxXg" path="/xsgzgl/xsxx/bysxxgl/xxgl/bysXxXg.jsp"/> 
+           <forward name="bysXxCk" path="/xsgzgl/xsxx/bysxxgl/xxgl/bysXxCk.jsp"/>             
+		</action> 
+		
+	 <action 
+    	path="/xsxx_bysxx_xxxgsq" 
+        type="com.zfsoft.xgxt.xsxx.bysxxgl.xxxgsq.BysXxXgSqAction" 
+        parameter="method"
+        name="BysXxForm"
+        scope="request">
+         <forward name="xgsqCk" path="/xsgzgl/xsxx/bysxxgl/xxxgsq/xxXgSqList.jsp"/>  
+         <forward name="showBysXx" path="/xsgzgl/xsxx/bysxxgl/xxxgsq/showBysXx.jsp"/> 
+         <forward name="xxXgSq" path="/xsgzgl/xsxx/bysxxgl/xxxgsq/bysXxXgSq.jsp"/> 
+         <forward name="sqXg" path="/xsgzgl/xsxx/bysxxgl/xxxgsq/sqXg.jsp"/>
+         <forward name="showXgXx" path="/xsgzgl/xsxx/bysxxgl/xxxgsq/showXgXx.jsp"/>
+                         
+		</action> 
+	 <action 
+    	path="/xsxx_bysxx_cssz" 
+        type="com.zfsoft.xgxt.xsxx.bysxxgl.cssz.BysXxCsSzAction" 
+        parameter="method"
+        name="BysXxCsSzForm"
+        scope="request">
+         <forward name="bysCsSz" path="/xsgzgl/xsxx/bysxxgl/cssz/csSz.jsp"/>  
+		</action> 
+	
+	<action 
+    	path="/xsxx_bysxx_xxxgsh" 
+        type="com.zfsoft.xgxt.xsxx.bysxxgl.xxxgsh.BysXxXgShAction" 
+        parameter="method"
+        name="BysXxXgShForm"
+        scope="request">
+         <forward name="xgSqShList" path="/xsgzgl/xsxx/bysxxgl/xxxgsh/bysXxXgSh.jsp"/>  
+         <forward name="xgSqSh" path="/xsgzgl/xsxx/bysxxgl/xxxgsh/xgSqSh.jsp"/>
+         <forward name="xgSqPlSh" path="/xsgzgl/xsxx/bysxxgl/xxxgsh/xgSqPlSh.jsp"/>  
+          <forward name="bysXxXg" path="/xsgzgl/xsxx/bysxxgl/xxxgsh/bysXxXg.jsp"/>              
+		</action> 
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

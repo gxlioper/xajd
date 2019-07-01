@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -绿色通道-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="lstdJcszForm" type="com.zfsoft.xgxt.rcsw.lstd.lstdjcsz.LstdJcszForm" />
+    	<form-bean name="lstdlxwhForm" type="com.zfsoft.xgxt.rcsw.lstd.lstdlxwh.LstdlxwhForm" />
+    	<form-bean name="lstdsqForm" type="com.zfsoft.xgxt.rcsw.lstd.lstdsq.LstdsqForm" />
+    	<form-bean name="lstdshForm" type="com.zfsoft.xgxt.rcsw.lstd.lstdsh.LstdshForm" />
+    	<form-bean name="lstdjgForm" type="com.zfsoft.xgxt.rcsw.lstd.lstdjg.LstdjgForm" />
+	</form-beans>
+	
+	
+	<action-mappings>
+	
+	<action path="/rcsw_lstd_jcsz" forward="/rcsw_lstd_jcszgl.do?method=lstdJcsz"/>	<!-- 绿色通道基础设置 -->
+	<action path="/rcsw_lstd_jcszgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.lstd.lstdjcsz.LstdJcszAction" 
+   			name="lstdJcszForm"         
+   			parameter="method">	
+   		<forward name="lstdJcsz" path="/xsgzgl/rcsw/lstd/lstdjcsz/lstdJcsz.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_lstd_lxwh" forward="/rcsw_lstd_lxwhgl.do?method=lstdlxwhManage"/>	<!-- 绿色通道类型维护 -->
+	<action path="/rcsw_lstd_lxwhgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.lstd.lstdlxwh.LstdlxwhAction" 
+   			name="lstdlxwhForm"   
+   			parameter="method">	
+   		<forward name="lstdlxwhManage" path="/xsgzgl/rcsw/lstd/lstdlxwh/lstdlxwhManage.jsp"></forward>
+   		<forward name="addLstdlx" path="/xsgzgl/rcsw/lstd/lstdlxwh/addLstdlx.jsp"></forward>
+   		<forward name="updateLstdlx" path="/xsgzgl/rcsw/lstd/lstdlxwh/updateLstdlx.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_lstd_sq" forward="/rcsw_lstd_sqgl.do?method=lstdsqManage"/>	<!-- 绿色通道申请 -->
+	<action path="/rcsw_lstd_sqgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.lstd.lstdsq.LstdsqAction" 
+   			name="lstdsqForm"   
+   			parameter="method">	
+   		<forward name="lstdsqManage" path="/xsgzgl/rcsw/lstd/lstdsq/lstdsqManage.jsp"></forward>
+   		<forward name="addLstdsq" path="/xsgzgl/rcsw/lstd/lstdsq/addLstdsq.jsp"></forward>
+   		<forward name="updateLstdsq" path="/xsgzgl/rcsw/lstd/lstdsq/updateLstdsq.jsp"></forward>
+   		<forward name="viewLstdsq" path="/xsgzgl/rcsw/lstd/lstdsq/viewLstdsq.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_lstd_sh" forward="/rcsw_lstd_shgl.do?method=lstdshManage"/>	<!-- 绿色通道审核 -->
+	<action path="/rcsw_lstd_shgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.lstd.lstdsh.LstdshAction" 
+   			name="lstdshForm"   
+   			parameter="method">	
+   		<forward name="lstdshManage" path="/xsgzgl/rcsw/lstd/lstdsh/lstdshManage.jsp"></forward>
+   		<forward name="lstdDgsh" path="/xsgzgl/rcsw/lstd/lstdsh/lstdDgsh.jsp"></forward>
+   		<forward name="viewLstdsh" path="/xsgzgl/rcsw/lstd/lstdsh/viewLstdsh.jsp"></forward>
+   		<forward name="lstdPlsh" path="/xsgzgl/rcsw/lstd/lstdsh/lstdPlsh.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_lstd_jg" forward="/rcsw_lstd_jggl.do?method=lstdjgManage"/>	<!-- 绿色通道结果 -->
+	<action path="/rcsw_lstd_jggl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.lstd.lstdjg.LstdjgAction" 
+   			name="lstdjgForm"   
+   			parameter="method">	
+   		<forward name="lstdjgManage" path="/xsgzgl/rcsw/lstd/lstdjg/lstdjgManage.jsp"></forward>
+   		<forward name="addLstdjg" path="/xsgzgl/rcsw/lstd/lstdjg/addLstdjg.jsp"></forward>
+   		<forward name="updateLstdjg" path="/xsgzgl/rcsw/lstd/lstdjg/updateLstdjg.jsp"></forward>
+   		<forward name="viewLstdjg" path="/xsgzgl/rcsw/lstd/lstdjg/viewLstdjg.jsp"></forward>
+   		<forward name="lingqLstdjg" path="/xsgzgl/rcsw/lstd/lstdjg/lingqLstdjg.jsp"></forward>
+	</action>
+	</action-mappings>
+</struts-config>

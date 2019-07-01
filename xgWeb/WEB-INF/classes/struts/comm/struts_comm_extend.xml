@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+    	<form-bean name="dataExtendForm" type="com.zfsoft.extend.action.form.ExtendActionForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/data_extend" 
+    			scope="request"
+    			type="com.zfsoft.extend.action.DataExtendAction" 
+    			name="dataExtendForm"
+    			parameter="method">	
+    		<forward name="stuinfo" path="/xsgzgl/comm/bdpz/viewStudent.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>

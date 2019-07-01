@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<!-- 部门代码维护 -->
+    	<form-bean name="jcsjBmdmwhForm" type="xsgzgl.jcsj.bmdmwh.BmdmwhForm" />
+		<!-- 专业代码维护 -->
+    	<form-bean name="jcsjZydmwhForm" type="xsgzgl.jcsj.zydmwh.ZydmwhForm" />
+		<!-- 班级代码维护 -->
+    	<form-bean name="jcsjBjdmwhForm" type="xsgzgl.jcsj.bjdmwh.BjdmwhForm" />
+		<!-- 学生信息维护 -->
+    	<form-bean name="jcsjXsxxwhForm" type="xsgzgl.jcsj.xsxxwh.XsxxwhForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/jcsj_bmdmwh_bmdmwh" 	forward="/jcsj_bmdmwh.do?method=bmdmwhManage"/>				<!-- 部门代码维护 -->
+		<action path="/jcsj_zydmwh_zydmwh" 	forward="/jcsj_zydmwh.do?method=zydmwhManage"/>				<!-- 专业代码维护 -->
+		<action path="/jcsj_bjdmwh_bjdmwh" 	forward="/jcsj_bjdmwh.do?method=bjdmwhManage"/>				<!-- 班级代码维护 -->
+		<action path="/jcsj_xsxxwh_xsxxwh" 	forward="/jcsj_xsxxwh.do?method=xsxxwhManage"/>				<!-- 学生信息维护 -->
+    	
+    	<!-- =====================================部门代码维护===================================================== -->	
+    	<action path="/jcsj_bmdmwh" 
+    			scope="request"
+    			type="xsgzgl.jcsj.bmdmwh.BmdmwhAction" 
+    			name="jcsjBmdmwhForm"
+    			parameter="method"
+    	>	
+    		<forward name="success" path="/xsgzgl/jcsj/bmdmwh/bmdmwhManage.jsp"/>
+		</action>
+    	
+    	<!-- =====================================专业代码维护===================================================== -->	
+    	<action path="/jcsj_zydmwh" 
+    			scope="request"
+    			type="xsgzgl.jcsj.zydmwh.ZydmwhAction" 
+    			name="jcsjZydmwhForm"
+    			parameter="method"
+    	>	
+    		<forward name="success" path="/xsgzgl/jcsj/zydmwh/zydmwhManage.jsp"/>
+		</action>
+    	
+    	<!-- =====================================班级代码维护===================================================== -->	
+    	<action path="/jcsj_bjdmwh" 
+    			scope="request"
+    			type="xsgzgl.jcsj.bjdmwh.BjdmwhAction" 
+    			name="jcsjBjdmwhForm"
+    			parameter="method"
+    	>	
+    		<forward name="success" path="/xsgzgl/jcsj/bjdmwh/bjdmwhManage.jsp"/>
+		</action>
+    	
+    	<!-- =====================================学生信息维护===================================================== -->	
+    	<action path="/jcsj_xsxxwh" 
+    			scope="request"
+    			type="xsgzgl.jcsj.xsxxwh.XsxxwhAction" 
+    			name="jcsjXsxxwhForm"
+    			parameter="method"
+    	>	
+    		<forward name="success" path="/xsgzgl/jcsj/xsxxwh/xsxxwhManage.jsp"/>
+		</action>
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="main"/>
+	<classpathentry kind="src" path="resource"/>
+	<classpathentry kind="src" path="plugin"/>
+	<classpathentry exported="true" kind="con" path="com.genuitec.eclipse.j2eedt.core.J2EE14_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="xgWeb/ScriptX/maxipt.zip">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="xgWeb/ScriptX/SXdocs.zip">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/Ice.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/XmlSchema-1.4.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/avalon-framework-4.2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/axis-ant.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/axis.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/barcode4j.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/c3p0-0.9.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/c3p0-oracle-thin-extras-0.9.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/casclient.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/commons-beanutils.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/commons-collections.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/commons-digester.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/commons-discovery-0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/commons-httpclient-3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/commons-lang-2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/commons-logging-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/des2.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/dom4j.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/dsn.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/dwr.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/easybar.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/ezmorph-1.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/iTextAsian.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/idstar.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/imap.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/itext-1.4.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jakarta-regexp-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jaxb-api-2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jaxb-impl-2.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jaxb-xjc-2.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jaxen-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jaxrpc.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jaxws-api-2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jdom.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/json-lib-1.1-jdk13.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/junit-4.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jxl.jar" sourcepath="D:/j2ee/excel源码"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/log4j-1.2.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/ojdbc14.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/org.mortbay.jetty-5.1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/pop3.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/saaj-api-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/saaj-impl-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/servlet.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/smtp.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/spring-1.2.6.jar" sourcepath="F:/source/spring-core-3.0.5.RELEASE-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/stax-api-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/struts.jar" sourcepath="F:/source/struts1.2"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/thauthall.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/webservice.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/wsdl4j-1.5.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/wstx-asl-2.9.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/xbean-spring-2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/xfire-all-1.2.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/xfire-jsr181-api-1.0-M1.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/zfcaclient.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jakarta-oro.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/zf.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jcommon-1.0.16.jar" sourcepath="D:/j2ee/jcommon-1.0.16"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/jfreechart-1.0.13.jar" sourcepath="D:/j2ee/jfreechart-1.0.13"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/activation-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/mail-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/ant-1.6.5.jar" sourcepath="F:/source/ant-1.6.5/"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/rt.jar" sourcepath="D:/Program Files/Java/jdk1.6.0_03/src.zip"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/commons-fileupload-1.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/imageinfo-1.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/java-core-2.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/pinyin4j-2.5.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/slf4j-api-1.5.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/slf4j-simple-1.5.8.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="xgWeb/WEB-INF/lib/freemarker.jar" sourcepath="E:/技术文档/freemarker/freemarker-2.3.19/src"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/bcprov-jdk15on-1.47.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/cas-client-core-3.2.1.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/cglib-2.2.2.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/curvesapi-1.03.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/encoder-1.2.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/encoder-jsp-1.2.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/ly-uap.3.2.0.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/neusoft-cas-1.1.1.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/poi-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/poi-examples-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/poi-excelant-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/poi-ooxml-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/poi-ooxml-schemas-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/poi-scratchpad-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/UserAgentUtils-1.13.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/zftal-license-1.0.1.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/casclient_jdk15.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/combanc-client_v1.0.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/combanc-client-core_v1.0.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/kingstar-sso-client-session-1.0.0-jdk1.6.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="lib" path="xgWeb/WEB-INF/lib/p3p-jdk1.6.jar"/>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.generic_1.4">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.struts_1.1">
+		<attributes>
+			<attribute name="owner.project.facets" value="web.struts"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="xgWeb/WEB-INF/classes"/>
+</classpath>

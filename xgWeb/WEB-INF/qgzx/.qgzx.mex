@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/gzdx_qgzx_lsgw_fp.do" location="48,0" dimension="154,60" />
+  <StrutsActivity path="/gzdx_qgzx_lsgw_jg.do" location="302,0" dimension="154,60" />
+  <StrutsActivity path="/gzdxQgzx.do" location="142,160" dimension="220,84" />
+  <StrutsActivity path="/qgzx/gzdx/lsgwfpManage.jsp" location="0,344" dimension="202,48" />
+  <StrutsActivity path="/qgzx/gzdx/lsgwjgManage.jsp" location="302,344" dimension="202,48" />
+  <StrutsTransition id="/gzdxQgzx.do,lsgwfpManage,/qgzx/gzdx/lsgwfpManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="197,244" />
+      <AbsolutePoint location="197,294" />
+      <AbsolutePoint location="101,294" />
+      <AbsolutePoint location="101,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gzdx_qgzx_lsgw_jg.do,null,/gzdxQgzx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="379,60" />
+      <AbsolutePoint location="379,110" />
+      <AbsolutePoint location="307,110" />
+      <AbsolutePoint location="307,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gzdxQgzx.do,lsgwjgManage,/qgzx/gzdx/lsgwjgManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="307,244" />
+      <AbsolutePoint location="307,294" />
+      <AbsolutePoint location="403,294" />
+      <AbsolutePoint location="403,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gzdx_qgzx_lsgw_fp.do,null,/gzdxQgzx.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="125,60" />
+      <AbsolutePoint location="125,110" />
+      <AbsolutePoint location="197,110" />
+      <AbsolutePoint location="197,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

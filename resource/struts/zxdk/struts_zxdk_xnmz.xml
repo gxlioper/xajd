@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="zxdkForm" type="xgxt.zxdk.xnmz.ZxdkForm">
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>	
+		<action name="zxdkForm" 
+				parameter="method" 
+				path="/zxdk_xnmz"
+				scope="request"	
+				type="xgxt.zxdk.xnmz.ZxdkAction">
+			<forward name="zxdkSq" path="/zxdk/xnmz/zxdkSq.jsp" />
+			<forward name="zxdkshManage" path="/zxdk/xnmz/zxdkshManage.jsp" />
+			<forward name="zxdkcxManage" path="/zxdk/xnmz/zxdkcxManage.jsp" />
+			<forward name="zxdkOne" path="/zxdk/xnmz/zxdkOne.jsp" />
+			<forward name="zxdkSz" path="/zxdk/xnmz/zxdkSz.jsp" />
+			<forward name="zxdkShlcgz" path="/zxdk/xnmz/zxdkShlcgz.jsp" />
+			<forward name="zxdkDgsh" path="/zxdk/xnmz/zxdkDgsh.jsp" />
+			<forward name="zhgjzxdk" path="/zxdk/xnmz/zhgjzxdk.jsp" />	
+			<forward name="zyjzdx" path="/zxdk/xnmz/zymzdx.jsp"/>
+			<forward name="gjzxdkxsxx" path="/zxdk/xnmz/gjzxdkxsxx.jsp" />	
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

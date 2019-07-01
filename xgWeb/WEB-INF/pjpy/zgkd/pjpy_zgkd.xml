@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyZgkdZhszcpActionForm" type="xgxt.pjpy.zgkd.PjpyZgkdZhszcpActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpyzgkdwh"
+				type="xgxt.pjpy.zgkd.PjpyZgkdZhszcpAction"
+				name="pjpyZgkdZhszcpActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="zhszcpdefault"       path="/pjpy/zgkd/default.jsp" />
+			<forward name="szcpadd"             path="/pjpy/zgkd/szadd.jsp"/>
+			<forward name="szcpview"            path="/pjpy/zgkd/szview.jsp"/>
+			<forward name="szcphz"              path="/pjpy/zgkd/szhz.jsp"/>
+			<forward name="szcpinfo"            path="/pjpy/zgkd/szinfo.jsp"/>
+			<forward name="pmszpage"            path="/pjpy/zgkd/pmszpage.jsp"/>
+</action>
+
+	</action-mappings>
+
+</struts-config>

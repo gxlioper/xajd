@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/wjcfgdbywh.do" location="350,50" dimension="220,84" />
+  <StrutsActivity path="/wjcf/gdby/wjcfshdefault.jsp" location="650,50" dimension="208,48" />
+  <StrutsActivity path="/wjcf/csmz/wjcf_cxmz_cxcfshdefault.jsp" location="0,184" dimension="268,48" />
+  <StrutsActivity path="" location="950,50" dimension="40,48" />
+  <StrutsActivity path="/wjcf/gdby/wjcfshview.jsp" />
+  <StrutsTransition id="/wjcfgdbywh.do,,,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="570,113" />
+      <AbsolutePoint location="970,113" />
+      <AbsolutePoint location="970,98" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfgdbywh.do,wjcfshview,/wjcf/gdby/wjcfshview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="460,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfgdbywh.do,wjcfshdefault,/wjcf/gdby/wjcfshdefault.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="570,83" />
+      <AbsolutePoint location="650,83" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

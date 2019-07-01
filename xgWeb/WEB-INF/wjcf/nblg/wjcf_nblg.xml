@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfNblgActionForm" type="xgxt.wjcf.nblg.WjcfNblgActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/wjcfnblgwh"
+				type="xgxt.wjcf.nblg.WjcfNbzyAction"
+				name="wjcfNblgActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="cfprint"     path="/wjcf/nblg/cfbprint.jsp"/>
+			<forward name="cxprint"     path="/wjcf/nblg/cxprint.jsp"/>
+			<forward name="wyhjdpage"   path="/wjcf/nblg/wyhjdpage.jsp"/>
+			<forward name="cfjdpage"    path="/wjcf/nblg/cfjdpage.jsp"/>
+			<forward name="cfprint2"    path="/wjcf/nblg/cfbprint2.jsp"></forward>
+			<forward name="cdty_jccfdjb"    path="/wjcf/nblg/cdty_jccfdjb.jsp"></forward>
+			<forward name="zjcmcfbprint" path="/wjcf/zjcm/cfbprint.jsp"></forward>
+			<forward name="gzdxCfPrint" path="/wjcf/guizhdx/gzdxCfPrint.jsp"></forward>
+			<forward name="gzdxCfjcPrint" path="/wjcf/guizhdx/gzdxCfjcPrint.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="wjcfjgsdx" parameter="xgxt.wjcf.jgsdx.wjcfjgsdx" />
+
+</struts-config>

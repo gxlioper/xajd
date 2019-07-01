@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+    	<form-bean name="dataDetectForm" type="xgxt.comm.sjjc.DataDetectForm" />
+		
+	</form-beans>
+
+	<action-mappings>
+		<action path="/dataDetect"
+				name="dataDetectForm"
+				parameter="method"
+				scope="request"
+				type="xgxt.comm.sjjc.DataDetectAction">
+			<forward name="detectManage" path="/sjjc/dataDetect.jsp"/>
+			<forward name="disposeManage" path="/sjjc/disposeManage.jsp"/>
+			
+		</action>
+	</action-mappings>
+	
+</struts-config>

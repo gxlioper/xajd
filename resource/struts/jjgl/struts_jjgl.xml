@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    	<form-bean name="jjzgForm" type="com.zfsoft.xgxt.jjgl.jjzg.JjzgForm" />
+    	<form-bean name="jjxqForm" type="com.zfsoft.xgxt.jjgl.jjxq.JjxqForm" />
+    	<form-bean name="jjglCsszForm" type="com.zfsoft.xgxt.jjgl.cssz.CsszForm" />
+    	
+    	<form-bean name="jjglJJxkForm" type="com.zfsoft.xgxt.jjgl.jjxk.JjxkForm" />
+    	<form-bean name="jjglJJnjForm" type="com.zfsoft.xgxt.jjgl.jjnj.JjnjForm" />
+    	<form-bean name="jjglSfbzForm" type="com.zfsoft.xgxt.jjgl.cssz.dmwh.SfbzForm" />
+    	<form-bean name="jjglFbzgForm" type="com.zfsoft.xgxt.jjgl.cssz.dmwh.FbzgForm" />
+    	<form-bean name="jjglXqshForm" type="com.zfsoft.xgxt.jjgl.xqsh.XqshForm" />
+    	<form-bean name="jjglXqwhForm" type="com.zfsoft.xgxt.jjgl.xqwh.XqwhForm" />
+    	<form-bean name="jjglZcyhForm" type="com.zfsoft.xgxt.jjgl.zcyh.ZcyhForm" />
+		<form-bean name="jjglJJscForm" type="com.zfsoft.xgxt.jjgl.jjsc.JjscForm" />
+    	
+    	
+    	<!-- 网站数据管理 -->
+    	<form-bean name="jjglTzggForm" type="com.zfsoft.xgxt.jjgl.wzsj.TzggForm" />
+    	<form-bean name="jjglJJalForm" type="com.zfsoft.xgxt.jjgl.wzsj.JJalForm" />
+    	<form-bean name="jjglJJgzForm" type="com.zfsoft.xgxt.jjgl.wzsj.JJgzForm" />
+    	<!-- 网站数据管理   -->
+
+
+		<!-- 西安交大：begin -->
+
+		<!-- 家教老师管理 -->
+		<form-bean name="jjlsjgForm" type="com.zfsoft.xgxt.jjgl.jjlsjg.JjlsjgForm" />
+
+		<!-- 西安交大：end -->
+	</form-beans>
+
+	<action-mappings>
+  
+	    <action path="/xsjj_zgsq" 	forward="/jjgl_jjzg.do?method=zgsq"/>		
+	    <action path="/xsjj_jjsc" 	forward="/jjgl_jjxq.do?method=jjsc"/>		
+	    <action path="/xsjj_wdjj" 	forward="/jjgl_jjxq.do?method=wdjjList"/>		
+	    <action path="/jjgl_jjczsh" 	forward="/jjgl_jjxq.do?method=jjczshList"/>
+
+	    
+	    <action path="/jjgl_jcsz" 	forward="/jjgl_cssz.do?method=cssz"/>		
+	    <action path="/jjxt_dmwh"   forward="/jjgl_cssz.do?method=dmwh"></action>
+	    <action path="/xsjj_zgsh" 	forward="/jjgl_jjzg.do?method=zgsh"/>	
+	    <action path="/jjgl_xqsh" 	forward="/jjgl_xqshgl.do?method=xqshCx"/>	
+	    <action path="/jjgl_xqwh" 	forward="/jjgl_xqwhgl.do?method=xqwhCx"/>		
+	    <action path="/jjgl_zcyh" 	forward="/jjgl_zcyhgl.do?method=zcyhCx"/>
+		<action path="/jjgl_jjsccx" forward="/jjgl_jjsc.do?method=jjscCx"/>
+	    
+	    <!-- 网站数据管理 -->
+	    <action path="/jjgl_tzgg" forward="/jjgl_tzgggl.do?method=tzggCx"/>
+	    <action path="/jjgl_jjal" forward="/jjgl_jjalgl.do?method=jjalCx"/> 
+	    <action path="/jjgl_jjgz" forward="/jjgl_jjgzgl.do?method=jjgzCx"/>
+	    <!-- 网站数据管理 -->
+	    
+	    
+		<action path="/jjgl_jjzg" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.jjgl.jjzg.JjzgAction" 
+    			name="jjzgForm"
+    			parameter="method">	
+    			
+    		<forward name="zgsq" path="/xsgzgl/jjgl/jjzg/zgsq.jsp"></forward>
+    		<forward name="zgsqView" path="/xsgzgl/jjgl/jjzg/zgsqView.jsp"></forward>
+    		<forward name="grzl" path="/xsgzgl/jjgl/jjzg/grzl.jsp"></forward>
+    		<forward name="zgsh" path="/xsgzgl/jjgl/jjzg/zgsh.jsp"></forward>
+    		<forward name="jjzgDgsh" path="/xsgzgl/jjgl/jjzg/jjzgDgsh.jsp"></forward>
+    		<forward name="jjzgView" path="/xsgzgl/jjgl/jjzg/jjzgView.jsp"></forward>
+		</action>
+		
+		<action path="/jjgl_jjxq" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.jjgl.jjxq.JjxqAction" 
+    			name="jjxqForm"
+    			parameter="method">	
+    			
+    		<forward name="jjsc" path="/xsgzgl/jjgl/jjxq/jjsc.jsp"></forward>
+    		<forward name="wdjjList" path="/xsgzgl/jjgl/jjxq/wdjjList.jsp"></forward>
+    		<forward name="jsjj" path="/xsgzgl/jjgl/jjxq/jsjj.jsp"></forward>
+    		<forward name="cksq" path="/xsgzgl/jjgl/jjxq/cksq.jsp"></forward>
+    		<forward name="jjczshList" path="/xsgzgl/jjgl/jjxq/jjczshList.jsp"></forward>
+    		<forward name="jjczsh" path="/xsgzgl/jjgl/jjxq/jjczsh.jsp"></forward>
+    		<forward name="jjaqxys" path="/xsgzgl/jjgl/jjxq/jjaqxys.jsp"></forward>
+    		<forward name="xsjjsq" path="/xsgzgl/jjgl/jjxq/xsjjsq.jsp"></forward>
+			<forward name="jjpj" path="/xsgzgl/jjgl/jjxq/jjpj.jsp"></forward>
+			<forward name="jjgswh" path="/xsgzgl/jjgl/jjxq/jjgswh.jsp"></forward>
+		</action>
+		
+		<action path="/jjgl_cssz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.jjgl.cssz.CsszAction" 
+    			name="jjglCsszForm"
+    			parameter="method">	
+    			
+    		<forward name="cssz" path="/xsgzgl/jjgl/cssz/cssz.jsp"></forward>
+    		<forward name="dmwh" path="/xsgzgl/jjgl/cssz/dmwh.jsp"></forward>
+    		<forward name="add_jjnj" path="/xsgzgl/jjgl/cssz/add_jjnj.jsp"></forward>
+    		<forward name="add_jjxk" path="/xsgzgl/jjgl/cssz/add_jjxk.jsp"></forward>
+    		<forward name="add_sfbz" path="/xsgzgl/jjgl/cssz/add_sfbz.jsp"></forward>
+    		<forward name="add_fbzg" path="/xsgzgl/jjgl/cssz/add_fbzg.jsp"></forward>
+    		<forward name="update_jjnj" path="/xsgzgl/jjgl/cssz/update_jjnj.jsp"></forward>
+    		<forward name="update_jjxk" path="/xsgzgl/jjgl/cssz/update_jjxk.jsp"></forward>
+    		<forward name="update_sfbz" path="/xsgzgl/jjgl/cssz/update_sfbz.jsp"></forward>
+    		<forward name="update_fbzg" path="/xsgzgl/jjgl/cssz/update_fbzg.jsp"></forward>
+		</action>
+
+		<action path="/jjgl_jjsc"
+				scope="request"
+				type="com.zfsoft.xgxt.jjgl.jjsc.JjscAction"
+				name="jjglJJscForm"
+				parameter="method">
+			<forward name="jjscCx" path="/xsgzgl/jjgl/jjsc/jjscCx.jsp"></forward>
+			<forward name="jjscCk" path="/xsgzgl/jjgl/jjsc/jjscCk.jsp"></forward>
+		</action>
+		
+		<action path="/jjgl_jjxk" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.jjgl.jjxk.JjxkAction" 
+    			name="jjglJJxkForm"
+    			parameter="method">
+		</action>
+		
+		<action path="/jjgl_jjnj" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.jjgl.jjnj.JjnjAction" 
+    			name="jjglJJnjForm"
+    			parameter="method">	
+		</action>
+		
+		<action path="/jjgl_sfbz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.jjgl.cssz.dmwh.SfbzAction" 
+    			name="jjglSfbzForm"
+    			parameter="method">	
+		</action>
+		
+		<action path="/jjgl_fbzg" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.jjgl.cssz.dmwh.FbzgAction" 
+    			name="jjglFbzgForm"
+    			parameter="method">	
+		</action>
+		
+		<action path="/jjgl_xqshgl"
+				scope="request"
+				type="com.zfsoft.xgxt.jjgl.xqsh.XqshAction"
+				parameter="method"
+				name="jjglXqshForm">
+			<forward name="xqshCx" path="/xsgzgl/jjgl/xqsh/xqshCx.jsp"></forward>
+			<forward name="xqDgsh" path="/xsgzgl/jjgl/xqsh/xqDgsh.jsp"></forward>
+			<forward name="xqDgsh2th" path="/xsgzgl/jjgl/xqsh/xqDgsh2th.jsp"></forward>
+			<forward name="xqshxg" path="/xsgzgl/jjgl/xqsh/xqshxg.jsp"></forward>
+			<forward name="xqshck" path="/xsgzgl/jjgl/xqsh/xqshck.jsp"></forward>
+		</action>
+		
+		<action path="/jjgl_xqwhgl"
+				scope="request"
+				type="com.zfsoft.xgxt.jjgl.xqwh.XqwhAction"
+				parameter="method"
+				name="jjglXqwhForm">
+			<forward name="xqwhCx" path="/xsgzgl/jjgl/xqwh/xqwhCx.jsp"></forward>
+			<forward name="assign" path="/xsgzgl/jjgl/xqwh/assign.jsp"></forward>
+			<forward name="assignManual" path="/xsgzgl/jjgl/xqwh/assignManual.jsp"></forward>
+			<forward name="ck" path="/xsgzgl/jjgl/xqwh/ck.jsp"></forward>
+			<forward name="xgzt" path="/xsgzgl/jjgl/xqwh/xgzt.jsp"></forward>
+			<forward name="tsfk" path="/xsgzgl/jjgl/xqwh/tsfk.jsp"></forward>
+			<forward name="ckpj" path="/xsgzgl/jjgl/xqwh/ckpj.jsp"></forward>
+			<forward name="xqwhAdd" path="/xsgzgl/jjgl/xqwh/xqwhAdd.jsp"></forward>
+			<forward name="xqwhEdit" path="/xsgzgl/jjgl/xqwh/xqwhEdit.jsp"></forward>
+			<forward name="showJzxxList" path="/xsgzgl/jjgl/xqwh/showJzxxList.jsp"></forward>
+		</action>
+		
+		<action path="/jjgl_zcyhgl"
+				scope="request"
+				type="com.zfsoft.xgxt.jjgl.zcyh.ZcyhAction"
+				parameter="method"
+				name="jjglZcyhForm">
+			<forward name="zcyhCx" path="/xsgzgl/jjgl/zcyh/zcyhCx.jsp"></forward>
+			<forward name="hmd" path="/xsgzgl/jjgl/zcyh/hmd.jsp"></forward>
+			<forward name="ck" path="/xsgzgl/jjgl/zcyh/ck.jsp"></forward>
+			<forward name="jzxxAdd" path="/xsgzgl/jjgl/zcyh/jzxxAdd.jsp"></forward>
+			<forward name="jzxxEdit" path="/xsgzgl/jjgl/zcyh/jzxxEdit.jsp"></forward>
+		</action>
+		
+		<action path="/jjgl_tzgggl"
+				scope="request"
+				type="com.zfsoft.xgxt.jjgl.wzsj.TzggAction"
+				parameter="method"
+				name="jjglTzggForm">
+			<forward name="tzggCx" path="/xsgzgl/jjgl/wzsj/tzggCx.jsp"></forward>
+			<forward name="tzggXz" path="/xsgzgl/jjgl/wzsj/tzggXz.jsp"></forward>
+			<forward name="tzggCk" path="/xsgzgl/jjgl/wzsj/tzggCk.jsp"></forward>
+			<forward name="tzggXg" path="/xsgzgl/jjgl/wzsj/tzggXg.jsp"></forward>
+		</action>
+		   
+		<action path="/jjgl_jjalgl"
+				scope="request"
+				type="com.zfsoft.xgxt.jjgl.wzsj.JJalAction"
+				parameter="method"
+				name="jjglJJalForm">
+			<forward name="jjalCx" path="/xsgzgl/jjgl/wzsj/jjalCx.jsp"></forward>
+			<forward name="jjalXz" path="/xsgzgl/jjgl/wzsj/jjalXz.jsp"></forward>
+			<forward name="jjalCk" path="/xsgzgl/jjgl/wzsj/jjalCk.jsp"></forward>
+			<forward name="jjalXg" path="/xsgzgl/jjgl/wzsj/jjalXg.jsp"></forward>
+		</action>
+		
+		<action path="/jjgl_jjgzgl"
+				scope="request"
+				type="com.zfsoft.xgxt.jjgl.wzsj.JJgzAction"
+				parameter="method"
+				name="jjglJJgzForm">
+			<forward name="jjgzCx" path="/xsgzgl/jjgl/wzsj/jjgzCx.jsp"></forward>
+			<forward name="jjgzXz" path="/xsgzgl/jjgl/wzsj/jjgzXz.jsp"></forward>
+			<forward name="jjgzCk" path="/xsgzgl/jjgl/wzsj/jjgzCk.jsp"></forward>
+			<forward name="jjgzXg" path="/xsgzgl/jjgl/wzsj/jjgzXg.jsp"></forward>
+		</action>
+
+		<!-- 西安交大：begin -->
+		<action path="/jjgl_jjlsjg" 	forward="/jjgl_jjlsjggl.do?method=jjlsjgList"/>
+		<action path="/jjgl_jjlsjggl"
+				scope="request"
+				type="com.zfsoft.xgxt.jjgl.jjlsjg.JjlsjgAction"
+				parameter="method"
+				name="jjlsjgForm">
+			<forward name="jjlsjgList" path="/xsgzgl/jjgl/jjlsjg/jjlsjgList.jsp"></forward>
+			<forward name="jjlsjgAdd" path="/xsgzgl/jjgl/jjlsjg/jjlsjgAdd.jsp"></forward>
+			<forward name="jjlsjgEdit" path="/xsgzgl/jjgl/jjlsjg/jjlsjgEdit.jsp"></forward>
+			<forward name="jjlsjgShow" path="/xsgzgl/jjgl/jjlsjg/jjlsjgShow.jsp"></forward>
+		</action>
+
+
+		<!-- 西安交大：end -->
+		
+		
+	</action-mappings>
+</struts-config>

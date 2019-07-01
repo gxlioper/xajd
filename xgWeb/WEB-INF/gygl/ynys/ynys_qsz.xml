@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    <form-bean name="ynysQszForm" type="xgxt.xsgygl.ynys.qsz.YnysQszForm" />
+		
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+    <action path="/ynysQsz" 
+    		name="ynysQszForm"
+    		type="xgxt.xsgygl.ynys.qsz.YnysQszAction" 
+    		scope="request"
+    		parameter="method"
+    		>
+    		<forward name="qszWh" path="/gygl/ynys/qsz/qszWh.jsp"/>
+    		<forward name="qscyXx" path="/gygl/ynys/qsz/qscyXx.jsp"/>
+   	</action>
+			
+	</action-mappings>
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources"/>
+</struts-config>

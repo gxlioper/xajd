@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="2.4"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_1485305535498">
+
+	<!-- 系统欢迎界面 -->
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 关闭不安全的HTTP方法   -->  
+    <security-constraint>  
+        <web-resource-collection>  
+	        <web-resource-name>任意名称</web-resource-name>  
+	        <url-pattern>/*</url-pattern>  
+	        <http-method>PUT</http-method>  
+	        <http-method>DELETE</http-method>  
+	        <http-method>HEAD</http-method>  
+	        <http-method>OPTIONS</http-method>  
+	        <http-method>TRACE</http-method>
+	        <http-method>PROPFIND</http-method>
+	        <http-method>COPY</http-method>
+	        <http-method>PATCH</http-method>
+	        <http-method>MOVE</http-method>
+	        <http-method>SEARCH</http-method>
+	        <http-method>MKCOL</http-method>
+	        <http-method>LOCK</http-method>
+	        <http-method>UNLOCK</http-method>
+	        <http-method>PROPPATCH</http-method>
+        </web-resource-collection>  
+        <auth-constraint></auth-constraint>  
+    </security-constraint>  
+    <login-config>  
+            <auth-method>BASIC</auth-method>  
+    </login-config>
+    <!-- 关闭不安全的HTTP方法   -->
+    
+	<!--编码过滤器 -->
+	<filter>
+		<filter-name>setEncoding</filter-name>
+		<filter-class>xgxt.base.FilterEncoding</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>GBK</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>setEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- zfca单点登录配置 start-->
+		<!--
+		 <servlet>
+	          <servlet-name>ZfssoLoginServlet</servlet-name>
+	          <servlet-class>com.zfsoft.zfca.tp.cas.client.zfsso.ZfssoLogin</servlet-class>
+			  <init-param>
+				<param-name>setsessionclass</param-name>
+				<param-value>xgxt.base.SsoSetSession</param-value>
+			  </init-param>
+	    </servlet>   
+	    <servlet-mapping>
+	          <servlet-name>ZfssoLoginServlet</servlet-name>
+	          <url-pattern>/zfssologin</url-pattern>
+	    </servlet-mapping>
+	    
+			<listener>
+			<listener-class>
+				com.zfsoft.zfca.tp.cas.client.logout.SingleSignOutHttpSessionListener
+			</listener-class>
+		</listener> 
+		<filter>
+			<filter-name>Zfca Single Sign Out Filter</filter-name>
+			<filter-class>
+				com.zfsoft.zfca.tp.cas.client.logout.SingleSignOutFilter
+			</filter-class>
+		</filter>
+		
+		<filter-mapping>
+			<filter-name>Zfca Single Sign Out Filter</filter-name>
+			<url-pattern>*.do</url-pattern>
+		</filter-mapping>
+			
+		<filter>
+			    <filter-name>ZFSSO Filter</filter-name>
+			    <filter-class>
+				    com.zfsoft.zfca.tp.cas.client.filter.ZFSSOFilter
+			    </filter-class> 			
+				<init-param>
+				<param-name>
+				    setsessionclass
+				</param-name>
+				<param-value>xgxt.base.SsoSetSession</param-value>
+				</init-param>				
+				<init-param>
+				<param-name>notCheckURLList</param-name>
+				<param-value>
+					/XsGyXxGl_portallet.do;
+					/pjpyPortallet.do;
+					/portallet_xszz_porKnsList.do;
+					/portallet_xszz_porKnsXx.do;
+					/zzxxPortallet.do;
+					/zxdkPortallet.do;
+					/szdw_Portallet.do;
+					/xscjffPortallet.do;
+					/stuportallet.do;
+					/queryNews.do;	
+				</param-value>
+				</init-param>
+			</filter> 
+			
+		<filter-mapping>
+			<filter-name>ZFSSO Filter</filter-name>
+			<url-pattern>/*</url-pattern>
+		</filter-mapping> 
+	-->
+	<!--单点登录配置结束--> 
+	<!-- 东软CAS认证 old -->
+	<!--<filter>
+		<filter-name>CAS Filter</filter-name>
+		<filter-class>com.neusoft.education.tp.sso.client.filter.DefaultCASFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS Filter</filter-name>
+		<url-pattern>/zfxg_casLogin.do</url-pattern>
+	</filter-mapping>
+	-->
+	<!-- 东软CAS认证 new -->
+	<!-- 该过滤器用于实现单点登出功能，可选设备。 -->
+	<!--
+	<filter>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>CASAuthenticationFilter</filter-name>
+		<filter-class>com.neusoft.cas.AuthenticationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CASAuthenticationFilter</filter-name>
+		<url-pattern>/zfxg_casLogin.do</url-pattern>
+	</filter-mapping>
+	-->
+	<!--该过滤器负责对Ticket的校验工作，必须启用它-->
+	<!--
+	<filter>
+		<filter-name>CASValidationFilter</filter-name>
+		<filter-class>com.neusoft.cas.Cas20ProxyReceivingTicketValidationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CASValidationFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	-->
+	<!--该过滤器负责实现HttpServletRequest恳求的包裹， 比如容许开辟者经由过程HttpServletRequest的getRemoteUser()办法获得SSO登录用户的登录名，可选设备。-->
+	<!--
+	<filter>
+		<filter-name>CASHttpServletRequestWrapperFilter</filter-name>
+		<filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CASHttpServletRequestWrapperFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	-->
+	
+	<!-- 东软CAS认证 end -->
+	
+	<!-- 数维CAS认证  begin--> 
+	<!-- <filter>
+		<filter-name>p3pFilter</filter-name>
+		<filter-class>com.p3p.filter.P3PFilter</filter-class>
+		<init-param>
+			<param-name>enableP3P</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>p3pFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+	
+	<!-- 单点登出过滤器 -->
+    <!-- <filter>
+        <filter-name>CAS Single Sign Out Filter</filter-name>
+        <filter-class>com.kingstar.sso.client.session.SingleSignOutFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CAS Single Sign Out Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>com.kingstar.sso.client.session.SingleSignOutHttpSessionListener</listener-class>
+    </listener> -->
+    <!-- 单点登出过滤器 -->
+    
+	<!-- 数维CAS认证  end--> 
+	
+	<!-- 金智统一身份认证  begin--> 
+	<!--
+	<context-param>
+		<param-name>casServerLogoutUrl</param-name>
+		<param-value>https://am.wisedu.com/authserver/logout</param-value>
+	</context-param>--> 
+	<!--单点退出配置 -->
+	<!--<listener>
+		<listener-class>edu.yale.its.tp.cas.client.SingleSignOutHttpSessionListener</listener-class>
+	</listener>
+	<filter>
+		<filter-name>CAS Filter</filter-name>
+		<filter-class>edu.yale.its.tp.cas.client.filter.CASFilter</filter-class>
+		<init-param>
+			<param-name>edu.yale.its.tp.cas.client.filter.loginUrl</param-name>
+			<param-value>https://am.wisedu.com/authserver/login</param-value>
+		</init-param>
+		<init-param>
+			<param-name>edu.yale.its.tp.cas.client.filter.validateUrl</param-name>
+			<param-value>https://am.wisedu.com/authserver/serviceValidate</param-value>
+		</init-param>
+		<init-param>
+			<param-name>edu.yale.its.tp.cas.client.filter.serverName</param-name>
+			<param-value>ssodemo.test.com:8980</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS Filter</filter-name>
+		<url-pattern>/zfxg_casLogin.do</url-pattern>
+	</filter-mapping>
+	 -->
+	<!-- 金智统一身份认证  end--> 
+	
+	<!-- 康邦统一身份认证  begin-->
+	<!--
+	<filter>  
+	  <filter-name>CAS Single Sign Out Filter</filter-name>  
+	      <filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class> 
+	</filter>  
+	<filter-mapping>  
+	   <filter-name>CAS Single Sign Out Filter</filter-name>  
+	   <url-pattern>/*</url-pattern>  
+	</filter-mapping>
+	 
+	<listener>        
+	<listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>  
+	</listener>
+	
+	<filter>
+		<filter-name>CAS Filter</filter-name>
+		<filter-class>edu.yale.its.tp.cas.client.filter.CASFilter</filter-class>
+		<init-param>
+			<param-name>edu.yale.its.tp.cas.client.filter.loginUrl</param-name>
+			<param-value>http://10.63.177.211/cas/login</param-value>
+		</init-param>
+		<init-param>
+			<param-name>edu.yale.its.tp.cas.client.filter.validateUrl</param-name>
+			<param-value>http://10.200.0.242/cas/proxyValidate</param-value>
+		</init-param>
+		<init-param>
+			<param-name>edu.yale.its.tp.cas.client.filter.serverName</param-name>
+			<param-value>10.200.0.242</param-value>
+		</init-param>
+		<init-param>
+			<param-name>edu.yale.its.tp.cas.client.filter.wrapRequest</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>com.combanc.cas.client.filter.intraNet.serverName</param-name>
+			<param-value>10.200.0.242</param-value>
+		</init-param>
+		<init-param>
+			<param-name>com.combanc.cas.client.filter.intraNet.segmentURL</param-name>
+			<param-value>127.0.0.1;192.168.;</param-value>
+		</init-param>
+	</filter>		
+	<filter-mapping>
+		<filter-name>CAS Filter</filter-name>
+		<url-pattern>/zfxg_casLogin.do</url-pattern>    
+	</filter-mapping>
+	 -->
+	<!-- 康邦统一身份认证  end--> 
+	
+	<!-- 康赛统一身份认证  begin-->
+	<!--
+	<filter>
+		<filter-name>SSO Single Sign Out Filter</filter-name>
+		<filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class> 
+	</filter> 
+	
+	<filter>
+		<filter-name>SSOFilter</filter-name>
+		<filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
+		<init-param>
+			<param-name>casServerLoginUrl</param-name>
+			<param-value>http://192.168.4.253:8080/sso/login</param-value>
+		</init-param>
+		<init-param>
+			<param-name>serverName</param-name>
+			<param-value>http://localhost:8088</param-value>
+		</init-param>
+		<init-param>
+			<param-name>renew</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<init-param>
+			<param-name>gateway</param-name>
+			<param-value>false</param-value>
+		</init-param>
+	</filter>
+	
+	<filter>
+		<filter-name>CAS Validation Filter</filter-name>
+		<filter-class>org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filter-class>
+		<init-param>
+			<param-name>casServerUrlPrefix</param-name>
+			<param-value>http://192.168.4.253:8080/sso</param-value>
+		</init-param>
+		<init-param>
+			<param-name>serverName</param-name>
+			<param-value>http://localhost:8088</param-value>
+		</init-param>
+		<init-param>
+	        <param-name>acceptAnyProxy</param-name>
+	        <param-value>true</param-value>
+	    </init-param> 
+		<init-param>
+			<param-name>proxyReceptorUrl</param-name>
+			<param-value>/proxyCallback</param-value>
+		</init-param>
+		<init-param>
+			<param-name>proxyCallbackUrl</param-name>
+			<param-value>http://localhost:8088/proxyCallback</param-value>
+		</init-param>
+
+	</filter>
+	
+	<filter>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>CAS Assertion Thread Local Filter</filter-name>
+		<filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>SSO Single Sign Out Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+	    <filter-name>CAS Validation Filter </filter-name>
+	    <url-pattern>/proxyCallback </url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SSOFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SSOFilter</filter-name>
+		<url-pattern>/zfxg_casLogin.do</url-pattern>
+	</filter-mapping>	
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Assertion Thread Local Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<listener>
+		<listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
+	</listener>
+	--> 
+	<!-- 康赛统一身份认证  end-->
+	<!-- 华三统一身份认证  begin-->
+	<!--
+	<filter>
+		<filter-name>SSO Single Sign Out Filter</filter-name>
+		<filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
+	</filter>
+		<filter-mapping>
+		<filter-name>SSO Single Sign Out Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>SSOFilter</filter-name>
+		<filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
+		<init-param>
+			<param-name>casServerLoginUrl</param-name>
+			<param-value>http://192.168.1.233:8088/cas/login</param-value>
+		</init-param>
+		<init-param>
+			<param-name>serverName</param-name>
+			<param-value>http://192.168.1.94:8080</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SSOFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SSOFilter</filter-name>
+		<url-pattern>/zfxg_casLogin.do</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>CAS Validation Filter</filter-name>
+		<filter-class>org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filter-class>
+		<init-param>
+			<param-name>casServerUrlPrefix</param-name>
+			<param-value>http://192.168.1.233:8088/cas</param-value>
+		</init-param>
+		<init-param>
+			<param-name>serverName</param-name>
+			<param-value>http://192.168.1.94:8080</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>CAS Assertion Thread Local Filter</filter-name>
+		<filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CAS Assertion Thread Local Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
+	</listener>
+	-->
+	<!-- 华三统一身份认证  end-->
+	<!-- 希尔统一身份认证 start-->
+	<!--  注释开关，需要使用单点登录时去掉该注释
+	<filter>  
+		<filter-name>CAS Filter</filter-name>  
+		<filter-class>edu.yale.its.tp.cas.client.filter.CASFilter</filter-class>  
+		<init-param>  
+		    <param-name>edu.yale.its.tp.cas.client.filter.loginUrl</param-name>  
+		    <param-value>https://sso.hzau.edu.cn:7002/cas/login</param-value>  
+		</init-param>  
+		<init-param>  
+		    <param-name>edu.yale.its.tp.cas.client.filter.validateUrl</param-name>  
+		    <param-value>https://sso.hzau.edu.cn:7002/cas/serviceValidate</param-value>  
+		</init-param>  
+		<init-param>  
+		    <param-name>edu.yale.its.tp.cas.client.filter.serverName</param-name>  
+		    <param-value>sso.hzau.edu.cn</param-value>  
+		</init-param>  
+    </filter>   
+	<filter-mapping>  
+		<filter-name>CAS Filter</filter-name>  
+		<url-pattern>/zfxg_casLogin.do</url-pattern>  
+	</filter-mapping>   
+	注释开关，需要使用单点登录时去掉该注释-->
+	<!-- 希尔统一身份认证 end -->
+	<!-- 浙大勤工助学自动提交-->
+	<!--<listener>
+		<listener-class>xsgzgl.qgzx.zjdx.cjff.TaskManager</listener-class>
+	</listener> -->
+
+	 <!-- 杭州师范一卡通预警自动-->
+	<!--<listener>
+		<listener-class> xgxt.action.yktyj.Task</listener-class>
+	</listener>-->
+
+	<!-- log4j监听器开启 -->
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.zfsoft.xgxt.hdgl.hdxx.HdListener</listener-class>
+	</listener>
+	<!-- log4j对应配置文件 -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:config/log4j.properties</param-value>
+	</context-param>
+	<!--系统授权监听	-->
+	<!--<listener>
+　　	<listener-class>com.zfsoft.license.integration.LicenseContextListener</listener-class>
+　　	</listener>
+	　　<context-param>
+　　		<param-name>license_check_period</param-name>
+　　		<param-value>1</param-value>
+　　	</context-param>
+	<context-param>
+		<param-name>_dev_license_thread_delay</param-name>
+		<param-value>0</param-value>
+	</context-param>
+	<context-param>
+		<param-name>_dev_license_thread_period</param-name>
+		<param-value>1</param-value>
+	</context-param>
+	<context-param>
+		<param-name>_dev_license_thread_timeunit</param-name>
+		<param-value>SECONDS</param-value>
+　　</context-param>
+		 系统名称实现类 
+	<context-param>
+			<param-name>product_name_provider</param-name>
+			<param-value>com.zfsoft.xgxt.base.filter.DefaultProductNameProvider</param-value>
+	</context-param>
+	
+ 
+ --><!-- 免单点过滤（自动单点）
+ 		<filter>
+		  	<filter-name>aotuSSOFilter</filter-name>
+			<filter-class>xgxt.base.AotuSSOFilter</filter-class>
+		</filter>
+		<filter-mapping>
+			<filter-name>aotuSSOFilter</filter-name>
+			<url-pattern>/pj_pjjg.do</url-pattern>
+		</filter-mapping>
+		<filter-mapping>
+			<filter-name>aotuSSOFilter</filter-name>
+			<url-pattern>/xszz_zzxmjg_cx.do</url-pattern>
+		</filter-mapping>
+	-->  
+
+	<!-- 保护webroot下的jsp文件 -->
+	<filter>
+		<filter-name>JspFilter</filter-name>
+		<filter-class>com.zfsoft.xgxt.base.filter.JspFilter</filter-class>
+		<init-param>
+			<param-name>excludedFiles</param-name>
+			<param-value>
+				login.jsp,prompt.jsp,prompt_browser.jsp,teaPage.jsp,stuPage.jsp,main1.jsp,sysExpiredForward.jsp,
+				stuMainBody.jsp,teaMainBody.jsp,teaPic.jsp,stuPic.jsp,
+				mainBody.jsp,yzm.jsp,test.jsp,sessionForward.jsp,sessionInfo.jsp,loginatz.jsp,jinzhi.jsp
+			</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>JspFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+
+	<!-- 检查用户登录访问 -->
+	<filter>
+		<filter-name>UserFilter</filter-name>
+		<filter-class>com.zfsoft.xgxt.base.filter.UserFilter</filter-class>
+		<init-param>
+			<param-name>loginUrl</param-name>
+			<param-value>/sessionForward.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>excludedUrls</param-name>
+			<param-value>
+				index.do,chkLogin.do,getPublicKey.do,chkLogout.do,
+				xhsfLogin.do,mmzhgl_mmzh.do,analyse.do,hnsfSSOLogin.do,
+				zfxg_casLogin.do,hljKjxySSOLogin.do,xsDaxxCx.do,queryXsDaxx.do,zfssologin.do,tyrzLogin.do,
+				thauthallSSOLogin.do
+			</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>UserFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<!-- XSS 拦截-->
+	<filter>
+		<filter-name>XSS</filter-name>
+		<filter-class>com.zfsoft.xgxt.base.filter.XSSFilter</filter-class>
+		<init-param>
+			<param-name>policyPath</param-name>
+		    	<param-value>classpath:zfsoft-antixss-policy.xml</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>XSS</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 软件授权过滤器 -->
+	<!--<filter>
+		<filter-name>SystemAuthFilter</filter-name>
+		<filter-class>com.zfsoft.xgxt.base.filter.SystemAuthFilter</filter-class>
+		<init-param>
+			<param-name>redirectUrl</param-name>
+			<param-value>/sysExpiredForward.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>invalUrl</param-name>
+			<param-value>/invalFileForward.jsp</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SystemAuthFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SystemAuthFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+
+	--><!-- 解决跨iframe session丢失问题 -->
+	<filter>
+		<filter-name>TransNameFilter</filter-name>
+		<filter-class>xgxt.base.TransNameFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>TransNameFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+<!-- 解决跨hostl漏洞问题 -->
+	<filter>
+		<filter-name>HostlFilter</filter-name>
+		<filter-class>xgxt.base.HostlFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>HostlFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 弱密码过滤器 -->
+	<filter>
+		<filter-name>simplePasswordFilter</filter-name>
+		<filter-class>xgxt.base.SimplePasswordFilter</filter-class>
+		<init-param>
+			<param-name>outPath</param-name>
+			<param-value>chkLogout.do,chgPass.do,xgMmQz.do</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>simplePasswordFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>simplePasswordFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	
+	<!--	 学生信息强制修改过滤器 -->
+	<filter>
+		<filter-name>XsxxQzxgFilter</filter-name>
+		<filter-class>xsgzgl.xsxx.general.xsxxgl.XsxxQzxgFilter</filter-class>
+
+		<init-param>
+			<param-name>redirectUrl</param-name>
+			<param-value>/xsxx_tygl_sqxgxsxx.do</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>XsxxQzxgFilter</filter-name>
+		<url-pattern>
+			*.jsp
+		</url-pattern>
+	</filter-mapping>
+	
+	<!-- struts配置文件 -->
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>
+				/WEB-INF/struts-config.xml,
+				/WEB-INF/fdyglstruts.xml,
+				/WEB-INF/stu-info.xml,
+				/WEB-INF/pjpy-config.xml,
+				/WEB-INF/sztz-struts-config.xml,
+				/WEB-INF/sxjy-struts-config.xml,
+				/WEB-INF/gygl-struts-config.xml,
+				/WEB-INF/wjcf-struts-config.xml,
+				/WEB-INF/wjsc-struts-config.xml,
+				/WEB-INF/qgzx-config.xml,
+				/WEB-INF/pjpy/pjpy_xnmz.xml,
+				/WEB-INF/pjpy/pjpy_hzy.xml,
+				/WEB-INF/pjpy/pjpy_dispatch.xml,
+				/WEB-INF/qtsj/qtsj.xml,
+				/WEB-INF/gygl/gygl.xml,
+				/WEB-INF/shhd/shhd-struts-config.xml,
+				/WEB-INF/qgzx/qgzx_xbemy.xml,
+				/WEB-INF/pjpy/pjpy_xbemy_dispatch.xml,
+				/WEB-INF/pjpy/pjpy_xbemy.xml,
+				/WEB-INF/wjcf/shgc/wjcf_shgc_dispatch.xml,
+				/WEB-INF/wjcf/shgc/wjcf_shgc.xml, 
+				/WEB-INF/qgzx/qgzx_bjlh.xml,
+				/WEB-INF/xsxx/xsxx_zzdx.xml,
+				/WEB-INF/xsxx/xsxx_ynys.xml,
+				/WEB-INF/xsxx/xsxx_csmzzyjsxy.xml,
+				/WEB-INF/xsxx/xsxx_zgkd.xml,
+				/WEB-INF/xsxx/xsxx_zgdzdx.xml,
+				/WEB-INF/xsxx/xsxx_ahjg.xml,
+				/WEB-INF/pjpy/pjpy_cqkjxy_dispatch.xml,
+				/WEB-INF/pjpy/pjpy_cqkjxy.xml,
+				/WEB-INF/wjcf/szzy/wjcf_szzy_dispatch.xml,
+				/WEB-INF/wjcf/szzy/wjcf_szzy.xml,
+				/WEB-INF/pjpy/pjpy_njtdzyjsxy.xml,
+				/WEB-INF/pjpy/pjpy_ahjg_dispatch.xml,
+				/WEB-INF/pjpy/pjpy_ahjg.xml,
+				/WEB-INF/wjcf/csmz/wjcf_csmz_dispatch.xml,
+				/WEB-INF/wjcf/csmz/wjcf_csmz.xml,				
+				/WEB-INF/xszz/xszz_csmz.xml,
+				/WEB-INF/gygl/gygl_csmz.xml,
+				/WEB-INF/pjpy/pjpy_csmz_dispatch.xml,
+				/WEB-INF/pjpy/pjpy_csmz.xml,
+				/WEB-INF/wjcf/jgsdx/wjcf_jgsdx_dispatch.xml,
+				/WEB-INF/wjcf/jgsdx/wjcf_jgsdx.xml,
+				/WEB-INF/pjpy/jgsdx/pjpy_jgsdx_dispatch.xml,
+				/WEB-INF/pjpy/jgsdx/pjpy_jgsdx.xml,
+				/WEB-INF/gygl/gygl_ahjzgyxy.xml,
+				/WEB-INF/xszz/xszz_hzzyjsxy.xml,
+				/WEB-INF/gygl/gygl_jgsdx.xml,
+				/WEB-INF/gygl/gygl_hngydx.xml,
+				/WEB-INF/pjpy/hbsf/pjpy_hbsf_dispatch.xml,
+				/WEB-INF/pjpy/hbsf/pjpy_hbsf.xml,
+				/WEB-INF/wjcf/gdby/wjcf_gdby_dispatch.xml,
+				/WEB-INF/wjcf/gdby/wjcf_gdby.xml,
+				/WEB-INF/xszz/xszz_common_new.xml,
+				/WEB-INF/xszz/xszz_zjjdzyjsxy.xml,
+				/WEB-INF/pjpy/zzdx/pjpy_zzdx_dispatch.xml,
+				/WEB-INF/pjpy/zzdx/pjpy_zzdx.xml,
+				/WEB-INF/pjpy/whlgdx/pjpy_whlgdx.xml,
+				/WEB-INF/import_data.xml,
+				/WEB-INF/pjpy/nblg/pjpy_nblg_dispatch.xml,
+				/WEB-INF/pjpy/nblg/pjpy_nblg.xml,
+				/WEB-INF/pjpy/zjjd/pjpy_zjjd_dispatch.xml,
+				/WEB-INF/pjpy/zjjd/pjpy_zjjd.xml,
+				/WEB-INF/gygl/gygl_zgdzdx.xml,
+				/WEB-INF/xszz/xszz_zgkydx.xml,
+				/WEB-INF/pjpy/hzzy/pjpy_hzzy_dispatch.xml,
+				/WEB-INF/pjpy/hzzy/pjpy_hzzy.xml,
+				/WEB-INF/xszz/xszz_whlgdx.xml,
+				/WEB-INF/xljk/whlgdx/xljk_xskhdxwh.xml,				
+				/WEB-INF/wjcf/hygxy/wjcf_hygxy_dispatch.xml,
+				/WEB-INF/wjcf/hygxy/wjcf_hygxy.xml,
+				/WEB-INF/qgzx/qgzx_zgdzdx.xml,
+				/WEB-INF/qgzx/hzzy/qgzx_hzzy_dispatch.xml,	
+				/WEB-INF/qgzx/hzzy/qgzx_hzzy.xml,
+				/WEB-INF/xszz/xszz_zgdzdx.xml,
+				/WEB-INF/pjpy/hygxy/pjpy_hygxy_dispatch.xml,
+				/WEB-INF/pjpy/hygxy/pjpy_hygxy.xml,
+				/WEB-INF/xszz/xszz_ynys.xml,				
+				/WEB-INF/pjpy/ynys/pjpy_ynys_dispatch.xml,
+				/WEB-INF/pjpy/ynys/pjpy_ynys.xml,
+				/WEB-INF/gygl/gygl_nblgxy.xml,
+				/WEB-INF/xljk/zgmsxy/xljk_zgmsxy.xml,
+				/WEB-INF/pjpy/shcbys/pjpy_shcbys_dispatch.xml,
+				/WEB-INF/pjpy/shcbys/pjpy_shcbys.xml,
+				/WEB-INF/gygl/gygl_zjgszyjsxy.xml,
+				/WEB-INF/pjpy/xnmz/pjpy_xnmz_dispatch.xml,
+				/WEB-INF/pjpy/xnmz/pjpy_xnmz.xml,
+				/WEB-INF/wjcf/hngy/wjcf_hngy_dispatch.xml,
+				/WEB-INF/wjcf/hngy/wjcf_hngy.xml,
+				/WEB-INF/pjpy/nbzy/pjpy_nbzy_dispatch.xml,
+				/WEB-INF/pjpy/nbzy/pjpy_nbzy.xml,
+				/WEB-INF/gygl/gygl_zjjjzyjsxy.xml,
+				/WEB-INF/pjpy/zgms/pjpy_zgms_dispatch.xml,
+				/WEB-INF/pjpy/zgms/pjpy_zgms.xml,
+				/WEB-INF/pjpy/zjjj/pjpy_zjjj_dispatch.xml,
+				/WEB-INF/pjpy/zjjj/pjpy_zjjj.xml,
+				/WEB-INF/xszz/xszz_zgmsxy.xml,
+				/WEB-INF/sztz/sztz_csmzzyjsxy.xml,
+				/WEB-INF/wjcf/hhgxy/wjcf_hhgxy_dispatch.xml,
+				/WEB-INF/wjcf/hhgxy/wjcf_hhgxy.xml,
+				/WEB-INF/xszz/xszz_nblg.xml,
+				/WEB-INF/wjcf/nblg/wjcf_nblg_dispatch.xml,
+				/WEB-INF/wjcf/nblg/wjcf_nblg.xml,
+				/WEB-INF/qgzx/qgzx_nblg.xml,
+				/WEB-INF/pjpy/zjcm/pjpy_zjcm_dispatch.xml,
+				/WEB-INF/pjpy/zjcm/pjpy_zjcm.xml,
+				/WEB-INF/pjpy/zjcm/pjpy_ty.xml,
+				/WEB-INF/pjpy/pjpy.xml,
+				/WEB-INF/szdw/szdw-struts-config.xml,
+				/WEB-INF/pjpy/zgkd/pjpy_zgkd_dispatch.xml,
+				/WEB-INF/pjpy/zgkd/pjpy_zgkd.xml,
+				/WEB-INF/pjpy/pjpy_shgc.xml,
+				/WEB-INF/pjpy/portallet/pjpy_portallet_dispatch.xml,
+				/WEB-INF/pjpy/portallet/pjpy_portallet.xml,
+				/WEB-INF/sztz/sztz_zgkydx.xml,
+				/WEB-INF/wjcf/zgkd/wjcf_zgkd.xml,
+				/WEB-INF/xszz/xszz_bjlhdx.xml,
+				/WEB-INF/sztz/sztz_bjlhdx.xml,
+				/WEB-INF/pjpy/hhgxy/pjpy_hhgxy.xml,
+				/WEB-INF/pjpy/scjz/pjpy_scjz.xml,
+				/WEB-INF/pjpy/whlghxxy/pjpy_whlghxxy.xml,
+				/WEB-INF/gygl/gygl_whlghxxy.xml,
+				/WEB-INF/pjpy/ycwsxy/pjpy_ycwsxy.xml,
+				/WEB-INF/xszz/xszz_ycwszyjsxy.xml,
+				/WEB-INF/xszz/xszz_shgc.xml,
+				/WEB-INF/pjpy/xcxy/pjpy_xcxy.xml,
+                /WEB-INF/xszz/xszz_nbzyjsxy.xml,
+				/WEB-INF/sztz/sztz_nbzyjsxy.xml,
+				/WEB-INF/pjpy/zjlg/pjpy_zjlg.xml,
+				/WEB-INF/jxgl/zgdd/jxgl_zgdd.xml,
+				/WEB-INF/shhd/zgdd/shgz_zgdd.xml,
+				/WEB-INF/dtjs/dtjs_zgdzdx.xml,
+				/WEB-INF/qgzx/zgdzdx/qgzx_hgsq_zgdzdx.xml,
+				/WEB-INF/qgzx/zgdzdx/qgzx_gwsq_zgdzdx.xml,				
+                /WEB-INF/xszz/xszz_xcxy.xml,
+				/WEB-INF/pjpy/szyqxy/pjpy_szyqxy.xml,
+				/WEB-INF/dtjs/dtjs_jhzyjsxy.xml,
+				/WEB-INF/pjpy/ycsfxy/pjpy_ycsfxy.xml,
+				/WEB-INF/jxgl/jhzy/jxgl_jhzy.xml,
+				/WEB-INF/xszz/xszz_jhzyjsxy.xml,
+				/WEB-INF/gygl/gygl_jhzyjsxy.xml,
+				/WEB-INF/gygl/gygl_bjlh.xml,
+				/WEB-INF/dtjs/dtjs_zjlg.xml,
+				/WEB-INF/dtjs/dtjs_sjxy.xml,
+				/WEB-INF/dtjs/dtjs_czxx.xml,
+				/WEB-INF/dtjs/dtjs_ty.xml,
+				/WEB-INF/dtjs/dtjs.xml,
+				/WEB-INF/xsxx/xsxx_zjlg.xml,
+				/WEB-INF/xszz/xszz_common_n05.xml,
+				/WEB-INF/wjcf/zjlg/wjcf_zjlg.xml,
+				/WEB-INF/xljk/xljk.xml,
+                /WEB-INF/wjcf/xmlg/wjcf_xmlg.xml,
+				/WEB-INF/gygl/gygl_zjcmxy.xml,
+				/WEB-INF/gygl/gygl_zjlgdx.xml,
+				/WEB-INF/szdw/xmlg/szdw_xmlg.xml,
+				/WEB-INF/pjpy/xmlg/pjpy_xmlg.xml,
+				/WEB-INF/shhd/zjlg-xsgbxx.xml,
+				/WEB-INF/rcsw/rcsw_zzlgdx.xml,
+				/WEB-INF/xszz/xszz_xmlgxy.xml,
+				/WEB-INF/xszz/xszz_zzlgdx.xml,
+				/WEB-INF/rcsw/rcsw_xmlg.xml,
+				/WEB-INF/wjcf/gzdx/wjcf_gzdx.xml,
+				/WEB-INF/pjpy/gzdx/pjpy_gzdx.xml,
+				/WEB-INF/xszz/xszz_gzdx.xml,
+				/WEB-INF/rcsw/rcsw_gzdx.xml,
+				/WEB-INF/gygl/gygl_czxxzy.xml,
+                /WEB-INF/rcsw/rcsw_jycxzm.xml,
+                /WEB-INF/wjcf/nbcs/wjcf_nbcs.xml,
+                /WEB-INF/pjpy/czxx/cssz/cssz.xml,
+                /WEB-INF/pjpy/czxx/dycj/dycj.xml,
+                /WEB-INF/pjpy/czxx/zycj/zycj.xml,
+                /WEB-INF/pjpy/czxx/tycj/tycj.xml,
+                /WEB-INF/wjcf/zjcm/wjcf_zjcm.xml,
+                /WEB-INF/jxgl/jxgl.xml,
+                /WEB-INF/jxgl/jxgl_ty.xml,
+                /WEB-INF/pjpy/zjcm/pjpy_cssz.xml,
+                /WEB-INF/pjpy/wxsz/pjpystruts.xml,
+                /WEB-INF/xljk/tyb/xljk_xlcyjg.xml,
+                /WEB-INF/pjpy/tyb/pjpy_pjzq.xml,
+                /WEB-INF/rcsw/rcsw.xml,
+                /WEB-INF/rcsw/rcsw_dispatch.xml,
+                /WEB-INF/gygl/gygl_dispatch.xml,
+                /WEB-INF/pjpy/czxx/jxj/jxj.xml,
+                /WEB-INF/pjpy/czxx/rych/rych.xml,
+                /WEB-INF/pjpy/zjlg/pjpy_zjlg_dycj.xml,
+                /WEB-INF/pjpy/zjlg/pjpy_zjlg_ylxfb.xml,
+				/WEB-INF/wjdc/wjdc.xml,
+				/WEB-INF/zzyrxmgl/zzyrxmgl/zzyrxmgl.xml,
+				
+				
+				/WEB-INF/classes/struts/sztz/struts_sztz.xml,
+				/WEB-INF/classes/struts/sztz/struts_sztz_ghxy.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_cwgl.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_gyfzr.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_gywh.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_jbsz.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_qsgl.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_tjfx.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_zsjg.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_ghxy.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_ntzd_wmss.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_jqfxgl.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_sspy.xml,
+				
+				/WEB-INF/classes/struts/jyugl/struts_jyugl.xml,
+				/WEB-INF/classes/struts/stgl/struts_stgl_cdty.xml,
+				/WEB-INF/classes/struts/stgl/struts_stgl_xsh.xml,
+				/WEB-INF/classes/struts/jygl/struts_jygl.xml,
+				/WEB-INF/classes/struts/jygl/struts_jygl_tables.xml,
+				/WEB-INF/classes/struts/jygl/struts_jygl_sxjy.xml,
+				/WEB-INF/classes/struts/jygl/struts_jygl_jyweb.xml,
+				/WEB-INF/classes/struts/jygl/struts_jygl_old.xml,
+				/WEB-INF/classes/struts/dtjs/struts_dtjs.xml,
+				/WEB-INF/classes/struts/dtjs/struts_dtjs_ntzy.xml,
+				/WEB-INF/classes/struts/dtjs/struts_dtjs_zjcm.xml,
+				/WEB-INF/classes/struts/dtjs/struts_dtjs_gdby.xml,
+				/WEB-INF/classes/struts/dtjs/struts_dtjs_tyxx.xml,
+				/WEB-INF/classes/struts/dtjs/struts_dtjs_dtxxgl.xml,
+				/WEB-INF/classes/struts/dtjs/struts_dtjs_dxbmgl.xml,
+				
+				/WEB-INF/classes/struts/kycxgl/struts_kycxgl_kycxxm.xml,
+				/WEB-INF/classes/struts/jyglnew/struts_jyglnew_jygl.xml,
+				
+				/WEB-INF/classes/struts/rcsw/struts_rcsw.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_cwsj.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_swgl.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_nthy.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_yrgf.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_jssp.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_ntzy.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_bjxh.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_gdby.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_kqgl.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_sybx.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_xxgl.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_old.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_rcxwwh.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_xszbb.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_hcyhkgl.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_jqlx.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_jqlx_cqsx.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_xsgzzb.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_dxsylbx.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_fyff.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_xskqgl.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_txhd.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_lstd.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_ylbx.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_zwzxkq.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_zxzx.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_cxda.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_hdkh.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_xshjgl.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_xqybgl.xml,				
+				/WEB-INF/classes/struts/zxdk/struts_zxdk_gzdx.xml,
+				/WEB-INF/classes/struts/zxdk/struts_zxdk_xnmz.xml,
+				/WEB-INF/classes/struts/zxdk/struts_zxdk.xml,
+				/WEB-INF/classes/struts/axcs/struts_axcs.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_sjgl.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_jqfxgl.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_xsgzqkbb.xml,
+				
+					
+				/WEB-INF/classes/struts/pjpy/struts_pjpy.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_new_zjdx.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_zhcp_bjlh.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_cdfz.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_szgyyq.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_xjbj_njjs.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_zhcp_jbsz.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_zhcp_pdbx.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_zhcp_sjdr.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_zhcp_zcjf.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_zhcp_zczf.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_dispatch.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_jbsz.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_pjlc.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_pjsz.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_pjsj.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_mdqr.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_zjkjxy.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_lsxy.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_ghxy.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_guizhdx.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_old.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_zyjgl.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_xwhj.xml,
+
+				/WEB-INF/classes/struts/bzjl/struts_bzjl.xml,
+
+				/WEB-INF/classes/struts/xljk/struts_xljk.xml,
+				/WEB-INF/classes/struts/xljk/struts_xljk_hzny.xml,
+				/WEB-INF/classes/struts/xljk/struts_xljk_old.xml,
+				/WEB-INF/classes/struts/xljk/struts_xljk_zjdx.xml,
+				/WEB-INF/classes/struts/xlzx/struts_xlzx.xml,
+				
+				/WEB-INF/classes/struts/szdw/struts_szdw_bjgm.xml,
+				/WEB-INF/classes/struts/szdw/struts_szdw_bjlh.xml,
+				/WEB-INF/classes/struts/szdw/struts_szdw.xml,
+				/WEB-INF/classes/struts/szdw/struts_szdw_ntzy.xml,
+				/WEB-INF/classes/struts/szdw/struts_szdw_xysf.xml,
+				/WEB-INF/classes/struts/szdw/struts_szdw_fdypx.xml,
+				/WEB-INF/classes/struts/szdw/struts_szdw_xsgbgl.xml,
+				/WEB-INF/classes/struts/szdw/struts_szdw_bjxwjl.xml,
+				
+				/WEB-INF/classes/struts/wjcf/struts_wjcf.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_shlc.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_sjjc.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_homepage.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_jhzy.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_jcsj.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_splc_v1.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_gwsz.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_zfoa.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_sysz.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_comm.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_old_other.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_mmzh.xml,
+				/WEB-INF/classes/struts/xtwh/struts_xtwh_wdyy.xml,
+				
+				/WEB-INF/classes/struts/qgzx/struts_qgzx.xml,
+				/WEB-INF/classes/struts/qgzx/struts_qgzx_gxls.xml,
+				/WEB-INF/classes/struts/qgzx/struts_qgzx_gwsqwh.xml,
+				/WEB-INF/classes/struts/qgzx/struts_qgzx_new_gwsqwh.xml,
+				/WEB-INF/classes/struts/qgzx/struts_qgzx_dispatch.xml,
+				/WEB-INF/classes/struts/qgzx/struts_qgzx_old.xml,
+				/WEB-INF/classes/struts/qgzx/struts_qgzx_jfcjgl.xml,
+				/WEB-INF/classes/struts/qgzx/struts_qgzx_mrgzkh.xml,
+				/WEB-INF/classes/struts/other/struts_xxhz_zjgyzy.xml,
+				/WEB-INF/classes/struts/jxgl/struts_jxgl.xml,
+				/WEB-INF/classes/struts/jxgl/struts_jxgl_cdty.xml,
+				/WEB-INF/classes/struts/jxgl/struts_jxgl_old.xml,
+				/WEB-INF/classes/struts/jxgl/struts_jxgl_jxbz.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_jhzy.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_whtl.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_zzxmtj.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_old.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_old_zzsf.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_old_xnmz.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_old_szxx.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_old_shnl.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_old_jsxx.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_old_hzzy.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_old_cqkj.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_old_bjlh.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_dispatch.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_knsrdnew.xml,
+				
+				/WEB-INF/classes/struts/rwgl/struts_rwgl.xml,
+				/WEB-INF/classes/struts/demo/struts_demo.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_new.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_qxxscx.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_hhgxy.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_tjcx.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_sjy.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_jbsz.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_pdk.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_jbxx.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_xjyd.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_xjyd_new.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_dagl.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_daxx.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_tdjs.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_newdagl.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_bysxxgl.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_dyxj.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_yrgl.xml,
+				/WEB-INF/classes/struts/xsxx/zyfwgl/struts_xsxx_zyfwgl.xml,
+				/WEB-INF/classes/struts/xsxx/xygl/struts_xygl.xml,
+				/WEB-INF/classes/struts/xsxx/fbgl/struts_fbgl.xml,
+				/WEB-INF/classes/struts/sztz/zyszpj/struts_zyszpj.xml,
+				/WEB-INF/classes/struts/gygl/struts_gypy.xml,
+				/WEB-INF/classes/struts/comm/struts_comm_bbdmpz.xml,
+				/WEB-INF/classes/struts/comm/struts_comm.xml,
+				/WEB-INF/classes/struts/comm/struts_comm_fileupload.xml,
+				/WEB-INF/classes/struts/comm/struts_comm_extend.xml,
+				
+				/WEB-INF/classes/struts/comm/struts_comm_procitylocal.xml,
+				 
+				/WEB-INF/classes/struts/browser/struts_browser.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_qjgl.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_zdzm.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_rwdj.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_cdgl.xml,
+				/WEB-INF/classes/struts/gygl/struts_gypy_ssyd.xml,
+				/WEB-INF/classes/struts/gygl/struts_gypy_wsjc.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_bxgl.xml,
+				/WEB-INF/classes/struts/xljkwzdx/struts_xljk_jcsz.xml,
+				/WEB-INF/classes/struts/xljkwzdx/struts_xljk_xljkzx.xml,
+				/WEB-INF/classes/struts/xsxx/struts_tsxsgl.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_jtpj.xml,
+				/WEB-INF/classes/struts/jjgl/struts_jjgl.xml,
+				/WEB-INF/classes/struts/szdw/struts_gzjl.xml,
+				/WEB-INF/classes/struts/ybgzz/struts_ybgzz.xml,
+				/WEB-INF/classes/struts/xszy/struts_xszy.xml,
+				/WEB-INF/classes/struts/sztz/struts_sztz_new.xml,
+				/WEB-INF/classes/struts/stgl/struts_stgl_new.xml,
+				/WEB-INF/classes/struts/khgl/struts_khgl.xml,
+				/WEB-INF/classes/struts/znxgl/struts_znxgl.xml,
+				/WEB-INF/classes/struts/zxdk/struts_zxdk_xnwxjkhk.xml,
+				/WEB-INF/classes/struts/zxdk/struts_zxdk_byshk.xml,
+				/WEB-INF/classes/struts/zxdk/struts_zxdk_whkxscx.xml,
+				/WEB-INF/classes/struts/zxdk/struts_zxdk_hzsfbyhkgl.xml,
+				/WEB-INF/classes/struts/xszz/struts_xszz_hjxf.xml,
+				/WEB-INF/classes/struts/zxdk/struts_zxdk_ypzl.xml,
+				/WEB-INF/classes/struts/zxdk/struts_zxdk_ysjxj.xml,
+				 
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_tsqktbgl.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_yxybgl.xml,
+				/WEB-INF/classes/struts/stgl/struts_stgl_ystgl.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_cpfwh.xml,
+				/WEB-INF/classes/struts/struts_config.xml,
+				/WEB-INF/classes/struts/zjcm/struts_zjcm_wsjc.xml,
+				/WEB-INF/classes/struts/szdw/struts_szdw_jtff.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_zzdgl.xml,
+				/WEB-INF/classes/struts/xsxx/struts_xsxx_cxdd.xml,
+				/WEB-INF/classes/struts/zjly/struts_zjly_ylbx.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_lkxxzsgl.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_ggwpjygl.xml,
+				/WEB-INF/classes/struts/zjly/struts_zjly_zhf.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_wsbz.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_xsxwkh.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_rcxwjgmark.xml,
+				/WEB-INF/classes/struts/dtjs/struts_dtjs_zzgxzc.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_gyccgl.xml,
+				/WEB-INF/classes/struts/gyjc/struts_gyjc_wpqs.xml,
+				/WEB-INF/classes/struts/szdw/struts_szdw_bfjs.xml,
+				/WEB-INF/classes/struts/jskp/struts_zjdx_jskp.xml,
+				/WEB-INF/classes/struts/dekt/struts_dekt_qnzyhd.xml,
+				/WEB-INF/classes/struts/gygl/struts_gygl_gypy.xml,
+				/WEB-INF/classes/struts/xlzx/struts_xlzx_new.xml,
+				/WEB-INF/classes/struts/rcsw/struts_rcsw_dwjl.xml,
+				/WEB-INF/classes/struts/dekt/struts_dekt_xianjd.xml,
+				/WEB-INF/classes/struts/hdgl/struts_hdgl_hdgl.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_xzhcp.xml,
+				/WEB-INF/classes/struts/pjpy/struts_pjpy_hjsq.xml,
+				/WEB-INF/classes/struts/xsxx/struts_rcpygl.xml,
+				/WEB-INF/classes/struts/twgl/struts_twgl.xml,
+				/WEB-INF/classes/struts/zxdk/struts_zxdk_xsdkqf.xml,
+				/WEB-INF/classes/struts/zhdj/struts_zhdj.xml,
+				/WEB-INF/classes/struts/sxzzjygl/struts_sxzzjygl.xml,
+				/WEB-INF/classes/struts/qgzx/struts_qgzx_dgxsk.xml,
+				/WEB-INF/classes/struts/dycjgl/struts_dycjgl.xml,
+				/WEB-INF/classes/struts/cxcy/strtus_cxcy.xml,
+				/WEB-INF/classes/struts/dtjs/struts_dtjs_rdjjfzpy.xml,
+				/WEB-INF/classes/struts/dtjs/struts_dtjs_shsjjl.xml,
+
+				/WEB-INF/classes/struts/xyfd/struts_xyfd_xyfd.xml
+        </param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 系统初始化servlet -->
+	<servlet>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>xgxt.base.InitServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<!-- dwr -->
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+	    <init-param >  
+	        <param-name>activeReverseAjaxEnabled</param-name>  
+	        <param-value>true</param-value>  
+	    </init-param>  
+	    <init-param>  
+	        <param-name>allowScriptTagRemoting</param-name >  
+	        <param-value>true</param-value>  
+	    </init-param>  
+	    <init-param>  
+	        <param-name>allowGetForSafariButMakeForgeryEasier</param-name>   
+	        <param-value>true</param-value>  
+	    </init-param>
+		<init-param>
+			<param-name>logLevel</param-name>
+			<param-value>warn</param-value>
+		</init-param>
+		<init-param>
+			<param-name>crossDomainSessionSecurity</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<init-param>
+			<param-name>url:/interface/</param-name>
+			<param-value>com.zfsoft.dwr.handler.ZFInterfaceHandler</param-value>
+		</init-param>
+		<init-param>
+			<param-name>interfaceHandlerUrl</param-name>
+			<param-value>/interface/</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- SOA servlet -->
+	<servlet>
+		<servlet-name>SOAPMonitorService</servlet-name>
+		<servlet-class>org.apache.axis.monitor.SOAPMonitorService</servlet-class>
+		<init-param>
+			<param-name>SOAPMonitorPort</param-name>
+			<param-value>5001</param-value>
+		</init-param>
+		<load-on-startup>100</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SOAPMonitorService</servlet-name>
+		<url-pattern>/SOAPMonitor</url-pattern>
+	</servlet-mapping>
+
+	<!-- 不知道搞毛用的servlet -->
+	<servlet>
+		<servlet-name>BarcodeServlet</servlet-name>
+		<servlet-class>xgxt.barcode4j.BarcodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BarcodeServlet</servlet-name>
+		<url-pattern>/BarcodeServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AxisServlet</servlet-name>
+		<servlet-class>org.apache.axis.transport.http.AxisServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>/servlet/AxisServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>*.jws</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>/services/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- office2007下载后变zip解决方案，加上如下代码段 -->
+	<mime-mapping>
+	  	<extension>docx</extension>
+	  	<mime-type>application/vnd.openxmlformats-officedocument.wordprocessingml.document</mime-type>
+	  </mime-mapping>
+	  <mime-mapping>
+	  	<extension>xlsx</extension>
+	  	<mime-type>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</mime-type>
+	  </mime-mapping>
+	  <mime-mapping>
+	 	 <extension>pptx</extension>
+  	  	<mime-type>application/vnd.openxmlformats-officedocument.presentationml.presentation</mime-type>
+  	</mime-mapping>
+	<mime-mapping>
+		<extension>.css</extension>
+		<mime-type>text/css</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>wsdl</extension>
+		<mime-type>text/xml</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xsd</extension>
+		<mime-type>text/xml</mime-type>
+	</mime-mapping>
+	
+	
+	<!-- jfreeChart支撑 -->
+	<servlet>
+		<servlet-name>DisplayChart</servlet-name>
+		<servlet-class>org.jfree.chart.servlet.DisplayChart</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisplayChart</servlet-name>
+		<url-pattern>/DisplayChart</url-pattern>
+	</servlet-mapping>
+
+	<!--编辑器开始 -->
+<!--	<servlet>-->
+<!--		<servlet-name>ConnectorServlet</servlet-name>-->
+<!--		<servlet-class>net.fckeditor.connector.ConnectorServlet</servlet-class>-->
+<!--		<load-on-startup>1</load-on-startup>-->
+<!--	</servlet>-->
+<!--	<servlet-mapping>-->
+<!--		<servlet-name>ConnectorServlet</servlet-name>-->
+<!--		<url-pattern>/fckeditor/editor/filemanager/connectors/*</url-pattern>-->
+<!--	</servlet-mapping>-->
+	<!--编辑器结束 -->
+	
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+	
+	<!--<error-page>
+	    <error-code>404</error-code>  
+	    <location>/login.jsp</location>  
+	</error-page>  
+	  
+	<error-page>
+	    <error-code>500</error-code>  
+	    <location>/login.jsp</location>  
+	</error-page>-->
+	
+	<jsp-config>
+		<taglib>
+			<taglib-uri>/tags/struts-bean</taglib-uri>
+			<taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/tags/struts-html</taglib-uri>
+			<taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/tags/struts-logic</taglib-uri>
+			<taglib-location>/WEB-INF/struts-logic.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/tags/struts-template</taglib-uri>
+			<taglib-location>/WEB-INF/struts-template.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+	
+</web-app>

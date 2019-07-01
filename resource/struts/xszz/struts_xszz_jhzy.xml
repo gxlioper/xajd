@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="xszzCsszActionForm" type="xsgzgl.xszz.jhzy.cssz.XszzCsszActionForm" />
+    	<form-bean name="xszzJtqkdzActionForm" type="xsgzgl.xszz.jhzy.jtqkdz.XszzJtqkdzActionForm" />
+    	<form-bean name="gjlzjxjForm" type="xsgzgl.xszz.jhzy.gjlzjxj.GjlzjxjForm" />
+    	
+    	<form-bean name="jhzyXszzKnsrdForm" type="xsgzgl.xszz.jhzy.knsrd.KnsrdForm" />
+    	<form-bean name="jhzyXszzGjzxjForm" type="xsgzgl.xszz.jhzy.gjzxj.GjzxjForm" />
+    	
+	</form-beans>
+
+	<action-mappings>
+  
+  		<action path="/xszz_jhzy_cssz" 			forward="/csszGl.do?method=cssz"/>		<!-- 参数设置页面 -->
+  		<action path="/xszz_jhzy_jtqkdz" 	    forward="/jtqkdzGl.do?method=cxJtqkdzxx"/>		<!-- 家庭情况调查查询 -->
+  		<action path="/xszz_jhzy_jtqkdzAjax" 	    forward="/jtqkdzGl.do?method=cxjtdzqkByAjax"/>		<!-- 家庭情况调查查询 -->
+  		<action path="/xszz_jhzy_zjJtqkdz" 	    forward="/jtqkdzGl.do?method=zjJtqkdz"/>		<!-- 增加家庭情况调查 -->
+  		<action path="/xszz_jhzy_xgJtqkdz" 	    forward="/jtqkdzGl.do?method=xgJtqkdz"/>		<!-- 修改家庭情况调查 -->
+  		<action path="/xszz_jhzy_scJtqkdz" 	    forward="/jtqkdzGl.do?method=scJtqkdz"/>		<!-- 删除家庭情况调查 -->
+  		<action path="/xszz_jhzy_ckJtqkdz" 	    forward="/jtqkdzGl.do?method=ckJtqkdz"/>		<!-- 查看家庭情况调查 -->
+  		<action path="/xszz_jhzy_ckXsjtknxx" 	    forward="/jtqkdzGl.do?method=ckXsjtknxx"/>		<!-- 查看学生家庭情况困难信息 -->
+  		
+  		
+  			<action path="/xszz_jhzy_knsrd_sq" 	    forward="/jhzy_knsrd.do?method=knssqSearch"/>		<!-- 困难生认定申请-->
+  		<action path="/xszz_jhzy_knsrd_sh" 	    forward="/jhzy_knsrd.do?method=yhqxDecision"/>		<!-- 困难生认定审核-->
+  		<action path="/xszz_jhzy_knsrd_jg" 	    forward="/jhzy_knsrd.do?method=knsjgSearch"/>		<!-- 困难生认定结果-->
+  		
+  		<action path="/xszz_jhzy_gjzxj_sq" 	    forward="/jhzy_gjzxj.do?method=zxjsqSearch"/>		<!-- 国家助学金申请-->
+  		<action path="/xszz_jhzy_gjzxj_sh" 	    forward="/jhzy_gjzxj.do?method=yhqxDecision"/>		<!-- 国家助学金审核-->
+  		<action path="/xszz_jhzy_gjzxj_jg" 	    forward="/jhzy_gjzxj.do?method=zxjjgSearch"/>		<!-- 国家助学金结果-->
+  		
+  		<!-- ===================================== The Last ===================================================== -->	
+  		<!-- 参数设置 -->
+		<action path="/csszGl" 
+    			scope="request"
+    			type="xsgzgl.xszz.jhzy.cssz.XszzCsszAction" 
+    			name="xszzCsszActionForm"
+    			parameter="method">
+    		<forward name="cssz" 	path="/xsgzgl/xszz/jhzy/cssz/cssz.jsp"/>		<!-- 参数设置首页 -->
+		</action>
+		<!-- 家庭情况调查 -->
+		<action path="/jtqkdzGl" 
+    			scope="request"
+    			type="xsgzgl.xszz.jhzy.jtqkdz.XszzJtqkdzAction" 
+    			name="xszzJtqkdzActionForm"
+    			parameter="method">
+    		<forward name="cxJtqkdzxx" 	path="/xsgzgl/xszz/jhzy/jtqkdz/cxJtqkdzxx.jsp"/>		<!-- 家庭情况调查查询页面 -->
+    		<forward name="zjJtqkdz" 	path="/xsgzgl/xszz/jhzy/jtqkdz/zjJtqkdz.jsp"/>		<!-- 增加家庭情况调查查询 -->
+			<forward name="xgJtqkdz"    path="/xsgzgl/xszz/jhzy/jtqkdz/xgJtqkdz.jsp"></forward>
+			<forward name="ckJtqkdz"    path="/xsgzgl/xszz/jhzy/jtqkdz/ckJtqkdz.jsp"></forward>
+			<forward name="ckXsjtknxx"    path="/xsgzgl/xszz/jhzy/xsjtknxx.jsp"></forward>
+			<forward name="jtqkdcb"    path="/xsgzgl/xszz/jhzy/jtqkdz/jtqkdcb.jsp"></forward> <!-- 家庭情况调查打印表 2012.12.21 by qlj  -->
+		</action>
+		
+		
+		<!-- 国家励志奖学金 -->
+		<action path="/xszz_jhzy_gjlzjxjSq" 	    forward="/jhzyGjlzjxj.do?method=cxGjlzjxjsq"/>		<!-- 国家励志奖学金管理 -->
+		<action path="/xszz_jhzy_gjlzjxjSh" 	    forward="/jhzyGjlzjxj.do?method=yhqxDecision"/>		<!-- 国家励志奖学金管理 -->
+		<action path="/xszz_jhzy_gjlzjxjCx"         forward="/jhzyGjlzjxj.do?method=cxGjlzjxjjg"></action>
+  		
+  		<action path="/jhzyGjlzjxj" 
+    			scope="request"
+    			type="xsgzgl.xszz.jhzy.gjlzjxj.GjlzjxjAction" 
+    			name="gjlzjxjForm"
+    			parameter="method">
+    		<forward name="cxGjlzjxjsq" 	path="/xsgzgl/xszz/jhzy/gjlzjxj/cxGjlzjxjsq.jsp"/>		<!-- 国家励志奖学金申请 -->
+    		<forward name="gjlzjxjsqInsert" path="/xsgzgl/xszz/jhzy/gjlzjxj/gjlzjxjsqInsert.jsp"></forward>
+    		<forward name="gjlzjxjsqUpdate" path="/xsgzgl/xszz/jhzy/gjlzjxj/gjlzjxjsqUpdate.jsp"></forward>
+    		<forward name="gjlzjxjshSearch" path="/xsgzgl/xszz/jhzy/gjlzjxj/gjlzjxjshSearch.jsp"></forward>
+    		<forward name="gjlzjxjsqView"   path="/xsgzgl/xszz/jhzy/gjlzjxj/gjlzjxjsqView.jsp"></forward>
+    		<forward name="gjlzjxjshUpdate" path="/xsgzgl/xszz/jhzy/gjlzjxj/gjlzjxjshUpdate.jsp"></forward>
+    		<forward name="yhqxDecision"    path="/xsgzgl/xszz/jhzy/gjlzjxj/yhqxDecision.jsp"></forward>
+    		<forward name="cxGjlzjxjjg"     path="/xsgzgl/xszz/jhzy/gjlzjxj/gjlzjxjjgSearch.jsp"></forward>
+    		<forward name="gjlzjxjjgDetail" path="/xsgzgl/xszz/jhzy/gjlzjxj/gjlzjxjjgDetail.jsp"></forward>
+    		<forward name="gjlzjxjb"    path="/xsgzgl/xszz/jhzy/gjlzjxj/gjlzjxjb.jsp"></forward> <!-- 国家励志奖学金打印表 2012.12.24 by qlj  -->
+		</action>
+		
+		
+			
+		<!-- 困难生认定 -->
+		<action path="/jhzy_knsrd" 
+    			scope="request"
+    			type="xsgzgl.xszz.jhzy.knsrd.KnsrdAction" 
+    			name="jhzyXszzKnsrdForm"
+    			parameter="method">
+    		<forward name="knssqSearch" 	path="/xsgzgl/xszz/jhzy/knsrd/knssqSearch.jsp"/>		<!-- 困难生认定申请【查询】 -->
+    		<forward name="knssqInsert" 	path="/xsgzgl/xszz/jhzy/knsrd/knssqInsert.jsp"/>		<!-- 困难生认定申请【增加】-->
+    		<forward name="knssqUpdate" 	path="/xsgzgl/xszz/jhzy/knsrd/knssqUpdate.jsp"/>		<!-- 困难生认定申请【修改】-->
+    		<forward name="yhqxDecision" 	path="/xsgzgl/xszz/jhzy/knsrd/yhqxDecision.jsp"/>		<!-- 用户权限确定-->
+    		<forward name="knsshSearch" 	path="/xsgzgl/xszz/jhzy/knsrd/knsshSearch.jsp"/>		<!-- 困难生认定审核【查询】 -->
+    		<forward name="knsshUpdate" 	path="/xsgzgl/xszz/jhzy/knsrd/knsshUpdate.jsp"/>		<!-- 困难生认定审核【修改】 -->
+    		<forward name="knsjgSearch" 	path="/xsgzgl/xszz/jhzy/knsrd/knsjgSearch.jsp"/>		<!-- 困难生认定结果【查询】 -->
+    		<forward name="knsjgDetail" 	path="/xsgzgl/xszz/jhzy/knsrd/knsjgDetail.jsp"/>		<!-- 困难生认定结果【详细】 -->
+    		<forward name="knsrdb" 	path="/xsgzgl/xszz/jhzy/knsrd/knsrdb.jsp"/>		<!-- 困难生认定结果【详细】 -->
+		</action>
+		
+		<!-- 国家助学金 -->
+		<action path="/jhzy_gjzxj" 
+    			scope="request"
+    			type="xsgzgl.xszz.jhzy.gjzxj.GjzxjAction" 
+    			name="jhzyXszzGjzxjForm"
+    			parameter="method">
+    		<forward name="zxjsqSearch" 	path="/xsgzgl/xszz/jhzy/gjzxj/zxjsqSearch.jsp"/>		<!-- 国家助学金申请【查询】 -->
+    		<forward name="zxjsqInsert" 	path="/xsgzgl/xszz/jhzy/gjzxj/zxjsqInsert.jsp"/>		<!-- 国家助学金申请【增加】-->
+    		<forward name="zxjsqUpdate" 	path="/xsgzgl/xszz/jhzy/gjzxj/zxjsqUpdate.jsp"/>		<!-- 国家助学金申请【修改】-->
+    		<forward name="yhqxDecision" 	path="/xsgzgl/xszz/jhzy/gjzxj/yhqxDecision.jsp"/>		<!-- 用户权限确定-->
+    		<forward name="zxjshSearch" 	path="/xsgzgl/xszz/jhzy/gjzxj/zxjshSearch.jsp"/>		<!-- 国家助学金审核【查询】 -->
+    		<forward name="zxjshUpdate" 	path="/xsgzgl/xszz/jhzy/gjzxj/zxjshUpdate.jsp"/>		<!-- 国家助学金审核【修改】 -->
+    		<forward name="zxjjgSearch" 	path="/xsgzgl/xszz/jhzy/gjzxj/zxjjgSearch.jsp"/>		<!-- 国家助学金结果【查询】 -->
+    		<forward name="zxjjgDetail" 	path="/xsgzgl/xszz/jhzy/gjzxj/zxjjgDetail.jsp"/>		<!-- 国家助学金结果【详细】 -->
+    		<forward name="gjzxjb" 	path="/xsgzgl/xszz/jhzy/gjzxj/gjzxjb.jsp"/>		<!-- 国家助学金打印表  -->
+		</action>
+	</action-mappings>
+</struts-config>

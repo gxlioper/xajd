@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="tsxswhForm" type="xsgzgl.xljk.tsxswh.TsxswhForm" />
+    	<form-bean name="cjtsxsForm" type="com.zfsoft.xgxt.xlzx.cjtsxs.CjtsxsForm" />
+	</form-beans>
+
+	<action-mappings>
+  		<action path="/xljk_zjzy_tsxswh" forward="/xljk_tsxswh.do?method=tsxswhManage"/>	
+		<action path="/xljk_tsxswh" 
+    			scope="request"
+    			type="xsgzgl.xljk.tsxswh.TsxswhAction" 
+    			name="tsxswhForm"
+    			parameter="method">
+    			
+    		<forward name="tsxswhManage" path="/xsgzgl/xljk/tsxswh/tsxswhManage.jsp"/>
+    		<forward name="tsxswhEdit" path="/xsgzgl/xljk/tsxswh/tsxswhEdit.jsp"/>
+		</action>
+		
+		<action path="/xlzx_cjtsxs_cjtsxsgl" forward="/xljk_cjtsxs.do?method=getCjtsxsList"/>	
+		<action path="/xljk_cjtsxs" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xlzx.cjtsxs.CjtsxsAction" 
+    			name="cjtsxsForm"
+    			parameter="method">
+    			
+    		<forward name="getCjtsxsList" path="/xsgzgl/xljk/cjtsxs/getCjtsxsList.jsp"/>
+    		<forward name="addCjTsxs" path="/xsgzgl/xljk/cjtsxs/addCjTsxs.jsp"/>
+    		<forward name="editCjtsxs" path="/xsgzgl/xljk/cjtsxs/editCjTsxs.jsp"/>
+    		<forward name="viewCjTsxs" path="/xsgzgl/xljk/cjtsxs/viewCjTsxs.jsp"/>
+		</action>
+		
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,742 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
+<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+<LastAuthor>Administrator</LastAuthor>
+<LastPrinted>2007-11-23T07:10:20Z</LastPrinted>
+<Created>1996-12-17T01:32:42Z</Created>
+<LastSaved>2015-06-08T11:05:24Z</LastSaved>
+<Version>12.00</Version>
+</DocumentProperties>
+<CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+<KSOProductBuildVer dt:dt="string">2052-9.1.0.5060</KSOProductBuildVer>
+</CustomDocumentProperties>
+<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+<WindowHeight>10500</WindowHeight>
+<WindowWidth>21510</WindowWidth>
+<WindowTopX>0</WindowTopX>
+<WindowTopY>0</WindowTopY>
+<ProtectStructure>False</ProtectStructure>
+<ProtectWindows>False</ProtectWindows>
+</ExcelWorkbook>
+<Styles>
+<Style ss:ID="Default" ss:Name="Normal">
+<Alignment ss:Vertical="Bottom"/>
+<Borders/>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+<Interior/>
+<NumberFormat/>
+<Protection/>
+</Style>
+<Style ss:ID="m86544156">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="仿宋_GB2312" x:CharSet="134" x:Family="Modern" ss:Size="12"/>
+</Style>
+<Style ss:ID="m86543424">
+<Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="仿宋_GB2312" x:CharSet="134" x:Family="Modern" ss:Size="16" ss:Color="#000000" ss:Bold="1"/>
+</Style>
+<Style ss:ID="m86543444">
+<Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="仿宋_GB2312" x:CharSet="134" x:Family="Modern" ss:Size="12" ss:Color="#000000" ss:Bold="1"/>
+</Style>
+<Style ss:ID="s64">
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+</Style>
+<Style ss:ID="s65">
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+</Style>
+<Style ss:ID="s66">
+<NumberFormat ss:Format="Short Date"/>
+</Style>
+<Style ss:ID="s67">
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="s68">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Font ss:FontName="仿宋_GB2312" x:CharSet="134" x:Family="Modern" ss:Size="12"/>
+</Style>
+<Style ss:ID="s69">
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Color="#FF0000"/>
+</Style>
+<Style ss:ID="s74">
+<Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="仿宋_GB2312" x:CharSet="134" x:Family="Modern" ss:Size="12" ss:Color="#000000"/>
+</Style>
+<Style ss:ID="s75">
+<Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="仿宋_GB2312" x:CharSet="134" x:Family="Modern" ss:Size="12" ss:Color="#000000"/>
+<NumberFormat ss:Format="Short Date"/>
+</Style>
+<Style ss:ID="s76">
+<Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="仿宋_GB2312" x:CharSet="134" x:Family="Modern" ss:Size="12" ss:Color="#000000"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="s80">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="仿宋_GB2312" x:CharSet="134" x:Family="Modern" ss:Size="12"/>
+</Style>
+<Style ss:ID="s81">
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Color="#FF0000" ss:Bold="1"/>
+</Style>
+<Style ss:ID="s82">
+<Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="仿宋_GB2312" x:CharSet="134" x:Family="Modern" ss:Size="12" ss:Color="#FF0000"/>
+<Interior/>
+</Style>
+</Styles>
+<Worksheet ss:Name="模板">
+<Names>
+<NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=模板!R1C1:R4C16" ss:Hidden="1"/>
+</Names>
+<Table ss:ExpandedColumnCount="17" ss:ExpandedRowCount="7" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+<Column ss:AutoFitWidth="0" ss:Width="30"/>
+<Column ss:AutoFitWidth="0" ss:Width="60.75"/>
+<Column ss:AutoFitWidth="0" ss:Width="27.75"/>
+<Column ss:AutoFitWidth="0" ss:Width="50.25"/>
+<Column ss:AutoFitWidth="0" ss:Width="59.25"/>
+<Column ss:StyleID="s66" ss:AutoFitWidth="0" ss:Width="100.5"/>
+<Column ss:AutoFitWidth="0" ss:Width="73.5"/>
+<Column ss:StyleID="s67" ss:AutoFitWidth="0" ss:Width="106.5"/>
+<Column ss:AutoFitWidth="0" ss:Width="147"/>
+<Column ss:AutoFitWidth="0" ss:Width="27"/>
+<Column ss:AutoFitWidth="0" ss:Width="34.5"/>
+<Column ss:AutoFitWidth="0" ss:Width="27.75"/>
+<Column ss:AutoFitWidth="0" ss:Width="32.25"/>
+<Column ss:AutoFitWidth="0" ss:Width="29.25"/>
+<Column ss:AutoFitWidth="0" ss:Width="27.75"/>
+<Column ss:StyleID="s68" ss:AutoFitWidth="0" ss:Width="98.25"/>
+<Column ss:StyleID="s69" ss:AutoFitWidth="0" ss:Width="223.5"/>
+<Row ss:AutoFitHeight="0" ss:Height="18.75">
+<Cell ss:MergeAcross="15" ss:StyleID="m86543424">
+<Data ss:Type="String">普通高校国家助学金受助学生名单备案表</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+</Row>
+<Row ss:AutoFitHeight="0" ss:Height="15" ss:StyleID="s65">
+<Cell ss:MergeAcross="15" ss:StyleID="m86543444">
+<Data ss:Type="String">学校名称：(签章)                                        填表日期：   年  月  日</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:StyleID="s81"/>
+</Row>
+<Row ss:AutoFitHeight="0" ss:Height="15">
+<Cell ss:MergeDown="1" ss:StyleID="s74">
+<Data ss:Type="String">序号</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeDown="1" ss:StyleID="s74">
+<Data ss:Type="String">姓名</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeDown="1" ss:StyleID="s74">
+<Data ss:Type="String">性别</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeDown="1" ss:StyleID="s74">
+<Data ss:Type="String">民族</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeDown="1" ss:StyleID="s74">
+<Data ss:Type="String">户籍性质</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeDown="1" ss:StyleID="s75">
+<Data ss:Type="String">出生年月</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeDown="1" ss:StyleID="s74">
+<Data ss:Type="String">入学日期</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeDown="1" ss:StyleID="s76">
+<Data ss:Type="String">学号</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeDown="1" ss:StyleID="s74">
+<Data ss:Type="String">专业</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeAcross="2" ss:StyleID="s74">
+<Data ss:Type="String">受助档次</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeAcross="2" ss:StyleID="s74">
+<Data ss:Type="String">学生生源地</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:MergeDown="1" ss:StyleID="m86544156">
+<Data ss:Type="String">院系</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+</Row>
+<Row ss:AutoFitHeight="0" ss:Height="15">
+<Cell ss:Index="10" ss:StyleID="s74">
+<Data ss:Type="String">1档</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="String">2档</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="String">3档</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="String">东部</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="String">中部</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="String">西部</Data>
+<NamedCell ss:Name="_FilterDatabase"/>
+</Cell>
+<Cell ss:Index="17" ss:StyleID="s82"/>
+</Row>
+<#list zzxmjgList as xsxx>
+<Row ss:AutoFitHeight="0" ss:Height="15">
+<Cell ss:StyleID="s74">
+<Data ss:Type="String">${xsxx.bh!}</Data>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="String">${xsxx.xm!}</Data>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="String">${xsxx.xb!}</Data>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="String">${xsxx.mzmc!}</Data>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="Number">${xsxx.hk!}</Data>
+</Cell>
+<Cell ss:StyleID="s75">
+<Data ss:Type="String">${xsxx.csrq!}</Data>
+</Cell>
+<Cell ss:StyleID="s75">
+<Data ss:Type="String">${xsxx.rxrq!}</Data>
+</Cell>
+<Cell ss:StyleID="s76">
+<Data ss:Type="String">${xsxx.xh!}</Data>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="String">${xsxx.zymc!}</Data>
+</Cell>
+<Cell ss:StyleID="s74">
+
+
+
+<Data ss:Type="Number">${xsxx.szdc1!}</Data>
+</Cell>
+<Cell ss:StyleID="s74">
+
+
+
+<Data ss:Type="Number">${xsxx.szdc2!}</Data>
+</Cell>
+<Cell ss:StyleID="s74">
+
+
+
+<Data ss:Type="Number">${xsxx.szdc3!}</Data>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="Number"></Data>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="Number"></Data>
+</Cell>
+<Cell ss:StyleID="s74">
+<Data ss:Type="Number"></Data>
+</Cell>
+<Cell ss:StyleID="s80">
+<Data ss:Type="String">${xsxx.xy!}</Data>
+</Cell>
+</Row>
+</#list>
+<Row ss:AutoFitHeight="0" ss:Height="15">
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s75"/>
+<Cell ss:StyleID="s75"/>
+<Cell ss:StyleID="s76"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s80"/>
+</Row>
+<Row ss:AutoFitHeight="0" ss:Height="15">
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s75"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s76"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s74"/>
+<Cell ss:StyleID="s80"/>
+</Row>
+</Table>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+<PageSetup>
+<Layout x:Orientation="Landscape"/>
+</PageSetup>
+<Print>
+<ValidPrinterInfo/>
+<PaperSizeIndex>9</PaperSizeIndex>
+<HorizontalResolution>600</HorizontalResolution>
+<VerticalResolution>600</VerticalResolution>
+</Print>
+<PageBreakZoom>60</PageBreakZoom>
+<Selected/>
+<Panes>
+<Pane>
+<Number>3</Number>
+<ActiveRow>4</ActiveRow>
+<ActiveCol>14</ActiveCol>
+</Pane>
+</Panes>
+<ProtectObjects>False</ProtectObjects>
+<ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+<Worksheet ss:Name="导入说明">
+<Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="9" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+<Column ss:AutoFitWidth="0" ss:Width="450.75"/>
+<Row>
+<Cell>
+<Data ss:Type="String">1、性别列填写必须是“男”或者“女”</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">2、民族列请检查是否填写正确</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">3、户籍性质列填写“农村”或者“城镇”</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="s64">
+<Data ss:Type="String">4、出生年月格式为“2007-6-01”</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="s64">
+<Data ss:Type="String">5、入学日期格式为“2007-9-01”</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">6、院系和专业名称必须与系统中现有名称一样</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">7、受助档次和学生生源地必须填写数字“1”</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="s64">
+<Data ss:Type="String">8、测试数据输入前请删除</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="s64"/>
+</Row>
+</Table>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+<PageSetup>
+<Header x:Margin="0.3"/>
+<Footer x:Margin="0.3"/>
+<PageMargins x:Bottom="0.75" x:Left="0.69930555555555551" x:Right="0.69930555555555551" x:Top="0.75"/>
+</PageSetup>
+<PageBreakZoom>60</PageBreakZoom>
+<Panes>
+<Pane>
+<Number>3</Number>
+<ActiveRow>16</ActiveRow>
+</Pane>
+</Panes>
+<ProtectObjects>False</ProtectObjects>
+<ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+<Worksheet ss:Name="民族参考表">
+<Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="57" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+<Column ss:AutoFitWidth="0" ss:Width="90"/>
+<Column ss:AutoFitWidth="0" ss:Width="108"/>
+<Row>
+<Cell>
+<Data ss:Type="String">汉族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">回族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">维吾尔族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">彝族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">布依族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">满族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">瑶族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">土家族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">哈萨克族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">黎族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">佤族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">高山族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">水族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">纳西族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">柯尔克孜族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">达斡尔族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">羌族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">撒拉族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">仡佬族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">阿昌族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">蒙古族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">藏族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">苗族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">壮族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">朝鲜族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">侗族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">白族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">哈尼族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">傣族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">傈傈族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">畲族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">拉祜族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">东乡族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">景颇族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">土族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">仫佬族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">布朗族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">毛难族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">锡伯族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">普米族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">塔吉克族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">怒族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">乌孜别克族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">俄罗斯族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">鄂温克族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="s64">
+<Data ss:Type="String">崩龙族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">保安族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">裕固族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">京族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">塔塔尔族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">独龙族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">鄂伦春族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">赫哲族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">门巴族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">珞巴族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">基诺族</Data>
+</Cell>
+</Row>
+<Row>
+<Cell>
+<Data ss:Type="String">其他</Data>
+</Cell>
+<Cell>
+<Data ss:Type="String">注：国外人士</Data>
+</Cell>
+</Row>
+</Table>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+<PageSetup>
+<Header x:Margin="0.3"/>
+<Footer x:Margin="0.3"/>
+<PageMargins x:Bottom="0.75" x:Left="0.69930555555555551" x:Right="0.69930555555555551" x:Top="0.75"/>
+</PageSetup>
+<PageBreakZoom>60</PageBreakZoom>
+<TopRowVisible>12</TopRowVisible>
+<Panes>
+<Pane>
+<Number>3</Number>
+<ActiveRow>34</ActiveRow>
+<ActiveCol>1</ActiveCol>
+</Pane>
+</Panes>
+<ProtectObjects>False</ProtectObjects>
+<ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+</Workbook>

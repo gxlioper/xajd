@@ -1,0 +1,50 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="gjzxdkForm" type="xgxt.xszz.nbty.GjzxdkForm"></form-bean>
+		<form-bean name="xwzswhForm" type="xgxt.rcgl.nbty.XwzswhForm"></form-bean>
+		<form-bean name="nbtyJtjjknsForm" type="xgxt.xszz.nbty.jtjjknsbz.NbtyJtjjknsForm"></form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+		<!--宁波天一职业技术学院  学生资助-->
+		<action path="/nbty_xszz"
+				name="gjzxdkForm"
+				type="xgxt.xszz.nbty.XszzAction"
+				parameter="method"
+				scope="request">
+			<forward name="gjzxdksq" path="/xszz/nbty/gjzxdksq.jsp" />
+			<forward name="gjzxdksh" path="/xszz/nbty/gjzxdksh.jsp"/>
+			<forward name="gjzxdkshone" path="/xszz/nbty/gjzxdkshone.jsp"/>
+			<forward name="gjzxdkshview" path="/xszz/nbty/gjzxdkshview.jsp"/>
+			<forward name="gjzxdkprint" path="/xszz/nbty/gjzxdkprint.jsp" />
+			<forward name="gjzxdksqjg" path="/xszz/nbty/gjzxdksqjg.jsp" />
+			<forward name="gjzxdkmodi" path="/xszz/nbty/gjzxdkmodi.jsp"/>
+			<forward name="gjzxdkforstu" path="/xszz/nbty/gjzxdkforstu.jsp"/>
+		</action>
+    	
+    	<!--宁波天一职业技术学院   家庭经济困难学生困难补助-->
+    	
+    	<action path="/nbtyJtjjkns" 
+    			type="xgxt.xszz.nbty.jtjjknsbz.NbtyJtjjknsAction" 
+				name="nbtyJtjjknsForm"
+				parameter="method"
+				scope="request">
+			<!-- 申请 家庭经济困难生补助 -->
+			<forward name="jtjjknsSq" path="/xszz/nbty/jtjjknsbz/sqJtjjknsbz.jsp" />
+			<!-- 审核 家庭经济困难生补助 -->
+			<forward name="jtjjknsSh" path="/xszz/nbty/jtjjknsbz/shJtjjknsbz.jsp" />
+			<!-- 查询 家庭经济困难生补助 -->
+			<forward name="resultJtjjknsbz" path="/xszz/nbty/jtjjknsbz/resultJtjjknsbz.jsp" />
+			<!-- 单条家庭经济困难生信息 -->
+			<forward name="oneJtjjknsbz" path="/xszz/nbty/jtjjknsbz/oneJtjjknsbz.jsp" />
+			<!-- 单条家庭经济困难生信息审核 -->
+			<forward name="shOne" path="/xszz/nbty/jtjjknsbz/shOne.jsp" />
+			<!-- 家庭经济困难生申请表打印 -->
+			<forward name="jtjjknsPrint" path="/xszz/nbty/jtjjknsbz/jtjjknsPrint.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

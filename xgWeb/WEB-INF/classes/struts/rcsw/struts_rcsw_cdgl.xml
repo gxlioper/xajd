@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="rcswCdxxwhForm" type="com.zfsoft.xgxt.rcsw.cdgl.cdxxwh.CdxxwhForm" />
+		<form-bean name="rcswCdsqForm" type="com.zfsoft.xgxt.rcsw.cdgl.sq.CdsqForm" />
+		<form-bean name="rcswCdshForm" type="com.zfsoft.xgxt.rcsw.cdgl.sh.CdshForm" />
+		<form-bean name="rcswCdjgForm" type="com.zfsoft.xgxt.rcsw.cdgl.jg.CdjgForm" />
+		
+		<form-bean name="sbflForm" type="com.zfsoft.xgxt.rcsw.sbgl.sbfl.SbflModel" />
+		<form-bean name="sbxxForm" type="com.zfsoft.xgxt.rcsw.sbgl.sbxx.SbxxModel" />
+		<form-bean name="jyjlForm" type="com.zfsoft.xgxt.rcsw.sbgl.jyjl.JyjlModel" />
+	</form-beans>
+	<action-mappings>
+	    
+	    <action path="/rcsw_sbgl_sbfl" forward="/rcswSbglSbfl.do?method=list"/>
+	    <action path="/rcsw_sbgl_sbxx" forward="/rcswSbglSbxx.do?method=list"/>
+	    <action path="/rcsw_sbgl_jyjl" forward="/rcswSbglJyjl.do?method=list"/>
+	    
+	    <action path="/rcswSbglSbfl" 
+				name="sbflForm" 
+				type="com.zfsoft.xgxt.rcsw.sbgl.sbfl.SbflAction"
+				parameter="method" scope="request">
+			<forward name="list" path="/xsgzgl/rcsw/sbgl/sbfl/list.jsp" />
+			<forward name="add" path="/xsgzgl/rcsw/sbgl/sbfl/add.jsp" />
+			<forward name="edit" path="/xsgzgl/rcsw/sbgl/sbfl/edit.jsp" />
+		</action>
+		
+	    <action path="/rcswSbglSbxx" 
+				name="sbxxForm" 
+				type="com.zfsoft.xgxt.rcsw.sbgl.sbxx.SbxxAction"
+				parameter="method" scope="request">
+			<forward name="list" path="/xsgzgl/rcsw/sbgl/sbxx/list.jsp" />
+			<forward name="add" path="/xsgzgl/rcsw/sbgl/sbxx/add.jsp" />
+			<forward name="edit" path="/xsgzgl/rcsw/sbgl/sbxx/edit.jsp" />
+		</action>
+		
+	    <action path="/rcswSbglJyjl" 
+				name="jyjlForm" 
+				type="com.zfsoft.xgxt.rcsw.sbgl.jyjl.JyjlAction"
+				parameter="method" scope="request">
+			<forward name="list" path="/xsgzgl/rcsw/sbgl/jyjl/list.jsp" />
+			<forward name="add" path="/xsgzgl/rcsw/sbgl/jyjl/add.jsp" />
+			<forward name="edit" path="/xsgzgl/rcsw/sbgl/jyjl/edit.jsp" />
+			<forward name="view" path="/xsgzgl/rcsw/sbgl/jyjl/view.jsp" />
+			<forward name="sbgh" path="/xsgzgl/rcsw/sbgl/jyjl/sbgh.jsp" />
+		</action>
+	    
+		<action path="/rcsw_cdgl_cdxxwhgl" forward="/rcsw_cdgl_cdxxwh.do?method=cdxxwhCx"/>
+		<action path="/rcsw_cdgl_cdsqgl" forward="/rcsw_cdgl_cdsq.do?method=cdsqCx"/>
+		<action path="/rcsw_cdgl_cdshgl" forward="/rcsw_cdgl_cdsh.do?method=cdshCx"/>
+		<action path="/rcsw_cdgl_cdjggl" forward="/rcsw_cdgl_cdjg.do?method=cdjgCx"/>
+		<action path="/rcsw_cdgl_cdsqck" forward="/rcsw_cdgl_cdsq.do?method=cdsqjlCx"/>
+		
+		<action path="/rcsw_cdgl_cdxxwh" 
+				name="rcswCdxxwhForm" 
+				type="com.zfsoft.xgxt.rcsw.cdgl.cdxxwh.CdxxwhAction"
+				parameter="method" scope="request">
+			<forward name="cdxxwhCx" path="/xsgzgl/rcsw/cdgl/cdxxwhCx.jsp" />
+			<forward name="cdxxwhXz" path="/xsgzgl/rcsw/cdgl/cdxxwhXz.jsp" />
+			<forward name="cdxxwhXg" path="/xsgzgl/rcsw/cdgl/cdxxwhXg.jsp" />
+			<forward name="cdxxwhCk" path="/xsgzgl/rcsw/cdgl/cdxxwhCk.jsp" />
+			<forward name="showCdxx" path="/xsgzgl/rcsw/cdgl/showCdxx.jsp" />
+		</action>
+
+		<action path="/rcsw_cdgl_cdsq" 
+				name="rcswCdsqForm" 
+				type="com.zfsoft.xgxt.rcsw.cdgl.sq.CdsqAction"
+				parameter="method" scope="request">
+			<forward name="cdsqCx" path="/xsgzgl/rcsw/cdgl/cdsqCx.jsp" />
+			<forward name="cdsqjlCx" path="/xsgzgl/rcsw/cdgl/cdsqjlCx.jsp" />
+			<forward name="cdsqSq" path="/xsgzgl/rcsw/cdgl/cdsqSq.jsp" />
+			<forward name="cdsqXg" path="/xsgzgl/rcsw/cdgl/cdsqXg.jsp" />
+			<forward name="cdsqCk" path="/xsgzgl/rcsw/cdgl/cdsqCk.jsp" />
+		</action>
+		
+		<action path="/rcsw_cdgl_cdsh" 
+				name="rcswCdshForm" 
+				type="com.zfsoft.xgxt.rcsw.cdgl.sh.CdshAction"
+				parameter="method" scope="request">
+			<forward name="cdshCx" path="/xsgzgl/rcsw/cdgl/cdshCx.jsp" />
+			<forward name="cdshSh" path="/xsgzgl/rcsw/cdgl/cdshSh.jsp" />
+			<forward name="cdshXg" path="/xsgzgl/rcsw/cdgl/cdshXg.jsp" />
+			<forward name="cdshCk" path="/xsgzgl/rcsw/cdgl/cdshCk.jsp" />
+			<forward name="cdsqPlsh" path="/xsgzgl/rcsw/cdgl/cdsqPlsh.jsp" />
+		</action>
+
+		<action path="/rcsw_cdgl_cdjg" 
+				name="rcswCdjgForm" 
+				type="com.zfsoft.xgxt.rcsw.cdgl.jg.CdjgAction"
+				parameter="method" scope="request">
+			<forward name="cdjgCx" path="/xsgzgl/rcsw/cdgl/cdjgCx.jsp" />
+			<forward name="cdjgSq" path="/xsgzgl/rcsw/cdgl/cdjgSq.jsp" />
+			<forward name="cdjgXg" path="/xsgzgl/rcsw/cdgl/cdjgXg.jsp" />
+			<forward name="cdjgCk" path="/xsgzgl/rcsw/cdgl/cdjgCk.jsp" />
+			<forward name="pj" path="/xsgzgl/rcsw/cdgl/pj.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

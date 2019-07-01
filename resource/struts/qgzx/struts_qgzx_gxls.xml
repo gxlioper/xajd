@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	
+	<data-sources />
+	<form-beans>
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+	</form-beans>
+	
+	<action-mappings>
+		<action 
+			path="/qgzxGxls"
+			type="xgxt.qgzx.gxlsxy.QgzxGxlsAction"
+			name="commanForm"
+			parameter="method">			
+			<forward name="printQgzxsq" path="/qgzx/qgzxgwsqb.jsp"/>
+		</action>
+	</action-mappings>
+	
+</struts-config>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="byhkglCsszForm" type="com.zfsoft.xgxt.zxdk.byhkgl.cssz.ByhkglCsszForm"></form-bean>
+		<form-bean name="byhkglSqForm" type="com.zfsoft.xgxt.zxdk.byhkgl.sq.ByhkglSqForm"></form-bean>
+		<form-bean name="byhkglShForm" type="com.zfsoft.xgxt.zxdk.byhkgl.sh.ByhkglShForm"></form-bean>
+		<form-bean name="byhkglJgForm" type="com.zfsoft.xgxt.zxdk.byhkgl.jg.ByhkglJgForm"></form-bean>
+	</form-beans>
+	<action-mappings>	
+		<!-- 展现路径 -->
+		<action path="/zxdk_byhkgl_cssz" forward="/byhkgl_cssz.do?method=cssz"></action><!-- 参数设置查询页面 -->
+		<action path="/zxdk_byhkgl_byhksq" forward="/byhkgl_sq.do?method=getByhkglSqList"></action><!-- 申请查询页面 -->
+		<action path="/zxdk_byhkgl_byhksh" forward="/byhkgl_sh.do?method=getByhkglShList"></action><!-- 审核查询页面 -->
+		<action path="/zxdk_byhkgl_byhkjg" forward="/byhkgl_jg.do?method=getByhkglJgList"></action><!-- 结果查询页面 -->
+		<!-- 实际路径 -->	
+		<action name="byhkglCsszForm" 
+				parameter="method" 
+				path="/byhkgl_cssz"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.byhkgl.cssz.CsszAction">
+			<forward name="cssz" path="/xsgzgl/zxdk/byhkgl/cssz/cssz.jsp" /><!-- 参数设置查询页面  -->
+		</action>
+		
+		<action name="byhkglSqForm" 
+				parameter="method" 
+				path="/byhkgl_sq"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.byhkgl.sq.ByhkglSqAction">
+			<forward name="getByhkglSqList" path="/xsgzgl/zxdk/byhkgl/sq/byhkglSqList.jsp" /><!-- 申请查询页面  -->
+			<forward name="addByhkglSq" path="/xsgzgl/zxdk/byhkgl/sq/addByhkglSq.jsp" /><!-- 申请增加页面  -->
+			<forward name="editByhkglSq" path="/xsgzgl/zxdk/byhkgl/sq/editByhkglSq.jsp" /><!-- 申请修改页面  -->
+			<forward name="viewByhkglSq" path="/xsgzgl/zxdk/byhkgl/sq/viewByhkglSq.jsp" /><!-- 申请查看页面  -->
+		</action>
+		
+		<action name="byhkglShForm" 
+				parameter="method" 
+				path="/byhkgl_sh"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.byhkgl.sh.ByhkglShAction">
+			<forward name="getByhkglShList" path="/xsgzgl/zxdk/byhkgl/sh/byhkglShList.jsp" /><!-- 审核查询页面  -->
+			<forward name="sbDgsh" path="/xsgzgl/zxdk/byhkgl/sh/byhkglShDgsh.jsp" /><!-- 审核页面  -->
+			<forward name="sbPlsh" path="/xsgzgl/zxdk/byhkgl/sh/byhkglShPlsh.jsp" /><!-- 批量审核页面  -->
+			<forward name="viewByhkglSh" path="/xsgzgl/zxdk/byhkgl/sh/viewByhkglSh.jsp" /><!-- 审核查看页面  -->
+		</action>
+		
+		<action name="byhkglJgForm" 
+				parameter="method" 
+				path="/byhkgl_jg"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.byhkgl.jg.ByhkglJgAction">
+			<forward name="getByhkglJgList" path="/xsgzgl/zxdk/byhkgl/jg/byhkglJgList.jsp" /><!-- 结果查询页面  -->
+			<forward name="addByhkgljg" path="/xsgzgl/zxdk/byhkgl/jg/addByhkglJg.jsp" /><!-- 结果增加页面  -->
+			<forward name="editByhkgljg" path="/xsgzgl/zxdk/byhkgl/jg/editByhkglJg.jsp" /><!-- 结果修改页面  -->
+			<forward name="viewByhkgljg" path="/xsgzgl/zxdk/byhkgl/jg/viewByhkglJg.jsp" /><!-- 结果查看页面  -->
+		</action>
+		
+		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

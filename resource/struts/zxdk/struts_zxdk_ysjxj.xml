@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="dmwhForm" type="com.zfsoft.xgxt.zxdk.ysjxj.dmwh.DmwhForm"></form-bean><!-- 院设奖学金代码维护  -->
+		<form-bean name="ysjxjForm" type="com.zfsoft.xgxt.zxdk.ysjxj.ysjxj.YsjxjForm"></form-bean><!-- 院设奖学金结果维护  -->
+	</form-beans>
+	
+	<action-mappings>
+		
+		<!-- 院设奖学金代码维护 -->	
+		<action path="/zxdk_ysjxj_dmwh" forward="/ysjxj_dmwh.do?method=getDmwhList"></action>
+		<action path="/ysjxj_dmwh"
+				type="com.zfsoft.xgxt.zxdk.ysjxj.dmwh.DmwhAction"
+				parameter="method"
+				name="dmwhForm" 
+				scope="request">
+			<forward name="dmwhList" path="/xsgzgl/zxdk/ysjxj/dmwh/dmwhList.jsp" />		<!-- 查询页面  -->
+			<forward name="dmwhAdd" path="/xsgzgl/zxdk/ysjxj/dmwh/dmwhAdd.jsp" />		<!-- 增加页面  -->
+			<forward name="dmwhUpdate" path="/xsgzgl/zxdk/ysjxj/dmwh/dmwhUpdate.jsp" />	<!-- 修改页面  -->
+		</action>
+		
+		<!-- 院设奖学金结果维护 -->	
+		<action path="/zxdk_ysjxj_ysjxjwh" forward="/ysjxj_ysjxjwh.do?method=getYsjxjwh"/> 
+	     <action path="/ysjxj_ysjxjwh" 
+	     		 type="com.zfsoft.xgxt.zxdk.ysjxj.ysjxj.YsjxjAction"
+	     		 parameter="method"
+	     		 name="ysjxjForm" 
+				 scope="request"	>
+			<forward name="listYsjxj" path="/xsgzgl/zxdk/ysjxj/ysjxj/listYsjxj.jsp" /> 		<!-- 查询页面  -->
+		    <forward name="addYsjxj" path="/xsgzgl/zxdk/ysjxj/ysjxj/addYsjxj.jsp" />		<!-- 增加页面  -->
+			<forward name="editYsjxj" path="/xsgzgl/zxdk/ysjxj/ysjxj/editYsjxj.jsp" />		<!-- 修改页面  -->
+			<forward name="viewYsjxj" path="/xsgzgl/zxdk/ysjxj/ysjxj/viewYsjxj.jsp" />		<!-- 查看页面  -->
+		 </action>
+	</action-mappings>
+</struts-config>

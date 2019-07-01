@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/nbty_xszz.do" location="0,0" dimension="196,84" />
+  <StrutsActivity path="/jtjjknxs.do" location="0,277" dimension="232,84" />
+  <StrutsActivity path="/xszz/nbty/gjzxdksq.jsp" location="9,184" dimension="178,48" />
+  <StrutsTransition id="/nbty_xszz.do,gjzxdksq,/xszz/nbty/gjzxdksq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="98,84" />
+      <AbsolutePoint location="98,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

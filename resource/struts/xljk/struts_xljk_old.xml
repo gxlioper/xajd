@@ -1,0 +1,1484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="ShgcForm" type="xgxt.form.ShgcForm" />
+		<form-bean name="xljk_zxzx_Form"
+			type="xgxt.xljk.zxzx.form.xljk_zxzx_Form" />
+		<form-bean name="xljk_zxspp_Form"
+			type="xgxt.xljk.zxzx.form.Xljk_zxspp_Form" />
+		<form-bean name="xljk_zxsxx_Form"
+			type="xgxt.xljk.zxzx.form.xljk_zxsxx_Form" />
+		<form-bean name="xljk_xssqyy_Form"
+			type="xgxt.xljk.zxzx.form.xljk_xssqyy_Form" />
+		<form-bean name="xljk_zxszy_Form"
+			type="xgxt.xljk.zxzx.form.xljk_zxszy_Form" />
+		<form-bean name="xljk_xlxhhy_form"
+			type="xgxt.xljk.xlxh.Form.xljk_xlxhhy_from" />
+		<form-bean name="xilk_xlcsTkwh_form"
+			type="xgxt.xljk.xlcs.form.xilk_xlcsTkwh_form" />
+		<form-bean name="xilk_zxpc_form"
+			type="xgxt.xljk.xlcs.form.xilk_zxpc_form" />
+		<form-bean name="xljk_xlxhhd_from"
+			type="xgxt.xljk.xlxh.Form.xljk_xlxhhd_from" />
+		<form-bean name="xljk_xyxljkjyry_from"
+			type="xgxt.xljk.xyxljkgl.form.xljk_xyxljkjyry_from" />
+		<form-bean name="xljk_xyxljkjyhd_from"
+			type="xgxt.xljk.xyxljkgl.form.xljk_xyxljkjyhd_from" />
+		<form-bean name="rcgl_rcxw_from"
+			type="xgxt.rcgl.rcxwxx.form.rcgl_rcxw_from" />
+		<form-bean name="rcgl_sfbd_form"
+			type="xgxt.rcgl.sfbd.form.rcgl_sfbd_form" />
+		<form-bean name="xljk_xlkhxs_form"
+			type="xgxt.xljk.xlkhxs.form.xljk_xlkhxs_form" />
+		<form-bean name="jyglForm" type="xgxt.base.form.JyglForm" />
+		<form-bean name="rcgl_xscx_form"
+			type="xgxt.rcgl.xscx.form.rcgl_xscx_form" />
+		<form-bean name="rcgl_xspd_form"
+			type="xgxt.rcgl.xspd.form.rcgl_xspd_form" />
+		<form-bean name="rcgl_rxjy_form"
+			type="xgxt.rcgl.rxjy.rcgl_rxjy_form" />
+		<form-bean name="rcgl_form" type="xgxt.rcgl.rcgl_form" />
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+	</form-beans>
+	<action-mappings>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-项目发布>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xmfb" name="commanForm"
+			type="xgxt.shgc.action.ShgcAction" parameter="HZJYXMFB"
+			scope="request">
+			<forward name="success" path="" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-申请时间设置>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_sjsz" parameter="hzjysqsjsz"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/shgc/hzjy_sjsz.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-学生申请>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xssq" parameter="hzjyxssq"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/hzjy/hzjy_xssq.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-申请结果查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_sqxx" parameter="hzjysqxx"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xssq_queryself.jsp" />
+			<forward name="false"
+				path="/hzjy/hzjy_cannottosee_stu.jsp">
+			</forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-申请结果修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_sqxx_update" parameter="hzjysqxxupdate"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/hzjy/hzjy_xssq_update.jsp" />
+			<forward name="false" path=""></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-审核>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_sh" parameter="HZJYSH"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/hzjy/hzjy_sh.jsp" />
+			<forward name="false" path=""></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-申请删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_sqdel" parameter="HZJYSH"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/hzjy/hzjy_sh.jsp" />
+			<forward name="false" path=""></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-查看申请详细信息>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_sq_viewmore" parameter="hzjysqviewmore"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xssq_morequery.jsp" />
+			<forward name="false" path=""></forward>
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-申请批量删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_sqalldel" parameter="HZJYSH"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/hzjy/hzjy_sh.jsp" />
+			<forward name="false" path=""></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-申请学院审核>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_sqxysh" parameter="hzjysqxysh"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/hzjy/hzjy_xssq_xysh.jsp" />
+			<forward name="false" path=""></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-申请学校审核>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_sqxxsh" parameter="hzjysqxxsh"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/hzjy/hzjy_xssq_xxsh.jsp" />
+			<forward name="false" path=""></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-申请学校批量审核>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_sqallpass" parameter="HZJYSH"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/hzjy/hzjy_sh.jsp" />
+			<forward name="false" path=""></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-学生申请数据导出>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xssqbDataExport" parameter="hzjyDataExport"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-合作教育时间段设置>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjysjdsz" parameter="hzjysjdsz"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjysjdsz.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-合作教育时间段设置详细查看>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjysjdszviewmore" parameter="hzjysjdszViewMore"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/xsjbxx_morequery.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-学生个人信息查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjystugrxxquery" parameter="hzjyStuGrxxQuery"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/hzjy/hzjy_cannottosee_stu.jsp" />
+			<forward name="success" path="/hzjy/hzjy_stugrxxquery.jsp" />
+		</action>
+
+
+
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-协调员信息维护-查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xtyxxwh" parameter="hzjyxtyxxwh"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="" />
+			<forward name="success" path="/hzjy/hzjy_xtyxxwh.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-协调员详细信息>>>>>>>>>>>>>>>>>> -->
+		<action path="/xtyxxmorequery" parameter="xtyxxViewmore"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="" />
+			<forward name="success"
+				path="/hzjy/hzjy_xtyxx_morequery.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-协调员信息录入>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xtyxxapply" parameter="hzjyxtyxxapply"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="" />
+			<forward name="success" path="/hzjy/hzjy_xtyxx_input.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-协调员信息删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xtyxxdel" parameter="hzjyxtyxxwh"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="" />
+			<forward name="success" path="/hzjy/hzjy_xtyxxwh.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-协调员信息修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xtyxxupdate" parameter="xtyxxupdate"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="" />
+			<forward name="success" path="/hzjy/hzjy_xtyxx_update.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-协调员信息批量删除>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xtyxxdelall" parameter="hzjyxtyxxwh"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="" />
+			<forward name="success" path="/hzjy/hzjy_xtyxxwh.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-设置当前协调员>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_setxtyxx" parameter="setxtyxx"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="" />
+			<forward name="success" path="/hzjy/hzjy_xtyxxwh.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-协调员信息数据导出>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xtyxxDataExport" parameter="hzjyxtyxxexport"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-学生协调员匹配>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xty_pipei" parameter="hzjyxtypipei"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xty_pipei.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-学生协调员匹配-学生查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xs_query" parameter="hzjyxtypipei"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xty_pipei.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-学生协调员匹配-协调员查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xty_query" parameter="hzjyxtypipei"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xty_pipei.jsp" />
+		</action>
+
+
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-安置信息登记>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_azxx_input" parameter="hzjyazapply"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xsaz_input.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-安置信息审核>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_azxx_query" parameter="hzjyazaquery"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xsaz_query.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-安置信息查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xsazxx_query" parameter="hzjyazxxquery"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xsazxx_query.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-安置信息转历史库>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_history" parameter="hzjyhistory"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-安置信息历史查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_xsazxx_history" parameter="hzjyazxxhistory"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xsazxx_history.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-安置信息详细查看>>>>>>>>>>>>>>>>>> -->
+		<action path="/viewazxxinfo" parameter="viewazxxinfo"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm" 
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xsaz_morequery.jsp" />
+			<forward name="history" path="/hzjy/hzjy_xsaz_lsxx.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-安置信息学院审核>>>>>>>>>>>>>>>>>> -->
+		<action path="/xsazxysh" parameter="xsazxysh"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xsaz_xysh.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-安置信息学校审核>>>>>>>>>>>>>>>>>> -->
+		<action path="/xsazxxsh" parameter="xsazxxsh"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xsaz_xxsh.jsp" />
+		</action>
+        <!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-安置信息学院修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyazxyupdate" parameter="hzjyazxyupdate"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/hzjy_xsaz_xyupdate.jsp" />
+		</action>
+
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-学生安置结果查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/xsazsturesult" parameter="xsazsturesult"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/hzjy/hzjy_cannottosee_stu.jsp" />
+			<forward name="success"
+				path="/hzjy/hzjy_xsaz_sturesult.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-学生安置结果修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/xsaz_resultupdate" parameter="xsazresultupdate"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xsaz_resultupdate.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-学生信息填充>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyazupdatequerystuinfo"
+			parameter="hzjyazupdatequerystuinfo"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/hzjy/hzjy_xsjbxx_query.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-安置信息查询-变更申请>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_azxx_update" parameter="hzjyazupdate"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/hzjy/hzjy_isnottimetosq.jsp" />
+			<forward name="success" path="/hzjy/hzjy_xsaz_update.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-雇主信息变更审核查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_azxx_update_query"
+			parameter="hzjyazupdatequery" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/hzjy/hzjy_xsaz_update_query.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-雇主信息变更详细信息>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_azxx_update_morequery"
+			parameter="hzjyazupdatemorequery" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/hzjy/hzjy_xsaz_update_morequery.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-雇主信息变更学院审核>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyazupdatexysh" parameter="hzjyazupdatexysh"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/hzjy/hzjy_xsaz_update_xysh.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-雇主信息变更学校审核>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyazupdatexxsh" parameter="hzjyazupdatexxsh"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/hzjy/hzjy_xsaz_update_xxsh.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-雇主信息变更审核结果查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/xsazbgxtyresult" parameter="xsazbgxtyresult"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="false" path="/hzjy/hzjy_cannottosee_xty.jsp" />
+			<forward name="success"
+				path="/hzjy/hzjy_xsaz_xtyresult.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-合作教育安置-雇主信息变更审核结果修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/xsazbgxtyresultupdate"
+			parameter="xsazbgxtyresultupdate" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xsaz_xtyresult_update.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-学生成绩管理-参数设置>>>>>>>>>>>>>>>>>> -->
+		<action path="/xtyglscoreset" parameter="xtyglscoreset"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_scoreset.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-学生成绩管理-成绩录入>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyxtyglscoreinput"
+			parameter="hzjyxtyglscoreinput" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_scoreinput.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-学生成绩管理-成绩查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyxtyglscorequery"
+			parameter="hzjyxtyglscorequery" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_scorequery.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-带教学生-成绩维护>>>>>>>>>>>>>>>>>> -->
+		<action path="/scoreoperate"
+			parameter="scoreoperate" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/scoreoperate.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-学生成绩管理-成绩详细查看>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyxtyglscoremorequery"
+			parameter="hzjyxtyglscoremorequery"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_scoremorequery.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-学生成绩管理-成绩修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyxtyglscoreupdate"
+			parameter="hzjyxtyglscoreupdate" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_scoreupdate.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-学生成绩管理-学生查询成绩>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyxtyglstuqueryscore"
+			parameter="hzjyxtyglstuqueryscore" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_scorestuquery.jsp" />
+			<forward name="false" path="/hzjy/hzjy_cannottosee_stu.jsp" />
+		</action>
+
+
+
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-协调员工作管理-工作记录维护-录入>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyxtyglgzjlinput"
+			parameter="hzjyXtyglGzjlInput" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_gzjlinput.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-协调员工作管理-工作记录维护-查看及修改>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyxtyglgzjlupdate"
+			parameter="hzjyXtyglGzjlUpdate" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_gzjlupdate.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-协调员工作管理-工作记录维护-批量维护>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyxtyglgzjlallinput"
+			parameter="hzjyXtyglGzjlAllinput" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_gzjlallinput.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-协调员工作管理-工作记录维护-查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyxtyglgzjlquery"
+			parameter="hzjyXtyglGzjlQuery" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_gzjlquery.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-协调员工作管理-工作记录维护-详细查看>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyxtyglgzjlviewmore"
+			parameter="hzjyXtyglGzjlViewMore" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_gzjlviewmore.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-协调员工作管理-代教学生查询>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjyXtyglDjxsQuery"
+			parameter="hzjyXtyglDjxsQuery" type="xgxt.shgc.action.ShgcAction"
+			name="commanForm" scope="request">
+			<forward name="success"
+				path="/hzjy/hzjy_xtygl_djxsquery.jsp" />
+			<forward name="false"
+				path="/hzjy/cannottosee.jsp" />
+		</action>
+
+
+
+		<!-- <<<<<<<<<<<<<<<<<<<<上海工程：合作教育-添加安置信息>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/put_Info" parameter="put_Info" name="commanForm"
+			scope="request" type="xgxt.shgc.action.ShgcAction">
+			<forward name="success" path="/hzjy/hzjy_azxx.jsp"></forward>
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+
+
+
+		<!-- <<<<<<<<<<<<<<<<<<<上海工程：合作教育-报表打印-学期统计报告>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_bb_xqtjbg" parameter="hzjy_bb_xqtjbg"
+			name="commanForm" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="success" path="/shgc/hzjy_bb_xqtjbg.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<上海工程：合作教育-报表打印-学生安置表>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_bb_xsazb" parameter="hzjy_bb_xsazb"
+			name="commanForm" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="success" path="/shgc/hzjy_bb_xsazb.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<// TODO 上海工程：合作教育-合作教育评优-优秀学员申请>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/yx_stu_apply" parameter="yx_stu_apply"
+			name="commanForm" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="success" path="/shgc/"></forward>
+		</action>
+		<action path="/yx_operation_apply"
+			parameter="yx_operation_apply" name="commanForm" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="success" path="/shgc/"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_zxzx_Form" name="xljk_zxzx_Form"
+			parameter="XLJK_ZXZX" path="/XLJK_ZXZX" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_zxzxAtion">
+			<forward name="ApplyFor" path="/xljk_zxsxx.do" />
+			<forward name="CaseRecord" path="/xljk_aljl.do" />
+			<forward name="false" path="" />
+			<forward name="SearchForZXX" path="/xljk_zxsxx.do" />
+			<forward name="Yyzygl" path="/xljk_zxszyAtion.do" />
+			<forward name="Yyzycx" path="/xljk_yycx.do?act=zycx" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－咨询师信息>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_zxsxx_Form" name="xljk_zxsxx_Form"
+			path="/xljk_zxsxx" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_zxsxxAtion">
+			<forward name="ReturnToJsp_zxsxx"
+				path="/shgc/xljk/zxzx/xljk_zxsxx_index.jsp" />
+			<forward name="ApplyFor" path="/xljk_xssqyy.do" />
+			<forward name="insert" path="/xljk_zxsxx_add.do" />
+			<forward name="View" path="/xljk_zxsxx_view.do" />
+			<forward name="del" path="/xljk_zxsxx_del.do" />
+			<forward name="update" path="/xljk_zxsxx_update.do" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－案例记录>>>>>>>>>>>>>>>>>> -->
+		<action path="/xljk_aljl"
+			type="xgxt.xljk.zxzx.action.xljk_aljlAtion" />
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－预约申请－学生申请预约>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_zxsxx_Form" name="xljk_zxsxx_Form"
+			path="/xljk_xssqyy" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_xssqyyAtion">
+			<forward name="ReturnToJsp_xssqyy"
+				path="/shgc/xljk/zxzx/xljk_xssqyy_index.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－预约申请－咨询师资源>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_zxszy_Form" name="xljk_zxszy_Form"
+			path="/xljk_zxszyAtion" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_zxszyAtion">
+			<forward name="Zxszy_Add" path="/xljk_zxszy_add.do" />
+			<forward name="xssqyycx"
+				path="/shgc/xljk/zxzx/xljk_zxszy_zycx.jsp" />
+			<forward name="Return_To_IndexJsp"
+				path="/shgc/xljk/zxzx/xljk_zxszy_index.jsp" />
+			<forward name="zxszy_view"
+				path="/shgc/xljk/zxzx/xljk_zxszy_view.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－咨询师信息－增加咨询师信息>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_zxsxx_Form" name="xljk_zxsxx_Form"
+			path="/xljk_zxsxx_add" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_zxsxx_addAtion">
+			<forward name="zxsxx_add"
+				path="/shgc/xljk/zxzx/xljk_zxsxx_insert.jsp" />
+
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－咨询师信息－增加咨询师信息查看>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_zxsxx_Form" name="xljk_zxsxx_Form"
+			path="/xljk_zxsxx_view" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_zxsxx_viewAtion">
+			<forward name="zxsxx2_view"
+				path="/xljk/zgmsxy/zxs_queryOne.jsp" />
+			<forward name="zxsxx_view"
+				path="/shgc/xljk/zxzx/xljk_zxsxx_view.jsp" />		
+			<forward name="zxszy_pipei"
+				path="/shgc/xljk/zxzx/xljk_zxszy_update.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－咨询师信息－删除咨询师信息>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_zxsxx_Form" name="xljk_zxsxx_Form"
+			path="/xljk_zxsxx_del" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_zxsxx_delAtion">
+			<forward name="del_success"
+				path="/xljk_zxsxx.do?act=xljk_zxsxx&amp;doType=Search" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－咨询师信息－更新咨询师信息>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_zxsxx_Form" name="xljk_zxsxx_Form"
+			path="/xljk_zxsxx_update" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_zxsxx_updateAtion">
+			<forward name="update_sucess"
+				path="/xljk_zxsxx.do?act=xljk_zxsxx&amp;doType=Search" />
+			<forward name="zxsxx_update"
+				path="/shgc/xljk/zxzx/xljk_zxsxx_update.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<南宁职业：心理健康 - 在线咨询 - 咨询师信息 - 匹配咨询师>>>>>>>>>>>>>>>>>> -->
+		<action  name="xljk_zxspp_Form"
+			path="/xljk_zxsxx_pp" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_xzsxx_ppAction"
+			parameter="method"
+			>
+			<forward name="index"
+				path="/XLJK_ZXZX.do?act=xljk_zxsxx" />
+			<forward name="zxsPp"
+				path="/shgc/xljk/zxzx/xljk_zxspp.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-产学合作教育安置表>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzjy_azb" parameter="HZJYAZB"
+			type="xgxt.shgc.action.ShgcAction" name="commanForm"
+			scope="request">
+			<forward name="success" path="/shgc/hzjy_azb.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：学生信息-历届学生档案>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/stu_archives_history"
+			parameter="stu_archives_history"
+			type="xgxt.studentInfo.action.StuInfoAndArchives" 
+			name="ShgcForm"
+			scope="request">
+			<forward name="success" path="/shgc/stu_info/stu_archives_history.jsp" />
+			<forward name="page" path="/shgc/stu_info/stu_archives.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<上海工程：学生公寓管理功能 SQ增加 主查询页面初始化>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/init_page_info" parameter="init_page_info"
+			name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<上海工程：学生公寓管理功能 SQ增加 删除学生住宿分布情况>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/del_stu_dromDistribut"
+			parameter="del_stu_dromDistribut" name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+		</action>
+		<!-- <<<<<<<<<<<<<<上海工程：学生公寓管理功能 SQ增加 制定活动计划>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/active_plan_manage"
+			parameter="active_plan_manage" name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success" path="/shgc/xsgygl_hdjhb.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<上海工程：学生公寓管理功能 SQ增加 保存活动计划>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/saveHdjh" parameter="saveHdjh" name="ShgcForm"
+			scope="request" type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success"
+				path="/shgc/active_plan_manage.do">
+			</forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<上海工程：学生公寓管理功能 SQ增加 查看活动计划内容>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/hd_Content" parameter="hd_Content"
+			name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success"
+				path="/shgc/xsgygl_Hdjh_Content.jsp">
+			</forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<上海工程：学生公寓管理功能 SQ增加 显示活动计划列表>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/show_active_plan" parameter="show_active_plan"
+			name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success" path="/shgc/xsgygl_showhdjh.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<上海工程：学生公寓管理功能 SQ增加 增加学生住宿信息>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/stu_dromInfo" parameter="stu_dromInfo"
+			name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success" path="/shgc/xsgygl_xszsxx.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<上海工程：学生公寓管理功能 SQ增加 保存学生住宿信息>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/drom_DataModi" parameter="drom_DataModi"
+			name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+		</action>
+		<!-- <<<<<<<<<<<<<<上海工程：学生公寓管理功能 SQ增加 工程里弄-学生活动信息管理>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/stu_active_InfoManage"
+			parameter="stu_active_InfoManage" name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success"
+				path="/shgc/xsgygl_gcln_xshdxxb.jsp">
+			</forward>
+		</action>
+		<!-- <<<<<<<<<<<<<< 上海工程：学生公寓管理功能 SQ增加 工程里弄-删除学生活动信息>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/del_stu_ActiveInfo"
+			parameter="del_stu_ActiveInfo" name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+		</action>
+		<!-- <<<<<<<<<<<<<< 上海工程：学生公寓管理功能 SQ增加 工程里弄-增加学生活动信息>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/stu_ActiveInfo" parameter="stu_ActiveInfo"
+			name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success" path="/shgc/xsgygl_xshdxx.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<< 上海工程：学生公寓管理功能 SQ增加 工程里弄-保存学生活动信息>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/stuActive_DataModi"
+			parameter="stuActive_DataModi" name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+		</action>
+		<!-- <<<<<<<<<<<<<< 上海工程：学生公寓管理功能 SQ增加 工程里弄-添加学生活动记录>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/stu_active_thing" parameter="stu_active_thing"
+			name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success"
+				path="/shgc/xsgygl_gcln_xshdjl.jsp">
+			</forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<上海工程：学生公寓管理 SQ增加 工程里弄-学生活动评优申请>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/Ry_manager" parameter="Ry_manager"
+			name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success"
+				path="/gygl/gygl_xshdpy_apply.jsp">
+			</forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<SQ 公寓管理 - 工程里弄 - 学生活动评优申请 ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/dataSave" name="ShgcForm" parameter="dataSave"
+			scope="request" type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success" path="/Ry_manager.do"></forward>
+		</action>
+		<action path="/perfor_check" parameter="perfor_check"
+			name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success"
+				path="/gygl/gygl_xshdpy_check_one.jsp">
+			</forward>
+		</action>
+		<action path="/CheckSave" name="ShgcForm" parameter="CheckSave"
+			scope="request" type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success" path="/perfor_check.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<上海工程：TODO学生公寓管理 SQ增加 工程里弄-楼层长信息管理->>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/gygl_lczxx" parameter="gygl_lczxx"
+			name="ShgcForm" scope="request"
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success" path="/gygl/gygl_lczxx.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<上海工程：学生公寓管理 SQ增加 工程里弄-增加楼层长信息->>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/lcz_info" parameter="lcz_info" name="ShgcForm"
+			scope="request" type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success" path="/gygl/gygl_lczxxb.jsp"></forward>
+		</action>
+		<action 
+			path="/lczxxSave" 
+			parameter="lczxxSave" 
+			name="ShgcForm"
+			scope="request" 
+			type="xgxt.xsgygl.action.XsgyglAction">
+			<forward name="success" path="/lcz_info.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<< 上海工程：勤工助学管理功能 SQ增加 学生工作考核>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			path="/stu_work_checkInit"
+			parameter="stu_work_checkInit" 
+			name="ShgcForm" 
+			scope="request"
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<< 上海工程：勤工助学管理功能 SQ增加 学生工作记录>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			path="/stu_work_info" 
+			parameter="stu_work_info"
+			name="ShgcForm" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="shgcgzjl" path="/qgzx/shgc/qgzx_gzkh_one.jsp"/>
+			<forward name="success" path="/qgzx/qgzx_gzkh_one.jsp"/>
+			<forward name="zgmsxyGzjl" path="/qgzx/zgmsxy/qgzx_zgmsxy_gzkh_one.jsp"/>
+			<forward name="zjlgdxGzjl" path="/qgzx/zjlgdx/qgzx_zjlgdx_gzkh_one.jsp"/>			
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<上海工程：勤工助学　SQ增加　卡号申请>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/qgzx_kh_modiapply" 
+			parameter="stu_khmodi_Apply"
+			name="ShgcForm" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/qgzx/qgzx_khxgsq.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<上海工程：勤工助学　SQ增加　卡号审核>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/qgzx_kh_modicheck" 
+			parameter="stu_khmodi_Check"
+			name="ShgcForm" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/qgzx/qgzx_khxgsh.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<上海工程：勤工助学 SQ增加　保存申请>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/Savekhapply" 
+			parameter="stu_khapply_sava"
+			name="ShgcForm" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/qgzx_kh_modiapply.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<上海工程：勤工助学 SQ增加　单个审核卡号申请>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action 
+			path="/khModiCheckOne" 
+			parameter="khModiCheckOne"
+			name="ShgcForm" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/qgzx/qgzx_khxgsh_one.jsp"></forward>
+		</action>
+		<action 
+			path="/SaveStuKhxgChkOne" 
+			parameter="SaveStuKhxgChkOne"
+			name="ShgcForm" 
+			scope="request" 
+			type="xgxt.qgzx.action.QgzxAction">
+			<forward name="false" path="/errMsg.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<< 上海工程：违纪处分 SQ增加 跟踪教育>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action 
+			path="/edu_search" 
+			parameter="edu_search"
+			name="ShgcForm" 
+			scope="request" 
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_xygzjy.jsp"></forward>
+		</action>
+		<action 
+			path="/discip_check" 
+			parameter="discip_check"
+			name="ShgcForm" 
+			scope="request" 
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_xxsh.jsp"></forward>
+		</action>
+		<action 
+			path="/track_teach" 
+			parameter="track_teach"
+			name="ShgcForm" 
+			scope="request" 
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_gzjyb.jsp"></forward>
+		</action>
+		<action 
+			path="/SaveStuTrackTeach" 
+			parameter="SaveStuTrackTeach"
+			name="ShgcForm" 
+			scope="request" 
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="false" path="/errMsg.do"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－咨询师资源－增加咨询师资源>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_zxszy_Form" name="xljk_zxszy_Form"
+			path="/xljk_zxszy_add" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_zxszy_addAction">
+			<forward name="Add_Zxszy"
+				path="/shgc/xljk/zxzx/xljk_zxszy_add.jsp" />
+			<forward name="pipei_seccess"
+				path="/xljk_zxsxx_view.do?doType=View_Zxszy" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－咨询师资源－预约资源填写申请表>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_xssqyy_Form" name="xljk_xssqyy_Form"
+			path="/xljk_xssqyy_zysq" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_xssqyy_zysqAtion">
+			<!-- 
+				<forward name="check_index"
+				path="/shgc/xljk/zxzx/xljk_xssqyy_sqbtx.jsp" />
+			-->
+			<!-- 没有密码验证直接通过跳转到申请页面 -->
+			<!--  
+				path="/shgc/xljk/zxzx/xljk_xssqyy_stulog.jsp" />
+			-->
+			<forward name="check_sucess"
+				path="/shgc/xljk/zxzx/xljk_xssqyy_sqbtx.jsp" />
+			<forward name="table_detail"
+				path="/shgc/xljk/zxzx/xljk_yycx_tableDetail.jsp" />
+			<forward name="cacel_success"
+				path="/xljk_yycx.do?act=zycx&amp;doType=zycx_tec" />
+			<forward name="xljk_zxxyybb"
+				path="/shgc/xljk/zxzx/mjxy_zxsyybb.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-在线咨询－咨询师资源－预约查询>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_xssqyy_Form" name="xljk_xssqyy_Form"
+			path="/xljk_yycx" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_yycxAtion">
+			<forward name="IndexToJsp"
+				path="/shgc/xljk/zxzx/xljk_yycx_index.jsp" />
+			<forward name="IndexToJsp2"
+				path="/shgc/xljk/zxzx/xljk_yycx_index2.jsp" />
+			<forward name="table_detail"
+				path="/shgc/xljk/zxzx/xljk_yycx_tableDetail.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-心理协会会员>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_xlxhhy_form" name="xljk_xlxhhy_form"
+			path="/xljk_xlxhhy" scope="request"
+			type="xgxt.xljk.xlxh.action.xljk_xlxhhyAction">
+			<forward name="member_modi"
+				path="/shgc/xljk/xlxh/xljk_xlxhhy_modi.jsp" />
+			<forward name="member_insert"
+				path="/shgc/xljk/xlxh/xljk_xlxhhy_add.jsp" />
+			<forward name="stu_info"
+				path="/shgc/xljk/lrh_util_jsp/stu_info.jsp" />
+			<forward name="member_detail"
+				path="/shgc/xljk/xlxh/xljk_xlxhhy_detail.jsp" />
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/xlxh/xljk_xlxhhy_index.jsp" />
+		</action>
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 新生保险申请及申请结果查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="newStuInsureApply"
+			path="/newStuInsureApply" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/newStuInsureApply.jsp" />
+		</action>
+		<action name="commanForm" parameter="InsureAppSearch"
+			path="/InsureAppSearch" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/insureAppSearch.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<学生保险申请审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="insureAppAudit"
+			path="/InsureAppAudit" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/insureAppAudit.jsp" />
+		</action>
+		<action name="commanForm" parameter="insureChkOne"
+			path="/insureChkOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/insureChkOne.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<学生保险广东女子历年信息查询>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="insureHisQuery"
+			path="/insureHisQuery" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/qtsj/gdnzzy/insureHisQuery.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<学生信息：按班级导出投保信息>>>>>>>>>>>>> -->
+		<action path="/exp_tbinfo" type="xgxt.action.SubConfAction"
+			name="commanForm" parameter="insureInfo" scope="request"
+			validate="false">
+			<forward name="success" path="/sjcz/insure_info.jsp" />
+			<forward name="failure" path="/errMsg.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<学生处分申报 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="ShgcForm" parameter="stuPunishApp"
+			path="/stuPunishApp" scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/wjcf/stuPunishApp.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<<学生处分汇总统计 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="ShgcForm" parameter="method"
+			path="/wjcfHztj" scope="request" type="xgxt.wjcf.fjgc.WjcfFjgcHztjAction">
+			<forward name="wjcfHztj" path="/wjcf/fjgc/wjcfHztj.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<学生处分申报审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuPunishAudit"
+			path="/stuPunishAudit" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/wjcf/stuPunishAudit.jsp" />
+		</action>
+		<action name="commanForm" parameter="stuPunishAuditOne"
+			path="/stuPunishAuditOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/wjcf/stuPunishAuditOne.jsp" />
+		</action>
+
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-心理测试>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xilk_xlcsTkwh_form" name="xilk_xlcsTkwh_form"
+			path="/xljk_xlcs" scope="request"
+			type="xgxt.xljk.xlcs.action.xljk_xlcsAction">
+			<forward name="zxpc" path="/xljk_xlcs_zxpc.do" />
+			<forward name="pcjgcx" path="/xljk_xlcs_pcjgcx.do" />
+			<forward name="tkwh" path="/xljk_xlcs_tkwh.do" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-心理测试-题库维护>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xilk_xlcsTkwh_form" name="xilk_xlcsTkwh_form"
+			path="/xljk_xlcs_tkwh" scope="request"
+			type="xgxt.xljk.xlcs.action.xljk_xlcs_tkwhAction">
+			<forward name="yzfst"
+				path="/shgc/xljk/xlcs/yzfst.jsp" />
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/xlcs/test_paper_search.jsp" />
+			<forward name="view_sj" path="/shgc/xljk/xlcs/sjb_view.jsp" />
+			<forward name="add_sj" path="/shgc/xljk/xlcs/sjb_add.jsp" />
+			<forward name="modi_sj" path="/shgc/xljk/xlcs/sjb_modi.jsp" />
+			<forward name="st_index"
+				path="/shgc/xljk/xlcs/test_question_search.jsp" />
+			<forward name="st_add" path="/shgc/xljk/xlcs/stb_add.jsp" />
+			<forward name="st_search"
+				path="/shgc/xljk/xlcs/test_question_search.jsp" />
+			<forward name="st_view" path="/shgc/xljk/xlcs/stb_view.jsp" />
+			<forward name="st_modi" path="/shgc/xljk/xlcs/stb_modi.jsp" />
+			<forward name="stsslb_pipei"
+				path="/shgc/xljk/xlcs/stb_stlb_pipei.jsp" />
+			<forward name="st_xx_index"
+				path="/shgc/xljk/xlcs/test_option_search.jsp" />
+			<forward name="st_xx_view"
+				path="/shgc/xljk/xlcs/xxb_view.jsp" />
+			<forward name="st_xx_add"
+				path="/shgc/xljk/xlcs/xxb_add.jsp" />
+			<forward name="st_xx_modi"
+				path="/shgc/xljk/xlcs/xxb_modi.jsp" />
+			<forward name="zjwh"
+				path="/shgc/xljk/xlcs/test_paperQuestion_search.jsp" />
+			<forward name="sjst_search"
+				path="/shgc/xljk/xlcs/test_paperQuestion_search.jsp" />
+			<forward name="sjst_view"
+				path="/shgc/xljk/xlcs/sjst_view.jsp" />
+			<forward name="sjst_zj_wh" path="/shgc/xljk/xlcs/sjstb.jsp" />
+			<forward name="sjst_st_search"
+				path="/shgc/xljk/xlcs/sjst_st_search_add.jsp" />
+			<forward name="common_exp"
+				path="/about:black" />
+				
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-心理测试-在线普测>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xilk_zxpc_form" name="xilk_zxpc_form"
+			path="/xljk_xlcs_zxpc" scope="request"
+			type="xgxt.xljk.xlcs.action.xljk_xlcs_zxpcAction">
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/xlcs/test_online.jsp" />
+			<forward name="sj_view" path="/shgc/xljk/xlcs/sjb_view.jsp" />
+			<forward name="test_paper_create"
+				path="/shgc/xljk/xlcs/test_online_paper.jsp" />
+			<forward name="check_index"
+				path="/shgc/xljk/xlcs/test_online_stulog.jsp" />
+			<forward name="applyed"
+				path="/xljk_xlcs_zxpc.do?act=zxpc&amp;doType=sj_search" />
+			<forward name="test_gxzcsj"
+				path="/shgc/xljk/xlcs/test_gxzcsj.jsp">
+			</forward>
+			<forward name="test_onebyone"
+				path="/shgc/xljk/xlcs/test_onebyone.jsp">
+			</forward>
+			<forward name="test_result_show"
+				path="/shgc/xljk/xlcs/test_result_show.jsp">
+			</forward>
+			<forward name="test_onebyone_xljk"
+				path="/shgc/xljk/xlcs/test_onebyone_xljk.jsp">
+			</forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-心理测试-普测结果查询>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xilk_zxpc_form" name="xilk_zxpc_form"
+			path="/xljk_xlcs_pcjgcx" scope="request"
+			type="xgxt.xljk.xlcs.action.xljk_xlcs_pcjgcxAction">
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/xlcs/pcjgcx_cjcx.jsp" />
+			<forward name="stu_info"
+				path="/xljk_stu_info.do?act=stu_util&amp;doType=stu_info" />
+			<forward name="cjb_view"
+				path="/shgc/xljk/xlcs/pcjgcx_cjb_view.jsp" />
+			<forward name="dtjlb_search"
+				path="/shgc/xljk/xlcs/pcjgcx_dtjlcx.jsp" />
+			<forward name="dtjgfxb_search"
+				path="/shgc/xljk/xlcs/pcjgcx_csfx.jsp" />
+			<forward name="cjb_search_xljk"
+				path="/shgc/xljk/xlcs/cjb_search_xljk.jsp">
+			</forward>
+			<forward name="stumoreinfo"
+				path="/shgc/xljk/xlcs/stumoreinfo.jsp">
+			</forward>
+			<forward name="cjb_search_gxcs"
+				path="/shgc/xljk/xlcs/cjb_search_gxcs.jsp">
+			</forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-用户查询学生的工具Action>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_xlxhhy_form" name="xljk_xlxhhy_form"
+			path="/xljk_stu_info" scope="request"
+			type="xgxt.xljk.lrh_Util.action.stu_infoAction">
+			<forward name="stu_info"
+				path="/shgc/xljk/lrh_util_jsp/xlcs_pcjgcx_stuinfo.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-学生心理协会-心理协会活动>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_xlxhhd_from" name="xljk_xlxhhd_from"
+			path="/xljk_xlxhhd" scope="request"
+			type="xgxt.xljk.xlxh.action.xljk_xlxhhdAction">
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/xlxh/xljk_xlxhhd_index.jsp" />
+			<forward name="xlxhhd_add"
+				path="/shgc/xljk/xlxh/xljk_xlxhhd_add.jsp" />
+			<forward name="xlxhhd_view"
+				path="/shgc/xljk/xlxh/xljk_xlxhhd_view.jsp" />
+			<forward name="xlxhhd_modi"
+				path="/shgc/xljk/xlxh/xljk_xlxhhd_modi.jsp" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-学院心理健康管理-学生心理观察员>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_xyxljkjyry_from"
+			name="xljk_xyxljkjyry_from" path="/xljk_xsxlgcy" scope="request"
+			type="xgxt.xljk.xyxljkgl.action.xljk_xsxlgcyAction">
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/xyxljkgl/xsxlgcy_index.jsp" />
+			<forward name="gcy_add"
+				path="/shgc/xljk/xyxljkgl/xsxlgcy_add.jsp" />
+			<forward name="stu_info"
+				path="/xljk_stu_info.do?act=stu_util&amp;doType=stu_info" />
+			<forward name="gcy_view"
+				path="/shgc/xljk/xyxljkgl/xsxlgcy_view.jsp" />
+			<forward name="gcy_modi"
+				path="/shgc/xljk/xyxljkgl/xsxlgcy_modi.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-学院心理健康管理-心理健康辅导员>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_xyxljkjyry_from"
+			name="xljk_xyxljkjyry_from" path="/xljk_xljkfdy" scope="request"
+			type="xgxt.xljk.xyxljkgl.action.xljk_xljkfdyAction">
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/xyxljkgl/xyxlfdy_index.jsp" />
+			<forward name="fdy_add"
+				path="/shgc/xljk/xyxljkgl/xyxlfdy_add.jsp" />
+			<forward name="fdy_view"
+				path="/shgc/xljk/xyxljkgl/xyxlfdy_view.jsp" />
+			<forward name="fdy_modi"
+				path="/shgc/xljk/xyxljkgl/xyxlfdy_modi.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-学院心理健康管理-学院心理健康教育活动>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_xyxljkjyhd_from"
+			name="xljk_xyxljkjyhd_from" path="/xljk_xyxljkjyhd" scope="request"
+			type="xgxt.xljk.xyxljkgl.action.xljk_xyxljkjyhdAction">
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/xyxljkgl/xyxljkjyhd_index.jsp" />
+			<forward name="xyxljkjyhd_add"
+				path="/shgc/xljk/xyxljkgl/xyxljkjyhd_add.jsp" />
+			<forward name="xyxljkjyhd_view"
+				path="/shgc/xljk/xyxljkgl/xyxljkjyhd_view.jsp" />
+			<forward name="xyxljkjyhd_modi"
+				path="/shgc/xljk/xyxljkgl/xyxljkjyhd_modi.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<云南艺术：日常管理-日常行为信息>>>>>>>>>>>>>>>>>> -->
+		<action attribute="rcgl_rcxw_from" name="rcgl_rcxw_from"
+			path="/rcgl_rcxw" scope="request"
+			type="xgxt.rcgl.rcxwxx.action.rcgl_rcxw_action">
+			<forward name="index_to_jsp"
+				path="/shgc/rcgl/rcxwxx/rcxwxx_index.jsp" />
+			<forward name="stu_info"
+				path="/xljk_stu_info.do?act=stu_util&amp;doType=stu_info" />
+			<forward name="rcxw_add"
+				path="/shgc/rcgl/rcxwxx/rcxwxx_add.jsp" />
+			<forward name="rcxw_view"
+				path="/shgc/rcgl/rcxwxx/rcxwxx_view.jsp" />
+			<forward name="rcxw_modi"
+				path="/shgc/rcgl/rcxwxx/rcxwxx_modi.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<云南艺术：日常管理-学生收假报到>>>>>>>>>>>>>>>>>> -->
+		<action attribute="rcgl_sfbd_form" name="rcgl_sfbd_form"
+			path="/rcgl_sfbd" scope="request"
+			type="xgxt.rcgl.sfbd.action.rcgl_sfbd_action">
+			<forward name="index_to_jsp"
+				path="/shgc/rcgl/sfbd/sfbd_index.jsp" />
+			<forward name="sfbd_add"
+				path="/shgc/rcgl/sfbd/sfbd_add.jsp" />
+			<forward name="stu_info"
+				path="/xljk_stu_info.do?act=stu_util&amp;doType=stu_info" />
+			<forward name="sfbd_view"
+				path="/shgc/rcgl/sfbd/sfbd_view.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<云南艺术：日常管理-诚信信息>>>>>>>>>>>>>>>>>> -->
+		<action attribute="rcgl_xscx_form" name="rcgl_xscx_form"
+			path="/rcgl_xscx" scope="request"
+			type="xgxt.rcgl.xscx.action.rcgl_xscx_action">
+			<forward name="index_to_jsp"
+				path="/shgc/rcgl/xscx/xscx_index.jsp" />
+			<forward name="xscx_add"
+				path="/shgc/rcgl/xscx/xscx_add.jsp" />
+			<forward name="stu_info"
+				path="/xljk_stu_info.do?act=stu_util&amp;doType=stu_info" />
+			<forward name="xscx_view"
+				path="/shgc/rcgl/xscx/xscx_view.jsp" />
+			<forward name="xscx_modi"
+				path="/shgc/rcgl/xscx/xscx_modi.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<云南艺术：日常管理-思想品德表现信息>>>>>>>>>>>>>>>>>> -->
+		<action attribute="rcgl_xspd_form" name="rcgl_xspd_form"
+			path="/rcgl_xspd" scope="request"
+			type="xgxt.rcgl.xspd.action.rcgl_xspd_action">
+			<forward name="index_to_jsp"
+				path="/shgc/rcgl/xspd/xspd_index.jsp" />
+			<forward name="xspd_add"
+				path="/shgc/rcgl/xspd/xspd_add.jsp" />
+			<forward name="stu_info"
+				path="/xljk_stu_info.do?act=stu_util&amp;doType=stu_info" />
+			<forward name="xspd_view"
+				path="/shgc/rcgl/xspd/xspd_view.jsp" />
+			<forward name="xspd_modi"
+				path="/shgc/rcgl/xspd/xspd_modi.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<云南艺术：日常管理-入学教育信息>>>>>>>>>>>>>>>>>> -->
+		<action attribute="rcgl_rxjy_form" name="rcgl_rxjy_form"
+			path="/rcgl_rxjy" scope="request"
+			type="xgxt.rcgl.rxjy.action.rcgl_rxjy_action">
+			<forward name="index_to_jsp"
+				path="/shgc/rcgl/rxjy/rxjy_index.jsp">
+			</forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：心理健康-心理困惑学生管理-心理困惑学生信息>>>>>>>>>>>>>>>>>> -->
+		<action attribute="xljk_xlkhxs_form" name="xljk_xlkhxs_form"
+			path="/xljk_xlkhxs" scope="request"
+			type="xgxt.xljk.xlkhxs.action.xljk_xlkhxsAction">
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/xlkhxs/xlkhxsxx_index.jsp" />
+			<forward name="xlkhxs_add"
+				path="/shgc/xljk/xlkhxs/xlkhxsxx_add.jsp" />
+			<forward name="stu_info"
+				path="/xljk_stu_info.do?act=stu_util&amp;doType=stu_info" />
+			<forward name="xlkhxs_view"
+				path="/shgc/xljk/xlkhxs/xlkhxsxx_view.jsp" />
+			<forward name="xlkhxs_modi"
+				path="/shgc/xljk/xlkhxs/xlkhxsxx_modi.jsp" />
+			<forward name="xlkhxs_pcjg_view"
+				path="/xljk_xlcs_pcjgcx.do?act=pcjgcx&amp;doType=xlkhxs_pcjg_view" />
+			<forward name="xlkhxs_ftjl_view"
+				path="/xljk_xlkhxsftjl.do?act=xljk_xlkhxsftjl&amp;doType=xlkhxs_ftjl_view" />
+		</action>
+
+
+		<action attribute="xljk_xlkhxs_form" name="xljk_xlkhxs_form"
+			path="/xljk_xlkhxsftjl" scope="request"
+			type="xgxt.xljk.xlkhxs.action.xljk_xlkhxsftjlAction">
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/xlkhxs/xlkhxsftjl_index.jsp" />
+			<forward name="stu_info"
+				path="/xljk_stu_info.do?act=stu_util&amp;doType=stu_info" />
+			<forward name="xlkhxsftjl_add"
+				path="/shgc/xljk/xlkhxs/xlkhxsfjl_add.jsp" />
+			<forward name="xlkhxsftjl_view"
+				path="/shgc/xljk/xlkhxs/xlkhxsftjl_view.jsp" />
+			<forward name="xlkhxsftjl_modi"
+				path="/shgc/xljk/xlkhxs/xlkhxsftjl_modi.jsp" />
+		</action>
+
+		<action attribute="xljk_zxszy_Form" name="xljk_zxszy_Form"
+			path="/xljk_zxzx_dmwh" scope="request"
+			type="xgxt.xljk.zxzx.action.xljk_zxzx_dmwhAtion">
+			<forward name="index_to_jsp"
+				path="/shgc/xljk/zxzx/zxzx_dmwh_index.jsp" />
+			<forward name="sjd_add"
+				path="/shgc/xljk/zxzx/zxzx_dmwh_sjdadd.jsp" />
+			<forward name="sjd_modi"
+				path="/shgc/xljk/zxzx/zxzx_dmwh_sjdmodi.jsp" />
+			<forward name="dd_add"
+				path="/shgc/xljk/zxzx/zxzx_dmwh_ddadd.jsp" />
+			<forward name="dd_modi"
+				path="/shgc/xljk/zxzx/zxzx_dmwh_ddmodi.jsp" />
+			<!--  教育形式的单个数据维护  -->	
+			<forward name="jyxs_queryOne"
+				path="/shgc/xljk/zxzx/jyxs_queryOne.jsp" />	
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<上海工程：合作教育-资格认定-学生信息录入>>>>>>>>>>>>>>>>>> -->
+		<action parameter="xsjbxxinput" name="commanForm"
+			path="/xsjbxx_input_webopen" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/xsjbxx_input.jsp" />
+		</action>
+		<!-- <<<上海工程：合作教育-资格认定-学生信息录入-保存>>> -->
+		<action parameter="xsjbxxinput" name="commanForm"
+			path="/xsjbxx_input_save" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/xsjbxx_input.jsp" />
+		</action>
+		<!-- <<<上海工程：合作教育-资格认定-学生信息查询>>> -->
+		<action parameter="xsjbxxquery" name="commanForm"
+			path="/xsjbxx_input_query" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/xsjbxx_query.jsp" />
+		</action>
+		<!-- <<<上海工程：合作教育-资格认定-学生信息查询-删除>>> -->
+		<action parameter="xsjbxxquery" name="commanForm"
+			path="/xsjbxx_delete" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/xsjbxx_query.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<上海工程：合作教育-学生信息批量录入>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action name="commanForm" parameter="xsjbxxpllr"
+			path="/xsjbxxpllr" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="success" path="/hzjy/xsjbxxpllr.jsp" />
+		</action>
+		<!-- <<<上海工程：合作教育-资格认定-学生信息查询-查看详细信息>>> -->
+		<action parameter="xsjbxxViewMore" name="commanForm"
+			path="/xsjbxx_morequery" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/xsjbxx_morequery.jsp" />
+		</action>
+		<!-- <<<上海工程：合作教育-资格认定-学生信息查询-修改>>> -->
+		<action parameter="xsjbxxUpdate" name="commanForm"
+			path="/xsjbxxUpdate" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/hzjy/xsjbxx_update.jsp" />
+		</action>
+		<!-- <<<上海工程：合作教育-资格认定-学生信息录入-数据导出>>> -->
+		<action parameter="hzjyDataExport" name="commanForm"
+			path="/hzjyxsjbxxDataExport" scope="request"
+			type="xgxt.shgc.action.ShgcAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<LP日常事务: 补办审核查询公共模块>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/bbsh_Search" parameter="bbsh_Search"
+			name="rcgl_form" scope="request" type="xgxt.rcgl.rcgl_action">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/shgc/rcgl/rcgl_dtsch.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<LP日常事务: 补办审核公共模块>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/bb_shOne" parameter="bb_shOne" name="rcgl_form"
+			scope="request" type="xgxt.rcgl.rcgl_action">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<<LR日常事务: 广州城建学费催缴>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/gzcjXfcj" parameter="gzcjXfcj" name="rcgl_form"
+			scope="request" type="xgxt.rcgl.rcgl_action">
+			<forward name="success" path="/rcsw/gzcj/xfcjb.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<LR日常事务: 广州城建学费催缴 show page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/viewXfcj" parameter="viewXfcj" name="rcgl_form"
+			scope="request" type="xgxt.rcgl.rcgl_action">
+			<forward name="success" path="/rcsw/gzcj/xfcjb.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<<LR日常事务: 广州城建学费缓缴>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/gzcjXfhj" parameter="gzcjXfhj" name="rcgl_form"
+			scope="request" type="xgxt.rcgl.rcgl_action">
+			<forward name="success" path="/rcsw/gzcj/xfhjb.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<LR日常事务: 广州城建学费缓缴 show page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/viewXfhj" parameter="viewXfhj" name="rcgl_form"
+			scope="request" type="xgxt.rcgl.rcgl_action">
+			<forward name="success" path="/wjcf/jxkhxxb.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护-处分后表现主题班会记录>>> -->
+		<action parameter="wjcf_ZtBhGl" name="ShgcForm"
+			path="/wjcf_ZtBhGl" type="xgxt.wjcf.WjcfAction" scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/wjcf/zzsf/wjcf_ztbhgl.jsp" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护-处分后表现主题班会记录-加载会议记录>>> -->
+		<action parameter="wjcf_ZtBhGl_load" name="ShgcForm"
+			path="/wjcf_ZtBhGl_load" type="xgxt.wjcf.WjcfAction"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/zzsf/wjcf_ztbhgl_add.jsp" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护-处分后表现主题班会记录-增，删，改>>> -->
+		<action parameter="wjcf_ZtBhGl_oper" name="ShgcForm"
+			path="/wjcf_ZtBhGl_oper" type="xgxt.wjcf.WjcfAction"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/zzsf/wjcf_ztbhgl_add.jsp" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护-处分后表现主题班会记录-显示违纪学生学号>>> -->
+		<action parameter="wjcf_stuinfo" name="ShgcForm"
+			path="/wjcf_stuinfo" type="xgxt.wjcf.WjcfAction" scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/wjcf/zzsf/wjcf_stuinfo.jsp" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护-处分后表现主题班会记录-学生信息打印>>> -->
+		<action parameter="wjcf_ZtBhGl_print" name="ShgcForm"
+			path="/wjcf_ZtBhGl_print" type="xgxt.wjcf.WjcfAction"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/zzsf/wjcf_ztbhgl_print.jsp" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护－违纪处分信息流程图>>> -->
+		<action parameter="wjcf_Xxlct" name="ShgcForm"
+			path="/wjcf_Xxlct" type="xgxt.wjcf.WjcfAction" scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/wjcf/zzsf/wjcf_xxlct.jsp" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护－违纪处分不归档>>> -->
+		<action parameter="wjcf_BgdGl" name="ShgcForm"
+			path="/wjcf_BgdGl" type="xgxt.wjcf.WjcfAction" scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/wjcf/zzsf/wjcf_bgdgl.jsp" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护－违纪处分不归档信息增加页面>>> -->
+		<action parameter="wjcf_BgdLoad" name="ShgcForm"
+			path="/wjcf_BgdLoad" type="xgxt.wjcf.WjcfAction" scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/zzsf/wjcf_bgdgl_add.jsp" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护－违纪处分不归档信息增,删，改>>> -->
+		<action parameter="wjcf_BgdOper" name="ShgcForm"
+			path="/wjcf_BgdOper" type="xgxt.wjcf.WjcfAction" scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/zzsf/wjcf_bgdgl_add.jsp" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护－违纪处分不归档条件筛选>>> -->
+		<action parameter="wjcf_BgdTjSx" name="ShgcForm"
+			path="/wjcf_BgdTjSx" type="xgxt.wjcf.WjcfAction" scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/zzsf/wjcf_bgdgl_tjsx.jsp" />
+		</action>
+		<!-- <<<上海工程：违纪处分-数据维护－违纪处分不归档打印>>> -->
+		<action parameter="wjcf_BgdPrint" name="ShgcForm"
+			path="/wjcf_BgdPrint" type="xgxt.wjcf.WjcfAction" scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/zzsf/wjcf_bgdgl_print.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<西北二民院:学生处分申报校党委审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuPunishAuditByFsj"
+			path="/stuPunishAuditByFsj" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/xbemy/stuPunishAuditByFsj.jsp" />
+		</action>
+		<action name="commanForm" parameter="stuPunishAuditOneByFsj"
+			path="/stuPunishAuditOneByFsj" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/xbemy/stuPunishAuditOneByFsj.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<西北二民院:学生处分申报校长审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuPunishAuditByXz"
+			path="/stuPunishAuditByXz" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/xbemy/stuPunishAuditByXz.jsp" />
+		</action>
+		<action name="commanForm" parameter="stuPunishAuditOneByXz"
+			path="/stuPunishAuditOneByXz" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/wjcf/xbemy/stuPunishAuditOneByXz.jsp" />
+		</action>
+		
+	</action-mappings>
+
+	<message-resources key="shgc"
+		parameter="xgxt.base.shgcAppResources" />
+</struts-config>

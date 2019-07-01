@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/direct_to_bl.do" location="0,0" dimension="196,84" />
+  <StrutsActivity path="/save_js_bl.do" location="296,0" dimension="196,84" />
+  <StrutsActivity path="/pjpy/xnmz/set_condition_bl.jsp" location="133,184" dimension="226,48" />
+  <StrutsActivity path="/about:blank" location="650,150" dimension="112,48" />
+  <StrutsActivity path="/test.do" location="950,50" dimension="220,84" />
+  <StrutsTransition id="/direct_to_bl.do,success,/pjpy/xnmz/set_condition_bl.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="98,84" />
+      <AbsolutePoint location="98,134" />
+      <AbsolutePoint location="189,134" />
+      <AbsolutePoint location="189,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/test.do,success,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1060,134" />
+      <AbsolutePoint location="1060,174" />
+      <AbsolutePoint location="762,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/test_do.do,success,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,183" />
+      <AbsolutePoint location="762,183" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/save_js_bl.do,success,/pjpy/xnmz/set_condition_bl.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="394,84" />
+      <AbsolutePoint location="394,134" />
+      <AbsolutePoint location="302,134" />
+      <AbsolutePoint location="302,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

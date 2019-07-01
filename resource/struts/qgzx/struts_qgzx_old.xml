@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="qgzxTyForm" type="xgxt.qgzx.QgzxTyForm"/>
+		<form-bean name="qgzxGwfbForm" type="xgxt.qgzx.form.QgzxGwfbForm"/>		
+	</form-beans>
+	
+	<action-mappings>		
+		<!-- 临时岗位 -->
+    	<action path="/gzdx_qgzx_lsgw_fp" 	forward="/gzdxQgzx.do?method=lsgwfpManage"/>	<!-- 岗位分配 -->
+		<action path="/gzdx_qgzx_lsgw_jg" 	forward="/gzdxQgzx.do?method=lsgwjgManage"/>	<!-- 结果查询 -->
+		
+    	
+    	<action path="/gzdxQgzx" 
+        		parameter="method"  
+        		name="qgzxTyForm" 
+        		scope="request"
+		        type="xgxt.qgzx.gzdx.QgzxGzdxAction">
+		<!-- 临时岗位 -->        
+		<forward name="lsgwfpManage"    	path="/qgzx/gzdx/lsgwfpManage.jsp" />	<!-- 岗位分配 -->
+		<forward name="lsgwjgManage"    	path="/qgzx/gzdx/lsgwjgManage.jsp" />	<!-- 结果查询 -->		
+		<!-- 勤工助学积极份子 -->
+		<forward name="jjfzsb"  path="/qgzx/gzdx/qgzxjjfzsb.jsp" />
+		<forward name="jjfzjgcx"  path="/qgzx/gzdx/jjfzjgcx.jsp" />
+		<forward name="jjfzSh"  path="/qgzx/gzdx/jjfzSh.jsp" />
+		<forward name="jjfzShOne"  path="/qgzx/gzdx/jjfzShOne.jsp" />
+		<forward name="jjfzModi"  path="/qgzx/gzdx/jjfzModi.jsp" />
+		<forward name="jjfzsbByYrdw" path="/qgzx/gzdx/jjfzsbByYrdw.jsp"/>
+		</action>
+		
+		<action path="/qgzxgwfb" forward="/gwfb.do?method=gwfb"/>	<!-- 岗位发布 -->
+		<action path="/gwfb" 
+        		parameter="method"  
+        		name="qgzxGwfbForm" 
+        		scope="request"
+		        type="xgxt.qgzx.action.QgzxGwfbglAction">		
+		<forward name="gwfb" path="/qgzx/gwfb.jsp"/>
+		<forward name="xwgwfb" path="/qgzx/mjxy/xwgwfb.jsp"/>	
+		<forward name="gwxx" path="/qgzx/gwxx.jsp"/>
+		<forward name="xwgwxx" path="/qgzx/mjxy/xwgwxx.jsp"/>	
+		<forward name="gwfbsh" path="/qgzx/gwfbsh.jsp"/>
+		<forward name="xwgwfbsh" path="/qgzx/mjxy/xwgwfbsh.jsp"/>
+		</action>
+	
+	</action-mappings>
+
+</struts-config>

@@ -1,0 +1,3791 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?mso-application progid="Word.Document"?>
+<w:wordDocument xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:wsp="http://schemas.microsoft.com/office/word/2003/wordml/sp2" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
+<w:ignoreElements w:val="http://schemas.microsoft.com/office/word/2003/wordml/sp2"/>
+<w:fonts>
+<w:defaultFonts w:ascii="Times New Roman" w:fareast="宋体" w:h-ansi="Times New Roman" w:cs="Times New Roman"/>
+<w:font w:name="宋体">
+<w:altName w:val="SimSun"/>
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="黑体">
+<w:altName w:val="SimHei"/>
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000001" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="仿宋_GB2312">
+<w:panose-1 w:val="02010609030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="00000001" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@宋体">
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@仿宋_GB2312">
+<w:panose-1 w:val="02010609030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="00000001" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@黑体">
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000001" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+</w:fonts>
+<w:styles>
+<w:versionOfBuiltInStylenames w:val="4"/>
+<w:latentStyles w:defLockedState="off" w:latentStyleCount="156"/>
+<w:style w:type="paragraph" w:default="on" w:styleId="a">
+<w:name w:val="Normal"/>
+<wx:uiName wx:val="正文"/>
+<w:rsid w:val="00981589"/>
+<w:pPr>
+<w:widowControl w:val="off"/>
+<w:jc w:val="both"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:kern w:val="2"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="24"/>
+<w:lang w:val="EN-US" w:fareast="ZH-CN" w:bidi="AR-SA"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:default="on" w:styleId="a0">
+<w:name w:val="Default Paragraph Font"/>
+<wx:uiName wx:val="默认段落字体"/>
+<w:semiHidden/>
+</w:style>
+<w:style w:type="table" w:default="on" w:styleId="a1">
+<w:name w:val="Normal Table"/>
+<wx:uiName wx:val="普通表格"/>
+<w:semiHidden/>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+</w:rPr>
+<w:tblPr>
+<w:tblInd w:w="0" w:type="dxa"/>
+<w:tblCellMar>
+<w:top w:w="0" w:type="dxa"/>
+<w:left w:w="108" w:type="dxa"/>
+<w:bottom w:w="0" w:type="dxa"/>
+<w:right w:w="108" w:type="dxa"/>
+</w:tblCellMar>
+</w:tblPr>
+</w:style>
+<w:style w:type="list" w:default="on" w:styleId="a2">
+<w:name w:val="No List"/>
+<wx:uiName wx:val="无列表"/>
+<w:semiHidden/>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a3">
+<w:name w:val="Balloon Text"/>
+<wx:uiName wx:val="批注框文本"/>
+<w:basedOn w:val="a"/>
+<w:semiHidden/>
+<w:rsid w:val="00244B07"/>
+<w:pPr>
+<w:pStyle w:val="a3"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a4">
+<w:name w:val="header"/>
+<wx:uiName wx:val="页眉"/>
+<w:basedOn w:val="a"/>
+<w:rsid w:val="00216935"/>
+<w:pPr>
+<w:pStyle w:val="a4"/>
+<w:pBdr>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="1" w:color="auto"/>
+</w:pBdr>
+<w:tabs>
+<w:tab w:val="center" w:pos="4153"/>
+<w:tab w:val="right" w:pos="8306"/>
+</w:tabs>
+<w:snapToGrid w:val="off"/>
+<w:jc w:val="center"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a5">
+<w:name w:val="footer"/>
+<wx:uiName wx:val="页脚"/>
+<w:basedOn w:val="a"/>
+<w:rsid w:val="00216935"/>
+<w:pPr>
+<w:pStyle w:val="a5"/>
+<w:tabs>
+<w:tab w:val="center" w:pos="4153"/>
+<w:tab w:val="right" w:pos="8306"/>
+</w:tabs>
+<w:snapToGrid w:val="off"/>
+<w:jc w:val="left"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="a6">
+<w:name w:val="Hyperlink"/>
+<wx:uiName wx:val="超链接"/>
+<w:basedOn w:val="a0"/>
+<w:rsid w:val="00CC4E8E"/>
+<w:rPr>
+<w:color w:val="0000FF"/>
+<w:u w:val="single"/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a7">
+<w:name w:val="Document Map"/>
+<wx:uiName wx:val="文档结构图"/>
+<w:basedOn w:val="a"/>
+<w:semiHidden/>
+<w:rsid w:val="00032BA2"/>
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:shd w:val="clear" w:color="auto" w:fill="000080"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+</w:rPr>
+</w:style>
+</w:styles>
+<w:shapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="5122"/>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1"/>
+</o:shapelayout>
+</w:shapeDefaults>
+<w:docPr>
+<w:view w:val="print"/>
+<w:zoom w:percent="100"/>
+<w:bordersDontSurroundHeader/>
+<w:bordersDontSurroundFooter/>
+<w:attachedTemplate w:val=""/>
+<w:defaultTabStop w:val="420"/>
+<w:drawingGridHorizontalSpacing w:val="105"/>
+<w:drawingGridVerticalSpacing w:val="156"/>
+<w:displayHorizontalDrawingGridEvery w:val="0"/>
+<w:displayVerticalDrawingGridEvery w:val="2"/>
+<w:punctuationKerning/>
+<w:characterSpacingControl w:val="CompressPunctuation"/>
+<w:optimizeForBrowser/>
+<w:validateAgainstSchema/>
+<w:saveInvalidXML w:val="off"/>
+<w:ignoreMixedContent w:val="off"/>
+<w:alwaysShowPlaceholderText w:val="off"/>
+<w:hdrShapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="5122"/>
+</w:hdrShapeDefaults>
+<w:footnotePr>
+<w:footnote w:type="separator">
+<w:p wsp:rsidR="00D65E99" wsp:rsidRDefault="00D65E99">
+<w:r>
+<w:separator/>
+</w:r>
+</w:p>
+</w:footnote>
+<w:footnote w:type="continuation-separator">
+<w:p wsp:rsidR="00D65E99" wsp:rsidRDefault="00D65E99">
+<w:r>
+<w:continuationSeparator/>
+</w:r>
+</w:p>
+</w:footnote>
+</w:footnotePr>
+<w:endnotePr>
+<w:endnote w:type="separator">
+<w:p wsp:rsidR="00D65E99" wsp:rsidRDefault="00D65E99">
+<w:r>
+<w:separator/>
+</w:r>
+</w:p>
+</w:endnote>
+<w:endnote w:type="continuation-separator">
+<w:p wsp:rsidR="00D65E99" wsp:rsidRDefault="00D65E99">
+<w:r>
+<w:continuationSeparator/>
+</w:r>
+</w:p>
+</w:endnote>
+</w:endnotePr>
+<w:compat>
+<w:spaceForUL/>
+<w:balanceSingleByteDoubleByteWidth/>
+<w:doNotLeaveBackslashAlone/>
+<w:ulTrailSpace/>
+<w:doNotExpandShiftReturn/>
+<w:adjustLineHeightInTable/>
+<w:breakWrappedTables/>
+<w:snapToGridInCell/>
+<w:wrapTextWithPunct/>
+<w:useAsianBreakRules/>
+<w:useWord2002TableStyleRules/>
+<w:useFELayout/>
+</w:compat>
+<wsp:rsids>
+<wsp:rsidRoot wsp:val="00F53DC6"/>
+<wsp:rsid wsp:val="001F4377"/>
+<wsp:rsid wsp:val="00480D5F"/>
+<wsp:rsid wsp:val="00D65E99"/>
+<wsp:rsid wsp:val="00E1566E"/>
+<wsp:rsid wsp:val="00F53DC6"/>
+</wsp:rsids>
+</w:docPr>
+<w:body>
+<wx:sect>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:color w:val="FF0000"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:b/>
+<w:sz w:val="36"/>
+<w:sz-cs w:val="36"/>
+</w:rPr>
+<w:t>湖北省（</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:b/>
+<w:sz w:val="36"/>
+<w:sz-cs w:val="36"/>
+</w:rPr>
+<w:t>${zzjg.xn!}</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:b/>
+<w:sz w:val="36"/>
+<w:sz-cs w:val="36"/>
+</w:rPr>
+<w:t>学年）国家励志奖学金申请审批表</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:adjustRightInd w:val="off"/>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:before-lines="100"/>
+<w:rPr>
+<w:rFonts w:ascii="黑体" w:fareast="黑体" w:h-ansi="宋体" w:cs="宋体"/>
+<wx:font wx:val="黑体"/>
+<w:b/>
+<w:b-cs/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>学校：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${xxmc!}  </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>院系：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${xymc!}  </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>班级：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${xh!}  </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>学号：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${xh!}</w:t>
+</w:r>
+</w:p>
+<w:tbl>
+<w:tblPr>
+<w:tblW w:w="9572" w:type="dxa"/>
+<w:tblInd w:w="-207" w:type="dxa"/>
+<w:tblBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideH w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideV w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tblBorders>
+<w:tblLayout w:type="Fixed"/>
+</w:tblPr>
+<w:tblGrid>
+<w:gridCol w:w="1366"/>
+<w:gridCol w:w="944"/>
+<w:gridCol w:w="299"/>
+<w:gridCol w:w="226"/>
+<w:gridCol w:w="130"/>
+<w:gridCol w:w="1032"/>
+<w:gridCol w:w="98"/>
+<w:gridCol w:w="110"/>
+<w:gridCol w:w="713"/>
+<w:gridCol w:w="17"/>
+<w:gridCol w:w="516"/>
+<w:gridCol w:w="9"/>
+<w:gridCol w:w="220"/>
+<w:gridCol w:w="620"/>
+<w:gridCol w:w="72"/>
+<w:gridCol w:w="255"/>
+<w:gridCol w:w="93"/>
+<w:gridCol w:w="863"/>
+<w:gridCol w:w="9"/>
+<w:gridCol w:w="554"/>
+<w:gridCol w:w="59"/>
+<w:gridCol w:w="1367"/>
+</w:tblGrid>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="498"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vmerge w:val="restart"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>基本情况</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1243" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>姓</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>名</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1596" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${xm!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1246" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>性</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>别</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2132" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${xb!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1989" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:vmerge w:val="restart"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<#if photo??>
+	<w:r wsp:rsidRPr="00DD4047"><w:rPr><w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"
+	w:hint="fareast" /><wx:font wx:val="仿宋_GB2312" /><w:sz
+	w:val="21" /><w:sz-cs w:val="21" /></w:rPr>
+		<w:pict><v:shapetype
+			id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+			path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f"><v:stroke
+			joinstyle="miter" /><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0" /><v:f
+			eqn="sum @0 1 0" /><v:f eqn="sum 0 0 @1" /><v:f eqn="prod @2 1 2" /><v:f
+			eqn="prod @3 21600 pixelWidth" /><v:f eqn="prod @3 21600 pixelHeight" /><v:f
+			eqn="sum @0 0 1" /><v:f eqn="prod @6 1 2" /><v:f
+			eqn="prod @7 21600 pixelWidth" /><v:f eqn="sum @8 21600 0" /><v:f
+			eqn="prod @7 21600 pixelHeight" /><v:f eqn="sum @10 21600 0" /></v:formulas><v:path
+			o:extrusionok="f" gradientshapeok="t" o:connecttype="rect" /><o:lock
+			v:ext="edit" aspectratio="t" /></v:shapetype><w:binData
+			w:name="wordml://03000001.png" xml:space="preserve">${photo!}</w:binData><v:shape id="_x0000_i1025" type="#_x0000_t75"
+			style="width:64.5pt;height:89.25pt"><v:imagedata src="wordml://03000001.png" o:title="" /></v:shape>
+		</w:pict>
+	</w:r>
+</#if>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="461"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vmerge/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1243" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>出生年月</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1596" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${csny!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1246" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>入学时间</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2132" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${rxrq!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1989" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:vmerge/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="453"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vmerge/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:widowControl/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1243" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>政治面貌</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1596" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${zzmmmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1246" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>民</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>族</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2132" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${mzmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1989" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:vmerge/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:widowControl/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="445"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vmerge/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:widowControl/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1243" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>专</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>业</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1596" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${zymc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1246" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>学</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>制</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2132" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${xz!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1989" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:vmerge/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:widowControl/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vmerge/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:widowControl/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="944" w:type="dxa"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00480D5F" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>身份</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>证号</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4062" w:type="dxa"/>
+<w:gridSpan w:val="13"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:widowControl/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${sfzh!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1220" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:widowControl/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>联系电话及ＱＱ号</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1980" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:widowControl/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${sjhm!}</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:widowControl/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>QQ</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${qqhm!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:h-rule="exact" w:val="502"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vmerge w:val="restart"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>学习成绩</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>或综合考评</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3552" w:type="dxa"/>
+<w:gridSpan w:val="8"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:adjustRightInd w:val="off"/>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:before-lines="50" w:line="360" w:line-rule="auto"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>班级（年级或专业）同学中排名</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4654" w:type="dxa"/>
+<w:gridSpan w:val="13"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:adjustRightInd w:val="off"/>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:before-lines="50" w:line="360" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="宋体" w:h-ansi="宋体"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>家庭经济困难认定等级</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:h-rule="exact" w:val="502"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vmerge/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3552" w:type="dxa"/>
+<w:gridSpan w:val="8"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:adjustRightInd w:val="off"/>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:before-lines="50" w:line="360" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="宋体" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>     /</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>（名次</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>/</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>总人数）</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4654" w:type="dxa"/>
+<w:gridSpan w:val="13"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:adjustRightInd w:val="off"/>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:before-lines="50" w:line="360" w:line-rule="auto"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+	<w:t>
+	<#list knsdcList as knsdc>${knsdc.dcmc!}<#if knsdc.dcdm=='${rddc!}'>■  </#if><#if knsdc.dcdm!='${rddc!}'>□  </#if></#list>
+	</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:h-rule="exact" w:val="791"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>受助</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>情况</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1469" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="bottom"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>上学年受助金额（元）</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1260" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:vAlign w:val="bottom"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1365" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:vAlign w:val="bottom"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>上学年资助主要用途</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1260" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:vAlign w:val="bottom"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1426" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:vAlign w:val="bottom"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>本学年申请主要用途</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1426" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vAlign w:val="bottom"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:h-rule="exact" w:val="616"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+<w:t>指定发放</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+<w:t>银行卡信息</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1469" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="bottom"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>开户银行</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2625" w:type="dxa"/>
+<w:gridSpan w:val="8"/>
+<w:vAlign w:val="bottom"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${yhmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="840" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vAlign w:val="bottom"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+<w:t>银行</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+<w:t>卡号</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3272" w:type="dxa"/>
+<w:gridSpan w:val="8"/>
+<w:vAlign w:val="bottom"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="300" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${yhkh!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:h-rule="exact" w:val="502"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vmerge w:val="restart"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:spacing w:before="72"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>家庭经济</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:spacing w:before="72"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>情</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>况</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1599" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>家庭户口</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3662" w:type="dxa"/>
+<w:gridSpan w:val="11"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="001F4377" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="141"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+	<w:t>
+	<#if jtqk.jthk! == "城镇">城镇■  农村□<#elseif jtqk.jthk! == "农村">城镇□  农村■<#else>城镇□  农村□</#if>
+	</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1578" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>家庭人口总数</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1367" w:type="dxa"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${jtqk.jtrs!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="511"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vmerge/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1599" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>家庭月总收入</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1032" w:type="dxa"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${jtqk.snjtsr!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1683" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>人均月收入</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="947" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${jtqk.jtrjysr!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1578" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:left-chars="-1" w:hanging-chars="1"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>收入来源</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1367" w:type="dxa"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${jtqk.jtsrly!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vmerge/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1599" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>家庭住址</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3662" w:type="dxa"/>
+<w:gridSpan w:val="11"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${jtqk.jtdz!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1578" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:left-chars="-1" w:hanging-chars="1"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>家长联系电话</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1367" w:type="dxa"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+</w:rPr>
+<w:t>${jtqk.jtdh!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:h-rule="exact" w:val="2545"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:spacing w:before="72"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>申请理由（主要包括成绩情况及家庭情况）</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="8206" w:type="dxa"/>
+<w:gridSpan w:val="21"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:right="480"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>  ${sqly!}</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:right="480" w:first-line-chars="100"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>             </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>申请人签名（手签）：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>                </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>年</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>   </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>月</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>   </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>日</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:ind w:right="482"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>（郑重承诺：本人保证所填信息真实、可靠，如发现有弄虚作假，愿承担相应责任。）</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00F53DC6">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:h-rule="exact" w:val="2493"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1366" w:type="dxa"/>
+<w:tcBorders>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:spacing w:before="72"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>院系推荐意</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>见</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3569" w:type="dxa"/>
+<w:gridSpan w:val="9"/>
+<w:tcBorders>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>院系审核意见：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>   </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>（公章）</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>               </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>   </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>年</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>     </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>月</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>     </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>日</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>     </w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4637" w:type="dxa"/>
+<w:gridSpan w:val="12"/>
+<w:tcBorders>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>学校审核意见：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>        </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="300"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="宋体" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>经评审、公示，无异议，现推荐该同学获得国家励志奖学金。</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>                                               </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:ind w:first-line-chars="1150"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:ind w:first-line-chars="800"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>      </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>（公章）</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>              </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:tabs>
+<w:tab w:val="left" w:pos="5322"/>
+<w:tab w:val="left" w:pos="5712"/>
+<w:tab w:val="left" w:pos="5967"/>
+</w:tabs>
+<w:ind w:left-chars="798" w:first-line-chars="250"/>
+<w:rPr>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>年</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>     </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>月</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>     </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>日</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00A5398B" wsp:rsidRDefault="00A5398B" wsp:rsidP="00A5398B">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100" w:first-line="240"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>       </w:t>
+</w:r>
+<w:r wsp:rsidRPr="00EC2C02">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00A5398B" wsp:rsidRPr="00EC2C02" wsp:rsidRDefault="00A5398B" wsp:rsidP="00A5398B">
+<w:pPr>
+<w:spacing w:before="72" w:after-lines="50"/>
+<w:ind w:first-line-chars="100" w:first-line="240"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+</w:tr>
+</w:tbl>
+<w:p wsp:rsidR="00111E38" wsp:rsidRDefault="00111E38" wsp:rsidP="00111E38">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="480" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>（填表前请仔细阅读背面投诉办法，并记下投诉方式）</w:t>
+</w:r>
+
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>    </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00111E38" wsp:rsidRDefault="000B7513" wsp:rsidP="00111E38">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="480" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="420" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>国家奖助学金投诉办法</w:t>
+</w:r>
+</w:p>
+<wx:sub-section>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="420" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:outlineLvl w:val="0"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>（印在申请表背面，学生可复印一份留存）</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="420" w:line-rule="exact"/>
+<w:ind w:first-line-chars="250"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="28"/>
+<w:sz-cs w:val="28"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="400" w:line-rule="exact"/>
+<w:ind w:first-line-chars="250"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>从</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>2012</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>年秋季起，参与国家奖助学金评审的各级机构都要设立投诉邮箱和电话。</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="400" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+<w:u w:val="single"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>一、学校设立国家奖助学金投诉电子邮箱：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>  307879207@qq.com </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="400" w:line-rule="exact"/>
+<w:ind w:first-line-chars="1450"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+<w:u w:val="single"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>电</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>   </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>话：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+<w:u w:val="single"/>
+</w:rPr>
+<w:t>  027-84791338    </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="400" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>二、省学生资助管理中心国家奖助学金投诉专用邮箱：</w:t>
+</w:r>
+<w:hlink w:dest="mailto:hbxszzts@163.com">
+<w:r>
+<w:rPr>
+<w:rStyle w:val="a6"/>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>hbxszzts@163.com</w:t>
+</w:r>
+</w:hlink>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>(</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>邮箱由“湖北学生资助投诉”首字母组成</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>)</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>，任何学生在国家奖助学金评审、发放中发现违规情况都可以投诉到省学生资助管理中心邮箱，如：</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="400" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>  1</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>学校要求“轮流坐庄”（轮流享受资助）的；</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>2</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>要求平分奖助学金或将奖助学金上交班费的；</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>3</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>辅导员（班主任或其他教职工、社会人员）要求从奖助学金拿“回扣”“咨询费”“手续费”或变相收取学生好处的；</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>4</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>学生虚构家庭困难、评定中“拉票”、“</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>贿票”的；</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>5</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、相关老师直接让家庭经济情况好的学生，享受国家励志奖学金、国家助学金资助</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>“内定”受助名单的；</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>6</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、学校直接将奖助学金冲抵学费或将奖助学金作为学生勤工助学工资发放的；</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>7</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、学校无正当理由不发放奖助学金的；或直到毕业时，奖助学金仍未发放的；</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>8</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、投诉到学校后学校不解决的，或学校对投诉人打击报复的；</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>9</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、受到国家励志奖学金、国家助学金资助的学生存在请客、送礼，有高</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>消费、奢侈消费行为的；</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>10</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、其他违纪、违规行为。</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="400" w:line-rule="exact"/>
+<w:ind w:first-line-chars="150"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>注意：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>1</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>省学生资助管理中心为投诉人保密，为方便调查核实，投诉到省学生资助管理中心的情况，请投诉人反映真实情况，并提倡署真名和联系方式，省学生资助管理中心将做到有投诉必有回复，对投诉情况一经查实，会按规定追究相关责任人责任，同时，在保护举报人的前提下以适当方式对真实投诉举报人给予表扬。</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="400" w:line-rule="exact"/>
+<w:ind w:first-line-chars="399"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>2</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>投诉反映渠道建议首先从院系、学校开始，院系、学校无法解决或解决不满意的再向省学生资助管理中心；如认为院系或学校对投诉处理不力，或质疑学校会打击报复也可以直接将情况反映到省学生资助管理中心</w:t>
+</w:r>
+<w:hlink w:dest="mailto:hbxszzts@163.com">
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>hbxszzts@163.com</w:t>
+</w:r>
+</w:hlink>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>；</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00D65E99" wsp:rsidP="00F53DC6">
+<w:pPr>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:line="400" w:line-rule="exact"/>
+<w:ind w:first-line-chars="350"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>3</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>、如上网发送邮件不方便，也可以写信件邮寄省学生资助管理中心</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>邮寄地址：武汉市武昌区洪山路</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>8</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>号（</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>430071</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>）或拨打投诉电话：</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>027-87312475</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>。</w:t>
+</w:r>
+</w:p>
+<w:sectPr wsp:rsidR="00F53DC6" wsp:rsidSect="00F53DC6">
+<w:hdr w:type="even">
+<wx:pBdrGroup>
+<wx:borders>
+<wx:bottom wx:val="solid" wx:bdrwidth="15" wx:space="1" wx:color="auto"/>
+</wx:borders>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:pStyle w:val="a4"/>
+</w:pPr>
+</w:p>
+</wx:pBdrGroup>
+</w:hdr>
+<w:hdr w:type="odd">
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6" wsp:rsidP="00480D5F">
+<w:pPr>
+<w:pStyle w:val="a4"/>
+<w:pBdr>
+<w:bottom w:val="none" w:sz="0" wx:bdrwidth="0" w:space="0" w:color="auto"/>
+</w:pBdr>
+</w:pPr>
+</w:p>
+</w:hdr>
+<w:ftr w:type="even">
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:pStyle w:val="a5"/>
+</w:pPr>
+</w:p>
+</w:ftr>
+<w:ftr w:type="odd">
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:pStyle w:val="a5"/>
+</w:pPr>
+</w:p>
+</w:ftr>
+<w:hdr w:type="first">
+<wx:pBdrGroup>
+<wx:borders>
+<wx:bottom wx:val="solid" wx:bdrwidth="15" wx:space="1" wx:color="auto"/>
+</wx:borders>
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:pStyle w:val="a4"/>
+</w:pPr>
+</w:p>
+</wx:pBdrGroup>
+</w:hdr>
+<w:ftr w:type="first">
+<w:p wsp:rsidR="00F53DC6" wsp:rsidRDefault="00F53DC6">
+<w:pPr>
+<w:pStyle w:val="a5"/>
+</w:pPr>
+</w:p>
+</w:ftr>
+<w:pgSz w:w="11906" w:h="16838" w:code="9"/>
+<w:pgMar w:top="1304" w:right="1531" w:bottom="1304" w:left="1531" w:header="851" w:footer="992" w:gutter="0"/>
+<w:cols w:space="425"/>
+<w:docGrid w:type="lines" w:line-pitch="312"/>
+</w:sectPr>
+</wx:sub-section>
+</wx:sect>
+</w:body>
+</w:wordDocument>

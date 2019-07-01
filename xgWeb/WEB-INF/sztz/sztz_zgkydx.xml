@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="zgkydx_sztzForm" type="xgxt.sztz.zgkydx.SztzZgkydxActionForm"/>
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+		<!--展现的路径  长沙民政职业技术学院-->
+		<action path="/sztzInfoInput" forward="/zgkydx_sztz.do?method=infoInput"/>
+		<action path="/sztzInfoManage" forward="/zgkydx_sztz.do?method=infoManage"/>
+		<action path="/sztzInfoCheck" forward="/zgkydx_sztz.do?method=infoCheckManage"/>
+		<action path="/sztzInfoPrint" forward="/zgkydx_sztz.do?method=infoPrintManage"/>
+		<!--实际的路径 -->
+		<action path="/zgkydx_sztz" parameter="method"  name="zgkydx_sztzForm" scope="request"
+		        type="xgxt.sztz.zgkydx.SztzZgkydxAction">
+		        <forward name="infoInput" path="/sztz/zgkydx/infoInput.jsp"></forward>		        
+		        <forward name="infoManage" path="/sztz/zgkydx/infoManage.jsp"></forward>
+		        <forward name="infoAdd" path="/sztz/zgkydx/infoAdd.jsp"></forward>
+		        <forward name="infoView" path="/sztz/zgkydx/infoView.jsp"></forward>
+		        <forward name="infoChkView" path="/sztz/zgkydx/infoChkView.jsp"></forward>
+		        <forward name="infoModi" path="/sztz/zgkydx/infoModi.jsp"></forward>
+		        <forward name="infoCheckManage" path="/sztz/zgkydx/infoCheckManage.jsp"></forward>
+		        <forward name="infoPrintManage" path="/sztz/zgkydx/infoPrintManage.jsp"></forward>
+		        <forward name="infoPrint" path="/sztz/zgkydx/infoPrint.jsp"></forward>
+		        <forward name="sztzInfoSave" path="/sztz/zgkydx/infoInput.jsp"></forward>
+		        <forward name="sztzInfoAdd" path="/sztz/zgkydx/infoAdd.jsp"></forward>
+		        <forward name="sztzInfoModi" path="/sztz/zgkydx/infoModi.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>

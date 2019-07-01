@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpy_whlghxxy_zhszcpwh.do" location="30,0" dimension="184,60" />
+  <StrutsActivity path="/pjpyhxxywh.do" location="0,160" dimension="244,84" />
+  <StrutsActivity path="/pjpy/whlghxxy/zhszcp.jsp" location="27,344" dimension="190,48" />
+  <StrutsTransition id="/pjpy_whlghxxy_zhszcpwh.do,null,/pjpyhxxywh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="122,60" />
+      <AbsolutePoint location="122,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhxxywh.do,zhszcpdefault,/pjpy/whlghxxy/zhszcp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="122,244" />
+      <AbsolutePoint location="122,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

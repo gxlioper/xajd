@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="xnwxjkhkForm" type="com.zfsoft.xgxt.zxdk.xnwxjkhk.XnwxjkhkForm">
+		</form-bean>
+	</form-beans>
+	<action-mappings>	
+		<!-- 展现路径 -->
+		<action path="/zxdk_xnwxjkhk" forward="/zxdk_jkhk.do?method=getXnwxjkhkList"></action><!-- 校内无息借款还款查询页面 -->
+		<!-- 实际路径 -->	
+		<action name="xnwxjkhkForm" 
+				parameter="method" 
+				path="/zxdk_jkhk"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.xnwxjkhk.XnwxjkhkAction">
+			<forward name="getXnwxjkhkList" path="/xsgzgl/zxdk/xnwxjkhk/xnwxjkhkList.jsp" /><!-- 校内无息借款还款查询页面  -->
+			<forward name="addJkhk" path="/xsgzgl/zxdk/xnwxjkhk/addJkhk.jsp" /><!-- 校内无息借款还款增加  -->
+			<forward name="editJkhk" path="/xsgzgl/zxdk/xnwxjkhk/editJkhk.jsp" /><!-- 校内无息借款还款修改  -->
+			<forward name="viewJkhk" path="/xsgzgl/zxdk/xnwxjkhk/viewJkhk.jsp" /><!-- 校内无息借款还款查看  -->
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

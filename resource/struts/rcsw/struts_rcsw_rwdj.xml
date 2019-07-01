@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="rwdjForm" type="com.zfsoft.xgxt.rcsw.rwdj.RwdjForm" />
+		<form-bean name="RwdjsqForm" type="com.zfsoft.xgxt.rcsw.rwdjsq.RwdjsqForm" />
+		<form-bean name="rwdjcsszForm" type="com.zfsoft.xgxt.rcsw.rwdjsqcssz.CsszForm"/>
+		<form-bean name="RwdjshForm" type="com.zfsoft.xgxt.rcsw.rwdjsh.RwdjshForm"/>
+	</form-beans>
+	<action-mappings>
+		<action path="/rwdjbase" forward="/rwdj.do?method=list" /> <!--  -->
+		<action path="/rwdjsqbase" forward="/rwdjsq.do?method=list"/>
+		<action path="/rrwdjcssz" forward="/cssz.do?method=jcsz"/>
+		<action path="/rwdjshbase" forward="/rwdjsh.do?method=getRwdjShList"/>
+		<action path="/rwdj" parameter="method" name="rwdjForm" scope="request"
+			type="com.zfsoft.xgxt.rcsw.rwdj.RwdjAction">
+			<forward name="rwdjadd" path="/xsgzgl/rcsw/rwdj/rwdjadd.jsp" />
+			<forward name="rwdjupdate" path="/xsgzgl/rcsw/rwdj/rwdjupdate.jsp" />
+			<forward name="rwdjview" path="/xsgzgl/rcsw/rwdj/rwdjview.jsp" />
+			<forward name="rwdjlist" path="/xsgzgl/rcsw/rwdj/rwdjlist.jsp" />
+		</action>
+		<action path="/rwdjsq" parameter="method" name="RwdjsqForm" scope="request"
+			type="com.zfsoft.xgxt.rcsw.rwdjsq.RwdjsqAction">
+			<forward name="cx" path="/xsgzgl/rcsw/rwdjsq/rwdjsqcx.jsp" />
+			<forward name="add" path="/xsgzgl/rcsw/rwdjsq//rwdjsq.jsp" />
+			<forward name="ck" path="/xsgzgl/rcsw/rwdjsq/viewrwdjsq.jsp" />
+			<forward name="edit" path="/xsgzgl/rcsw/rwdjsq/editrwdjsq.jsp" />
+		</action>
+		<action path="/cssz" parameter="method" name="rwdjcsszForm" scope="request"
+		    type="com.zfsoft.xgxt.rcsw.rwdjsqcssz.CsszAction">
+			<forward name="jcsz" path="/xsgzgl/rcsw/rwdjcssz/cssz.jsp"/>
+		</action>
+		<action path="/rwdjsh" parameter="method" name="RwdjshForm" scope="request"
+		    type="com.zfsoft.xgxt.rcsw.rwdjsh.RwdjshAction">
+			<forward name="cx" path="/xsgzgl/rcsw/rwdjsh/rwdjshList.jsp"/>
+			<forward name="dgsh" path="/xsgzgl/rcsw/rwdjsh/rwdjsh.jsp"/>
+			<forward name="plsh" path="/xsgzgl/rcsw/rwdjsh/rwdjplsh.jsp"/>
+			<forward name="ck" path="/xsgzgl/rcsw/rwdjsh/rwdjshck.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

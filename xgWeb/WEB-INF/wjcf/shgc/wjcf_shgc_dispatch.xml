@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到上海工程的配置文件,wjcf_shgc.xml    -->
+		<action path="/shgcxysbdefault" 	forward="/shgcwjcfwh.do?method=shgcXysbDefault"></action><!-- 学院申报默认页面 -->
+		<action path="/shgcxysbqrystu"      forward="/shgcwjcfwh.do?method=shgcXysbQryStu"></action><!-- 学院申报查询 -->
+		<action path="/shgcxysbdatasub"     forward="/shgcwjcfwh.do?method=shgcXysbDataSubmit"></action><!-- 学院申报信息保存 -->
+		<action path="/shgcxxshdefault"     forward="/shgcwjcfwh.do?method=shgcxxshDefault"></action><!-- 学院审核默认页面 -->
+		<action path="/shgcxxshqry"         forward="/shgcwjcfwh.do?method=shgcXxshQry"></action><!-- 学院审核查询页面 -->
+		<action path="/shgcxxsh"            forward="/shgcwjcfwh.do?method=shgcXxSh" ></action>
+		<action path="/shgcxxshsave"        forward="/shgcwjcfwh.do?method=shgcxxshSave"></action><!-- 学院审核信息保存 -->
+		<action path="/delshxx"             forward="/shgcwjcfwh.do?method=delshxx"></action><!-- 学院审核批量删除 -->
+		<action path="/wjcfysbprint"        forward="/shgcwjcfwh.do?method=wjcfysbPrint"></action><!-- 学生违纪申报报表打印 -->
+		<action path="/wjcfrqwhwhdefault"   forward="/shgcwjcfwh.do?method=wjcfrqwhwhDefault"></action><!-- 处分日期和文号维护默认页面 -->
+		<action path="/wjcfrqwhqry"         forward="/shgcwjcfwh.do?method=wjcfrqwhQry"></action><!-- 处分日期和文号维护信息查询 -->
+		<action path="/shgcwjrswhwh"        forward="/shgcwjcfwh.do?method=shgcwjrswhWh"></action>
+		<action path="/savecfrqwh"          forward="/shgcwjcfwh.do?method=savecfrqwh"></action><!-- 处分日期和文号维护信息保存 -->
+		<action path="/wjcfkszbdefault"     forward="/shgcwjcfwh.do?method=wjcfkszbDefault"></action><!-- 考试作弊默认页面 --> 
+		<action path="/wjcfkszbqry"         forward="/shgcwjcfwh.do?method=wjcfkszbQry"></action><!-- 考试作弊信息查询 -->
+		<action path="/deletewjcfkszb"      forward="/shgcwjcfwh.do?method=deleteWjcfKszb"></action><!-- 考试作弊信息删除 -->
+		<action path="/jygzbprint"          forward="/shgcwjcfwh.do?method=jygzbPrint"></action><!-- 教育跟踪报表打印 -->
+		<action path="/wtgwjcfdefault"      forward="/shgcwjcfwh.do?method=wtgwjcfDefault"></action><!-- 未通过审核默认页面 -->
+		<action path="/wtgwjcfxxqry"        forward="/shgcwjcfwh.do?method=wtgwjcfxxQry"></action><!-- 未通过审核查询 -->
+		<action path="/deletewtgwjxx"       forward="/shgcwjcfwh.do?method=deleteWtgWjxx"></action><!-- 未通过审核信息批量删除 -->
+		<action path="/shsldefault"         forward="/shgcwjcfwh.do?method=shslDefault"></action><!-- 申诉受理详细信息页面 -->
+		<action path="/savessslxx"          forward="/shgcwjcfwh.do?method=saveSsSlxx"></action><!-- 保存申诉受理信息 -->
+		<action path="/shjddefault"         forward="/shgcwjcfwh.do?method=shjdDefault"></action><!-- 申诉决定说细信息页面 -->
+		<action path="/savessjdxx"          forward="/shgcwjcfwh.do?method=savessJdXx"></action><!-- 保存申诉决定信息 -->
+		<action path="/wjcf_shgc_kswjsjwh"  forward="/shgcwjcfwh.do?method=kswjsjwh"></action><!-- 考试违纪数据维护页面 -->
+		<action path="/wjcf_shgc_kswjqry"   forward="/shgcwjcfwh.do?method=kswjQry"></action><!-- 考试违纪数据查询结果 -->
+		<action path="/wjcf_shgc_kswjadd"   forward="/shgcwjcfwh.do?method=kswjAdd"></action><!-- 考试违纪数据增加页面 -->
+		<action path="/wjcf_shgc_kswjsave"  forward="/shgcwjcfwh.do?method=kswjSave"></action><!-- 考试违纪数据保存 -->
+		<action path="/wjcf_shgc_kswjdel"   forward="/shgcwjcfwh.do?method=kswjDel"></action><!-- 考试违纪批量删除 -->
+		<action path="/wjcf_shgc_kswjmodi"  forward="/shgcwjcfwh.do?method=kswjModi"></action><!-- 考试违纪修改页面 -->
+		<action path="/wjcf_shgc_kswjmodisave" forward="/shgcwjcfwh.do?method=kswjmodiSave"></action><!-- 考试违纪修改保存 -->
+		<action path="/wjcf_shgc_kswjgzjy"  forward="/shgcwjcfwh.do?method=kswjGzjy"></action><!-- 考试违纪跟踪教育 -->
+		<action path="/wjcf_shgc_kswjgzjyqry" forward="/shgcwjcfwh.do?method=kswjGzjyqry"></action><!-- 考试违纪跟踪教育查询结果 -->
+		<action path="/wjcf_shgc_kswjjybxadd" forward="/shgcwjcfwh.do?method=kswjjybxAdd"></action><!-- 考试违纪教育保存 -->
+		<action path="/wjcf_shgc_kswjgzjysave" forward="/shgcwjcfwh.do?method=kswjgzjySave"></action><!-- 跟踪教育保存结果 -->
+		<action path="/wjcf_shgc_kswjcfhbx" forward="/shgcwjcfwh.do?method=kswjcfhbx"></action><!-- 考试违纪处分后表现 -->
+		<action path="/wjcf_shgc_kswjcfbxqry" forward="/shgcwjcfwh.do?method=kswjcfbxQry"></action><!-- 考试违纪处分后表现查询结果 -->
+		<action path="/wjcf_shgc_cfbxadd"   forward="/shgcwjcfwh.do?method=cfbxadd"></action><!-- 考试违纪处分表现增加 -->
+		<action path="/wjcf_shgc_cfbxaddsave" forward="/shgcwjcfwh.do?method=cfbxaddsave"></action><!-- 考试违纪处分表现保存结果 -->
+		<action path="/wjcf_shgc_cfbxmodi"  forward="/shgcwjcfwh.do?method=cfbxmodi"></action><!-- 考试违纪处分表现修改页面 -->
+		<action path="/wjcf_shgc_cfbxmodisave" forward="/shgcwjcfwh.do?method=cfbxmodiSave"></action><!-- 考试违纪处分表现修改保存 -->
+		<action path="/wjcf_shgc_cfbxdel"   forward="/shgcwjcfwh.do?method=cfbxdel"></action><!-- 考试违纪处分表现批量删除 -->
+		<action path="/wjcf_shgc_kswjcfbgd" forward="/shgcwjcfwh.do?method=kswjcfbgd"></action><!-- 考试违纪处分不归档 -->
+		<action path="/wjcf_shgc_kswjbgdqry" forward="/shgcwjcfwh.do?method=kswjbgdqry"></action>
+		<action path="/wjcf_shgc_bgdadd"    forward="/shgcwjcfwh.do?method=bgdadd"></action>
+		<action path="/wjcf_shgc_bgdsave"  forward="/shgcwjcfwh.do?method=bgdsave"></action>
+		<action path="/wjcf_shgc_bgddel"   forward="/shgcwjcfwh.do?method=bgddel"></action>
+		<action path="/wjcf_shgc_bgdmodi"  forward="/shgcwjcfwh.do?method=bgdmodi"></action>
+		<action path="/wjcf_shgc_bgdmodisave" forward="/shgcwjcfwh.do?method=bgdmodisave"></action>
+		<action path="/kswjprint"          forward="/shgcwjcfwh.do?method=kswjprint"></action>
+		<action path="/kswjcfbxprint"      forward="/shgcwjcfwh.do?method=kswjcfbxprint"></action>
+		<action path="/kswjbgdprint"       forward="/shgcwjcfwh.do?method=kswjbgdprint"></action>
+		<action path="/wjcf_shgc_jygzbprint" forward="/shgcwjcfwh.do?method=kswjjygzbPrint"></action>
+		<action path="/wjcf_shgc_wjshres"  forward="/shgcwjcfwh.do?method=wjshres"></action>
+		<action path="/wjcf_shgc_lssjzy"   forward="/shgcwjcfwh.do?method=lssjzy"></action>
+		<action path="/wjcf_shgc_wtgview"  forward="/shgcwjcfwh.do?method=wtgview"></action>
+	</action-mappings>
+</struts-config>

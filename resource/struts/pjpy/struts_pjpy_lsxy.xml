@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+	<form-bean name="pjpyLsxyForm" type="xgxt.pjpy.lsxy.PjpyLsxyForm" />	
+	</form-beans>
+ 	<action-mappings>
+ 	
+ 	<action path="/pjpyLsxy" 
+    		name="pjpyLsxyForm"
+    		type="xgxt.pjpy.lsxy.LsxyPjpyAction" 
+    		parameter="method"
+    		scope="request">
+    	<forward name="jxjsq" path="/pjpy/lsxy/lsxy_jxjsq.jsp"/>
+    	<forward name="printjxjsqb" path="/pjpy/lsxy/lsxy_jxjsqb.jsp"/>
+    	<forward name="jxjModi" path="/pjpy/lsxy/lsxy_jxjModi.jsp"/>
+    	<forward name="jxjShOne" path="/pjpy/lsxy/lsxy_jxjShOne.jsp"/>    	
+    	<forward name="priseresult" path="/pjpy/lsxy/lsxy_jxjcx.jsp"/>   
+    	
+    	<forward name="rychsq" path="/pjpy/lsxy/lsxy_rychsq.jsp"/>
+    	<forward name="printrychsqb" path="/pjpy/lsxy/lsxy_rychsqb.jsp"/> 
+    	<forward name="rychresult" path="/pjpy/lsxy/lsxy_rychcx.jsp"/>
+    	<forward name="rychModi" path="/pjpy/lsxy/lsxy_rychModi.jsp"/>   
+    	<forward name="rychShOne" path="/pjpy/lsxy/lsxy_rychShOne.jsp"/>  	 
+    	<forward name="cjfcx" path="/pjpy/lsxy/lsxy_cjfcx.jsp"/>
+    	<forward name="cjcxOne" path="/pjpy/lsxy/lsxy_cjcxOne.jsp"/>    
+    				
+    </action>
+	</action-mappings>
+	<message-resources key="zjlgPjpy" parameter="xgxt.pjpy.zjlg.zjlgPjpy" />
+
+</struts-config>

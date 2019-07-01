@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyZjkjxyActionForm" type="xgxt.pjpy.zjkjxy.PjpyZjkjxyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+	    <!--展现的路径  浙江科技学院-->
+		<action path="/pjpyrssz" forward="/pjpyzjkj.do?method=rsszManage"/>
+		<action path="/pjpysqrsz" forward="/pjpyzjkj.do?method=jxjsqxsManage"/>		
+		
+		<!--实际的路径 -->
+		<action path="/pjpyzjkj"
+				type="xgxt.pjpy.zjkjxy.PjpyZjkjxyAction"
+				name="pjpyZjkjxyActionForm"
+				parameter="method"
+				scope="request">
+				
+			<forward name="rsszManage" path="/pjpy/zjkjxy/rsszManage.jsp" />
+			<forward name="rychRsszManage" path="/pjpy/zjkjxy/rychRsszManage.jsp" />
+			<forward name="jxjblPlsz" path="/pjpy/zjkjxy/jxjblPlsz.jsp" />
+			<forward name="rychblPlsz" path="/pjpy/zjkjxy/rychblPlsz.jsp" />
+			<forward name="jxjsqxsManage" path="/pjpy/zjkjxy/jxjsqxsManage.jsp" />
+			<forward name="rychsqxsManage" path="/pjpy/zjkjxy/rychsqxsManage.jsp" />		
+							
+		</action>
+	</action-mappings>
+</struts-config>

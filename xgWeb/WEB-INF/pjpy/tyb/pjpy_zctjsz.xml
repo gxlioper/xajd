@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyZctjszActionForm" type="xgxt.pjpy.tyb.zhszcp.action.PjpyZctjszActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_tyb_zctjsz"           forward="/pjpyTybZctjsz.do?method=zctjsz"/>      <!-- 综测条件设置 -->
+	    <action path="/pjpy_tyb_zczdyzdwh"        forward="/pjpyTybZctjsz.do?method=zcZdyzdwh"/>   <!-- 综测自定义字段维护 -->  
+	    <action path="/pjpy_tyb_zczdyzdAdd"       forward="/pjpyTybZctjsz.do?method=zczdyzdAdd"/>  <!-- 综测自定义字段增加 -->
+
+	    <action path="/pjpy_tyb_zctjpzCheck"  forward="/pjpyTybZctjsz.do?method=zctjpzCheck"/>      <!-- 综测条件配置检测 -->
+	    <action path="/pjpy_tjsz_jszctjsz"  forward="/pjpyTybZctjsz.do?method=jszctjsz"/>           <!-- 老师版综测条件配置 -->
+	    <action path="/pjpy_tjsz_savejszctjsz"  forward="/pjpyTybZctjsz.do?method=savejszctjsz"/>   <!-- 老师版综测条件配置保存信息 -->
+	    
+	    
+	    <!-- 实际路径 -->	
+		<action path="/pjpyTybZctjsz"
+				type="xgxt.pjpy.tyb.zhszcp.action.PjpyZctjszAction"
+				name="pjpyZctjszActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 实际跳转JSP路径 -->
+		<forward name="zctjsz"  path="/pjpy/tyb/zhszcp/tjsz.jsp" />
+		<forward name="zcZdyzdwh" path="/pjpy/tyb/zhszcp/zcZdyzdwh.jsp"/>
+		<forward name="zczdyzdAdd" path="/pjpy/tyb/zhszcp/zczdyzdAdd.jsp"/>
+		<forward name="jszctjsz"  path="/pjpy/tyb/zhszcp/jszctjsz.jsp"/>
+		
+		</action>
+	</action-mappings>
+
+</struts-config>

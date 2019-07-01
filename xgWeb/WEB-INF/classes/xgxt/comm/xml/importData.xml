@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checks>
+	<check type="relationCheck" class="xgxt.sjdrdc.check.RelationCheck">
+		<entity>
+			<data-mapping>relationXh</data-mapping>
+			<param-tableName>view_xsxxb</param-tableName>
+			<param-tableField>xh</param-tableField>
+			<param-comment> 字段值不正确，数据库要求此字段的值在学生信息表中存在</param-comment>
+		</entity>
+		
+		<entity>
+			<data-mapping>relationZgh</data-mapping>
+			<param-tableName>fdyxxb</param-tableName>
+			<param-tableField>zgh</param-tableField>
+			<param-comment> 字段值不正确，数据库要求此字段的值在辅导员信息表中存在</param-comment>
+		</entity>
+		
+		<entity>
+			<data-mapping>relationSsbh</data-mapping>
+			<param-tableName>view_ssxx</param-tableName>
+			<param-tableField>ssbh</param-tableField>
+			<param-comment> 字段值不正确，数据库要求此字段的值在宿舍信息表中存在</param-comment>
+		</entity>
+		
+		
+		<entity>
+			<data-mapping>relationTsbjdm</data-mapping>
+			<param-tableName>xg_xsxx_tsbjb</param-tableName>
+			<param-tableField>tsbjdm</param-tableField>
+			<param-comment> 字段值不正确，要求此列的值在特色班级中找到对应的特色班级代码</param-comment>
+		</entity>
+	</check>
+	
+	<check type="patternCheck" class="xgxt.sjdrdc.check.PatternCheck">
+		<entity>
+			<data-mapping>number</data-mapping>
+			<param-pattern>^\d+.{0,1}\d{0,3}$</param-pattern>
+			<param-comment> 字段为非数字，数据库要求此字段为数字</param-comment>
+		</entity>
+	</check>
+</checks>

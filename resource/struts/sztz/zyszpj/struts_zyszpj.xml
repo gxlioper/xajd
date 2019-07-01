@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="zyszpjForm" type="com.zfsoft.xgxt.sztz.zyszpj.ZyszpjForm" />
+	</form-beans>
+	<action-mappings>
+		<!-- 职业素质评价维护-->
+		<action path="/zyszpjwh" name="zyszpjForm" type="com.zfsoft.xgxt.sztz.zyszpj.ZyszpjAction"
+			parameter="method" scope="request">
+			<forward name="list" path="/xsgzgl/sztz/zyszpj/pjwh/zyszlb.jsp" />
+			<forward name="add" path="/xsgzgl/sztz//zyszpj/pjwh/zyszzj.jsp" />
+			<forward name="update" path="/xsgzgl/sztz//zyszpj/pjwh/zyszxg.jsp" />
+			<forward name="ckxx" path="/xsgzgl/sztz//zyszpj/pjwh/zyszckxx.jsp" />
+			<forward name="zyszpj" path="/xsgzgl/sztz//zyszpj/pjwh/zyszpj.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

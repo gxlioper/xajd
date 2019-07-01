@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="RcxwmarkForm" type="com.zfsoft.xgxt.rcsw.rcxwmark.RcxwmarkForm"/>
+	
+	</form-beans>
+	
+	<action-mappings>
+		<action path="/xg_rcsw_rcxwmark_wcl" forward="/rcsw_rcxwmark.do?method=getWclCx"/>
+		<action path="/xg_rcsw_rcxwmark_ycl" forward="/rcsw_rcxwmark.do?method=getYclCx"/>
+		<action path="/rcsw_rcxwmark" scope="request" type="com.zfsoft.xgxt.rcsw.rcxwmark.RcxwmarkAction" name="RcxwmarkForm" parameter="method">
+			<forward name="wclcx" path="/xsgzgl/rcsw/rcxwmark/rcxwmarkcx.jsp"/>
+			<forward name="yclcx" path="/xsgzgl/rcsw/rcxwmark/rcxwmarkcx.jsp"/>
+			<forward name="sz" path="/xsgzgl/rcsw/rcxwmark/rcxwmark.jsp"/>
+			<forward name="xg" path="/xsgzgl/rcsw/rcxwmark/rcxwmarkxg.jsp"/>
+			<forward name="ck" path="/xsgzgl/rcsw/rcxwmark/rcxwmarkck.jsp"/>
+		</action>
+	
+	
+	
+	</action-mappings>
+
+
+
+
+
+
+
+</struts-config>

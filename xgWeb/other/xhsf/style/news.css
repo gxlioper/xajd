@@ -1,0 +1,303 @@
+@charset "utf-8";
+/*=======================================================
+Filename:default.css
+Description:主页面样式
+Version:2.0.0(2010-11-24)
+Website:西华师范大学学生工作网新闻页
+Auther:
+=======================================================*/
+/*======================公共样式========================*/
+html{
+width:100%;
+text-align:center;
+font-size:12px;
+}
+body {
+margin:0;
+padding:0;
+width:100%;
+font-family:tamoha,Arial, "宋体"
+}
+div, form, img, ul, ol, li, dl, dt, dd, table, td, tr, th, p, span {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 12px
+}
+li{
+list-style-type: none;
+text-align: left
+}
+select, input, button {
+font-size: 12px;
+font-family: Arial, "宋体"
+}
+em {
+font-style: normal
+}
+h1, h2, h3, h4, h5, h6 {
+margin: 0;
+padding: 0;
+font-weight: normal;
+font-size: 12px
+}
+img {
+vertical-align: middle;
+text-align: center
+}
+a:link, a:visited {
+color: #000;
+text-decoration: none
+}
+a:hover {
+color: #000;
+text-decoration: underline
+}
+/*=====================层样式=========================*/
+.body_main{
+width:1002px;
+margin:0 auto;
+}
+.topframe,.botframe {
+margin:0 auto;
+width:1002px;
+background:#fff;
+clear:both;
+}
+.topframe_01{
+	width:100%;
+	height:30px;
+	background:url(images/tophead_bg.gif) left top repeat-x;
+}
+.topframe_02{
+	width:100%;
+	height:158px;
+	background:url(images/toppic.jpg) left top no-repeat;
+}
+.topframe_03{
+	width:100%;
+	height:30px;
+	background:url(images/news_navbg.gif) left top repeat-x;
+}
+.mainframe {
+width:1002px;
+min-height:300px;
+_height:300px;
+background:#f3f9fd;
+}
+.mainframe:after {
+content:".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;	
+}
+.botframe {
+height:111px;
+background:url(images/bottom_bg.gif) left top repeat-x;
+}
+/*===============新闻内容===============*/
+.newscontent_01 {
+	clear:both;
+	width:880px;
+	margin-left:50px;
+	margin-top:20px;
+	background:url(images/news_bottombg.gif) left bottom no-repeat;
+	min-height:300px;
+	_height:300px;
+	padding-bottom:30px;
+	float:left;
+	display:inline;
+	}
+.newscontent_01 .title {
+	clear:both;
+	width:100%;
+	float:left;
+	padding-bottom:10px;
+	padding-top:40px;
+	background:url(images/news_headbg.gif) left top no-repeat;
+	}
+.newscontent_01 .title h2 {
+	font-size:16px;
+	font-weight:bold;
+	color:#054aa0;
+	margin:0 auto;
+	}
+.newscontent_01 .title h3 {
+	font-size:14px;
+	font-weight:bold;
+	margin-top:5px;
+	}
+.newscontent_01 .title h4 {
+	width:90%;
+	border-bottom:1px solid #CCC;
+	margin:10px auto 0 auto;
+	color:#4E4E4E;
+	height:30px;
+	line-height:30px;
+	}
+.newscontent_01 .title h4 span {
+	margin:0 10px;
+	}
+.newscontent_01 .title h5 {
+	display:none;
+}
+.newscontent_01 .con {
+	clear:both;
+	line-height:180%;
+	float:left;
+	display:inline;
+	width:800px;
+	text-align:left;
+	background:url(images/news_bg.gif) left top repeat-y;
+	display:inline;
+	padding:10px 40px 20px 40px;
+	color:#3c3c3c;
+	}
+.newscontent_01 a{
+	display:none;
+}
+.newscontent_01 .bar{
+background:url(images/news_bg.gif) left top repeat-y;
+width:100%;
+}
+.newscontent_01 button{
+	width:85px;
+	height:27px;
+	background:url(images/button_gb.gif) left top no-repeat;
+	border:none;
+	font-size:14px;
+	line-height:27px;
+	cursor:pointer;
+}
+/*=======================HTML控件=======================*/
+.TextDisplay_01 {
+width:40%;
+float:left;
+}
+.TextDisplay_01 h3 {
+display:none;
+}
+.TextDisplay_01 .con {
+color:#2f2f2f;
+line-height:30px;
+text-align:left;
+padding-left:10px;
+}
+/*=======================时间日期显示控件=======================*/
+.Showtime {
+width:30%;
+float:right;
+}
+.Showtime h3 {
+display:none;
+}
+.Showtime h3 span {
+}
+.Showtime h3 a {
+}
+.Showtime .con {
+width:100%;
+color:#666;
+}
+.Showtime  span {
+float:left;
+line-height:30px;
+color:#2f2f2f;
+}
+/*=======================导航控件=======================*/
+.navigation {
+width:100%;
+height:30px;
+background:url(images/nav_bg.gif) left top repeat-x;
+}
+.navigation h3 {
+display:none;
+}
+.navigation ul {
+width:98%;
+margin:0 auto;
+}
+.navigation ul li {
+float:left;
+background:url(images/fgx_01.gif) right center no-repeat;
+padding:0 5px 0 4px;
+height:30px;
+line-height:30px;
+color:#FFF;
+position:relative;
+z-index:999;
+}
+.navigation ul li a {
+display:block;
+color:#FFF;
+padding-left:10px;
+text-decoration:none;
+}
+.navigation ul li a span {
+font-size:14px;
+color:#FFF;
+font-weight:bold;
+display:block;
+padding-right:10px;
+}
+.navigation .nav .current{
+}
+.navigation .nav .current a{
+background: url(images/nav_current.gif) left center no-repeat;
+height:30px;
+}
+.navigation .nav .current a span {
+background: url(images/nav_current.gif) right center no-repeat;
+height:30px;
+}
+.navigation .nav .sub {
+position: absolute;
+left:0px;
+top:30px;
+width:115px;
+background:#60c6e6;
+padding:5px 0;
+}
+.navigation .nav .sub li{ 
+height:25px;
+width:115px;
+background: url(images/nav_line.gif) left bottom repeat-x;
+line-height:25px; 
+float: none; 
+clear: both;
+padding:0;
+text-align:left;
+z-index:999px;
+}
+.navigation .nav .sub li a{ 
+color:#262626!important;
+font-size:12px!important;
+width:100%;
+height:25px;
+text-indent:2.5em;
+display:block;
+background:url(images/ico_09.gif) 10px center no-repeat;
+padding:0;
+font-weight:bold;
+}
+.navigation .nav .sub li a:hover{ 
+text-decoration:none; 
+background:#447bb4 url(images/ico_10.gif) 10px center no-repeat;
+color:#fff!important;
+height:25px;
+display:block;
+padding:0;
+}
+/*=======================HTML控件=======================*/
+.TextDisplay_02 {
+width:100%;
+}
+.TextDisplay_02 h3 {
+display:none;
+}
+.TextDisplay_02 .con {
+padding-top:20px;
+color:#2f2f2f;
+line-height:22px;
+}

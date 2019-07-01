@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="bjlh_sztzForm" type="xgxt.sztz.bjlhdx.SztzBjlhdxActionForm"/>
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+		<!--展现的路径  长沙民政职业技术学院-->
+		<action path="/creditPointInit" forward="/bjlhdx_sztz.do?method=creditPointInit"/>
+		<action path="/creditPointStat" forward="/bjlhdx_sztz.do?method=creditPointStat"/>
+		<!--实际的路径 -->
+		<action path="/bjlhdx_sztz" parameter="method"  name="bjlh_sztzForm" scope="request"
+		        type="xgxt.sztz.bjlhdx.SztzBjlhdxAction">
+		        <forward name="creditPInit" path="/sztz/bjlhdx/creditPInit.jsp"></forward>		        
+		        <forward name="creditPStat" path="/sztz/bjlhdx/creditPStat.jsp"></forward>
+		        <forward name="creditPModi" path="/sztz/bjlhdx/creditPModi.jsp"></forward>          
+		</action>
+	</action-mappings>
+</struts-config>

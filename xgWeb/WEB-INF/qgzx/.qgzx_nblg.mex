@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/qgzxNblg.do" location="109,0" dimension="220,84" />
+  <StrutsActivity path="/qgzx/nblg/xsgwsqb.jsp" location="0,184" dimension="172,48" />
+  <StrutsActivity path="/qgzx/nblg/gwsqb.jsp" location="272,184" dimension="160,48" />
+  <StrutsTransition id="/qgzxNblg.do,gwsqb,/qgzx/nblg/gwsqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="274,84" />
+      <AbsolutePoint location="274,134" />
+      <AbsolutePoint location="352,134" />
+      <AbsolutePoint location="352,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qgzxNblg.do,xsgwsqb,/qgzx/nblg/xsgwsqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="164,84" />
+      <AbsolutePoint location="164,134" />
+      <AbsolutePoint location="86,134" />
+      <AbsolutePoint location="86,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

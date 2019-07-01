@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="gypyForm" type="com.zfsoft.xgxt.gygl.gypy.GypyForm" />
+	</form-beans>
+	<action-mappings>
+		<!-- 公寓评优-->
+		<action path="/gypy" name="gypyForm" type="com.zfsoft.xgxt.gygl.gypy.GypyAction"
+			parameter="method" scope="request">
+			<forward name="gypylb" path="/xsgzgl/gygl/gypynew/gypylb.jsp" />
+			<forward name="gypyzj" path="/xsgzgl/gygl/gypynew/gypyzj.jsp" />
+			<forward name="gypyxg" path="/xsgzgl/gygl/gypynew/gypyxg.jsp" />
+			<forward name="gypyck" path="/xsgzgl/gygl/gypynew/gypyck.jsp" />
+			<!-- 公寓评优 优秀辅导员-->
+			<forward name="yxfdylb" path="/xsgzgl/gygl/gypynew/yxfdy/yxfdylb.jsp" />
+			<forward name="yxfdyzj" path="/xsgzgl/gygl/gypynew/yxfdy/yxfdyzj.jsp" />
+			<forward name="yxfdyxg" path="/xsgzgl/gygl/gypynew/yxfdy/yxfdyxg.jsp" />
+			<forward name="yxfdyck" path="/xsgzgl/gygl/gypynew/yxfdy/yxfdyck.jsp" />
+			<!-- 公寓评优 优秀学生-->
+			<forward name="yxxslb" path="/xsgzgl/gygl/gypynew/yxxs/yxxslb.jsp" />
+			<forward name="yxxszj" path="/xsgzgl/gygl/gypynew/yxxs/yxxszj.jsp" />
+			<forward name="yxxsxg" path="/xsgzgl/gygl/gypynew/yxxs/yxxsxg.jsp" />
+			<forward name="yxxsck" path="/xsgzgl/gygl/gypynew/yxxs/yxxsck.jsp" />
+		</action>
+		<!-- 公寓评优 文明宿舍--> 
+		<action path="/gypywmss" forward="/gypy.do?method=list"/>
+		<!-- 公寓评优 优秀辅导员-->
+		<action path="/gypyyxfdy" forward="/gypy.do?method=yxfdy"/>	
+		<!-- 公寓评优 优秀学生-->
+		<action path="/gypyyxxs" forward="/gypy.do?method=yxxs"/>	
+	</action-mappings>
+</struts-config>

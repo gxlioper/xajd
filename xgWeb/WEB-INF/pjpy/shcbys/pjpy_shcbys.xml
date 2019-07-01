@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyShcbysJxjActionForm" type="xgxt.pjpy.shcbys.jxj.PjpyShcbysJxjActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpyshcbyswh"
+				type="xgxt.pjpy.shcbys.jxj.PjpyShcbysJxjAction"
+				name="pjpyShcbysJxjActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="jxjsq"       path="/pjpy/shcbys/jxj/sq.jsp" />
+			<forward name="kqxxwh"      path="/pjpy/shcbys/xskqxx.jsp"/>
+			<forward name="kqxxwhview"  path="/pjpy/shcbys/kqdetails.jsp"/>
+			<forward name="jxjsh"       path="/pjpy/shcbys/jxj/sh.jsp"/>
+			<forward name="jxjshone"    path="/pjpy/shcbys/jxj/shone.jsp"/>
+			<forward name="jxjxg"       path="/pjpy/shcbys/jxj/xg.jsp"/>
+			<forward name="jxjprint"    path="/pjpy/shcbys/jxj/jxjsqprint.jsp"/>
+			<forward name="cjprint"     path="/pjpy/shcbys/jxj/cjprint.jsp"/>	
+			<forward name="pt"          path="/pjpy/shcbys/jxj/jxjsqprint.jsp"/>
+			<forward name="cjpt"	    path="/pjpy/shcbys/jxj/cjprint.jsp"/>			
+</action>
+
+	</action-mappings>
+
+	<message-resources key="pjpyshcbys" parameter="xgxt.pjpy.shcbys.pjpyshcbys" />
+
+</struts-config>

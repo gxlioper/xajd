@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xsxxZzdxForm" type="xgxt.studentInfo.zzdx.XsxxZzdxForm" />
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+		<!-- <<<<<<<<<<<<<<学生信息： 中州大学高基报表打印>>>>>>>>>>>>> -->
+		<action 
+			name="xsxxZzdxForm" 
+			parameter="method"
+			path="/loftyReport" 
+			scope="request"
+			type="xgxt.studentInfo.zzdx.XsxxZzdxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xsxx/zzdx/printGjbb.jsp" />
+			<forward name="toexcel" path="about:blank" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

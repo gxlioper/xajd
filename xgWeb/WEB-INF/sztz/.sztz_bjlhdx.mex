@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/creditPointInit.do" location="1156,0" dimension="142,60" />
+  <StrutsActivity path="/creditPointStat.do" location="1398,0" dimension="142,60" />
+  <StrutsActivity path="/bjlhdx_sztz.do" location="1226,160" dimension="244,84" />
+  <StrutsActivity path="/sztz/bjlhdx/creditPInit.jsp" location="332,394" dimension="208,48" />
+  <StrutsActivity path="/sztz/bjlhdx/creditPStat.jsp" location="1564,394" dimension="208,48" />
+  <StrutsActivity path="/sztz/zgkydx/infoCheckManage.jsp" location="0,394" dimension="232,48" />
+  <StrutsActivity path="/sztz/zgkydx/infoChkView.jsp" location="640,394" dimension="208,48" />
+  <StrutsActivity path="/sztz/zgkydx/infoAdd.jsp" location="948,394" dimension="184,48" />
+  <StrutsActivity path="/sztz/zgkydx/infoPrintManage.jsp" location="1232,394" dimension="232,48" />
+  <StrutsActivity path="/sztz/zgkydx/infoView.jsp" location="1872,394" dimension="190,48" />
+  <StrutsActivity path="/sztz/zgkydx/infoPrint.jsp" location="2162,394" dimension="196,48" />
+  <StrutsActivity path="/sztz/zgkydx/infoModi.jsp" location="2458,394" dimension="190,48" />
+  <StrutsActivity path="/sztz/bjlhdx/creditPModi.jsp" />
+  <StrutsTransition id="/bjlhdx_sztz.do,creditPStat,/sztz/bjlhdx/creditPStat.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1375,244" />
+      <AbsolutePoint location="1375,364" />
+      <AbsolutePoint location="1668,364" />
+      <AbsolutePoint location="1668,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditPointStat.do,null,/bjlhdx_sztz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1469,60" />
+      <AbsolutePoint location="1469,110" />
+      <AbsolutePoint location="1409,110" />
+      <AbsolutePoint location="1409,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditPointInit.do,null,/bjlhdx_sztz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1227,60" />
+      <AbsolutePoint location="1227,110" />
+      <AbsolutePoint location="1287,110" />
+      <AbsolutePoint location="1287,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlhdx_sztz.do,creditPInit,/sztz/bjlhdx/creditPInit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1266,244" />
+      <AbsolutePoint location="1266,304" />
+      <AbsolutePoint location="436,304" />
+      <AbsolutePoint location="436,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bjlhdx_sztz.do,creditPModi,/sztz/bjlhdx/creditPModi.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1348,202" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

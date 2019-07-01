@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="zjlgPjpyForm" type="xgxt.pjpy.zjlg.ZjlgPjpyForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/xjbj_check" 	   forward="/zjlgPjpy.do?method=xjbjChkDefault"/> <!-- 先进班级审核主页 -->
+	    <!-- 实际路径 -->	
+		<action path="/zjlgPjpy"
+				type="xgxt.pjpy.zjlg.ZjlgPjpyAction"
+				name="zjlgPjpyForm"
+				parameter="method"
+				scope="request">
+		<!-- 条件设置 -->
+		<forward name="pjpytjsz" path="/pjpy/zjlg/tjsz/set.jsp" />
+		<!-- 德育测评分_考勤分 -->
+		<forward name="dycpfKqf" path="/pjpy/zjlg/dycpf/kqf/add.jsp" />
+		<!-- 德育测评分_平时分 -->
+		<forward name="dycpfPsf" path="/pjpy/zjlg/dycpf/psf/add.jsp" />
+		<!-- 德育测评分_卫生分 -->
+		<forward name="dycpfWsf" path="/pjpy/zjlg/dycpf/wsf/add.jsp" />
+		<!-- 德育测评分_总分 -->
+		<forward name="dycpfZf" path="/pjpy/zjlg/dycpf/zf/view.jsp" />
+		<!-- 德育测评分_平时分比例设置 -->
+		<forward name="dycpfPsfSz" path="/pjpy/zjlg/dycpf/psf/blSet.jsp" />
+		<!-- 德育测评分_总分分比例设置 -->
+		<forward name="dycpfDycpfSz" path="/pjpy/zjlg/dycpf/zf/blSet.jsp" />
+		<!-- 综合素质测评 -->
+		<forward name="zhszcp" path="/pjpy/zjlg/zhszcp/search.jsp" />
+		<!-- 综合素质测评_参数设置 -->
+		<forward name="zhszcpSz" path="/pjpy/zjlg/zhszcp/blSet.jsp" />
+		<!--  荣誉称号申请 -->
+		<forward name="rychSq" path="/pjpy/zjlg/rych/zjlg_rychSq.jsp" />
+		<!--  荣誉称号申请查询主页 -->
+		<forward name="rychDefault" path="/pjpy/zjlg/rych/rychDefault.jsp" />
+		<!--  荣誉称号添加 -->
+		<forward name="rychAdd" path="/pjpy/zjlg/rych/rychAdd.jsp" />
+        <!--  荣誉称号修改 -->
+		<forward name="rychModi" path="/pjpy/zjlg/rych/rychModi.jsp" />
+		<!--  荣誉称号审核查询主页 -->
+		<forward name="rychCkDefault" path="/pjpy/zjlg/rych/rychCkDefault.jsp" />
+		<!--  荣誉称号审核查看 -->
+		<forward name="rychCkView" path="/pjpy/zjlg/rych/rychCkView.jsp" />
+        <!--  先进班级申请 -->
+		<forward name="xjbjSq" path="/pjpy/zjlg/xjbj/xjbjSq.jsp" />					
+		<forward name="rychCkView" path="/pjpy/zjlg/rych/rychCkView.jsp" />	
+		<!--  奖学金申请跳转-->
+		<forward name="yxxsjxjsq" path="/pjpy/zjlg/jxjsq/yxxsjxj/add.jsp" />	
+		<!--  奖学金查询-->
+		<forward name="jxjquery" path="/pjpy/zjlg/jxjsq/yxxsjxj/jxjquery.jsp" />	
+		<!--  突出贡献奖学金申请-->
+		<forward name="tcgxjxj" path="/pjpy/zjlg/jxjsq/yxxsjxj/tcgxjxjadd.jsp" />
+		<!--  优秀毕业生奖学金申请-->
+		<forward name="yxbysjxj" path="/pjpy/zjlg/jxjsq/yxxsjxj/yxbysjxjadd.jsp" />	
+		<!--  纺织之光科技教育基金申请-->
+		<forward name="fzzgjxj" path="/pjpy/zjlg/jxjsq/yxxsjxj/zxjxj_fzzgjxjadd.jsp" />				
+		<!--  国家奖学金申请-->
+		<forward name="gjjxj" path="/pjpy/zjlg/jxjsq/yxxsjxj/zxjxj_gjjxjadd.jsp" />				
+		<!--  华鼎奖学金申请-->
+		<forward name="hdjxj" path="/pjpy/zjlg/jxjsq/yxxsjxj/zxjxj_hdjxjadd.jsp" />				
+		<!--  桑麻奖学奖学金申请-->
+		<forward name="smjxj" path="/pjpy/zjlg/jxjsq/yxxsjxj/zxjxj_smjxjadd.jsp" />	
+		<!--  奖学金修改-->
+		<forward name="yxxsjxjsqview" path="/pjpy/zjlg/jxjsq/update/update.jsp" />	
+		<!--  突出贡献奖学金修改-->
+		<forward name="tcgxjxjview" path="/pjpy/zjlg/jxjsq/update/tcgxjxjupdate.jsp" />
+		<!--  优秀毕业生奖学金修改-->
+		<forward name="yxbysjxjview" path="/pjpy/zjlg/jxjsq/update/yxbysjxjupdate.jsp" />	
+		<!--  纺织之光科技教育基金修改-->
+		<forward name="fzzgjxjview" path="/pjpy/zjlg/jxjsq/update/zxjxj_fzzgjxjupdate.jsp" />				
+		<!--  国家奖学金修改-->
+		<forward name="gjjxjview" path="/pjpy/zjlg/jxjsq/update/zxjxj_gjjxjupdate.jsp" />				
+		<!--  华鼎奖学金修改-->
+		<forward name="hdjxjview" path="/pjpy/zjlg/jxjsq/update/zxjxj_hdjxjupdate.jsp" />				
+		<!--  桑麻奖学奖学金修改-->
+		<forward name="smjxjview" path="/pjpy/zjlg/jxjsq/update/zxjxj_smjxjupdate.jsp" />	
+		<forward name="jxjexp" path="/about:blank" />	
+		<!-- 参数设置 参数设置(人数设置) 奖学金，荣誉称号，先进班级三个页面用选项卡做跳转-->
+		<forward name="jxjCssz" path="/pjpy/zjlg/cssz/cssz/jxjCssz.jsp" />
+		<forward name="rychCssz" path="/pjpy/zjlg/cssz/cssz/rychCssz.jsp" />
+		<forward name="xjbjCssz" path="/pjpy/zjlg/cssz/cssz/xjbjCssz.jsp" />
+		<!-- 参数设置 奖学金参评组划分-->
+		<forward name="cpzhf" path="/pjpy/zjlg/cssz/cssz/cpzhf.jsp" />
+		<!-- 参数设置 条件设置 奖学金，荣誉称号，先进班级用选项卡做区分-->
+		<forward name="tjsz" path="/pjpy/zjlg/cssz/tjsz/tjsz.jsp" />
+			<!--  奖学金打印-->
+		<forward name="yxxsjxjsqprint" path="/pjpy/zjlg/jxjsq/report/printadd.jsp" />	
+		<!--  突出贡献奖学金打印-->
+		<forward name="tcgxjxjprint" path="/pjpy/zjlg/jxjsq/report/tcgxjxjprint.jsp" />
+		<!--  优秀毕业生奖学金打印-->
+		<forward name="yxbysjxjprint" path="/pjpy/zjlg/jxjsq/report/yxbysjxjprint.jsp" />	
+		<!--  纺织之光科技教育基金打印-->
+		<forward name="fzzgjxjprint" path="/pjpy/zjlg/jxjsq/report/zxjxj_fzzgjxjprint.jsp" />				
+		<!--  国家奖学金打印-->
+		<forward name="gjjxjprint" path="/pjpy/zjlg/jxjsq/report/zxjxj_gjjxjprint.jsp" />				
+		<!--  华鼎奖学金打印-->
+		<forward name="hdjxjprint" path="/pjpy/zjlg/jxjsq/report/zxjxj_hdjxjprint.jsp" />				
+		<!--  桑麻奖学奖学金打印-->
+		<forward name="smjxjprint" path="/pjpy/zjlg/jxjsq/report/zxjxj_smjxjprint.jsp" />		
+		<!--  平奖评优审核查询-->
+		<forward name="jxjshquery" path="/pjpy/zjlg/jxjsq/jxjsh/jxjsh_query.jsp" />												
+		<!--  奖学金审核-->
+		<forward name="yxxsjxjsqsh" path="/pjpy/zjlg/jxjsq/jxjsh/yxxsjxjsh.jsp" />	
+		<!--  突出贡献奖学金审核-->
+		<forward name="tcgxjxjsh" path="/pjpy/zjlg/jxjsq/jxjsh/tcgxjxjsh.jsp" />
+		<!--  优秀毕业生奖学金审核-->
+		<forward name="yxbysjxjsh" path="/pjpy/zjlg/jxjsq/jxjsh/yxbysjxjsh.jsp" />	
+		<!--  纺织之光科技教育基金审核-->
+		<forward name="fzzgjxjsh" path="/pjpy/zjlg/jxjsq/jxjsh/zxjxj_fzzgjxjsh.jsp" />				
+		<!--  国家奖学金审核-->
+		<forward name="gjjxjsh" path="/pjpy/zjlg/jxjsq/jxjsh/zxjxj_gjjxjsh.jsp" />				
+		<!--  华鼎奖学金审核-->
+		<forward name="hdjxjsh" path="/pjpy/zjlg/jxjsq/jxjsh/zxjxj_hdjxjsh.jsp" />				
+		<!--  桑麻奖学奖学金审核-->
+		<forward name="smjxjsh" path="/pjpy/zjlg/jxjsq/jxjsh/zxjxj_smjxjsh.jsp" />		
+        <forward name="xjbjSq" path="/pjpy/zjlg/xjbj/xjbjSq.jsp" />	
+		 <!--  先进班级申请查询主页 -->	
+		<forward name="xjbjDefault" path="/pjpy/zjlg/xjbj/xjbjDefault.jsp" />
+		 <!--  先进班级增加 -->	
+		<forward name="xjbjAdd" path="/pjpy/zjlg/xjbj/xjbjAdd.jsp" />
+		 <!--  先进班级修改 -->	
+		<forward name="xjbjModi" path="/pjpy/zjlg/xjbj/xjbjModi.jsp" />	
+		 <!--  先进班级审核查询主页 -->	
+		<forward name="xjbjChkDefault" path="/pjpy/zjlg/xjbj/xjbjChkDefault.jsp" />	
+		 <!--  先进班级审核查询主页 -->	
+		<forward name="xjbjCkView" path="/pjpy/zjlg/xjbj/xjbjCkView.jsp" />		
+		 <!--  奖学金发放 -->	
+		<forward name="jxjff" path="/pjpy/zjlg/jxjsq/jxjff/jxjfa_query.jsp" />
+		<!--  处罚情况-->
+		<forward name="cfqk" path="/pjpy/zjlg/jxjsq/yxxsjxj/cfqk.jsp" />												
+		<!--  评奖方式-->
+		<forward name="pjfs" path="/pjpy/zjlg/cssz/cssz/pjfs.jsp" />
+		<!-- 智育成绩查询 -->															
+		<forward name="zycpfwh" path="/pjpy/zjlg/zhszcp/zycpfwh.jsp" />
+		<forward name="workflow" path="/pjpy/zjlg/workflow.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources key="zjlgPjpy" parameter="xgxt.pjpy.zjlg.zjlgPjpy" />
+
+</struts-config>

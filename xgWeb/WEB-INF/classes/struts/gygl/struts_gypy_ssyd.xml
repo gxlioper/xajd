@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="shlcForm" type="com.zfsoft.xgxt.gygl.ssyd.shlc.ShlcForm" />
+		<form-bean name="ydsqForm" type="com.zfsoft.xgxt.gygl.ssyd.ydsq.YdsqForm" />
+		<form-bean name="ydshForm" type="com.zfsoft.xgxt.gygl.ssyd.ydsh.YdshForm" />
+		<form-bean name="ydjgForm" type="com.zfsoft.xgxt.gygl.ssyd.ydjg.YdjgForm" />
+		<form-bean name="plydForm" type="com.zfsoft.xgxt.gygl.ssyd.plyd.PlydModel" />
+	</form-beans>
+	<action-mappings>
+	
+		<!-- 批量宿舍异动 -->
+		<action path="/gygl_plyd" forward="/gy_plyd.do?method=plydList"/>
+		
+		<action path="/gy_plyd" 
+				name="plydForm" 
+				type="com.zfsoft.xgxt.gygl.ssyd.plyd.PlydAction"
+				parameter="method" 
+				scope="request">
+			<forward name="plydList" path="/xsgzgl/gygl/ssyd/plyd/plydList.jsp" />
+			<forward name="tzrz" path="/xsgzgl/gygl/ssyd/plyd/tzrz.jsp" />
+		</action>
+	
+	
+		<!-- 审核流程--> 
+		<action path="/shlcbase" forward="/shlc.do?method=update"/>
+		<action path="/shlc" name="shlcForm" type="com.zfsoft.xgxt.gygl.ssyd.shlc.ShlcAction"
+			parameter="method" scope="request">
+			<forward name="shlcxg" path="/xsgzgl/gygl/ssyd/shlc/shlcxg.jsp" />
+		</action>
+		
+		<!-- 宿舍异动申请-->
+		<action path="/ydsqbase" forward="/ydsq.do?method=list"/>
+		<action path="/ydsq" name="ydsqForm" type="com.zfsoft.xgxt.gygl.ssyd.ydsq.YdsqAction"
+			parameter="method" scope="request">
+			<forward name="list" path="/xsgzgl/gygl/ssyd/ydsq/ydsqlist.jsp" />
+			<forward name="ydsqzj" path="/xsgzgl/gygl/ssyd/ydsq/ydsqzj.jsp" />
+			<forward name="ydsqxg" path="/xsgzgl/gygl/ssyd/ydsq/ydsqxg.jsp" />
+			<forward name="ydsqck" path="/xsgzgl/gygl/ssyd/ydsq/ydsqck.jsp" />
+			<forward name="selectCwxx" path="/xsgzgl/gygl/ssyd/ydsq/selectCwxx.jsp" />			
+			<forward name="selectRzcwxx" path="/xsgzgl/gygl/ssyd/ydsq/selectRzcwxx.jsp" />			
+		</action>
+		
+		 <!--宿舍异动审核-->
+		<action path="/ydshbase" forward="/ydsh.do?method=list"/>
+		 <action 
+	    	path="/ydsh" 
+	    	name="ydshForm"
+	    	type="com.zfsoft.xgxt.gygl.ssyd.ydsh.YdshAction" 
+	    	parameter="method"
+	    	scope="request">  
+	    	<forward name="list" path="/xsgzgl/gygl/ssyd/ydsh/ydshList.jsp"/>
+	    	<forward name="ydsh" path="/xsgzgl/gygl/ssyd/ydsh/ydsh.jsp"/>
+	    	<forward name="ydck" path="/xsgzgl/gygl/ssyd/ydsh/ydck.jsp"/>
+	    	<forward name="ydPlsh" path="/xsgzgl/gygl/ssyd/ydsh/ydPlsh.jsp"></forward>
+	    </action>
+	    
+	    
+	    
+	    <!--宿舍异动结果-->
+		<action path="/ydjgbase" forward="/ydjg.do?method=list"/>
+		
+		<action path="/lsxxgl_lsxxgl_zslsxxgl" forward="/ydjg.do?method=zslslist"/>
+		
+		 <action 
+	    	path="/ydjg" 
+	    	name="ydjgForm"
+	    	type="com.zfsoft.xgxt.gygl.ssyd.ydjg.YdjgAction" 
+	    	parameter="method"
+	    	scope="request">  
+	    	<forward name="list" path="/xsgzgl/gygl/ssyd/ydjg/ydjgList.jsp"/>
+	    	<forward name="ydjgzj" path="/xsgzgl/gygl/ssyd/ydjg/ydjgzj.jsp"/>
+	    	<forward name="ydjgck" path="/xsgzgl/gygl/ssyd/ydjg/ydjgck.jsp"/>
+	    	<forward name="ckXsydInfo" path="/xsgzgl/gygl/ssyd/ydjg/ckXsydInfo.jsp"/>
+	    	<forward name="ckQsydInfo" path="/xsgzgl/gygl/ssyd/ydjg/ckQsydInfo.jsp"/>    	
+	    	<forward name="zslslist" path="/xsgzgl/gygl/ssyd/ydjg/zsxxList.jsp"/>
+	    	<forward name="zsxxck" path="/xsgzgl/gygl/ssyd/ydjg/zsxxck.jsp"/>
+	    	<forward name="ckXsydInfoLsxx" path="/xsgzgl/gygl/ssyd/ydjg/ckXsydInfoLsxx.jsp"/>
+	    </action>
+	</action-mappings>
+</struts-config>

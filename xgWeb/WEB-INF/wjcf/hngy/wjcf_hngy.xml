@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfHngyActionForm" type="xgxt.wjcf.hngy.WjcfHngyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/wjcfhngywh"
+				type="xgxt.wjcf.hngy.WjcfHngyAction"
+				name="wjcfHngyActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="rcxwjlpage"     path="/wjcf/hngy/rcxwjlpage.jsp" />
+			<forward name="rcxwaddpage"    path="/wjcf/hngy/rcxwaddpage.jsp"/>
+			<forward name="rcxwmodipage"   path="/wjcf/hngy/rcxwmodipage.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="wjcfhygxy" parameter="xgxt.wjcf.hygxy.wjcfhygxy" />
+
+</struts-config>

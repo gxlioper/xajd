@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyCzxxActionForm" type="xgxt.pjpy.czxx.PjpyCzxxActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_czxx_rychAdd" 	   forward="/czxxPjpyRych.do?method=rychAdd"/> <!-- 荣誉称号申请页面 -->
+	    <action path="/pjpy_czxx_rychQuery"     forward="/czxxPjpyRych.do?method=rychQuery"/><!-- 荣誉称号查询维护 -->
+	    <action path="/pjpy_czxx_rychModi"      forward="/czxxPjpyRych.do?method=rychModi"/> <!-- 荣誉称号修改 -->
+	    <action path="/pjpy_czxx_rychsh"        forward="/czxxPjpyRych.do?method=rychsh"/> <!-- 荣誉称号审核 -->
+	    <action path="/pjpy_czxx_rychshjg"      forward="/czxxPjpyRych.do?method=rychshjg"/> <!-- 荣誉称号审核结果 -->
+	    <action path="/pjpy_czxx_rychDggrsh"    forward="/czxxPjpyRych.do?method=rychDggrsh"/> <!-- 荣誉称号单个审核 -->
+		<action path="/pjpy_czxx_rychBmsh"      forward="/czxxPjpyRych.do?method=rychBmsh"/> <!-- 学院，学校荣誉称号审核 -->
+		<action path="/pjpy_czxx_xyrychshView"  forward="/czxxPjpyRych.do?method=xyrychshView"/><!-- 学院荣誉称号审核显示 -->
+		
+	    <!-- 实际路径 -->	
+		<action path="/czxxPjpyRych"
+				type="xgxt.pjpy.czxx.rych.PjpyCzxxRychAction"
+				name="pjpyCzxxActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 条件设置 -->
+		<forward name="query" path="/pjpy/czxx/rych/query.jsp" />
+		<forward name="add"  path="/pjpy/czxx/rych/add.jsp"/>
+		<forward name="update"  path="/pjpy/czxx/rych/update.jsp"/>
+		<forward name="grsh"  path="/pjpy/czxx/rych/grsh.jsp"/>
+		<forward name="jtsh"  path="/pjpy/czxx/rych/jtsh.jsp"/>
+		<forward name="rychDggrsh" path="/pjpy/czxx/rych/rychDggrsh.jsp"/>
+		<forward name="rychBmsh" path="/pjpy/czxx/rych/rychBmsh.jsp"/>
+		<forward name="xyrychshView" path="/pjpy/czxx/rych/xyrychshView.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config>

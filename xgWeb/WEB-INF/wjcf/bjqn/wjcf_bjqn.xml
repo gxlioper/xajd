@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfBjqnForm" type="xgxt.wjcf.bjqn.BjqnWjcfForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<action path="/wjcf_bjqn_wjcfjj" 	   forward="/wjcf_bjqn.do?method=wjcfjj"/> <!-- 违纪处分降级 -->
+		<action path="/wjcf_bjqn_jjlsxx"	   forward="/wjcf_bjqn.do?method=lsxxManage"/>
+		
+        <!-- 实际路径 -->	
+		<action path="/wjcf_bjqn"
+				type="xgxt.wjcf.bjqn.BjqnWjcfAction"
+				name="wjcfBjqnForm"
+				parameter="method"
+				scope="request">
+			<forward name="wjcfjj" path="/wjcf/bjqn/wjcfjj.jsp" />
+			<forward name="lsxxManage" path="/wjcf/bjqn/lsxxManage.jsp" />
+			<forward name="lsxxUpdate" path="/wjcf/bjqn/lsxxUpdate.jsp" />
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/XsGyXxGl.do" location="0,0" dimension="194,88" />
+  <StrutsActivity path="/XsGyXxGl_portallet.do" location="350,50" dimension="134,62" />
+  <StrutsActivity path="/gygl/portallet/xxgyxx.jsp" location="650,50" dimension="155,49" />
+  <StrutsActivity path="/gygl/portallet/xxgyxx_view.jsp" location="950,50" dimension="183,49" />
+  <StrutsActivity path="/gygl/gdby/xxgyxx.jsp" location="27,188" dimension="139,49" />
+  <StrutsTransition id="/XsGyXxGl_portallet.do,null,/XsGyXxGl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="97,44" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/XsGyXxGl.do,xsGyXxQuerry,/gygl/portallet/xxgyxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="194,65" />
+      <AbsolutePoint location="650,65" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/XsGyXxGl.do,xsGyXxView,/gygl/portallet/xxgyxx_view.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="97,44" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="hzyPjpyForm" type="xgxt.pjpy.hzy.HzyPjpyForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/dxjxjsp"
+				type="xgxt.pjpy.hzy.HzyPjpyAction"
+				name="hzyPjpyForm"
+				parameter="method"
+				scope="request">
+			<forward name="success" path="/pjpy/hzy/pjpy_hzy_dxjxjspb.jsp" />
+			<forward name="failure" path="" />
+		</action>
+		<action path="/jtxmtbjlsq"
+				type="xgxt.pjpy.hzy.HzyPjpyAction"
+				name="hzyPjpyForm"
+				parameter="method"
+				scope="request">
+			<forward name="success" path="/pjpy/hzy/pjpy_hzy_jtxmtbjlsqb.jsp" />
+		</action>
+		<action path="/saveJtxmtbjlsq"
+				type="xgxt.pjpy.hzy.HzyPjpyAction"
+				name="hzyPjpyForm"
+				parameter="method"
+				scope="request">
+			<forward name="success" path="/pjpy/hzy/pjpy_hzy_jtxmtbjlsqb.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<杭州职业先进班级/文明班级<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+		<action name="hzyPjpyForm" path="/pjpy_hzy_xjbjandwmbj"
+			scope="request" type="xgxt.pjpy.hzy.HzyPjpyAction"
+			parameter="method">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/pjpy/hzy/pjpy_hzy_xjbjandwmbj.jsp"></forward>
+			<forward name="hzy_xjtzb" path="/pjpy/hzy/hzy_xjtzb.jsp"></forward>
+			<forward name="hzy_xjtzz" path="/pjpy/hzy/hzy_xjtzz.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<杭州职业先称号查询<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+		<action name="hzyPjpyForm" path="/pjpy_hzy_xjch"
+			scope="request" type="xgxt.pjpy.hzy.HzyPjpyAction"
+			parameter="method">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="xjwmbjqry" path="/pjpy/hzy/xjwmbjqry.jsp"></forward>
+			<forward name="xjtzbSqQuer" path="/pjpy/hzy/xjtzbSqQuer.jsp"></forward>
+			<forward name="xjtzzSqQuer" path="/pjpy/hzy/xjtzzSqQuer.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<杭州职业先称号修改<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+		<action name="hzyPjpyForm" path="/pjpy_xjch_modi"
+			scope="request" type="xgxt.pjpy.hzy.HzyPjpyAction"
+			parameter="method">
+			<forward name="xjtzbModi" path="/pjpy/hzy/xjtzbModi.jsp"></forward>
+			<forward name="xjtzzModi" path="/pjpy/hzy/xjtzzModi.jsp"></forward>
+		</action>		
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<杭州职业先进班级/文明班级保存<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+		<action name="hzyPjpyForm" path="/pjpy_hzy_xjbjandwmbj_save"
+			scope="request" type="xgxt.pjpy.hzy.HzyPjpyAction"
+			parameter="method">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/pjpy/hzy/pjpy_hzy_xjbjandwmbj.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<杭州职业先称号审核查询<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+		<action name="hzyPjpyForm" path="/pjpyHzyXjchChkCx"
+			scope="request" type="xgxt.pjpy.hzy.HzyPjpyAction"
+			parameter="method">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="xjwmbjChkQry" path="/pjpy/hzy/xjwmbjChkQuerry.jsp"></forward>
+			<forward name="xjtzbChkQry" path="/pjpy/hzy/xjtzbChkQuerry.jsp"></forward>
+			<forward name="xjtzzChkQry" path="/pjpy/hzy/xjtzzChkQuerry.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<杭州职业先称号单个审核<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+		<action name="hzyPjpyForm" path="/hzyXjchChk"
+			scope="request" type="xgxt.pjpy.hzy.HzyPjpyAction"
+			parameter="method">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="xjtzbViewChk" path="/pjpy/hzy/xjtzbViewChk.jsp"></forward>
+			<forward name="xjtzzViewChk" path="/pjpy/hzy/xjtzzViewChk.jsp"></forward>
+			<forward name="xjwmbjViewChk" path="/pjpy/hzy/xjwmbjViewChk.jsp"></forward>
+		</action>
+							
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<杭州职业先进班级/文明班级报表打印<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+		<action name="hzyPjpyForm" path="/pjpy_hzy_xjbjandwmbj_print"
+			scope="request" type="xgxt.pjpy.hzy.HzyPjpyAction"
+			parameter="method">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/pjpy/hzy/hzyxjbjandwmbjprint.jsp"></forward>
+			<forward name="xjtzbPrint" path="/pjpy/hzy/xjtzbPrint.jsp"></forward>
+			<forward name="xjtzzPrint" path="/pjpy/hzy/xjtzzPrint.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.pjpy.hzy.pjpy" key="pjpy_hzy"></message-resources>
+</struts-config>

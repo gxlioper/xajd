@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="gyglQsglForm" type="xgxt.gygl.qsgl.GyglQsglForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/gygl_qsgl_zdfp" 	forward="/gyglQsgl.do?method=qszdfp"/>		<!-- 寝室自动分配 -->
+		<action path="/gygl_qsgl_sdfp" 	forward="/gyglQsgl.do?method=qssdfp"/>		<!-- 寝室手动分配 -->
+		<action path="/gygl_qsgl_fpjg" 	forward="/gyglQsgl.do?method=qsfpjg"/>		<!-- 寝室分配结果 -->
+		
+		<!-- 根据领导意见整改 -->
+		<action path="/gygl_qsgl_qsfp" 	forward="/gyglQsgl.do?method=qsfptj"/>		<!-- 寝室分配 -->
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 基本设置 -->
+    	<action path="/gyglQsgl" 
+        		parameter="method"  
+        		name="gyglQsglForm" 
+        		scope="request"
+		        type="xgxt.gygl.qsgl.GyglQsglAction">	
+		       
+			<forward name="qszdfp"    		path="/gygl/comm/qsgl/qszdfp.jsp" />		<!-- 寝室自动分配 -->
+			<forward name="qszdfpjg"   	 	path="/gygl/comm/qsgl/qszdfpjg.jsp" />		<!-- 寝室自动分配(结果) -->
+			
+			<forward name="qssdfp"    		path="/gygl/comm/qsgl/qssdfp.jsp" />		<!-- 寝室手动分配 -->
+			<forward name="qssdfpdDetail"   path="/gygl/comm/qsgl/qssdfpdDetail.jsp" />	<!-- 寝室手动分配(详细) -->
+			
+			<forward name="qsfpjg"    		path="/gygl/comm/qsgl/qsfpjg.jsp" />		<!-- 寝室分配结果 -->
+			
+			<forward name="qsfptj"    		path="/gygl/comm/qsgl/qsfptj.jsp" />		<!-- 寝室分配统计 -->
+			
+			<forward name="qssdfpByHand"    path="/gygl/comm/qsgl/qssdfpByHand.jsp"/>   <!-- 寝室存手动分配 -->
+		</action>
+		
+	</action-mappings>
+</struts-config>

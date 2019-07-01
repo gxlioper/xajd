@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyCsmzActionForm" type="xgxt.pjpy.csmz.PjpyCsmzActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpycsmzwh"
+				type="xgxt.pjpy.csmz.PjpyCsmzAction"
+				name="pjpyCsmzActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="jxjsqdefault"       path="/pjpy/csmz/jxjsqdefault.jsp" />
+			<forward name="jtjxjsqdefault"     path="/sqb/jxjsq.jsp"></forward>
+			<forward name="shjxjsq"            path="/pjpy/csmz/shjxjsq.jsp"></forward>
+			<forward name="jxjsqqrydefault"    path="/pjpy/csmz/jxjsqqrydefault.jsp"></forward>
+			<forward name="shjxjqrydefault"    path="/pjpy/csmz/shjxjqrydefault.jsp"></forward>
+			<forward name="shjxjmodi"          path="/pjpy/csmz/shjxjmodi.jsp"></forward>
+			<forward name="jxjshdefault"       path="/pjpy/csmz/jxjshdefault.jsp"></forward>
+			<forward name="shjxjshdefault"     path="/pjpy/csmz/shjxjshdefault.jsp"></forward>
+			<forward name="shjxjshone"         path="/pjpy/csmz/shjxjshone.jsp"></forward>
+			<forward name="dmwhadd"            path="/pjpy/csmz/dmwhadd.jsp"></forward>
+			<forward name="pjpydmmodi"         path="/pjpy/csmz/pjpydmmodi.jsp"></forward>
+			<forward name="stuxgjxjxx"         path="/pjpy/csmz/stuxgjxjxx.jsp"></forward>
+			<forward name="stujxjdel"          path="/prise_result.do"></forward>
+			<forward name="sturychdel"         path="/credit_result.do"></forward>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="pjpycsmz" parameter="xgxt.pjpy.csmz.pjpycsmz" />
+
+</struts-config>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/nbty_rych.do" location="50,50" dimension="220,84" />
+  <StrutsActivity path="/nbtyWmqs.do" location="350,50" dimension="250,84" />
+  <StrutsActivity path="/pjpy/nbty/rych/showOne.jsp" location="950,50" dimension="202,48" />
+  <StrutsActivity path="/pjpy/nbty/rych/sqManage.jsp" location="650,150" dimension="208,48" />
+  <StrutsActivity path="/pjpy/nbty/rych/xmPrint.jsp" location="950,150" dimension="202,48" />
+  <StrutsActivity path="/pjpy/nbty/rych/shManage.jsp" location="50,250" dimension="208,48" />
+  <StrutsActivity path="/pjpy/nbty/rych/stuInfo.jsp" location="350,250" dimension="202,48" />
+  <StrutsActivity path="/pjpy/nbty/rych/shOne.jsp" location="650,250" dimension="190,48" />
+  <StrutsActivity path="/pjpy/nbty/rych/rychResult.jsp" location="950,250" dimension="220,48" />
+  <StrutsActivity path="/pjpy/nbty/rych/showRych.jsp" location="50,350" dimension="208,48" />
+  <StrutsActivity path="/pjpy/nbty/wmqs/resultWmqs.jsp" location="350,350" dimension="220,48" />
+  <StrutsActivity path="/pjpy/nbty/wmqs/oneWmqs.jsp" location="650,350" dimension="202,48" />
+  <StrutsActivity path="/pjpy/nbty/wmqs/printWmqs.jsp" location="950,350" dimension="214,48" />
+  <StrutsActivity path="/pjpy/nbty/wmqs/shWmqs.jsp" location="50,450" dimension="196,48" />
+  <StrutsActivity path="/pjpy/nbty/wmqs/sqWmqs.jsp" location="350,450" dimension="196,48" />
+  <StrutsActivity path="/pjpy/nbty/wmqs/shOneWmqs.jsp" location="650,450" dimension="214,48" />
+  <StrutsActivity path="/pjpy/zjcm/rych/sqManage.jsp" location="650,50" dimension="208,48" />
+  <StrutsActivity path="/nbtyWmbj.do" location="950,450" dimension="250,84" />
+  <StrutsTransition id="/nbty_rych.do,rychResult,/pjpy/nbty/rych/rychResult.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="190,50" />
+      <AbsolutePoint location="190,5" />
+      <AbsolutePoint location="1167,5" />
+      <AbsolutePoint location="1167,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbty_rych.do,rychDj,/pjpy/nbty/rych/xmPrint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="160,134" />
+      <AbsolutePoint location="160,213" />
+      <AbsolutePoint location="1051,213" />
+      <AbsolutePoint location="1051,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbtyWmqs.do,shOneWmqs,/pjpy/nbty/wmqs/shOneWmqs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="505,50" />
+      <AbsolutePoint location="505,35" />
+      <AbsolutePoint location="879,35" />
+      <AbsolutePoint location="879,474" />
+      <AbsolutePoint location="864,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbty_rych.do,shOne,/pjpy/nbty/rych/shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="270,122" />
+      <AbsolutePoint location="285,122" />
+      <AbsolutePoint location="285,313" />
+      <AbsolutePoint location="745,313" />
+      <AbsolutePoint location="745,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbtyWmqs.do,shWmqs,/pjpy/nbty/wmqs/shWmqs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="600,83" />
+      <AbsolutePoint location="627,83" />
+      <AbsolutePoint location="627,413" />
+      <AbsolutePoint location="148,413" />
+      <AbsolutePoint location="148,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbtyWmqs.do,resultWmqs,/pjpy/nbty/wmqs/resultWmqs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="567,134" />
+      <AbsolutePoint location="567,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbty_rych.do,stuInfo,/pjpy/nbty/rych/stuInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="270,92" />
+      <AbsolutePoint location="315,92" />
+      <AbsolutePoint location="315,274" />
+      <AbsolutePoint location="350,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbty_rych.do,rychSq,/pjpy/nbty/rych/sqManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="190,134" />
+      <AbsolutePoint location="190,174" />
+      <AbsolutePoint location="650,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbtyWmqs.do,oneWmqs,/pjpy/nbty/wmqs/oneWmqs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="597,134" />
+      <AbsolutePoint location="597,374" />
+      <AbsolutePoint location="650,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbty_rych.do,showOne,/pjpy/nbty/rych/showOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="160,50" />
+      <AbsolutePoint location="160,-25" />
+      <AbsolutePoint location="1051,-25" />
+      <AbsolutePoint location="1051,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbty_rych.do,rychSh,/pjpy/nbty/rych/shManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="130,134" />
+      <AbsolutePoint location="130,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbty_rych.do,showRych,/pjpy/nbty/rych/showRych.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,92" />
+      <AbsolutePoint location="-25,92" />
+      <AbsolutePoint location="-25,374" />
+      <AbsolutePoint location="50,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbtyWmqs.do,printWmqs,/pjpy/nbty/wmqs/printWmqs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="600,113" />
+      <AbsolutePoint location="909,113" />
+      <AbsolutePoint location="909,374" />
+      <AbsolutePoint location="950,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/nbtyWmqs.do,sqWmqs,/pjpy/nbty/wmqs/sqWmqs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="475,50" />
+      <AbsolutePoint location="475,-85" />
+      <AbsolutePoint location="5,-85" />
+      <AbsolutePoint location="5,573" />
+      <AbsolutePoint location="448,573" />
+      <AbsolutePoint location="448,498" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

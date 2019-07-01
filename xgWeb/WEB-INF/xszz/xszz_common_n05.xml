@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzCommonN05ActionForm" type="xgxt.xszz.commonN05.XszzCommonN05ActionForm"/>
+		<form-bean name="jtqkdcForm" type="xgxt.xszz.commonN05.jtqkdc.JtqkdcForm"/>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="xszzCommonN05ActionForm" parameter="method" path="/n05_xszz"
+				scope="request"	type="xgxt.xszz.commonN05.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- "学生资助"-"项目相关设置  xszz_n05_shjb"-->
+			<forward name="xmxgsz" path="/xszz/commonN05/xmxgsz.jsp" />
+			<forward name="dgszxm" path="/xszz/commonN05/dgszxm.jsp" />
+			<forward name="plszxm" path="/xszz/commonN05/plszxm.jsp" />
+			<!-- "学生资助"-"外设助学金项目维护  xszz_com_wszxjdmb  xszz_com_wszxjxmxxb"-->
+			<forward name="wszxjxm" path="/xszz/commonN05/wszxjxm.jsp" />
+			<forward name="wszxjxmEdit" path="/xszz/commonN05/wszxjxmEdit.jsp"/>
+			<forward name="wszxjxmEditSave" path="/xszz/commonN05/wszxjxmEdit.jsp"/>
+			<!-- "学生资助"-"家庭情况调查1  view_xszz_com_jtqkdc1"-->
+			<forward name="jtqkdc1sq" path="/xszz/commonN05/jtqkdc1sq.jsp" />
+			<forward name="jtqkdc1sqSave" path="/xszz/commonN05/jtqkdc1sq.jsp" />
+			<forward name="jtqkdc1sqb" path="/xszz/commonN05/jtqkdc1sqb.jsp" />
+			<forward name="jtqkdc1query" path="/xszz/commonN05/jtqkdc1query.jsp" />
+			<forward name="jtqkdc1queryOne" path="/xszz/commonN05/jtqkdc1queryOne.jsp" />
+			<forward name="jtqkdc1Exp" path="/about:blank" />
+			<!-- "学生资助"-"困难生认定1  view_xszz_com_knsrdb1"-->
+			<forward name="knsrd1sq" path="/xszz/commonN05/knsrd1sq.jsp" />
+			<forward name="knsrd1sqSave" path="/xszz/commonN05/knsrd1sq.jsp" />
+			<forward name="knsrd1sqb" path="/xszz/commonN05/knsrd1sqb.jsp" />
+			<forward name="knsrd1sh" path="/xszz/commonN05/knsrd1sh.jsp" />
+			<forward name="knsrd1shOne" path="/xszz/commonN05/knsrd1shOne.jsp" />
+			<forward name="knsrd1shSave" path="/xszz/commonN05/knsrd1shOne.jsp" />
+			<forward name="knsrd1Exp" path="/about:blank" />
+			<forward name="knsrd1shdm" path="/xszz/commonN05/knsrd1shdm.jsp" />
+			<forward name="knsrd1shdmOne" path="/xszz/commonN05/knsrd1shdmOne.jsp" />
+			
+			<!-- "学生资助"-"困难生认定2  view_xszz_com_knsrdb1"-->
+			<forward name="knsrd2sq" path="/xszz/commonN05/knsrd2sq.jsp" />
+			<forward name="knsrd2sqSave" path="/xszz/commonN05/knsrd2sq.jsp" />
+			<forward name="knsrd2sqb" path="/xszz/commonN05/knsrd2sqb.jsp" />
+			<forward name="knsrd2sh" path="/xszz/commonN05/knsrd2sh.jsp" />
+			<forward name="knsrd2shOne" path="/xszz/commonN05/knsrd2shOne.jsp" />
+			<forward name="knsrd2shSave" path="/xszz/commonN05/knsrd2shOne.jsp" />
+			<forward name="knsrd2shdm" path="/xszz/commonN05/knsrd2shdm.jsp" />
+			<forward name="knsrd2shdmOne" path="/xszz/commonN05/knsrd2shdmOne.jsp" />
+			<forward name="knsrd2Exp" path="/about:blank" />
+			<forward name="knsrd2Print" path="/xszz/commonN05/knsrd2Print.jsp" />
+			<!-- "学生资助"-"经济困难生认定3  view_xszz_com_knsrdb3"-->
+			<forward name="knsrd3sq" path="/xszz/commonN05/knsrd3sq.jsp" />
+			<forward name="knsrd3sqSave" path="/xszz/commonN05/knsrd3sq.jsp" />
+			<forward name="knsrd3sqb" path="/xszz/commonN05/knsrd3sqb.jsp" />
+			<forward name="knsrd3sh" path="/xszz/commonN05/knsrd3sh.jsp" />
+			<forward name="knsrd3shOne" path="/xszz/commonN05/knsrd3shOne.jsp" />
+			<forward name="knsrd3shSave" path="/xszz/commonN05/knsrd3shOne.jsp" />
+			<forward name="knsrd3Exp" path="/about:blank" />
+			<forward name="knsrd3gs" path="/xszz/commonN05/knsrd3gs.jsp" />
+			<forward name="knsrd3gsyj" path="/xszz/commonN05/knsrd3gsyj.jsp" />
+			<forward name="knsrd3gsyjSave" path="/xszz/commonN05/knsrd3gsyj.jsp" />
+			<forward name="knsrd3ckyj" path="/xszz/commonN05/knsrd3ckyj.jsp" />
+			<!-- "学生资助"-"困难生认定4  view_xszz_com_knsrdb1"-->
+			<forward name="knsrd4sq" path="/xszz/commonN05/knsrd4sq.jsp" />
+			<forward name="knsrd4sqSave" path="/xszz/commonN05/knsrd4sq.jsp" />
+			<forward name="knsrd4sqb" path="/xszz/commonN05/knsrd4sqb.jsp" />
+			<forward name="knsrd4sh" path="/xszz/commonN05/knsrd4sh.jsp" />
+			<forward name="knsrd4shOne" path="/xszz/commonN05/knsrd4shOne.jsp" />
+			<forward name="knsrd4shSave" path="/xszz/commonN05/knsrd4shOne.jsp" />
+			<forward name="knsrd4Exp" path="/about:blank" />
+			<!-- "学生资助"-"困难生临时补助1  view_xszz_com_knslsbz1"-->
+			<forward name="knslsbz1sq" path="/xszz/commonN05/knslsbz1sq.jsp" />
+			<forward name="knslsbz1sqSave" path="/xszz/commonN05/knslsbz1sq.jsp" />
+			<forward name="knslsbz1sh" path="/xszz/commonN05/knslsbz1sh.jsp" />
+			<forward name="knslsbz1shOne" path="/xszz/commonN05/knslsbz1shOne.jsp" />
+			<forward name="knslsbz1shSave" path="/xszz/commonN05/knslsbz1shOne.jsp" />
+			<forward name="knslsbz1Exp" path="/about:blank" />
+			<!-- "学生资助"-"临时补助2  view_xszz_com_knslsbz2"-->
+			<forward name="lsbz2sq" path="/xszz/commonN05/lsbz2sq.jsp" />
+			<forward name="lsbz2sqSave" path="/xszz/commonN05/lsbz2sq.jsp" />
+			<forward name="lsbz2sqb" path="/xszz/commonN05/lsbz2sqb.jsp" />
+			<forward name="lsbz2sh" path="/xszz/commonN05/lsbz2sh.jsp" />
+			<forward name="lsbz2shOne" path="/xszz/commonN05/lsbz2shOne.jsp" />
+			<forward name="lsbz2shSave" path="/xszz/commonN05/lsbz2shOne.jsp" />
+			<forward name="lsbz2Exp" path="/about:blank" />
+			<forward name="lsbz2shdm" path="/xszz/commonN05/lsbz2shdm.jsp" />
+			<forward name="lsbz2shdmOne" path="/xszz/commonN05/lsbz2shdmOne.jsp" />
+			<!-- "学生资助"-"国家助学金1  view_xszz_com_gjzxj1"-->
+			<forward name="gjzxj1sq" path="/xszz/commonN05/gjzxj1sq.jsp" />
+			<forward name="gjzxj1sqSave" path="/xszz/commonN05/gjzxj1sq.jsp" />
+			<forward name="gjzxj1sqb" path="/xszz/commonN05/gjzxj1sqb.jsp" />
+			<forward name="gjzxj1sh" path="/xszz/commonN05/gjzxj1sh.jsp" />
+			<forward name="gjzxj1shOne" path="/xszz/commonN05/gjzxj1shOne.jsp" />
+			<forward name="gjzxj1shSave" path="/xszz/commonN05/gjzxj1shOne.jsp" />
+			<forward name="gjzxj1Exp" path="/about:blank" />
+			<!-- "学生资助"-"国家助学金2  view_xszz_com_gjzxj2"-->
+			<forward name="gjzxj2sq" path="/xszz/commonN05/gjzxj2sq.jsp" />
+			<forward name="gjzxj2sqSave" path="/xszz/commonN05/gjzxj2sq.jsp" />
+			<forward name="gjzxj2sqb" path="/xszz/commonN05/gjzxj2sqb.jsp" />
+			<forward name="gjzxj2sh" path="/xszz/commonN05/gjzxj2sh.jsp" />
+			<forward name="gjzxj2shOne" path="/xszz/commonN05/gjzxj2shOne.jsp" />
+			<forward name="gjzxj2shSave" path="/xszz/commonN05/gjzxj2shOne.jsp" />
+			<forward name="gjzxj2Exp" path="/about:blank" />
+			<!-- "学生资助"-"国家助学金3  view_xszz_com_gjzxj3"-->
+			<forward name="gjzxj3sq" path="/xszz/commonN05/gjzxj3sq.jsp" />
+			<forward name="gjzxj3sqSave" path="/xszz/commonN05/gjzxj3sq.jsp" />
+			<forward name="gjzxj3sqb" path="/xszz/commonN05/gjzxj3sqb.jsp" />
+			<forward name="gjzxj3sh" path="/xszz/commonN05/gjzxj3sh.jsp" />
+			<forward name="gjzxj3shOne" path="/xszz/commonN05/gjzxj3shOne.jsp" />
+			<forward name="gjzxj3shSave" path="/xszz/commonN05/gjzxj3shOne.jsp" />
+			<forward name="gjzxj3Exp" path="/about:blank" />
+			<forward name="gjzxj3shdm" path="/xszz/commonN05/gjzxj3shdm.jsp" />
+			<forward name="gjzxj3shdmOne" path="/xszz/commonN05/gjzxj3shdmOne.jsp" />
+			<!-- "学生资助"-"国家奖学金1  view_xszz_com_gjjxj1"-->
+			<forward name="gjjxj1sq" path="/xszz/commonN05/gjjxj1sq.jsp" />
+			<forward name="gjjxj1sqSave" path="/xszz/commonN05/gjjxj1sq.jsp" />
+			<forward name="gjjxj1sqbnbty" path="/xszz/commonN05/gjjxj1sqbnbty.jsp" />
+			<forward name="gjjxj1sqb" path="/xszz/commonN05/gjjxj1sqb.jsp" />
+			<forward name="gjjxj1sh" path="/xszz/commonN05/gjjxj1sh.jsp" />
+			<forward name="gjjxj1shOne" path="/xszz/commonN05/gjjxj1shOne.jsp" />
+			<forward name="gjjxj1shSave" path="/xszz/commonN05/gjjxj1shOne.jsp" />
+			<forward name="gjjxj1Exp" path="/about:blank" />
+			<forward name="gjjxj1shdm" path="/xszz/commonN05/gjjxj1shdm.jsp" />
+			<forward name="gjjxj1shdmOne" path="/xszz/commonN05/gjjxj1shdmOne.jsp" />
+			<!-- "学生资助"-"国家励志奖学金1  view_xszz_com_gjlzjxj1"-->
+			<forward name="gjlzjxj1sq" path="/xszz/commonN05/gjlzjxj1sq.jsp" />
+			<forward name="gjlzjxj1sqSave" path="/xszz/commonN05/gjlzjxj1sq.jsp" />
+			<forward name="gjlzjxj1sqb" path="/xszz/commonN05/gjlzjxj1sqb.jsp" />
+			<forward name="gjlzjxj1sh" path="/xszz/commonN05/gjlzjxj1sh.jsp" />
+			<forward name="gjlzjxj1shOne" path="/xszz/commonN05/gjlzjxj1shOne.jsp" />
+			<forward name="gjlzjxj1shSave" path="/xszz/commonN05/gjlzjxj1shOne.jsp" />
+			<forward name="gjlzjxj1Exp" path="/about:blank" />
+			<!-- "学生资助"-"国家励志奖学金2  view_xszz_com_gjlzjxj2"-->
+			<forward name="gjlzjxj2sq" path="/xszz/commonN05/gjlzjxj2sq.jsp" />
+			<forward name="gjlzjxj2sqSave" path="/xszz/commonN05/gjlzjxj2sq.jsp" />
+			<forward name="gjlzjxj2sqb" path="/xszz/commonN05/gjlzjxj2sqb.jsp" />
+			<forward name="gjlzjxj2sh" path="/xszz/commonN05/gjlzjxj2sh.jsp" />
+			<forward name="gjlzjxj2shOne" path="/xszz/commonN05/gjlzjxj2shOne.jsp" />
+			<forward name="gjlzjxj2shSave" path="/xszz/commonN05/gjlzjxj2shOne.jsp" />
+			<forward name="gjlzjxj2Exp" path="/about:blank" />
+			<!-- "学生资助"-"学费减免1  view_xszz_com_xfjm1"-->
+			<forward name="xfjm1sq" path="/xszz/commonN05/xfjm1sq.jsp" />
+			<forward name="xfjm1sqSave" path="/xszz/commonN05/xfjm1sq.jsp" />
+			<forward name="xfjm1sqb" path="/xszz/commonN05/xfjm1sqb.jsp" />
+			<forward name="xfjm1sh" path="/xszz/commonN05/xfjm1sh.jsp" />
+			<forward name="xfjm1shOne" path="/xszz/commonN05/xfjm1shOne.jsp" />
+			<forward name="xfjm1shSave" path="/xszz/commonN05/xfjm1shOne.jsp" />
+			<forward name="xfjm1Exp" path="/about:blank" />
+			<!-- "学生资助"-"学费减免2  view_xszz_com_xfjm2"-->
+			<forward name="xfjm2sq" path="/xszz/commonN05/xfjm2sq.jsp" />
+			<forward name="xfjm2sqSave" path="/xszz/commonN05/xfjm2sq.jsp" />
+			<forward name="xfjm2sqb" path="/xszz/commonN05/xfjm2sqb.jsp" />
+			<forward name="xfjm2sh" path="/xszz/commonN05/xfjm2sh.jsp" />
+			<forward name="xfjm2shdm" path="/xszz/commonN05/xfjm2shdm.jsp" />
+			<forward name="xfjm2shdmOne" path="/xszz/commonN05/xfjm2shdmOne.jsp" />
+							
+			<forward name="xfjm2shOne" path="/xszz/commonN05/xfjm2shOne.jsp" />
+			<forward name="xfjm2shSave" path="/xszz/commonN05/xfjm2shOne.jsp" />
+			<forward name="xfjm2Exp" path="/about:blank" />
+			<!-- "学生资助"-"学费减免3  view_xszz_com_xfjm3"-->
+			<forward name="xfjm3Add" path="/xszz/commonN05/xfjm3Add.jsp" />
+			<forward name="xfjm3Modi" path="/xszz/commonN05/xfjm3Modi.jsp" />
+			<forward name="xfjm3" path="/xszz/commonN05/xfjm3.jsp" />	
+			<forward name="xfjm3Sh" path="/xszz/commonN05/xfjm3Sh.jsp" />
+			<forward name="xfjm3ShOne" path="/xszz/commonN05/xfjm3ShOne.jsp" />
+			<forward name="xfjm3sqb" path="/xszz/commonN05/xfjm3sqb.jsp" />
+			<!-- "学生资助"-"学费缓交1  view_xszz_com_xfhj1"-->
+			<forward name="xfhj1sq" path="/xszz/commonN05/xfhj1sq.jsp" />
+			<forward name="xfhj1sqSave" path="/xszz/commonN05/xfhj1sq.jsp" />
+			<forward name="xfhj1sqb" path="/xszz/commonN05/xfhj1sqb.jsp" />
+			<forward name="xfhj1sh" path="/xszz/commonN05/xfhj1sh.jsp" />
+			<forward name="xfhj1shOne" path="/xszz/commonN05/xfhj1shOne.jsp" />
+			<forward name="xfhj1shSave" path="/xszz/commonN05/xfhj1shOne.jsp" />
+			<forward name="xfhj1Exp" path="/about:blank" />
+			<!-- "学生资助"-"学费缓交2  view_xszz_com_xfhj2"-->
+			<forward name="xfhj2sq" path="/xszz/commonN05/xfhj2sq.jsp" />
+			<forward name="xfhj2sqSave" path="/xszz/commonN05/xfhj2sq.jsp" />
+			<forward name="xfhj2sqb" path="/xszz/commonN05/xfhj2sqb.jsp" />
+			<forward name="xfhj2sh" path="/xszz/commonN05/xfhj2sh.jsp" />
+			<forward name="xfhj2shOne" path="/xszz/commonN05/xfhj2shOne.jsp" />
+			<forward name="xfhj2shSave" path="/xszz/commonN05/xfhj2shOne.jsp" />
+			<forward name="xfhj2Exp" path="/about:blank" />
+			<forward name="xfhj2wgqfmd" path="/xszz/commonN05/xfhj2wgqfmd.jsp" />
+			<forward name="xfhj2hjtj" path="/xszz/commonN05/xfhj2hjtj.jsp" />
+			<forward name="xfhj2xsqfxx" path="/xszz/commonN05/xfhj2xsqfxx.jsp" />
+			<!-- "学生资助"-"学费缓交3  view_xszz_com_xfhj3"-->
+			<forward name="xfhj3Add" path="/xszz/commonN05/xfhj3Add.jsp" />
+			<forward name="xfhj3Modi" path="/xszz/commonN05/xfhj3Modi.jsp" />
+			<forward name="xfhj3" path="/xszz/commonN05/xfhj3.jsp" />	
+			<forward name="xfhj3Sh" path="/xszz/commonN05/xfhj3Sh.jsp" />
+			<forward name="xfhj3ShOne" path="/xszz/commonN05/xfhj3ShOne.jsp" />
+			<forward name="xfhj3sqb" path="/xszz/commonN05/xfhj3sqb.jsp" />			
+			<!-- "学生资助"-"住宿费缓交1  view_xszz_com_zsfhj1"-->
+			<forward name="zsfhj1Add" path="/xszz/commonN05/zsfhj1Add.jsp" />
+			<forward name="zsfhj1Modi" path="/xszz/commonN05/zsfhj1Modi.jsp" />
+			<forward name="zsfhj1" path="/xszz/commonN05/zsfhj1.jsp" />	
+			<forward name="zsfhj1Sh" path="/xszz/commonN05/zsfhj1Sh.jsp" />
+			<forward name="zsfhj1ShOne" path="/xszz/commonN05/zsfhj1ShOne.jsp" />	
+			<forward name="zsfhj1sqb" path="/xszz/commonN05/zsfhj1sqb.jsp" />
+				
+			<!-- "学生资助"-"外设助学金1  view_xszz_com_wszxj1"-->
+			<forward name="wszxj1sq" path="/xszz/commonN05/wszxj1sq.jsp" />
+			<forward name="wszxj1sqSave" path="/xszz/commonN05/wszxj1sq.jsp" />
+			<forward name="wszxj1sqb" path="/xszz/commonN05/wszxj1sqb.jsp" />
+			<forward name="wszxj1sh" path="/xszz/commonN05/wszxj1sh.jsp" />
+			<forward name="wszxj1shOne" path="/xszz/commonN05/wszxj1shOne.jsp" />
+			<forward name="wszxj1shSave" path="/xszz/commonN05/wszxj1shOne.jsp" />
+			<forward name="wszxj1Exp" path="/about:blank" />
+			<forward name="wszxj1shdm" path="/xszz/commonN05/wszxj1shdm.jsp" />
+			<forward name="wszxj1shdmOne" path="/xszz/commonN05/wszxj1shdmOne.jsp" />
+			<!-- "学生资助"-"外设助学金2  view_xszz_com_wszxj2"-->
+			<forward name="wszxj2sq" path="/xszz/commonN05/wszxj2sq.jsp" />
+			<forward name="wszxj2sqSave" path="/xszz/commonN05/wszxj2sq.jsp" />
+			<forward name="wszxj2sqb" path="/xszz/commonN05/wszxj2sqb.jsp" />
+			<forward name="wszxj2sh" path="/xszz/commonN05/wszxj2sh.jsp" />
+			<forward name="wszxj2shOne" path="/xszz/commonN05/wszxj2shOne.jsp" />
+			<forward name="wszxj2shSave" path="/xszz/commonN05/wszxj2shOne.jsp" />
+			<forward name="wszxj2Exp" path="/about:blank" />
+		</action>
+		
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+		
+		<action name="jtqkdcForm" 
+		        parameter="method" 
+		        path="/jtqkdc"
+				scope="request"	
+				type="xgxt.xszz.commonN05.jtqkdc.JtqkdcAction">
+				
+				<forward name="jtqkdc" path="/xszz/commonN05/jtqkdc/jtqkdcManager.jsp" />
+				<forward name="jtqkdcAdd" path="/xszz/commonN05/jtqkdc/jtqkdcAdd.jsp" />
+				<forward name="jtqkdcModi" path="/xszz/commonN05/jtqkdc/jtqkdcModi.jsp" />
+				<forward name="jtqkdcPrint" path="/xszz/commonN05/jtqkdc/jtqkdcPrint.jsp" />				
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

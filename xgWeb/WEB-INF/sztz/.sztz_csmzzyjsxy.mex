@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/credithour_sb.do" location="468,0" dimension="130,60" />
+  <StrutsActivity path="/credithourManage.do" location="698,0" dimension="148,60" />
+  <StrutsActivity path="/ccredithour_sh.do" location="946,0" dimension="136,60" />
+  <StrutsActivity path="/csmzzy_sztz.do" location="646,160" dimension="256,84" />
+  <StrutsActivity path="/sztz/csmzzyjsxy/xfSbShManage.jsp" location="0,344" dimension="238,48" />
+  <StrutsActivity path="/sztz/csmzzyjsxy/xfSbManage.jsp" location="337,344" dimension="226,48" />
+  <StrutsActivity path="/sztz/csmzzyjsxy/creditHSb.jsp" location="664,344" dimension="220,48" />
+  <StrutsActivity path="/sztz/csmzzyjsxy/xfSbModi.jsp" location="984,344" dimension="214,48" />
+  <StrutsActivity path="/sztz/csmzzyjsxy/xfsbMview.jsp" location="1298,344" dimension="220,48" />
+  <StrutsTransition id="/csmzzy_sztz.do,xfSbModi,/sztz/csmzzyjsxy/xfSbModi.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="825,244" />
+      <AbsolutePoint location="825,309" />
+      <AbsolutePoint location="1091,309" />
+      <AbsolutePoint location="1091,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmzzy_sztz.do,xfsbshM,/sztz/csmzzyjsxy/xfSbShManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="671,244" />
+      <AbsolutePoint location="671,279" />
+      <AbsolutePoint location="119,279" />
+      <AbsolutePoint location="119,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/credithour_sb.do,null,/csmzzy_sztz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="533,60" />
+      <AbsolutePoint location="533,110" />
+      <AbsolutePoint location="688,110" />
+      <AbsolutePoint location="688,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmzzy_sztz.do,xfSbView,/sztz/csmzzyjsxy/xfsbMview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="876,244" />
+      <AbsolutePoint location="876,279" />
+      <AbsolutePoint location="1408,279" />
+      <AbsolutePoint location="1408,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmzzy_sztz.do,creditHSb,/sztz/csmzzyjsxy/creditHSb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="774,244" />
+      <AbsolutePoint location="774,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ccredithour_sh.do,null,/csmzzy_sztz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1014,60" />
+      <AbsolutePoint location="1014,110" />
+      <AbsolutePoint location="859,110" />
+      <AbsolutePoint location="859,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/csmzzy_sztz.do,xfSbManage,/sztz/csmzzyjsxy/xfSbManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="722,244" />
+      <AbsolutePoint location="722,309" />
+      <AbsolutePoint location="450,309" />
+      <AbsolutePoint location="450,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/credithourManage.do,null,/csmzzy_sztz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="772,60" />
+      <AbsolutePoint location="772,110" />
+      <AbsolutePoint location="773,110" />
+      <AbsolutePoint location="774,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

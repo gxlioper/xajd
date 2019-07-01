@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>				
+    	<form-bean name="xsxxAhjzgyxyForm" type="xgxt.xsxx.dagl.guizdx.XsxxGuizdxDaglForm" />
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+	<!--展现的路径  -->
+		<action path="/guizdx_dagl_dalxwh" forward="/guizdxDagl.do?method=dalxwhManage"/>
+		<action path="/guizdx_dagl_xsda" forward="/guizdxDagl.do?method=xsdawhManage"/>
+		<action path="/guizdx_dagl_zxda" forward="/guizdxDagl.do?method=zxdawhManage"/>
+		<action path="/guizdx_dagl_byzd" forward="/guizdxDagl.do?method=byzdwhManage"/>
+		<action path="/guizdx_dagl_dacx" forward="/guizdxDagl.do?method=dacxManage"/>		
+	<!--实际的路径 -->
+	<!-- <<<<<<<<<<<<<<学生信息： 中国地质学生信息保存>>>>>>>>>>>>> -->
+    <action 
+    	path="/guizdxDagl" 
+        type="xgxt.xsxx.dagl.guizdx.XsxxGuizdxDaglAction" 
+        parameter="method"
+        name="xsxxAhjzgyxyForm"
+        scope="request">
+         <forward name="dalxwhManage" path="/xsxx/dagl/guizdx/dalxwhManage.jsp"/>       
+         <forward name="dalxwhUpdate" path="/xsxx/dagl/guizdx/dalxwhUpdate.jsp"/>         
+         <forward name="xsdawhManage" path="/xsxx/dagl/guizdx/xsdawhManage.jsp"/>    
+         <forward name="xsdawhUpdate" path="/xsxx/dagl/guizdx/xsdawhUpdate.jsp"/>            
+         <forward name="zxdawhManage" path="/xsxx/dagl/guizdx/zxdawhManage.jsp"/> 
+         <forward name="zxdawhUpdate" path="/xsxx/dagl/guizdx/zxdawhUpdate.jsp"/>
+         <forward name="byzdwhManage" path="/xsxx/dagl/guizdx/byzdwhManage.jsp"/> 
+         <forward name="byzdwhUpdate" path="/xsxx/dagl/guizdx/byzdwhUpdate.jsp"/>                  
+         <forward name="dacxManage" path="/xsxx/dagl/guizdx/dacxManage.jsp"/> 
+         <forward name="dacxUpdate" path="/xsxx/dagl/guizdx/dacxUpdate.jsp"/>                           
+		</action> 
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

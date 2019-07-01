@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		 <form-bean name="gdbyTyxxForm" type="xgxt.dtjs.gdby.tyxx.GdbyTyxxForm" />
+		 <form-bean name="tyglForm" type="xgxt.dtjs.gdby.tygl.TyglForm" />
+	</form-beans>
+
+	<action-mappings>
+    <action path="/gdbyTyxx" 
+    		type="xgxt.dtjs.gdby.tyxx.GdbyTyxxAction" 
+    		name="gdbyTyxxForm"
+    		parameter="method"
+  				scope="request">
+  			<!-- 团员信息维护 -->
+  			<forward name="tyxxWh" path="/dtjs/gdby/tyxx/tyxxWh.jsp"/>
+  			<!-- 团员信息查询 -->
+  			<forward name="tyxxCx" path="/dtjs/gdby/tyxx/tyxxCx.jsp"/>
+  			<!-- 单个团员信息 -->
+  			<forward name="tyxxOne" path="/dtjs/gdby/tyxx/tyxxOne.jsp"/>
+  			<!-- 团员信息异动 -->
+  			<forward name="tyxxYd" path="/dtjs/gdby/tyxx/tyxxYd.jsp"/>
+  			<!-- 团员信息单个异动 -->
+  			<forward name="tyxxDgYd" path="/dtjs/gdby/tyxx/tyxxDgYd.jsp"/>
+  			<forward name="tyxxAdd" path="/dtjs/gdby/tyxx/tyxxAdd.jsp"/>
+  			<!-- 单个学生基本信息 -->
+  			<forward name="xsxxOne" path="/dtjs/gdby/tyxx/xsxxOne.jsp"/>
+   	</action>
+   	
+   	
+   	
+   	
+   	<action path="/gdby_tygl" 
+    		type="xgxt.dtjs.gdby.tygl.TyglAction" 
+    		name="tyglForm"
+    		parameter="method"
+  				scope="request">
+  			<forward name="tysq" path="/dtjs/gdby/tygl/tysq.jsp"/>
+  			<forward name="tysh" path="/dtjs/gdby/tygl/tysh.jsp"/>
+  			<forward name="tycx" path="/dtjs/gdby/tygl/tycx.jsp"/>
+  			<forward name="tyshone" path="/dtjs/gdby/tygl/tyshone.jsp"/>
+  			<forward name="tyviewandmodi" path="/dtjs/gdby/tygl/tyviewandmodi.jsp"/>
+  			<forward name="sturdsqinfo" path="/dtjs/gdby/tygl/stu_rdsq_info.jsp"/>
+   	</action>
+		
+	</action-mappings>
+
+</struts-config>

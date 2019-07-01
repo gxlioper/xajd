@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="dycjActionForm" type="xgxt.pjpy.zjlg.dycj.DycjActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_zjlg_psfwh" 	   forward="/zjlgPjpydcj.do?method=psfwh"/> <!-- 平时分维护 -->
+	    <action path="/pjpy_zjlg_psfblsz"      forward="/zjlgPjpydcj.do?method=psfblsz"/> <!-- 平时分比例设置 -->
+	    <action path="/pjpy_zjlg_wsfwh"        forward="/zjlgPjpydcj.do?method=wsfwh"/> <!-- 卫生分维护 -->
+	    <action path="/pjpy_zjlg_kqfwh"        forward="/zjlgPjpydcj.do?method=kqfwh"/><!-- 考勤分维护 -->
+	    <action path="/pjpy_zjlg_dyfwh"        forward="/zjlgPjpydcj.do?method=dyfwh"/> <!-- 德育分维护 -->
+	    <action path="/pjpy_zjlg_zhszcp"        forward="/zjlgPjpydcj.do?method=zhszcp"/> <!-- 综合素质测评分维护 -->
+	     <action path="/pjpy_zjlg_otherdyfwh"   forward="/zjlgPjpydcj.do?method=otherdyfwh"/> <!-- other德育分维护 -->
+	  
+	    <!-- 实际路径 -->	
+		<action path="/zjlgPjpydcj"
+				type="xgxt.pjpy.zjlg.dycj.DycjAction"
+				name="dycjActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 平时分维护 -->
+		<forward name="psfwh" path="/pjpy/zjlg/dcj/psf/query.jsp" />
+		<forward name="psfblsz" path="/pjpy/zjlg/dcj/psf/psfblsz.jsp" />
+		<forward name="wsfwh" path="/pjpy/zjlg/dcj/wsf/query.jsp"/>
+		<forward name="kqfwh" path="/pjpy/zjlg/dcj/kqf/query.jsp"/>
+		<forward name="dyfwh" path="/pjpy/zjlg/dcj/dyfwh.jsp"/>
+		<forward name="zhszcp" path="/pjpy/zjlg/zhszcp/query.jsp"/>		
+		<forward name="otherdyfwh" path="/pjpy/zjlg/dcj/otherdyfwh.jsp"/>	
+		</action>
+	</action-mappings>
+
+</struts-config>

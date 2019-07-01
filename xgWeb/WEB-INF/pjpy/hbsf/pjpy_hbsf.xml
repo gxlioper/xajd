@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyHbsfActionForm" type="xgxt.pjpy.hbsf.PjpyHbsfActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpyhbsfwh"
+				type="xgxt.pjpy.hbsf.PjpyHbsfAction"
+				name="pjpyHbsfActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="priseapply"      path="/pjpy/hbsf/priseapply.jsp" />
+			<forward name="zhszcpdefault"   path="/pjpy/hbsf/zhszcpdefault.jsp"></forward>
+			<forward name="zhszcpadd"       path="/pjpy/hbsf/zhszcpadd.jsp"></forward>
+			<forward name="zhszcpview"      path="/pjpy/hbsf/zhszcpview.jsp"></forward>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="pjpyhbsf" parameter="xgxt.pjpy.hbsf.pjpyhbsf" />
+
+</struts-config>

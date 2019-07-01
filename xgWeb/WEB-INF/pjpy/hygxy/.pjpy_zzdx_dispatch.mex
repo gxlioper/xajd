@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/zzdxzsprint.do" location="0,0" dimension="118,60" />
+  <StrutsActivity path="/pjpyzzdxwh.do" location="109,160" dimension="130,72" />
+  <StrutsTransition id="/zzdxzsprint.do,null,/pjpyzzdxwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="59,60" />
+      <AbsolutePoint location="59,110" />
+      <AbsolutePoint location="141,110" />
+      <AbsolutePoint location="141,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zzdxzsprintmore.do,null,/pjpyzzdxwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="289,60" />
+      <AbsolutePoint location="289,110" />
+      <AbsolutePoint location="206,110" />
+      <AbsolutePoint location="206,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

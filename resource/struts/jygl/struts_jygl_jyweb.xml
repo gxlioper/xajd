@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+		<form-bean name="wjscForm" type="xgxt.wjsc.WjscForm" />
+		<form-bean name="jyglForm" type="xgxt.base.form.JyglForm" />
+		<form-bean name="AssociationForm"
+			type="xgxt.xljk.xlxh.Form.AssociationForm" />
+		<form-bean name="jyglActionForm" type="xgxt.jygl.comman.JyglForm" />
+	</form-beans>
+
+	<global-forwards />
+
+	<action-mappings>
+		
+		<action path="/jyweb_zxjs" forward="/jyweb.do?method=zxjsInfo"/>
+		<action path="/jyweb_dmwh" forward="/jyweb.do?method=dmwh"/>
+		<action path="/companyManage" forward="/jywebUseCheckSession.do?method=companyManage"/>
+		<action path="/companyAuditing" forward="/jywebUseCheckSession.do?method=companyAuditing"/>
+		<action path="/resumeManage" forward="/jywebUseCheckSession.do?method=resumeManage"/>
+		<action path="/linksManage" forward="/jywebUseCheckSession.do?method=linksManage"/>
+		<action path="/zphManage" forward="/jywebUseCheckSession.do?method=zphManage"/>
+		<action path="/zphAuditing" forward="/jywebUseCheckSession.do?method=zphAuditing"/>
+		<action path="/filesManage" forward="/jywebUseCheckSession.do?method=filesManage"/>
+		<action path="/lxfsUpdate" forward="/jywebUseCheckSession.do?method=lxfsUpdate"/>
+		<action path="/mmupdate" forward="/jywebUseCheckSession.do?method=mmUpdate"/>
+		<action path="/workManage" forward="/jywebUseCheckSession.do?method=workManage"/>
+		<action path="/workAuditing" forward="/jywebUseCheckSession.do?method=workAuditing"/>
+		<action path="/tjManage" forward="/jywebUseCheckSession.do?method=tjManage"/>
+		<action path="/jyweb_ztzpManage" forward="/jywebUseCheckSession.do?method=ztzpManage"/>
+		<action path="/jyweb_ztzpAuditing" forward="/jywebUseCheckSession.do?method=ztzpAuditing"/>
+		<action path="/jyweb_newsManage" forward="/jywebUseCheckSession.do?method=newsManage"/>
+		<action path="/zxjs" forward="/jywebUseCheckSession.do?method=zxjsManage"/>
+		
+		
+		<action path="/index" forward="/jyweb.do?method=index"/>
+		<action path="/adminLogin" forward="/jyweb.do?method=login&amp;userType=admin"/>
+		<action path="/companyMore" forward="/jyweb.do?method=companyMore"/>
+		<action path="/resumeMore" forward="/jyweb.do?method=resumeMore"/>
+		<action path="/register" forward="/jyweb.do?method=register"/>
+		<action path="/jyweb_zpxx" forward="/jyweb.do?method=workMore"/>
+		<action path="/jyweb_qzyx" forward="/jyweb.do?method=qzyxMore"/>
+		<action path="/jyweb_xzzq" forward="/jyweb.do?method=fileMore"/>
+		<action path="/jyweb_csyg" forward="/jyweb.do?method=zphMore&amp;queryequals_shzt=通过"/>
+		<action path="/jyweb_jyxw" forward="/jyweb.do?method=newsMore&amp;queryequals_wjlx=1"/>
+		<action path="/jyweb_jygg" forward="/jyweb.do?method=newsMore&amp;queryequals_wjlx=3"/>
+		<action path="/jyweb_jyzc" forward="/jyweb.do?method=newsMore&amp;queryequals_wjlx=4"/>
+		<action path="/jyweb_syxx" forward="/jyweb.do?method=newsMore&amp;queryequals_wjlx=5"/>
+		<action path="/jyweb_jyzd" forward="/jyweb.do?method=newsMore&amp;queryequals_wjlx=6"/>
+		<action path="/jyweb_ztzpMore" forward="/jyweb.do?method=ztzpMore"/>
+		<action path="/jyweb_zprl" forward="/jyweb.do?method=zprlManage"/>
+		
+		<!-- 南京技师个性化需求 -->
+		<action path="/xsbmsh" forward="/jywebNjjs.do?method=xsbmshManage"/>
+		
+		
+		<action 
+			name="jyglActionForm" 
+			parameter="method"
+			path="/jyweb" 
+			scope="request"
+			type="xgxt.jygl.comman.JyWEBAction">
+			
+			<forward name="index" path="/jygl/jyweb/index.jsp"/>
+			<forward name="newsInfo" path="/jygl/jyweb/news/newsInfo.jsp"/>
+			<forward name="companyMore" path="/jygl/jyweb/company/companyMore.jsp"/>
+			<forward name="companyView" path="/jygl/jyweb/company/companyView.jsp"/>
+			<forward name="companyInfo" path="/jygl/jyweb/company/companyInfo.jsp"/>
+			<forward name="moreCompany" path="/jygl/jyweb/company/more_company_query.jsp"/>
+			<forward name="fileView" path="/jygl/jyweb/files/fileView.jsp"/>
+			<forward name="filesMore" path="/jygl/jyweb/files/filesMore.jsp"/>
+			<forward name="newsMore" path="/jygl/jyweb/news/newsMore.jsp"/>
+			<forward name="resumeMore" path="/jygl/jyweb/resume/resumeMore.jsp"/>
+			
+			
+			<forward name="registerPage" path="/jygl/jyweb/register.jsp"/>
+			<forward name="workMore" path="/jygl/jyweb/work/workMore.jsp"/>
+			<forward name="workInfo" path="/jygl/jyweb/work/workInfo.jsp" />
+			<forward name="zphMore" path="/jygl/jyweb/zph/zphMore.jsp"/>
+			<forward name="zphView" path="/jygl/jyweb/zph/zphView.jsp"/>
+			<forward name="qzyxMore" path="/jygl/jyweb/resume/qzyxMore.jsp"/>
+			<forward name="stuJobsMore" path="/jygl/jyweb/work/stuJobsMore.jsp"/>
+			<forward name="manager" path="/jygl/jyweb/manager.jsp"/>
+			<forward name="stu_main" path="/jygl/jyweb/stu_main.jsp"/>
+			<forward name="dw_main" path="/jygl/jyweb/dw_main.jsp"/>
+			<forward name="adminLogin" path="/jygl/jyweb/adminLogin.jsp"/>
+			<forward name="revertMore" path="/jygl/jyweb/resume/revertMore.jsp"/>
+			
+			
+			<!-- 专场招聘 -->
+			<forward name="ztzpUpdate" path="/jygl/jyweb/ztzp/ztzpUpdate.jsp"/>
+			<forward name="ztzpView" path="/jygl/jyweb/ztzp/ztzpView.jsp"/>
+			<forward name="ztzpMore" path="/jygl/jyweb/ztzp/ztzpMore.jsp"/>
+			<forward name="gwxxk" path="/jygl/jyweb/ztzp/gwxxk.jsp"/>
+			<forward name="zprlManage" path="/jygl/jyweb/ztzp/zprlManage.jsp"/>
+			<forward name="remindpage" path="/jygl/jyweb/remindpage.jsp"/>
+			<forward name="zxjsInfo" path="/jygl/jyweb/zxjsInfo.jsp"/>
+		</action>
+	
+	
+		<action name="jyglActionForm" 
+				parameter="method"
+				path="/jywebUseCheckSession" 
+				scope="request"
+				type="xgxt.jygl.comman.JyWebCheckSessionAciton">
+				
+			<forward name="index" path="/jygl/jyweb/index.jsp"/>	
+			<forward name="newsManage" path="/jygl/jyweb/news/newsManage.jsp"/>
+			<forward name="newUpdate" path="/jygl/jyweb/news/newUpdate.jsp"/>
+			<forward name="companyManage" path="/jygl/jyweb/company/companyManage.jsp"/>
+			<forward name="companyAuditing" path="/jygl/jyweb/company/companyAuditing.jsp"/>
+			<forward name="companyUpdate" path="/jygl/jyweb/company/companyUpdate.jsp"/>
+			<forward name="resumeUpdate" path="/jygl/jyweb/resume/resumeUpdate.jsp"/>
+			<forward name="revertcx" path="/jygl/jyweb/resume/revertcx.jsp"/>
+			<forward name="revertResume" path="/jygl/jyweb/resume/revertResume.jsp"/>
+			<forward name="resumecx" path="/jygl/jyweb/resume/dw_resumecx.jsp"/>
+			<forward name="mmUpdate" path="/jygl/jyweb/mmUpdate.jsp"/>
+			<forward name="workManage" path="/jygl/jyweb/work/workManage.jsp" />
+			<forward name="workAdd" path="/jygl/jyweb/work/workAdd.jsp" />
+			<forward name="gwwh" path="/jygl/jyweb/work/gwwh.jsp" />
+			<forward name="workUpdate" path="/jygl/jyweb/work/workUpdate.jsp" />
+			<forward name="workAuditing" path="/jygl/jyweb/work/workAuditing.jsp" />
+			<forward name="resumeManage" path="/jygl/jyweb/resume/resumeManage.jsp"/>
+			<forward name="linksManage" path="/jygl/jyweb/links/linksManage.jsp"/>
+			<forward name="linksUpdate" path="/jygl/jyweb/links/linksUpdate.jsp"/>
+			<forward name="lxfsUpdate" path="/jygl/jyweb/lxfsUpdate.jsp"/>
+			<forward name="zphManage" path="/jygl/jyweb/zph/zphManage.jsp"/>
+			<forward name="zphAuditing" path="/jygl/jyweb/zph/zphAuditing.jsp"/>
+			<forward name="zphUpdate" path="/jygl/jyweb/zph/zphUpdate.jsp"/>
+			<forward name="tjManage" path="/jygl/jyweb/tjManage.jsp"/>
+			<forward name="ztzpManage" path="/jygl/jyweb/ztzp/ztzpManage.jsp"/>
+			<forward name="ztzpAuditing" path="/jygl/jyweb/ztzp/ztzpAuditing.jsp"/>
+			<forward name="ztzpAdd" path="/jygl/jyweb/ztzp/ztzpAdd.jsp"/>
+			<forward name="filesManage" path="/jygl/jyweb/files/filesManage.jsp"/>
+			<forward name="fileUpdate" path="/jygl/jyweb/files/filesUpdate.jsp"/>
+			<forward name="resumeView" path="/jygl/jyweb/resume/resumeView.jsp"/>
+			
+			<forward name="revertView" path="/jygl/jyweb/resume/revertView.jsp"/>
+			<forward name="remindpage" path="/jygl/jyweb/remindpage.jsp"/>
+			<forward name="admin_resumeUpdate" path="/jygl/jyweb/resume/admin_resumeUpdate.jsp"/>
+			<forward name="dw_workAdd" path="/jygl/jyweb/work/dw_gwwh.jsp" />
+			<forward name="zxjsManage" path="/jygl/jyweb/zxjsManage.jsp" />
+		</action>
+	
+	
+	
+		<action name="jyglActionForm" 
+				parameter="method"
+				path="/jywebNjjs" 
+				scope="request"
+				type="xgxt.jygl.njjs.NjjsJywebAction">
+				
+			<forward name="xsbmshManage" path="/jygl/jyweb/njjs/xsbmshManage.jsp" />
+		</action>
+	
+	
+	
+	<!--<<<<<<<<<<<<<<<<<<<< 就业网登陆 >>>>>>>>>>>>>>>>>>>>-->
+		<action path="/gdnzindex" name="commanForm"
+			forward="/index1.do?method=jyindex" scope="request">
+		</action>
+		
+		<action path="/index1" name="commanForm"
+			type="xgxt.action.JywebAction" scope="request" parameter="method">
+			<forward name="success" path="/jyweb/index.jsp"></forward>
+		</action>
+			<!--<<<<<<<<<<<<<<<<<<<<浙江经济就业网登陆 >>>>>>>>>>>>>>>>>>>>-->
+		<action path="/zjjjindex" name="commanForm"
+			forward="/zjjjindex1.do?method=zjjjjyindex" scope="request">
+		</action>
+		
+		<action path="/zjjjindex1" name="commanForm"
+			type="xgxt.action.JywebAction" scope="request" parameter="method">
+			<forward name="success11" path="/jyweb/zjjjLogin.jsp"></forward>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 浙江经济最新招聘页面加载路径 >>>>>>>>>>>>>>>>>>>>-->
+		<action path="/zpxxjz" name="commanForm"
+			forward="/zjjjzpxxjz.do?method=zjjjzpxxjz" scope="request">
+		</action>
+		
+		<action path="/zjjjzpxxjz" name="commanForm"
+			type="xgxt.action.JywebAction" scope="request" parameter="method">
+			<forward name="success12" path="/jyweb/zjjjzpxxjz.jsp"></forward>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 浙江经济求职页面加载 >>>>>>>>>>>>>>>>>>>>-->
+		<action path="/qzxxjz" name="commanForm"
+			forward="/zjjjqzxxjz.do?method=zjjjqzxxjz" scope="request">
+		</action>
+		
+		<action path="/zjjjqzxxjz" name="commanForm"
+			type="xgxt.action.JywebAction" scope="request" parameter="method">
+			<forward name="success13" path="/jyweb/zjjjqzxxjz.jsp"></forward>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 浙江经济就业网学生注册 >>>>>>>>>>>>>>>>>>>>-->
+		<action path="/xsregister" name="commanForm"
+			type="xgxt.action.JywebAction" scope="request" parameter="method">
+			<forward name="success" path="/jyweb/xsregister.jsp"></forward>
+			<forward name="success2" path="/jyweb/dwdwregister_ok.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网用户密码修改 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/changepassword" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/change_password.jsp" />
+			<forward name="success2" path="/jyweb/mmchangeok.jsp" />
+			<forward name="success3" path="/jyweb/failtofind.jsp" />
+		</action>
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网单位用户注册 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/dwregister" scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/dwregister.jsp" />
+			<forward name="success1" path="/jyweb/dwregister01.jsp" />
+			<forward name="success2" path="/jyweb/dwdwregister_ok.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网单位用户密码找回 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/findweb"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/findweb.jsp" />
+			<forward name="success2" path="/jyweb/changeweb.jsp" />
+			<forward name="success3" path="/jyweb/failtofind.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网单位用户找回时密码修改 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/changeweb" scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/changeweb.jsp" />
+			<forward name="success2" path="/jyweb/cannot_view.jsp" />
+			<forward name="success3" path="/jyweb/mmchangeok.jsp" />
+		</action>
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看最新动态（就业模块的新闻） >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewnewsinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/newsinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员修改最新动态（就业模块的新闻） >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/updatenewsinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/admin_update_newsinfo.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看全部最新动态（就业模块的新闻） >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewallnewsinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/allnewsinfo.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网企业发布招聘信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/addzpxx"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/add_zpxx.jsp" />
+		</action>
+
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网企业查看投递的个人简历 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/dwviewallgrjlinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/dw_viewallgrjlinfo.jsp" />
+		</action>
+   
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网企业回复个人简历 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/dwhf"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/dwhf.jsp" />
+		</action>
+        
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网企业编辑默认回复列表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/viewallmrhfinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/allmrhfinfo.jsp" />
+		</action>
+        
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网企业查看默认回复内容 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/viewmrhfinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/mrhfinfo.jsp" />
+		</action>
+
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网企业查看个人简历列表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/viewallgrjl"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/allgrjlinfo.jsp" />
+		</action>
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看招聘信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewzpinfo" scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/zpxxinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看全部招聘信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewallzpinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/allzpxxinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看全部政策法规信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewallzcfginfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/allzcfginfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看政策法规信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewzcfginfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/zcfginfo.jsp" />
+		</action>
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看校园专场招聘信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewzczpinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/zczpinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看校园全部专场招聘信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewallzczpinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/allzczpinfo.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看公告栏信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewgglinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/gglinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看全部公告栏信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewallgglinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/allgglinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看全部就业指导教师信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewalljyzdinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/alljyzdinfo.jsp" />
+		</action>
+
+
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看生源介绍信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewsyjsinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/syjsinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看全部生源介绍信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewallsyjsinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/allsyjsinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看全部下载信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewallwjxzinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/allwjxzinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网查看下载信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewwjxzinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/wjxzinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网文件下载 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/downwj"
+			scope="request" type="xgxt.action.JywebAction">
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网文件上传 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/updatewj"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/add_xzwj.jsp" />
+		</action>
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网图片上传 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/updatepic"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/add_tpxx.jsp" />
+		</action>
+		
+		
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网查看全部图片信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/viewalltpxxinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/alltpxxinfo.jsp" />
+		</action>   
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网查看图片信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="wjscForm" parameter="method" path="/viewtpxxinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/tpxxinfo.jsp" />
+		</action>
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网留言板>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/lybinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/lybinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网留言板留言保存>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/savelybinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/lybinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网留言板留言清空>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/lybdelall" scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/lybinfo.jsp" />
+		</action>
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/adminoperation" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/addmessage.do?method=addmessage" />
+			<forward name="success2" path="/zpshenheallinfo.do?method=zpshenheinfo" />
+			<forward name="success3" path="/addzxdt.do?method=addzxdt" />
+			<forward name="success4" path="/updatewj.do?method=updatewj" />
+			<forward name="success5" path="/jlgl.do?method=jlgl" />
+			<forward name="success6" path="/qzxxgl.do?method=qzxxgl" />
+			<forward name="success7" path="/updatepic.do?method=updatepic" />
+			<forward name="success8" path="/yhgl.do?method=yhgl" />
+			<forward name="success9" path="/wjdcgl.do?method=wjdcgl" />
+			<forward name="success10" path="/jyweb/jyzd.jsp" />
+			<forward name="success11" path="/adminaddzpxx.do?method=adminaddzpxx" />
+			<forward name="success12" path="/sstj.do?method=sstj" />
+			<forward name="success13" path="/yqlj.do?method=yqlj" />
+			
+			<forward name="successA" path="/addzpxx.do?method=addzpxx" />
+			<forward name="successB" path="/viewallgrjl.do?method=allgrjlinfo" />
+			<forward name="successC" path="/viewallmrhfinfo.do?method=allmrhfinfo" />
+			
+			<forward name="successW" path="/grjldj.do?method=grjldj" /> 
+			<forward name="successX" path="/addqzxx.do?method=qzxx" />
+			<forward name="successY" path="/mywj.do?method=mywj" />
+				
+			<forward name="success14" path="/findpassword.do?method=findpassword" />
+		</action>
+      
+        
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作,管理员实时统计>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/sstj" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/sstj.jsp" />
+		</action>
+      
+      
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作,管理员发布招聘信息>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/adminaddzpxx" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success"
+				path="/jyweb/admin_add_zpxx.jsp" />
+		</action>
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作,招聘审核全部信息>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/zpshenheallinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success"
+				path="/jyweb/zpxx_shenheallinfo.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作,招聘信息审核>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/zpshenhe"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/zpxx_shenhe.jsp" />
+		</action>
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作,最新动态更新>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/addzxdt"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/add_zxdt.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作,其他栏目更新>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/addmessage" scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/add_message.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作,其他栏目内容查看>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/viewmessageinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/messageinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作，找回用户密码>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/findpassword" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/findpassword.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网学生操作，个人简历登记>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/grjldj"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/grjldj.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网学生操作，投简历>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/toujl"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/zpxxinfo.jsp" />
+		</action>
+		
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作，个人简历管理>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/jlgl"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/admin_grjlgl.jsp" />
+		</action>
+        
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作，个人简历查看>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/viewgrjlinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/grjlinfo.jsp" />
+			<forward name="success2" path="/jyweb/nogrjl.jsp" />
+		</action>
+        
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作，用户管理>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/yhgl"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/admin_yhgl.jsp" />
+			<forward name="zpdwxx" path="/jyweb/zpdwxx.jsp" />
+		</action>
+        
+        
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作，用户信息查看>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/viewyhxxinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/yhxxinfo.jsp" />
+		</action>
+        
+        
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网管理员操作，求职信息管理>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/qzxxgl"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/admin_qzxxgl.jsp" />
+		</action>
+         
+         
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网学生操作，求职信息登记>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/addqzxx"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/add_qzxx.jsp" />
+		</action>
+   
+         <!--<<<<<<<<<<<<<<<<<<<< 就业网学生操作，查看全部单位回复>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/viewalldwhfinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/alldwhfinfo.jsp" />
+		</action>
+		
+		 <!--<<<<<<<<<<<<<<<<<<<< 就业网学生操作，查看单位回复具体内容>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/viewdwhfinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/dwhfinfo.jsp" />
+		</action>
+   
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网学生操作，查看文件夹列表>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/mywj"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/mywj.jsp" />
+		</action>
+   
+   
+   
+   
+   
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网 查看求职信息>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/qzxxinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/qzxxinfo.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网 查看全部求职信息>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/viewallqzxxinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/allqzxxinfo.jsp" />
+		</action>
+
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网 问卷调查管理(管理员)>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/wjdcgl"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/admin_wjdcgl.jsp" />
+		</action>
+
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网 问卷调查增加选项>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/addwjdcchoice"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/add_wjdcchoice.jsp" />
+		</action>
+
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网 重新发起问卷调查>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/newwjdc"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/new_wjdc.jsp" />
+		</action>
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网 问卷调查结果查看>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/wjdcresult"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/wjdc_result.jsp" />
+		</action>
+          <!--<<<<<<<<<<<<<<<<<<<< 就业网 文章搜索>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/findarticle"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/all_find_article.jsp" />
+		</action>
+        
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网 文章搜索后查看详细>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/viewmorearticleinfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/all_find_article.jsp" />
+			<forward name="success1" path="/jyweb/viewmoreqitainfo.jsp" />
+			<forward name="success2" path="/jyweb/newsinfo.jsp" />
+			<forward name="success3" path="/jyweb/tpxxinfo.jsp" />
+			<forward name="success4" path="/jyweb/wjxzinfo.jsp" />
+		</action>
+        
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网 友情链接后台操作>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/yqlj"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/yqlj.jsp" />
+		</action>
+        
+        <!--<<<<<<<<<<<<<<<<<<<< 就业网 查看专场招聘,公告栏,生源介绍,政策法规内容>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/qitainfo"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/qitainfo.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网 招聘信息修改>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/updatezpxx"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/update_zpxx.jsp" />
+		</action>
+         <!--<<<<<<<<<<<<<<<<<<<< 就业网 友情链接列表>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method" path="/yqljlist"
+			scope="request" type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/yqljlist.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员修改栏目更新 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/updatemessageinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/admin_update_messageinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员修改图片信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/updatepictureinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/admin_update_pictureinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员修改招聘信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/updatezpxxinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/admin_update_zpxxinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业网管理员修改上传文件信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/updatewjxzinfo" scope="request"
+			type="xgxt.action.JywebAction">
+			<forward name="success" path="/jyweb/admin_update_wjxzinfo.jsp" />
+		</action>
+		<action path="/lxwm" forward="/jyweb/lxwm.jsp"></action>
+	</action-mappings>
+	
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+	<message-resources key="JYWEB_RESOURCES" parameter="xgxt.base.jygl" />
+</struts-config>

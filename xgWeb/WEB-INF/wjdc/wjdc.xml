@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjdcForm" type="xgxt.wjdc.WjdcForm"/>
+		<form-bean name="msdcForm" type="xgxt.wjdc.gdspyp.GdspypWjdcForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+	
+	<!-- ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙ 我是心理普查 ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙-->
+	<action path="/xlpc_wjManage" 	forward="/wjdc.do?method=xlpcWjManage"/>		<!-- 问卷维护 -->
+	<action path="/xlpc_stManage" 	forward="/wjdc.do?method=xlpcStManage"/>		<!-- 试题维护 -->
+	<action path="/xlpc_zjManage" 	forward="/wjdc.do?method=xlpcZjManage"/>		<!-- 组卷维护 -->
+	<action path="/xlpc_wjfpManage" forward="/wjdc.do?method=xlpcWjfpManage"/>		<!-- 问卷分配 -->
+	<action path="/xlpc_hdwjManage" forward="/wjdc.do?method=xlpcHdwjManage"/>		<!-- 回答问卷 -->
+	<action path="/xlpc_hdtjManage" forward="/wjdc.do?method=xlpcHdtjManage"/>		<!-- 回答统计 -->
+	<action path="/xlpc_hdjgManage" forward="/wjdc.do?method=xlpcHdjgManage"/>		<!-- 回答结果 -->
+	<action path="/xlpc_fxjgManage" forward="/wjdc.do?method=xlpcFxjgManage"/>		<!-- 分析结果 -->
+    <!-- ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙ 心理普查 end ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙-->
+    
+    <!-- ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙ 我是学生思想状况调查 ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙-->
+	<action path="/sxzk_wjManage" 	forward="/wjdc.do?method=sxzkWjManage"/>		<!-- 问卷维护 -->
+	<action path="/sxzk_stManage" 	forward="/wjdc.do?method=sxzkStManage"/>		<!-- 试题维护 -->
+	<action path="/sxzk_zjManage" 	forward="/wjdc.do?method=sxzkZjManage"/>		<!-- 组卷维护 -->
+	<action path="/sxzk_wjfpManage" forward="/wjdc.do?method=sxzkWjfpManage"/>		<!-- 问卷分配 -->
+	<action path="/sxzk_hdwjManage" forward="/wjdc.do?method=sxzkHdwjManage"/>		<!-- 回答问卷 -->
+	<action path="/sxzk_hdtjManage" forward="/wjdc.do?method=sxzkHdtjManage"/>		<!-- 回答统计 -->
+	<action path="/sxzk_hdjgManage" forward="/wjdc.do?method=sxzkHdjgManage"/>		<!-- 回答结果 -->
+    <!-- ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙ 学生思想状况调查 end ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙-->
+    
+    
+     <!-- ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙ 实习生状况调查 ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙-->
+	<action path="/sxszk_wjManage" 	forward="/wjdc.do?method=sxszkWjManage"/>		<!-- 问卷维护 -->
+	<action path="/sxszk_stManage" 	forward="/wjdc.do?method=sxszkStManage"/>		<!-- 试题维护 -->
+	<action path="/sxszk_zjManage" 	forward="/wjdc.do?method=sxszkZjManage"/>		<!-- 组卷维护 -->
+	<action path="/sxszk_wjfpManage" forward="/wjdc.do?method=sxszkWjfpManage"/>		<!-- 问卷分配 -->
+	<action path="/sxszk_hdwjManage" forward="/wjdc.do?method=sxszkHdwjManage"/>		<!-- 回答问卷 -->
+	<action path="/sxszk_hdtjManage" forward="/wjdc.do?method=sxszkHdtjManage"/>		<!-- 回答统计 -->
+	<action path="/sxszk_hdjgManage" forward="/wjdc.do?method=sxszkHdjgManage"/>		<!-- 回答结果 -->
+    <!-- ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙ 实习生状况调查 end ⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙-->
+    
+    
+    <!-- 实际路径 -->
+    <action path="/wjdc"  parameter="method"   name="wjdcForm"  scope="request"  type="xgxt.wjdc.WjdcAction">
+    		
+    	<!-- 问卷调查 -->
+		<forward name="wjManage"   	path="/wjdc/wjManage.jsp" />	<!-- 组卷维护 -->
+		<forward name="wjUpdate"   	path="/wjdc/wjUpdate.jsp" />
+		<forward name="stManage"   	path="/wjdc/stManage.jsp" />	<!-- 试题维护 -->
+		<forward name="stUpdate"   	path="/wjdc/stUpdate.jsp" />
+		<forward name="zjManage"   	path="/wjdc/zjManage.jsp" />	<!-- 组卷维护 -->
+		<forward name="wjfpManage"  path="/wjdc/wjfpManage.jsp" />	<!-- 问卷分配 -->
+		<forward name="wjfpUpdate"  path="/wjdc/wjfpUpdate.jsp" />	
+		<forward name="hdwjManage"  path="/wjdc/hdwjManage.jsp" />	<!-- 回答问卷 -->
+		<forward name="hdwjUpdate"  path="/wjdc/wjUpdate.jsp" />	
+		<forward name="hdwj"  path="/wjdc/gdsp/hdwj.jsp" />	<!-- 广东食品回答问卷 -->
+		<forward name="hdtjManage"  path="/wjdc/hdtjManage.jsp" />	<!-- 回答统计 -->
+		<forward name="hdtjUpdate"  path="/wjdc/hdtjUpdate.jsp" />	
+		<forward name="hdjgManage"  path="/wjdc/hdjgManage.jsp" />	<!-- 回答结果 -->
+		<forward name="hdjgUpdate"  path="/wjdc/hdjgUpdate.jsp" />	
+		<forward name="fxjgManage"  path="/wjdc/fxjgManage.jsp" />	<!-- 分析结果 -->
+		<forward name="fxjgUpdate"  path="/wjdc/fxjgUpdate.jsp" />	
+    </action>
+    				
+    				
+    <!-- ====================================马氏心里调查 ==================================-->
+    	<action path="/wjdc_msxldc_jgfx" forward="/msxldc.do?method=jgfxManage" />
+    	<action path="/wjdc_msxldc_wjhd" forward="/msxldc.do?method=wjhd" />
+    	
+    	<action path="/msxldc" parameter="method" name="msdcForm" scope="request"
+    		type="xgxt.wjdc.gdspyp.GdspypWjdcAction">
+    		<forward name="jgfxManage"  path="/wjdc/gdspyp/jgfxManage.jsp" />
+    		<forward name="pywhUpdate"  path="/wjdc/gdspyp/pywhUpdate.jsp" />
+    		<forward name="wjhd"  path="/wjdc/gdspyp/wjhd.jsp" />
+    		<forward name="wjhdView"  path="/wjdc/gdspyp/wjhdView.jsp" />
+    	</action>
+    <!-- ====================================马氏心里调查end ==================================-->				
+	</action-mappings>
+
+</struts-config>

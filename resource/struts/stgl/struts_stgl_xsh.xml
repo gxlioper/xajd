@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="xshForm" type="xgxt.xsh.XshForm"></form-bean>
+	</form-beans>
+ 	<action-mappings>
+ 		<action path="/xsh_bdsz" forward="/bdsz.do?method=bdszManage&amp;mkmc=xsh"/>
+ 		<action path="/xsh_hdxx" forward="/xsh.do?method=hdxxManage"/>
+ 		<action path="/xsh_xcxx" forward="/xsh.do?method=xcxxManage"/>
+ 		<action path="/xsh_stwh" forward="/xsh.do?method=stwhManage"/>
+ 		<action path="/xsh_cygl" forward="/xsh.do?method=stwhCygl"/>
+ 		<action path="/xsh_gbgl" forward="/xsh.do?method=stwhGbgl"/>
+ 		<action path="/xsh_xshcy" forward="/xsh.do?method=stwhCygl&amp;flg=xsh"/>
+ 		<action path="/xsh_xshcygl" forward="/xsh.do?method=stwhGbgl&amp;flg=xsh"/>
+ 		<action path="/xsh_sthdb" forward="/xsh.do?method=sthdManage"/>
+ 		
+ 		
+ 		<action path="/xsh"
+				type="xgxt.xsh.XshAction"
+				name="xshForm"
+				parameter="method"
+				scope="request">
+				<forward name="hdxxManage" path="/xsh/hdxxManage.jsp"/>
+				<forward name="hdxxUpdate" path="/xsh/hdxxUpdate.jsp"/>
+				<forward name="xcxxManage" path="/xsh/xcxxManage.jsp"/>
+				<forward name="xcxxUpdate" path="/xsh/xcxxUpdate.jsp"/>
+				<forward name="stwhManage" path="/xsh/stwhManage.jsp"/>
+				<forward name="stwhUpdate" path="/xsh/stwhUpdate.jsp"/>
+				<forward name="jsInfo" path="/xsh/jsInfo.jsp"/>
+				<forward name="stwhCygl" path="/xsh/stwhCygl.jsp"/>
+				<forward name="stwhGbgl" path="/xsh/stwhGbgl.jsp"/>
+				<forward name="sthdManage" path="/xsh/sthdManage.jsp"/>
+				<forward name="sthdUpdate" path="/xsh/sthdUpdate.jsp"/>
+				<forward name="yxstdjb" path="/xsh/yxstdjb.jsp"/>
+				<forward name="yxstgbdjb" path="/xsh/yxstgbdjb.jsp"/>
+		</action>
+ 	</action-mappings>
+</struts-config>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyZjcmActionForm" type="xgxt.pjpy.zjcm.PjpyZjcmActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_zjcm_rsblsz"           forward="/pjpyZjcmCssz.do?method=rsblsz"/>      <!-- 奖学金荣誉称号人数比例设置 -->
+	    <action path="/pjpy_zjcm_jxjblPlsz" 	   forward="/pjpyZjcmCssz.do?method=jxjblPlsz"/>   <!-- 奖学金比例批量设置  -->
+	    <action path="/pjpy_zjcm_baseDataInit"     forward="/pjpyZjcmCssz.do?method=baseDataInit"/><!-- 基础数据初始化 -->
+	    <action path="/pjpy_zjcm_jxjrstz"          forward="/pjpyZjcmCssz.do?method=jxjrstz"/>     <!-- 奖学金人数单个调整 -->
+	    <action path="/pjpy_zjcm_jxjblFpb"         forward="/pjpyZjcmCssz.do?method=jxjblFpb"/>    <!-- 奖学金比例汇总表 -->
+	    <action path="/pjpy_zjcm_rychRsblsz"       forward="/pjpyZjcmCssz.do?method=rychRsblsz"/>  <!-- 荣誉称号比例设置 --> 
+	    <action path="/pjpy_zjcm_rychblPlsz"       forward="/pjpyZjcmCssz.do?method=rychblPlsz"/>  <!-- 荣誉称号比例设置 -->
+	    <action path="/pjpy_zjcm_rychrstz"         forward="/pjpyZjcmCssz.do?method=rychrstz"/>    <!-- 荣誉称号人数单个调整 --> 
+	    
+	    
+	    <!-- 实际路径 -->	
+		<action path="/pjpyZjcmCssz"
+				type="xgxt.pjpy.zjcm.cssz.PjpyZjcmCsszAction"
+				name="pjpyZjcmActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 实际跳转JSP路径 -->
+		<forward name="jxjblPlsz"  path="/pjpy/zjcm/cssz/jxjblPlsz.jsp" />
+		<forward name="rsblsz"     path="/pjpy/zjcm/cssz/rsblsz.jsp"/>
+		<forward name="jxjrstz"    path="/pjpy/zjcm/cssz/jxjrstz.jsp"/>
+		<forward name="rychRsblsz" path="/pjpy/zjcm/cssz/rychRsblsz.jsp"/>
+		<forward name="rychblPlsz" path="/pjpy/zjcm/cssz/rychblPlsz.jsp"/>
+		<forward name="rychrstz"   path="/pjpy/zjcm/cssz/rychrstz.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config>

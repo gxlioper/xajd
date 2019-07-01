@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<!-- form 配置 -->
+	<form-beans>
+		<!-- 参数设置 -->
+		<form-bean name="CsszForm" type="com.zfsoft.xgxt.pjpy.hjsq.cssz.CsszForm"/>
+		<!-- 申请表单 -->
+		<form-bean name="HjsqForm" type="com.zfsoft.xgxt.pjpy.hjsq.sq.HjsqForm"/>
+		<!-- 审核表单 -->
+		<form-bean name="HjshForm" type="com.zfsoft.xgxt.pjpy.hjsq.sh.HjshForm"/>
+		<!-- 结果表单 -->
+		<form-bean name="HjjgForm" type="com.zfsoft.xgxt.pjpy.hjsq.jg.HjjgForm"/>
+	</form-beans>
+	
+	<!-- action 配置 -->
+	<action-mappings>
+		<!-- 参数设置 -->
+		<action path="/pjpy_cssz" forward="/jxcssz.do?method=cssz" />
+		<action path="/jxcssz" scope="request" parameter="method" name="CsszForm" type="com.zfsoft.xgxt.pjpy.hjsq.cssz.CsszAction" >
+			<forward name="cssz" path="/xsgzgl/pjpy/hjsq/cssz/hjsqcssz.jsp"/>
+		</action>
+		<!-- 申请 -->
+		<action path="/pjpy_jxsq" forward="/jxsq.do?method=getJxsqList"/>
+		<action path="/jxsq" parameter="method" name="HjsqForm" scope="request" type="com.zfsoft.xgxt.pjpy.hjsq.sq.HjsqAction" >
+			<forward name="cx" path="/xsgzgl/pjpy/hjsq/sq/gethjsqlist.jsp"/>
+			<forward name="add" path="/xsgzgl/pjpy/hjsq/sq/add.jsp"/>
+			<forward name="update" path="/xsgzgl/pjpy/hjsq/sq/update.jsp"/>
+			<forward name="view" path="/xsgzgl/pjpy/hjsq/sq/view.jsp"/>
+		</action>
+		
+		<!-- 审核 -->
+		<action path="/pjpy_jxsh" forward="/jxsh.do?method=getJxshList"/>
+		<action path="/jxsh" parameter="method" name="HjshForm" scope="request" type="com.zfsoft.xgxt.pjpy.hjsq.sh.HjshAction">
+		    <forward name="cx" path="/xsgzgl/pjpy/hjsq/sh/gethjshlist.jsp"/>
+			<forward name="hjsh" path="/xsgzgl/pjpy/hjsq/sh/hjsh.jsp"/>
+			<forward name="plhjsh" path="/xsgzgl/pjpy/hjsq/sh/plhjsh.jsp"/>	
+		</action>
+		
+		<!-- 结果 -->
+		<action path="/pjpy_jxjg" forward="/jxjg.do?method=getJxjgList"/>
+		<action path="/jxjg" parameter="method" name="HjjgForm" scope="request" type="com.zfsoft.xgxt.pjpy.hjsq.jg.HjjgAction">
+			<forward name="cx" path="/xsgzgl/pjpy/hjsq/jg/gethjjglist.jsp"/>
+			<forward name="add" path="/xsgzgl/pjpy/hjsq/jg/addjg.jsp"/>
+			<forward name="update" path="/xsgzgl/pjpy/hjsq/jg/updatejg.jsp"/>
+			<forward name="view" path="/xsgzgl/pjpy/hjsq/jg/viewjg.jsp"/>
+		</action>
+		
+	</action-mappings>
+	
+	
+</struts-config>

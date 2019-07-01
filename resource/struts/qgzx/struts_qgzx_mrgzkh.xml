@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="GzkhJcszForm" type="xsgzgl.qgzx.mrgzkh.jcsz.GzkhJcszForm" />
+		<form-bean name="GzkhKhsqForm" type="xsgzgl.qgzx.mrgzkh.khsq.GzkhKhsqForm" />
+		<form-bean name="GzkhKhshForm" type="xsgzgl.qgzx.mrgzkh.khsh.GzkhKhshForm" />
+		<form-bean name="GzkhKhjgForm" type="xsgzgl.qgzx.mrgzkh.khjg.GzkhKhjgForm" />
+	</form-beans>
+
+
+	<action-mappings>
+		<action path="/qgzx_mrgzkh_jcsz" forward="/mrgzkhJcsz.do?method=jcsz" />
+		<action path="/qgzx_mrgzkh_khsq" forward="/mrgzkhKhsq.do?method=getKhsqList" />
+		<action path="/qgzx_mrgzkh_khsh" forward="/mrgzkhKhsh.do?method=getKhshList" />
+		<action path="/qgzx_mrgzkh_khjg" forward="/mrgzkhKhjg.do?method=getKhjgList" />
+
+		<!-- 基础设置 -->
+		<action path="/mrgzkhJcsz" scope="request"
+			type="xsgzgl.qgzx.mrgzkh.jcsz.GzkhJcszAction" name="GzkhJcszForm"
+			parameter="method">
+			<forward name="jcsz" path="/xsgzgl/qgzx/mrgzkh/jcsz/jcsz.jsp" />		<!-- 参数设置 -->
+		</action>
+		
+		<!-- 考核申请 -->
+		<action path="/mrgzkhKhsq" scope="request"
+			type="xsgzgl.qgzx.mrgzkh.khsq.GzkhKhsqAction" name="GzkhKhsqForm"
+			parameter="method">
+			<forward name="khsqList" path="/xsgzgl/qgzx/mrgzkh/khsq/khsqList.jsp" />
+			<forward name="khsq" path="/xsgzgl/qgzx/mrgzkh/khsq/khsq.jsp" />
+			<forward name="editKhsq" path="/xsgzgl/qgzx/mrgzkh/khsq/editKhsq.jsp" />
+			<forward name="viewKhsq" path="/xsgzgl/qgzx/mrgzkh/khsq/viewKhsq.jsp" />
+		</action>
+		
+			<!-- 考核审核-->
+		<action path="/mrgzkhKhsh" scope="request"
+			type="xsgzgl.qgzx.mrgzkh.khsh.GzkhKhshAction" name="GzkhKhshForm"
+			parameter="method">
+			<forward name="khshList" path="/xsgzgl/qgzx/mrgzkh/khsh/khshList.jsp" />
+			<forward name="khPlsh" path="/xsgzgl/qgzx/mrgzkh/khsh/khPlsh.jsp"/>
+			<forward name="khshView" path="/xsgzgl/qgzx/mrgzkh/khsh/khshView.jsp"/>
+			<forward name="khDgsh" path="/xsgzgl/qgzx/mrgzkh/khsh/khDgsh.jsp"/>
+		</action>
+		
+		<!-- 考核结果 -->
+		<action path="/mrgzkhKhjg" scope="request"
+			type="xsgzgl.qgzx.mrgzkh.khjg.GzkhKhjgAction" name="GzkhKhjgForm"
+			parameter="method">
+			<forward name="khjgList" path="/xsgzgl/qgzx/mrgzkh/khjg/khjgList.jsp" />
+			<forward name="khjg" path="/xsgzgl/qgzx/mrgzkh/khjg/khjg.jsp" />
+			<forward name="editKhjg" path="/xsgzgl/qgzx/mrgzkh/khjg/editKhjg.jsp" />
+			<forward name="viewKhjg" path="/xsgzgl/qgzx/mrgzkh/khjg/viewKhjg.jsp" />
+		</action>
+
+	</action-mappings>
+</struts-config>

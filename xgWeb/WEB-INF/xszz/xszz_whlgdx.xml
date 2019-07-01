@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzWhlgdxActionForm" type="xgxt.xszz.whlg.XszzWhlgdxActionForm"><!-- test.forms.DynaActionFormTest -->
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="xszzWhlgdxActionForm" parameter="method" path="/whlg_xszz"
+				scope="request"	type="xgxt.xszz.whlg.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- 武汉理工大学 "学生资助"-"学生家庭情况调查"-->
+			<forward name="data_jtqkdc" path="/xszz/whlg/data_jtqkdc.jsp" />
+			<forward name="jtqkdc_queryOne" path="/xszz/whlg/jtqkdc_queryOne.jsp" />
+			<forward name="jtqkdc_save" path="/xszz/whlg/jtqkdc_queryOne.jsp" />
+			<forward name="jtqkdc_exp" path="/about:blank" />
+			<forward name="jtjj_knssqOne" path="/xszz/whlg/jtjjkns_sqOne.jsp" />
+			<forward name="data_jtjjkns_sq" path="/xszz/whlg/data_jtjjkns_sq.jsp" />
+			<forward name="gjzxdk_queryOne" path="/xszz/whlg/gjzxdk_queryOne.jsp" />
+			<forward name="data_gjzxdk" path="/xszz/whlg/data_gjzxdk.jsp" />
+			<forward name="gjzxdk_sp_queryOne" path="/xszz/whlg/gjzxdk_sp_queryOne.jsp" />
+			<forward name="data_gjzxdksp" path="/xszz/whlg/data_gjzxdksp.jsp" />
+			<forward name="gjzxdk_fkxy_queryOne" path="/xszz/whlg/gjzxdk_fkxy_queryOne.jsp" />
+			<forward name="data_gjzxdkhkxywh" path="/xszz/whlg/data_gjzxdkhkxywh.jsp" />
+			<forward name="xszzsq_queryOne" path="/xszz/whlg/xszzsq_queryOne.jsp" />
+			<forward name="data_xszzwh" path="/xszz/whlg/data_xszzwh.jsp" />
+			<!-- Test -->
+		</action>
+		
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

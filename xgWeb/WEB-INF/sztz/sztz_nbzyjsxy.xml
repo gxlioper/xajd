@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="nbzy_sztzForm" type="xgxt.sztz.nbzyjsxy.SztzNbzyForm"/>
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+		<!--展现的路径  宁波职业技术学院-->
+		<action path="/tzInfoManage" forward="/nbzy_sztz.do?method=tzInfoManage"/>
+		<action path="/tzInfoPrint" forward="/nbzy_sztz.do?method=tzPrintManage"/>
+		<!--实际的路径 -->
+		<action path="/nbzy_sztz" parameter="method"  name="nbzy_sztzForm" scope="request"
+		        type="xgxt.sztz.nbzyjsxy.SztzNbzyAction">	
+		        <forward name="tzInfoManage" path="/sztz/nbzyjsxy/tzInfoManage.jsp"></forward>          
+		      	<forward name="tzInfoAdd" path="/sztz/nbzyjsxy/tzInfoAdd.jsp"></forward> 
+		      	<forward name="tzInfoModi" path="/sztz/nbzyjsxy/tzInfoModi.jsp"></forward> 
+		      	<forward name="tzPrintManage" path="/sztz/nbzyjsxy/tzPrintManage.jsp"></forward>
+		      	<forward name="tzInfoPrint" path="/sztz/nbzyjsxy/tzInfoPrint.jsp"></forward>          
+		</action>
+	</action-mappings>
+</struts-config>

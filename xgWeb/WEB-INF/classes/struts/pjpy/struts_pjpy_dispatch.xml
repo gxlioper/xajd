@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyCommForm" type="xgxt.pjpy.comm.pjpy.PjpyCommForm"/>
+		<form-bean name="pjpyTjszForm" type="xgxt.pjpy.comm.pjpy.tjsz.PjpyTjszForm"/>
+		<form-bean name="pjpyJdszForm" type="xgxt.pjpy.comm.pjpy.jdsz.PjpyJdszForm"/>
+		<form-bean name="pjpyTzfwszForm" type="xgxt.pjpy.comm.pjpy.tzfwsz.PjpyTzfwszForm"/>
+		<form-bean name="pjpySjszForm" type="xgxt.pjpy.comm.pjpy.sjsz.PjpySjszForm"/>
+	</form-beans>
+
+	<action-mappings>
+	
+	<!-- ======================== 基本设置 ================================-->
+	
+	<!-- 评奖基本设置 -->
+    <action path="/pjpy_jbsz_jbsz" parameter="pjpy_pjjbsz"
+		name="pjpyCommForm" scope="request"
+		type="xgxt.pjpy.comm.pjpy.PjpyDispatchAction">
+	</action>
+	
+	<!-- 评奖流程设置 -->
+    <action path="/pjpy_jbsz_lcsz" parameter="pjpy_pjlcsz"
+		name="pjpyCommForm" scope="request"
+		type="xgxt.pjpy.comm.pjpy.PjpyDispatchAction">
+	</action>
+	
+	<!-- 评奖人员确定 -->
+    <action path="/pjpy_jbsz_ryqd" parameter="pjpy_pjryqd"
+		name="pjpyCommForm" scope="request"
+		type="xgxt.pjpy.comm.pjpy.PjpyDispatchAction">
+	</action>
+	
+	<!-- 评奖项目设置 -->
+    <action path="/pjpy_jbsz_xmsz" parameter="pjpy_pjxmsz"
+		name="pjpyCommForm" scope="request"
+		type="xgxt.pjpy.comm.pjpy.PjpyDispatchAction">
+	</action>
+	<!-- ======================== 基本设置end ==============================-->
+	
+	
+	<!-- ============条件设置====================== -->
+	<action path="/pjpy_xmsz_tjsz" forward="/pjpy_ty_tjsz.do?method=tjszManage"></action>
+	
+	<action path="/pjpy_ty_tjsz"
+			type="xgxt.pjpy.comm.pjpy.tjsz.PjpyTjszAction"
+			parameter="method"
+			scope="request"
+			name="pjpyTjszForm">
+		
+		<forward name="tjszManage" path="/pjpy/comm/pjpy/xmsz/tjszManage.jsp"></forward>
+		<forward name="tjxz" path="/pjpy/comm/pjpy/xmsz/tjxz.jsp"></forward>
+		<forward name="tjsz" path="/pjpy/comm/pjpy/xmsz/tjsz.jsp"></forward>
+		<forward name="tjszFlow" path="/pjpy/comm/pjpy/jbsz/tjszFlow.jsp"></forward>
+		<forward name="tjszCopy" path="/pjpy/comm/pjpy/xmsz/tjszCopy.jsp"></forward>
+	</action>
+	<!-- ============条件设置==end==================== -->
+	
+	<!-- ============兼得设置====================== -->
+	<action path="/pjpy_xmsz_jdsz" forward="/pjpy_ty_jdsz.do?method=jdszManage"></action>
+	
+	<action path="/pjpy_ty_jdsz"
+			type="xgxt.pjpy.comm.pjpy.jdsz.PjpyJdszAction"
+			parameter="method"
+			scope="request"
+			name="pjpyJdszForm">
+		
+		<forward name="jdszManage" path="/pjpy/comm/pjpy/xmsz/jdszManage.jsp"></forward>
+		<forward name="xzxm" path="/pjpy/comm/pjpy/xmsz/xzxm.jsp"></forward>
+		<forward name="jdsz" path="/pjpy/comm/pjpy/xmsz/jdsz.jsp"></forward>
+		<forward name="jdszFlow" path="/pjpy/comm/pjpy/jbsz/jdszFlow.jsp"></forward>
+	</action>
+	<!-- ============兼得设置===end=================== -->
+	<!-- ============调整范围设置====================== -->
+	<action path="/pjpy_xmsz_tzfwsz" forward="/pjpy_ty_tzfw.do?method=tzfwManage"></action>
+	
+	<action path="/pjpy_ty_tzfw"
+			type="xgxt.pjpy.comm.pjpy.tzfwsz.PjpyTzfwszAction"
+			parameter="method"
+			scope="request"
+			name="pjpyTzfwszForm">
+		<forward name="tzfwManage" path="/pjpy/comm/pjpy/xmsz/tzfwManage.jsp"></forward>
+		<forward name="xzxm" path="/pjpy/comm/pjpy/xmsz/tzfwXmxz.jsp"></forward>
+		<forward name="tzfwsz" path="/pjpy/comm/pjpy/xmsz/tzfwsz.jsp"></forward>
+		<forward name="tzfwszFlow" path="/pjpy/comm/pjpy/jbsz/tzfwszFlow.jsp"></forward>
+	</action>
+	<!-- ============调整范围设置=end=================== -->
+	
+	
+	
+	 <!-- ==========时间设置================ -->
+	 <action path="/pjpy_sjsz" forward="/pjpy_ty_sjsz.do?method=sjszManage"/>	
+	 <action path="/pjpy_ty_sjsz" 
+	 		 parameter="method"
+			 name="pjpySjszForm" 
+			 scope="request"
+			 type="xgxt.pjpy.comm.pjpy.sjsz.PjpySjszAction">
+
+		<forward name="sjszManage" path="/pjpy/comm/pjpy/xmsz/sjszManage.jsp" />
+		<forward name="sjszUpdate" path="/pjpy/comm/pjpy/xmsz/sjszUpdate.jsp" />
+	 </action>
+	
+	
+	<!-- =====处理 jQuery ajax请求======== -->
+	<action path="/pjpy_ty_ajax"
+			type="xgxt.pjpy.comm.pjpy.PjpyAjaxAction"
+			parameter="method"
+			scope="request"
+			name="pjpyCommForm">
+		
+	</action>
+	
+	
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyZgmsActionForm" type="xgxt.pjpy.zgms.PjpyZgmsActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpyzgmswh"
+				type="xgxt.pjpy.zgms.PjpyZgmsAction"
+				name="pjpyZgmsActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="kkjlpage"       path="/pjpy/zgms/kkjl/default.jsp" />
+			<forward name="kkjladdpage"    path="/pjpy/zgms/kkjl/add.jsp"/>
+			<forward name="kkjlmodipage"   path="/pjpy/zgms/kkjl/update.jsp"/>
+			<forward name="cjwhpage"       path="/pjpy/zgms/cjpage.jsp"/>
+			<forward name="cjview"         path="/pjpy/zgms/cjview.jsp"  />
+			<forward name="tydbpage"       path="/pjpy/zgms/tydbpage.jsp"/>
+			<forward name="tydbmodipage"   path="/pjpy/zgms/tydbmodipage.jsp"></forward>
+			<forward name="yybysprint"   path="/pjpy/zgms/yybysprint.jsp"></forward>
+			<forward name="ryprint"   path="/pjpy/zgms/sybys.jsp"></forward>
+</action>
+
+	</action-mappings>
+
+	<message-resources key="pjpyshcbys" parameter="xgxt.pjpy.shcbys.pjpyshcbys" />
+
+</struts-config>

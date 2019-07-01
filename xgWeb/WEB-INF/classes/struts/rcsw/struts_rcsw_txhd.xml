@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -团学活动维护-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="TxhdDmwhForm" type="com.zfsoft.xgxt.rcsw.txhd.dmwh.TxhdDmwhForm" />
+    	<form-bean name="TxhdXmszForm" type="com.zfsoft.xgxt.rcsw.txhd.xmsz.TxhdXmszForm" />
+    	<form-bean name="xmxxJcszForm" type="com.zfsoft.xgxt.rcsw.txhd.xmxxjcsz.XmxxJcszForm" />
+    	<form-bean name="xmxxsqForm" type="com.zfsoft.xgxt.rcsw.txhd.xmxxsq.XmxxsqForm" />
+		<form-bean name="xmxxshForm" type="com.zfsoft.xgxt.rcsw.txhd.xmxxsh.XmxxshForm" />
+    	<form-bean name="TxhdXmsqJsForm" type="com.zfsoft.xgxt.rcsw.txhd.xmsq.js.TxhdXmsqJsForm" />
+    	<form-bean name="TxhdXmjgForm" type="com.zfsoft.xgxt.rcsw.txhd.xmjg.TxhdXmjgForm"/>
+    	<form-bean name="TxhdXssqForm" type="com.zfsoft.xgxt.rcsw.txhd.xmsq.xs.TxhdXssqForm"/>
+    	<form-bean name="TxhdXmShForm" type="com.zfsoft.xgxt.rcsw.txhd.xmsh.TxhdXmShForm"/>
+    	<form-bean name="hdkhForm" type="com.zfsoft.xgxt.rcsw.txhd.hdkhgl.hdkhForm"/>
+    	<form-bean name="xscxqybForm" type="com.zfsoft.xgxt.rcsw.xscxqyb.XscxqybForm"/>	<!-- 学生处学情月报 -->
+
+    	
+	</form-beans>
+	<action-mappings>
+		<action path="/rcsw_txhd_dmwh" forward="/rcsw_txhd.do?method=lbdmList"/>	<!-- 团学活动代码维护 -->
+		<action path="/rcsw_txhd_xmsz" forward="/rcsw_txhd_xmszCx.do?method=xmszCx"/>	<!-- 团学活动项目设置 -->
+		<action path="/rcsw_txhd_xmsq_js" forward="/rcsw_txhd_xmsq.do?method=viewJssqList"/>	<!-- 团学活动项目申请（教师） -->
+		<action path="/rcsw_txhd_xmsq_xs" forward="/rcsw_txhd_xs_xmsq.do?method=xmsqCx"/>	<!-- 团学活动项目申请（学生） -->
+		<action path="/rcsw_txhd_xmsh" forward="/rcsw_txhd_sh.do?method=list"/>	<!-- 团学活动项目审核 -->
+		<action path="/rcsw_txhd_xmjgbase" forward="/rcsw_txhd_xmjg.do?method=xmjgList"/>	<!-- 团学活动项目结果 -->
+		
+		<action path="/rcsw_txhd_sh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.txhd.xmsh.TxhdXmShAction"
+    			name="TxhdXmShForm"         
+    			parameter="method">	
+    		<forward name="txhdshlist" path="/xsgzgl/rcsw/xthd/xmsh/txhdshlist.jsp"></forward>
+    		<forward name="txhdshshow" path="/xsgzgl/rcsw/xthd/xmsh/txhdshshow.jsp"></forward>
+    		<forward name="txhdshsh" path="/xsgzgl/rcsw/xthd/xmsh/txhdshsh.jsp"></forward>
+		</action>
+		
+		<action path="/rcsw_txhd" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.txhd.dmwh.TxhdDmwhAction"
+    			name="TxhdDmwhForm"         
+    			parameter="method">	
+    		<forward name="lbdmList" path="/xsgzgl/rcsw/xthd/dmwh/lbdmList.jsp"></forward>
+    		<forward name="addLbdm" path="/xsgzgl/rcsw/xthd/dmwh/addLbdm.jsp"></forward>
+    		<forward name="updateLbdm" path="/xsgzgl/rcsw/xthd/dmwh/updateLbdm.jsp"></forward>
+    		<forward name="addHdgg" path="/xsgzgl/rcsw/xthd/dmwh/addHdgg.jsp"></forward>
+    		<forward name="updateHdgg" path="/xsgzgl/rcsw/xthd/dmwh/updateHdgg.jsp"></forward>
+		</action>
+		
+		
+		
+		<action path="/rcsw_txhd_xmszCx" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.txhd.xmsz.TxhdXmszAction"
+    			name="TxhdXmszForm"         
+    			parameter="method">	
+    		<forward name="xmszCx" path="/xsgzgl/rcsw/xthd/xmsz/xmszCx.jsp"></forward>
+    		<forward name="xmszZj" path="/xsgzgl/rcsw/xthd/xmsz/xmszZj.jsp"></forward>
+    		<forward name="xmszXg" path="/xsgzgl/rcsw/xthd/xmsz/xmszXg.jsp"></forward>
+    		<forward name="xmszCk" path="/xsgzgl/rcsw/xthd/xmsz/xmszCk.jsp"></forward>
+    		<forward name="xmszSjkg" path="/xsgzgl/rcsw/xthd/xmsz/xmszSjkg.jsp"></forward>
+    		<forward name="copexmxx" path="/xsgzgl/rcsw/xthd/xmsz/copexmxx.jsp"></forward>
+		</action>
+		
+		<action path="/rcsw_txhd_jcsz" forward="/rcsw_txhd_jcszgl.do?method=xmxxJcsz"/>	<!-- 项目基础设置 -->
+		<action path="/rcsw_txhd_jcszgl" 
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.txhd.xmxxjcsz.XmxxJcszAction" 
+					name="xmxxJcszForm"         
+					parameter="method">	
+				<forward name="xmxxJcsz" path="/xsgzgl/rcsw/xthd/xmxxjcsz/xmxxJcsz.jsp"></forward>
+		</action>
+
+		<action path="/rcsw_txhd_xmxxsq" forward="/rcsw_txhd_xmxxsqgl.do?method=xmxxsqManage"/>	<!-- 项目申请 -->
+		<action path="/rcsw_txhd_xmxxsqgl" 
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.txhd.xmxxsq.XmxxsqAction" 
+					name="xmxxsqForm"   
+					parameter="method">	
+				<forward name="xmxxsqManage" path="/xsgzgl/rcsw/xthd/xmxxsq/xmxxsqManage.jsp"></forward>
+				<forward name="addXmxxsq" path="/xsgzgl/rcsw/xthd/xmxxsq/addXmxxsq.jsp"></forward>
+				<forward name="updateXmxxsq" path="/xsgzgl/rcsw/xthd/xmxxsq/updateXmxxsq.jsp"></forward>
+				<forward name="viewXmxxsq" path="/xsgzgl/rcsw/xthd/xmxxsq/viewXmxxsq.jsp"></forward>
+		</action>
+		
+		<action path="/rcsw_txhd_xmxxsh" forward="/rcsw_txhd_xmxxshgl.do?method=xmxxshManage"/>	<!-- 项目审核 -->
+		<action path="/rcsw_txhd_xmxxshgl" 
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.txhd.xmxxsh.XmxxshAction" 
+					name="xmxxshForm"   
+					parameter="method">	
+				<forward name="xmxxshManage" path="/xsgzgl/rcsw/xthd/xmxxsh/xmxxshManage.jsp"></forward>
+				<forward name="xmxxshDgsh" path="/xsgzgl/rcsw/xthd/xmxxsh/xmxxshDgsh.jsp"></forward>
+				<forward name="xmxxshPlsh" path="/xsgzgl/rcsw/xthd/xmxxsh/xmxxshPlsh.jsp"></forward>
+		</action>
+		
+		<action path="/rcsw_txhd_xmsq" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.txhd.xmsq.js.TxhdXmsqJsAction"
+    			name="TxhdXmsqJsForm"         
+    			parameter="method">	
+    		<forward name="viewJssqList" path="/xsgzgl/rcsw/xthd/xmsqjs/viewJssqList.jsp"></forward>
+    		<forward name="txhdXmsq" path="/xsgzgl/rcsw/xthd/xmsqjs/txhdXmsq.jsp"></forward>
+    		<forward name="getXmsqInfo" path="/xsgzgl/rcsw/xthd/xmsqjs/getXmsqInfo.jsp"></forward>
+    		<forward name="updateXmsq" path="/xsgzgl/rcsw/xthd/xmsqjs/updateXmsq.jsp"></forward>
+    		<forward name="viewXmsq" path="/xsgzgl/rcsw/xthd/xmsqjs/viewXmsq.jsp"></forward>
+		</action>
+		
+		
+		<action path="/rcsw_txhd_xmjg" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.txhd.xmjg.TxhdXmjgAction"
+    			name="TxhdXmjgForm"         
+    			parameter="method">	
+    		<forward name="xmjgCx" path="/xsgzgl/rcsw/xthd/xmjg/xmjgList.jsp"></forward>
+    		<forward name="add" path="/xsgzgl/rcsw/xthd/xmjg/add.jsp"></forward>
+    		<forward name="update" path="/xsgzgl/rcsw/xthd/xmjg/update.jsp"></forward>
+    		<forward name="show" path="/xsgzgl/rcsw/xthd/xmjg/show.jsp"></forward>
+		</action>
+		<action path="/rcsw_txhd_xs_xmsq" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.txhd.xmsq.xs.TxhdXssqAction"
+    			name="TxhdXssqForm"         
+    			parameter="method">	
+    		<forward name="xmsqCk" path="/xsgzgl/rcsw/xthd/xmsq/xmsqCk.jsp"></forward>
+    		<forward name="update" path="/xsgzgl/rcsw/xthd/xmsq/xmsqXg.jsp"></forward>
+    		<forward name="xmsqXs" path="/xsgzgl/rcsw/xthd/xmsq/xmsqXs.jsp"></forward>
+    		<forward name="xmsq" path="/xsgzgl/rcsw/xthd/xmsq/xmsq.jsp"></forward>
+		</action>
+		
+		<!-- 活动考核管理 -->
+		<action path="/rcsw_txhd_hdkhgl" forward="/txhd_hdkhgl.do?method=getHdkhList"/>	
+		<action path="/txhd_hdkhgl" 
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.txhd.hdkhgl.HdkhglAction" 
+					name="hdkhForm"         
+					parameter="method">	
+				<forward name="getHdkhList" path="/xsgzgl/rcsw/xthd/hdkhgl/getHdkhgllist.jsp"></forward>
+				<forward name="khcjPd" path="/xsgzgl/rcsw/xthd/hdkhgl/khcjPd.jsp"></forward>
+				<forward name="view" path="/xsgzgl/rcsw/xthd/hdkhgl/view.jsp"></forward>
+		</action>
+		
+		<!-- 学生处学情月报 !-->
+		<action path="/rcsw_xscxqyb" forward="/rcsw_xscxqybgl.do?method=XscxqybList"/>
+		<action path="/rcsw_xscxqybgl" 
+					scope="request"
+					type="com.zfsoft.xgxt.rcsw.xscxqyb.XscxqybAction" 
+					name="xscxqybForm"         
+					parameter="method">	
+				<forward name="XscxqybList" path="/xsgzgl/rcsw/xscxqyb/XscxqybList.jsp"></forward>		<!-- 查询 -->
+				<forward name="XscxqybAdd" path="/xsgzgl/rcsw/xscxqyb/XscxqybAdd.jsp"></forward>		<!-- 填写 -->
+				<forward name="XscxqybUpdate" path="/xsgzgl/rcsw/xscxqyb/XscxqybUpdate.jsp"></forward>	<!-- 修改 -->
+				<forward name="XscxqybView" path="/xsgzgl/rcsw/xscxqyb/XscxqybView.jsp"></forward>		<!-- 查看 -->
+		</action>
+	</action-mappings>
+</struts-config>

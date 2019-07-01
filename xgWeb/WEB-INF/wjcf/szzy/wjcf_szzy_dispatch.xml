@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到深圳职院的配置文件,wjcf_szzy.xml    -->
+		<action path="/szzykqxxwhdefault"
+			forward="/szzykqxxwh.do?method=szzykqxxwhDefault">
+		</action>
+		<action path="/szzykqxxquery"
+			forward="/szzykqxxwh.do?method=szzykqxxQuery">
+		</action>
+		<action path="/szzyaddkqxx" forward="/szzykqxxwh.do?method=szzyAddkqxx">
+		</action>
+		<action path="/szzysavekqxx" forward="/szzykqxxwh.do?method=szzySavekqxx"></action>
+		<action path="/szzykqccdefault" forward="/szzykqxxwh.do?method=szzyKqccDefault"></action>
+		<action path="/szzykqxxtj" forward="/szzykqxxwh.do?method=szzyKqxxTj"></action>
+		<action path="/szzykqxxview" forward="/szzykqxxwh.do?method=szzyKqxxView"></action>
+	</action-mappings>
+</struts-config>

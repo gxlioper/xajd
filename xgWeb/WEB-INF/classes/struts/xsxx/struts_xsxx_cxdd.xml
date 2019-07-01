@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <!--表单配置-->
+	<form-beans>
+		<form-bean name="cxddCsszForm" type="com.zfsoft.xgxt.xsxx.cxdd.cssz.CsszForm"></form-bean>
+		<form-bean name="CxddJgForm" type="com.zfsoft.xgxt.xsxx.cxdd.jg.CxddJgForm"></form-bean>
+		<form-bean name="CxddSbForm" type="com.zfsoft.xgxt.xsxx.cxdd.sb.CxddSbForm"></form-bean>
+		<form-bean name="CxddShForm" type="com.zfsoft.xgxt.xsxx.cxdd.sh.CxddShForm"></form-bean>
+	</form-beans>
+	<!--path -->
+	<action-mappings>
+	    <!--参数设置-->
+		<action path="/xsxx_cxdd_cssz" forward="/cxdd_cssz.do?method=getCsszList"/>
+		<!--评语上报-->
+		<action path="/xsxx_cxdd_pysb" forward="/cxdd_pysb.do?method=getPysbList" />
+		<!--评语审核-->
+		<action path="/xsxx_cxdd_pysh" forward="/cxdd_pysh.do?method=getPyshList"/>
+		<!--评语结果-->
+		<action path="/xsxx_cxdd_pyjg" forward="/cxdd_pyjg.do?method=getPyjgList"/>
+		
+		 <!--参数设置-->
+		<action path="/cxdd_cssz" scope="request"
+		 type="com.zfsoft.xgxt.xsxx.cxdd.cssz.CsszAction" name="cxddCsszForm" parameter="method">
+		  <forward name="cssz" path="/xsxx/cxdd/cssz/CxddCssz.jsp"/>
+		</action>
+		<!--评语上报-->
+		<action path="/cxdd_pysb" scope="request"
+		 type="com.zfsoft.xgxt.xsxx.cxdd.sb.CxddSbAction" name="CxddSbForm" parameter="method">
+		 	 <forward name="cx" path="/xsxx/cxdd/sb/cxddsbcx.jsp"/>
+		 	 <forward name="xscx" path="/xsxx/cxdd/sb/xssbxxcx.jsp"/>
+		 	 <forward name="ck" path="/xsxx/cxdd/sb/ckcxdd.jsp"/>
+		</action>
+		<!--评语审核-->
+		<action path="/cxdd_pysh" scope="request"
+		 type="com.zfsoft.xgxt.xsxx.cxdd.sh.CxddShAction" name="CxddShForm" parameter="method">
+		 	 <forward name="cx" path="/xsxx/cxdd/sh/cxddshcx.jsp"/>
+		 	 <forward name="dgsh" path="/xsxx/cxdd/sh/dgsh.jsp"/>
+		 	 <forward name="plsh" path="/xsxx/cxdd/sh/plsh.jsp"/>
+		</action>
+		<!--评语结果-->
+		<action path="/cxdd_pyjg" scope="request"
+		 type="com.zfsoft.xgxt.xsxx.cxdd.jg.CxddJgAction" name="CxddJgForm" parameter="method">
+		  <forward name="cx" path="/xsxx/cxdd/jg/getcxjgcxlist.jsp"/>
+		  <forward name="add" path="/xsxx/cxdd/jg/addcxjg.jsp"/>
+		  <forward name="edit" path="/xsxx/cxdd/jg/editcxjg.jsp"/>
+		  <forward name="view" path="/xsxx/cxdd/jg/viewcxjg.jsp"/>
+		   <forward name="kxxxsz" path="/xsxx/cxdd/jg/kxxxsz.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

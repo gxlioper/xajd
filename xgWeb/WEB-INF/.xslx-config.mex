@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/listingQuery.do" location="350,350" dimension="208,84" />
+  <StrutsActivity path="/leave_check.do" location="350,50" dimension="208,84" />
+  <StrutsActivity path="/leaveExpDate.do" location="950,50" dimension="208,84" />
+  <StrutsActivity path="/xdzsj.do" location="650,350" dimension="208,84" />
+  <StrutsActivity path="/xslx/search_info.jsp" location="950,250" dimension="166,48" />
+  <StrutsActivity path="/errMsg.jsp" location="326,184" dimension="106,48" />
+  <StrutsActivity path="/xslx/leave_check.jsp" location="50,350" dimension="166,48" />
+  <StrutsActivity path="/errmsg.jsp" location="650,150" dimension="106,48" />
+  <StrutsActivity path="/xslx/xdzsj.jsp" location="50,450" dimension="130,48" />
+  <StrutsActivity path="/xslx/xdzsj_info.jsp" location="950,350" dimension="160,48" />
+  <StrutsActivity path="/shgc/stu_info/student_conf.jsp" location="0,184" dimension="226,48" />
+  <StrutsActivity path="" location="650,250" dimension="40,48" />
+  <StrutsActivity path="/bybjfp.do" location="950,450" dimension="208,84" />
+  <StrutsActivity path="/xslx/xslx_bybj.jsp" location="50,550" dimension="154,48" />
+  <StrutsTransition id="/leave_check.do,failure,/errmsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="454,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/leaveExpDate.do,failure,/errmsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="703,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/listingQuery.do,failure,/errMsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="417,350" />
+      <AbsolutePoint location="417,232" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bybjfp.do,success,/xslx/xdzsj_info.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1054,450" />
+      <AbsolutePoint location="1054,398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/listingQuery.do,success,/xslx/search_info.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="454,350" />
+      <AbsolutePoint location="454,313" />
+      <AbsolutePoint location="1033,313" />
+      <AbsolutePoint location="1033,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/leaveExpDate.do,success,/xslx/search_info.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1033,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xdzsj.do,success,/xslx/xdzsj_info.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="858,383" />
+      <AbsolutePoint location="950,383" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xdzsj.do,failure,/errmsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="711,350" />
+      <AbsolutePoint location="711,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bybjfp.do,success,/xslx/xslx_bybj.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1054,534" />
+      <AbsolutePoint location="1054,574" />
+      <AbsolutePoint location="204,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bybjfp.do,saveSuccess,/xslx/xdzsj.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,483" />
+      <AbsolutePoint location="180,483" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bybjfp.do,failure,/errmsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1131,450" />
+      <AbsolutePoint location="1131,174" />
+      <AbsolutePoint location="756,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/leave_check.do,success,/xslx/leave_check.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="133,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xdzsj.do,saveSuccess,/xslx/xdzsj.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="754,392" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

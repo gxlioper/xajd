@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyNbzyActionForm" type="xgxt.pjpy.nbzy.PjpyNbzyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpynbzywh"
+				type="xgxt.pjpy.nbzy.PjpyNbzyAction"
+				name="pjpyNbzyActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="xjbjprint"    path="/pjpy/nbzy/xjbjprint.jsp" />
+			<forward name="zhszcppage"   path="/pjpy/nbzy/zhszcp/zhszcppage.jsp"/>
+			<forward name="szfadd"       path="/pjpy/nbzy/zhszcp/szfaddpage.jsp"/>
+			<forward name="zysyfmodipage" path="/pjpy/nbzy/zhszcp/szfmodipage.jsp"/>
+			<forward name="jxjsqpage"    path="/pjpy/nbzy/jxj/sq.jsp"/>
+			<forward name="sqqrypage"    path="/pjpy/nbzy/jxj/sqqry.jsp"/>
+			<forward name="modipage"     path="/pjpy/nbzy/jxj/update.jsp"/>
+			<forward name="jxjshpage"    path="/pjpy/nbzy/jxj/sh.jsp"/>
+			<forward name="jxjshonepage" path="/pjpy/nbzy/jxj/shone.jsp"/>
+			<forward name="tjszpage"     path="/pjpy/nbzy/tjszpage.jsp"/>
+			<forward name="jxjprint"     path="/pjpy/nbzy/jxjprint.jsp"/>
+		</action>
+
+	</action-mappings>
+
+</struts-config>

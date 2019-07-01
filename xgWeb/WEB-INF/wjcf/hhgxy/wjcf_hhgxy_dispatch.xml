@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到淮海工学院的配置文件,wjcf_hhgxy.xml    -->
+		<action path="/wjcf_hhgxy_cfbprint"     forward="/wjcfhhgxywh.do?method=wjcfbPrint"></action> <!-- 预先告知书打印 -->
+		<action path="/wjcf_hhgxy_jdprint"      forward="/wjcfhhgxywh.do?method=jdPrint"></action><!-- 决定书打印 -->
+		<action path="/wjcf_hhgxy_ssprint"      forward="/wjcfhhgxywh.do?method=ssPrint"></action><!-- 申诉受理通知书 -->
+		<action path="/wjcf_hhgxy_ssjdprint"    forward="/wjcfhhgxywh.do?method=ssjdPrint"></action><!-- 申诉决定通知书 -->
+	</action-mappings>
+</struts-config>

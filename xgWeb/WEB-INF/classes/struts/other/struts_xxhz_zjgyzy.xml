@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+   	<form-bean name="zjgyzyXxhzForm" type="xgxt.other.zjgyzy.ZjgyzyXxhzForm" />
+	</form-beans>
+	
+	<action-mappings>
+	
+	<action path="/xsrsPrint" forward="/zjgyzyXxhz.do?method=xsrsManage"/> <!-- 学生人数一览 -->
+	
+	<action path="/xszsPrint" forward="/zjgyzyXxhz.do?method=xszsManage"/> <!-- 学生住宿一览 -->
+	
+	<action path="/xsdaPrint" forward="/zjgyzyXxhz.do?method=xsdaManage"/> <!-- 学生档案一览 -->
+	
+	<action path="/fdyPrint" forward="/zjgyzyXxhz.do?method=fdyManage"/> <!-- 辅导员信息一览 -->
+	
+	<action path="/prqkPrint" forward="/zjgyzyXxhz.do?method=prqkManage"/> <!-- 辅导员班主任聘任信息一览 -->
+	
+	<action path="/wjcfPrint" forward="/zjgyzyXxhz.do?method=wjcfManage"/> <!-- 违纪处分信息一览 -->
+	
+	
+    <action path="/zjgyzyXxhz" 
+    		type="xgxt.other.zjgyzy.ZjgyzyXxhzAction"
+    		parameter="method"
+    		name="zjgyzyXxhzForm"
+    		scope="request">
+		<forward name="xsrsManage" path="/other/zjgyzy/xsrsManage.jsp"/><!-- 学生人数一览 -->
+		<forward name="xszsManage" path="/other/zjgyzy/xszsManage.jsp"/><!-- 学生住宿一览 -->
+		<forward name="xsdaManage" path="/other/zjgyzy/xsdaManage.jsp"/><!-- 学生档案一览 -->
+		<forward name="fdyManage" path="/other/zjgyzy/fdyManage.jsp"/><!-- 辅导员信息一览 -->
+		<forward name="prqkManage" path="/other/zjgyzy/prqkManage.jsp"/><!-- 辅导员班主任聘任信息一览 -->
+		<forward name="wjcfManage" path="/other/zjgyzy/wjcfManage.jsp"/><!-- 违纪处分信息一览 -->
+	</action>
+	
+	<action path="/zjgyzyXxhz_ajax" 
+    		type="xgxt.other.zjgyzy.ZjgyzyXxhzAjax"
+    		parameter="method"
+    		name="zjgyzyXxhzForm"
+    		scope="request">
+		
+	</action>
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyAhjgActionForm" type="xgxt.pjpy.ahjg.PjpyAhjgActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpyahjgwh"
+				type="xgxt.pjpy.ahjg.PjpyAhjgAction"
+				name="pjpyAhjgActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="pjpyahjgxscjdefault"    path="/pjpy/ahjg/pjpy_ahjg_xscjqry.jsp" />
+			<forward name="pjpyahjgrysqdefault"    path="/pjpy/ahjg/pjpy_ahjg_rysqdefault.jsp"></forward>
+			<forward name="pjpyahjgxsjtsq"         path="/pjpy/ahjg/pjpy_ahjg_xsjtsq.jsp"></forward>
+			<forward name="bjbkldefault"           path="/pjpy/ahjg/bjbkldefault.jsp"></forward>
+			<forward name="zccqldefault"           path="/pjpy/ahjg/zccqldefault.jsp"></forward>
+			<forward name="bjbkladd"               path="/pjpy/ahjg/bjbkladd.jsp"></forward>
+			<forward name="bjbklmodi"              path="/pjpy/ahjg/bjbklmodi.jsp"></forward>
+			<forward name="zccqladd"               path="/pjpy/ahjg/zccqladd.jsp"></forward>
+			<forward name="zccqlview"              path="/pjpy/ahjg/zccqlview.jsp"></forward>
+			<forward name="rychshdefault"          path="/pjpy/ahjg/rychshdefault.jsp"></forward>
+			<forward name="xjjtshdefault"          path="/pjpy/ahjg/xjjtshdefault.jsp"></forward>
+			<forward name="xjjtshview"             path="/pjpy/ahjg/xjjtshview.jsp"></forward>
+			<forward name="rychjgcxmr"             path="/pjpy/ahjg/rychjgcxmr.jsp"></forward>
+			<forward name="xjjtjgcx"               path="/pjpy/ahjg/xjjtjgcx.jsp"></forward>
+			<forward name="xjbjmodiview"           path="/pjpy/ahjg/xjbjmodiview.jsp"></forward>
+			<forward name="xjjtpbfbb"              path="/pjpy/ahjg/xjjtpbfbb.jsp"></forward>
+			<forward name="xjgrfbb"                path="/pjpy/ahjg/xjgrfbb.jsp"></forward>
+			<forward name="xjgrshdefault"          path="/pjpy/ahjg/xjgrshdefault.jsp"></forward>
+			<forward name="xjgrshone"              path="/pjpy/ahjg/xjgrshone.jsp"></forward>
+			<forward name="xxjsdefault"            path="/pjpy/ahjg/xxjsdefault.jsp"></forward>
+			<forward name="xxjsadd"                path="/pjpy/ahjg/xxjsadd.jsp"></forward>
+			<forward name="xxjsmodi"               path="/pjpy/ahjg/xxjsmodi.jsp"></forward>
+			<forward name="jxjzsprint"             path="/pjpy/ahjg/jxjzsprint.jsp"></forward>
+			<forward name="jxjzsprintmore"         path="/pjpy/ahjg/jxjzsprintmore.jsp"></forward>
+			<forward name="tjszdefault"            path="/pjpy/ahjg/cssz/tjszdefault.jsp"></forward>
+			<forward name="xscjb"                  path="/pjpy/ahjg/xscjb.jsp"></forward>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="pjpyahjg" parameter="xgxt.pjpy.ahjg.pjpyahjg" />
+
+</struts-config>

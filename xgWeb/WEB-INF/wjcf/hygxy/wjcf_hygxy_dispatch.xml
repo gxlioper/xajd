@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到淮阴工学院的配置文件,wjcf_hygxy.xml    -->
+		<action path="/wjcf_hygxy_gzjyjl"     forward="/wjcfhygxywh.do?method=gzjyjlDefault"></action> <!-- 跟踪教育记录默认页面 -->
+		<action path="/hygxy_gzjyqry"         forward="/wjcfhygxywh.do?method=gzjyQry"></action><!-- 跟踪教育查询 -->
+		<action path="/wjcf_hygxy_gzjyadd"    forward="/wjcfhygxywh.do?method=gzjyAdd"></action><!-- 跟踪教育单个增加 -->
+		<action path="/wjcf_hygxy_gzjysave"   forward="/wjcfhygxywh.do?method=gzjySave"></action><!-- 跟踪教育单个保存 -->
+		<action path="/hygxy_gzjydel"         forward="/wjcfhygxywh.do?method=gzjyDelete"></action><!-- 跟踪教育批量删除 -->
+		<action path="/hygxy_gzjymodi"        forward="/wjcfhygxywh.do?method=gzjyView"></action><!-- 跟踪教育单个修改显示 -->
+		<action path="/hygxy_gzjymodisave"    forward="/wjcfhygxywh.do?method=gzjyUpdate"></action><!-- 跟踪教育单个修改保存 -->
+		<action path="/wjcf_hhgxy_plfw"       forward="/wjcfhygxywh.do?method=plfw"/>
+		<action path="/wjcf_hygxy_wyhsl"      forward="/wjcfhygxywh.do?method=wyhsl"/>
+		<action path="/hygxy_wyhslone"        forward="/wjcfhygxywh.do?method=wyhslone"/>
+		<action path="/wjcf_hygxy_plsl"       forward="/wjcfhygxywh.do?method=plsl"/>
+	</action-mappings>
+</struts-config>

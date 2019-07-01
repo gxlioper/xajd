@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="ycsfPjpyForm" type="xgxt.pjpy.ycsf.YcsfPjpyForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/ycsf_zhszcpfwh" 	   forward="/ycsfPjpy.do?method=zhszcpfwh"/> <!-- 综合素质测评分维护 -->
+	    <!-- 实际路径 -->	
+		<action path="/ycsfPjpy"
+				type="xgxt.pjpy.ycsf.YcsfPjpyAction"
+				name="ycsfPjpyForm"
+				parameter="method"
+				scope="request">
+		<!-- 条件设置 -->
+		<forward name="zhszcpfwh" path="/pjpy/ycsf/zhszcp/zhszcpfwh.jsp" />														
+		</action>
+	</action-mappings>
+	<message-resources key="zjlgPjpy" parameter="xgxt.pjpy.zjlg.zjlgPjpy" />
+
+</struts-config>

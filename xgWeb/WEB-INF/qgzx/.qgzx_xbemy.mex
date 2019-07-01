@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/xbemyQgzx.do" location="50,50" dimension="232,84" />
+  <StrutsActivity path="/qgzx/xbemy/fieldManager.jsp" location="950,50" dimension="208,48" />
+  <StrutsActivity path="/qgzx/xbemy/filed_info.jsp" location="650,150" dimension="196,48" />
+  <StrutsActivity path="/errMsg.jsp" location="350,50" dimension="106,48" />
+  <StrutsActivity path="/fieldManager.jsp" location="650,50" dimension="142,48" />
+  <StrutsActivity path="/qgzx/xbemy/fiel_info.jsp" location="350,150" dimension="190,48" />
+  <StrutsActivity path="/qgzx/xbemy/reportManager.jsp" location="950,150" dimension="214,48" />
+  <StrutsActivity path="/qgzx/xbemy/report_info.jsp" location="50,250" dimension="202,48" />
+  <StrutsActivity path="/qgzx/xbemy/reportReport.jsp" location="350,250" dimension="208,48" />
+  <StrutsActivity path="/qgzx/xbemy/printReport.jsp" />
+  <StrutsTransition id="/xbemyQgzx.do,print_gwxx,/qgzx/xbemy/reportReport.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="267,134" />
+      <AbsolutePoint location="267,274" />
+      <AbsolutePoint location="350,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xbemyQgzx.do,report_manager,/qgzx/xbemy/reportManager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,113" />
+      <AbsolutePoint location="1057,113" />
+      <AbsolutePoint location="1057,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xbemyQgzx.do,false,/errMsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,83" />
+      <AbsolutePoint location="350,83" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xbemyQgzx.do,field_manager,/qgzx/xbemy/fieldManager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xbemyQgzx.do,print_gwxx,/qgzx/xbemy/printReport.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xbemyQgzx.do,show_report_info,/qgzx/xbemy/report_info.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,134" />
+      <AbsolutePoint location="166,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xbemyQgzx.do,show_file_info,/qgzx/xbemy/filed_info.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xbemyQgzx.do,show_report_info,/qgzx/xbemy/filed_info.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,134" />
+      <AbsolutePoint location="166,273" />
+      <AbsolutePoint location="748,273" />
+      <AbsolutePoint location="748,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

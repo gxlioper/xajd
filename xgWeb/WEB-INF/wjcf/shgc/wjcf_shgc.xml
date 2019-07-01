@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfShgcActionForm" type="xgxt.wjcf.shgc.WjcfShgcActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/shgcwjcfwh"
+				type="xgxt.wjcf.shgc.WjcfShgcAction"
+				name="wjcfShgcActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="shgcwjcfxysb" path="/wjcf/shgc/wjcf_shgc_xysb.jsp" />
+			<forward name="shgcxxsh"     path="/wjcf/shgc/wjcf_shgc_xxsh.jsp"></forward>
+			<forward name="shgcxxshone"  path="/wjcf/shgc/wjcf_shgc_xxshone.jsp"></forward>
+			<forward name="wjcfysbprint" path="/wjcf/zzsf/wjcf_shgc_xswjcfqkb.jsp"></forward>
+			<forward name="wjcfrqwhwh"   path="/wjcf/shgc/wjcf_shgc_wjcfrqwhwh.jsp"></forward>
+			<forward name="wjcfrqwhsh"   path="/wjcf/shgc/wjcf_shgc_wjcfrqwhsh.jsp"></forward>
+			<forward name="wjcfkszb"     path="/wjcf/shgc/wjcf_shgc_wjcfkszb.jsp"></forward>
+			<forward name="jygzprint"    path="/wjcf/zzsf/shgc_wjcf_bb_jygzb.jsp"></forward>
+			<forward name="wtgwjcf"      path="/wjcf/shgc/shgc_wjcf_wtgwjcf.jsp"></forward>
+			<forward name="shsldefault"  path="/wjcf/shgc/shgc_wjcf_shsldefault.jsp"></forward>
+			<forward name="shjddefault"  path="/wjcf/shgc/shgc_wjcf_shjddefault.jsp"></forward>
+			<forward name="kswjpage"     path="/wjcf/shgc/wjcf_shgc_kswjpage.jsp"></forward>
+			<forward name="kswjadd"      path="/wjcf/shgc/kswjadd.jsp"></forward>
+			<forward name="kswjmodipage" path="/wjcf/shgc/kswjmodipage.jsp"></forward>
+			<forward name="kswjgzjypage" path="/wjcf/shgc/wjcf_kswjgzjypage.jsp"></forward>
+			<forward name="kswjgzjyadd"  path="/wjcf/shgc/wjcf_kwwjgzjyaddpage.jsp"></forward>
+			<forward name="cfhbxpage"    path="/wjcf/shgc/wjcf_kswjcfhbx.jsp"></forward>
+			<forward name="cfbgdpage"    path="/wjcf/shgc/wjcf_kswjbgdpage.jsp"></forward>
+			<forward name="cfbxaddpage"  path="/wjcf/shgc/wjcf_kswjcfbxadd.jsp"></forward>
+			<forward name="cfbxmodipage" path="/wjcf/shgc/wjcf_kswjcfbxmodi.jsp"></forward>
+			<forward name="cfbgdaddpage"    path="/wjcf/shgc/wjcf_kswjbgdadd.jsp"></forward>
+			<forward name="bgdmodipage"  path="/wjcf/shgc/wjcf_kswjbgdmodi.jsp"></forward>
+			<forward name="kswjprint"    path="/wjcf/zzsf/wjcf_shgc_xswjcfqkb.jsp"></forward>
+			<forward name="kswjcfbxprint" path="/wjcf/zzsf/wjcf_ztbhgl_print.jsp" />
+			<forward name="kswjbgdprint" path="/wjcf/shgc/kswjbgdprint.jsp"/>
+			<forward name="kswjjygzbprint" path="/wjcf/shgc/wjcf_kswjjygzbprint.jsp" />
+			<forward name="datasearch"   path="/data_search.do?act=discipInfo"/>
+			<forward name="wtgview"      path="/wjcf/shgc/wjcf_wtgview.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="wjcfshgc" parameter="xgxt.wjcf.shgc.wjcfshgc" />
+
+</struts-config>

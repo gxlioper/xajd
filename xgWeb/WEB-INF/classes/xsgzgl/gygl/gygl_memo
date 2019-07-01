@@ -1,0 +1,156 @@
+公寓管理模块说明：
+====================================================
+功能模块说明
+====================================================
+【情况一】
+管理层次为两层，学校将床位分配至学院，学院安排学生入住
+----------------------------------------------------
+参数设置
+	操纵时间设置【学校管理员】
+房源管理
+	楼栋管理【学校管理员】
+	寝室管理【学校管理员】
+	床位管理【学校管理员】
+住宿管理
+	床位分配管理【学校管理员】
+	床位入住管理【学院管理员】
+	住宿信息管理【公寓管理员】
+统计查询
+	公寓住宿统计【全部用户】
+	学生住宿查询【全部用户】
+	学生住宿统计【全部用户】
+	退宿信息查询【全部用户】
+====================================================
+
+执行以下语句后，公寓的权限分配需重新赋权
+/*************************************************************************************************************/
+/********************************************功能模块代码增加sql***********************************************/
+/*************************************************************************************************************/
+--初始化功能模块代码--
+delete from gnmkdmb where gnmkdm like 'N38%';
+commit;
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N38','公寓管理','','1','009','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N3800','参数设置','','1','','是','','');  
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380001','操作时间设置','gyglnew_cssz_sjsz.do','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N3801','房源管理','','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380101','楼栋信息管理','gyglnew_ldgl_ldgl.do','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380102','寝室信息管理','gyglnew_qsgl_qsgl.do','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380103','床位信息管理','gyglnew_cwgl_cwgl.do','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N3802','住宿管理','','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380201','床位分配管理','gyglnew_cwfpgl_cwfp.do','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380202','床位入住管理','gyglnew_cwrzgl_cwrz.do','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380203','住宿信息管理','gyglnew_zsxxgl_zsxxgl.do','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N3803','统计查询','','1','','是','','');  
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380301','公寓住宿情况统计','gyglnew_xxtj_xxtj.do','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380302','学生住宿情况统计','gyglnew_xszstj_xszstj.do','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380303','学生住宿信息查询','gyglnew_xszsgl_xszsgl.do','1','','是','','');
+insert into gnmkdmb(gnmkdm,gnmkmc,dyym,dxq,xssx,sfqy,gnbz,sfyc) values('N380304','学生退宿信息查询','gyglnew_tsgl_tsgl.do','1','','是','','');
+commit;
+--初始化超级管理员zf01权限--
+delete from yhqxb where yhm||gnmkdm like 'zf01N38%';
+commit;
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N38','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N3800','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380001','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N3801','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380101','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380102','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380103','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N3802','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380201','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380202','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380203','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N3803','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380301','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380302','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380303','1');
+insert into yhqxb (yhm,gnmkdm,dxq) values('zf01','N380304','1');
+commit;
+/*************************************************************************************************************/
+/********************************************高级查询配置语句sql***********************************************/
+/*************************************************************************************************************/
+--初始化高级查询语句--
+delete from xg_search_szb where path like 'gyglnew_%';
+commit;
+--操作时间设置
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cssz_sjsz.do','nj','年级','djcx','','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cssz_sjsz.do','xy','学院','djcx','xydm','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cssz_sjsz.do','sf','是否启用','djcx','sfqy','gygl_third','3');
+--楼栋信息管理
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_ldgl_ldgl.do','ld','楼栋','djcx','lddm','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_ldgl_ldgl.do','ldxb','楼栋性别','djcx','','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_ldgl_ldgl.do','lddm','楼栋代码','mhcx','lddm','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_ldgl_ldgl.do','ldmc','楼栋名称','mhcx','','gygl_third','2');
+--寝室信息管理
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_qsgl_qsgl.do','ld','楼栋','djcx','lddm','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_qsgl_qsgl.do','ch','层号','djcx','','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_qsgl_qsgl.do','qsh','寝室','djcx','','gygl_third','3');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_qsgl_qsgl.do','xb','寝室性别','djcx','qsxb','gygl_third','4');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_qsgl_qsgl.do','sf','是否含空床位','djcx','sfhkcw','gygl_third','5');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_qsgl_qsgl.do','ldmc','楼栋名称','mhcx','','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_qsgl_qsgl.do','qsh','寝室号','mhcx','','gygl_third','2');
+--床位信息管理
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','ld','楼栋','djcx','lddm','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','ch','层号','djcx','','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','qsh','寝室','djcx','','gygl_third','3');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','nj','年级','djcx','','gygl_third','4');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','xy','学院','djcx','xydm','gygl_third','5');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','xb','床位性别','djcx','qsxb','gygl_third','6');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','sf','床位是否保留','djcx','sfbl','gygl_third','7');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','sffp','床位是否分配','djcx','','gygl_third','8');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','sfrz','床位是否入住','djcx','','gygl_third','9');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','ldmc','楼栋名称','mhcx','','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','qsh','寝室号','mhcx','','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','xh','学号','mhcx','','gygl_third','3');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwgl_cwgl.do','xm','姓名','mhcx','','gygl_third','4');
+--床位分配管理
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwfpgl_cwfp.do','nj','年级','djcx','','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwfpgl_cwfp.do','xy','学院','djcx','xydm','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwfpgl_cwfp.do','xb','性别限定','djcx','','gygl_third','3');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwfpgl_cwfp.do','xymc','学院名称','mhcx','','gygl_third','1');
+--床位入住管理
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwrzgl_cwrz.do','nj','年级','djcx','','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwrzgl_cwrz.do','xy','学院','djcx','xydm','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwrzgl_cwrz.do','xb','性别限定','djcx','','gygl_third','3');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_cwrzgl_cwrz.do','xymc','学院名称','mhcx','','gygl_third','1');
+--住宿信息管理
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','ld','楼栋','djcx','lddm','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','ch','层号','djcx','','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','qsh','寝室','djcx','','gygl_third','3');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','nj','年级','djcx','','gygl_third','4');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','xy','学院','djcx','xydm','gygl_third','5');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','xb','床位性别','djcx','qsxb','gygl_third','6');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','sf','床位是否保留','djcx','sfbl','gygl_third','7');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','sffp','床位是否分配','djcx','','gygl_third','8');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','sfrz','床位是否入住','djcx','','gygl_third','9');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','ldmc','楼栋名称','mhcx','','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','qsh','寝室号','mhcx','','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','xh','学号','mhcx','','gygl_third','3');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_zsxxgl_zsxxgl.do','xm','姓名','mhcx','','gygl_third','4');
+--退宿信息查询
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_tsgl_tsgl.do','nj','年级','djcx','','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_tsgl_tsgl.do','xy','学院','djcx','xydm','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_tsgl_tsgl.do','xb','性别','djcx','','gygl_third','3');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_tsgl_tsgl.do','ld','楼栋','djcx','lddm','gygl_third','4');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_tsgl_tsgl.do','rzsj','入住时间','sjcx','','gygl_third','7');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_tsgl_tsgl.do','tssj','退宿时间','sjcx','','gygl_third','8');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_tsgl_tsgl.do','tsyy','退宿原因','djcx','','gygl_third','9');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_tsgl_tsgl.do','xh','学号','mhcx','','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_tsgl_tsgl.do','xm','姓名','mhcx','','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_tsgl_tsgl.do','qsh','寝室号','mhcx','','gygl_third','3');
+--学生住宿信息查询
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszsgl_xszsgl.do','ld','楼栋','djcx','lddm','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszsgl_xszsgl.do','ch','层号','djcx','','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszsgl_xszsgl.do','qsh','寝室','djcx','','gygl_third','3');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszsgl_xszsgl.do','nj','年级','djcx','','gygl_third','4');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszsgl_xszsgl.do','xy','学院','djcx','xydm','gygl_third','5');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszsgl_xszsgl.do','sf','是否住宿','djcx','sfzs','gygl_third','6');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszsgl_xszsgl.do','ldmc','楼栋名称','mhcx','','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszsgl_xszsgl.do','qsh','寝室号','mhcx','','gygl_third','2');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszsgl_xszsgl.do','xh','学号','mhcx','','gygl_third','3');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszsgl_xszsgl.do','xm','姓名','mhcx','','gygl_third','4');
+--学生住宿情况统计
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszstj_xszstj.do','nj','年级','djcx','','gygl_third','1');
+insert into xg_search_szb (path, tj, mc, lx, zd, ssmk, xssx) values ('gyglnew_xszstj_xszstj.do','xy','学院','djcx','xydm','gygl_third','2');
+commit;
+

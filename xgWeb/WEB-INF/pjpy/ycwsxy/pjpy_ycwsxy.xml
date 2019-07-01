@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyYcwsActionForm" type="xgxt.pjpy.ycwsxy.PjpyYcwsActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<!-- insert your path code -->
+		<action path="/pjpy_ycws_jxhjwh" 	   forward="/pjpyycwswh.do?method=jxhjWh"/>
+		<action path="/pjpy_ycws_addjxhjwh"    forward="/pjpyycwswh.do?method=addBjjxjx"/>
+		<action path="/pjpy_ycws_modijxhjwh"    forward="/pjpyycwswh.do?method=modiBjjxjx"/>
+        <!-- 实际路径 -->	
+		<action path="/pjpyycwswh"
+				type="xgxt.pjpy.ycwsxy.PjpyYcwsxyAction"
+				name="pjpyYcwsActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- insert your forward code -->	
+		<forward name="jxhjpage" path="/pjpy/ycwsxy/jxhj/default.jsp"></forward>
+		<forward name="addjxhjpage" path="/pjpy/ycwsxy/jxhj/add.jsp"/>
+		<forward name="modijxhjpage" path="/pjpy/ycwsxy/jxhj/update.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

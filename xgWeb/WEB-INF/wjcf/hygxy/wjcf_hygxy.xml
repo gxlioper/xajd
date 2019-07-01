@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfHygxyActionForm" type="xgxt.wjcf.hygxy.WjcfHygxyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/wjcfhygxywh"
+				type="xgxt.wjcf.hygxy.WjcfHygxyAction"
+				name="wjcfHygxyActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="gzjyjldefault"     path="/wjcf/hygxy/gzjygl/default.jsp" />
+			<forward name="gzjyadd"           path="/wjcf/hygxy/gzjygl/add.jsp"></forward>
+			<forward name="gzjyview"          path="/wjcf/hygxy/gzjygl/update.jsp"></forward>
+			<forward name="plfwpage"          path="/wjcf/hygxy/plfwpage.jsp"/>
+			<forward name="wyhslpage"         path="/wjcf/hygxy/wyhslpage.jsp"/>
+			<forward name="wyhslonepage"      path="/wjcf/hygxy/wyhslonepage.jsp"/>
+			<forward name="plslpage"          path="/wjcf/hygxy/plslpage.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="wjcfhygxy" parameter="xgxt.wjcf.hygxy.wjcfhygxy" />
+
+</struts-config>

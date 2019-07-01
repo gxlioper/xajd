@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>				
+    	<form-bean name="xsxxAhjzgyxyForm" type="xgxt.studentInfo.ahjzgyxy.XsxxAhjzgyxyForm" />
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+	<!--展现的路径  -->
+		<action path="/stuTypeManage" forward="/xsxxAhjzgyxy.do?method=stuTypeManage"/>		
+	<!--实际的路径 -->
+	<!-- <<<<<<<<<<<<<<学生信息： 中国地质学生信息保存>>>>>>>>>>>>> -->
+    <action 
+    	path="/xsxxAhjzgyxy" 
+        type="xgxt.studentInfo.ahjzgyxy.XsxxAhjzgyxyAction" 
+        parameter="method"
+        name="xsxxAhjzgyxyForm">
+        <forward name="stuTypeManage" path="/xsxx/ahjzgyxy/stuTypeManage.jsp"/>                                       
+		</action> 
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="WsbzDmwhForm" type="xsgzgl.rcsw.wsbz.dmwh.WsbzDmwhForm"/>
+		<form-bean name="WsbzYyForm" type="xsgzgl.rcsw.wsbz.yy.WsbzYyForm"/>
+		<form-bean name="YyrqForm" type="xsgzgl.rcsw.wsbz.yyrq.YyrqForm"/>
+	</form-beans>
+	<action-mappings>
+		<action path="/rcsw_wsbz_dmwh" forward="/wsbz_dmwh.do?method=getDmwhCx"/>
+		<action path="/rcsw_wsbz_yy" forward="/wsbz_yy.do?method=getWsbzYyList"/>
+		<action path="/rcsw_wsbz_jg" forward="/wsbz_jg.do?method=getWsbzJgList"/>
+		<action path="/rcsw_wsbz_yyrq" forward="/wsbz_yyrq.do?method=getYyrqList"/>
+		
+		<action path="/wsbz_dmwh" scope="request" name="WsbzDmwhForm" type="xsgzgl.rcsw.wsbz.dmwh.WsbzDmwhAction" parameter="method">
+			<forward name="cx" path="/xsgzgl/rcsw/wsbz/dmwh/dmwhcx.jsp"/>
+			<forward name="add" path="/xsgzgl/rcsw/wsbz/dmwh/dmwhzj.jsp"/>
+			<forward name="udpate" path="/xsgzgl/rcsw/wsbz/dmwh/dmwhxg.jsp"/>
+			<forward name="ck" path="/xsgzgl/rcsw/wsbz/dmwh/dmwhck.jsp"/>
+			<forward name="setQjcs" path="/xsgzgl/rcsw/wsbz/dmwh/setqjcs.jsp"/>
+		</action>
+		<action path="/wsbz_yy" scope="request" name="WsbzYyForm" type="xsgzgl.rcsw.wsbz.yy.WsbzYyAction" parameter="method">
+			<forward name="cx" path="/xsgzgl/rcsw/wsbz/yy/wsbzyycx.jsp"/>
+			<forward name="add" path="/xsgzgl/rcsw/wsbz/yy/addxsyy.jsp"/>
+			<forward name="udpae" path="/xsgzgl/rcsw/wsbz/yy/updatexsyy.jsp"/>
+			<forward name="ck" path="/xsgzgl/rcsw/wsbz/yy/ckxsyy.jsp"/>
+		</action>
+		<action path="/wsbz_jg" scope="request" name="WsbzYyForm" type="xsgzgl.rcsw.wsbz.yy.WsbzYyAction" parameter="method">
+			<forward name="jgcx" path="/xsgzgl/rcsw/wsbz/yy/wsbzjgcx.jsp"/>
+		</action>
+		<action path="/wsbz_yyrq" scope="request" name="YyrqForm" type="xsgzgl.rcsw.wsbz.yyrq.YyrqAction" parameter="method">
+			<forward name="cx" path="/xsgzgl/rcsw/wsbz/yyrq/cx.jsp"/>
+			<forward name="add" path="/xsgzgl/rcsw/wsbz/yyrq/add.jsp"/>
+			<forward name="xg" path="/xsgzgl/rcsw/wsbz/yyrq/xg.jsp"/>
+		</action>
+		
+	</action-mappings>
+</struts-config>

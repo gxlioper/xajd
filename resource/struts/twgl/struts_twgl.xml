@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="tzzForm" type="com.zfsoft.xgxt.twgl.tzz.TzzModel"/>
+		<form-bean name="tgbForm" type="com.zfsoft.xgxt.twgl.tgb.TgbModel"/>
+	</form-beans>
+	<action-mappings>
+		<action path="/tygl_tzzgl_tzzList" forward="/tzzgl.do?method=tzzList"/>
+		<action path="/tygl_tgbgl_tgbjgList" forward="/tgbgl.do?method=tgbList"/>
+		
+		<action path="/tzzgl" 
+				parameter="method"  
+				name="tzzForm" 
+				scope="request"
+		        type="com.zfsoft.xgxt.twgl.tzz.TzzAction">
+		    <forward name="tzzList" path="/xsgzgl/twgl/tzz/tzzList.jsp"></forward>		        
+		    <forward name="addTzz" path="/xsgzgl/twgl/tzz/addTzz.jsp"></forward>		        
+		    <forward name="updateTzz" path="/xsgzgl/twgl/tzz/updateTzz.jsp"></forward>
+		    <forward name="viewTzz" path="/xsgzgl/twgl/tzz/viewTzz.jsp"></forward>		        
+		</action>
+		
+		<action path="/tgbgl" 
+				parameter="method"  
+				name="tgbForm" 
+				scope="request"
+		        type="com.zfsoft.xgxt.twgl.tgb.TgbAction">
+		    <forward name="tgbList" path="/xsgzgl/twgl/tgb/tgbList.jsp"></forward>		        
+		    <forward name="addTgb" path="/xsgzgl/twgl/tgb/addTgb.jsp"></forward>		        
+		    <forward name="showTzz" path="/xsgzgl/twgl/tgb/showTzz.jsp"></forward>
+		    <forward name="updateTgb" path="/xsgzgl/twgl/tgb/updateTgb.jsp"></forward>	
+		    <forward name="viewTgb" path="/xsgzgl/twgl/tgb/viewTgb.jsp"></forward>		        
+		   
+		</action>
+		
+	</action-mappings>
+</struts-config>

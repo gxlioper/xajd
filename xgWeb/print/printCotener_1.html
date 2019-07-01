@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="gb2312">
+	<head>
+		<title>证书打印</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<meta http-equiv="Content-Language" content="gb2312" />
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+		<style type="text/css">
+<!--
+.xh {
+	font-size: 20px;
+	font-weight: bolder;
+	color: #000;
+	font-family: "宋体";
+}
+.xm {
+	font-size: 28px;
+	font-weight: bolder;
+	color: #000;
+	font-family: "宋体";
+}
+-->
+</style>
+		<script language="javascript">
+function  PutSettings(){     
+	factory.printing.header="";    
+	factory.printing.footer="";   
+	factory.printing.portrait=false;  
+	factory.printing.leftMargin="0";   
+	factory.printing.topMargin="0";   
+	factory.printing.rightMargin="0";   
+	factory.printing.bottomMargin="0";
+}  
+function Preview(){
+	PutSettings();
+	factory.printing.Preview();
+}
+function chkMod(){
+	var numArr = new Array("○","一","二","三","四","五","六","七","八","九","十○","十一","十二","十三","十四","十五","十六","十七","十八","十九","二○","二一","二二","二三","二四","二五","二六","二七","二八","二九","三○","三一");
+	if(window.opener == null){
+		alert("非法访问！");
+		window.close();
+		return false;
+	}
+	if(window.opener.document.getElementById("sj")){
+		var tmp = window.opener.document.getElementById("sj").value.split("-");
+		nd.innerText = numArr[tmp[2]];
+		now = new Date();
+		var fzsj = "";
+		var yearTmp = now.getFullYear();
+		yearTmp = yearTmp%10;
+		fzsj = numArr[yearTmp] + "&nbsp;&nbsp;&nbsp;";
+		fzsj += numArr[now.getMonth()] + "&nbsp;&nbsp;&nbsp;";
+		fzsj += numArr[now.getDate()];
+		rq.innerHTML = fzsj;
+	}else{
+		alert("读取学年错误！");
+		window.close();
+		return false;	
+	}
+	if(window.opener.document.getElementById("nj").value == 0){
+		//WebBrowser.ExecWB(6,6);
+		factory.printing.Print(false);
+		window.close();
+		return false;
+	}
+	if(window.opener.document.getElementById("nj").value == 1){
+		if(window.opener.document.getElementById("rsTable")){
+			if(window.opener.curr_row != null){
+				xm.innerText = window.opener.curr_row.cells[2].innerText;
+				jxj.innerText = window.opener.curr_row.cells[5].innerText.replace("奖学金","");
+			}else{
+				xm.innerText = window.opener.document.getElementById("rsTable").rows[1].cells[2].innerText;
+				jxj.innerText = window.opener.document.getElementById("rsTable").rows[1].cells[5].innerText.replace("奖学金","");
+			}
+		}
+		//WebBrowser.ExecWB(6,6);
+		factory.printing.Print(false);
+		window.close();
+		return false;
+	}
+	if(window.opener.document.getElementById("nj").value == 2){
+		if(window.opener.document.getElementById("rsTable")){
+			for(i = 1;i<window.opener.document.getElementById("rsTable").rows.length;i++){
+				xm.innerText = window.opener.document.getElementById("rsTable").rows[i].cells[2].innerText;
+				jxj.innerText = window.opener.document.getElementById("rsTable").rows[i].cells[5].innerText.replace("奖学金","");
+				//WebBrowser.ExecWB(6,6);
+				factory.printing.Print(false);
+			}
+			window.close();
+		}else{
+			alert("没有可打印的数据！")
+			window.close();
+			return false;
+		}
+	}
+}
+</script>
+	</head>
+	<body onload="chkMod()">
+		<object id="factory" style="DISPLAY: none"
+			codebase="../ScriptX/ScriptX.cab#Version=5,60,0,360"
+			classid="clsid:1663ed61-23eb-11d2-b92f-008048fdd814" VIEWASTEXT></object>
+		<object id="WebBrowser" width=0 height=0
+			classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"></object>
+		<div class="xm" style="position: absolute; top: 75mm; left: 183mm;"
+			id="xm">
+			张三
+		</div>
+		<div class="xm" style="position: absolute; top: 75mm; left: 265mm;"
+			id="nd">
+			六
+		</div>
+		<div class="xm" style="position: absolute; top: 92mm; left: 207mm;"
+			id="jxj">
+			优秀学生一等
+		</div>
+		<div class="xh" style="position: absolute; top: 164mm; left: 230mm;"
+			id="rq">
+			六&nbsp; &nbsp;十 &nbsp;&nbsp;一
+		</div>
+	</body>
+</html>

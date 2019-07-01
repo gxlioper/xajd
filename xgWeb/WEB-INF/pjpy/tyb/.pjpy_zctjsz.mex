@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpy_tyb_zctjsz.do" location="0,0" dimension="142,60" />
+  <StrutsActivity path="/pjpy_tyb_zczdyzdwh.do" location="242,0" dimension="160,60" />
+  <StrutsActivity path="/pjpy_tyb_zczdyzdAdd.do" location="502,0" dimension="166,60" />
+  <StrutsActivity path="/pjpy_tyb_zctjpzCheck.do" location="768,0" dimension="172,60" />
+  <StrutsActivity path="/pjpy_tjsz_jszctjsz.do" location="1040,0" dimension="160,60" />
+  <StrutsActivity path="/pjpy_tjsz_savejszctjsz.do" location="1300,0" dimension="184,60" />
+  <StrutsActivity path="/pjpyTybZctjsz.do" location="564,180" dimension="310,84" />
+  <StrutsActivity path="/pjpy/tyb/zhszcp/zczdyzdAdd.jsp" location="141,364" dimension="226,48" />
+  <StrutsActivity path="/pjpy/tyb/zhszcp/zcZdyzdwh.jsp" location="467,364" dimension="220,48" />
+  <StrutsActivity path="/pjpy/tyb/zhszcp/tjsz.jsp" location="787,364" dimension="190,48" />
+  <StrutsActivity path="/pjpy/tyb/zhszcp/jszctjsz.jsp" location="1077,364" dimension="214,48" />
+  <StrutsTransition id="/pjpy_tyb_zczdyzdAdd.do,null,/pjpyTybZctjsz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="585,60" />
+      <AbsolutePoint location="585,90" />
+      <AbsolutePoint location="693,90" />
+      <AbsolutePoint location="693,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyTybZctjsz.do,jszctjsz,/pjpy/tyb/zhszcp/jszctjsz.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="835,264" />
+      <AbsolutePoint location="835,299" />
+      <AbsolutePoint location="1184,299" />
+      <AbsolutePoint location="1184,364" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyTybZctjsz.do,zcZdyzdwh,/pjpy/tyb/zhszcp/zcZdyzdwh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="680,264" />
+      <AbsolutePoint location="680,329" />
+      <AbsolutePoint location="577,329" />
+      <AbsolutePoint location="577,364" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyTybZctjsz.do,zczdyzdAdd,/pjpy/tyb/zhszcp/zczdyzdAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="603,264" />
+      <AbsolutePoint location="603,299" />
+      <AbsolutePoint location="254,299" />
+      <AbsolutePoint location="254,364" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyTybZctjsz.do,zctjsz,/pjpy/tyb/zhszcp/tjsz.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="758,264" />
+      <AbsolutePoint location="758,329" />
+      <AbsolutePoint location="882,329" />
+      <AbsolutePoint location="882,364" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpy_tjsz_jszctjsz.do,null,/pjpyTybZctjsz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1120,60" />
+      <AbsolutePoint location="1120,120" />
+      <AbsolutePoint location="797,120" />
+      <AbsolutePoint location="797,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpy_tyb_zctjsz.do,null,/pjpyTybZctjsz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="71,60" />
+      <AbsolutePoint location="71,150" />
+      <AbsolutePoint location="590,150" />
+      <AbsolutePoint location="590,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpy_tyb_zczdyzdwh.do,null,/pjpyTybZctjsz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="322,60" />
+      <AbsolutePoint location="322,120" />
+      <AbsolutePoint location="642,120" />
+      <AbsolutePoint location="642,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpy_tjsz_savejszctjsz.do,null,/pjpyTybZctjsz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1392,60" />
+      <AbsolutePoint location="1392,150" />
+      <AbsolutePoint location="848,150" />
+      <AbsolutePoint location="848,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpy_tyb_zctjpzCheck.do,null,/pjpyTybZctjsz.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="854,60" />
+      <AbsolutePoint location="854,90" />
+      <AbsolutePoint location="745,90" />
+      <AbsolutePoint location="745,180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

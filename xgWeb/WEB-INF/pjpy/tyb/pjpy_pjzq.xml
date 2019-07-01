@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyPjzqszActionForm" type="xgxt.pjpy.tyb.cssz.action.PjpyPjzqszActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_tyb_pjsjsz"           forward="/pjpyTybPjzq.do?method=pjsjsz"/>      <!-- 评奖时间,周期设置 -->
+	    <action path="/pjpy_tyb_cssz"             forward="/pjpyTybPjzq.do?method=cssz"/>        <!-- 参数设置 -->
+	    <action path="/pjpy_tyb_kgsz"             forward="/pjpyTybPjzq.do?method=kgsz"/>        <!-- 开关设置 -->
+	    
+	    
+	    
+	    <!-- 实际路径 -->	
+		<action path="/pjpyTybPjzq"
+				type="xgxt.pjpy.tyb.cssz.action.PjpyPjzqszAction"
+				name="pjpyPjzqszActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 实际跳转JSP路径 -->
+		<forward name="pjsjsz"  path="/pjpy/tyb/pjzq/pjsjsz.jsp" />
+		<forward name="cssz"    path="/pjpy/tyb/pjzq/cssz.jsp"/>
+		<forward name="kgsz"    path="/pjpy/tyb/pjzq/kgsz.jsp"/>
+		
+		</action>
+	</action-mappings>
+
+</struts-config>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xljkXlcyjgActionForm" type="xgxt.xljk.tyb.action.XljkXlcyjgActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/xljk_tyb_rgyswjwh"           forward="/xljkXlcyjg.do?method=rgyswjwh"/>        <!-- 大学生人格因素心理测验结果维护 -->
+	    <action path="/xljk_tyb_addDxsrgyscy"       forward="/xljkXlcyjg.do?method=addDxsrgyscy"/>    <!-- 增加大学生人格因素心理测验信息 -->
+	    <action path="/xljk_tyb_updateDxsrgyscy"    forward="/xljkXlcyjg.do?method=updateDxsrgyscy"/> <!-- 修改大学生人格因素心理测验信息 -->
+	    <action path="/xljk_tyb_ktewjwh"            forward="/xljkXlcyjg.do?method=ktewjwh"/>         <!-- 卡特尔人格因素心里测验结果维护 -->
+	    <action path="/xljk_tyb_addKtewjwh"         forward="/xljkXlcyjg.do?method=addKtewjwh"/>      <!-- 增加卡特尔人格因素心里测验结果信息 -->
+	    <action path="/xljk_tyb_updateKtewjwh"      forward="/xljkXlcyjg.do?method=updateKtewjwh"/>   <!-- 修改卡特尔人格因素心里测验结果信息 -->
+	    
+	    
+	    
+	    <!-- 实际路径 -->	
+		<action path="/xljkXlcyjg"
+				type="xgxt.xljk.tyb.action.XljkXlcyjgAction"
+				name="xljkXlcyjgActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 实际跳转JSP路径 -->
+		<forward name="rgyswjwh"      path="/xljk/tyb/clcyjg/rgyswjwh.jsp" />    <!-- 大学生人格因素心理测验结果维护查询页面 -->
+		<forward name="addDxsrgyscy"  path="/xljk/tyb/clcyjg/addDxsrgyscy.jsp"/> <!-- 增加大学生人格因素心理测验结果页面 -->
+		<forward name="updateDxsrgyscy" path="/xljk/tyb/clcyjg/updateDxsrgyscy.jsp" /> <!-- 修改大学生人格因素心理测验结果页面 -->
+		<forward name="ktewjwh"       path="/xljk/tyb/ktecyjg/ktewjwh.jsp"/>     <!-- 卡特尔人格因素信息维护查询页面 -->
+		<forward name="addKtewjwh"       path="/xljk/tyb/ktecyjg/addKtewjwh.jsp"/>     <!-- 增加卡特尔人格因素信息页面 -->
+		<forward name="updateKtewjwh" path="/xljk/tyb/ktecyjg/updateKtewjwh.jsp"/><!-- 修改卡特尔人格因素信息页面 -->
+		
+		</action>
+	</action-mappings>
+
+</struts-config>

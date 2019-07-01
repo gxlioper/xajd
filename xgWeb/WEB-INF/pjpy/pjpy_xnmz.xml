@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+	 <form-bean name="xnmzForm" type="xgxt.pjpy.xnmz.XnmzForm"></form-bean>
+	</form-beans>
+
+	<global-forwards />
+
+	<action-mappings>
+		<action path="/direct_to_bl"
+				type="xgxt.pjpy.xnmz.XnmzAction"
+				name="xnmzForm"
+				parameter="method"
+				scope="request">
+			<forward name="success" path="/pjpy/xnmz/set_condition_bl.jsp" />
+		</action>
+		<action path="/save_js_bl"
+				type="xgxt.pjpy.xnmz.XnmzAction"
+				name="xnmzForm"
+				parameter="method"
+				scope="request">
+			<forward name="success" path="/pjpy/xnmz/set_condition_bl.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<< test >>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/test" 
+				parameter="method" 
+				name="xnmzForm" 
+				scope="request"
+				type="xgxt.pjpy.xnmz.XnmzAction">
+				<forward name="success" path="/about:blank"></forward>		
+		</action>
+	</action-mappings>
+</struts-config>

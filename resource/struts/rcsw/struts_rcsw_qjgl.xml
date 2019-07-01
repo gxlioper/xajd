@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="qjlxForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjlx.QjlxForm" />
+		<form-bean name="qjgzForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjgz.QjgzForm" />
+		<form-bean name="qjsqForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjsq.QjsqForm" />
+		<form-bean name="qjshForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjsh.QjshForm" />
+		<form-bean name="qjjgForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjjg.QjjgForm" />
+		<form-bean name="QjXySzForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjxysz.QjXySzForm" />
+		<form-bean name="XsqjcxForm" type="com.zfsoft.xgxt.rcsw.qjgl.xsqjcx.XsqjcxForm" />
+		<form-bean name="gjjgForm" type="com.zfsoft.xgxt.rcsw.gjgl.gjjg.GjjgForm" />
+		<form-bean name="zyfwForm" type="com.zfsoft.xgxt.rcsw.zyfw.zyfwhz.ZyfwForm" />
+		<!-- 销假参数设置 -->
+		<form-bean name="XjsqCsszForm" type="com.zfsoft.xgxt.rcsw.qjgl.xjsqsh.XjsqCsszForm"/>
+		<!-- 销假申请审核 -->
+		<form-bean name="XjsqshForm" type="com.zfsoft.xgxt.rcsw.qjgl.xjsqsh.XjsqshForm"/>
+		<!-- 天津经贸个性化 请假时段限制 -->
+		<form-bean name="QjsdxzForm" type="com.zfsoft.xgxt.rcsw.gjgl.qjsdxz.QjsdxzForm"/>
+	</form-beans>
+	<action-mappings>
+		<!-- 请假类型-->
+		<action path="/qjlxbase" forward="/qjlx.do?method=list"/>
+		<action path="/qjlx" name="qjlxForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjlx.QjlxAction"
+			parameter="method" scope="request">
+			<forward name="qjlxlb" path="/xsgzgl/rcsw/newqjgl/qjlxlb.jsp" />
+			<forward name="qjlxzj" path="/xsgzgl/rcsw/newqjgl/qjlxzj.jsp" />
+			<forward name="qjlxxg" path="/xsgzgl/rcsw/newqjgl/qjlxxg.jsp" />
+			<forward name="qjlxck" path="/xsgzgl/rcsw/newqjgl/qjlxck.jsp" />
+			<forward name="openZt" path="/xsgzgl/rcsw/newqjgl/openZt.jsp" />
+		</action>
+		
+		<!-- 请假规则-->
+		<action path="/qjgzbase" forward="/qjgz.do?method=list"/>
+		<action path="/qjgz" name="qjgzForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjgz.QjgzAction"
+			parameter="method" scope="request">
+			<forward name="qjgzlb" path="/xsgzgl/rcsw/newqjgl/qjgz/qjgzlb.jsp" />
+			<forward name="qjgzzj" path="/xsgzgl/rcsw/newqjgl/qjgz/qjgzzj.jsp" />
+			<forward name="qjgzxg" path="/xsgzgl/rcsw/newqjgl/qjgz/qjgzxg.jsp" />
+			<forward name="qjgzck" path="/xsgzgl/rcsw/newqjgl/qjgz/qjgzck.jsp" />
+			<forward name="openZt" path="/xsgzgl/rcsw/newqjgl/qjgz/openZt.jsp" />
+		</action>
+		<!-- 请假申请-->
+		<action path="/qjsqbase" forward="/qjsq.do?method=list"/>
+		<action path="/qjsq" name="qjsqForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjsq.QjsqAction"
+			parameter="method" scope="request">
+			<forward name="qjsqlb" path="/xsgzgl/rcsw/newqjgl/qjsq/qjsqlb.jsp" />
+			<forward name="qjsqzj" path="/xsgzgl/rcsw/newqjgl/qjsq/qjsqzj.jsp" />
+			<forward name="qjsqxg" path="/xsgzgl/rcsw/newqjgl/qjsq/qjsqxg.jsp" />
+			<forward name="qjsqck" path="/xsgzgl/rcsw/newqjgl/qjsq/qjsqck.jsp" />
+			<forward name="selectqjkc" path="/xsgzgl/rcsw/newqjgl/qjsq/selectQjkc.jsp" />
+		</action>
+		<!-- 请假审核-->
+		<action path="/qjshbase" forward="/qjsh.do?method=list"/>
+		<action path="/qjsh" name="qjshForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjsh.QjshAction"
+			parameter="method" scope="request">
+			<forward name="list" path="/xsgzgl/rcsw/newqjgl/qjsh/list.jsp" />
+			<forward name="add" path="/xsgzgl/rcsw/newqjgl/qjsh/add.jsp" />
+			<forward name="update" path="/xsgzgl/rcsw/newqjgl/qjsh/update.jsp" />
+			<forward name="show" path="/xsgzgl/rcsw/newqjgl/qjsh/show.jsp" />
+			<forward name="qjsh" path="/xsgzgl/rcsw/newqjgl/qjsh/qjsh.jsp" />
+			<forward name="pjshview" path="/xsgzgl/rcsw/newqjgl/qjgz/pjshview.jsp" />
+		</action>
+		<!-- 请假结果库-->
+		<action path="/qjjgbase" forward="/qjjg.do?method=list"/>
+		<action path="/qjjg" name="qjjgForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjjg.QjjgAction"
+			parameter="method" scope="request">
+			<forward name="list" path="/xsgzgl/rcsw/newqjgl/qjjg/list.jsp" />
+			<forward name="add" path="/xsgzgl/rcsw/newqjgl/qjjg/add.jsp" />
+			<forward name="update" path="/xsgzgl/rcsw/newqjgl/qjjg/update.jsp" />
+			<forward name="show" path="/xsgzgl/rcsw/newqjgl/qjjg/show.jsp" />
+			<forward name="xjcl" path="/xsgzgl/rcsw/newqjgl/qjjg/xjcl.jsp" />
+		</action>
+		<!-- 浙江旅游公假管理-->
+		<action path="/xsgjxxgl" forward="/xsgjgl.do?method=gjjgList"/>
+		<action path="/xsgjgl" name="gjjgForm" type="com.zfsoft.xgxt.rcsw.gjgl.gjjg.GjjgAction"
+			parameter="method" scope="request">
+			<forward name="gjjglist" path="/xsgzgl/rcsw/gjgl/gjjg/gjjglist.jsp" />
+			<forward name="drjsp" path="/xsgzgl/rcsw/gjgl/gjjg/dr.jsp" />
+			<forward name="gjView" path="/xsgzgl/rcsw/gjgl/gjjg/gjxxview.jsp" />
+		</action>
+		<!-- 浙江旅游志愿服务取自bpmx-->
+		<action path="/bpmxzyfwhz" forward="/zyfw.do?method=gjjgList"/>
+		<action path="/zyfw" name="zyfwForm" type="com.zfsoft.xgxt.rcsw.zyfw.zyfwhz.ZyfwAction"
+			parameter="method" scope="request">
+			<forward name="getzyfwList" path="/xsgzgl/rcsw/zyfw/zyfwlist.jsp" />
+		</action>
+		
+		<!-- 请假协议设置-->
+		<action path="/qjxyszbase" forward="/qjxysz.do?method=qjxySzCx"/>
+		<action path="/qjxysz" name="QjXySzForm" type="com.zfsoft.xgxt.rcsw.qjgl.qjxysz.QjXySzAction"
+			parameter="method" scope="request">
+			<forward name="qjxySzCx" path="/xsgzgl/rcsw/newqjgl/qjxysz/qjxysz.jsp" />
+			<forward name="qjxyCk" path="/xsgzgl/rcsw/newqjgl/qjxysz/qjxyCk.jsp" />
+		</action>
+		<!-- 浙江旅游学生请假教师查询 -->
+		<action path="/zjly_xsqj_jscx" forward="/xsqj_jscx.do?method=getQjcxList"/>
+		<action path="/xsqj_jscx" name="XsqjcxForm" type="com.zfsoft.xgxt.rcsw.qjgl.xsqjcx.XsqjcxAction"
+			parameter="method" scope="request">
+			<forward name="cx" path="/xsgzgl/rcsw/newqjgl/xsqjcx/getXsjcx.jsp" />
+			<forward name="tjcx" path="/xsgzgl/rcsw/newqjgl/xsqjcx/getXsqjTjcx.jsp" />
+			<forward name="ck" path="/xsgzgl/rcsw/newqjgl/xsqjcx/qjck.jsp" />
+		</action>
+		
+		<!-- 销假参数设置 -->
+		<action path="/xg_qjgl_xjcssz" forward="/qjgl_xjcssz.do?method=jcsz"/>
+		<action path="/qjgl_xjcssz" name="XjsqCsszForm" type="com.zfsoft.xgxt.rcsw.qjgl.xjsqsh.XjsqcsszAction" 
+		scope="request" parameter="method">
+			<forward name="jcsz" path="/xsgzgl/rcsw/newqjgl/xjsqsh/cssz/cssz.jsp"/>
+		</action>
+		
+		<!-- 销假申请审核 -->
+		<action path="/xg_qjgl_xjsh" forward="/qjgl_xjsh.do?method=xjShList"/>
+		<action path="/qjgl_xjsh" parameter="method" scope="request" name="XjsqshForm" type="com.zfsoft.xgxt.rcsw.qjgl.xjsqsh.XjsqshAction">
+			<forward name="xjsqAdd" path="/xsgzgl/rcsw/newqjgl/xjsqsh/sqsh/xjSq.jsp"/>
+			<forward name="dgsh" path="/xsgzgl/rcsw/newqjgl/xjsqsh/sqsh/xjSh.jsp"/>
+			<forward name="plsh" path="/xsgzgl/rcsw/newqjgl/xjsqsh/sqsh/plsh.jsp"/>
+			<forward name="ckxjsh" path="/xsgzgl/rcsw/newqjgl/xjsqsh/sqsh/ckxjsh.jsp"/>
+			<forward name="xjshlist" path="/xsgzgl/rcsw/newqjgl/xjsqsh/sqsh/getXjshList.jsp"/>
+			<forward name="lcgz" path="/xsgzgl/comm/shlc/lcgz.jsp"></forward>
+		</action>
+		
+		<!-- 天津经济贸易 请假时段限制 -->
+		<action path="/xg_qjgl_sdcssz" forward="/qjgl_sdcssz.do?method=sdxzCssz"/>
+		<action path="/qjgl_sdcssz" parameter="method" scope="request" name="QjsdxzForm" type="com.zfsoft.xgxt.rcsw.gjgl.qjsdxz.QjsdxzAction">
+			<forward name="sdxzcssz" path="/xsgzgl/rcsw/newqjgl/sdxzcssz/sdxzcssz.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

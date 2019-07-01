@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<!-- 基础设置 -->
+		<form-bean name="StlbglForm" type="com.zfsoft.xgxt.xstgl.jcsz.dmwhgl.stlbgl.StlbglForm" />
+		<form-bean name="XmlbglForm" type="com.zfsoft.xgxt.xstgl.jcsz.dmwhgl.xmlbgl.XmlbglForm" />
+		<form-bean name="RylbglForm" type="com.zfsoft.xgxt.xstgl.jcsz.dmwhgl.rylbgl.RylbglForm" />
+		<!-- 人员类别维护 by yxy -->
+	<!-- 社团管理 -->
+		<form-bean name="StsqForm" type="com.zfsoft.xgxt.xstgl.stgl.stsq.StsqForm" />
+		<form-bean name="StshForm" type="com.zfsoft.xgxt.xstgl.stgl.stsh.StshForm" />
+		<form-bean name="StjgForm" type="com.zfsoft.xgxt.xstgl.stgl.stjg.StjgForm" />
+		<form-bean name="StzhwhForm" type="com.zfsoft.xgxt.xstgl.stgl.stzhwh.StzhwhForm" />
+	<!-- 入团管理-->
+		<form-bean name="RtsqForm" type="com.zfsoft.xgxt.xstgl.rtgl.rtsq.RtsqForm" />
+		<form-bean name="RtshForm" type="com.zfsoft.xgxt.xstgl.rtgl.rtsh.RtshForm" />
+		<form-bean name="RtjgForm" type="com.zfsoft.xgxt.xstgl.rtgl.rtjg.RtjgForm" />
+	<!-- 社团 活动-->
+		<form-bean name="xstglSthdglCsszForm" type="com.zfsoft.xgxt.xstgl.sthdgl.cssz.CsszForm" />
+		<form-bean name="SthdsqForm" type="com.zfsoft.xgxt.xstgl.sthdgl.sthdsq.SthdsqForm" />
+		<form-bean name="SthdshForm" type="com.zfsoft.xgxt.xstgl.sthdgl.sthdsh.SthdshForm" />
+		<form-bean name="SthdjgForm" type="com.zfsoft.xgxt.xstgl.sthdgl.sthdjg.SthdjgForm" />
+	<!-- 社团管理(浙江树人) -->
+		<form-bean name="stglZjsrForm" type="com.zfsoft.xgxt.xstgl.stglzjsr.StglForm" />
+	
+	</form-beans>
+	<action-mappings>
+	<!-- 基础设置 -->
+	<action path="/stgl_jcsz_cssz" forward="/stglCcsz.do?method=stglcssz" />
+	<action path="/stgl_jcsz_dmwh" forward="/stglStlbDmwh.do?method=getStlbList" />
+	
+		<!-- 代码维护 -->
+		<action path="/stglStlbDmwh" name="StlbglForm" type="com.zfsoft.xgxt.xstgl.jcsz.dmwhgl.stlbgl.StlbglAction"
+			parameter="method" scope="request">
+			<forward name="addStlb" path="/xsgzgl/xstgl/jcsz/dmwh/stlbgl/addStlb.jsp" />
+			<forward name="updateStlb" path="/xsgzgl/xstgl/jcsz/dmwh/stlbgl/updateStlb.jsp" />
+			<forward name="viewStlb" path="/xsgzgl/xstgl/jcsz/dmwh/stlbgl/viewStlb.jsp" />
+			<forward name="getStlbList" path="/xsgzgl/xstgl/jcsz/dmwh/stlbgl/getStlbList.jsp" />
+		</action>
+		
+		<action path="/stglXmlbDmwh" name="XmlbglForm" type="com.zfsoft.xgxt.xstgl.jcsz.dmwhgl.xmlbgl.XmlbglAction"
+			parameter="method" scope="request">
+			<forward name="addXmlb" path="/xsgzgl/xstgl/jcsz/dmwh/xmlbgl/addXmlb.jsp" />
+			<forward name="updateXmlb" path="/xsgzgl/xstgl/jcsz/dmwh/xmlbgl/updateXmlb.jsp" />
+			<forward name="viewXmlb" path="/xsgzgl/xstgl/jcsz/dmwh/xmlbgl/viewXmlb.jsp" />
+			<forward name="xmsz" path="/xsgzgl/xstgl/jcsz/dmwh/xmlbgl/xmsz.jsp" />
+		</action>
+		
+		<!-- 人员类别维护新增 by yxy -->
+		<action path="/stglRylbDmwh" name="RylbglForm" type="com.zfsoft.xgxt.xstgl.jcsz.dmwhgl.rylbgl.RylbglAction"
+			parameter="method" scope="request">
+			<forward name="addRylb" path="/xsgzgl/xstgl/jcsz/dmwh/rylbgl/addRylb.jsp" />
+			<forward name="updateRylb" path="/xsgzgl/xstgl/jcsz/dmwh/rylbgl/updateRylb.jsp" />
+		</action>
+	<!-- 社团管理 -->	
+		<action path="/stgl_stgl_stsq" forward="/stglStsq.do?method=getStsqList" />
+		<action path="/stgl_stgl_stsh" forward="/stglStsh.do?method=getStshList" />
+		<action path="/stgl_stgl_stjg" forward="/stglStjg.do?method=getStjgList" />
+		<action path="/stgl_stgl_stzhwh" forward="/stglStzhwh.do?method=getStzhwhList" />
+		
+		<!-- 社团管理-社团申请-->
+		<action path="/stglStsq" name="StsqForm" type="com.zfsoft.xgxt.xstgl.stgl.stsq.StsqAction"
+			parameter="method" scope="request">
+			<forward name="addStsq" path="/xsgzgl/xstgl/stgl/stsq/addStsq.jsp" />
+			<forward name="editStsq" path="/xsgzgl/xstgl/stgl/stsq/editStsq.jsp" />
+			<forward name="viewStsq" path="/xsgzgl/xstgl/stgl/stsq/viewStsq.jsp" />
+			<forward name="getStsqList" path="/xsgzgl/xstgl/stgl/stsq/getStsqList.jsp" />
+			<forward name="getStu" path="/xsgzgl/xstgl/stgl/stsq/getStu.jsp" />
+			<forward name="getTea" path="/xsgzgl/xstgl/stgl/stsq/getTea.jsp" />
+		</action>
+		<!-- 社团管理-社团审核-->
+		<action path="/stglStsh" name="StshForm" type="com.zfsoft.xgxt.xstgl.stgl.stsh.StshAction"
+			parameter="method" scope="request">
+			<forward name="getStshList" path="/xsgzgl/xstgl/stgl/stsh/getStshList.jsp" />
+			<forward name="stDgsh" path="/xsgzgl/xstgl/stgl/stsh/stDgsh.jsp" />
+			<forward name="stPlsh" path="/xsgzgl/xstgl/stgl/stsh/stPlsh.jsp" />
+		</action>
+		<!-- 社团管理-社团结果-->
+		<action path="/stglStjg" name="StjgForm" type="com.zfsoft.xgxt.xstgl.stgl.stjg.StjgAction"
+			parameter="method" scope="request">
+			<forward name="addStjg" path="/xsgzgl/xstgl/stgl/stjg/addStjg.jsp" />
+			<forward name="editStjg" path="/xsgzgl/xstgl/stgl/stjg/editStjg.jsp" />
+			<forward name="viewStjg" path="/xsgzgl/xstgl/stgl/stjg/viewStjg.jsp" />
+			<forward name="getStjgList" path="/xsgzgl/xstgl/stgl/stjg/getStjgList.jsp" />
+			<forward name="xmsz" path="/xsgzgl/xstgl/stgl/stjg/xmsz.jsp" />
+			<forward name="copestxx" path="/xsgzgl/xstgl/stgl/stjg/copestxx.jsp" />
+		</action>
+		<!-- 社团管理-社团综合维护 -->
+		<action path="/stglStzhwh" name="StzhwhForm" type="com.zfsoft.xgxt.xstgl.stgl.stzhwh.StzhwhAction"
+			parameter="method" scope="request">
+			<forward name="getStzhwhList" path="/xsgzgl/xstgl/stgl/stzhwh/getStzhwhlist.jsp" />
+			<forward name="viewstzhwhck" path="/xsgzgl/xstgl/stgl/stzhwh/stzhwhview.jsp" />
+			<forward name="viewztwh" path="/xsgzgl/xstgl/stgl/stzhwh/stcyztwh.jsp" />
+			<forward name="viewcjpd" path="/xsgzgl/xstgl/stgl/stzhwh/Stcjpd.jsp" />
+			<forward name="viewcjcx" path="/xsgzgl/xstgl/stgl/stzhwh/getStcycjlist.jsp" />
+			<forward name="viewscjpd" path="/xsgzgl/xstgl/stgl/stzhwh/cjpdview.jsp" />
+		</action>
+	<!-- 入团管理 -->	
+		<action path="/stgl_rtgl_rtsq" forward="/stglRtsq.do?method=getRtsqList" />
+		<action path="/stgl_rtgl_rtsh" forward="/stglRtsh.do?method=getRtshList" />
+		<action path="/stgl_rtgl_rtjg" forward="/stglRtjg.do?method=getRtjgList" />
+		
+		<!-- 入团管理-入团申请-->
+		<action path="/stglRtsq" name="RtsqForm" type="com.zfsoft.xgxt.xstgl.rtgl.rtsq.RtsqAction"
+			parameter="method" scope="request">
+			<forward name="addRtsq" path="/xsgzgl/xstgl/rtgl/rtsq/addRtsq.jsp" />
+			<forward name="editRtsq" path="/xsgzgl/xstgl/rtgl/rtsq/editRtsq.jsp" />
+			<forward name="viewRtsq" path="/xsgzgl/xstgl/rtgl/rtsq/viewRtsq.jsp" />
+			<forward name="RtsqList" path="/xsgzgl/xstgl/rtgl/rtsq/getRtsqList.jsp" />
+			<forward name="stuRtsqList" path="/xsgzgl/xstgl/rtgl/rtsq/getStuRtsqlist.jsp" />
+			<forward name="getStxm" path="/xsgzgl/xstgl/rtgl/rtsq/selectSt.jsp" />
+		</action>
+		<!-- 入团管理-入团审核-->
+		<action path="/stglRtsh" name="RtshForm" type="com.zfsoft.xgxt.xstgl.rtgl.rtsh.RtshAction"
+			parameter="method" scope="request">
+			<forward name="getRtshList" path="/xsgzgl/xstgl/rtgl/rtsh/getRtshList.jsp" />
+			<forward name="rtDgsh" path="/xsgzgl/xstgl/rtgl/rtsh/rtDgsh.jsp" />
+			<forward name="rtPlsh" path="/xsgzgl/xstgl/rtgl/rtsh/rtPlsh.jsp" />
+			<forward name="view" path="/xsgzgl/xstgl/rtgl/rtsh/rtShview.jsp" />
+		</action>
+		<!-- 入团管理-入团结果-->
+		<action path="/stglRtjg" name="RtjgForm" type="com.zfsoft.xgxt.xstgl.rtgl.rtjg.RtjgAction"
+			parameter="method" scope="request">
+			<forward name="viewlist" path="/xsgzgl/xstgl/rtgl/rtjg/viewlist.jsp" />
+			<forward name="viewck" path="/xsgzgl/xstgl/rtgl/rtjg/viewck.jsp" />
+			<forward name="viewwh" path="/xsgzgl/xstgl/rtgl/rtjg/viewwh.jsp" />
+			<forward name="getStu" path="/xsgzgl/xstgl/rtgl/rtjg/getStu.jsp" />
+		</action>
+	
+<!-- 社团活动管理 -->
+		
+		<action path="/stgl_sthdgl_jcsz" forward="/sthdglJcsz.do?method=cssz" />
+		<action path="/stgl_sthdgl_sthdsq" forward="/sthdglSthdsq.do?method=getSthdsqList" />
+		<action path="/stgl_sthdgl_sthdsh" forward="/sthdglSthdsh.do?method=getSthdshList" />
+		<action path="/stgl_sthdgl_sthdcx" forward="/sthdglSthdjg.do?method=getSthdjgList" />
+		
+		<!-- 社团活动管理-参数设置-->
+		<action path="/sthdglJcsz" name="xstglSthdglCsszForm" type="com.zfsoft.xgxt.xstgl.sthdgl.cssz.CsszAction"
+			parameter="method" scope="request">
+			<forward name="cssz" path="/xsgzgl/xstgl/sthdgl/cssz/cssz.jsp" />		<!-- 参数设置 -->
+		</action>
+		<!-- 社团活动管理-社团活动申请-->
+		<action path="/sthdglSthdsq" name="SthdsqForm" type="com.zfsoft.xgxt.xstgl.sthdgl.sthdsq.SthdsqAction"
+			parameter="method" scope="request">
+			<forward name="addSthdsq" path="/xsgzgl/xstgl/sthdgl/sthdsq/addSthdsq.jsp" />
+			<forward name="editSthdsq" path="/xsgzgl/xstgl/sthdgl/sthdsq/editSthdsq.jsp" />
+			<forward name="viewSthdsq" path="/xsgzgl/xstgl/sthdgl/sthdsq/viewSthdsq.jsp" />
+			<forward name="getSthdsqList" path="/xsgzgl/xstgl/sthdgl/sthdsq/getSthdsqList.jsp" />
+		</action>
+		<!-- 社团活动管理-社团活动审核-->
+		<action path="/sthdglSthdsh" name="SthdshForm" type="com.zfsoft.xgxt.xstgl.sthdgl.sthdsh.SthdshAction"
+			parameter="method" scope="request">
+			<forward name="getSthdshList" path="/xsgzgl/xstgl/sthdgl/sthdsh/getSthdshList.jsp" />
+			<forward name="hdDgsh" path="/xsgzgl/xstgl/sthdgl/sthdsh/hdDgsh.jsp" />
+			<forward name="hdPlsh" path="/xsgzgl/xstgl/sthdgl/sthdsh/hdPlsh.jsp" />
+		</action>
+		<!-- 社团活动管理-社团活动结果-->
+		<action path="/sthdglSthdjg" name="SthdjgForm" type="com.zfsoft.xgxt.xstgl.sthdgl.sthdjg.SthdjgAction"
+			parameter="method" scope="request">
+			<forward name="addSthdjg" path="/xsgzgl/xstgl/sthdgl/sthdjg/addSthdjg.jsp" />
+			<forward name="editSthdjg" path="/xsgzgl/xstgl/sthdgl/sthdjg/editSthdjg.jsp" />
+			<forward name="viewSthdjg" path="/xsgzgl/xstgl/sthdgl/sthdjg/viewSthdjg.jsp" />
+			<forward name="getSthdjgList" path="/xsgzgl/xstgl/sthdgl/sthdjg/getSthdjgList.jsp" />
+		</action>
+		
+		<!-- 社团管理(浙江树人) -->
+		<action path="/stgl_zjsr_stgl" forward="/stgl_zjsr.do?method=stglList"/>
+		<action path="/stgl_zjsr" 
+        		parameter="method"  
+        		name="stglZjsrForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xstgl.stglzjsr.StglAction">	
+		    <forward name="stglList" path="/xsgzgl/xstgl/stglzjsr/stglList.jsp"/>
+			<forward name="stglAdd" path="/xsgzgl/xstgl/stglzjsr/stglAdd.jsp"/>
+			<forward name="stglEdit" path="/xsgzgl/xstgl/stglzjsr/stglEdit.jsp"/>
+			<forward name="stglView" path="/xsgzgl/xstgl/stglzjsr/stglView.jsp"/>
+			<forward name="getStu" path="/xsgzgl/xstgl/stglzjsr/getStu.jsp" />
+			<forward name="getTea" path="/xsgzgl/xstgl/stglzjsr/getTea.jsp" />
+		</action>
+		
+	</action-mappings>
+</struts-config>

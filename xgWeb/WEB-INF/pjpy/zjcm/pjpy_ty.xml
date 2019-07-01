@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyTyForm" type="xgxt.pjpy.PjpyTyForm"/>
+	</form-beans>
+	
+	<action-mappings>	
+
+		<!-- ====================================我是传媒学院============================================== -->
+		<!-- 奖学金（荣誉称号） -->
+		<action path="/zjcm_pjpy_cpxz" 		forward="/zjcmPjpy.do?method=cpxzManage"/>		<!-- 测评小组维护 -->
+		<action path="/zjcm_pjpy_tjsz" 		forward="/zjcmPjpy.do?method=tjszManage"/>		<!-- 条件设置 -->
+		<action path="/zjcm_pjpy_jdsz" 		forward="/zjcmPjpy.do?method=jdszManage"/>		<!-- 奖学金兼得设置 -->
+		<action path="/zjcm_pjpy_zyf" 		forward="/zjcmPjpy.do?method=zyfManage"/>		<!-- 智育分维护 -->
+    	<action path="/zjcm_pjpy_zhf" 		forward="/zjcmPjpy.do?method=zhfManage"/>		<!-- 综合分维护 -->
+    	<action path="/zjcm_pjpy_bbtj" 		forward="/zjcmPjpy.do?method=bbtjManage"/>		<!-- 报表统计 -->
+    	<action path="/zjcm_pjpy_wlk" 		forward="/zjcmPjpy.do?method=wlkManage"/>		<!-- 文理科设置 -->
+    	<action path="/zjcm_pjpy_jxjsqxn" 	forward="/zjcmPjpy.do?method=jxjsqXnManage"/>	<!-- 奖学金(校内)申报 -->
+    	<action path="/zjcm_pjpy_jxjsqxw" 	forward="/zjcmPjpy.do?method=jxjsqXwManage"/>	<!-- 奖学金(校外)申报 -->
+    	<action path="/zjcm_pjpy_gjjxjsb" 	forward="/zjcmPjpy.do?method=gjjxjSbManage"/>	<!-- 国家奖学金申报 -->
+    	<action path="/zjcm_pjpy_rychsq" 	forward="/zjcmPjpy.do?method=rychsqManage"/>	<!-- 荣誉称号申报 -->
+    	<action path="/zjcm_pjpy_jxjjg" 	forward="/zjcmPjpy.do?method=jxjjgManage"/>		<!-- 奖学金结果 -->
+    	<action path="/zjcm_pjpy_rychjg" 	forward="/zjcmPjpy.do?method=rychjgManage"/>	<!-- 荣誉称号结果 -->
+    	
+    	<!-- ====================================我是浙江交通职业技术学院============================================== -->
+    	<!-- 操行分 -->
+		<action path="/zjjt_pjpy_cxfwh" 	forward="/zjjtPjpy.do?method=cxfUpdate"/>		<!-- 操行分维护 -->
+		<action path="/zjjt_pjpy_cxfsh" 	forward="/zjjtPjpy.do?method=cxfSh"/>			<!-- 操行分审核 -->
+		<action path="/zjjt_pjpy_cxfjg" 	forward="/zjjtPjpy.do?method=cxfJg"/>			<!-- 操行分结果 -->	
+		<action path="/zjjt_pjpy_cxflr" 	forward="/zjjtPjpy.do?method=cxfwhLr"/>			<!-- 操行分录入 -->
+		<action path="/zjjt_pjpy_cxfcx" 	forward="/zjjtPjpy.do?method=cxfwhCx"/>			<!-- 操行分查询 -->
+		<action path="/zjjt_pjpy_cxftj" 	forward="/zjjtPjpy.do?method=cxfwhTj"/>			<!-- 操行分统计 -->
+		
+		<!-- ====================================我是贵州大学============================================== -->
+		<!-- 参数设置 -->
+		<action path="/guizdx_pjpy_rssz_xx" forward="/guizdxPjpy.do?method=rsszXxManage"/>	<!-- 人数设置(学校) -->
+		<action path="/guizdx_pjpy_rssz_xy" forward="/guizdxPjpy.do?method=rsszXyManage"/>	<!-- 人数设置(学院) -->
+		
+		<!-- ====================================我是宁波城市============================================== -->
+		
+		<!-- 问卷调查 -->
+		<action path="/nbcs_pjpy_wjManage" 		forward="/nbcsPjpy.do?method=wjManage"/>	<!-- 问卷维护 -->
+		<action path="/nbcs_pjpy_stManage" 		forward="/nbcsPjpy.do?method=stManage"/>	<!-- 试题维护 -->
+		<action path="/nbcs_pjpy_zjManage" 		forward="/nbcsPjpy.do?method=zjManage"/>	<!-- 组卷维护 -->
+		<action path="/nbcs_pjpy_hdwjManage" 	forward="/nbcsPjpy.do?method=hdwjManage"/>	<!-- 回答问卷 -->
+		<action path="/nbcs_pjpy_hdtjManage" 	forward="/nbcsPjpy.do?method=hdtjManage"/>	<!-- 回答统计 -->
+		<action path="/nbcs_pjpy_hdpjManage" 	forward="/nbcsPjpy.do?method=hdpjManage"/>	<!-- 回答批卷 -->
+		<action path="/nbcs_pjpy_wjfpManage" 	forward="/nbcsPjpy.do?method=wjfpManage"/>	<!-- 问卷分配 -->
+		
+		<!-- 学生品行评价 -->
+		<action path="/nbcs_pjpy_pxpj_djrManage"  forward="/nbcsPxpj.do?method=djrManage"/>	<!-- 答卷人管理 -->
+		<action path="/nbcs_pjpy_pxpj_wjfpManage" forward="/nbcsPxpj.do?method=wjfpManage"/><!-- 问卷分配管理 -->
+		<action path="/nbcs_pjpy_pxpj_pxpjManage" forward="/nbcsPxpj.do?method=pxpjManage"/><!-- 品行评价 -->
+		<action path="/nbcs_pjpy_pxpj_pjjgManage" forward="/nbcsPxpj.do?method=pjjgManage"/><!-- 评价结果 -->
+		
+		<!-- ====================================我是万恶的分割线(以上跳转路径，以下具体实现)============================================== -->
+		
+		<!-- ====================================我是传媒学院============================================== -->
+		<action path="/zjcmPjpy" 
+        		parameter="method"  
+        		name="pjpyTyForm" 
+        		scope="request"
+		        type="xgxt.pjpy.zjcm.ZjcmPjpyAction">		
+		       
+		    <!-- 测评小组维护 -->
+			<forward name="cpxzManage"   	path="/pjpy/zjcm/cpxzManage.jsp" />
+ 			<!-- 奖学金兼得设置 -->
+			<forward name="jdszManage"   	path="/pjpy/zjcm/jdszManage.jsp" />
+			<forward name="jdszUpdate"   	path="/pjpy/zjcm/jdszUpdate.jsp" />
+			<!-- 文理科设置 -->
+			<forward name="wlkManage"   	path="/pjpy/zjcm/wlkManage.jsp" />
+			<forward name="wlkUpdate"   	path="/pjpy/zjcm/wlkUpdate.jsp" />
+			<!-- 条件设置 -->
+			<forward name="tjszManage"   	path="/pjpy/zjcm/tjszManage.jsp" />
+			<!-- 智育分维护 -->
+			<forward name="zyfManage"    	path="/pjpy/zjcm/zyfManage.jsp" />       
+			<!-- 综合分维护 -->
+			<forward name="zhfManage"    	path="/pjpy/zjcm/zhfManage.jsp" />
+			<forward name="zhfUpdate"    	path="/pjpy/zjcm/zhfUpdate.jsp" />
+			<!-- 奖学金(校内)申报 -->
+			<forward name="jxjsqXnManage"   path="/pjpy/zjcm/jxjsqXnManage.jsp" />
+			<forward name="jxjsqXnUpdate"   path="/pjpy/zjcm/jxjsqXnUpdate.jsp" />
+			<!-- 奖学金(校外)申报 -->
+			<forward name="jxjsqXwManage"   path="/pjpy/zjcm/jxjsqXwManage.jsp" />
+			<forward name="jxjsqXwUpdate"   path="/pjpy/zjcm/jxjsqXwUpdate.jsp" />
+			<!-- 国家奖学金申报 -->
+			<forward name="gjjxjSbManage"   path="/pjpy/zjcm/gjjxjSbManage.jsp" />
+			<forward name="gjjxjSbUpdate"   path="/pjpy/zjcm/gjjxjSbUpdate.jsp" />
+			<forward name="gjjxjPrint"   	path="/pjpy/zjcm/gjjxjPrint.jsp" />
+			<!-- 荣誉称号申报 -->
+			<forward name="rychsqManage"   	path="/pjpy/zjcm/rychsqManage.jsp" />
+			<forward name="rychsqUpdate"   	path="/pjpy/zjcm/rychsqUpdate.jsp" />
+			<!-- 申报结果 -->
+			<forward name="sbjgManage"   	path="/pjpy/zjcm/sbjgManage.jsp" />
+			<forward name="sbjgUpdate"   	path="/pjpy/zjcm/sbjgUpdate.jsp" />
+			<!-- 报表统计维护 -->
+			<forward name="bbtjManage"   	path="/pjpy/zjcm/bbtjManage.jsp" />
+
+		</action>
+	
+		<!-- ====================================我是浙江交通职业技术学院============================================== -->
+		<action path="/zjjtPjpy" 
+	        		parameter="method"  
+	        		name="pjpyTyForm" 
+	        		scope="request"
+			        type="xgxt.pjpy.zjjt.PjpyZjjtAction">		
+			       
+			<!-- 操行分维护 -->
+			<forward name="cxfManage"   	path="/pjpy/zjjt/cxfManage.jsp" />
+			<forward name="cxfUpdate"   	path="/pjpy/zjjt/cxfUpdate.jsp" />
+				
+			<forward name="cxfwhManage"   	path="/pjpy/zjjt/cxfwhManage.jsp" />
+			<forward name="cxfwhUpdate"   	path="/pjpy/zjjt/cxfwhUpdate.jsp" />
+			<forward name="szManage"   		path="/pjpy/zjjt/szManage.jsp" />
+			<forward name="cxfwhTj"   		path="/pjpy/zjjt/cxfwhTj.jsp" />
+		</action>
+		
+		<!-- ====================================我是贵州大学============================================== -->
+		<action path="/guizdxPjpy" 
+	        		parameter="method"  
+	        		name="pjpyTyForm" 
+	        		scope="request"
+			        type="xgxt.pjpy.guizdx.PjpyGuizdxAction">		
+			       
+			<!-- 人数设置 -->
+			<forward name="rsszXxManage"   	path="/pjpy/guizdx/rsszXxManage.jsp" />
+			<forward name="rsszXxUpdate"   	path="/pjpy/guizdx/rsszXxUpdate.jsp" />
+			<forward name="rsszXyManage"   	path="/pjpy/guizdx/rsszXyManage.jsp" />
+		</action>
+		
+		<!-- ====================================我是宁波城市============================================== -->
+		<action path="/nbcsPjpy" 
+	        		parameter="method"  
+	        		name="pjpyTyForm" 
+	        		scope="request"
+			        type="xgxt.pjpy.nbcs.PjpyNbcsAction">		
+			       
+			<!-- 问卷调查 -->
+			<forward name="wjManage"   	path="/pjpy/nbcs/wjManage.jsp" />	<!-- 组卷维护 -->
+			<forward name="wjUpdate"   	path="/pjpy/nbcs/wjUpdate.jsp" />
+			<forward name="stManage"   	path="/pjpy/nbcs/stManage.jsp" />	<!-- 试题维护 -->
+			<forward name="stUpdate"   	path="/pjpy/nbcs/stUpdate.jsp" />
+			<forward name="zjManage"   	path="/pjpy/nbcs/zjManage.jsp" />	<!-- 组卷维护 -->
+			<forward name="hdwjManage"  path="/pjpy/nbcs/hdwjManage.jsp" />	<!-- 回答问卷 -->
+			<forward name="hdwjUpdate"  path="/pjpy/nbcs/wjUpdate.jsp" />	
+			<forward name="hdtjManage"  path="/pjpy/nbcs/hdtjManage.jsp" />	<!-- 回答统计 -->
+			<forward name="hdtjUpdate"  path="/pjpy/nbcs/hdtjUpdate.jsp" />	
+			<forward name="hdpjManage"  path="/pjpy/nbcs/hdpjManage.jsp" />	<!-- 批卷 -->
+			<forward name="hdpjUpdate"  path="/pjpy/nbcs/hdpjUpdate.jsp" />	
+			<forward name="wjfpManage"  path="/pjpy/nbcs/wjfpManage.jsp" />	<!-- 问卷分配 -->
+			<forward name="wjfpUpdate"  path="/pjpy/nbcs/wjfpUpdate.jsp" />	
+		</action>
+		
+		<!-- 学生品行评价 -->
+		<action path="/nbcsPxpj" 
+	        	parameter="method"  
+	        	name="pjpyTyForm" 
+	        	scope="request"
+			    type="xgxt.pjpy.nbcs.pxpj.PxpjNbcsAction">	
+			        
+			<forward name="djrManage"   path="/pjpy/nbcs/pxpj/djrManage.jsp" />	<!-- 答卷人管理 -->
+			<forward name="djrUpdate"   path="/pjpy/nbcs/pxpj/djrUpdate.jsp" />	
+			<forward name="djrBlsz"   	path="/pjpy/nbcs/pxpj/djrBlsz.jsp" />	<!-- 答卷人比例设置 -->
+			<forward name="wjfpManage"  path="/pjpy/nbcs/pxpj/wjfpManage.jsp" /><!-- 问卷分配 -->
+			<forward name="wjfpUpdate"  path="/pjpy/nbcs/pxpj/wjfpUpdate.jsp" />	
+			<forward name="pxpjManage"  path="/pjpy/nbcs/pxpj/pxpjManage.jsp" /><!-- 品行评价 -->
+			<forward name="pxpjUpdate"  path="/pjpy/nbcs/pxpj/pxpjUpdate.jsp" />
+			<forward name="pjjgManage"  path="/pjpy/nbcs/pxpj/pjjgManage.jsp" /><!-- 评价结果 -->
+			<forward name="pjjgUpdate"  path="/pjpy/nbcs/pxpj/pjjgUpdate.jsp" />
+		</action>	
+	</action-mappings>
+
+</struts-config>

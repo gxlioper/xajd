@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyYnysActionForm" type="xgxt.pjpy.ynys.PjpyYnysActionForm"/>
+		<form-bean name="pjpyYnysZhszcpActionForm" type="xgxt.pjpy.ynys.zhszcp.PjpyYnysZhszcpActionForm"></form-bean>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpyynyswh"
+				type="xgxt.pjpy.ynys.PjpyYnysAction"
+				name="pjpyYnysActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="xjbjsq"             path="/pjpy/ynys/xjbjsq.jsp" />
+			<forward name="xjbjsh"             path="/pjpy/ynys/xjbj/sh.jsp"></forward>
+			<forward name="xjbjshone"          path="/pjpy/ynys/xjbj/shone.jsp"></forward>
+			<forward name="xjbjsqqry"          path="/pjpy/ynys/xjbj/sqqry.jsp"></forward>
+			<forward name="xjbjmodi"           path="/pjpy/ynys/xjbj/update.jsp"></forward>
+			<forward name="yxbyssq"            path="/pjpy/ynys/yxbys/sq.jsp"></forward>
+			<forward name="yxbysqry"           path="/pjpy/ynys/yxbys/sqqry.jsp"></forward>
+			<forward name="yxbysmodi"          path="/pjpy/ynys/yxbys/update.jsp"></forward>
+			<forward name="yxbysshone"         path="/pjpy/ynys/yxbys/shone.jsp"></forward>
+			<forward name="zhszcpwh"           path="/pjpy/ynys/zhszcp/default.jsp"></forward>
+			<forward name="zhszcpview"         path="/pjpy/ynys/zhszcp/update.jsp"></forward>
+			<forward name="zhszcpadd"          path="/pjpy/ynys/zhszcp/add.jsp"></forward>
+			<forward name="jxjsq"              path="/pjpy/ynys/jxj/sq.jsp"></forward>
+			<forward name="jxjsqqry"           path="/pjpy/ynys/jxj/sqqry.jsp"></forward>
+			<forward name="jxjsh"              path="/pjpy/ynys/jxj/sh.jsp"></forward>
+			<forward name="yxbysprint"         path="/pjpy/ynys/yxbys/ynbysb.jsp"></forward>
+			<forward name="jxjmodi"            path="/pjpy/ynys/jxj/update.jsp"></forward>
+			<forward name="xjbjprint"          path="/pjpy/ynys/xjbj/xjbjprint.jsp"></forward>
+		</action>
+	<action path="/pjpyynyszhszcp" 
+			type="xgxt.pjpy.ynys.zhszcp.PjpyYnysZhszcpAction" 
+			name="pjpyYnysZhszcpActionForm" 
+			parameter="method"
+			scope="request">
+			<forward name="szcpwh"    path="/pjpy/ynys/zhszcp/szcpwh.jsp"></forward>
+			<forward name="sxzzddszf" path="/pjpy/ynys/sxzzddf/add.jsp"/>
+			<forward name="sxzzddfview" path="/pjpy/ynys/sxzzddf/update.jsp"/>
+			<forward name="sjfadd"	  path="/pjpy/ynys/sjllszf/add.jsp"/>
+			<forward name="sjlxview"  path="/pjpy/ynys/sjllszf/update.jsp"/>
+			<forward name="kxwhszfadd" path="/pjpy/ynys/kxwhszf/add.jsp"/>
+			<forward name="sxlxfadd"  path="/pjpy/ynys/sxllszf/add.jsp"/>
+			<forward name="sxllview"  path="/pjpy/ynys/sxllszf/update.jsp"/>
+			<forward name="kxwhszfview" path="/pjpy/ynys/kxwhszf/update.jsp"/>
+	</action>
+	</action-mappings>
+	<message-resources key="pjpyynys" parameter="xgxt.pjpy.ynys.pjpyynys" />
+</struts-config>

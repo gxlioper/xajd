@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyNblgActionForm" type="xgxt.pjpy.nblg.PjpyNblgActionForm"/>
+		<form-bean name="pjpyNblgZhszcpActionForm" type="xgxt.pjpy.nblg.PjpyNblgZhszcpActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpynblgwh"
+				type="xgxt.pjpy.nblg.PjpyNblgAction"
+				name="pjpyNblgActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="djkswh"    path="/pjpy/nblg/djkswh.jsp" />
+			<forward name="jxjsqpage" path="/pjpy/nblg/jxj/sq.jsp"/>
+			<forward name="jxjprint"  path="/pjpy/nblg/print/jxjprint.jsp"/>	
+			<forward name="tjszpage"  path="/pjpy/nblg/tjsz.jsp"/>
+			<forward name="yytjsz"	  path="/pjpy/nblg/yytjsz.jsp"/>
+			<forward name="jxjshpage" path="/pjpy/nblg/jxj/sh.jsp"/>
+			<forward name="rychtjszpage" path="/pjpy/nblg/rych/tjsz.jsp"/>
+			<forward name="rychshpage"   path="/pjpy/nblg/rych/sh.jsp"/>
+			<forward name="rychprint" path="/pjpy/nblg/print/rychprint.jsp"/>
+			<forward name="cjtjglpage" path="/pjpy/nblg/cjgltjsz.jsp"/>
+			<forward name="cjtjaddpage" path="/pjpy/nblg/cjtjadd.jsp"/>
+			<forward name="cjtjmodipage" path="/pjpy/nblg/cjtjmodi.jsp"/>
+		</action>
+		<action path="/pjpynblgzhcpwh"
+				type="xgxt.pjpy.nblg.PjpyNblgZhszcpAction"
+				name="pjpyNblgZhszcpActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="djkswh" path="/pjpy/nblg/djkswh.jsp" />	
+			<forward name="ddpycjpage"  path="/pjpy/nblg/zhszcp/ddpycjpage.jsp"/>	
+			<forward name="dycjaddpage"   path="/pjpy/nblg/zhszcp/add.jsp"/>	
+			<forward name="dycjmodipage"  path="/pjpy/nblg/zhszcp/update.jsp"/>	
+			<forward name="zhszcppage" path="/pjpy/nblg/zhszcp/default.jsp"/>	
+		</action>
+	</action-mappings>
+    <message-resources key="pjpynblg" parameter="xgxt.pjpy.nblg.pjpynblg" />
+</struts-config>

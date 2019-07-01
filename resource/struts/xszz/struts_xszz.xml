@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<!-- 学生资助2013版  -->
+	<form-beans>
+    	<form-bean name="bdpzForm" type="com.zfsoft.xgxt.xszz.bdpz.BdpzForm" />
+    	<form-bean name="xszzKnsJcszForm" type="com.zfsoft.xgxt.xszz.knsjcsz.JcszForm" />
+    	<form-bean name="jtqkdcJcszForm" type="com.zfsoft.xgxt.xszz.jtqkdcjcsz.JtqkdcJcszForm" />
+    	<!-- 资助待遇 -->
+    	<form-bean name="ZzdyJcszForm" type="com.zfsoft.xgxt.xszz.zzdy.jcsz.ZzdyJcszForm" />
+    	<form-bean name="ZzdyMdglForm" type="com.zfsoft.xgxt.xszz.zzdy.zzmdgl.ZzdyMdglForm" />
+    	<form-bean name="ZzdyBtffForm" type="com.zfsoft.xgxt.xszz.zzdy.zzbtff.ZzdyBtffForm" />
+    	
+    	<form-bean name="jtqkdcForm" type="com.zfsoft.xgxt.xszz.jtqkdc.JtqkdcForm" />
+    	<form-bean name="knsrdForm" type="com.zfsoft.xgxt.xszz.knsrd.KnsrdForm" />
+    	<form-bean name="knsdcForm" type="com.zfsoft.xgxt.xszz.knsdc.KnsdcForm" />
+    	<form-bean name="knsjgForm" type="com.zfsoft.xgxt.xszz.knsjg.KnsjgForm" />
+    	<form-bean name="knsjgwhForm" type="com.zfsoft.xgxt.xszz.knsjgwh.knsjgwhForm" />
+    	<form-bean name="qxknszgForm" type="com.zfsoft.xgxt.xszz.qxknszg.QxknszgForm" />
+    	<form-bean name="qxknsjlForm" type="com.zfsoft.xgxt.xszz.qxknsjl.QxknsjlForm" />
+
+		<!-- 班级评议 < -->
+		<form-bean name="knsjcszbjpyForm" type="com.zfsoft.xgxt.xszz.knsrdbjpy.knsjcszbjpy.KnsjcszbjpyForm" />
+	 	<form-bean name="knsrdbjpyForm" type="com.zfsoft.xgxt.xszz.knsrdbjpy.knsrdbjpy.KnsrdbjpyForm" />
+	 	<form-bean name="xxzszForm" type="com.zfsoft.xgxt.xszz.knsrdbjpy.xzsz.XzszForm" />
+	 	<form-bean name="jglrForm" type="com.zfsoft.xgxt.xszz.knsrdbjpy.jglr.JglrForm" />
+	 	<form-bean name="jgcxForm" type="com.zfsoft.xgxt.xszz.knsrdbjpy.jgcx.JgcxForm" />
+		<!-- 班级评议 > -->
+    	<form-bean name="zzxmjgForm" type="com.zfsoft.xgxt.xszz.zzxmjg.ZzxmjgForm" />
+    	<form-bean name="xmlbwhForm" type="com.zfsoft.xgxt.xszz.xmlbwh.XmlbwhForm" />
+    	<form-bean name="xmwhForm" type="com.zfsoft.xgxt.xszz.xmwh.xmwh.XmwhForm" />	
+    	<form-bean name="xmwhRsszForm" type="com.zfsoft.xgxt.xszz.xmwh.rssz.XmwhRsszForm" />	
+    	<form-bean name="xmwhJdszForm" type="com.zfsoft.xgxt.xszz.xmwh.jdsz.XmwhJdszForm" />	
+    	<form-bean name="xmwhShszForm" type="com.zfsoft.xgxt.xszz.xmwh.shsz.XmwhShszForm" />	
+		<form-bean name="xmwhTjszForm" type="com.zfsoft.xgxt.xszz.xmwh.tjsz.XmwhTjszForm" />	
+    	<form-bean name="xszzSqshForm" type="com.zfsoft.xgxt.xszz.sqsh.XszzSqshForm" />	
+    	<form-bean name="bbwhForm" type="com.zfsoft.xgxt.xszz.bbwh.BbwhForm" />	
+    	
+    	 <!-- 资助班级评议 < -->
+		<form-bean name="xszzJcszForm" type="com.zfsoft.xgxt.xszz.xszzbjpy.jcsz.JcszForm" />
+	 	<form-bean name="xszzXzszForm" type="com.zfsoft.xgxt.xszz.xszzbjpy.xzsz.XzszForm" />
+	 	<form-bean name="xszzJglrForm" type="com.zfsoft.xgxt.xszz.xszzbjpy.jglr.JglrForm" />
+	 	<form-bean name="xszzJgcxForm" type="com.zfsoft.xgxt.xszz.xszzbjpy.jgcx.JgcxForm" />
+	 	<form-bean name="xszzPycyForm" type="com.zfsoft.xgxt.xszz.xszzbjpy.pycy.PycyForm" />
+		<!-- 资助班级评议 > -->
+		
+		<!-- 申请理由代码维护 -->
+		<form-bean name="sqlyDmwhForm" type="com.zfsoft.xgxt.xszz.sqlydmwh.SqlyDmwhForm" />
+		<!-- 申请理由代码维护 -->
+		
+		<!-- 信息修改字段设置 -->
+		<form-bean name="XgzdForm" type="com.zfsoft.xgxt.xszz.jtqkxgzd.XgzdForm" />
+		<!-- 学费补助名单查询 -->
+		<form-bean name="xfbzmdForm" type="com.zfsoft.xgxt.xszz.xfbzmd.XfbzmdForm" />
+		
+		<!-- 资助款发放 -->
+		<form-bean name="zzkffForm" type="com.zfsoft.xgxt.xszz.zzkff.ZzkffForm"></form-bean>
+		<!--绿色通道-->
+		<form-bean name="lstdForm" type="com.zfsoft.xgxt.xszz.lstd.LstdForm"></form-bean>
+	</form-beans>
+
+	<action-mappings>
+		
+		<action path="/xszz_knsrd_sq" 	forward="/xszz_knsrd.do?method=knssqManage"/>	
+		<action path="/xszz_knsrd_sh" 	forward="/xszz_knsrd.do?method=knsshManage"/>	
+		<action path="/xszz_knsrd_cx" 	forward="/xszz_knsrd.do?method=knssbManage"/>	
+		<action path="/xszz_knsdc_wh" 	forward="/xszz_knsdc.do?method=dcwhList"/>
+		<action path="/xszz_jcsz_wh" 	forward="/xszz_jcsz.do?method=jcsz"/>	
+		
+		<!-- 班级评议 < -->
+		<action path="/xszz_knsrdbjpy_sq" 	forward="/xszz_knsrdbjpy.do?method=knssqManage"/>	
+		<action path="/xszz_knsrdbjpy_sh" 	forward="/xszz_knsrdbjpy.do?method=knsshManage"/>	
+		<action path="/xszz_knsrdbjpy_cx" 	forward="/xszz_knsrdbjpy.do?method=knssbManage"/>	
+		<action path="/xszz_knsjcszbjpy_wh" 	forward="/xszz_knsjcszbjpy.do?method=jcsz"/>
+		<!-- 班级评议 > -->
+		
+		<!-- 申请理由代码维护 -->
+		<action path="/xszz_knsrd_sqlywh" 	forward="/xszz_sqlywh.do?method=sqlywhManage"/>   
+		<!-- 申请理由代码维护 -->
+		
+		<action path="/xszz_jtqkdc_cssz" forward="/xszz_jtqkdc_jcsz.do?method=updateJcsz"/>	
+		<action path="/xszz_jtqkdc_sq" 	forward="/xszz_jtqkdc.do?method=dcxxModify"/>	
+		<action path="/xszz_jtqkdc_cx" 	forward="/xszz_jtqkdc.do?method=dcxxManage"/>	
+		<action path="/xszz_knsjg_cx" 	forward="/xszz_knsjg.do?method=getKnsjgList"/>
+		<action path="/xszz_zzxmjg_cx" 	forward="/xszz_zzxmjg.do?method=getZzxmjgList"/>
+		
+		<action path="/xszz_knsdcjgwh" 	forward="/xszz_knsdcwh.do?method=getKnsWhList"/>
+		<action path="/xszz_sqsh_xmsq" forward="/xszz_sqsh.do?method=xmsqManage"/>	
+		<action path="/xszz_sqsh_xmsq_stu" forward="/xszz_sqsh.do?method=xmsqStuManage"/>	
+		<action path="/xszz_sqsh_xmsh" forward="/xszz_sqsh.do?method=xmshManage"/>	
+		
+		<!-- 取消困难生资格 > -->
+		
+		<action path="/xszz_qxknszg_cx" 	forward="/xszz_qxknszggl.do?method=qxKnszgManage"/>
+		<action path="/xszz_qxknsjl_cx" 	forward="/xszz_qxknsjlgl.do?method=qxKnsjlManage"/>
+		
+		
+		<!-- 表单配置 -->
+	    <action path="/xszz_bdpz" 
+	    		name="bdpzForm"
+	    		type="com.zfsoft.xgxt.xszz.bdpz.BdpzAction"
+				scope="request"
+			    parameter="method">
+			    <forward name="viewStudent" path="/xsgzgl/xszz/bdpz/viewStudent.jsp"></forward>
+			    <forward name="selectStudent" path="/xsgzgl/xszz/bdpz/selectStudent.jsp"></forward>
+		</action>
+		
+		<!-- 基础设置 -->
+		 <action path="/xszz_jcsz" 
+	    		 name="xszzKnsJcszForm"
+	    		 type="com.zfsoft.xgxt.xszz.knsjcsz.JcszAction"
+				 scope="request"
+			     parameter="method">
+			      <forward name="jcsz" path="/xsgzgl/xszz/jcsz/jcsz.jsp"></forward>
+			      <forward name="knsRssz" path="/xsgzgl/xszz/jcsz/knsRssz.jsp"></forward>
+		 </action>
+		 
+		 
+		 <!-- 家庭情况调查基础设置 -->
+		 <action path="/xszz_jtqkdc_jcsz" 
+	    		 name="jtqkdcJcszForm"
+	    		 type="com.zfsoft.xgxt.xszz.jtqkdcjcsz.JtqkdcJcszAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="updateJcsz" path="/xsgzgl/xszz/jtqkdc/jcsz.jsp"></forward>
+		 </action>
+		 
+		 
+		 <!-- 家庭情况调查 -->
+		 <action path="/xszz_jtqkdc" 
+	    		 name="jtqkdcForm"
+	    		 type="com.zfsoft.xgxt.xszz.jtqkdc.JtqkdcAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="dcxxModify" path="/xsgzgl/xszz/jtqkdc/dcxxModify.jsp"></forward>
+			     <forward name="dcxxView" path="/xsgzgl/xszz/jtqkdc/dcxxView.jsp"></forward>
+			     <forward name="dcxxManage" path="/xsgzgl/xszz/jtqkdc/dcxxManage.jsp"></forward>
+			     <forward name="jtqkInfo" path="/xsgzgl/xszz/jtqkdc/jtqkInfo.jsp"></forward>
+			     <forward name="jtknmd" path="/xsgzgl/xszz/jtqkdc/jtknmd.jsp"></forward>
+			    
+		 </action>
+		 
+		 <!-- 困难生认定 -->
+		 <action path="/xszz_knsrd" 
+	    		 name="knsrdForm"
+	    		 type="com.zfsoft.xgxt.xszz.knsrd.KnsrdAction"
+				 scope="request"
+			     parameter="method">
+			  	 <forward name="knssq" path="/xsgzgl/xszz/knsrd/knssq.jsp"></forward>   
+			  	 <forward name="knssqManage" path="/xsgzgl/xszz/knsrd/knssqManage.jsp"></forward>   
+			  	 <forward name="knsshManage" path="/xsgzgl/xszz/knsrd/knsshManage.jsp"></forward>   
+			  	 <forward name="knsrdLcgz" path="/xsgzgl/xszz/knsrd/knsrdLcgz.jsp"></forward>   
+			  	 <forward name="knsrdDgsh" path="/xsgzgl/xszz/knsrd/knsrdDgsh.jsp"></forward>   
+			  	 <forward name="knsrdPlsh" path="/xsgzgl/xszz/knsrd/knsrdPlsh.jsp"></forward>   
+			  	 <forward name="knsrdView" path="/xsgzgl/xszz/knsrd/knsrdView.jsp"></forward>   
+			  	 <forward name="knsrdShqk" path="/xsgzgl/xszz/knsrd/knsrdShqk.jsp"></forward>   
+			  	 <forward name="studentsList" path="/xsgzgl/xszz/knsrd/studentsList.jsp"></forward>   
+			  	 <forward name="viewYxKnsfp" path="/xsgzgl/xszz/knsrd/viewYxKnsfp.jsp"></forward>
+			  	 <forward name="viewPrint" path="/xsgzgl/xszz/knsrd/viewPrint.jsp"></forward>
+			  	 
+		 </action>
+		 <!-- 困难生档次 -->
+		 <action path="/xszz_knsdc" 
+	    		 name="knsdcForm"
+	    		 type="com.zfsoft.xgxt.xszz.knsdc.KnsdcAction"
+				 scope="request"
+			     parameter="method">
+			  <forward name="knsdcList" path="/xsgzgl/xszz/knsdc/knsdcList.jsp"></forward>
+			  <forward name="addKnsdc" path="/xsgzgl/xszz/knsdc/addKnsdc.jsp"></forward>
+			  <forward name="updateKnsdc" path="/xsgzgl/xszz/knsdc/updateKnsdc.jsp"></forward>
+			  <forward name="knyyList" path="/xsgzgl/xszz/knsdc/knyyList.jsp"></forward>
+			  <forward name="addKnyy" path="/xsgzgl/xszz/knsdc/addKnyy.jsp"></forward>
+			  <forward name="updateKnyy" path="/xsgzgl/xszz/knsdc/updateKnyy.jsp"></forward>
+		 </action>
+		 
+		 <!-- 申请理由代码维护 -->
+		 <action path="/xszz_sqlywh" 
+	    		 name="sqlyDmwhForm"
+	    		 type="com.zfsoft.xgxt.xszz.sqlydmwh.SqlyDmwhAction"
+				 scope="request"
+			     parameter="method">
+		 	<forward name="sqlywhManage" path="/xsgzgl/xszz/sqlydmwh/sqlywhManage.jsp"></forward>   <!-- 查询 -->
+			<forward name="addSqlywh" path="/xsgzgl/xszz/sqlydmwh/addSqlywh.jsp"></forward>			<!-- 增加 -->
+	 		<forward name="updateSqlywh" path="/xsgzgl/xszz/sqlydmwh/updateSqlywh.jsp"></forward>	<!-- 修改 -->
+		 </action>   
+		 <!-- 申请理由代码维护 -->
+		 
+		 <!-- 困难生查询 -->
+		 <action path="/xszz_knsjg" 
+	    		 name="knsjgForm"
+	    		 type="com.zfsoft.xgxt.xszz.knsjg.KnsjgAction"
+				 scope="request"
+			     parameter="method">
+			  <forward name="knsjg" path="/xsgzgl/xszz/knsjg/knsjglist.jsp"></forward>
+			  <forward name="addknsjg" path="/xsgzgl/xszz/knsjg/addKnsjg.jsp"></forward>
+			  <forward name="updateKnsjg" path="/xsgzgl/xszz/knsjg/updateKnsjg.jsp"></forward>
+			  <forward name="viewKnsjg" path="/xsgzgl/xszz/knsjg/viewKnsjg.jsp"></forward>
+			  <forward name="knsjgcopy" path="/xsgzgl/xszz/knsjg/knsjgcopy.jsp"></forward>
+			  <forward name="knstksPercent" path="/xsgzgl/xszz/knsjg/knstksPercent.jsp"></forward>
+		 </action>
+		 <!-- 困难生调查结果维护-->
+		 <action path="/xszz_knsdcwh" 
+	    		 name="knsjgwhForm"
+	    		 type="com.zfsoft.xgxt.xszz.knsjgwh.knsjgwhAction"
+				 scope="request"
+			     parameter="method">
+			  <forward name="getKnsWhList" path="/xsgzgl/xszz/knsjgwh/knswhList.jsp"></forward>
+			  <forward name="view" path="/xsgzgl/xszz/knsjgwh/view.jsp"></forward>
+		 </action>
+		 
+		<!-- 取消困难生资格 -->
+		<action path="/xszz_qxknszggl" 
+	    		 name="qxknszgForm"
+	    		 type="com.zfsoft.xgxt.xszz.qxknszg.QxknszgAction"
+				 scope="request"
+			     parameter="method">
+			  <forward name="qxKnszgManage" path="/xsgzgl/xszz/qxknszg/qxKnszgManage.jsp"></forward>
+			  <forward name="cancelKnsrdzg" path="/xsgzgl/xszz/qxknszg/cancelKnsrdzg.jsp"></forward>
+		 </action>
+		 
+		 <!-- 取消困难生记录 -->
+		 <action path="/xszz_qxknsjlgl" 
+	    		 name="qxknsjlForm"
+	    		 type="com.zfsoft.xgxt.xszz.qxknsjl.QxknsjlAction"
+				 scope="request"
+			     parameter="method">
+			  <forward name="qxKnsjlManage" path="/xsgzgl/xszz/qxknsjl/qxKnsjlManage.jsp"></forward>
+			  <forward name="viewQxKnszgjl" path="/xsgzgl/xszz/qxknsjl/viewQxKnszgjl.jsp"></forward>
+		 </action>
+		 
+		 
+		 <!-- 班级评议 < -->
+		 <!-- 基础设置 -->
+		 <action path="/xszz_knsjcszbjpy" 
+		   		 name="knsjcszbjpyForm"
+		   		 type="com.zfsoft.xgxt.xszz.knsrdbjpy.knsjcszbjpy.KnsjcszbjpyAction"
+				 scope="request"
+			     parameter="method">
+			      <forward name="jcsz" path="/xsgzgl/xszz/knsrdbjpy/knsjcszbjpy/jcsz.jsp"></forward>
+			      <forward name="knsRssz" path="/xsgzgl/xszz/knsrdbjpy/knsjcszbjpy/knsRssz.jsp"></forward>
+		 </action>
+		 
+		 <!-- 班级评议小组设置 -->
+		 <action path="/xszz_knsrdbjpy_xzsz" forward="/xszz_knsrdbjpy_xzszgl.do?method=xzszManage"/>
+		<action path="/xszz_knsrdbjpy_xzszgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.xszz.knsrdbjpy.xzsz.XzszAction" 
+	   			name="xxzszForm"         
+	   			parameter="method">	
+	   		<forward name="xzszManage" path="/xsgzgl/xszz/knsrdbjpy/xzsz/xzszManage.jsp"></forward>
+	   		<forward name="addXzsz" path="/xsgzgl/xszz/knsrdbjpy/xzsz/addXzsz.jsp"></forward>
+	   		<forward name="updateXzsz" path="/xsgzgl/xszz/knsrdbjpy/xzsz/updateXzsz.jsp"></forward>
+	   		<forward name="viewXzsz" path="/xsgzgl/xszz/knsrdbjpy/xzsz/viewXzsz.jsp"></forward>
+		</action>
+		 <!-- 结果录入 -->
+		 <action path="/xszz_knsrdbjpy_jglr" forward="/xszz_knsrdbjpy_jglrgl.do?method=jglrManage"/>
+		<action path="/xszz_knsrdbjpy_jglrgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.xszz.knsrdbjpy.jglr.JglrAction" 
+	   			name="jglrForm"         
+	   			parameter="method">	
+	   		<forward name="jglrManage" path="/xsgzgl/xszz/knsrdbjpy/jglr/jglrManage.jsp"></forward>
+		</action>
+		 <!-- 结果查询 -->
+		 <action path="/xszz_knsrdbjpy_jgcx" forward="/xszz_knsrdbjpy_jgcxgl.do?method=jgcxManage"/>
+		<action path="/xszz_knsrdbjpy_jgcxgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.xszz.knsrdbjpy.jgcx.JgcxAction" 
+	   			name="jgcxForm"         
+	   			parameter="method">	
+	   		<forward name="jgcxManage" path="/xsgzgl/xszz/knsrdbjpy/jgcx/jgcxManage.jsp"></forward>
+	   		<forward name="jgcxView" path="/xsgzgl/xszz/knsrdbjpy/jgcx/jgcxView.jsp"></forward>
+	   		<forward name="jgcxTj" path="/xsgzgl/xszz/knsrdbjpy/jgcx/jgcxTj.jsp"></forward>
+		</action>
+		 
+		 <!-- 困难生认定 -->
+		 <action path="/xszz_knsrdbjpy" 
+		  		 name="knsrdbjpyForm"
+		  		 type="com.zfsoft.xgxt.xszz.knsrdbjpy.knsrdbjpy.KnsrdbjpyAction"
+				 scope="request"
+			     parameter="method">
+			  	 <forward name="knssq" path="/xsgzgl/xszz/knsrdbjpy/knsrdbjpy/knssq.jsp"></forward>   
+			  	 <forward name="knssqManage" path="/xsgzgl/xszz/knsrdbjpy/knsrdbjpy/knssqManage.jsp"></forward>   
+			  	 <forward name="knsshManage" path="/xsgzgl/xszz/knsrdbjpy/knsrdbjpy/knsshManage.jsp"></forward>   
+			  	 <forward name="knsrdbjpyLcgz" path="/xsgzgl/xszz/knsrdbjpy/knsrdbjpy/knsrdbjpyLcgz.jsp"></forward>   
+			  	 <forward name="knsrdbjpyDgsh" path="/xsgzgl/xszz/knsrdbjpy/knsrdbjpy/knsrdbjpyDgsh.jsp"></forward>   
+			  	 <forward name="knsrdbjpyPlsh" path="/xsgzgl/xszz/knsrdbjpy/knsrdbjpy/knsrdbjpyPlsh.jsp"></forward>   
+			  	 <forward name="knsrdbjpyView" path="/xsgzgl/xszz/knsrdbjpy/knsrdbjpy/knsrdbjpyView.jsp"></forward>   
+			  	 <forward name="knsrdbjpyShqk" path="/xsgzgl/xszz/knsrdbjpy/knsrdbjpy/knsrdbjpyShqk.jsp"></forward>   
+			  	 <forward name="studentsList" path="/xsgzgl/xszz/knsrdbjpy/knsrdbjpy/studentsList.jsp"></forward>   
+			  	 
+		 </action>
+		 <!-- 班级评议 > -->
+		 
+		 <!-- 资助项目结果 -->
+		 <action path="/xszz_zzxmjg" 
+	    		 name="zzxmjgForm"
+	    		 type="com.zfsoft.xgxt.xszz.zzxmjg.ZzxmjgAction"
+				 scope="request"
+			     parameter="method">
+			  <forward name="zzxmjg" path="/xsgzgl/xszz/zzxmjg/zzxmjglist.jsp"></forward>
+			  <forward name="addzzxmjg" path="/xsgzgl/xszz/zzxmjg/addZzxmjg.jsp"></forward>
+			  <forward name="updateZzxmjg" path="/xsgzgl/xszz/zzxmjg/updateZzxmjg.jsp"></forward>
+			  <forward name="viewZzxmjg" path="/xsgzgl/xszz/zzxmjg/viewZzxmjg.jsp"></forward>
+			  <forward name="zzxmhzList" path="/xsgzgl/xszz/zzxmjg/zzxmhzList.jsp"></forward>
+			  <forward name="zzxmhzView" path="/xsgzgl/xszz/zzxmjg/zzxmhzView.jsp"></forward>
+			  <forward name="zzjgCopy" path="/xsgzgl/xszz/zzxmjg/zzjgCopy.jsp"></forward>
+			  <forward name="drForQdjd" path="/xsgzgl/xszz/zzxmjg/drForQdjd.jsp"></forward>
+		 </action>
+		 
+		 	 		 
+		 <!-- 项目类别维护-->
+		<action path="/xszz_xmlbwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xszz.xmlbwh.XmlbwhAction" 
+    			name="xmlbwhForm"
+    			parameter="method">
+    	<forward name="xmlbwhCx" path="/xsgzgl/xszz/xmlbwh/xmlbwhCx.jsp"></forward><!-- 查询 -->
+			<forward name="xmlbwhZj" path="/xsgzgl/xszz/xmlbwh/xmlbwhZj.jsp"></forward><!-- 增加 -->
+			<forward name="xmlbwhXg" path="/xsgzgl/xszz/xmlbwh/xmlbwhXg.jsp"></forward><!-- 修改 -->
+		</action>		 				 		 
+		 <!-- 项目维护-->
+		<action path="/xszz_xmwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xszz.xmwh.xmwh.XmwhAction" 
+    			name="xmwhForm"
+    			parameter="method">
+    		<forward name="xmwhCx" path="/xsgzgl/xszz/xmwh/xmwhCx.jsp"></forward><!-- 查询 -->
+			<forward name="xmwhZj" path="/xsgzgl/xszz/xmwh/xmwhZj.jsp"></forward><!-- 增加 -->
+			<forward name="xmwhXg" path="/xsgzgl/xszz/xmwh/xmwhXg.jsp"></forward><!-- 修改 -->
+			<forward name="xmwhJbsz" path="/xsgzgl/xszz/xmwh/xmwhJbsz.jsp"></forward><!-- 基本设置 -->
+			<forward name="xmwhfz" path="/xsgzgl/xszz/xmwh/xmwhfz.jsp"></forward><!-- 资助项目复制 -->
+			<forward name="xmwhJfsz" path="/xsgzgl/xszz/xmwh/xmwhJfsz.jsp"></forward><!-- 资助项目复制 -->
+		</action>
+		
+		<!-- 项目维护-人数设置-->
+		<action path="/xszz_xmwh_rssz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xszz.xmwh.rssz.XmwhRsszAction" 
+    			name="xmwhRsszForm"
+    			parameter="method">
+    		<forward name="xmwhRsszCx" path="/xsgzgl/xszz/xmwh/xmwhRsszCx.jsp"></forward><!-- 人数设置查询 -->
+			<forward name="xmwhRsszXg" path="/xsgzgl/xszz/xmwh/xmwhRsszXg.jsp"></forward><!-- 人数设置保存 -->
+			<forward name="xmwhRsszBlsz" path="/xsgzgl/xszz/xmwh/xmwhRsszBlsz.jsp"></forward><!-- 人数设置-比例设置 -->
+			<forward name="xmwhRsszLnme" path="/xsgzgl/xszz/xmwh/xmwhRsszLnme.jsp"></forward><!-- 人数设置-历年名额查询-->
+			<forward name="xmwhRsszCk" path="/xsgzgl/xszz/xmwh/xmwhRsszCk.jsp"></forward>
+		</action>		
+		
+		<!-- 项目维护-兼得设置-->
+		<action path="/xszz_xmwh_jdsz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xszz.xmwh.jdsz.XmwhJdszAction" 
+    			name="xmwhJdszForm"
+    			parameter="method">
+    		<forward name="xmwhJdszCx" path="/xsgzgl/xszz/xmwh/xmwhJdszCx.jsp"></forward><!-- 兼得设置查询 -->
+		</action>
+		<!-- 项目维护-审核调整奖项设置-->
+		<action path="/xszz_xmwh_shsz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xszz.xmwh.shsz.XmwhShszAction" 
+    			name="xmwhShszForm"
+    			parameter="method">
+    		<forward name="xmwhShszCx" path="/xsgzgl/xszz/xmwh/xmwhShszCx.jsp"></forward><!-- 审核调整奖项设置查询 -->
+		</action>	
+			<!-- 项目维护-条件 设置-->
+		<action path="/xszz_xmwh_tjsz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xszz.xmwh.tjsz.XmwhTjszAction" 
+    			name="xmwhTjszForm"
+    			parameter="method">
+    		<forward name="xmwhTjszCx" path="/xsgzgl/xszz/xmwh/xmwhTjszCx.jsp"></forward><!-- 条件设置查询 -->
+			<forward name="xmwhTjszXg" path="/xsgzgl/xszz/xmwh/xmwhTjszXg.jsp"></forward><!-- 条件设置保存 -->
+			<forward name="xmwhTjszQy" path="/xsgzgl/xszz/xmwh/xmwhTjszQy.jsp"></forward><!-- 条件设置-启用/不启用 -->
+			<forward name="xmwhTjszXn" path="/xsgzgl/xszz/xmwh/xmwhTjszXn.jsp"></forward><!-- 条件设置-学年学期选择 -->
+			<forward name="xmwhTjszTjzDiv" path="/xsgzgl/xszz/xmwh/xmwhTjszTjzDiv.jsp"></forward><!-- 条件设置-条件值弹层选择 -->
+		</action>	 	
+		
+		<!-- 资助项目的申请审核 -->
+		<action path="/xszz_sqsh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xszz.sqsh.XszzSqshAction" 
+    			name="xszzSqshForm"
+    			parameter="method">
+    			<forward name="xszzXmsq" path="/xsgzgl/xszz/sqsh/xszzXmsq.jsp"></forward>
+    			<forward name="getXmsqInfo" path="/xsgzgl/xszz/sqsh/xmsqInfoList.jsp"></forward>
+    			<forward name="xmshManage" path="/xsgzgl/xszz/sqsh/xmshManage.jsp"></forward>
+    			<forward name="zzxmDgsh" path="/xsgzgl/xszz/sqsh/zzxmDgsh.jsp"></forward>
+    			<forward name="xmsqManage" path="/xsgzgl/xszz/sqsh/xmsqManage.jsp"></forward>
+    			<forward name="xmsqLcgz" path="/xsgzgl/xszz/sqsh/xmsqLcgz.jsp"></forward>
+    			<forward name="zzxmPlsh" path="/xsgzgl/xszz/sqsh/zzxmPlsh.jsp"></forward>
+    			<forward name="updateXmsq" path="/xsgzgl/xszz/sqsh/updateXmsq.jsp"></forward>
+    			<forward name="viewXmsq" path="/xsgzgl/xszz/sqsh/viewXmsq.jsp"></forward>
+    			<forward name="zzxmShqk" path="/xsgzgl/xszz/sqsh/zzxmShqk.jsp"></forward>
+    			<forward name="zzxmShtj" path="/xsgzgl/xszz/sqsh/zzxmShtj.jsp"></forward>
+    			<forward name="studentsList" path="/xsgzgl/xszz/sqsh/studentsList.jsp"></forward> 
+    			<!-- ===========学生申请部分========= -->
+    			<forward name="xmsqStuManage" path="/xsgzgl/xszz/sqsh/xmsqStuManage.jsp"></forward>   
+    			<forward name="xszzXmsqStu" path="/xsgzgl/xszz/sqsh/xszzXmsqStu.jsp"></forward> 
+    			<forward name="updateXmsqStu" path="/xsgzgl/xszz/sqsh/updateXmsqStu.jsp"></forward> 
+    			<forward name="showxmxx" path="/xsgzgl/xszz/sqsh/showxmxx.jsp"></forward> 
+		</action>		
+		
+		
+		<action path="/xszz_bbwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xszz.bbwh.BbwhAction" 
+    			name="bbwhForm"
+    			parameter="method">
+    		<forward name="bgylList" path="/xsgzgl/xszz/bbwh/bgylList.jsp"></forward>
+    		<forward name="showYlbg" path="/xsgzgl/xszz/bbwh/showYlbg.jsp"></forward>
+		</action>
+		 
+		 
+		<!-- 资助班级评议 < -->
+		 <!-- 基本设置 -->
+		 <action path="/xszz_xszzbjpy_jcsz" 	forward="/xszz_xszzbjpy_jcszgl.do?method=jcsz"/>
+		 <action path="/xszz_xszzbjpy_jcszgl" 
+		   		 name="xszzJcszForm"
+		   		 type="com.zfsoft.xgxt.xszz.xszzbjpy.jcsz.JcszAction"
+				 scope="request"
+			     parameter="method">
+			      <forward name="jcsz" path="/xsgzgl/xszz/xszzbjpy/jcsz/jcsz.jsp"></forward>
+		 </action>
+		 
+		 <!-- 小组设置 -->
+		 <action path="/xszz_xszzbjpy_xzsz" forward="/xszz_xszzbjpy_xzszgl.do?method=xzszManage"/>
+		<action path="/xszz_xszzbjpy_xzszgl" 
+	  			scope="request"
+	  			type="com.zfsoft.xgxt.xszz.xszzbjpy.xzsz.XzszAction" 
+	  			name="xszzXzszForm"         
+	  			parameter="method">	
+	  		<forward name="xzszManage" path="/xsgzgl/xszz/xszzbjpy/xzsz/xzszManage.jsp"></forward>
+	  		<forward name="addXzsz" path="/xsgzgl/xszz/xszzbjpy/xzsz/addXzsz.jsp"></forward>
+	  		<forward name="updateXzsz" path="/xsgzgl/xszz/xszzbjpy/xzsz/updateXzsz.jsp"></forward>
+		</action>
+		 <!-- 结果录入 -->
+		 <action path="/xszz_xszzbjpy_jglr" forward="/xszz_xszzbjpy_jglrgl.do?method=jglrManage"/>
+		<action path="/xszz_xszzbjpy_jglrgl" 
+	  			scope="request"
+	  			type="com.zfsoft.xgxt.xszz.xszzbjpy.jglr.JglrAction" 
+	  			name="xszzJglrForm"         
+	  			parameter="method">	
+	  		<forward name="jglrManage" path="/xsgzgl/xszz/xszzbjpy/jglr/jglrManage.jsp"></forward>
+		</action>
+		 <!-- 结果查询 -->
+		 <action path="/xszz_xszzbjpy_jgcx" forward="/xszz_xszzbjpy_jgcxgl.do?method=jgcxManage"/>
+		<action path="/xszz_xszzbjpy_jgcxgl" 
+	  			scope="request"
+	  			type="com.zfsoft.xgxt.xszz.xszzbjpy.jgcx.JgcxAction" 
+	  			name="xszzJgcxForm"         
+	  			parameter="method">	
+	  		<forward name="jgcxManage" path="/xsgzgl/xszz/xszzbjpy/jgcx/jgcxManage.jsp"></forward>
+	  		<forward name="jgcxView" path="/xsgzgl/xszz/xszzbjpy/jgcx/jgcxView.jsp"></forward>
+	  		<forward name="jgcxTj" path="/xsgzgl/xszz/xszzbjpy/jgcx/jgcxTj.jsp"></forward>
+		</action>
+		
+		<!-- 班级评议小组成员 -->
+		<action path="/xszz_xszzbjpy_pycy" forward="/xszz_xszzbjpy_pycygl.do?method=pycyManage"/>
+		<action path="/xszz_xszzbjpy_pycygl" 
+	  			scope="request"
+	  			type="com.zfsoft.xgxt.xszz.xszzbjpy.pycy.PycyAction" 
+	  			name="xszzPycyForm"         
+	  			parameter="method">	
+	  		<forward name="pycyManage" path="/xsgzgl/xszz/xszzbjpy/pycy/pycyManage.jsp"></forward>
+		</action>
+		
+		
+		<!-- 资助班级评议 > -->
+		<!-- 资助待遇 -->
+		 <action path="/xszz_zzdy_jcsz" forward="/xszz_zzdyjcsz.do?method=getSzxmList"/>
+		<action path="/xszz_zzdyjcsz" 
+	  			scope="request"
+	  			type="com.zfsoft.xgxt.xszz.zzdy.jcsz.ZzdyJcszAction" 
+	  			name="ZzdyJcszForm"         
+	  			parameter="method">	
+	  		<forward name="getSzxmList" path="/xsgzgl/xszz/zzdy/jcsz/szxmList.jsp"></forward>
+	  		<forward name="addSzxm" path="/xsgzgl/xszz/zzdy/jcsz/addSzxm.jsp"></forward>
+	  		<forward name="updateSzxm" path="/xsgzgl/xszz/zzdy/jcsz/updateSzxm.jsp"></forward>
+	  		<forward name="xmsz" path="/xsgzgl/xszz/zzdy/jcsz/xmsz.jsp"></forward>
+		</action>
+		
+		<action path="/xszz_zzdy_zzmdgl" forward="/xszz_zzdyzzmdgl.do?method=getZzmdList"/>
+		<action path="/xszz_zzdyzzmdgl" 
+	  			scope="request"
+	  			type="com.zfsoft.xgxt.xszz.zzdy.zzmdgl.ZzdyMdglAction" 
+	  			name="ZzdyMdglForm"         
+	  			parameter="method">	
+	  		<forward name="getZzmdList" path="/xsgzgl/xszz/zzdy/zzmdgl/zzmdList.jsp"></forward>
+	  		<forward name="synchroZzmd" path="/xsgzgl/xszz/zzdy/zzmdgl/synchroZzmd.jsp"></forward>
+	  		<forward name="updateZzmd" path="/xsgzgl/xszz/zzdy/zzmdgl/updateZzmd.jsp"></forward>
+	  		<forward name="viewZzmd" path="/xsgzgl/xszz/zzdy/zzmdgl/viewZzmd.jsp"></forward>
+		</action>
+		
+		<action path="/xszz_zzdy_zzbtff" forward="/xszz_zzdyzzbtff.do?method=getBtffList"/>
+		<action path="/xszz_zzdyzzbtff" 
+	  			scope="request"
+	  			type="com.zfsoft.xgxt.xszz.zzdy.zzbtff.ZzdyBtffAction" 
+	  			name="ZzdyBtffForm"         
+	  			parameter="method">	
+	  		<forward name="getBtffList" path="/xsgzgl/xszz/zzdy/zzbtff/btffList.jsp"></forward>
+	  		<forward name="ayByff" path="/xsgzgl/xszz/zzdy/zzbtff/ayByff.jsp"></forward>
+	  		<forward name="viewBtff" path="/xsgzgl/xszz/zzdy/zzbtff/viewBtff.jsp"></forward>
+		</action>
+		
+		<!-- 信息修改字段设置 -->
+		<action path="/xszz_jtqkdc_xgzdsz" forward="/jtqkdc_xgzdsz.do?method=xgzdCx"/>
+		<action path="/jtqkdc_xgzdsz" 
+	  			scope="request"
+	  			type="com.zfsoft.xgxt.xszz.jtqkxgzd.XgzdAction" 
+	  			name="XgzdForm"         
+	  			parameter="method">	
+	  		<forward name="xgzdCx" path="/xsgzgl/xszz/xgzdsz/xgzdsz.jsp"></forward>
+	  	</action>
+	  	<!-- 学费补助名单查询 -->
+	  	<action path="/xszz_zzxmjg_xfbz" forward="/xszz_xfbzmdgl.do?method=xfbzmdList"/>
+		<action path="/xszz_xfbzmdgl" 
+	  			scope="request"
+	  			type="com.zfsoft.xgxt.xszz.xfbzmd.XfbzmdAction" 
+	  			name="xfbzmdForm"         
+	  			parameter="method">	
+	  		<forward name="xfbzmdList" path="/xsgzgl/xszz/xfbzmd/xfbzmdList.jsp"></forward>
+	  	</action>
+	  	
+	  	<!-- 资助款发放 -->
+	  	<action path="/xszz_zzkff"
+	  	 		scope="request" 
+	  	 		type="com.zfsoft.xgxt.xszz.zzkff.ZzkffAction" name="zzkffForm"
+	  	 		parameter="method">
+	  	 	<forward name="zzkffCx" path="/xsgzgl/xszz/zzkff/zzkffList.jsp"></forward>
+	  	 	<forward name="zzkffZj" path="/xsgzgl/xszz/zzkff/zzkffAdd.jsp"></forward>
+	  	 	<forward name="zzkffXg" path="/xsgzgl/xszz/zzkff/zzkffUpdate.jsp"></forward>
+	  	 	<forward name="zzkffXq" path="/xsgzgl/xszz/zzkff/zzkffShow.jsp"></forward>
+	  	</action>
+		<!--绿色通道-->
+		<action path="/xszz_lstdsq" forward="/xszz_lstd.do?method=lstdsqList"/>
+		<action path="/xszz_lstdsh" forward="/xszz_lstd.do?method=lstdshList"/>
+		<action path="/xszz_lstdjg" forward="/xszz_lstd.do?method=lstdjgList"/>
+		<action path="/xszz_lstdsq_jcsz" forward="/xszz_lstd.do?method=jcsz"/>
+		<action path="/xszz_lstd"
+				scope="request"
+				type="com.zfsoft.xgxt.xszz.lstd.LstdAction" name="lstdForm"
+				parameter="method">
+			<forward name="jcsz" path="/xsgzgl/xszz/lstd/jcsz.jsp"/>
+			<forward name="lstdsqList" path="/xsgzgl/xszz/lstd/lstdsqList.jsp"/>
+			<forward name="lstdsqZj" path="/xsgzgl/xszz/lstd/lstdsqZj.jsp"/>
+			<forward name="lstdsqXg" path="/xsgzgl/xszz/lstd/lstdsqXg.jsp"/>
+			<forward name="lstdshList" path="/xsgzgl/xszz/lstd/lstdshList.jsp"/>
+			<forward name="lstdsh" path="/xsgzgl/xszz/lstd/lstdsh.jsp"/>
+			<forward name="lstdplsh" path="/xsgzgl/xszz/lstd/lstdplsh.jsp"/>
+			<forward name="print" path="/xsgzgl/xszz/lstd/print.jsp"/>
+			<forward name="lstdjgList" path="/xsgzgl/xszz/lstd/lstdjgList.jsp"/>
+			<forward name="lstdjgZj" path="/xsgzgl/xszz/lstd/lstdjgZj.jsp"/>
+			<forward name="lstdjgXg" path="/xsgzgl/xszz/lstd/lstdjgXg.jsp"/>
+		</action>
+
+	</action-mappings>
+
+</struts-config>

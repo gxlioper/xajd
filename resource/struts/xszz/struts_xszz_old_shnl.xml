@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzForm" type="xgxt.form.XszzForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!--<<<<<<<<<<<<<<<<<<<< 上海农林职业技术学院-学生及家庭情况调查申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="shnl_xsjtqkdc" 
+		   path="/shnl_xsjtqkdc" scope="request"
+		   type="xgxt.action.shnlzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/shnlzyjsxy/shnl_xsjtqkdc.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="shnl_xsjtqkdcb" 
+		   path="/shnl_xsjtqkdcb" scope="request"
+		   type="xgxt.action.shnlzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/shnlzyjsxy/shnl_xsjtqkdcb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 上海农林职业技术学院-家庭经济困难学生认定申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="shnl_kns" 
+		   path="/shnl_kns" scope="request"
+		   type="xgxt.action.shnlzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/shnlzyjsxy/shnl_kns.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="shnl_knsb" 
+		   path="/shnl_knsb" scope="request"
+		   type="xgxt.action.shnlzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/shnlzyjsxy/shnl_knsb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 上海农林职业技术学院-家庭经济困难学生认定审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_shnl_kns" 
+		   path="/auditing_shnl_kns" scope="request"
+		   type="xgxt.action.shnlzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/shnlzyjsxy/auditing_shnl_kns.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_shnl_kns_one" 
+		   path="/auditing_shnl_kns_one" scope="request"
+		   type="xgxt.action.shnlzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/shnlzyjsxy/auditing_shnl_kns_one.jsp"/>   
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

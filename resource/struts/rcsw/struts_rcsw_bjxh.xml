@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		 <form-bean name="yjsForm" type="wbyr.yjs.YjsForm" />						
+	</form-beans>
+	
+	<action-mappings>
+	    <action path="/yjsjbxxwh" forward="/yjs_jyjhsy.do?method=yjsjbxxwh"/>	
+	
+	    <!-- <<<<<<<<<<<<<<<<<<研究生-就业计划生育>>>>>>>>>>>>>>>>>> -->
+        <action 
+    	    path="/yjs_jyjhsy" 
+    		name="yjsForm"
+    		type="wbyr.yjs.YjsAction" 
+    		parameter="method"
+    		scope="request">
+    	 <!-- <<<<<<<<<<<<<<<<<<研究生基础数据维护>>>>>>>>>>>>>>>>> -->
+    		<forward name="yjsjbxx" path="/yjs/yjsjbxx.jsp"/>
+    		<forward name="yjsjbxxOne" path="/yjs/yjsjbxxOne.jsp"/>
+    		<forward name="jytj" path="/yjs/jytj/jytjIndex.jsp"/>
+    		<forward name="jytjAdd" path="/yjs/jytj/jytjAdd.jsp"/>
+    		<forward name="yjsjbxx" path="/yjs/yjsjbxx.jsp"/>
+    		<forward name="yjsjbxx" path="/yjs/yjsjbxx.jsp"/>
+    	</action>
+	</action-mappings>
+		
+</struts-config>

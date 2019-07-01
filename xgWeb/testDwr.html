@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>testDwr.html</title>
+		<meta http-equiv="content-type" content="text/html; charset=GBK">
+	</head>
+	<script type='text/javascript' src='/xgxt/dwr/interface/getList.js'></script>
+	<script type='text/javascript' src='/xgxt/dwr/engine.js'></script>
+	<script type='text/javascript' src='/xgxt/dwr/util.js'></script>
+	<script type="text/javascript">
+	function searchFormSubmitHandler() {	
+	  var searchexp = $("searchbox").value;	
+	  Catalogue.findItems(searchexp, displayItems);
+	  return false;
+	}
+
+	function addToCartButtonHandler() {	
+	  Cart.addItemToCart(this.itemId,displayCart);
+	}
+
+	var cellFunctions = [
+	  function(item) { return item.name; },
+	  function(item) { return item.description; },
+	  function(item) { return item.formattedPrice; },
+	  function(item) { 
+	    var btn = document.createElement("button");
+	    btn.innerHTML = "Add to cart";
+	    btn.itemId = item.id;
+	    btn.onclick = addToCartButtonHandler;
+	    return btn;
+	  }
+	];
+
+	function displayItems(items) {
+	
+	  DWRUtil.removeAllRows("items");
+	
+	  if (items.length === 0) {
+	    alert("No matching products found");
+	    $("catalogue").style.visibility = "hidden";
+	  } else {
+	    DWRUtil.addRows("items",items,cellFunctions);
+	    $("catalogue").style.visibility = "visible";
+	  }
+	}
+
+	function displayCart(cart) {
+	  var contentsUL = $("contents");
+	  contentsUL.innerHTML="";
+	  for (var I in cart.simpleContents) {
+	    var li = document.createElement("li");
+	    li.appendChild(document.createTextNode(
+	                    cart.simpleContents[I] + " x " + I)
+	                  );
+	    contentsUL.appendChild(li);
+	  }
+	  var totalSpan = $("totalprice");
+	  totalSpan.innerHTML = cart.formattedTotalPrice;
+	}
+	
+	window.onload = function() {
+	  getList.getList("select * from yhb",new Array(),new Array("yhm","kl"),displayCart);
+	}
+  </script>
+	<body>
+		<ul id="contents"></ul>
+	</body>
+</html>

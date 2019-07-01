@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    <form-bean name="jsspZdsForm" type="xgxt.rcsw.jssp.zds.JsspZdsForm" />
+		
+	</form-beans>
+
+	<action-mappings>
+	<!-- 江苏食品走读生 -->
+    <action path="/jsspZds" 
+    		name="jsspZdsForm"
+    		scope="request"
+    		parameter="method"
+    		type="xgxt.rcsw.jssp.zds.JsspZdsAction">
+    	<!-- 走读生申请 -->
+    	<forward name="zdsSq" path="/rcsw/jssp/zdsSq.jsp"/>
+    	<!-- 走读生查询 -->
+    	<forward name="zdsCx" path="/rcsw/jssp/zdsCx.jsp"/>
+    	<!-- 走读生审核 -->
+    	<forward name="zdsSh" path="/rcsw/jssp/zdsSh.jsp"/>
+    	<!-- 走读生审核 -->
+    	<forward name="sqsjSz" path="/rcsw/jssp/sqsjSz.jsp"/>
+    	<forward name="zxdksjEdit" path="/rcsw/jssp/zxdksjEdit.jsp"/>
+    </action>
+	</action-mappings>
+
+</struts-config>

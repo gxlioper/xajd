@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyYcsfxyActionForm" type="xgxt.pjpy.ycsfxy.PjpyYcsfxyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<action path="/pjpy_ycsf_pjjdkhcjwh" 	   forward="/pjpyycsfwh.do?method=pjjdkhcjWh"/> <!-- 平时，考核成绩维护默认页面 -->
+		<action path="/pjpy_ycsf_pjjdkhcjSave" 	   forward="/pjpyycsfwh.do?method=pjjdkhcjSave"/> <!-- 平时，考核成绩维护数据保存 -->
+        <action path="/pjpy_ycsf_pjjdkhcjDelete"   forward="/pjpyycsfwh.do?method=pjjdkhcjDelete"/> <!-- 平时，考核成绩维护数据删除  -->
+		<action path="/pjpy_ycsf_setzhszcpbl" 	   forward="/pjpyycsfwh.do?method=setZhszcpBl"/> <!-- 综合素质测评比例设置页面 -->
+        <action path="/pjpy_ycsf_zhszcpwh" 	   forward="/pjpyycsfwh.do?method=zhszcpwh"/> <!-- 综合素质测评维护页面 -->
+        <action path="/pjpy_ycsf_viewxskccj" 	   forward="/pjpyycsfwh.do?method=viewxskccj"/> <!-- 学生成绩页面 -->
+        <action path="/pjpy_ycsf_stuZhszcpQuery"   forward="/pjpyycsfwh.do?method=stuZhszcpQuery"/> <!-- 学生综合素质测评查询页面 -->
+        <action path="/pjpy_ycsf_stuZhszcpView"   forward="/pjpyycsfwh.do?method=stuZhszcpView"/> <!-- 学生综合素质测评详细信息 -->
+        <action path="/pjpy_ycsf_jxjrychsh"   forward="/pjpyycsfwh.do?method=jxjRychSh"/> <!-- 奖学金荣誉称号审核 -->
+ 		<action path="/pjpy_ycsf_xyhjmdsb"   forward="/pjpyycsfwh.do?method=xyhjmdSb"/> <!-- 学院获奖名单上报 -->
+        <action path="/pjpy_ycsf_addHjmdxx"   forward="/pjpyycsfwh.do?method=addHjmdxx"/> <!-- 增加获奖名单信息 -->
+        <action path="/pjpy_ycsf_hjmdxxModi"   forward="/pjpyycsfwh.do?method=hjmdxxModi"/> <!-- 修改获奖名单信息 -->
+        <action path="/pjpy_ycsf_hjmdxxDelete"   forward="/pjpyycsfwh.do?method=delHjmdxx"/> <!-- 删除获奖名单信息 -->
+        <action path="/pjpy_ycsf_hjmdsb"   forward="/pjpyycsfwh.do?method=hjmdSb"/> <!-- 获奖名单信息上报 -->
+        <action path="/pjpy_ycsf_hjmdxxView"   forward="/pjpyycsfwh.do?method=hjmdxxView"/> <!-- 显示获奖名单信息-->
+        <action path="/pjpy_ycsf_queryShResult"   forward="/pjpyycsfwh.do?method=queryShResult"/> <!--上报审核结果查询-->
+        <action path="/pjpy_ycsf_bjcjexp"   forward="/pjpyycsfwh.do?method=expBjcj"/> <!--上报审核结果查询-->
+        
+        <!-- 实际路径 -->	
+		<action path="/pjpyycsfwh"
+				type="xgxt.pjpy.ycsfxy.PjpyYcsfxyAction"
+				name="pjpyYcsfxyActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="pjjdkhcjWh"       path="/pjpy/ycsfxy/pjjdkhcjWh.jsp" /><!-- 平时，考核成绩维护默认页面 -->
+			<forward name="setzhszcpbl"       path="/pjpy/ycsfxy/setzhszcpbl.jsp" /><!-- 综合素质测评比例设置页面 -->
+			<forward name="zhszcpwh"       path="/pjpy/ycsfxy/zhszcpwh.jsp" /><!-- 综合素质测评维护页面 -->
+			<forward name="viewxskccj"       path="/pjpy/ycsfxy/viewxskccj.jsp" /><!-- 学生成绩页面 -->
+			<forward name="stuZhszcpQuery"       path="/pjpy/ycsfxy/stuZhszcpQuery.jsp" />
+			<forward name="stuZhszcpView"       path="/pjpy/ycsfxy/stuZhszcpView.jsp" />
+			<forward name="xyhjmdSb"            path="/pjpy/ycsfxy/xyhjmdSb.jsp"/><!-- 学院获奖名单上报默认页面 -->
+			<forward name="addHjmdxx"            path="/pjpy/ycsfxy/addHjmdxx.jsp"/>
+			<forward name="hjmdxxModi"            path="/pjpy/ycsfxy/modiHjmdxx.jsp"/>
+			<forward name="jxjrychsh"       path="/pjpy/ycsfxy/jxjrychsh.jsp" /><!-- 奖学金荣誉称号审核页面 -->
+			<forward name="hjmdSb"            path="/pjpy/ycsfxy/hjmdSb.jsp"/>
+			<forward name="hjmdxxView"            path="/pjpy/ycsfxy/hjmdxxView.jsp"/>
+			<forward name="teacherQueryResult"            path="/pjpy/ycsfxy/teacherQueryResult.jsp"/>
+			<forward name="studentQueryResult"            path="/pjpy/ycsfxy/studentQueryResult.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

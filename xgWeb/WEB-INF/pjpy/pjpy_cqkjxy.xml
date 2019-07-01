@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyCqkjxyActionForm" type="xgxt.pjpy.cqkjxy.PjpyCqkjxyActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpycqkjjxjsh"
+				type="xgxt.pjpy.cqkjxy.PjpyCqkjxyAction"
+				name="pjpyCqkjxyActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="jxjfdysh" path="/pjpy/cqlkxy/pjpy_cqkjxy_fdysh.jsp" />
+			
+		</action>
+
+	</action-mappings>
+	<message-resources key="pjpycqkjxy" parameter="xgxt.pjpy.cqkjxy.pjpycqkjxy" />
+</struts-config>

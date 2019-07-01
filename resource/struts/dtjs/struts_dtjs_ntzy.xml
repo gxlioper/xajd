@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xyhdForm" type="xgxt.dtjs.ntzy.xyhd.NtzyXyhdForm"/>
+		<form-bean name="ntzyWpjyForm" type="xgxt.dtjs.ntzy.gqtgl.NtzyWpjyForm" />
+		<form-bean name="pypxForm" type="xgxt.dtjs.ntzy.pypx.NtzyPypxForm" />
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+ 
+    <action path="/xyhdsq"  forward="/ntzy_xyhd.do?method=xyhdsq"/>	
+    <action path="/xyhdsh"  forward="/ntzy_xyhd.do?method=xyhdsh"/>
+    <action path="/xyhdcx"  forward="/ntzy_xyhd.do?method=xyhdcx"/>
+    <action path="/pypxsq" forward="/ntzy_pypx.do?method=pypxgl&amp;lx=sq"/>
+    <action path="/pypxsh" forward="/ntzy_pypx.do?method=pypxgl&amp;lx=sh"/>
+    <action path="/pypxcx" forward="/ntzy_pypx.do?method=pypxgl&amp;lx=cx"/>
+    
+    
+    <!-- 实际路径 -->
+    <action path="/ntzy_xyhd" 
+        		parameter="method"  
+        		name="xyhdForm" 
+        		scope="request"
+		        type="xgxt.dtjs.ntzy.xyhd.NtzyXyhdAction">		        
+		<forward name="xyhdsq" path="/dtjs/ntzy/xyhd/xyhdsq.jsp"/>
+		<forward name="xyhdsh" path="/dtjs/ntzy/xyhd/xyhdsh.jsp"/>
+		<forward name="xyhdshone" path="/dtjs/ntzy/xyhd/xyhdshone.jsp"/>
+		<forward name="xyhdcx" path="/dtjs/ntzy/xyhd/xyhdcx.jsp"/>
+		<forward name="xyhdview" path="/dtjs/ntzy/xyhd/xyhdview.jsp"/>
+		<forward name="xyhdprint" path="/dtjs/ntzy/xyhd/xyhdprint.jsp"/>
+	</action>
+	
+	<!-- 实际路径 南通职业评优评选-->
+    <action path="/ntzy_pypx" 
+        		parameter="method"  
+        		name="pypxForm" 
+        		scope="request"
+		        type="xgxt.dtjs.ntzy.pypx.NtzyPypxAction">		        
+		<forward name="pypxgl" path="/dtjs/ntzy/pypx/pypxgl.jsp"/>
+		<forward name="yxtzbsq" path="/dtjs/ntzy/pypx/yxtzbsq.jsp"/>
+		<forward name="yxtzbsh" path="/dtjs/ntzy/pypx/yxtzbsh.jsp"/>
+		<forward name="yxtzbshone" path="/dtjs/ntzy/pypx/yxtzbshone.jsp"/>
+		<forward name="yxtzbcx" path="/dtjs/ntzy/pypx/yxtzbcx.jsp"/>
+		<forward name="yxtzbview" path="/dtjs/ntzy/pypx/yxtzbview.jsp"/>
+		<forward name="yxtzbprint" path="/dtjs/ntzy/pypx/yxtzbprint.jsp"/>
+		<forward name="tytgbsq" path="/dtjs/ntzy/pypx/tytgbsq.jsp"/>
+		<forward name="tytgbsh" path="/dtjs/ntzy/pypx/tytgbsh.jsp"/>
+		<forward name="tytgbcx" path="/dtjs/ntzy/pypx/tytgbcx.jsp"/>
+		<forward name="tzzxshsq" path="/dtjs/ntzy/pypx/tzzxshsq.jsp"/>
+		<forward name="tytgbshone" path="/dtjs/ntzy/pypx/tytgbshone.jsp"/>
+		<forward name="tzzxshshone" path="/dtjs/ntzy/pypx/tzzxshshone.jsp"/>
+		<forward name="tytgbview" path="/dtjs/ntzy/pypx/tytgbview.jsp"/>
+		<forward name="tzzxshview" path="/dtjs/ntzy/pypx/tzzxshview.jsp"/>
+		<forward name="tzzxshprint" path="/dtjs/ntzy/pypx/tzzxshprint.jsp"/>
+		<forward name="tytgbprint" path="/dtjs/ntzy/pypx/tytgbprint.jsp"/>
+		
+	</action>
+	
+	 <action path="/ntzyWpjy" 
+    		type="xgxt.dtjs.ntzy.gqtgl.NtzyWpjyAction" 
+    		name="ntzyWpjyForm"
+    		parameter="method"
+    		scope="request">
+    	<forward name="wpjySq" path="/dtjs/gqtgl/wpjy/wpjySq.jsp"/>
+    	<forward name="wpjyCx" path="/dtjs/gqtgl/wpjy/wpjyCx.jsp"/>
+    	<forward name="wpjySh" path="/dtjs/gqtgl/wpjy/wpjySh.jsp"/>
+    	<forward name="wpjyGh" path="/dtjs/gqtgl/wpjy/wpjyGh.jsp"/>
+    	<forward name="wpjySqb" path="/dtjs/gqtgl/wpjy/wpjySqb.jsp"/>
+    </action>
+	
+	</action-mappings>
+
+</struts-config>

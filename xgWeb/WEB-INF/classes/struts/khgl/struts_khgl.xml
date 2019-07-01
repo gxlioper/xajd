@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<!-- 考核对象管理 -->
+		<form-bean name="KhdxglForm" type="com.zfsoft.xgxt.khgl.khdxgl.khdxgl.KhdxglForm" />
+		<form-bean name="PfzglForm" type="com.zfsoft.xgxt.khgl.khdxgl.pfzgl.PfzglForm" /><!-- 评分组 -->
+	<!-- 考核表管理 -->
+		<form-bean name="KhbglForm" type="com.zfsoft.xgxt.khgl.khbgl.KhbglForm" />
+		<form-bean name="KhnrglForm" type="com.zfsoft.xgxt.khgl.khbgl.khnrgl.KhnrglForm" />
+	<!-- 考核项目管理 -->
+		<form-bean name="KhxmglForm" type="com.zfsoft.xgxt.khgl.khxmgl.KhxmglForm" />
+		
+	<!-- 考核表评分-->
+		<form-bean name="KhpfForm" type="com.zfsoft.xgxt.khgl.khpf.KhpfForm" />
+	<!-- 评分详情-->
+		<form-bean name="PfxqForm" type="com.zfsoft.xgxt.khgl.jgcx.pfxq.PfxqForm" />
+	<!-- 考核结果-->
+		<form-bean name="JgcxForm" type="com.zfsoft.xgxt.khgl.jgcx.jgcx.JgcxForm" />
+	
+	
+	</form-beans>
+	<action-mappings>
+	
+	<action path="/khgl_khdxgl_khdxgl" forward="/khglKhdxgl.do?method=getKhdxglList" /><!-- 考核对象管理-->
+	<action path="/khgl_khdxgl_pfzgl" forward="/khglPfzgl.do?method=getPfzglList" />
+	<action path="/khgl_khbgl_khbgl" forward="/khglKhbgl.do?method=getKhbglList" /><!-- 考核表管理 -->
+	<action path="/khgl_khxmgl_khxmgl" forward="/khglKhxmgl.do?method=getKhxmglList" /><!-- 考核项目管理 -->
+	
+		<!-- 考核对象 -->
+		<action path="/khglKhdxgl" name="KhdxglForm" type="com.zfsoft.xgxt.khgl.khdxgl.khdxgl.KhdxglAction"
+			parameter="method" scope="request">
+			<forward name="addKhdx" path="/xsgzgl/khgl/khdxgl/khdxgl/addKhdx.jsp" />
+			<forward name="updateKhdx" path="/xsgzgl/khgl/khdxgl/khdxgl/updateKhdx.jsp" />
+			<forward name="viewKhdxList" path="/xsgzgl/khgl/khdxgl/khdxgl/viewKhdxList.jsp" />
+			<forward name="getKhdxglList" path="/xsgzgl/khgl/khdxgl/khdxgl/getKhdxglList.jsp" />
+			<forward name="showStu" path="/xsgzgl/khgl/khdxgl/khdxgl/showStu.jsp" />
+			<forward name="showTea" path="/xsgzgl/khgl/khdxgl/khdxgl/showTea.jsp" />
+		</action>
+	
+		<!-- 评分组 -->
+		<action path="/khglPfzgl" name="PfzglForm" type="com.zfsoft.xgxt.khgl.khdxgl.pfzgl.PfzglAction"
+			parameter="method" scope="request">
+			<forward name="addPfz" path="/xsgzgl/khgl/khdxgl/pfzgl/addPfz.jsp" />
+			<forward name="updatePfz" path="/xsgzgl/khgl/khdxgl/pfzgl/updatePfz.jsp" />
+			<forward name="getPfzglList" path="/xsgzgl/khgl/khdxgl/pfzgl/getPfzglList.jsp" />
+			<forward name="showStu" path="/xsgzgl/khgl/khdxgl/pfzgl/showStu.jsp" />
+			<forward name="showTea" path="/xsgzgl/khgl/khdxgl/pfzgl/showTea.jsp" />
+			<forward name="viewPfcy" path="/xsgzgl/khgl/khdxgl/pfzgl/viewPfcy.jsp" />
+			<forward name="showPfcyStu" path="/xsgzgl/khgl/khdxgl/pfzgl/showPfcyStu.jsp" />
+			<forward name="showPfcyTea" path="/xsgzgl/khgl/khdxgl/pfzgl/showPfcyTea.jsp" />
+			<forward name="showPfcyStuClass" path="/xsgzgl/khgl/khdxgl/pfzgl/showPfcyStuClass.jsp" />
+			<forward name="pfcydr" path="/xsgzgl/khgl/khdxgl/pfzgl/pfcydr.jsp" />
+		</action>
+	
+		<!-- 考核表管理-->
+		<action path="/khglKhbgl" name="KhbglForm" type="com.zfsoft.xgxt.khgl.khbgl.KhbglAction"
+			parameter="method" scope="request">
+			<forward name="addKhb" path="/xsgzgl/khgl/khbgl/khbgl/addKhb.jsp" />
+			<forward name="updateKhb" path="/xsgzgl/khgl/khbgl/khbgl/updateKhb.jsp" />
+			<forward name="getKhbglList" path="/xsgzgl/khgl/khbgl/khbgl/getKhbglList.jsp" />
+			<forward name="khnryl" path="/xsgzgl/khgl/khbgl/khbgl/khnryl.jsp" />
+			<forward name="khbfz" path="/xsgzgl/khgl/khbgl/khbgl/khbfz.jsp" />
+		</action>
+		<!-- 考核内容管理-->
+		<action path="/khglKhnrgl" name="KhnrglForm" type="com.zfsoft.xgxt.khgl.khbgl.khnrgl.KhnrglAction"
+			parameter="method" scope="request">
+			<forward name="addKhnr" path="/xsgzgl/khgl/khbgl/khnrgl/addKhnr.jsp" />
+			<forward name="updateKhnr" path="/xsgzgl/khgl/khbgl/khnrgl/updateKhnr.jsp" />
+			<forward name="viewKhnr" path="/xsgzgl/khgl/khbgl/viewKhnr.jsp" />
+			<forward name="getKhnrglList" path="/xsgzgl/khgl/khbgl/khnrgl/getKhnrglList.jsp" />
+		</action>
+		
+		<!-- 考核项目管理-->
+		<action path="/khglKhxmgl" name="KhxmglForm" type="com.zfsoft.xgxt.khgl.khxmgl.KhxmglAction"
+			parameter="method" scope="request">
+			<forward name="addKhxm" path="/xsgzgl/khgl/khxmgl/addKhxm.jsp" />
+			<forward name="updateKhxm" path="/xsgzgl/khgl/khxmgl/updateKhxm.jsp" />
+			<forward name="viewKhxm" path="/xsgzgl/khgl/khxmgl/viewKhxm.jsp" />
+			<forward name="pfdxSz" path="/xsgzgl/khgl/khxmgl/pfdxSz.jsp" />
+			<forward name="getKhxmglList" path="/xsgzgl/khgl/khxmgl/getKhxmglList.jsp" />
+		</action>
+
+		
+		<!-- 考核表评分-->
+		<action path="/khgl_khpf" forward="/khglKhpf.do?method=khpflList" />
+		
+		<action path="/khglKhpf" name="KhpfForm" type="com.zfsoft.xgxt.khgl.khpf.KhpfAction"
+			parameter="method" scope="request">
+			<forward name="khpflList" path="/xsgzgl/khgl/khpf/khpfList.jsp" />
+			<forward name="quePfJs" path="/xsgzgl/khgl/khpf/quePfJs.jsp" />
+			<forward name="quePfXs" path="/xsgzgl/khgl/khpf/quePfXs.jsp" />
+			<forward name="addPf" path="/xsgzgl/khgl/khpf/addPf.jsp" />
+			<forward name="addKhPf" path="/xsgzgl/khgl/khpf/addKhPf.jsp" />
+			<forward name="bzpf" path="/xsgzgl/khgl/khpf/bzpf.jsp" /><!-- 湖南城市学院个性化班组评分-->
+			<forward name="bzrpf" path="/xsgzgl/khgl/khpf/bzrpf.jsp" /><!-- 湖南城市学院个性化班主任评分-->
+			<forward name="xgpf" path="/xsgzgl/khgl/khpf/xgpf.jsp" /><!-- 修改评分-->
+			<forward name="scbzpfmm" path="/xsgzgl/khgl/khpf/scbzpfmm.jsp" />
+			<forward name="viewPf" path="/xsgzgl/khgl/khpf/viewPf.jsp" />
+			
+		</action>
+		
+		
+		<!-- 评分详情-->
+		<action path="/khgl_pfxq" forward="/khglPfxq.do?method=khxqlList" />
+		
+		<action path="/khglPfxq" name="PfxqForm" type="com.zfsoft.xgxt.khgl.jgcx.pfxq.PfxqAction"
+			parameter="method" scope="request">
+			<forward name="khxqlList" path="/xsgzgl/khgl/jgcx/pfxq/khxqlList.jsp" />
+		</action>
+		
+		<!-- 历史测评成绩-->
+		<action path="/khgl_lscpjgcx" forward="/khgljgcx.do?method=lscpjgList" />
+		
+		<action path="/khgl_jgcx" forward="/khgljgcx.do?method=jgcxList" />
+		
+		<action path="/khgljgcx" name="JgcxForm" type="com.zfsoft.xgxt.khgl.jgcx.jgcx.JgcxAction"
+			parameter="method" scope="request">
+			<forward name="jgcxList" path="/xsgzgl/khgl/jgcx/jgcx/jgcxList.jsp" />
+			<forward name="xmjgJsList" path="/xsgzgl/khgl/jgcx/jgcx/xmjgJsList.jsp" />
+			<forward name="xmjgXsList" path="/xsgzgl/khgl/jgcx/jgcx/xmjgXsList.jsp" />
+			<forward name="xmjgJsListOfSdty" path="/xsgzgl/khgl/jgcx/jgcx/xmjgJsListOfSdty.jsp" />
+			<forward name="xmjgXsListOfSdty" path="/xsgzgl/khgl/jgcx/jgcx/xmjgXsListOfSdty.jsp" />
+			<forward name="dftjList" path="/xsgzgl/khgl/jgcx/jgcx/dftjList.jsp" />
+			<forward name="dfrList" path="/xsgzgl/khgl/jgcx/jgcx/dfrList.jsp" />
+			<forward name="lscpjgList" path="/xsgzgl/khgl/jgcx/jgcx/lscpjgList.jsp" />
+			
+		</action>
+
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到长沙民政的配置文件,wjcf_csmz.xml    -->
+		<action path="/wjcf_csmz_cxcfshdefault"     forward="/wjcfcsmzwh.do?method=wjcfcsmzcxcfshDefault"></action> <!-- 撤消处分三级审核默认页面 -->
+		<action path="/wjcf_csmz_cxcfqry"           forward="/wjcfcsmzwh.do?method=wjcfcsmzcxcfQry"></action> <!-- 撤消处分查询 -->
+		<action path="/wjcf_csmz_cxcf"              forward="/wjcfcsmzwh.do?method=wjcfcsmzcxcfView"></action><!-- 撤消处分信息显示 -->
+		<action path="/wjcf_csmz_cxcfsave"          forward="/wjcfcsmzwh.do?method=wjcfcsmzcxcfSave"></action><!-- 撤消处分信息保存 -->
+		<action path="/csmz_cxcfsqdefault"          forward="/wjcfcsmzwh.do?method=cxcfSqDefault"></action><!-- 撤消处分申请默认页面 -->
+		<action path="/csmzcxcfsqinfo"              forward="/wjcfcsmzwh.do?method=cxcfSqInfo"></action><!-- 撤消处分申请详细信息显示 -->
+		<action path="/savecxcfsqinfo"              forward="/wjcfcsmzwh.do?method=savecxcfSqInfo"></action><!-- 保存撤消处分信息 -->
+		<action path="/csmz_cxcfcxdefault"          forward="/wjcfcsmzwh.do?method=cxcfCxDefault"></action><!-- 撤消处分查询默认页面 -->
+		<action path="/csmzcxcfcx"                  forward="/wjcfcsmzwh.do?method=csmzCxcfCx"></action><!-- 撤消处分查询 -->
+		<action path="/delcxcfinfo"                 forward="/wjcfcsmzwh.do?method=delCxcfInfo"></action><!-- 批量删除撤消处分 -->
+		<action path="/stucxcfviews"                forward="/wjcfcsmzwh.do?method=stucxcfViews"></action>
+		<action path="/cxcfdetails"                 forward="/wjcfcsmzwh.do?method=cxcfDetails"></action>
+		<action path="/csmz_cxcfmodi"               forward="/wjcfcsmzwh.do?method=cxcfModi"></action>
+		<action path="/plshcxcf"                    forward="/wjcfcsmzwh.do?method=cxcfplsh"></action><!-- 批量审核撤销处分 -->
+	</action-mappings>
+</struts-config>

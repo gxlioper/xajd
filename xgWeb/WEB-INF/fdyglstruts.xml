@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="fdyglForm" type="xgxt.form.FdyglForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!--<<<<<<<<<<<<<<<<<<<< 附加 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="fdyglForm" parameter="setCpdx" path="/setCpdx"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/setCpdx.jsp" />
+		</action>
+		<action name="fdyglForm" parameter="setPjConf" path="/setPjConf"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/setPjConf.jsp" />
+		</action>
+		<action name="fdyglForm" parameter="setPjzb" path="/setPjzb"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/setPjzb.jsp" />
+			<forward name="xyPjzb" path="/fdygl/setXyPjzb.jsp" />
+		</action>
+		<action name="fdyglForm" parameter="setPfbz" path="/setPfbz"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/setPfbz.jsp" />
+		</action>
+		<action name="fdyglForm" parameter="setFdyBj" path="/setFdyBj"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/setFdyBj.jsp" />
+		</action>
+		<action name="fdyglForm" parameter="pj" path="/pj"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/pj.jsp" />
+		</action>
+		<action name="fdyglForm" parameter="fdypjcj" path="/szdwfdypjcj"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/Fdypjcj.jsp" />
+		</action>
+		<action name="fdyglForm" parameter="fdypjjg" path="/sxjy_jspj"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/szdw/Pjjg.jsp" />
+		</action>
+		<action name="fdyglForm" parameter="fdypjjgDc" path="/sxjy_jspjJtDc"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/about:blank" />
+		</action>
+		<action name="fdyglForm" parameter="fdypjZfDc" path="/sxjy_fdypjZfDc"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/about:blank" />
+		</action>
+		
+		<action name="fdyglForm" parameter="xscppTj" path="/sxjy_xscppTj"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/about:blank" />
+		</action>
+		
+		<action name="fdyglForm" parameter="sxjy_fdypjDel" path="/sxjy_fdypjDel"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/szdw/Pjjg.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<查看学生投票率>>>>>>>>>>>>>>>>>>>>-->
+		<action name="fdyglForm" 
+		        parameter="szdw_xstpxx"
+		        path="/szdw_xstpxx"
+			    scope="request" 
+			    type="xgxt.action.FdyglAction">
+			<forward name="success" path="/szdw/xstpxx.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<LP云南艺术学院：思政队伍 操作类型选择菜单>>>>>>>>>>>>>>>>>>>>-->
+		<action name="fdyglForm" 
+		        parameter="szdw_xzcd"
+		        path="/szdw_xzcd"
+			    scope="request" 
+			    type="xgxt.action.FdyglAction">
+			<forward name="success" path="/szdw/Ynys_Xzcd.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<LP云南艺术学院：思政队伍 信息查询公用模块 >>>>>>>>>>>>>>>>>>>>-->
+	    <action name="fdyglForm" 
+	            parameter="szdw_xxQuery"
+	            path="/szdw_xxQuery"
+	            type="xgxt.action.FdyglAction">
+	         <forward name="success" path="/szdw/Ynys_Szdw_XxQuery.jsp"></forward>   
+	    </action>
+	    <!--<<<<<<<<<<<<<<<<<<<<LP云南艺术学院：思政队伍 工作信息数据操作 >>>>>>>>>>>>>>>>>>>>-->
+	    <action name="fdyglForm" 
+	            parameter="gzxxOne"
+	            path="/gzxxOne"
+	            type="xgxt.action.FdyglAction">
+	         <forward name="success" path="/szdw/Ynys_Szdw_GzxxDataMan.jsp"></forward>   
+	    </action>
+	     <!--<<<<<<<<<<<<<<<<<<<<LP云南艺术学院：思政队伍 奖惩信息数据操作 >>>>>>>>>>>>>>>>>>>>-->
+	     <action name="fdyglForm"
+	             parameter="jcxxOne"
+	             path="/jcxxOne"
+	             type="xgxt.action.FdyglAction">
+	             <forward name="success" path="/szdw/Ynys_Szdw_JcxxDataMan.jsp"></forward>
+	     </action>
+	      <!--<<<<<<<<<<<<<<<<<<<<LP云南艺术学院：思政队伍 业务培训学习信息数据操作 >>>>>>>>>>>>>>>>>>>>-->
+	     <action name="fdyglForm"
+	             parameter="ywpxxxOne"
+	             path="/ywpxxxOne"
+	             type="xgxt.action.FdyglAction">
+	             <forward name="success" path="/szdw/Ynys_Szdw_YwpxDataMan.jsp"></forward>	           
+	     </action>
+         <action
+                 attribute="fdyglForm"
+                 name="fdyglForm"
+                 path="/fdydlqxgl"
+                 scope="request"
+                 type="xgxt.fdygl.action.fdydlqxglaction" >
+                 <forward name="index_to_jsp" path="/fdygl/fdydlqxgl/fdydlqxgl_index.jsp" />
+         </action>
+         <!-- <<<<<<<<<<<<<<<<LP上海工程技术大学：调查问卷问题题维护>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+         <action name="fdyglForm" parameter="wjstwh" path="/wjstwh"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/fdygzdc/wjstwh_index.jsp" />
+		 </action>
+		 <!-- <<<<<<<<<<<<<<<<LP上海工程技术大学：添加、修改问题>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+         <action name="fdyglForm" parameter="wjstwh_make" path="/wjstwh_make"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/fdygzdc/wjstwh_make.jsp" />
+		 </action>
+		  <!-- <<<<<<<<<<<<<<<<LP上海工程技术大学：调查问卷问题选项维护>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+         <action name="fdyglForm" parameter="wjstxxwh" path="/wjstxxwh"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/fdygzdc/wjstxxwh_index.jsp" />
+		 </action>
+		 <!-- <<<<<<<<<<<<<<<<LP上海工程技术大学：调查问卷问题选项添加、修改、删除>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+         <action name="fdyglForm" parameter="wjstxxwh_make" path="/wjstxxwh_make"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/fdygzdc/wjstxxwh_make.jsp" />
+		 </action>
+		 <!-- <<<<<<<<<<<<<<<<LP上海工程技术大学：调查问卷预览>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+         <action name="fdyglForm" parameter="wj_view" path="/wj_view"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/fdygzdc/wj_view.jsp" />
+		 </action>
+		  <!-- <<<<<<<<<<<<<<<<LP上海工程技术大学：辅导员工作调查>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+         <action name="fdyglForm" parameter="fdywork_research" path="/fdywork_research"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/fdygzdc/fdywork_research.jsp" />
+		 </action>
+		  <!-- <<<<<<<<<<<<<<<<LP上海工程技术大学：辅导员工作调查结果查看>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+         <action name="fdyglForm" parameter="fdywork_result" path="/fdywork_result"
+			scope="request" type="xgxt.action.FdyglAction">
+			<forward name="success" path="/fdygl/fdygzdc/fdywork_result.jsp" />
+		 </action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

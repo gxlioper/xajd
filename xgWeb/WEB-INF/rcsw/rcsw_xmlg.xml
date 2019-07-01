@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="rcswxmlgForm" type="xgxt.rcgl.xmlg.RcglForm">
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="rcswxmlgForm" parameter="method" path="/bxjthdgl"
+				scope="request"	type="xgxt.rcgl.xmlg.RcglXmlgAction">
+			<forward name="bxjthdsq" path="/rcsw/xmlg/bxjthdsq.jsp" />
+			<forward name="bxjthdsh" path="/rcsw/xmlg/bxjthdsh.jsp" />
+			<forward name="bxjthddgsh" path="/rcsw/xmlg/bxjthddgsh.jsp" />
+			<forward name="bxjthdshcx" path="/rcsw/xmlg/bxjthdshcx.jsp" />
+			<forward name="bxjthdsqb" path="/rcsw/xmlg/bxjthdsqb.jsp" />
+		</action>
+		<action name="rcswxmlgForm" parameter="method" path="/kxjthdgl"
+				scope="request"	type="xgxt.rcgl.xmlg.RcglXmlgAction">
+			<forward name="kxjthdsq" path="/rcsw/xmlg/kxjthdsq.jsp" />
+			<forward name="kxjthdsh" path="/rcsw/xmlg/kxjthdsh.jsp" />
+			<forward name="kxjthddgsh" path="/rcsw/xmlg/kxjthddgsh.jsp" />
+			<forward name="kxjthdshcx" path="/rcsw/xmlg/kxjthdshcx.jsp" />
+		</action>
+		<action name="rcswxmlgForm" parameter="method" path="/cqtjgl"
+				scope="request"	type="xgxt.rcgl.xmlg.RcglXmlgAction">
+			<forward name="cqtjadd" path="/rcsw/xmlg/cqtjadd.jsp" />
+			<forward name="cqtjupdate" path="/rcsw/xmlg/cqtjupdate.jsp" />
+			<forward name="cqtjgl" path="/rcsw/xmlg/cqtjgl.jsp" />
+		</action>
+		<action name="rcswxmlgForm" parameter="method" path="/kkqkbsgl"
+				scope="request"	type="xgxt.rcgl.xmlg.RcglXmlgAction">
+			<forward name="kkqkbsadd" path="/rcsw/xmlg/kkqkbsadd.jsp" />
+			<forward name="kkqkbsupdate" path="/rcsw/xmlg/kkqkbsupdate.jsp" />
+			<forward name="kkqkbsgl" path="/rcsw/xmlg/kkqkbsgl.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

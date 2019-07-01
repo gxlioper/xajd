@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpy_hhgxy_dycxfwh.do" location="0,0" dimension="160,60" />
+  <StrutsActivity path="/hhgxy_dycxfview.do" location="260,0" dimension="142,60" />
+  <StrutsActivity path="/hhgxy_dycxfAdd.do" location="502,0" dimension="136,60" />
+  <StrutsActivity path="/pjpyhhgxyzhwh.do" location="176,160" dimension="310,84" />
+  <StrutsActivity path="/pjpy/hhgxy/zhcp/dycxpage.jsp" location="64,344" dimension="214,48" />
+  <StrutsActivity path="/pjpy/hhgxy/zhcp/dycxview.jsp" location="378,344" dimension="214,48" />
+  <StrutsTransition id="/pjpy_hhgxy_dycxfwh.do,null,/pjpyhhgxyzhwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="80,60" />
+      <AbsolutePoint location="80,110" />
+      <AbsolutePoint location="227,110" />
+      <AbsolutePoint location="227,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hhgxy_dycxfAdd.do,null,/pjpyhhgxyzhwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="570,60" />
+      <AbsolutePoint location="570,110" />
+      <AbsolutePoint location="434,110" />
+      <AbsolutePoint location="434,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhhgxyzhwh.do,dycxpage,/pjpy/hhgxy/zhcp/dycxpage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="253,244" />
+      <AbsolutePoint location="253,294" />
+      <AbsolutePoint location="171,294" />
+      <AbsolutePoint location="171,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhhgxyzhwh.do,dycxview,/pjpy/hhgxy/zhcp/dycxview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="408,244" />
+      <AbsolutePoint location="408,294" />
+      <AbsolutePoint location="485,294" />
+      <AbsolutePoint location="485,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hhgxy_dycxfview.do,null,/pjpyhhgxyzhwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="331,60" />
+      <AbsolutePoint location="331,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

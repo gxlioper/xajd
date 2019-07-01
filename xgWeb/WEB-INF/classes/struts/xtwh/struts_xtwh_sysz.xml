@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="xtwhSyszForm" type="xgxt.xtwh.sysz.SyszForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		
+    	<action path="/xtwh_xzzqwh" 	forward="/xtwhSysz.do?method=xzzqManage"/>		<!-- 下载专区维护 -->
+    	<action path="/xtwh_xsxmwh" 	forward="/xtwhSysz.do?method=xsxmManage"/>		<!-- 联系方式维护 -->
+		<action path="/xtwh_lxfswh" 	forward="/xtwhSysz.do?method=lxfswhUpdate"/>	<!-- 联系方式维护 -->
+		<action path="/xtwh_xssqxx" 	forward="/xtwhSysz.do?method=xssqInfo"/>		<!-- 学生申请项目信息 -->
+		<action path="/xtwh_dbsxxx" 	forward="/xtwhSysz.do?method=dbsxInfo"/>		<!-- 待办事项信息 -->
+		<action path="/xtwh_sydcwh" 	forward="/xtwhSysz.do?method=sydcManage"/>		<!-- 首页调查维护 -->
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 基本设置 -->
+    	
+    	<!-- 评奖基本设置 -->
+    	<action path="/xtwhSysz" 
+        		parameter="method"  
+        		name="xtwhSyszForm" 
+        		scope="request"
+		        type="xgxt.xtwh.sysz.SyszAction">	
+		     
+			<forward name="xsxmManage"    path="/xtwh/sysz/xsxmManage.jsp" />
+			<forward name="xsxmUpdate"    path="/xtwh/sysz/xsxmUpdate.jsp" />
+			<forward name="xssqInfo"      path="/xtwh/sysz/xssqInfo.jsp" />
+			<forward name="dbsxInfo"      path="/xtwh/sysz/dbsxInfo.jsp" />
+
+			<!-- 下载专区 -->
+			<forward name="xzzqManage"    	path="/xtwh/sysz/xzzq/xzzqManage.jsp" />
+			<forward name="xzzqUpdate"    	path="/xtwh/sysz/xzzq/xzzqUpdate.jsp" />
+			<forward name="xzzqView"    	path="/xtwh/sysz/xzzq/xzzqView.jsp" />
+			<forward name="viewXzzq"    	path="/xtwh/sysz/xzzq/viewXzzq.jsp" />
+			<forward name="xzzqMore"    	path="/xtwh/sysz/xzzq/xzzqMore.jsp" />
+			
+			<!-- 首页调查 -->
+			<forward name="sydcManage"    	path="/xtwh/sysz/sydc/sydcManage.jsp" />
+			<forward name="sydcUpdate"    	path="/xtwh/sysz/sydc/sydcUpdate.jsp" />
+			<forward name="sydcView"    	path="/xtwh/sysz/sydc/sydcView.jsp" />
+		
+		</action>
+		
+	</action-mappings>
+</struts-config>

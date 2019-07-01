@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/setGfs.do" location="0,0" dimension="88,60" />
+  <StrutsActivity path="/gfscjgl.do" location="188,0" dimension="94,60" />
+  <StrutsActivity path="/gfsjxjgl.do" location="382,0" dimension="100,60" />
+  <StrutsActivity path="/gfscqgl.do" location="582,0" dimension="94,60" />
+  <StrutsActivity path="/gfswsgl.do" location="776,0" dimension="94,60" />
+  <StrutsActivity path="/zgdd_jxgl.do" location="322,160" dimension="220,84" />
+  <StrutsActivity path="/jxgl/zgdd/setGfs.jsp" location="349,344" dimension="166,48" />
+  <StrutsTransition id="/gfsjxjgl.do,null,/zgdd_jxgl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="432,60" />
+      <AbsolutePoint location="432,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/setGfs.do,null,/zgdd_jxgl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="44,60" />
+      <AbsolutePoint location="44,125" />
+      <AbsolutePoint location="344,125" />
+      <AbsolutePoint location="344,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gfswsgl.do,null,/zgdd_jxgl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="823,60" />
+      <AbsolutePoint location="823,125" />
+      <AbsolutePoint location="520,125" />
+      <AbsolutePoint location="520,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gfscjgl.do,null,/zgdd_jxgl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="235,60" />
+      <AbsolutePoint location="235,95" />
+      <AbsolutePoint location="388,95" />
+      <AbsolutePoint location="388,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gfscqgl.do,null,/zgdd_jxgl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="629,60" />
+      <AbsolutePoint location="629,95" />
+      <AbsolutePoint location="476,95" />
+      <AbsolutePoint location="476,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zgdd_jxgl.do,setGfs,/jxgl/zgdd/setGfs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="432,244" />
+      <AbsolutePoint location="432,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

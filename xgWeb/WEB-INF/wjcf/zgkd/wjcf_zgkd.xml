@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfZgkdActionForm" type="xgxt.wjcf.zgkd.WjcfZgkdActionForm"/>
+	</form-beans>
+	<action-mappings>
+		<!-- 执行路径 -->
+		<action path="/wjcf_zgkd_gzjy"     forward="/wjcfzgkdwh.do?method=gzjy"/>
+	    <action path="/wjcf_zgkd_gzjyadd"  forward="/wjcfzgkdwh.do?method=gzjyAdd"/>
+	    <action path="/wjcf_wjstuinfo"     forward="/wjcfzgkdwh.do?method=wjstuInfo"/>
+	   	<action path="/wjcf_zgkd_gzjyview" forward="/wjcfzgkdwh.do?method=gzjyView"/>
+	    
+	    <!-- 跳转路径 -->
+		<action path="/wjcfzgkdwh"
+				type="xgxt.wjcf.zgkd.WjcfZgkdAction"
+				name="wjcfZgkdActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="gzjypage"     path="/wjcf/zgkd/gzjypage.jsp" />
+			<forward name="addpage"      path="/wjcf/zgkd/gzjyaddpage.jsp"/>
+			<forward name="stuwjcfinfo"  path="/wjcf/stuwjcfinfo.jsp"/>
+			<forward name="viewpage"     path="/wjcf/zgkd/gzjyviewpage.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="wjcfhygxy" parameter="xgxt.wjcf.hygxy.wjcfhygxy" />
+
+</struts-config>

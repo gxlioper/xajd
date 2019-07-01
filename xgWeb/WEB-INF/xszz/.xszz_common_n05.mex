@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/n05_xszz.do" location="7421,0" dimension="226,92" />
+  <StrutsActivity path="/logicError.do" location="3,1895" dimension="98,64" />
+  <StrutsActivity path="/xszz/commonN05/xfhj1shOne.jsp" location="0,1786" dimension="217,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj2sqb.jsp" location="317,1786" dimension="205,50" />
+  <StrutsActivity path="/about:blank" location="622,1786" dimension="100,50" />
+  <StrutsActivity path="/xszz/commonN05/wszxj1sq.jsp" location="822,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/knsrd2shOne.jsp" location="1125,1786" dimension="226,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj3sq.jsp" location="1451,1786" dimension="198,50" />
+  <StrutsActivity path="/xszz/commonN05/gjlzjxj1sq.jsp" location="1749,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/lsbz2sq.jsp" location="2052,1786" dimension="193,50" />
+  <StrutsActivity path="/xszz/commonN05/gjlzjxj2sq.jsp" location="2345,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj3shOne.jsp" location="2648,1786" dimension="221,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj2sq.jsp" location="2969,1786" dimension="198,50" />
+  <StrutsActivity path="/xszz/commonN05/gjlzjxj1shOne.jsp" location="3267,1786" dimension="226,50" />
+  <StrutsActivity path="/xszz/commonN05/xfjm1sqb.jsp" location="3593,1786" dimension="204,50" />
+  <StrutsActivity path="/xszz/commonN05/gjlzjxj1sh.jsp" location="3897,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/wszxj1sh.jsp" location="4200,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/xfjm2shOne.jsp" location="4503,1786" dimension="220,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj2shOne.jsp" location="4823,1786" dimension="221,50" />
+  <StrutsActivity path="/xszz/commonN05/lsbz2shOne.jsp" location="5144,1786" dimension="216,50" />
+  <StrutsActivity path="/xszz/commonN05/gjjxj1sq.jsp" location="5460,1786" dimension="196,50" />
+  <StrutsActivity path="/xszz/commonN05/dgszxm.jsp" location="5756,1786" dimension="195,50" />
+  <StrutsActivity path="/xszz/commonN05/gjjxj1sh.jsp" location="6051,1786" dimension="196,50" />
+  <StrutsActivity path="/xszz/commonN05/knsrd2sq.jsp" location="6347,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/xmxgsz.jsp" location="6650,1786" dimension="194,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj1shOne.jsp" location="6944,1786" dimension="221,50" />
+  <StrutsActivity path="/xszz/commonN05/jtqkdc1query.jsp" location="7265,1786" dimension="227,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj3sh.jsp" location="7592,1786" dimension="198,50" />
+  <StrutsActivity path="/xszz/commonN05/gjjxj1shOne.jsp" location="7890,1786" dimension="219,50" />
+  <StrutsActivity path="/xszz/commonN05/wszxjxm.jsp" location="8209,1786" dimension="200,50" />
+  <StrutsActivity path="/xszz/commonN05/gjlzjxj2sh.jsp" location="8509,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/gjlzjxj2shOne.jsp" location="8812,1786" dimension="226,50" />
+  <StrutsActivity path="/xszz/commonN05/jtqkdc1sq.jsp" location="9138,1786" dimension="208,50" />
+  <StrutsActivity path="/xszz/commonN05/knslsbz1shOne.jsp" location="9446,1786" dimension="234,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj1sq.jsp" location="9780,1786" dimension="198,50" />
+  <StrutsActivity path="/xszz/commonN05/wszxj1shOne.jsp" location="10078,1786" dimension="226,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj1sqb.jsp" location="10404,1786" dimension="205,50" />
+  <StrutsActivity path="/xszz/commonN05/xfjm1sh.jsp" location="10709,1786" dimension="197,50" />
+  <StrutsActivity path="/xszz/commonN05/lsbz2sqb.jsp" location="11006,1786" dimension="200,50" />
+  <StrutsActivity path="/xszz/commonN05/knsrd1sqb.jsp" location="11306,1786" dimension="210,50" />
+  <StrutsActivity path="/xszz/commonN05/gjlzjxj2sqb.jsp" location="11616,1786" dimension="210,50" />
+  <StrutsActivity path="/xszz/commonN05/xfjm2sq.jsp" location="11926,1786" dimension="197,50" />
+  <StrutsActivity path="/xszz/commonN05/xfjm1sq.jsp" location="12223,1786" dimension="197,50" />
+  <StrutsActivity path="/xszz/commonN05/knsrd1sq.jsp" location="12520,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/wszxjxmEdit.jsp" location="12823,1786" dimension="221,50" />
+  <StrutsActivity path="/xszz/commonN05/knsrd2sh.jsp" location="13144,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj1sh.jsp" location="13447,1786" dimension="198,50" />
+  <StrutsActivity path="/xszz/commonN05/xfjm1shOne.jsp" location="13745,1786" dimension="220,50" />
+  <StrutsActivity path="/xszz/commonN05/gjlzjxj1sqb.jsp" location="14065,1786" dimension="210,50" />
+  <StrutsActivity path="/xszz/commonN05/lsbz2sh.jsp" location="14375,1786" dimension="193,50" />
+  <StrutsActivity path="/xszz/commonN05/knsrd1sh.jsp" location="14668,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj2sh.jsp" location="14971,1786" dimension="198,50" />
+  <StrutsActivity path="/xszz/commonN05/xfjm2sqb.jsp" location="15269,1786" dimension="204,50" />
+  <StrutsActivity path="/xszz/commonN05/xfhj1sq.jsp" location="15573,1786" dimension="194,50" />
+  <StrutsActivity path="/xszz/commonN05/plszxm.jsp" location="15867,1786" dimension="190,50" />
+  <StrutsActivity path="/xszz/commonN05/xfjm2sh.jsp" location="16157,1786" dimension="197,50" />
+  <StrutsActivity path="/xszz/commonN05/knslsbz1sh.jsp" location="16454,1786" dimension="211,50" />
+  <StrutsActivity path="/errMsg.do" location="16765,1772" dimension="102,78" />
+  <StrutsActivity path="/xszz/commonN05/jtqkdc1queryOne.jsp" location="16967,1786" dimension="250,50" />
+  <StrutsActivity path="/xszz/commonN05/xfhj1sh.jsp" location="17317,1786" dimension="194,50" />
+  <StrutsActivity path="/xszz/commonN05/knsrd2sqb.jsp" location="17611,1786" dimension="210,50" />
+  <StrutsActivity path="/xszz/commonN05/xfhj1sqb.jsp" location="17921,1786" dimension="201,50" />
+  <StrutsActivity path="/xszz/commonN05/jtqkdc1sqb.jsp" location="18222,1786" dimension="215,50" />
+  <StrutsActivity path="/xszz/commonN05/knslsbz1sq.jsp" location="18537,1786" dimension="211,50" />
+  <StrutsActivity path="/xszz/commonN05/gjzxj3sqb.jsp" location="18848,1786" dimension="205,50" />
+  <StrutsActivity path="/xszz/commonN05/knsrd1shOne.jsp" location="19153,1786" dimension="226,50" />
+  <StrutsActivity path="/xszz/commonN05/gjjxj1sqb.jsp" location="19479,1786" dimension="203,50" />
+  <StrutsActivity path="/xszz/commonN05/wszxj1sqb.jsp" location="19782,1786" dimension="210,50" />
+  <StrutsActivity path="/logicError.jsp" location="0,2059" dimension="105,50" />
+  <StrutsTransition id="/n05_xszz.do,xmxgsz,/xszz/commonN05/xmxgsz.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7527,92" />
+      <AbsolutePoint location="7527,1652" />
+      <AbsolutePoint location="6747,1652" />
+      <AbsolutePoint location="6747,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj1shSave,/xszz/commonN05/gjzxj1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7529,92" />
+      <AbsolutePoint location="7529,1682" />
+      <AbsolutePoint location="6999,1682" />
+      <AbsolutePoint location="6999,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd2sh,/xszz/commonN05/knsrd2sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7593,92" />
+      <AbsolutePoint location="7593,902" />
+      <AbsolutePoint location="13245,902" />
+      <AbsolutePoint location="13245,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjjxj1sh,/xszz/commonN05/gjjxj1sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7521,92" />
+      <AbsolutePoint location="7521,1562" />
+      <AbsolutePoint location="6149,1562" />
+      <AbsolutePoint location="6149,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,wszxjxm,/xszz/commonN05/wszxjxm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7541,92" />
+      <AbsolutePoint location="7541,1652" />
+      <AbsolutePoint location="8309,1652" />
+      <AbsolutePoint location="8309,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj2sq,/xszz/commonN05/gjzxj2sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7488,92" />
+      <AbsolutePoint location="7488,1082" />
+      <AbsolutePoint location="3018,1082" />
+      <AbsolutePoint location="3018,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj2sq,/xszz/commonN05/gjlzjxj2sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7480,92" />
+      <AbsolutePoint location="7480,962" />
+      <AbsolutePoint location="2395,962" />
+      <AbsolutePoint location="2395,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj1shOne,/xszz/commonN05/gjlzjxj1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7492,92" />
+      <AbsolutePoint location="7492,1142" />
+      <AbsolutePoint location="3323,1142" />
+      <AbsolutePoint location="3323,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj2shSave,/xszz/commonN05/gjlzjxj2shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7546,92" />
+      <AbsolutePoint location="7546,1592" />
+      <AbsolutePoint location="8868,1592" />
+      <AbsolutePoint location="8868,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,jtqkdc1sqSave,/xszz/commonN05/jtqkdc1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7552,92" />
+      <AbsolutePoint location="7552,1502" />
+      <AbsolutePoint location="9294,1502" />
+      <AbsolutePoint location="9294,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,wszxj1sh,/xszz/commonN05/wszxj1sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7500,92" />
+      <AbsolutePoint location="7500,1262" />
+      <AbsolutePoint location="4301,1262" />
+      <AbsolutePoint location="4301,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfhj1sq,/xszz/commonN05/xfhj1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7611,92" />
+      <AbsolutePoint location="7611,632" />
+      <AbsolutePoint location="15621,632" />
+      <AbsolutePoint location="15621,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfhj1shOne,/xszz/commonN05/xfhj1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7422,92" />
+      <AbsolutePoint location="7422,122" />
+      <AbsolutePoint location="54,122" />
+      <AbsolutePoint location="54,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj1sqSave,/xszz/commonN05/gjzxj1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7560,92" />
+      <AbsolutePoint location="7560,1382" />
+      <AbsolutePoint location="9928,1382" />
+      <AbsolutePoint location="9928,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjjxj1sqSave,/xszz/commonN05/gjjxj1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7515,92" />
+      <AbsolutePoint location="7515,1472" />
+      <AbsolutePoint location="5509,1472" />
+      <AbsolutePoint location="5509,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj1sq,/xszz/commonN05/gjlzjxj1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7474,92" />
+      <AbsolutePoint location="7474,872" />
+      <AbsolutePoint location="1901,872" />
+      <AbsolutePoint location="1901,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knslsbz1shSave,/xszz/commonN05/knslsbz1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7556,92" />
+      <AbsolutePoint location="7556,1442" />
+      <AbsolutePoint location="9621,1442" />
+      <AbsolutePoint location="9621,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm1sq,/xszz/commonN05/xfjm1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7580,92" />
+      <AbsolutePoint location="7580,1082" />
+      <AbsolutePoint location="12272,1082" />
+      <AbsolutePoint location="12272,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,plszxm,/xszz/commonN05/plszxm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7615,92" />
+      <AbsolutePoint location="7615,572" />
+      <AbsolutePoint location="15962,572" />
+      <AbsolutePoint location="15962,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,lsbz2sh,/xszz/commonN05/lsbz2sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7603,92" />
+      <AbsolutePoint location="7603,752" />
+      <AbsolutePoint location="14471,752" />
+      <AbsolutePoint location="14471,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knslsbz1Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7439,92" />
+      <AbsolutePoint location="7439,362" />
+      <AbsolutePoint location="658,362" />
+      <AbsolutePoint location="658,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,dgszxm,/xszz/commonN05/dgszxm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7519,92" />
+      <AbsolutePoint location="7519,1532" />
+      <AbsolutePoint location="5853,1532" />
+      <AbsolutePoint location="5853,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj3sqSave,/xszz/commonN05/gjzxj3sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7467,92" />
+      <AbsolutePoint location="7467,782" />
+      <AbsolutePoint location="1500,782" />
+      <AbsolutePoint location="1500,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,lsbz2sq,/xszz/commonN05/lsbz2sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7476,92" />
+      <AbsolutePoint location="7476,902" />
+      <AbsolutePoint location="2100,902" />
+      <AbsolutePoint location="2100,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm2sqb,/xszz/commonN05/xfjm2sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7609,92" />
+      <AbsolutePoint location="7609,662" />
+      <AbsolutePoint location="15371,662" />
+      <AbsolutePoint location="15371,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd1shSave,/xszz/commonN05/knsrd1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7642,92" />
+      <AbsolutePoint location="7642,182" />
+      <AbsolutePoint location="19322,182" />
+      <AbsolutePoint location="19322,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj1sqb,/xszz/commonN05/gjlzjxj1sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7601,92" />
+      <AbsolutePoint location="7601,782" />
+      <AbsolutePoint location="14170,782" />
+      <AbsolutePoint location="14170,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd1sq,/xszz/commonN05/knsrd1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7585,92" />
+      <AbsolutePoint location="7585,1022" />
+      <AbsolutePoint location="12570,1022" />
+      <AbsolutePoint location="12570,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm2sh,/xszz/commonN05/xfjm2sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7617,92" />
+      <AbsolutePoint location="7617,542" />
+      <AbsolutePoint location="16255,542" />
+      <AbsolutePoint location="16255,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,jtqkdc1queryOne,/xszz/commonN05/jtqkdc1queryOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7624,92" />
+      <AbsolutePoint location="7624,452" />
+      <AbsolutePoint location="17092,452" />
+      <AbsolutePoint location="17092,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm2sq,/xszz/commonN05/xfjm2sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7578,92" />
+      <AbsolutePoint location="7578,1112" />
+      <AbsolutePoint location="12073,1112" />
+      <AbsolutePoint location="12073,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjjxj1sq,/xszz/commonN05/gjjxj1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7517,92" />
+      <AbsolutePoint location="7517,1502" />
+      <AbsolutePoint location="5607,1502" />
+      <AbsolutePoint location="5607,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd1shOne,/xszz/commonN05/knsrd1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7640,92" />
+      <AbsolutePoint location="7640,212" />
+      <AbsolutePoint location="19209,212" />
+      <AbsolutePoint location="19209,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfhj1Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7430,92" />
+      <AbsolutePoint location="7430,242" />
+      <AbsolutePoint location="632,242" />
+      <AbsolutePoint location="632,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm1shOne,/xszz/commonN05/xfjm1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7599,92" />
+      <AbsolutePoint location="7599,812" />
+      <AbsolutePoint location="13910,812" />
+      <AbsolutePoint location="13910,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,false,/errMsg.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7622,92" />
+      <AbsolutePoint location="7622,482" />
+      <AbsolutePoint location="16816,482" />
+      <AbsolutePoint location="16816,1772" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,wszxj1shOne,/xszz/commonN05/wszxj1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7562,92" />
+      <AbsolutePoint location="7562,1352" />
+      <AbsolutePoint location="10134,1352" />
+      <AbsolutePoint location="10134,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj2shOne,/xszz/commonN05/gjlzjxj2shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7548,92" />
+      <AbsolutePoint location="7548,1562" />
+      <AbsolutePoint location="8981,1562" />
+      <AbsolutePoint location="8981,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,jtqkdc1Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7451,92" />
+      <AbsolutePoint location="7451,542" />
+      <AbsolutePoint location="698,542" />
+      <AbsolutePoint location="698,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj2shSave,/xszz/commonN05/gjzxj2shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7507,92" />
+      <AbsolutePoint location="7507,1352" />
+      <AbsolutePoint location="4878,1352" />
+      <AbsolutePoint location="4878,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfhj1shSave,/xszz/commonN05/xfhj1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7424,92" />
+      <AbsolutePoint location="7424,152" />
+      <AbsolutePoint location="162,152" />
+      <AbsolutePoint location="162,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm2shOne,/xszz/commonN05/xfjm2shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7502,92" />
+      <AbsolutePoint location="7502,1292" />
+      <AbsolutePoint location="4558,1292" />
+      <AbsolutePoint location="4558,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj2sh,/xszz/commonN05/gjzxj2sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7607,92" />
+      <AbsolutePoint location="7607,692" />
+      <AbsolutePoint location="15070,692" />
+      <AbsolutePoint location="15070,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj1shOne,/xszz/commonN05/gjzxj1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7531,92" />
+      <AbsolutePoint location="7531,1712" />
+      <AbsolutePoint location="7109,1712" />
+      <AbsolutePoint location="7109,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfhj1sqb,/xszz/commonN05/xfhj1sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7630,92" />
+      <AbsolutePoint location="7630,362" />
+      <AbsolutePoint location="18021,362" />
+      <AbsolutePoint location="18021,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj2sqSave,/xszz/commonN05/gjzxj2sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7490,92" />
+      <AbsolutePoint location="7490,1112" />
+      <AbsolutePoint location="3117,1112" />
+      <AbsolutePoint location="3117,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj2Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7445,92" />
+      <AbsolutePoint location="7445,452" />
+      <AbsolutePoint location="678,452" />
+      <AbsolutePoint location="678,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd2shSave,/xszz/commonN05/knsrd2shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7465,92" />
+      <AbsolutePoint location="7465,752" />
+      <AbsolutePoint location="1294,752" />
+      <AbsolutePoint location="1294,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knslsbz1sh,/xszz/commonN05/knslsbz1sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7620,92" />
+      <AbsolutePoint location="7620,512" />
+      <AbsolutePoint location="16559,512" />
+      <AbsolutePoint location="16559,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj2Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7428,92" />
+      <AbsolutePoint location="7428,212" />
+      <AbsolutePoint location="625,212" />
+      <AbsolutePoint location="625,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj3sh,/xszz/commonN05/gjzxj3sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7535,92" />
+      <AbsolutePoint location="7535,1742" />
+      <AbsolutePoint location="7691,1742" />
+      <AbsolutePoint location="7691,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd2shOne,/xszz/commonN05/knsrd2shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7463,92" />
+      <AbsolutePoint location="7463,722" />
+      <AbsolutePoint location="1181,722" />
+      <AbsolutePoint location="1181,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm1Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7457,92" />
+      <AbsolutePoint location="7457,632" />
+      <AbsolutePoint location="718,632" />
+      <AbsolutePoint location="718,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj2sh,/xszz/commonN05/gjlzjxj2sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7543,92" />
+      <AbsolutePoint location="7543,1622" />
+      <AbsolutePoint location="8610,1622" />
+      <AbsolutePoint location="8610,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,wszxj1sqb,/xszz/commonN05/wszxj1sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7646,92" />
+      <AbsolutePoint location="7646,122" />
+      <AbsolutePoint location="19887,122" />
+      <AbsolutePoint location="19887,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjjxj1sqb,/xszz/commonN05/gjjxj1sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7644,92" />
+      <AbsolutePoint location="7644,152" />
+      <AbsolutePoint location="19580,152" />
+      <AbsolutePoint location="19580,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj1sh,/xszz/commonN05/gjzxj1sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7595,92" />
+      <AbsolutePoint location="7595,872" />
+      <AbsolutePoint location="13546,872" />
+      <AbsolutePoint location="13546,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj3sqb,/xszz/commonN05/gjzxj3sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7638,92" />
+      <AbsolutePoint location="7638,242" />
+      <AbsolutePoint location="18950,242" />
+      <AbsolutePoint location="18950,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj1Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7449,92" />
+      <AbsolutePoint location="7449,512" />
+      <AbsolutePoint location="692,512" />
+      <AbsolutePoint location="692,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj1sh,/xszz/commonN05/gjlzjxj1sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7498,92" />
+      <AbsolutePoint location="7498,1232" />
+      <AbsolutePoint location="3998,1232" />
+      <AbsolutePoint location="3998,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj3shSave,/xszz/commonN05/gjzxj3shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7486,92" />
+      <AbsolutePoint location="7486,1052" />
+      <AbsolutePoint location="2813,1052" />
+      <AbsolutePoint location="2813,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,lsbz2shOne,/xszz/commonN05/lsbz2shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7511,92" />
+      <AbsolutePoint location="7511,1412" />
+      <AbsolutePoint location="5198,1412" />
+      <AbsolutePoint location="5198,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfhj1sqSave,/xszz/commonN05/xfhj1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7613,92" />
+      <AbsolutePoint location="7613,602" />
+      <AbsolutePoint location="15718,602" />
+      <AbsolutePoint location="15718,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjjxj1shSave,/xszz/commonN05/gjjxj1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7539,92" />
+      <AbsolutePoint location="7539,1682" />
+      <AbsolutePoint location="8054,1682" />
+      <AbsolutePoint location="8054,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,wszxjxmEdit,/xszz/commonN05/wszxjxmEdit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7589,92" />
+      <AbsolutePoint location="7589,962" />
+      <AbsolutePoint location="12878,962" />
+      <AbsolutePoint location="12878,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,wszxjxmEditSave,/xszz/commonN05/wszxjxmEdit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7591,92" />
+      <AbsolutePoint location="7591,932" />
+      <AbsolutePoint location="12988,932" />
+      <AbsolutePoint location="12988,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd2sq,/xszz/commonN05/knsrd2sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7525,92" />
+      <AbsolutePoint location="7525,1622" />
+      <AbsolutePoint location="6499,1622" />
+      <AbsolutePoint location="6499,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj1Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7441,92" />
+      <AbsolutePoint location="7441,392" />
+      <AbsolutePoint location="665,392" />
+      <AbsolutePoint location="665,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,jtqkdc1query,/xszz/commonN05/jtqkdc1query.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7533,92" />
+      <AbsolutePoint location="7533,1742" />
+      <AbsolutePoint location="7378,1742" />
+      <AbsolutePoint location="7378,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,jtqkdc1sqb,/xszz/commonN05/jtqkdc1sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7632,92" />
+      <AbsolutePoint location="7632,332" />
+      <AbsolutePoint location="18329,332" />
+      <AbsolutePoint location="18329,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,lsbz2sqb,/xszz/commonN05/lsbz2sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7570,92" />
+      <AbsolutePoint location="7570,1232" />
+      <AbsolutePoint location="11106,1232" />
+      <AbsolutePoint location="11106,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd1sh,/xszz/commonN05/knsrd1sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7605,92" />
+      <AbsolutePoint location="7605,722" />
+      <AbsolutePoint location="14769,722" />
+      <AbsolutePoint location="14769,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj3Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7437,92" />
+      <AbsolutePoint location="7437,332" />
+      <AbsolutePoint location="652,332" />
+      <AbsolutePoint location="652,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj1sq,/xszz/commonN05/gjzxj1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7558,92" />
+      <AbsolutePoint location="7558,1412" />
+      <AbsolutePoint location="9829,1412" />
+      <AbsolutePoint location="9829,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,lsbz2sqSave,/xszz/commonN05/lsbz2sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7478,92" />
+      <AbsolutePoint location="7478,932" />
+      <AbsolutePoint location="2196,932" />
+      <AbsolutePoint location="2196,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm2Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7455,92" />
+      <AbsolutePoint location="7455,602" />
+      <AbsolutePoint location="712,602" />
+      <AbsolutePoint location="712,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm1sh,/xszz/commonN05/xfjm1sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7568,92" />
+      <AbsolutePoint location="7568,1262" />
+      <AbsolutePoint location="10807,1262" />
+      <AbsolutePoint location="10807,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd2Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7435,92" />
+      <AbsolutePoint location="7435,302" />
+      <AbsolutePoint location="645,302" />
+      <AbsolutePoint location="645,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj2sqb,/xszz/commonN05/gjlzjxj2sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7574,92" />
+      <AbsolutePoint location="7574,1172" />
+      <AbsolutePoint location="11721,1172" />
+      <AbsolutePoint location="11721,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfhj1sh,/xszz/commonN05/xfhj1sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7626,92" />
+      <AbsolutePoint location="7626,422" />
+      <AbsolutePoint location="17414,422" />
+      <AbsolutePoint location="17414,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm2shSave,/xszz/commonN05/xfjm2shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7504,92" />
+      <AbsolutePoint location="7504,1322" />
+      <AbsolutePoint location="4668,1322" />
+      <AbsolutePoint location="4668,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjjxj1shOne,/xszz/commonN05/gjjxj1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7537,92" />
+      <AbsolutePoint location="7537,1712" />
+      <AbsolutePoint location="7944,1712" />
+      <AbsolutePoint location="7944,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logicError.do,null,/logicError.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="52,1959" />
+      <AbsolutePoint location="52,2059" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knslsbz1sq,/xszz/commonN05/knslsbz1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7636,92" />
+      <AbsolutePoint location="7636,272" />
+      <AbsolutePoint location="18695,272" />
+      <AbsolutePoint location="18695,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm1shSave,/xszz/commonN05/xfjm1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7597,92" />
+      <AbsolutePoint location="7597,842" />
+      <AbsolutePoint location="13800,842" />
+      <AbsolutePoint location="13800,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm1sqb,/xszz/commonN05/xfjm1sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7496,92" />
+      <AbsolutePoint location="7496,1202" />
+      <AbsolutePoint location="3695,1202" />
+      <AbsolutePoint location="3695,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj2sqSave,/xszz/commonN05/gjlzjxj2sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7482,92" />
+      <AbsolutePoint location="7482,992" />
+      <AbsolutePoint location="2497,992" />
+      <AbsolutePoint location="2497,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,wszxj1sqSave,/xszz/commonN05/wszxj1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7461,92" />
+      <AbsolutePoint location="7461,692" />
+      <AbsolutePoint location="974,692" />
+      <AbsolutePoint location="974,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd1Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7447,92" />
+      <AbsolutePoint location="7447,482" />
+      <AbsolutePoint location="685,482" />
+      <AbsolutePoint location="685,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,lsbz2Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7433,92" />
+      <AbsolutePoint location="7433,272" />
+      <AbsolutePoint location="638,272" />
+      <AbsolutePoint location="638,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,wszxj1sq,/xszz/commonN05/wszxj1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7459,92" />
+      <AbsolutePoint location="7459,662" />
+      <AbsolutePoint location="872,662" />
+      <AbsolutePoint location="872,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj2shOne,/xszz/commonN05/gjzxj2shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7509,92" />
+      <AbsolutePoint location="7509,1382" />
+      <AbsolutePoint location="4988,1382" />
+      <AbsolutePoint location="4988,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj1sqb,/xszz/commonN05/gjzxj1sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7566,92" />
+      <AbsolutePoint location="7566,1292" />
+      <AbsolutePoint location="10506,1292" />
+      <AbsolutePoint location="10506,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj2sqb,/xszz/commonN05/gjzxj2sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7426,92" />
+      <AbsolutePoint location="7426,182" />
+      <AbsolutePoint location="419,182" />
+      <AbsolutePoint location="419,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd2sqSave,/xszz/commonN05/knsrd2sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7523,92" />
+      <AbsolutePoint location="7523,1592" />
+      <AbsolutePoint location="6397,1592" />
+      <AbsolutePoint location="6397,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd1sqb,/xszz/commonN05/knsrd1sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7572,92" />
+      <AbsolutePoint location="7572,1202" />
+      <AbsolutePoint location="11411,1202" />
+      <AbsolutePoint location="11411,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knslsbz1shOne,/xszz/commonN05/knslsbz1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7554,92" />
+      <AbsolutePoint location="7554,1472" />
+      <AbsolutePoint location="9504,1472" />
+      <AbsolutePoint location="9504,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd1sqSave,/xszz/commonN05/knsrd1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7587,92" />
+      <AbsolutePoint location="7587,992" />
+      <AbsolutePoint location="12672,992" />
+      <AbsolutePoint location="12672,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm2sqSave,/xszz/commonN05/xfjm2sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7576,92" />
+      <AbsolutePoint location="7576,1142" />
+      <AbsolutePoint location="11975,1142" />
+      <AbsolutePoint location="11975,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knslsbz1sqSave,/xszz/commonN05/knslsbz1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7634,92" />
+      <AbsolutePoint location="7634,302" />
+      <AbsolutePoint location="18589,302" />
+      <AbsolutePoint location="18589,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,wszxj1Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7453,92" />
+      <AbsolutePoint location="7453,572" />
+      <AbsolutePoint location="705,572" />
+      <AbsolutePoint location="705,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,xfjm1sqSave,/xszz/commonN05/xfjm1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7583,92" />
+      <AbsolutePoint location="7583,1052" />
+      <AbsolutePoint location="12370,1052" />
+      <AbsolutePoint location="12370,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,lsbz2shSave,/xszz/commonN05/lsbz2shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7513,92" />
+      <AbsolutePoint location="7513,1442" />
+      <AbsolutePoint location="5306,1442" />
+      <AbsolutePoint location="5306,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj1shSave,/xszz/commonN05/gjlzjxj1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7494,92" />
+      <AbsolutePoint location="7494,1172" />
+      <AbsolutePoint location="3436,1172" />
+      <AbsolutePoint location="3436,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,wszxj1shSave,/xszz/commonN05/wszxj1shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7564,92" />
+      <AbsolutePoint location="7564,1322" />
+      <AbsolutePoint location="10247,1322" />
+      <AbsolutePoint location="10247,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjjxj1Exp,/about:blank,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7443,92" />
+      <AbsolutePoint location="7443,422" />
+      <AbsolutePoint location="672,422" />
+      <AbsolutePoint location="672,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj3sq,/xszz/commonN05/gjzxj3sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7470,92" />
+      <AbsolutePoint location="7470,812" />
+      <AbsolutePoint location="1599,812" />
+      <AbsolutePoint location="1599,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,knsrd2sqb,/xszz/commonN05/knsrd2sqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7628,92" />
+      <AbsolutePoint location="7628,392" />
+      <AbsolutePoint location="17716,392" />
+      <AbsolutePoint location="17716,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,jtqkdc1sq,/xszz/commonN05/jtqkdc1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7550,92" />
+      <AbsolutePoint location="7550,1532" />
+      <AbsolutePoint location="9190,1532" />
+      <AbsolutePoint location="9190,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjlzjxj1sqSave,/xszz/commonN05/gjlzjxj1sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7472,92" />
+      <AbsolutePoint location="7472,842" />
+      <AbsolutePoint location="1799,842" />
+      <AbsolutePoint location="1799,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/n05_xszz.do,gjzxj3shOne,/xszz/commonN05/gjzxj3shOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7484,92" />
+      <AbsolutePoint location="7484,1022" />
+      <AbsolutePoint location="2703,1022" />
+      <AbsolutePoint location="2703,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

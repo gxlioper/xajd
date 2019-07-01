@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="xshjglForm" type="com.zfsoft.xgxt.rcsw.xshjgl.XshjglForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/xshjgl_list" forward="/rcsw_xshjgl.do?method=Xshjgllist" /> 
+		<action path="/rcsw_xshjgl" 
+				parameter="method" 
+				name="xshjglForm" 
+				scope="request"
+				type="com.zfsoft.xgxt.rcsw.xshjgl.XshjglAction">
+			<forward name="Xshjgllist" path="/xsgzgl/rcsw/xshjgl/listXshjgl.jsp" />
+			<forward name="Xshjgladd" path="/xsgzgl/rcsw/xshjgl/addXshjgl.jsp" />   <!-- 增加 -->
+			<forward name="Xshjgledit" path="/xsgzgl/rcsw/xshjgl/editXshjgl.jsp" /> <!-- 修改 -->
+			<forward name="Xshjglview" path="/xsgzgl/rcsw/xshjgl/viewXshjgl.jsp" /> <!-- 查看 -->
+		</action>
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="ypzlCsszForm" type="com.zfsoft.xgxt.zxdk.ypzl.cssz.CsszForm"></form-bean>
+		<form-bean name="ypzlsqForm" type="com.zfsoft.xgxt.zxdk.ypzl.sq.YpzlSqForm"></form-bean>
+		<form-bean name="ypzlshForm" type="com.zfsoft.xgxt.zxdk.ypzl.sh.YpzlshForm"></form-bean>
+		<form-bean name="ypzljgForm" type="com.zfsoft.xgxt.zxdk.ypzl.jg.YpzljgForm"></form-bean>
+		<!--浙江大学永平自立贷学金还款信息维护START-->	
+		<form-bean name="ypzldxjhkForm" type="com.zfsoft.xgxt.zxdk.ypzl.ypzldxjhk.YpzldxjhkForm"></form-bean>
+		<!--浙江大学永平自立贷学金还款信息维护END-->		
+	</form-beans>
+	<action-mappings>	
+		<!-- 展现路径 -->
+		<action path="/zxdk_ypzl_cssz" forward="/ypzl_cssz.do?method=cssz"></action><!-- 永平自立贷学金参数设置页面 -->
+		<action path="/zxdk_ypzl_ypzlsq" forward="/ypzl_sq.do?method=getYpzlsqList"></action><!-- 永平自立贷学金申请页面 -->
+		<action path="/zxdk_ypzl_ypzlsh" forward="/ypzl_sh.do?method=getYpzlshList"></action><!-- 永平自立贷学金审核页面 -->
+		<action path="/zxdk_ypzl_ypzljg" forward="/ypzl_jg.do?method=getYpzljgList"></action>		
+		<!--浙江大学永平自立贷学金还款信息维护START-->	
+		<action path="/zxdk_ypzl_ypzldxjhk" forward="/ypzl_hk.do?method=getYpzldxjhkList"></action>
+		<!--浙江大学永平自立贷学金还款信息维护END-->
+		
+		<!-- 实际路径 -->	
+		<action name="ypzlCsszForm" 
+				parameter="method" 
+				path="/ypzl_cssz"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.ypzl.cssz.CsszAction">
+			<forward name="cssz" path="/xsgzgl/zxdk/ypzl/cssz/cssz.jsp" /><!-- 永平自立贷学金基础设置页面  -->
+		</action>
+		
+		<action name="ypzlsqForm" 
+				parameter="method" 
+				path="/ypzl_sq"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.ypzl.sq.YpzlSqAction">
+			<forward name="getYpzlsqList" path="/xsgzgl/zxdk/ypzl/sq/ypzlsqList.jsp" /><!-- 永平自立贷学金申请查询页面  -->
+			<forward name="addYpzlsq" path="/xsgzgl/zxdk/ypzl/sq/addYpzlsq.jsp" /><!-- 永平自立贷学金申请页面  -->
+			<forward name="editYpzlsq" path="/xsgzgl/zxdk/ypzl/sq/editYpzlsq.jsp" /><!-- 永平自立贷学金修改  -->
+			<forward name="viewYpzlsq" path="/xsgzgl/zxdk/ypzl/sq/viewYpzlsq.jsp" /><!-- 永平自立贷学金查看  -->
+		</action>
+		
+		<action name="ypzlshForm" 
+				parameter="method" 
+				path="/ypzl_sh"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.ypzl.sh.YpzlshAction">
+			<forward name="getYpzlshList" path="/xsgzgl/zxdk/ypzl/sh/ypzlshList.jsp" /><!-- 永平自立贷学金审核查询页面  -->
+			<forward name="sbDgsh" path="/xsgzgl/zxdk/ypzl/sh/ypzlshDgsh.jsp" /><!-- 永平自立贷学金单个审核页面  -->
+			<forward name="sbPlsh" path="/xsgzgl/zxdk/ypzl/sh/ypzlshPlsh.jsp" /><!-- 永平自立贷学金批量审核页面  -->
+		</action>
+		
+		<action name="ypzljgForm" 
+				parameter="method" 
+				path="/ypzl_jg"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.ypzl.jg.YpzljgAction">
+			<forward name="getYpzljgList" path="/xsgzgl/zxdk/ypzl/jg/ypzljgList.jsp" /><!-- 永平自立贷学金结果查询页面  -->
+			<forward name="addYpzljg" path="/xsgzgl/zxdk/ypzl/jg/addYpzljg.jsp" /><!-- 永平自立贷学金结果申请页面  -->
+			<forward name="editYpzljg" path="/xsgzgl/zxdk/ypzl/jg/editYpzljg.jsp" /><!-- 永平自立贷学金结果修改  -->
+			<forward name="viewYpzljg" path="/xsgzgl/zxdk/ypzl/jg/viewYpzljg.jsp" /><!-- 永平自立贷学金结果查看  -->
+		</action>
+		
+		
+		<!--浙江大学永平自立贷学金还款信息维护START-->	
+		<action name="ypzldxjhkForm" 
+				parameter="method" 
+				path="/ypzl_hk"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.ypzl.ypzldxjhk.YpzldxjhkAction">
+			<forward name="getYpzldxjhkList" path="/xsgzgl/zxdk/ypzl/ypzldxjhk/ypzldxjhkList.jsp" /><!-- 查询页面  -->
+			<forward name="addhkxx" path="/xsgzgl/zxdk/ypzl/ypzldxjhk/addhkxx.jsp" /><!-- 增加页面  -->
+			<forward name="edithkxx" path="/xsgzgl/zxdk/ypzl/ypzldxjhk/edithkxx.jsp" /><!-- 修改页面  -->
+			<forward name="viewHkxx" path="/xsgzgl/zxdk/ypzl/ypzldxjhk/viewHkxx.jsp" /><!-- 查看页面  -->
+		</action>
+		<!--浙江大学永平自立贷学金还款信息维护END-->
+		
+		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

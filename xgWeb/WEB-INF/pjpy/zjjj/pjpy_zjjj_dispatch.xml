@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>
+		<!--	转移到浙江经济职业的配置文件,pjpy_zjjj.xml    -->
+		<action path="/pjpy_zjjj_dycjwh" 	forward="/pjpyzjjjwh.do?method=dycjWh"></action><!-- 德育成绩维护页面 -->
+
+	</action-mappings>
+</struts-config>

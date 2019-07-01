@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfForm" type="xgxt.wjcf.WjcfForm" />
+	</form-beans>
+
+	<action-mappings>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ　日常事务-考勤管理-网上点名>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/web_calling" name="wjcfForm" parameter="webCall"
+			scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/aa.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<SQ 违纪处分 - 未通过申报信息>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/not_declare_info" name="wjcfForm"
+			parameter="notDeclareInfo" scope="request"
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_wtgsbxx.jsp"></forward>
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+
+		<action path="/kqxxwh" name="wjcfForm"
+			parameter="checkWorkInfoWh" scope="request"
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_xskqxx.jsp"></forward>
+			<forward name="StuCheckWorkInfoWh_print"
+				path="/wjcf/wjcf_xskqxx_print.jsp">
+			</forward>
+		</action>
+
+		<action path="/addkqxx" name="wjcfForm"
+			parameter="addcheckWorkInfo" scope="request"
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_addkqxx.jsp"></forward>
+		</action>
+
+		<action path="/saveKqxx" name="wjcfForm" parameter="saveKqxx"
+			scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/addkqxx.do"></forward>
+		</action>
+
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<SQ 违纪处分 - 报表打印 -学生考勤抽查情况统计表>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/kqccqkb" name="wjcfForm"
+			parameter="reportFormsKqccqkb" scope="request"
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_bb_kqccqkb.jsp"></forward>
+		</action>
+
+		<action path="/jwkqxx_print" name="wjcfForm"
+			parameter="jwkqxx_print" scope="request"
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="success"
+				path="/wjcf/wjcf_jwkqxx_print.jsp">
+			</forward>
+		</action>
+
+		<action path="/StuCheckWorkInfoWh_print" name="wjcfForm"
+			parameter="StuCheckWorkInfoWh_print" scope="request"
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="success"
+				path="/wjcf/wjcf_xskqxx_print.jsp">
+			</forward>
+		</action>
+
+
+		<action path="/jw_kqxxcx" name="wjcfForm" parameter="jw_kqxxcx"
+			scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_jwkqxx.jsp"></forward>
+			<forward name="jwkqxx_print"
+				path="/wjcf/wjcf_jwkqxx_print.jsp">
+			</forward>
+		</action>
+
+		<action attribute="wjcfForm" name="wjcfForm" path="/Wjcf_Kqcc"
+			scope="request" type="xgxt.wjcf.Wjcf_KqccAction">
+			<forward name="index_to_jsp"
+				path="/wjcf/wjcf_kqcc_index.jsp" />
+			<forward name="kqcc_view" path="/wjcf/wjcf_kqcc_view.jsp" />
+			<forward name="kqcc_print" path="/wjcf/wijc_kqcc_print.jsp" />
+		</action>
+
+		<action attribute="wjcfForm" name="wjcfForm" path="/Wjcf_Xskqxx"
+			scope="request" type="xgxt.wjcf.Wjcf_XskqxxAction">
+			<forward name="index_to_jsp"
+				path="/wjcf/wjcf_xsxxkqxx_index.jsp" />
+			<forward name="stu_info"
+				path="/xljk_stu_info.do?act=stu_util&amp;doType=stu_info" />
+			<forward name="xsxxkqxx_xskqmx"
+				path="/wjcf/wjcf_xsxxkqxx_xskqmx.jsp" />
+			<forward name="xsxxkqxx_xykqtj"
+				path="/wjcf/wjcf_xsxxkqxx_xykqtj.jsp" />
+			<forward name="xsxxkqxx_qxkqtj"
+				path="/wjcf/wjcf_xsxxkqxx_qxkqtj.jsp" />
+			<forward name="export_data"
+				path="/lrh_commen_util.do?act=lrh_commen_util&amp;doType=date_export" />
+			<forward name="inport_data"
+				path="/lrh_commen_util.do?act=lrh_commen_util&amp;doType=inport_export" />
+
+		</action>
+
+		<action path="/wjcf_bb_xswjcfqkb" parameter="PrintXswjcfqkb"
+			name="wjcfForm" scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success"
+				path="/wjcf/zzsf/wjcf_bb_xswjcfqkb.jsp">
+			</forward>
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<LP 违纪处分 - 学生申诉申请 - 申请>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcf_xsshssq" parameter="xsshssq" name="wjcfForm"
+			scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_xsshssqb.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<LP 违纪处分 个人违纪处分信息显示>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcf_info" parameter="wjcfinfo" name="wjcfForm"
+			scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_info.jsp"></forward>
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<LP 违纪处分 个人违纪处分信息显示>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcf_info_lxck" parameter="wjcfinfolxck" name="wjcfForm"
+			scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_info.jsp"></forward>
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<LP 违纪处分 学生申诉申请-查询(学生)>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcf_shssqcx" parameter="wjcfshssqcx"
+			name="wjcfForm" scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_shssqcx.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<LP 违纪处分 学生申诉公共查询模块>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcf_shsdatasearch" parameter="wjcfshsdatasearch"
+			name="wjcfForm" scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success"
+				path="/wjcf/wjcf_shsdatasearch.jsp">
+			</forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<LP 违纪处分 学生申诉显示详细信息、删除公共模块>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcf_viewmoreinfoanddel"
+			parameter="wjcfviewmoreinfoanddel" name="wjcfForm" scope="request"
+			type="xgxt.wjcf.WjcfAction">
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<LP 违纪处分 申诉申请审核 (委员会讨论、委员会决定)>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcf_shscheck" parameter="wjcfshscheck"
+			name="wjcfForm" scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<LP 违纪处分 申诉申请材料附件下载>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/downloadfile" parameter="downloadfile"
+			name="wjcfForm" scope="request" type="xgxt.wjcf.WjcfAction">
+		</action>
+		<action path="/downloadfilewj" parameter="downloadfileWj"
+			name="wjcfForm" scope="request" type="xgxt.wjcf.WjcfAction">
+		</action>
+		<action path="/downloadfiletemplate" parameter="downloadfileTemplate"
+			name="wjcfForm" scope="request" type="xgxt.wjcf.WjcfAction">
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<南昌大学科技术学院 违纪处分 - 考勤维护 -学生旷课预警>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcfStuPreWarn" name="wjcfForm"
+			parameter="wjcfStuPreWarn" scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="false" path="/errMsg.jsp"></forward>
+			<forward name="success" path="/wjcf/wjcf_stuprewarn.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<南昌大学科技术学院 日常事务 - 考勤管理 -旷课情况统计>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcfKkqktj" name="wjcfForm"
+			parameter="wjcfKkqktj" scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_kkqktj.jsp"></forward>
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<西北二民院 学生登陆 - 违纪处分 - 数据维护 - 个人违纪>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/grwjcfxxsearch" name="wjcfForm"
+			parameter="grwjcfxxsearch" scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/xbemy/grwjcfers.jsp"></forward>
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<西北二民院 学生登陆 - 违纪处分 - 数据维护 - 个人违纪详细信息>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/grwjcfxxview" name="wjcfForm"
+			parameter="grwjcfxxview" scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/xbemy/grwjcfxxview.jsp"></forward>
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+		
+		<action path="/wjcfwtgxxdel" name="wjcfForm" parameter="wjcfWtgxxDel" 
+		scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/wjcf_wtgsbxx.jsp"></forward>
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<< 中国矿业大学留校察看功能>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcflxcktj" name="wjcfForm" parameter="wjcfLxckTj" 
+		scope="request" type="xgxt.wjcf.WjcfAction">
+			<forward name="success" path="/wjcf/lxck.jsp"></forward>
+			<forward name="false" path="/errMsg.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<< 武汉理工华夏学院扣分统计功能>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcfkftj" name="wjcfForm" parameter="wjcfKfTj" 
+		scope="request" type="xgxt.wjcf.WjcfAction">
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<< 武汉理工华夏学院留校查看>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/wjcfLxck" name="wjcfForm" parameter="wjcfLxck" 
+		scope="request" type="xgxt.wjcf.WjcfAction">
+		</action>
+	</action-mappings>
+	<message-resources key="gygl" parameter="xgxt.base.gygl" />
+</struts-config>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	
+	<form-beans>
+		<form-bean name="bzjlsqshModel" type="com.zfsoft.xgxt.bzjl.wdbzjl.bzjlsqsh.BzjlsqshModel"/>
+		<form-bean name="bzjljgModel" type="com.zfsoft.xgxt.bzjl.wdbzjl.bzjljg.BzjljgModel"/>
+		<form-bean name="bzjlxssqModel" type="com.zfsoft.xgxt.bzjl.wdbzjl.bzjlxssq.BzjlxssqModel"/>
+
+	</form-beans>
+	
+	<action-mappings>
+		
+		 <action path="/bzjl_sq" forward="/bzjl_sqsh.do?method=viewJxsqList"></action>
+		 <action path="/bzjl_sh" forward="/bzjl_sqsh.do?method=viewJxshList"></action>
+		 <action path="/bzjl_jg" forward="/bzjl_bzjg.do?method=viewBzjljgList"></action>
+
+		 <action path="/bzjl_xssq" forward="/bzjl_bzxssq.do?method=viewPjxmsqList"></action>
+
+		 <!-- 评奖评优2013版  申请审核 -->
+		 <action path="/bzjl_sqsh"
+	    		 name="bzjlsqshModel"
+	    		 type="com.zfsoft.xgxt.bzjl.wdbzjl.bzjlsqsh.BzjlsqshAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="viewJxsqList" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/viewJxsqList.jsp"></forward>
+			     <forward name="viewJxshList" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/viewJxshList.jsp"></forward>
+			     <forward name="toCheckPjsq" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/plsqPypj.jsp"></forward>
+			     <forward name="toCheckPjpy" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/plshPypj.jsp"></forward>
+			     <forward name="updateSqb" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/updateSqb.jsp"></forward>
+			     <forward name="viewSqb" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/viewSqb.jsp"></forward>
+			     <forward name="editSqb" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/editSqb.jsp"></forward>
+			     <forward name="selectPjxm" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/selectPjxm.jsp"></forward>
+			     <forward name="plSelectPjxm" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/plSelectPjxm.jsp"></forward>
+			     <forward name="viewShqkList" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/viewShqkList.jsp"></forward>
+			     <forward name="selectTjdw" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/selectTjdw.jsp"></forward>
+			     <forward name="viewJxsh" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/viewJxsh.jsp"></forward>
+			     <forward name="viewLcgz" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/lcgz.jsp"></forward>
+			     <forward name="pjxmShtj" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/pjxmShtj.jsp"></forward>
+			     <forward name="viewShqk" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/viewShqk.jsp"></forward>
+			     <forward name="studentsList" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/studentsList.jsp"></forward>
+			     <forward name="pjshview" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/pjsh_view.jsp"></forward>
+			     <forward name="pjshview_new" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/pjsh_new_view.jsp"></forward>
+			     <forward name="viewJxsqList_new" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/viewJxsqList_new.jsp"></forward>
+			     <forward name="zjdxPlsh" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/zjdxPlsh.jsp"></forward>
+			     <forward name="viewZdtj" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/viewZdtj.jsp"></forward>
+			     <forward name="hjjgadd" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/selectHjjg.jsp"/>
+			     <forward name="hjxx" path="/xsgzgl/bzjl/wdbzjl/bzjlsqsh/hjxx.jsp"/>
+		 </action>
+		 
+		  <!-- 评奖评优2013版  评奖结果 -->
+		 <action path="/bzjl_bzjg"
+	    		 name="bzjljgModel"
+	    		 type="com.zfsoft.xgxt.bzjl.wdbzjl.bzjljg.BzjljgAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="viewBzjljgList" path="/xsgzgl/bzjl/wdbzjl/bzjljg/viewBzjljgList.jsp"></forward>
+			     <forward name="addBzjljg" path="/xsgzgl/bzjl/wdbzjl/bzjljg/addBzjljg.jsp"></forward>
+			     <forward name="updateBzjljg" path="/xsgzgl/bzjl/wdbzjl/bzjljg/updateBzjljg.jsp"></forward>
+			     <forward name="bzjljgView" path="/xsgzgl/bzjl/wdbzjl/bzjljg/bzjljgView.jsp"></forward>
+			     <forward name="showStudents" path="/xsgzgl/bzjl/wdbzjl/bzjljg/showStudents.jsp"></forward>
+			     <forward name="bzjljghzList" path="/xsgzgl/bzjl/wdbzjl/bzjljg/bzjljghzList.jsp"></forward>
+			     <forward name="bzjljghzMdList" path="/xsgzgl/bzjl/wdbzjl/bzjljg/bzjljghzMdList.jsp"></forward>
+		 </action>
+		 
+		  <!-- 评奖评优  项目申请（学生用） -->
+		 <action path="/bzjl_bzxssq"
+	    		 name="bzjlxssqModel"
+	    		 type="com.zfsoft.xgxt.bzjl.wdbzjl.bzjlxssq.BzjlxssqAction"
+				 scope="request"
+			     parameter="method">
+			     <forward name="viewPjxmsqList" path="/xsgzgl/bzjl/wdbzjl/bzjlxssq/viewPjxmsqList.jsp"></forward>
+			     <forward name="xmsqView" path="/xsgzgl/bzjl/wdbzjl/bzjlxssq/xmsq.jsp"></forward>
+			     <forward name="updateSqb" path="/xsgzgl/bzjl/wdbzjl/bzjlxssq/updateXmsq.jsp"></forward>
+			     <forward name="viewLcgz" path="/xsgzgl/bzjl/wdbzjl/bzjlxssq/lcgz.jsp"></forward>
+		 </action>
+		 
+
+	</action-mappings>
+</struts-config>

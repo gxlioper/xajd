@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+    	<form-bean name="CxdaForm" type="com.zfsoft.xgxt.rcsw.cxda.CxdaForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/rcsw_cxda_cxda" 		forward="/rcsw_cxda.do?method=getCxdaList"/>		<!--  -->
+	
+		<action path="/rcsw_cxda" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.cxda.CxdaAction" 
+    			name="CxdaForm"
+    			parameter="method">	
+    			<forward name="cxdalist" path="/xsgzgl/rcsw/cxda/getCxdaList.jsp"></forward>
+    			<forward name="view" path="/xsgzgl/rcsw/cxda/CxdaView.jsp"></forward>
+    			<forward name="edit" path="/xsgzgl/rcsw/cxda/CxdaEdit.jsp"></forward>
+    			<forward name="add" path="/xsgzgl/rcsw/cxda/CxdaAdd.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+</struts-config>

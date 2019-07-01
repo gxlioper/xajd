@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="qgzxCsszForm" type="xsgzgl.qgzx.cssz.QgzxCsszForm" />
+    	<form-bean name="qgzxJcdmwhForm" type="xsgzgl.qgzx.jcdmwh.QgzxJcdmwhForm" />
+    	<!-- 勤工助学月份天数设置model     浙江旅游职业技术学院个性化-->
+    	<form-bean name="qgzxYftsszForm" type="xsgzgl.qgzx.yftssz.QgzxYftsszForm" />
+    	<form-bean name="qgzxGlyglForm" type="xsgzgl.qgzx.glygl.QgzxGlyglForm" />
+    	<form-bean name="qgzxXsglForm" type="xsgzgl.qgzx.xsgl.QgzxXsglForm" />
+    	<form-bean name="qgzxGwglForm" type="xsgzgl.qgzx.gwgl.QgzxGwglForm" />
+    	<form-bean name="qgzxGwglNewForm" type="xsgzgl.qgzx.gwglnew.QgzxGwglForm" />
+    	<form-bean name="qgzxJfglForm" type="xsgzgl.qgzx.jfgl.QgzxJfglForm" />
+    	<form-bean name="qgzxCjglForm" type="xsgzgl.qgzx.cjgl.QgzxCjglForm" />
+    	<form-bean name="qgzxCjffsqForm" type="xsgzgl.qgzx.cjffsq.QgzxCjffsqForm" />
+    	<form-bean name="qgzxCjffjgForm" type="xsgzgl.qgzx.cjffjg.QgzxCjffjgForm" />
+    	<form-bean name="qgzxCxtjForm" type="xsgzgl.qgzx.cxtj.QgzxCxtjForm" />
+    	<!-- 之前版本统计
+    	<form-bean name="qgzxTjcxForm" type="xsgzgl.qgzx.tjcx.QgzxTjcxForm" />
+    	-->
+    	<form-bean name="qgzxXsgwcxForm" type="xsgzgl.qgzx.xsgw.QgzxXsgwcxForm" />
+    	
+    	
+    	<!-- 科研创新 -->
+    	<form-bean name="kycxCsszForm" type="xsgzgl.qgzx.kycxgl.cssz.KyxmCsszForm" />
+    	<form-bean name="KyxmglForm" type="xsgzgl.qgzx.kycxgl.kyxmgl.KyxmglForm" />
+    	<form-bean name="SjxmglForm" type="xsgzgl.qgzx.kycxgl.sjxmgl.SjxmglForm" />
+    	<form-bean name="SjxmFysbForm" type="xsgzgl.qgzx.kycxgl.sjxmgl.fysb.SjxmFysbForm" />
+    	<form-bean name="CjffForm" type="xsgzgl.qgzx.zjdx.cjff.CjffForm" />
+    	<form-bean name="TjcxForm" type="xsgzgl.qgzx.zjdx.tjcx.TjcxForm" />
+    	<!-- 校区管理员 -->
+    	<form-bean name="XqglyForm" type="xsgzgl.qgzx.glygl.XqglyForm"/>
+    	<!-- 黑名单管理 -->
+    	<form-bean name="hmdglForm" type="xsgzgl.qgzx.hmdgl.HmdglForm"/>
+	</form-beans>
+
+
+	<action-mappings>
+  		<action path="/qgzx_jcsz_cssz" forward="/qgzx_jcsz.do?method=cssz"/><!-- 参数设置 -->
+  		<action path="/qgzx_jcdmwh_gwxzwh" forward="/qgzx_jcdmwh.do?method=gwxzWh"/><!-- 岗位性质维护 -->
+  		<action path="/qgzx_jcdmwh_yrdwwh" forward="/qgzx_jcdmwh.do?method=yrdwWh"/><!-- 用人单位维护 -->
+  		<action path="/qgzx_glygl_glywh" forward="/qgzx_glygl.do?method=glyWh"/><!-- 勤工管理员管理 -->
+  		<action path="/qgzx_xsgl_xswh" forward="/qgzx_xsgl.do?method=xswh"/><!-- 勤工学生管理 -->
+  		<action path="/qgzx_jcsz_yftssz" forward="/qgzx_yftssz.do?method=yftssz"/><!-- 勤工助学月份天数设置     浙江旅游职业技术学院个性化-->
+  		<action path="/qgzx_gwgl_gwsq" forward="/qgzx_gwgl.do?method=gwsqCx"/><!-- 岗位申请管理 -->
+		<action path="/qgzx_gwglnew_gwfb" forward="/qgzx_gwglnew.do?method=gwfbCx"/>
+		<action path="/qgzx_gwglnew_gwfbsh" forward="/qgzx_gwglnew.do?method=gwfbshCx"/>
+		<action path="/qgzx_gwglnew_gwfbjg" forward="/qgzx_gwglnew.do?method=gwfbjgCx"/>
+  		<action path="/qgzx_gwglnew_gwsq" forward="/qgzx_gwglnew.do?method=gwsqCx"/><!-- 岗位申请管理new -->
+  		<action path="/qgzx_gwgl_gwsh" forward="/qgzx_gwgl.do?method=gwshCx"/><!-- 岗位审核管理 -->
+  		<action path="/qgzx_gwglnew_gwsh" forward="/qgzx_gwglnew.do?method=gwshCx"/><!-- 岗位审核管理new -->
+  		<action path="/qgzx_gwgl_gwxxgl" forward="/qgzx_gwgl.do?method=gwxxCx"/><!-- 岗位信息管理 -->
+  		<action path="/qgzx_jfgl_jfxxgl" forward="/qgzx_jfgl.do?method=jfxxCx"/><!-- 经费信息管理 -->
+  		<action path="/qgzx_cjgl_cjxxgl" forward="/qgzx_cjgl.do?method=cjxxCx"/><!-- 酬金信息管理 -->
+  		<action path="/qgzx_cjffsq_cjxxgl" forward="/qgzx_cjffsq.do?method=cjxxCx"/><!-- 酬金信息 申请-->
+  		<action path="/qgzx_cjffjg_cjxxgl" forward="/qgzx_cjffjg.do?method=cjxxCx"/><!-- 酬金信息 结果 -->
+  		<action path="/qgzx_cjffsh_cjxxgl" forward="/qgzx_cjffsq.do?method=cjxxSh"/><!-- 酬金信息 审核 -->
+  		<action path="/qgzx_cxtj_gwxx" forward="/qgzx_cxtj.do?method=gwxxCx"/><!-- 岗位信息查询 -->
+		<action path="/qgzx_cxtj_xsgw" forward="/qgzx_cxtj.do?method=xsgwCx"/><!-- 学生岗位查询 -->
+  		<action path="/qgzx_cxtj_jfhb" forward="/qgzx_cxtj.do?method=jfhbCx"/><!-- 经费划拨查询-->
+  		<action path="/qgzx_cxtj_cjff" forward="/qgzx_cxtj.do?method=cjffCx"/><!-- 酬金发放查询 -->
+  		<action path="/qgzx_jfcjgl_cjff_zjdx" forward="/cjff_zjdx.do?method=cjffCx"/><!-- 浙江大学酬金发放 -->
+  		<action path="/qgzx_cxtj_cjtj" forward="/qgzx_cxtj.do?method=bmcjffTj"/><!-- 酬金统计导出 -->
+  		<action path="/qgzx_cxtj_bmcjffcx" forward="/qgzx_cxtj.do?method=bmcjffCx"/><!-- 部门酬金发放查询 -->
+		<!-- 之前版本统计
+		<action path="/qgzx_cjgl_cjtjcx" forward="/qgzx_cjtjcx.do?method=ydcjfftjCx"/>
+		-->
+		<action path="/qgzx_xsqg_xsqggw" forward="/qgzx_xsqggw.do?method=wdqggwCx"/><!-- 我的勤工岗位查询 -->
+  		<action path="/qgzx_xsqg_xsgwcx" forward="/qgzx_xsqggw.do?method=gwxxCx"/><!-- 我的勤工岗位查询 -->
+  		<!-- 浙江大学新勤工助学（个性化） -->
+  		<action path="/qgzx_jcsz_zjdxcssz" forward="/qgzx_jcsz.do?method=zjdxcssz"/>                  <!-- 浙江大学新勤工助学参数设置-->
+		<action path="/qgzx_jfcjgl_jfhb_zjdx" forward="/qgzx_jfgl.do?method=jfhbxxList"/>        	  <!-- 经费划拨 -->
+		<!-- =======================科研创新======================== -->
+		<action path="/qgzx_kycx_cssz" forward="/qgzx_kycxcssz.do?method=cssz"/>
+		<action path="/qgzx_kycx_sjcssz" forward="/qgzx_kycxcssz.do?method=sjcssz"/><!-- 实践参数设置 -->
+		<action path="/qgzx_kycxcssz" 
+    			scope="request"
+    			type="xsgzgl.qgzx.kycxgl.cssz.KyxmCsszAction" 
+    			name="kycxCsszForm"
+    			parameter="method">
+    		<forward name="cssz" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/cssz/cssz.jsp"/>		<!-- 参数设置 -->
+    		<forward name="sjcssz" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/cssz/sjcssz.jsp"/>		<!-- 参数设置 -->
+		</action>
+		<!-- 科研项目管理-->
+		<action path="/qgzx_kycx_kygl_kyxmgl" forward="/qgzx_kycxkyxmgl.do?method=getKyxmglList"/>
+		<action path="/qgzx_kycx_kygl_kyxmsq" forward="/qgzx_kycxkyxmsq.do?method=getKyxmsqList"/>
+		<action path="/qgzx_kycx_kygl_kyxmsh" forward="/qgzx_kycxkyxmsh.do?method=getKyxmshList"/>
+		<action path="/qgzx_kycxkyxmgl" 
+    			scope="request"
+    			type="xsgzgl.qgzx.kycxgl.kyxmgl.KyxmglAction" 
+    			name="KyxmglForm"
+    			parameter="method">
+    		<forward name="getKyxmglList" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/getKyxmglList.jsp"/>
+    		<forward name="addKyxm" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/addKyxm.jsp"/>
+    		<forward name="viewKyxm" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/viewKyxm.jsp"/>
+    		<forward name="showStudents" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/showStudents.jsp"/>
+    		<forward name="editKyxm" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/editKyxm.jsp"/>
+    		<forward name="kyxmFywh" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/kyxmFywh.jsp"/>
+    		<forward name="ztsz" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/ztsz.jsp"/>
+		</action>
+		
+		<action path="/qgzx_kycxkyxmsq" 
+    			scope="request"
+    			type="xsgzgl.qgzx.kycxgl.kyxmgl.KyxmsqAction" 
+    			name="KyxmglForm"
+    			parameter="method">
+    		<forward name="getKyxmsqList" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/getKyxmsqList.jsp"/>
+    		<forward name="xmwh" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/xmwh.jsp"/>
+    		<forward name="cywh" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/cywh.jsp"/>
+    		<forward name="getStu" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/getStu.jsp"/>	
+    		<forward name="getTea" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/getTea.jsp"/>			
+		</action>
+		
+		<action path="/qgzx_kycxkyxmsh" 
+    			scope="request"
+    			type="xsgzgl.qgzx.kycxgl.kyxmgl.KyxmshAction" 
+    			name="KyxmglForm"
+    			parameter="method">
+    		<forward name="getKyxmshList" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/getKyxmshList.jsp"/>
+    		<forward name="kyDgsh" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/kyDgsh.jsp"/>
+    		<forward name="kyPlsh" 	path="/xsgzgl/qgzx/kycxgl/kyxmgl/kyxm/kyPlsh.jsp"/>
+		</action>
+		
+		<!-- 实践项目 -->
+		<action path="/qgzx_kycx_sjgl_sjxmgl" forward="/qgzx_kycxsjxmgl.do?method=getSjxmglList"/>
+		<action path="/qgzx_kycx_sjgl_sjxmsq" forward="/qgzx_kycxsjxmsq.do?method=getSjxmsqList"/>
+		<action path="/qgzx_kycx_sjgl_sjxmsh" forward="/qgzx_kycxsjxmsh.do?method=getSjxmshList"/>
+		<action path="/qgzx_kycx_sjgl_sjxmfysb" forward="/qgzx_kycxsjxmfysb.do?method=getSjxmFysbList"/>
+		<action path="/qgzx_kycx_sjgl_sjxmfycx" forward="/qgzx_kycxsjxmfysb.do?method=getSjxmFycxList"/>
+		<action path="/qgzx_kycxsjxmgl" 
+    			scope="request"
+    			type="xsgzgl.qgzx.kycxgl.sjxmgl.SjxmglAction" 
+    			name="SjxmglForm"
+    			parameter="method">
+    		<forward name="getSjxmglList" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/getSjxmglList.jsp"/>
+    		<forward name="addSjxm" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/addSjxm.jsp"/>
+    		<forward name="viewSjxm" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/viewSjxm.jsp"/>
+    		<forward name="editSjxm" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/editSjxm.jsp"/>
+    		<forward name="sjxmFywh" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/sjxmFywh.jsp"/>
+    		<forward name="ztsz" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/ztsz.jsp"/>
+		</action>
+		<action path="/qgzx_kycxsjxmsq" 
+    			scope="request"
+    			type="xsgzgl.qgzx.kycxgl.sjxmgl.SjxmsqAction" 
+    			name="SjxmglForm"
+    			parameter="method">
+    		<forward name="getSjxmsqList" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/getSjxmsqList.jsp"/>
+    		<forward name="xmwh" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/xmwh.jsp"/>
+    		<forward name="cywh" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/cywh.jsp"/>
+    		<forward name="getStu" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/getStu.jsp"/>	
+    		<forward name="getTea" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/getTea.jsp"/>			
+		</action>
+		
+		<action path="/qgzx_kycxsjxmsh" 
+    			scope="request"
+    			type="xsgzgl.qgzx.kycxgl.sjxmgl.SjxmshAction" 
+    			name="SjxmglForm"
+    			parameter="method">
+    		<forward name="getsjxmshList" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/getSjxmshList.jsp"/>
+    		<forward name="sjDgsh" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/sjDgsh.jsp"/>
+    		<forward name="sjPlsh" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/sjPlsh.jsp"/>
+		</action>
+		
+		<action path="/qgzx_kycxsjxmfysb" 
+    			scope="request"
+    			type="xsgzgl.qgzx.kycxgl.sjxmgl.fysb.SjxmFysbAction" 
+    			name="SjxmFysbForm"
+    			parameter="method">
+    		<forward name="getSjxmFysbList" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/fysb/getSjxmFysbList.jsp"/>
+    		<forward name="getSjxmFycxList" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/fysb/getSjxmFycxList.jsp"/>
+    		<forward name="addFysb" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/fysb/addFysb.jsp"/>
+    		<forward name="editFysb" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/fysb/editFysb.jsp"/>
+    		<forward name="ffcx" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/fysb/ffcx.jsp"/>
+    		<forward name="sjDgsh" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/sjDgsh.jsp"/>
+    		<forward name="sjPlsh" 	path="/xsgzgl/qgzx/kycxgl/sjxmgl/sjxm/sjPlsh.jsp"/>
+		</action>
+		
+  		<!-- =====================================参数设置===================================================== -->	
+		<action path="/qgzx_jcsz" 
+    			scope="request"
+    			type="xsgzgl.qgzx.cssz.QgzxCsszAction" 
+    			name="qgzxCsszForm"
+    			parameter="method">
+    		<forward name="cssz" 	path="/xsgzgl/qgzx/cssz/cssz.jsp"/>		<!-- 参数设置 -->
+    		<forward name="zjdxcssz" 	path="/xsgzgl/qgzx/cssz/zjdxcssz.jsp"/>  <!-- 浙江大学新勤工 -->
+		</action>
+		<action path="/qgzx_jcsz_ajax"
+        		parameter="method"
+        		name="qgzxCsszForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.cssz.QgzxCsszAjax">
+		</action>
+		
+		
+		<!-- =====================================基础代码维护===================================================== -->	
+		<action path="/qgzx_jcdmwh" 
+    			scope="request"
+    			type="xsgzgl.qgzx.jcdmwh.QgzxJcdmwhAction" 
+    			name="qgzxJcdmwhForm"
+    			parameter="method">
+    		<forward name="gwxzWh" 	path="/xsgzgl/qgzx/jcdmwh/gwxzwh.jsp"/>		<!-- 岗位性质维护 -->
+    		<forward name="yrdwWh" 	path="/xsgzgl/qgzx/jcdmwh/yrdwwh.jsp"/>		<!-- 用人单位维护 -->
+		</action>
+		<action path="/qgzx_jcdmwh_ajax"
+        		parameter="method"
+        		name="qgzxJcdmwhForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.jcdmwh.QgzxJcdmwhAjax">
+		        <forward name="gwxzZj" 	path="/xsgzgl/qgzx/jcdmwh/gwxzZj.jsp"/>		<!-- 岗位性质代码增加修改 -->
+		        <forward name="yrdwZj" 	path="/xsgzgl/qgzx/jcdmwh/yrdwZj.jsp"/>		<!-- 用人单位代码增加修改 -->
+			<forward name="selectTeacher" 	path="/xsgzgl/qgzx/jcdmwh/selectTeacher.jsp"/>
+			<forward name="yrdwXg" 	path="/xsgzgl/qgzx/jcdmwh/yrdwXg.jsp"/>
+			<forward name="yrdwCk" 	path="/xsgzgl/qgzx/jcdmwh/yrdwCk.jsp"/>
+			<forward name="mmcsh" 	path="/xsgzgl/qgzx/jcdmwh/mmcsh.jsp"/>
+		</action>
+		
+		
+		<!-- =====================================勤工助学月份天数设置===================================================== -->
+		<action path="/qgzx_yftssz"
+				name="qgzxYftsszForm"
+				scope="request"
+				parameter="method"
+				type="xsgzgl.qgzx.yftssz.QgzxYftsszAction">
+				<forward name="yftssz" path="/xsgzgl/qgzx/yftssz/yftssz.jsp"/>		<!-- 勤工管理员维护 -->
+		</action>
+		<action path="/qgzx_yftssz_ajax"
+				name="qgzxYftsszForm"
+				scope="request"
+				parameter="method"
+				type="xsgzgl.qgzx.yftssz.QgzxYftsszAjax">
+		</action>
+		
+		<!-- =====================================勤工管理员维护===================================================== -->	
+		<action path="/qgzx_glygl" 
+    			scope="request"
+    			type="xsgzgl.qgzx.glygl.QgzxGlyglAction" 
+    			name="qgzxGlyglForm"
+    			parameter="method">
+    		<forward name="glyWh" 	path="/xsgzgl/qgzx/glywh/glyWh.jsp"/>		<!-- 勤工管理员维护 -->
+    		<forward name="glyZj" 	path="/xsgzgl/qgzx/glywh/glyZj.jsp"/>		<!-- 勤工管理员增加 -->
+		</action>
+		<action path="/qgzx_glygl_ajax"
+        		parameter="method"
+        		name="qgzxGlyglForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.glygl.QgzxGlyglAjax">
+		</action>
+		
+		
+		<!-- =====================================勤工学生维护===================================================== -->	
+		<action path="/qgzx_xsgl" 
+    			scope="request"
+    			type="xsgzgl.qgzx.xsgl.QgzxXsglAction" 
+    			name="qgzxXsglForm"
+    			parameter="method">
+    		<forward name="xsWh" path="/xsgzgl/qgzx/xswh/xsWh.jsp"/>		<!-- 勤工学生维护 -->
+    		<forward name="getStu" path="/xsgzgl/qgzx/xswh/getStu.jsp"/>		<!-- 勤工学生增加 -->
+			<forward name="updateSfgmbx" path="/xsgzgl/qgzx/xswh/sfgmbx.jsp"/>  <!-- 是否购买保险 -->
+		</action>
+				
+		
+		<!-- =====================================岗位人员管理===================================================== -->	
+		<action path="/qgzx_gwgl" 
+    			scope="request"
+    			type="xsgzgl.qgzx.gwgl.QgzxGwglAction" 
+    			name="qgzxGwglForm"
+    			parameter="method">
+    			
+    		<forward name="gwsqCx" 	path="/xsgzgl/qgzx/gwgl/gwsqCx.jsp"/>		<!-- 岗位申请查询 -->
+    		<forward name="gwsqZj" 	path="/xsgzgl/qgzx/gwgl/gwsqZj.jsp"/>		<!-- 岗位申请增加 -->
+    		<forward name="gwsqXg" 	path="/xsgzgl/qgzx/gwgl/gwsqXg.jsp"/>		<!-- 岗位申请修改 -->
+    		<forward name="gwshCx" 	path="/xsgzgl/qgzx/gwgl/gwshCx.jsp"/>		<!-- 岗位审核查询 -->
+    		<forward name="gwshDgsh" path="/xsgzgl/qgzx/gwgl/gwshDgsh.jsp"/>	<!-- 岗位单个审核查询 -->
+    		<forward name="gwshPlsh" path="/xsgzgl/qgzx/gwgl/gwshPlsh.jsp"/>	<!-- 岗位批量审核查询 -->
+    		<forward name="gwxxCx" 	path="/xsgzgl/qgzx/gwgl/gwxxCx.jsp"/>		<!-- 岗位信息查询 -->
+    		<forward name="gwxxZj" 	path="/xsgzgl/qgzx/gwgl/gwxxZj.jsp"/>		<!-- 岗位信息增加-->
+    	
+    		<forward name="gwxxXg" 	path="/xsgzgl/qgzx/gwgl/gwxxXg.jsp"/>		<!-- 岗位信息修改 -->
+    		<forward name="gwxxCk" 	path="/xsgzgl/qgzx/gwgl/gwxxCk.jsp"/>		<!-- 岗位信息查看 -->
+    		<forward name="ryxxZj" 	path="/xsgzgl/qgzx/gwgl/ryxxZj.jsp"/>		<!-- 人员信息增加 -->
+    		<forward name="ryxxTg" 	path="/xsgzgl/qgzx/gwgl/ryxxTg.jsp"/>		<!-- 人员信息退岗 -->
+    		<forward name="getStu" 	path="/xsgzgl/qgzx/gwgl/getStu.jsp"/>		<!-- 增加学生 -->
+    	</action>
+		<action path="/qgzx_gwgl_ajax"
+        		parameter="method"
+        		name="qgzxGwglForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.gwgl.QgzxGwglAjax">
+		        <forward name="gyxxFzgw" 	path="/xsgzgl/qgzx/gwgl/gwxxFzgw.jsp"/>		<!-- 复制岗位 -->
+		</action>
+		
+		<!-- =====================================岗位人员管理new begin===================================================== -->	
+		<action path="/qgzx_gwglnew_gwxxgl" forward="/qgzx_gwglnew.do?method=gwxxCx"/><!-- 岗位信息管理 -->
+		<action path="/qgzx_gwglnew" 
+    			scope="request"
+    			type="xsgzgl.qgzx.gwglnew.QgzxGwglAction" 
+    			name="qgzxGwglNewForm"
+    			parameter="method">
+			<forward name="gwfbCx" 	path="/xsgzgl/qgzx/gwglnew/gwfbCx.jsp"/><!--岗位发布查询-->
+			<forward name="gwfbZj" 	path="/xsgzgl/qgzx/gwglnew/gwfbZj.jsp"/><!--岗位发布增加-->
+			<forward name="gwfbXg" 	path="/xsgzgl/qgzx/gwglnew/gwfbXg.jsp"/><!--岗位发布修改-->
+			<forward name="gwfbCk" 	path="/xsgzgl/qgzx/gwglnew/gwfbCk.jsp"/><!--岗位发布查看-->
+			<forward name="gwfbshCx"  path="/xsgzgl/qgzx/gwglnew/gwfbshCx.jsp"/><!--岗位发布审核查询-->
+			<forward name="gwfbsh"  path="/xsgzgl/qgzx/gwglnew/gwfbsh.jsp"/><!--岗位发布审核-->
+			<forward name="gwfbshCk"  path="/xsgzgl/qgzx/gwglnew/gwfbshCk.jsp"/><!--岗位发布审核查看-->
+			<forward name="gwfbPlsh"  path="/xsgzgl/qgzx/gwglnew/gwfbPlsh.jsp"/><!--岗位发布批量审核-->
+			<forward name="gwfbjgCx" 	path="/xsgzgl/qgzx/gwglnew/gwfbjgCx.jsp"/>
+			<forward name="gwfbjgZj" 	path="/xsgzgl/qgzx/gwglnew/gwfbjgZj.jsp"/>
+			<forward name="gwfbjgCk" 	path="/xsgzgl/qgzx/gwglnew/gwfbjgCk.jsp"/>
+			<forward name="gwfbjgXg" 	path="/xsgzgl/qgzx/gwglnew/gwfbjgXg.jsp"/>
+			<forward name="selectDw" 	path="/xsgzgl/qgzx/gwglnew/selectDwList.jsp"/>
+    		<forward name="gwsqCx" 	path="/xsgzgl/qgzx/gwglnew/gwsqCx.jsp"/>		<!-- 岗位申请查询 -->
+    		<forward name="gwsqZj" 	path="/xsgzgl/qgzx/gwglnew/gwsqZj.jsp"/>		<!-- 岗位申请增加 -->
+    		<forward name="gwsqZjForZjlyzy" path="/xsgzgl/qgzx/gwglnew/gwsqZjForZjlyzy.jsp"/>		<!-- 浙江旅游学院个性化岗位信息增加-->
+    		<forward name="gwsqXg" 	path="/xsgzgl/qgzx/gwglnew/gwsqXg.jsp"/>		<!-- 岗位申请修改 -->
+    		<forward name="gwsqXgForZjlyzy" path="/xsgzgl/qgzx/gwglnew/gwsqXgForZjlyzy.jsp"/>		<!-- 浙江旅游学院个性化岗位信息修改 -->
+    		<forward name="gwshCx" 	path="/xsgzgl/qgzx/gwglnew/gwshCx.jsp"/>		<!-- 岗位审核查询 -->
+    		<forward name="gwshDgsh" path="/xsgzgl/qgzx/gwglnew/gwshDgsh.jsp"/>	<!-- 岗位单个审核查询 -->
+    		<forward name="gwshDgshForZjlyzy" path="/xsgzgl/qgzx/gwglnew/gwshDgshForZjlyzy.jsp"/>	<!-- 浙江旅游学院个性化岗位信息修改-->
+    		<forward name="gwshPlsh" path="/xsgzgl/qgzx/gwglnew/gwshPlsh.jsp"/>	<!-- 岗位批量审核查询 -->
+    		<forward name="gwxxCx" 	path="/xsgzgl/qgzx/gwglnew/gwxxCx.jsp"/>		<!-- 岗位信息查询 (岗位人员维护)-->
+    		<forward name="gwxxZj" 	path="/xsgzgl/qgzx/gwglnew/gwxxZj.jsp"/>		<!-- 岗位信息增加-->
+    		<forward name="gwxxZjForZjlyzy" 	path="/xsgzgl/qgzx/gwglnew/gwxxZjForZjlyzy.jsp"/>		<!-- 浙江旅游学院个性化岗位信息修改-->
+    		<forward name="gwxxXg" 	path="/xsgzgl/qgzx/gwglnew/gwxxXg.jsp"/>		<!-- 岗位信息修改 -->
+    		<forward name="gwxxXgForZjlyzy" 	path="/xsgzgl/qgzx/gwglnew/gwxxXgForZjlyzy.jsp"/>		<!-- 浙江旅游学院个性化岗位信息修改 -->
+    		<forward name="gwxxCk" 	path="/xsgzgl/qgzx/gwglnew/gwxxCk.jsp"/>		<!-- 岗位信息查看 -->
+    		<forward name="gwxxCkForZjlyzy" 	path="/xsgzgl/qgzx/gwglnew/gwxxCkForZjlyzy.jsp"/>		<!-- 浙江旅游学院个性化岗位信息修改 -->
+    		<forward name="ryxxZj" 	path="/xsgzgl/qgzx/gwglnew/ryxxZj.jsp"/>		<!-- 人员信息增加 -->
+    		<forward name="ryxxZjForZjlyzy" 	path="/xsgzgl/qgzx/gwglnew/ryxxZjForZjlyzy.jsp"/>		<!-- 浙江旅游学院个性化岗位信息修改 -->
+    		<forward name="ryxxTg" 	path="/xsgzgl/qgzx/gwglnew/ryxxTg.jsp"/>		<!-- 人员信息退岗 -->
+    		<forward name="ryxxTgForZjlyzy" 	path="/xsgzgl/qgzx/gwglnew/ryxxTgForZjlyzy.jsp"/>		<!-- 浙江旅游学院个性化岗位信息修改 -->
+    		<forward name="ryxxTgWin" 	path="/xsgzgl/qgzx/gwglnew/ryxxTgWin.jsp"/>		<!-- 人员信息退岗 -->
+    		<forward name="gwxxTgWin" 	path="/xsgzgl/qgzx/gwglnew/gwxxTgWin.jsp"/>		<!-- 岗位批量退岗 -->
+    		<forward name="getStu" 	path="/xsgzgl/qgzx/gwglnew/getStu.jsp"/>		<!-- 增加学生 -->
+    		<forward name="showFdys" 	path="/xsgzgl/qgzx/gwglnew/showFdys.jsp"/>		<!-- 增加教师 -->
+    		<forward name="showFdysDg" 	path="/xsgzgl/qgzx/gwglnew/showFdysDg.jsp"/>		<!-- 增加教师(多个) -->
+    	</action>
+		<action path="/qgzx_gwglnew_ajax"
+        		parameter="method"
+        		name="qgzxGwglNewForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.gwglnew.QgzxGwglAjax">
+		        <forward name="gyxxFzgw" 	path="/xsgzgl/qgzx/gwglnew/gwxxFzgw.jsp"/>		<!-- 复制岗位 -->
+		        <forward name="gysqFzgw" 	path="/xsgzgl/qgzx/gwglnew/gwsqFzgw.jsp"/>		<!-- 复制岗位 -->
+		</action>
+		<!-- =====================================岗位人员管理new end===================================================== -->
+		
+		<!-- =====================================经费管理===================================================== -->	
+		<action path="/qgzx_jfgl" 
+    			scope="request"
+    			type="xsgzgl.qgzx.jfgl.QgzxJfglAction" 
+    			name="qgzxJfglForm"
+    			parameter="method">
+    		<forward name="jfxxCx" 	path="/xsgzgl/qgzx/jfgl/jfxxCx.jsp"/>		<!-- 经费信息查询 -->
+    		<forward name="jfxxZj" 		path="/xsgzgl/qgzx/jfgl/jfxxZj.jsp"/>		<!-- 经费信息增加 -->
+    		<forward name="jfxxXg" 	path="/xsgzgl/qgzx/jfgl/jfxxXg.jsp"/>		<!-- 经费信息修改(查看) -->
+    		<forward name="jfxxInit" 	path="/xsgzgl/qgzx/jfgl/jfxxInit.jsp"/>		<!-- 经费信息初始化(华中农业)-->
+    		<forward name="jfhbxxList" 	 path="/xsgzgl/qgzx/jfgl/jfhbxxList.jsp"/>		<!-- 浙大新勤工助学查询页面-->
+    		<forward name="jfhbxxAdd" 	 path="/xsgzgl/qgzx/jfgl/jfhbxxAdd.jsp"/>		<!-- 浙大新勤工助学增加页面-->
+    		<forward name="jfhbxxUpdate" path="/xsgzgl/qgzx/jfgl/jfhbxxUpdate.jsp"/>	<!-- 浙大新勤工助学修改页面-->
+    		<forward name="jfhbxxView" 	 path="/xsgzgl/qgzx/jfgl/jfhbxxView.jsp"/>		<!-- 浙大新勤工助学查看页面-->
+    		<forward name="copyjfhb" path="/xsgzgl/qgzx/jfgl/copyjfhb.jsp"/>
+		</action>
+		<action path="/qgzx_jfgl_ajax"
+        		parameter="method"
+        		name="qgzxJfglForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.jfgl.QgzxJfglAjax">
+		</action>
+		
+		
+		<!-- =====================================酬金管理===================================================== -->	
+		<action path="/qgzx_cjgl" 
+    			scope="request"
+    			type="xsgzgl.qgzx.cjgl.QgzxCjglAction" 
+    			name="qgzxCjglForm"
+    			parameter="method">
+    		<forward name="cjxxCx" 	path="/xsgzgl/qgzx/cjgl/cjxxCx.jsp"/>		<!-- 酬金信息查询 -->
+    		<forward name="cjxxFf" 	path="/xsgzgl/qgzx/cjgl/cjxxFf.jsp"/>		<!-- 酬金信息发放-->
+    		<forward name="cjxxCk" 	path="/xsgzgl/qgzx/cjgl/cjxxCk.jsp"/>		<!-- 酬金信息查看 -->
+    	</action>
+		<action path="/qgzx_cjgl_ajax"
+        		parameter="method"
+        		name="qgzxCjglForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.cjgl.QgzxCjglAjax">
+		</action>
+		
+		<!-- 酬金发放申请 -->
+		<action path="/qgzx_cjffsq" 
+    			scope="request"
+    			type="xsgzgl.qgzx.cjffsq.QgzxCjffsqAction" 
+    			name="qgzxCjffsqForm"
+    			parameter="method">
+    		<forward name="cjxxCx" 	path="/xsgzgl/qgzx/cjffsq/cjxxCx.jsp"/>		<!-- 酬金信息查询 -->
+    		<forward name="cjxxFf" 	path="/xsgzgl/qgzx/cjffsq/cjxxFf.jsp"/>		<!-- 酬金信息发放-->
+    		<forward name="cjxxCk" 	path="/xsgzgl/qgzx/cjffsq/cjxxCk.jsp"/>		<!-- 酬金信息查看 -->
+    		<forward name="cjxxSh" 	path="/xsgzgl/qgzx/cjffsq/cjxxSh.jsp"/>		<!-- 审核列表-->
+    		<forward name="cjxxShCk" 	path="/xsgzgl/qgzx/cjffsq/cjxxShCk.jsp"/>	
+    		<forward name="cjxxPlsh" 	path="/xsgzgl/qgzx/cjffsq/cjxxPlsh.jsp"/>	<!-- 酬金信息查看 -->
+			<forward name="gzsqImport" 	path="/xsgzgl/qgzx/cjffsq/gzsqImport.jsp"/><!--工资申请导入-->
+    	</action>
+		<action path="/qgzx_cjffsq_ajax"
+        		parameter="method"
+        		name="qgzxCjffsqForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.cjffsq.QgzxCjffsqAjax">
+		</action>
+		
+		<!-- 酬金发放结果 -->
+		<action path="/qgzx_cjffjg" 
+    			scope="request"
+    			type="xsgzgl.qgzx.cjffjg.QgzxCjffjgAction" 
+    			name="qgzxCjffjgForm"
+    			parameter="method">
+    		<forward name="cjxxCx" 	path="/xsgzgl/qgzx/cjffjg/cjxxCx.jsp"/>		<!-- 酬金信息查询 -->
+    		<forward name="cjxxFf" 	path="/xsgzgl/qgzx/cjffjg/cjxxFf.jsp"/>		<!-- 酬金信息发放-->
+    		<forward name="cjxxCk" 	path="/xsgzgl/qgzx/cjffjg/cjxxCk.jsp"/>		<!-- 酬金信息查看 -->
+    	</action>
+		<action path="/qgzx_cjffjg_ajax"
+        		parameter="method"
+        		name="qgzxCjffjgForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.cjffjg.QgzxCjffjgAjax">
+		</action>
+		
+		<!-- =====================================查询统计===================================================== -->	
+		<action path="/qgzx_cxtj" 
+    			scope="request"
+    			type="xsgzgl.qgzx.cxtj.QgzxCxtjAction" 
+    			name="qgzxCxtjForm"
+    			parameter="method">
+    		<forward name="gwxxCx" 	path="/xsgzgl/qgzx/cxtj/gwxx/gwxxCx.jsp"/>		<!-- 岗位信息查询 -->
+    		<forward name="gwxxCk" 	path="/xsgzgl/qgzx/cxtj/gwxx/gwxxCk.jsp"/>		<!-- 岗位信息查看 -->
+    		<forward name="xsgwCx" 	path="/xsgzgl/qgzx/cxtj/xsgw/xsgwCx.jsp"/>		<!-- 学生岗位查询 -->
+    		<forward name="xsgwCk" 	path="/xsgzgl/qgzx/cxtj/xsgw/xsgwCk.jsp"/>		<!-- 学生岗位查看 -->
+			<forward name="xsgzjlCx" 	path="/xsgzgl/qgzx/cxtj/xsgw/xsgzjlCx.jsp"/>
+			<forward name="xsgzjlMxCx" 	path="/xsgzgl/qgzx/cxtj/xsgw/xsgzjlMxCx.jsp"/>
+			<forward name="xsgzCx" 	path="/xsgzgl/qgzx/cxtj/xsgw/xsgzCx.jsp"/>
+			<forward name="xsgzffCk" 	path="/xsgzgl/qgzx/cxtj/xsgw/xsgzffCk.jsp"/>
+			<forward name="dwgzCx" 	path="/xsgzgl/qgzx/cxtj/xsgw/dwgzCx.jsp"/>
+    		<forward name="jfhbCx" 	path="/xsgzgl/qgzx/cxtj/jfhb/jfhbCx.jsp"/>		<!-- 经费划拨查询 -->
+    		<forward name="jfhbCk" 	path="/xsgzgl/qgzx/cxtj/jfhb/jfhbCk.jsp"/>		<!-- 经费划拨查看 -->
+    		<forward name="cjffCx" 	path="/xsgzgl/qgzx/cxtj/cjff/cjffCx.jsp"/>		<!-- 酬金发放查询 -->
+    		<forward name="cjffCk" 	path="/xsgzgl/qgzx/cxtj/cjff/cjffCk.jsp"/>		<!-- 酬金发放查看 -->
+    		<forward name="bmcjffTj" 	path="/xsgzgl/qgzx/cxtj/cjtj/bmcjffTj.jsp"/>		<!-- 部门酬金发放统计 -->
+    		<forward name="grcjffTj" 	path="/xsgzgl/qgzx/cxtj/cjtj/grcjffTj.jsp"/>		<!-- 个人酬金发放统计 -->
+    		<forward name="gwcjffTj" 	path="/xsgzgl/qgzx/cxtj/cjtj/gwcjffTj.jsp"/>		<!-- 岗位酬金发放统计 -->
+    		<forward name="bmcjffCx" 	path="/xsgzgl/qgzx/cxtj/bmcjffcx/bmcjffCx.jsp"/>		<!-- 部门酬金发放查询 -->
+    	</action>
+		<action path="/qgzx_cxtj_ajax"
+        		parameter="method"
+        		name="qgzxCxtjForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.cxtj.QgzxCxtjAjax">
+		</action>
+		
+		
+		<!-- =====================================酬金发放统计查询start===================================================== -->	
+		<action path="/qgzx_cjtjcx" 
+    			scope="request"
+    			type="xsgzgl.qgzx.tjcx.QgzxTjcxAction" 
+    			name="qgzxTjcxForm"
+    			parameter="method">
+    		<forward name="ydcjfftjCx" 	path="/xsgzgl/qgzx/tjcx/ydcjfftj.jsp"/>		<!-- 月底酬金发放统计 -->
+    		<forward name="ndcjfftjCx" 	path="/xsgzgl/qgzx/tjcx/ndcjfftj.jsp"/>		<!-- 年底酬金发放统计 -->
+    		<forward name="bmcjfftjCx" 	path="/xsgzgl/qgzx/tjcx/bmcjfftj.jsp"/>		<!-- 部门酬金发放统计 -->
+    		<forward name="grcjfftjCx" 	path="/xsgzgl/qgzx/tjcx/grcjfftj.jsp"/>		<!-- 个人酬金发放统计 -->
+		</action>
+		<action path="/qgzx_cjtjcx_ajax"
+        		parameter="method"
+        		name="qgzxTjcxForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.tjcx.QgzxTjcxAjax">
+		</action>
+		<!-- =====================================酬金发放统计查询end===================================================== -->	
+		
+		
+		<!-- =====================================我的勤工岗位查询start===================================================== -->	
+		<action path="/qgzx_xsqggw" 
+    			scope="request"
+    			type="xsgzgl.qgzx.xsgw.QgzxXsgwcxAction" 
+    			name="qgzxXsgwcxForm"
+    			parameter="method">
+    		<forward name="xsgwCx" path="/xsgzgl/qgzx/xsgw/xsgwCx.jsp"/>		<!-- 学生岗位查询 -->
+    		<forward name="xsgwCkmx" path="/xsgzgl/qgzx/xsgw/xsgwCkmx.jsp"/>		<!-- 学生岗位查看明细 -->
+    		<forward name="gwxxCx" path="/xsgzgl/qgzx/xsgw/gwxxCx.jsp"/>		<!-- 学生岗位查询 -->
+    		<forward name="gwxxCk" path="/xsgzgl/qgzx/xsgw/gwxxCk.jsp"/>		<!-- 学生岗位查询 -->
+		</action>
+		<action path="/qgzx_xsqggw_ajax"
+        		parameter="method"
+        		name="qgzxXsgwcxForm"
+        		scope="request"
+		        type="xsgzgl.qgzx.xsgw.QgzxXsgwcxAjax">
+		</action>
+		<!-- =====================================我的勤工岗位查询end===================================================== -->	
+		<!--浙大勤工助学酬金发放 -->
+		<action path="/cjff_zjdx" 
+    			scope="request"
+    			type="xsgzgl.qgzx.zjdx.cjff.CjffAction" 
+    			name="CjffForm"
+    			parameter="method">
+    		<forward name="cjffcx" path="/xsgzgl/qgzx/zjdx/cjff/cjffcx.jsp"/>
+    		<forward name="cjffadd" path="/xsgzgl/qgzx/zjdx/cjff/cjffadd.jsp"/>
+    		<forward name="cjffedit" path="/xsgzgl/qgzx/zjdx/cjff/cjffedit.jsp"/>
+    		<forward name="cjffck" path="/xsgzgl/qgzx/zjdx/cjff/cjffck.jsp"/>
+    		<forward name="dr" path="/xsgzgl/qgzx/zjdx/cjff/dr.jsp"/>
+    	</action>
+    	
+    	<!-- 浙大勤工助学酬金发放统计查询 -->
+    	<action path="/cjff_tjcx_zjdx_xqbcfftj" forward="/tjcx_zjdx.do?method=getXqbcFfTj"/>
+    	<action path="/cjff_tjcx_zjdx_yrdwcjfftj" forward="/tjcx_zjdx.do?method=getYrdwFfTj"/>
+    	<action path="/cjff_tjcx_zjdx_stucjfftj" forward="/tjcx_zjdx.do?method=getStudentQgDetailTjCx"/>
+    	<action path="/cjff_tjcx_zjdx_stucjffgrtj" forward="/tjcx_zjdx.do?method=getStucjffgrtj"/>  <!-- 个人报酬发放统计 -->
+    	<action path="/tjcx_zjdx" scope="request" type="xsgzgl.qgzx.zjdx.tjcx.TjcxAction" name="TjcxForm" parameter="method">
+    		<forward name="xqbcfftj" path="/xsgzgl/qgzx/zjdx/tjcx/xqbcfftj.jsp"/>
+    		<forward name="yrdwtj" path="/xsgzgl/qgzx/zjdx/tjcx/yrdwcjffcx.jsp"/>
+    		<forward name="stucjfftj" path="/xsgzgl/qgzx/zjdx/tjcx/stucjfftj.jsp"/>
+    		<forward name="stucjffgrtj" path="/xsgzgl/qgzx/zjdx/tjcx/stucjffgrtj.jsp"/> <!-- 个人报酬发放统计查询页面 -->
+    	</action>
+    	
+    	<!-- 校区管理员维护 -->
+    	<action path="/qgzx_glygl_xqgly" forward="/glygl_xqgly.do?method=getXqglyList"/>
+    	<action path="/glygl_xqgly" scope="request" parameter="method" name="XqglyForm" type="xsgzgl.qgzx.glygl.XqglyAction">
+    		<forward name="xqglycx" path="/xsgzgl/qgzx/glywh/getXqglyCx.jsp"/>
+    		<forward name="add" path="/xsgzgl/qgzx/glywh/addXqgly.jsp"/>
+    	</action>
+    	
+    	
+    	<!-- 黑名单管理 -->
+    	<action path="/qgzx_hmdgl" forward="/qgzxhmdgl.do?method=getHmdList"/>
+    	<action path="/qgzxhmdgl" 
+    		scope="request" 
+    		parameter="method" 
+    		name="hmdglForm" 
+    		type="xsgzgl.qgzx.hmdgl.HmdglAction">
+    		<forward name="HmdList" path="/xsgzgl/qgzx/hmdgl/hmdList.jsp"/>
+    		<forward name="addHmd" path="/xsgzgl/qgzx/hmdgl/addHmd.jsp"/>
+    		<forward name="xgHmd" path="/xsgzgl/qgzx/hmdgl/xgHmd.jsp"/>
+    		<forward name="ckHmd" path="/xsgzgl/qgzx/hmdgl/ckHmd.jsp"/>
+			<forward name="xshmdList" path="/xsgzgl/qgzx/hmdgl/xshmdList.jsp"/>
+			<forward name="addxshmd" path="/xsgzgl/qgzx/hmdgl/addxshmd.jsp"/>
+			<forward name="selectDw" path="/xsgzgl/qgzx/hmdgl/selectDwList.jsp"/>
+    	</action>
+    	
+    	
+    	
+	</action-mappings>
+</struts-config>

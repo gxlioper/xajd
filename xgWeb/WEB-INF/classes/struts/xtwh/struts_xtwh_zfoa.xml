@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="returnForm" type="xgxt.xtwh.zfoa.ReturnForm"/>
+	</form-beans>
+
+	<action-mappings>	
+    	
+    	<!-- 评奖基本设置 -->
+    	<action path="/returnZFOA" 
+        		parameter="method"  
+        		name="returnForm" 
+        		scope="request"
+		        type="xgxt.xtwh.zfoa.ReturnAction">	
+		     
+			<forward name="false"    path="/yhInfo.do" />
+		
+		</action>
+		
+	</action-mappings>
+</struts-config>

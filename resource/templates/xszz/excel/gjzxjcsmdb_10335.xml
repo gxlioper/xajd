@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
+<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+<Author>Administrator</Author>
+<LastAuthor>Windows 7 旗舰正式版</LastAuthor>
+<Created>2016-11-28T09:24:45Z</Created>
+<LastSaved>2016-11-28T11:34:26Z</LastSaved>
+<Version>11.5606</Version>
+</DocumentProperties>
+<CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+<KSOProductBuildVer dt:dt="string">2052-8.1.0.2424</KSOProductBuildVer>
+</CustomDocumentProperties>
+<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+<WindowHeight>12480</WindowHeight>
+<WindowWidth>21840</WindowWidth>
+<WindowTopX>0</WindowTopX>
+<WindowTopY>0</WindowTopY>
+<ProtectStructure>False</ProtectStructure>
+<ProtectWindows>False</ProtectWindows>
+</ExcelWorkbook>
+<Styles>
+<Style ss:ID="Default" ss:Name="Normal">
+<Alignment ss:Vertical="Center"/>
+<Borders/>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+<Interior/>
+<NumberFormat/>
+<Protection/>
+</Style>
+<Style ss:ID="s28">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="s35">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="14"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="s36">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="s38">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Font ss:FontName="宋体" x:CharSet="134"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="s39">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="18" ss:Bold="1"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="s40">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="14"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="s41">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="14"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="s42">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="s43">
+<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+<Borders>
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+</Borders>
+<Font ss:FontName="宋体" x:CharSet="134"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+</Styles>
+<Worksheet ss:Name="Sheet1">
+<Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="5" x:FullColumns="1" x:FullRows="1" ss:StyleID="s28" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+<Column ss:StyleID="s28" ss:AutoFitWidth="0" ss:Width="44.25"/>
+<Column ss:StyleID="s28" ss:AutoFitWidth="0" ss:Width="66.75"/>
+<Column ss:StyleID="s28" ss:AutoFitWidth="0" ss:Width="130.5"/>
+<Column ss:StyleID="s28" ss:AutoFitWidth="0" ss:Width="177.75"/>
+<Column ss:StyleID="s28" ss:AutoFitWidth="0" ss:Width="207"/>
+<Column ss:StyleID="s28" ss:AutoFitWidth="0" ss:Width="84"/>
+<Column ss:Index="8" ss:StyleID="s28" ss:AutoFitWidth="0" ss:Width="77.25"/>
+<Column ss:StyleID="s28" ss:AutoFitWidth="0" ss:Width="106.5"/>
+<Row ss:Height="22.5">
+<Cell ss:MergeAcross="8" ss:StyleID="s39">
+<Data ss:Type="String">浙江大学${currxn!}年国家助学金获得学生初审名单表</Data>
+</Cell>
+</Row>
+<Row ss:Height="18.75" ss:StyleID="s35">
+<Cell ss:MergeAcross="2" ss:StyleID="s40">
+<Data ss:Type="String">学校名称：浙江大学</Data>
+</Cell>
+<Cell ss:StyleID="s41">
+<Data ss:Type="String">（公章）</Data>
+</Cell>
+<Cell ss:StyleID="s41"/>
+<Cell ss:MergeAcross="3" ss:StyleID="s40">
+<Data ss:Type="String">填表日期：${dqrq!}</Data>
+</Cell>
+</Row>
+<Row ss:StyleID="s36">
+<Cell ss:StyleID="s42"><Data ss:Type="String">序号</Data></Cell>
+<Cell ss:StyleID="s42"><Data ss:Type="String">学生姓名</Data></Cell>
+<Cell ss:StyleID="s42"><Data ss:Type="String">公民身份证号码</Data></Cell>
+<Cell ss:StyleID="s42"><Data ss:Type="String">院系</Data></Cell>
+<Cell ss:StyleID="s42"><Data ss:Type="String">专业</Data></Cell>
+<Cell ss:StyleID="s42"><Data ss:Type="String">学号</Data></Cell>
+<Cell ss:StyleID="s42"><Data ss:Type="String">性别</Data></Cell>
+<Cell ss:StyleID="s42"><Data ss:Type="String">民族</Data></Cell>
+<Cell ss:StyleID="s42"><Data ss:Type="String">入学年月</Data></Cell>
+</Row>
+
+<#list zzxmjgList as rs>
+<Row ss:StyleID="s36">
+<Cell ss:StyleID="s43"><Data ss:Type="String">${rs.row!}</Data></Cell>
+<Cell ss:StyleID="s43"><Data ss:Type="String">${rs.xm!}</Data></Cell>
+<Cell ss:StyleID="s43"><Data ss:Type="String">${rs.sfzh!}</Data></Cell>
+<Cell ss:StyleID="s43"><Data ss:Type="String">${rs.xymc!}</Data></Cell>
+<Cell ss:StyleID="s43"><Data ss:Type="String">${rs.zymc!}</Data></Cell>
+<Cell ss:StyleID="s43"><Data ss:Type="String">${rs.xh!}</Data></Cell>
+<Cell ss:StyleID="s43"><Data ss:Type="String">${rs.xb!}</Data></Cell>
+<Cell ss:StyleID="s43"><Data ss:Type="String">${rs.mzmc!}</Data></Cell>
+<Cell ss:StyleID="s43"><Data ss:Type="String">${rs.rxny!}</Data></Cell>
+</Row>
+</#list>
+
+
+
+</Table>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+<PageSetup>
+<Header x:Margin="0.51180555555555551"/>
+<Footer x:Margin="0.51180555555555551"/>
+</PageSetup>
+<Print>
+<ValidPrinterInfo/>
+<PaperSizeIndex>9</PaperSizeIndex>
+<HorizontalResolution>600</HorizontalResolution>
+<VerticalResolution>0</VerticalResolution>
+</Print>
+<PageBreakZoom>100</PageBreakZoom>
+<Selected/>
+<Panes>
+<Pane>
+<Number>3</Number>
+<ActiveRow>10</ActiveRow>
+<ActiveCol>3</ActiveCol>
+</Pane>
+</Panes>
+<ProtectObjects>False</ProtectObjects>
+<ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+<Worksheet ss:Name="Sheet2">
+<Table ss:ExpandedColumnCount="0" ss:ExpandedRowCount="9999" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25"/>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+<PageSetup>
+<Header x:Margin="0.51180555555555551"/>
+<Footer x:Margin="0.51180555555555551"/>
+</PageSetup>
+<Print>
+<ValidPrinterInfo/>
+<PaperSizeIndex>9</PaperSizeIndex>
+<VerticalResolution>0</VerticalResolution>
+</Print>
+<PageBreakZoom>100</PageBreakZoom>
+<ProtectObjects>False</ProtectObjects>
+<ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+<Worksheet ss:Name="Sheet3">
+<Table ss:ExpandedColumnCount="0" ss:ExpandedRowCount="0" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25"/>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+<PageSetup>
+<Header x:Margin="0.51180555555555551"/>
+<Footer x:Margin="0.51180555555555551"/>
+</PageSetup>
+<Print>
+<ValidPrinterInfo/>
+<PaperSizeIndex>9</PaperSizeIndex>
+<VerticalResolution>0</VerticalResolution>
+</Print>
+<PageBreakZoom>100</PageBreakZoom>
+<ProtectObjects>False</ProtectObjects>
+<ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+</Workbook>

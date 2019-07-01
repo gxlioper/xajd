@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+   		 <form-bean name="sspycsszform" type="xgxt.gygl.sspy.cssz.SspycsszForm" />
+		 <form-bean name="sspysqForm" type="xgxt.gygl.sspy.pysq.SspysqForm" />
+		 <form-bean name="sspyshForm" type="xgxt.gygl.sspy.pysh.SspyshForm" />
+		 <form-bean name="sspyjgForm" type="xgxt.gygl.sspy.pyjg.SspyjgForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/sspy_cssz" forward="/sspycssz.do?method=cssz"/><!--参数设置 -->
+    	<action path="/sspycssz" 
+    			scope="request"
+    			type="xgxt.gygl.sspy.cssz.SspycsszAction" 
+    			name="sspycsszform"
+    			parameter="method">	
+    		<forward name="cssz" path="/gygl/sspy/cssz/cssz.jsp"/>
+		</action>
+	
+		<action path="/sspy_sq" forward="/sspysq.do?method=pySqList"/><!--宿舍评优申请 -->
+		<action path="/sspysq" 
+    			scope="request"
+    			type="xgxt.gygl.sspy.pysq.SspysqAction" 
+    			name="sspysqForm"
+    			parameter="method">	
+    		<forward name="pySqList" path="/gygl/sspy/pysq/pySqList.jsp"/>
+    		<forward name="zjpysq" path="/gygl/sspy/pysq/zjpysq.jsp"/>
+    		<forward name="xgpysq" path="/gygl/sspy/pysq/xgpysq.jsp"/>
+    		<forward name="ckpysq" path="/gygl/sspy/pysq/ckpysq.jsp"/>
+    	</action>
+    	
+    	<action path="/sspy_sh" forward="/sspysh.do?method=pyShList"/><!--宿舍评优审核 -->	
+    	<action path="/sspysh" 
+    			scope="request"
+    			type="xgxt.gygl.sspy.pysh.SspyshAtion" 
+    			name="sspyshForm"
+    			parameter="method">	
+    		<forward name="pyShList" path="/gygl/sspy/pysh/pyShList.jsp"/>
+    		<forward name="sspyDgsh" path="/gygl/sspy/pysh/sspyDgsh.jsp"/>
+    		<forward name="sspyPlsh" path="/gygl/sspy/pysh/sspyPlsh.jsp"/>
+    	</action>
+    	<!-- 宿舍评优结果 -->
+    	<action path="/sspy_jg" forward="/sspyjg.do?method=getSspyjgList"></action>
+    	<action path="/sspyjg" 
+    			scope="request"
+    			type="xgxt.gygl.sspy.pyjg.SspyjgAction" 
+    			name="sspyjgForm"
+    			parameter="method">	
+    		<forward name="sspyjgList" path="/gygl/sspy/pyjg/sspyjgList.jsp"/>
+    		<forward name="sspyjgAdd" path="/gygl/sspy/pyjg/sspyjgAdd.jsp"/>
+    		<forward name="sspyjgUpdate" path="/gygl/sspy/pyjg/sspyjgUpdate.jsp"/>
+    		<forward name="sspyjgView" path="/gygl/sspy/pyjg/sspyjgView.jsp"/>
+    	</action>
+    	
+    	</action-mappings>
+</struts-config>

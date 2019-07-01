@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfJgsdxActionForm" type="xgxt.wjcf.jgsdx.WjcfJgsdxActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/wjcfjgsdxwh"
+				type="xgxt.wjcf.jgsdx.WjcfJgsdxAction"
+				name="wjcfJgsdxActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="cxcfsqdefault"     path="/wjcf/jgsdx/cxcfsqdefault.jsp" />
+			<forward name="cxcfcxdefault"     path="/wjcf/jgsdx/cxcfcxdefault.jsp"></forward>
+			<forward name="cxcfprint"         path="/wjcf/jgsdx/wjcfcxcfsq.jsp"></forward>
+			<forward name="cxcfxxspdefault"   path="/wjcf/jgsdx/cxcfxxspdefault.jsp"></forward>
+			<forward name="cxcfsp"            path="/wjcf/jgsdx/cxcfsp.jsp"></forward>
+			<forward name="cxcfview"          path="/wjcf/jgsdx/cxcfview.jsp"></forward>
+			<forward name="stucxcfcx"         path="/wjcf/jgsdx/stucxcfcx.jsp"></forward>
+			<forward name="stucxcfview"       path="/wjcf/jgsdx/stucxcfview.jsp"></forward>
+			<forward name="csmzcxcf"                  path="/wjcf/csmz/csmz_cxcfsqdefault.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="wjcfjgsdx" parameter="xgxt.wjcf.jgsdx.wjcfjgsdx" />
+
+</struts-config>

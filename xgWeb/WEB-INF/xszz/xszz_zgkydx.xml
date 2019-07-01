@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzZgkydxActionForm"
+			type="xgxt.xszz.zgkydx.XszzZgkydxActionForm" /><!-- test.forms.DynaActionFormTest -->
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+
+		<action name="xszzZgkydxActionForm" parameter="method"
+			path="/zgkydx_xszz" scope="request"
+			type="xgxt.xszz.zgkydx.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- 中国矿业大学 "学生资助"-"困难生"-->
+			<forward name="knssq" path="/xszz/zgkd/knssq.jsp" />
+			<forward name="knssqSave" path="/xszz/zgkd/knssq.jsp" />
+			<forward name="knssqb" path="/xszz/zgkd/knssqb.jsp" />
+			<forward name="knssh" path="/xszz/zgkd/knssh.jsp" />
+			<forward name="knsshOne" path="/xszz/zgkd/knsshOne.jsp" />
+			<forward name="knsshSave" path="/xszz/zgkd/knsshOne.jsp" />
+			<forward name="knsExp" path="/about:blank" />
+			<!-- 中国矿业大学 "学生资助"-"特殊人群设置"-->
+			<forward name="knscx" path="/xszz/zgkd/knscx.jsp" />
+			<forward name="tsrqSet" path="/xszz/zgkd/tsrqSet.jsp" />
+			<forward name="tsrqSave" path="/xszz/zgkd/tsrqSet.jsp" />
+			<forward name="tsrqcx" path="/xszz/zgkd/tsrqcx.jsp" />
+			<forward name="tsrqExp" path="/about:blank" />
+			<!-- 中国矿业大学 "学生资助"-"特殊人群与资助项目维护"-->
+			<forward name="tsrqxmcx" path="/xszz/zgkd/tsrqxmcx.jsp" />
+			<forward name="tsrqxmSet" path="/xszz/zgkd/tsrqxmSet.jsp" />
+			<forward name="tsrqxmSave" path="/xszz/zgkd/tsrqxmSet.jsp" />
+			<!-- 中国矿业大学 "学生资助"-"资助项目审核页面"-->
+			<forward name="xszzsh" path="/xszz/zgkd/data_xszzsh.jsp" />
+			<!-- 中国矿业大学 "学生资助"-"资助过盛页面"-->
+			<forward name="xszzgs" path="/xszz/zgkd/data_xszzgs.jsp" />
+			<forward name="xszzgsExp" path="/about:blank" />
+			<!-- "资助汇总"-->
+			<forward name="xszzJehz" path="/xszz/zgkd/xszzjehz.jsp" />
+			<forward name="xszzJehzExp" path="/about:blank" />
+		</action>
+		
+		<action name="commanForm" parameter="method"
+			path="/zgkydx_xszz_hkgl" scope="request"
+			type="xgxt.xszz.zgkydx.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- 中国矿业大学 "学生资助"-"学生还款"-->
+			<forward name="hkgl" path="/xszz/zgkd/xszzStuReturn.jsp" />
+			<forward name="hkglviewmore" path="/xszz/zgkd/xszzStuReturnViewMore.jsp" />
+			<forward name="hkglupdate" path="/xszz/zgkd/xszzStuReturnUpdate.jsp" />
+			<forward name="expdata" path="/about:blank" />
+		</action>
+		
+		
+
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp" />
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

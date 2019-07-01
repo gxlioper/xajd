@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="ryjfForm" type="xgxt.pjpy.ghxy.ryjf.PjpyRyjfForm" />
+		<!-- 班级荣誉分 -->
+    	<form-bean name="ghxyBjryfForm" type="xgxt.pjpy.ghxy.bjryf.GhxyBjryfForm" />
+    	<!-- 寝室荣誉分 -->
+    	<form-bean name="ghxyQsryfForm" type="xgxt.pjpy.ghxy.qsryf.GhxyQsryfForm" />
+    	<!-- 社团学分 -->
+   		<form-bean name="ghxyStxfForm" type="xgxt.pjpy.ghxy.stxf.GhxyStxfForm" />
+   		<!-- 选修学分 -->
+   		<form-bean name="ghxyXxxfForm" type="xgxt.pjpy.ghxy.xxxf.GhxyXxxfForm" />
+   		<!-- 硅湖学院数值分管理 -->
+   		<form-bean name="ghxySzfglForm" type="xgxt.pjpy.ghxy.szfgl.GhxySzfglForm" />
+	</form-beans>
+ 	<action-mappings>
+ 		<action path="/ghxy_ryjf" name="ryjfForm"
+ 				parameter="method"
+ 		 		type="xgxt.pjpy.ghxy.ryjf.grryf.GrryjfGhxyAction"
+ 		 		scope="request">
+			<forward name="grjfsq" path="/pjpy/ghxy/ryjf/grjfsq.jsp"></forward>
+			<forward name="grjfcx" path="/pjpy/ghxy/ryjf/grjfcx.jsp"></forward>
+			<forward name="grjfsh" path="/pjpy/ghxy/ryjf/grjfsh.jsp"></forward>
+			<forward name="grjfshone" path="/pjpy/ghxy/ryjf/grjfshone.jsp"></forward>
+			<forward name="grjfview" path="/pjpy/ghxy/ryjf/grjfview.jsp"></forward>
+			<forward name="grjfcxforstu" path="/pjpy/ghxy/ryjf/grjfcxforstu.jsp"></forward>
+			<forward name="ryjfhz" path="/pjpy/ghxy/jfhz/jfhzcx.jsp"></forward>
+			<forward name="error" path="/errMsg.do"></forward>
+ 		</action>
+ 		
+ 		<action path="/ghxy_bjbz" name="ryjfForm"
+ 				parameter="method"
+ 		 		type="xgxt.pjpy.ghxy.ryjf.bjbzf.BjbzfGhxyAction"
+ 		 		scope="request">
+			<forward name="bjbzflr" path="/pjpy/ghxy/bjbzf/bjbzflr.jsp"></forward>
+			<forward name="bjbzflrone" path="/pjpy/ghxy/bjbzf/bjbzflrone.jsp"></forward>
+			<forward name="bjbzfsh" path="/pjpy/ghxy/bjbzf/bjbzfsh.jsp"></forward>
+			<forward name="bjbzfshone" path="/pjpy/ghxy/bjbzf/bjbzfshone.jsp"></forward>
+			<forward name="bjbzfcx" path="/pjpy/ghxy/bjbzf/bjbzfcx.jsp"></forward>
+			<forward name="bjbzfview" path="/pjpy/ghxy/bjbzf/bjbzfview.jsp"></forward>
+			<forward name="bjbzfcssz" path="/pjpy/ghxy/bjbzf/bjbzfcssz.jsp"></forward>
+			<forward name="error" path="/errMsg.do"></forward>
+ 		</action>
+ 		
+			<!-- 硅湖学院 荣誉减分-->
+ 		<action path="/ghxy_rykf" 
+ 				name="ryjfForm"
+ 				type="xgxt.pjpy.ghxy.rykf.RyjfGhxyAction" 
+ 				parameter="method"
+ 				scope="request">
+ 			<forward name="error" path="/errMsg.do"></forward>
+ 			<forward name="ryjflr" path="/pjpy/ghxy/rykf/ryjflr.jsp"/>
+ 			<forward name="ryjflrone" path="/pjpy/ghxy/rykf/ryjflrone.jsp"/>
+ 			<forward name="ryjfsh" path="/pjpy/ghxy/rykf/ryjfsh.jsp"/>
+ 			<forward name="ryjfshone" path="/pjpy/ghxy/rykf/ryjfshone.jsp"/>
+ 			<forward name="ryjfview" path="/pjpy/ghxy/rykf/ryjfview.jsp"/>
+ 			<forward name="ryjfcx" path="/pjpy/ghxy/rykf/ryjfcx.jsp"/>
+ 		</action>
+
+ 		<!-- 硅湖学院 班级荣誉分 -->
+ 		<action path="/ghxyBjryf" 
+ 				name="ghxyBjryfForm"
+ 				type="xgxt.pjpy.ghxy.bjryf.GhxyBjryfAction" 
+ 				parameter="method"
+ 				scope="request"
+ 			>
+ 			<forward name="bjryfWh" path="/pjpy/ghxy/bjryf/bjryfWh.jsp"/>
+ 			<forward name="bjryfTj" path="/pjpy/ghxy/bjryf/bjryfTj.jsp"/>
+ 			<forward name="bjryfCx" path="/pjpy/ghxy/bjryf/bjryfCx.jsp"/>
+ 			<forward name="bjryfXx" path="/pjpy/ghxy/bjryf/bjryfXx.jsp"/>
+ 			<forward name="bjryfSh" path="/pjpy/ghxy/bjryf/bjryfSh.jsp"/>
+ 			<forward name="bjryfShOne" path="/pjpy/ghxy/bjryf/bjryfShOne.jsp"/>
+ 			<forward name="bjryfSz" path="/pjpy/ghxy/bjryf/bjryfSz.jsp"/>
+ 			<forward name="error" path="/errMsg.do"></forward>
+ 		</action>
+ 		
+ 		<!-- 硅湖学院 寝室荣誉分 -->
+ 		<action path="/ghxyQsryf" 
+ 				name="ghxyQsryfForm"
+ 				type="xgxt.pjpy.ghxy.qsryf.GhxyQsryfAction" 
+ 				parameter="method"
+ 				scope="request"
+ 			>
+ 			<forward name="qsryfWh" path="/pjpy/ghxy/qsryf/qsryfWh.jsp"/>
+ 			<forward name="qsryfTj" path="/pjpy/ghxy/qsryf/qsryfTj.jsp"/>
+ 			<forward name="qsryfCx" path="/pjpy/ghxy/qsryf/qsryfCx.jsp"/>
+ 			<forward name="qsryfXx" path="/pjpy/ghxy/qsryf/qsryfXx.jsp"/>
+ 			<forward name="qsryfSh" path="/pjpy/ghxy/qsryf/qsryfSh.jsp"/>
+ 			<forward name="qsryfShOne" path="/pjpy/ghxy/qsryf/qsryfShOne.jsp"/>
+ 			<forward name="qsryfSz" path="/pjpy/ghxy/qsryf/qsryfSz.jsp"/>
+ 			<forward name="error" path="/errMsg.do"></forward>
+ 		</action>
+ 		
+ 	<!-- 硅湖学院 选修学分 -->
+    <action path="/ghxyXxxf" 
+    		name="ghxyXxxfForm"
+    		type="xgxt.pjpy.ghxy.xxxf.GhxyXxxfAction" 
+    		parameter="method"
+    		scope="request"
+    		>
+    		<forward name="xxxfWh" path="/pjpy/ghxy/xxxf/xxxfWh.jsp" />
+    </action>
+    
+    <!-- 硅湖学院社团学分 -->
+    <action path="/ghxyStxf" 
+    		name="ghxyStxfForm"
+    		type="xgxt.pjpy.ghxy.stxf.GhxyStxfAction" 
+    		parameter="method"
+    		scope="request"
+    		>
+    		<forward name="stxfWh" path="/pjpy/ghxy/stxf/stxfWh.jsp" />
+    </action>
+    
+    <!-- 硅湖学院素质分管理 -->
+    <action path="/ghxySzfgl"
+			type="xgxt.pjpy.ghxy.szfgl.GhxySzfglAction" 
+			name="ghxySzfglForm"
+			parameter="method"
+			scope="request"
+			>
+			<forward name="szfCx" path="/pjpy/ghxy/szfgl/szfCx.jsp"/>
+			<forward name="szfXxxx" path="/pjpy/ghxy/szfgl/szfXxxx.jsp"/>	
+	</action>
+	</action-mappings>
+	<message-resources key="zjlgPjpy" parameter="xgxt.pjpy.zjlg.zjlgPjpy" />
+
+</struts-config>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="jcxmForm" type="com.zfsoft.xgxt.gygl.wsjc.jcxm.JcxmModel" />
+		<form-bean name="jcrcForm" type="com.zfsoft.xgxt.gygl.wsjc.jcrc.JcrcModel" />
+		<form-bean name="wsfForm" type="com.zfsoft.xgxt.gygl.wsjc.wsf.WsfModel" />
+	</form-beans>
+	<action-mappings>
+	
+		<action path="/gygl_wsjc_jcxm" forward="/wsjcJcxm.do?method=jcxmList"/>
+		<action path="/gygl_wsjc_jcrc" forward="/wsjcJcrc.do?method=jcrcList"/>
+		<action path="/gygl_wsjc_wsflr" forward="/wsjcWsflr.do?method=fslrList"/>
+		<action path="/gygl_wsjc_wsfcx" forward="/wsjcWsflr.do?method=fscxList"/>
+		
+		<action path="/wsjcJcxm" 
+				name="jcxmForm" 
+				type="com.zfsoft.xgxt.gygl.wsjc.jcxm.JcxmAction"
+				parameter="method" 
+				scope="request">
+			<forward name="jcxmList" path="/xsgzgl/gygl/wsjc/jcxm/jcxmList.jsp" />
+			<forward name="add" path="/xsgzgl/gygl/wsjc/jcxm/add.jsp" />
+			<forward name="edit" path="/xsgzgl/gygl/wsjc/jcxm/edit.jsp" />
+		</action>
+		
+		
+		<action path="/wsjcJcrc" 
+				name="jcrcForm" 
+				type="com.zfsoft.xgxt.gygl.wsjc.jcrc.JcrcAction"
+				parameter="method" 
+				scope="request">
+			<forward name="jcrcList" path="/xsgzgl/gygl/wsjc/jcrc/jcrcList.jsp" />
+			<forward name="add" path="/xsgzgl/gygl/wsjc/jcrc/add.jsp" />
+			<forward name="edit" path="/xsgzgl/gygl/wsjc/jcrc/edit.jsp" />
+		</action>
+		
+		
+		<action path="/wsjcWsflr" 
+				name="wsfForm" 
+				type="com.zfsoft.xgxt.gygl.wsjc.wsf.WsfAction"
+				parameter="method" 
+				scope="request">
+			<forward name="fslrList" path="/xsgzgl/gygl/wsjc/wsf/fslrList.jsp" />
+			<forward name="fscxList" path="/xsgzgl/gygl/wsjc/wsf/fscxList.jsp" />
+			<forward name="wsflr" path="/xsgzgl/gygl/wsjc/wsf/wsflr.jsp" />
+			<forward name="importWsf" path="/xsgzgl/gygl/wsjc/wsf/importWsf.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

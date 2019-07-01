@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="rcswgzdxForm" type="xgxt.rcgl.gzdx.RcglGzdxForm"></form-bean>
+		<form-bean name="lxglForm" type="xgxt.rcgl.gzdx.lxgl.LxglForm"></form-bean>
+		<form-bean name="fsbtglForm" type="xgxt.rcgl.gzdx.fsbtgl.FsbtglForm"></form-bean>
+		<form-bean name="fsbtplglForm" type="xgxt.rcgl.gzdx.fsbtplgl.FsbtplglForm"></form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="rcswgzdxForm" parameter="method" path="/zysyyygl"
+				scope="request"	type="xgxt.rcgl.gzdx.RcglGzdxAction">
+			<forward name="zyyysq" path="/rcsw/gzdx/zyyysq.jsp" />
+			<forward name="zyyysh" path="/rcsw/gzdx/zyyysh.jsp" />
+			<forward name="zyyyshcx" path="/rcsw/gzdx/zyyyshcx.jsp" />
+			<forward name="zyyyupdate" path="/rcsw/gzdx/zyyyupdate.jsp" />
+		</action>
+		<action name="rcswgzdxForm" parameter="method" path="/zbrygl"
+				scope="request"	type="xgxt.rcgl.gzdx.RcglGzdxAction">
+			<forward name="zbrygl" path="/rcsw/gzdx/zbrygl.jsp" />
+			<forward name="operationzbryxx" path="/rcsw/gzdx/operationzbryxx.jsp" />
+			<forward name="zbsz" path="/rcsw/gzdx/zbsz.jsp" />
+		</action>
+		<action name="rcswgzdxForm" parameter="method" path="/xsgly"
+				scope="request"	type="xgxt.rcgl.gzdx.RcglGzdxAction">
+			<forward name="xsgly" path="/rcsw/gzdx/xsgly.jsp" />
+			<forward name="operationxsgly" path="/rcsw/gzdx/operationxsgly.jsp" />
+		</action>
+		<action name="rcswgzdxForm" parameter="method" path="/ggxs"
+				scope="request"	type="xgxt.rcgl.gzdx.RcglGzdxAction">
+			<forward name="viewtzgg" path="/rcsw/gzdx/viewtzgg.jsp" />
+		</action>
+		
+		<!--============================ 贵州大学离校管理  ==============================-->
+		
+		<action path="/rcsw_lxsq" forward="/rcsw_gzdx_lxgl.do?method=lxsqUpdate" />
+		<action path="/rcsw_lxsh" forward="/rcsw_gzdx_lxgl.do?method=lxshManage" />
+		<action path="/rcsw_lxcx" forward="/rcsw_gzdx_lxgl.do?method=lxcxManage" />
+		
+		<action name="lxglForm" parameter="method" path="/rcsw_gzdx_lxgl"
+				scope="request"	type="xgxt.rcgl.gzdx.lxgl.LxglAction">
+			<forward name="lxsqUpdate" path="/rcsw/gzdx/lxgl/lxsqUpdate.jsp"/>
+			<forward name="lxshManage" path="/rcsw/gzdx/lxgl/lxshManage.jsp"/>
+			<forward name="lxcxManage" path="/rcsw/gzdx/lxgl/lxcxManage.jsp"/>
+			<forward name="lxglView" path="/rcsw/gzdx/lxgl/lxglView.jsp"/>
+			<forward name="lxglUpdate" path="/rcsw/gzdx/lxgl/lxglUpdate.jsp"/>
+			<forward name="lxglPrint" path="/rcsw/gzdx/lxgl/lxglPrint.jsp"/>
+		</action>
+		<!--========================= 贵州大学副食补贴批量管理  ===============================-->
+		<action path="/rcsw_fsbtplgl" forward="/rcsw_gzdx_fsbtplgl.do?method=fsbtplglManage" />
+		
+		<action name="fsbtplglForm" parameter="method" path="/rcsw_gzdx_fsbtplgl"
+				scope="request"	type="xgxt.rcgl.gzdx.fsbtplgl.FsbtplglAction">
+			<forward name="fsbtplglManage" path="/rcsw/gzdx/fsbtpl/fsbtplglManage.jsp"/>
+			<forward name="fsbtplglUpdate" path="/rcsw/gzdx/fsbtpl/fsbtplglUpdate.jsp"/>
+			<forward name="fsbtplglView" path="/rcsw/gzdx/fsbtpl/fsbtplglView.jsp"/>
+		</action>
+		
+		<!--=========================== 副食补贴管理  ===============================-->
+		<action path="/rcsw_fsbtgl" forward="/rcsw_gzdx_fsbtgl.do?method=fsbtglManage" />
+		
+		<action name="fsbtglForm" parameter="method" path="/rcsw_gzdx_fsbtgl"
+				scope="request"	type="xgxt.rcgl.gzdx.fsbtgl.FsbtglAction">
+			<forward name="fsbtglManage" path="/rcsw/gzdx/fsbt/fsbtglManage.jsp"/>
+			<forward name="fsbtglUpdate" path="/rcsw/gzdx/fsbt/fsbtglUpdate.jsp"/>
+			<forward name="fsbtglView" path="/rcsw/gzdx/fsbt/fsbtglView.jsp"/>
+		</action>
+		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

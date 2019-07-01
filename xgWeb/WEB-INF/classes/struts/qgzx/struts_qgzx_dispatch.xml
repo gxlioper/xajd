@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="qgzxTyForm" type="xgxt.qgzx.QgzxTyForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+	
+	<!-- 临时岗位 -->
+	<action path="/qgzx_lsgw_fp" forward="/qgzx_forward.do?method=lsgwfpForward"/>		<!-- 岗位分配 -->
+    <action path="/qgzx_lsgw_jg" forward="/qgzx_forward.do?method=lsgwjgForward"/>		<!-- 结果查询 -->
+    
+    <!-- 实际路径 -->
+    <action path="/qgzx_forward"  parameter="method"   name="qgzxTyForm"  scope="request"  type="xgxt.qgzx.QgzxTyAction"/>
+    
+	</action-mappings>
+
+</struts-config>

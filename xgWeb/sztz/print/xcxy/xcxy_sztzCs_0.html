@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<title>无标题文档</title>
+		<style>
+.weizhi{
+	position:absolute;
+	left:1cm;
+	top:1cm;
+	}
+.weizhi ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	
+	}
+.weizhi li{
+	list-style:none;
+	margin:0px 0px;;
+	padding:0px;
+	}
+.weizhi h4{
+	float:left;
+	margin:0px 20px;
+	font-size:16px;
+	font-family:黑体;
+	font-weight:normal;
+	break-all:keep-all
+	}	
+.youbianxia{
+	margin-top:5px;
+	}
+.yueri{
+	margin-left:5px}
+</style>
+	</head>
+	<script language="javascript" src="../js/jsFunction.js"></script>
+	    <script   language ="javascript" type ="text/javascript">
+var dragswitch=0
+var nsx
+function drag_dropns(name){
+temp=eval(name)
+temp.captureEvents(Event.MOUSEDOWN | Event.MOUSEUP)
+temp.onmousedown=gons
+temp.onmousemove=dragns
+temp.onmouseup=stopns
+}
+function gons(e){
+temp.captureEvents(Event.MOUSEMOVE)
+nsx=e.x
+nsy=e.y
+}
+function dragns(e){
+if (dragswitch==1){
+temp.moveBy(e.x-nsx,e.y-nsy)
+return false
+}
+}
+function stopns(){
+temp.releaseEvents(Event.MOUSEMOVE)
+}
+var dragapproved=false
+
+function drag_dropie(showimage2){
+if (dragapproved==true){
+document.getElementById(showimage2).style.pixelLeft=tempx+event.clientX-iex
+document.getElementById(showimage2).style.pixelTop=tempy+event.clientY-iey
+return false
+}
+}
+function initializedragie(showimage2){
+iex=event.clientX
+iey=event.clientY
+tempx=document.getElementById(showimage2).style.pixelLeft
+tempy=document.getElementById(showimage2).style.pixelTop
+dragapproved=true
+}
+if (document.all){
+document.onmouseup=new Function("dragapproved=false")
+}
+</script>
+	<body>
+		<table width="500" class="weizhi">
+			<tr>
+				<td align="center">
+					<ul style="margin-top:17em;margin-left: 17em;margin-right: 15em;">
+						<li>
+							<h4>
+								<div title="姓名" id="xm1" onmousedown="initializedragie('xm1')"
+									onMousemove="drag_dropie('xm1')"
+									onMouseover="dragswitch=1;drag_dropns(xm1)"
+									onMouseout="dragswitch=0">
+									张三
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="性别" id="xb1" onmousedown="initializedragie('xb1')"
+									onMousemove="drag_dropie('xb1')"
+									onMouseover="dragswitch=1;drag_dropns(xb1)"
+									onMouseout="dragswitch=0">
+									男
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div  title="民族" id="mzmc1" onmousedown="initializedragie('mzmc1')"
+									onMousemove="drag_dropie('mzmc1')"
+									onMouseover="dragswitch=1;drag_dropns(mzmc1)"
+									onMouseout="dragswitch=0">
+									汉族
+								</div>
+							</h4>
+						</li>
+						<li class="youbianxia">
+							<h4>
+								<div title="出生年月" id="csNYR1" onmousedown="initializedragie('csNYR1')"
+									onMousemove="drag_dropie('csNYR1')"
+									onMouseover="dragswitch=1;drag_dropns(csNYR1)"
+									onMouseout="dragswitch=0">
+									2008年08月
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="出生地" id="lydq1" onmousedown="initializedragie('lydq1')"
+									onMousemove="drag_dropie('lydq1')"
+									onMouseover="dragswitch=1;drag_dropns(lydq1)"
+									onMouseout="dragswitch=0">
+									中国-北京
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="政治面貌" id="zzmmmc1" onmousedown="initializedragie('zzmmmc1')"
+									onMousemove="drag_dropie('zzmmmc1')"
+									onMouseover="dragswitch=1;drag_dropns(zzmmmc1)"
+									onMouseout="dragswitch=0">
+									中国共产主义青年团团员
+								</div>
+							</h4>
+						</li>
+						<li>
+
+							<h4>
+								<div title="院系、专业" id="zymc1" onmousedown="initializedragie('zymc1')"
+									onMousemove="drag_dropie('zymc1')"
+									onMouseover="dragswitch=1;drag_dropns(zymc1)"
+									onMouseout="dragswitch=0">
+									信息管理
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div title="入校时间" id="rxNYR1" onmousedown="initializedragie('rxNYR1')"
+									onMousemove="drag_dropie('rxNYR1')"
+									onMouseover="dragswitch=1;drag_dropns(rxNYR1)"
+									onMouseout="dragswitch=0">
+									2008年08月08日
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<div  title="证书编号" id="zsbh1" onmousedown="initializedragie('zsbh1')"
+									onMousemove="drag_dropie('zsbh1')"
+									onMouseover="dragswitch=1;drag_dropns(zsbh1)"
+									onMouseout="dragswitch=0">
+									123456789
+								</div>
+							</h4>
+						</li>
+						<li>
+							<h4 title="颁证时间" style="word-break:keep-all">
+								<div id="fzNYR1" onmousedown="initializedragie('fzNYR1')"
+									onMousemove="drag_dropie('fzNYR1')"
+									onMouseover="dragswitch=1;drag_dropns(fzNYR1)"
+									onMouseout="dragswitch=0">
+									2008年08月08日
+								</div>
+							</h4>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		</body>
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- 基础设置 -->
+		<form-bean name="zzgxzcjcszForm" type="com.zfsoft.xgxt.dtjs.zzgxzc.jcsz.JcszForm"/>
+		<!-- 毕业生党支部维护 -->
+		<form-bean name="bysdzbwhForm" type="com.zfsoft.xgxt.dtjs.zzgxzc.bysdzbwh.BysdzbwhForm"/>
+		<!-- 学生党组织关系转出 申请-->
+		<form-bean name="ZcsqForm" type="com.zfsoft.xgxt.dtjs.zzgxzc.zcsq.ZcsqForm"/>
+		<!-- 学生党组织关系转出 审核-->
+		<form-bean name="ZcshForm" type="com.zfsoft.xgxt.dtjs.zzgxzc.zcsh.ZcshForm"/>
+		<!-- 信息结果 -->
+		<form-bean name="xxjgForm" type="com.zfsoft.xgxt.dtjs.zzgxzc.xxjg.XxjgForm"/>
+		<!-- 改派日志 -->
+		<form-bean name="gprzForm" type="com.zfsoft.xgxt.dtjs.zzgxzc.gprz.GprzForm"/>
+	</form-beans>
+	<action-mappings>
+	    <!-- 基础设置 -->
+	    <action path="/dtjs_jcsz"  
+	    		parameter="method" 
+	    		name="zzgxzcjcszForm"
+	    		scope="request"  
+	    		type="com.zfsoft.xgxt.dtjs.zzgxzc.jcsz.JcszAction">
+	    	<forward name="jcsz" path="/xsgzgl/dtjs/zzgxzc/jcsz/jcsz.jsp"/>
+	    </action>
+	    
+	    <!-- 毕业生党支部维护 -->
+	    <action path="/dtjs_bysdzbwh"  
+	    		parameter="method" 
+	    		name="bysdzbwhForm"
+	    		scope="request"  
+	    		type="com.zfsoft.xgxt.dtjs.zzgxzc.bysdzbwh.BysdzbwhAction">
+	    	<forward name="bysdzbwhList" path="/xsgzgl/dtjs/zzgxzc/bysdzbwh/bysdzbwhList.jsp"/>
+	    	<forward name="bysdzbwhAdd" path="/xsgzgl/dtjs/zzgxzc/bysdzbwh/bysdzbwhAdd.jsp"/>
+	    	<forward name="bysdzbwhUpdate" path="/xsgzgl/dtjs/zzgxzc/bysdzbwh/bysdzbwhUpdate.jsp"/>
+	    </action>
+	    
+	    <!-- 学生党组织关系转出 申请-->
+	    <action path="/dtjs_dzzgxsq_xs"  forward="/dzzgxsq.do?method=xssq"/>
+	    <action path="/dtjs_dzzgxsq_js"  forward="/dzzgxsq.do?method=dzzGxJsSq"/>
+	   	<action path="/dzzgxsq" parameter="method" name="ZcsqForm" scope="request" type="com.zfsoft.xgxt.dtjs.zzgxzc.zcsq.ZcsqDO">
+			<forward name="jscx" path="/xsgzgl/dtjs/zzgxzc/zcsq/zcsqCx.jsp"/>	   		
+			<forward name="sq" path="/xsgzgl/dtjs/zzgxzc/zcsq/jsSq.jsp"/>	   		
+			<forward name="cksq" path="/xsgzgl/dtjs/zzgxzc/zcsq/sqCk.jsp"/>	   		
+			<forward name="xgsq" path="/xsgzgl/dtjs/zzgxzc/zcsq/sqXg.jsp"/>	   		
+			<forward name="xssq" path="/xsgzgl/dtjs/zzgxzc/zcsq/xsSq.jsp"/>	   		
+	   	</action>
+	   	
+	   	<!-- 学生党组织关系转出 审核-->
+	   	<action path="/dtjs_dzzgxsh" forward="/dzzgxsh.do?method=zcshCx"/>
+	   	<action path="/dzzgxsh" parameter="method" name="ZcshForm" scope="request" type="com.zfsoft.xgxt.dtjs.zzgxzc.zcsh.ZcshDO" >
+	   		<forward name="zcshcx" path="/xsgzgl/dtjs/zzgxzc/zcsh/zcshcx.jsp"/>	   
+	   		<forward name="dgsh" path="/xsgzgl/dtjs/zzgxzc/zcsh/dgsh.jsp"/>	   
+	   	</action>
+	   	
+	   	 <!-- 信息结果 -->
+	    <action path="/dtjs_xxjg"  
+	    		parameter="method" 
+	    		name="xxjgForm"
+	    		scope="request"  
+	    		type="com.zfsoft.xgxt.dtjs.zzgxzc.xxjg.XxjgAction">
+	    	<forward name="xxjgList" path="/xsgzgl/dtjs/zzgxzc/xxjg/xxjgList.jsp"/>
+	    	<forward name="xxjgAdd" path="/xsgzgl/dtjs/zzgxzc/xxjg/xxjgAdd.jsp"/>
+	    	<forward name="xxjgUpdate" path="/xsgzgl/dtjs/zzgxzc/xxjg/xxjgUpdate.jsp"/>
+	    	<forward name="xxjgShow" path="/xsgzgl/dtjs/zzgxzc/xxjg/xxjgShow.jsp"/>
+	    </action>
+	    
+	    <!-- 改派日志 -->
+	     <action path="/dtjs_gprz"  
+	    		parameter="method" 
+	    		name="gprzForm"
+	    		scope="request"  
+	    		type="com.zfsoft.xgxt.dtjs.zzgxzc.gprz.GprzAction">
+	    	<forward name="gprzList" path="/xsgzgl/dtjs/zzgxzc/gprz/gprzList.jsp"/>
+	    	<forward name="gprzShow" path="/xsgzgl/dtjs/zzgxzc/gprz/gprzShow.jsp"/>
+	    </action>
+	</action-mappings>
+</struts-config>

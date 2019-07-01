@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpyhygxywh.do" location="650,50" dimension="232,84" />
+  <StrutsActivity path="/pjpy/hygxy/jxjlbdm/update.jsp" location="350,50" dimension="220,48" />
+  <StrutsActivity path="/pjpy/hygxy/jxjdm/default.jsp" location="950,50" dimension="214,48" />
+  <StrutsActivity path="/pjpy/hygxy/jxjdm/update.jsp" location="950,150" dimension="208,48" />
+  <StrutsActivity path="/pjpy/hygxy/jxjlbdm/default.jsp" location="650,250" dimension="226,48" />
+  <StrutsActivity path="/pjpy/zzdx/zsprintone.jsp" location="0,184" dimension="190,48" />
+  <StrutsActivity path="/pjpy/zzdx/zsprintmore.jsp" location="290,184" dimension="196,48" />
+  <StrutsActivity path="/pjpy/hygxy/pjsj/pjsjsz.jsp" />
+  <StrutsTransition id="/pjpyhygxywh.do,jxjdmview,/pjpy/hygxy/jxjdm/update.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="766,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhygxywh.do,jxjdmdefault,/pjpy/hygxy/jxjdm/default.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="882,83" />
+      <AbsolutePoint location="950,83" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhygxywh.do,jxjlbdmdefault,/pjpy/hygxy/jxjlbdm/default.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="766,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhygxywh.do,pjsjsz,/pjpy/hygxy/pjsj/pjsjsz.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="766,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhygxywh.do,jxjlbdmmodi,/pjpy/hygxy/jxjlbdm/update.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="766,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

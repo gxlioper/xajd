@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/lrh_commen_util.do" location="34,0" dimension="328,84" />
+  <StrutsActivity path="/bottom.jsp" location="0,184" dimension="106,48" />
+  <StrutsActivity path="/shgc/xljk/lrh_util_jsp/data_inport.jsp" location="206,184" dimension="274,48" />
+  <StrutsTransition id="/lrh_commen_util.do,date_inport,/shgc/xljk/lrh_util_jsp/data_inport.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="280,84" />
+      <AbsolutePoint location="280,134" />
+      <AbsolutePoint location="343,134" />
+      <AbsolutePoint location="343,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/lrh_commen_util.do,sadf,/bottom.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="116,84" />
+      <AbsolutePoint location="116,134" />
+      <AbsolutePoint location="53,134" />
+      <AbsolutePoint location="53,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

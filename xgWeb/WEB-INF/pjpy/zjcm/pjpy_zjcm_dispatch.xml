@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>
+		<!--	转移到浙江传媒的配置文件,pjpy_zjcm.xml    -->
+		<action path="/pjpy_zjcm_zhszcpwh" 	forward="/pjpyzjcmwh.do?method=zhszcpWh"></action><!-- 综合素质测评维护 -->
+		<action path="/pjpy_zjcm_szAdd"     forward="/pjpyzjcmwh.do?method=szAdd"></action><!-- 素质分增加页面 -->
+		<action path="/pjpy_zjcm_szfmodi"   forward="/pjpyzjcmwh.do?method=szfModi"></action><!-- 素质分修改页面 -->
+		<action path="/pjpy_zjcm_zhszcpblsz" forward="/pjpyzjcmwh.do?method=zhszcpfBlsz"></action><!-- 设置比例 -->
+		<action path="/pjpy_zjcm_jxjprint" forward="/pjpyzjcmwh.do?method=jxjPrint"></action><!-- 奖学金报表打印 -->
+		<action path="/pjpy_xfjs_xsccqk" forward="/pjpyxfjs.do?method=xsccqkWh"></action><!--学生抽查情况维护-->
+		<action path="/pjpy_xfjs_ccqksh" forward="/pjpyxfjs.do?method=ccqksh"></action><!--学生抽查情况审核-->
+		<action path="/pjpy_xfjs_xskqcx" forward="/pjpyxfjs.do?method=xskqcx"></action><!--学生考勤查询-->
+		<action path="/pjpy_xfjs_tjcx" forward="/pjpyxfjs.do?method=showXfjsTjcx"></action><!--学生考勤统计查询-->		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+		<form-bean name="jgsdx_gyglForm" type="xgxt.xsgygl.jgsdx.GyglJgsdxForm"/>
+  </form-beans>
+ <global-forwards/>
+ <action-mappings>
+        <action path="/jgsdx_gygl" parameter="method"  name="jgsdx_gyglForm" scope="request"
+		        type="xgxt.xsgygl.jgsdx.GyglJgsdxAction">
+		        <forward name="jgsdx_wmqssb" path="/gygl/jgsdx/wmqssb.jsp"></forward>
+		        <forward name="jgsdx_wmqsshcx" path="/gygl/jgsdx/wmqsshcx.jsp"></forward>
+		        <forward name="jgsdx_wmqssbsh" path="/gygl/jgsdx/jgsdx_wmqssh.jsp"></forward>
+        </action>
+ </action-mappings>
+ <message-resources key="gygl" parameter="xgxt.base.ApplicationResources" />
+</struts-config>

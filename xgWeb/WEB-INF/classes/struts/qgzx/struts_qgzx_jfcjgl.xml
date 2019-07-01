@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 勤工助学模块 -->
+<struts-config>
+	<form-beans>
+    	<form-bean name="cjffwhForm" type="com.zfsoft.xgxt.qgzx.jfcjgl.CjffwhForm" />
+    	<form-bean name="YjsCjffForm" type="com.zfsoft.xgxt.qgzx.yjscjffgl.YjsCjffForm" /><!-- 研究生酬金发放 -->
+	</form-beans>
+	<action-mappings>
+		<action path="/qgzx_jfcjgl_cjff" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.qgzx.jfcjgl.CjffSjwhAction" 
+    			name="cjffwhForm"
+    			parameter="method">	
+    		<forward name="sjwhCx" path="/xsgzgl/qgzx/jfgl/sjwhCx.jsp"></forward>
+    		<forward name="sjwhCk" path="/xsgzgl/qgzx/jfgl/ckSjwh.jsp"></forward>
+			<forward name="zjCjff" path="/xsgzgl/qgzx/jfgl/zjSjwh.jsp"></forward>
+			<forward name="xgCjff" path="/xsgzgl/qgzx/jfgl/xgSjwh.jsp"></forward>
+			<forward name="gjcxCjff" path="/xsgzgl/qgzx/jfgl/sjwhgjCx.jsp"></forward>
+		</action>
+		
+		<action path="/qgzx_jfgl_yjscjff" forward="/qgzxJfglYjscjff.do?method=yjsCjffList"/>	
+		<action path="/qgzxJfglYjscjff" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.qgzx.yjscjffgl.YjsCjffAction" 
+    			name="YjsCjffForm"
+    			parameter="method">	
+    		<forward name="yjsCjffCx" path="/xsgzgl/qgzx/yjscjffgl/yjsCjffCx.jsp"></forward>
+    		<forward name="yjsCjffCk" path="/xsgzgl/qgzx/yjscjffgl/yjsCjffCk.jsp"></forward>
+			<forward name="zjyjsCjff" path="/xsgzgl/qgzx/yjscjffgl/zjyjsCjff.jsp"></forward>
+			<forward name="xgyjsCjff" path="/xsgzgl/qgzx/yjscjffgl/xgyjsCjff.jsp"></forward>
+			<forward name="yjsCjffList" path="/xsgzgl/qgzx/yjscjffgl/yjsCjffList.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+</struts-config>

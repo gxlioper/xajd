@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="generalPjpyGeneralForm" type="xsgzgl.pjpy.general.PjpyGeneralForm" />
+    	<form-bean name="hjmdtjForm" type="xsgzgl.pjpy.general.tjcx.hjmdtj.HjmdtjForm" />     <!-- 获奖名单统计-->
+    	<form-bean name="xyhjtjForm" type="xsgzgl.pjpy.general.tjcx.xyhjtj.XyhjtjForm" />     <!-- 学院获奖统计-->
+    	<form-bean name="bjhjtjForm" type="xsgzgl.pjpy.general.tjcx.bjhjtj.BjhjtjForm" />     <!-- 学院获奖统计-->
+    	<form-bean name="jxjtjForm" type="xsgzgl.pjpy.general.tjcx.jxjtj.JxjtjForm" />        <!-- 奖学金统计-->
+    	<form-bean name="bjryglForm" type="xsgzgl.pjpy.general.bjry.BjryglForm" />        <!-- 班级荣誉管理-->
+    	<form-bean name="hjxsmdForm" type="xsgzgl.pjpy.general.tjfx.HjxsmdForm" />     <!-- 获奖名单统计-->
+    	<form-bean name="wdpjForm" type="com.zfsoft.xgxt.pjpy.pjgl.WdpjForm" /> 
+	</form-beans>
+
+	<action-mappings>
+  
+  		<action path="/pjpy_general_index" 			forward="/general_pjpy.do?method=pjpyIndex"/>		<!-- 评奖首页 -->
+  		<action path="/pjpy_general_zhcp_maintain" 	forward="/general_pjpy.do?method=zhcpMaintain"/>	<!-- 综合测评 -->
+  		<action path="/pjpy_general_wdpj" 			forward="/general_pjpy.do?method=wdpjMangage"/>		<!-- 我的评奖 -->
+  		<action path="/pjpy_general_zhcp_result" 	forward="/general_pjpy.do?method=zhcpResult"/>	    <!-- 综合结果 -->
+  		<action path="/pjpy_tjcx_hjmdtj" 	forward="/pjpy_hjmdtj.do?method=hjmdtjCx"/>	    <!-- 获奖名单统计 -->
+  		<action path="/pjpy_tjcx_xyhjtj" 	forward="/pjpy_xyhjtj.do?method=xyhjtjCx"/>	    <!-- 学院获奖统计 -->
+  		<action path="/pjpy_tjcx_bjhjtj" 	forward="/pjpy_bjhjtj.do?method=bjhjtjCx"/>	    <!-- 班级获奖统计 -->
+  		<action path="/pjpy_tjcx_jxjtj" 	forward="/pjpy_jxjtj.do?method=jxjtjCx"/>	    <!-- 奖学金统计 -->
+  		<action path="/pjpy_bjry_bjrygl" 	forward="/pjpy_bjrygl.do?method=bjryglCx"/>	    <!-- 班级荣誉管理 -->
+  		<action path="/pjpy_tjcx_hjxsmdtj" 	forward="/pjpy_hjxsmdtj.do?method=expHjmdtj"/>	    <!-- 获奖学生名单统计 -->
+  		
+  		<!-- =======================================获奖学生名单================================================= -->
+  		<action path="/pjpy_hjxsmdtj"
+  				name="hjxsmdForm"
+  				type="xsgzgl.pjpy.general.tjfx.HjxsmdAction"
+  				parameter="method"
+  				scope="request">
+  			<forward name="success" path="/xsgzgl/pjpy/general/tjfx/hjxsmd.jsp"></forward>		
+  		</action>
+  		
+  		<!-- ===================================== The Last ===================================================== -->	
+		<action path="/general_pjpy" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.PjpyGeneralAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+    		<forward name="pjpyIndex" 	path="/xsgzgl/pjpy/general/init/pjpyIndex.jsp"/>		<!-- 评奖首页 -->
+    		<forward name="pjlcSetting" path="/xsgzgl/pjpy/general/init/pjlcSetting.jsp"/>		<!-- 评奖流程设置 -->
+    		<forward name="pjpyStart" 	path="/xsgzgl/pjpy/general/init/pjpyStart.jsp"/>		<!-- 开始新评奖 -->
+    		<forward name="pjryManage" 	path="/xsgzgl/pjpy/general/pjsz/pjry/pjryManage.jsp"/>	<!-- 评奖人员设置-->
+    		<forward name="cpxzManage" 	path="/xsgzgl/pjpy/general/pjsz/cpxz/cpxzManage.jsp"/>	<!-- 参评小组设置-->
+    		<forward name="zcxmManage" 	path="/xsgzgl/pjpy/general/pjsz/zcxm/zcxmManage.jsp"/>	<!-- 综测项目设置-->
+    		<forward name="pjxmManage" 	path="/xsgzgl/pjpy/general/pjsz/pjxm/pjxmManage.jsp"/>	<!-- 评奖项目设置-->
+			<forward name="pjxmSetting" path="/xsgzgl/pjpy/general/pjsz/pjxm/pjxmSetting.jsp"/>	<!-- 评奖项目设置-->
+			
+			<forward name="wdpjMangage" path="/xsgzgl/pjpy/general/wdpj/wdpjMangage.jsp"/>		<!-- 我的评奖-->
+		</action>
+		
+		<!-- 评奖首页 -->
+		<action path="/general_pjpy_index_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.index.PjpyIndexAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 评奖设置_评奖人员 -->
+		<action path="/general_pjsz_pjry_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.pjsz.pjry.PjszPjryAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 评奖设置_项目设置 -->
+		<action path="/general_pjpy_xmsz_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.xmsz.PjpyXmszAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 评奖设置_参评小组 -->
+		<action path="/general_pjsz_cpxz_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.pjsz.cpxz.PjszCpxzAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 评奖设置_综测项目 -->
+		<action path="/general_pjsz_zcxm_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.pjsz.zcxm.PjszZcxmAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 评奖设置_班级大类 -->
+		<action path="/general_pjsz_bjdl_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.pjsz.bjdl.PjszBjdlAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 评奖设置_评奖项目 -->
+		<action path="/general_pjsz_pjxm_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.pjsz.pjxm.PjszPjxmAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- ================================项目设置 begin =======================================-->
+		
+		<!-- 项目设置_评奖条件设置 -->
+		<action path="/general_xmsz_pjtj_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.xmsz.pjtj.XmszPjtjAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 项目设置_评奖人数设置 -->
+		<action path="/general_xmsz_rssz_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.xmsz.rssz.XmszRsszAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 项目设置_项目兼得设置 -->
+		<action path="/general_xmsz_xmjd_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.xmsz.xmjd.XmszXmjdAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 项目设置_项目时间设置 -->
+		<action path="/general_xmsz_sjsz_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.xmsz.sjsz.XmszSjszAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- ================================项目设置 end =======================================-->
+		
+		<!-- ================================我的评奖 begin =======================================-->
+		
+		<!-- 评奖评优_我的评奖 -->
+		<action path="/general_pjpy_wdpj_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.wdpj.PjpyWdpjAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		<!-- 评奖评优_我的评奖  new -->
+		<action path="/pjpy_pjgl_wdpj" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.pjpy.pjgl.WdpjAction" 
+    			name="wdpjForm"
+    			parameter="method">
+		</action>
+		<!-- 我的评奖_学生申请 -->
+		<action path="/general_wdpj_xssq_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.wdpj.xssq.WdpjXssqAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 我的评奖_老师上报 -->
+		<action path="/general_wdpj_lssb_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.wdpj.lssb.WdpjLssbAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 我的评奖_项目审核 -->
+		<action path="/general_wdpj_xmsh_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.wdpj.xmsh.WdpjXmshAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 我的评奖_结果查询 -->
+		<action path="/general_wdpj_jgcx_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.wdpj.jgcx.WdpjJgcxAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- ================================项目设置 end =======================================-->
+		
+
+		
+		<!-- 综合测评_综测维护 -->
+		<action path="/general_zhcp_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.zhcp.PjpyZhcpAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- ================================统计查询 begin =======================================-->
+		<!-- ================================author 伟大的骆 ======================================-->
+		<action path="/general_pjpy_djbg" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.djbg.PjpyDjbgAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<action path="/pjpy_tjcx_shmddc" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.shmddc.TjcxShmddcAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method"/>
+		<!-- ================================统计查询 end =========================================-->
+		
+		<!-- ================================统计查询 begin =======================================-->
+		<!-- ================================author 伟大的骆 =======================================-->
+		<action path="/pjpy_tjcx_zcbjmd_djks" 	forward="/general_pjpy_tjcx.do?method=zcbjmdDjks"/>
+		<action path="/pjpy_tjcx_zcbjmd_nodjks" forward="/general_pjpy_tjcx.do?method=zcbjmdNoDjks"/>
+		<action path="/pjpy_tjcx_hjmdhz" 		forward="/general_pjpy_tjcx.do?method=hjmdhz"/>
+		<action path="/pjpy_tjcx_hjjehz" 		forward="/general_pjpy_tjcx.do?method=hjjehz"/>
+		<action path="/pjpy_tjcx_tjmdhz" 		forward="/general_pjpy_tjcx.do?method=tjmdhz"/> <!-- 推荐名单汇总 by qlj -->
+		<action path="/pjpy_tjcx_knstjmdhz" 	forward="/general_pjpy_tjcx.do?method=knstjmdhz"/> <!-- 困难生奖学金推荐名单汇总 by qlj -->
+		<action path="/pjpy_tjcx_cmhjmdhz" 		forward="/general_pjpy_tjcx.do?method=cmhjmdhz"/>
+		
+		<action path="/general_pjpy_tjcx" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.PjpyTjcxAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 统计查询_综测班级名单 -->
+		<action path="/general_tjcx_zcbjmd_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.zcbjmd.TjcxZcbjmdAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 统计查询_获奖名单汇总 -->
+		<action path="/general_tjcx_hjmdhz_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.hjmdhz.TjcxHjmdhzAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    	</action>
+    	
+    	<!-- 统计查询_获奖金额汇总 -->
+		<action path="/general_tjcx_hjjehz_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.hjjehz.TjcxHjjehzAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 统计查询_推荐名单汇总 -->
+		<action path="/general_tjcx_tjmdhz_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.tjmdhz.TjcxTjmdhzAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- 统计查询_困难生推荐名单汇总 -->
+		<action path="/general_tjcx_knstjmdhz_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.knstjmdhz.TjcxTjmdhzAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+		</action>
+		
+		<!-- ================================统计查询 end =======================================-->
+		
+		<!-- ===================================== 浙江建设 ===================================================== -->	
+		<action path="/zjjs_zhcp_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.zjjszyjsxy.zhcp.PjpyZhcpAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+    		<forward name="inZcf" path="/xsgzgl/pjpy/zjjszyjsxy/zhcp/zcfInput.jsp"/>		
+		</action>
+			
+		<action path="/zjjs_zhcp" 
+    			scope="request"
+    			type="xsgzgl.pjpy.zjjszyjsxy.zhcp.PjpyZhcpAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    			
+    		<forward name="inZcf" path="/xsgzgl/pjpy/zjjszyjsxy/zhcp/zcfInput.jsp"/>		
+		</action>
+		
+		<!-- ===================================== 池州学院 ===================================================== -->	
+		<action path="/czzy_zhcp_ajax" 
+    			scope="request"
+    			type="xsgzgl.pjpy.czzyjsxy.zhcp.PjpyZhcpAction" 
+    			name="generalPjpyGeneralForm"
+    			parameter="method">
+    				
+		</action>
+		
+		
+		<!-- =====================================获奖名单统计查询start===================================================== -->	
+		<action path="/pjpy_hjmdtj" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.hjmdtj.HjmdtjAction" 
+    			name="hjmdtjForm"
+    			parameter="method">
+    		<forward name="hjmdtjCx" 	path="/xsgzgl/pjpy/general/tjcx/hjdmtj/hjmdtj.jsp"/>		<!-- 获奖名单统计 -->
+		</action>
+		<action path="/pjpy_hjmdtj_ajax"
+        		parameter="method"
+        		name="hjmdtjForm"
+        		scope="request"
+		        type="xsgzgl.pjpy.general.tjcx.hjmdtj.HjmdtjAjax">
+		</action>
+		<!-- =====================================获奖名单统计查询end===================================================== -->	
+		
+		<!-- =====================================学院获奖统计查询start===================================================== -->	
+		<action path="/pjpy_xyhjtj" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.xyhjtj.XyhjtjAction" 
+    			name="xyhjtjForm"
+    			parameter="method">
+    		<forward name="xyhjtjCx" 	path="/xsgzgl/pjpy/general/tjcx/xyhjtj/xyhjtj.jsp"/>		<!-- 学院获奖统计 -->
+		</action>
+		<action path="/pjpy_xyhjtj_ajax"
+        		parameter="method"
+        		name="xyhjtjForm"
+        		scope="request"
+		        type="xsgzgl.pjpy.general.tjcx.xyhjtj.XyhjtjAjax">
+		</action>
+		<action path="/pjpy_xyhjtj_dc" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.pjpy.tjcx.XyhjtjAction" 
+    			name="xyhjtjForm"
+    			parameter="method">
+		</action>
+		<!-- =====================================学院获奖统计查询end===================================================== -->	
+		<!-- =====================================班级获奖统计查询start===================================================== -->
+		<action path="/pjpy_bjhjtj" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.bjhjtj.BjhjtjAction" 
+    			name="bjhjtjForm"
+    			parameter="method">
+    		<forward name="bjhjtjCx" 	path="/xsgzgl/pjpy/general/tjfx/bjhjtj.jsp"/>		<!-- 学院获奖统计 -->
+		</action>
+		<action path="/pjpy_bjhjtj_ajax"
+        		parameter="method"
+        		name="bjhjtjForm"
+        		scope="request"
+		        type="xsgzgl.pjpy.general.tjcx.bjhjtj.BjhjtjAjax">
+		</action>
+		
+		<!-- =====================================班级获奖统计查询end===================================================== -->
+		<!-- =====================================奖学金统计查询start===================================================== -->	
+		<action path="/pjpy_jxjtj" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.tjcx.jxjtj.JxjtjAction" 
+    			name="jxjtjForm"
+    			parameter="method">
+    		<forward name="jxjtjCx" 	path="/xsgzgl/pjpy/general/tjcx/jxjtj/jxjtj.jsp"/>		<!-- 奖学金统计 -->
+		</action>
+		<action path="/pjpy_jxjtj_ajax"
+        		parameter="method"
+        		name="jxjtjForm"
+        		scope="request"
+		        type="xsgzgl.pjpy.general.tjcx.jxjtj.JxjtjAjax">
+		</action>
+		<!-- =====================================奖学金统计查询end===================================================== -->	
+		
+		<!-- =====================================班级荣誉管理start===================================================== -->	
+		<action path="/pjpy_bjrygl" 
+    			scope="request"
+    			type="xsgzgl.pjpy.general.bjry.BjryglAction" 
+    			name="bjryglForm"
+    			parameter="method">
+    		<forward name="bjryglCx" 	path="/xsgzgl/pjpy/general/bjry/bjryglCx.jsp"/>		<!-- 班级荣誉查询 -->
+    		<forward name="bjryglZj" 	path="/xsgzgl/pjpy/general/bjry/bjryglZj.jsp"/>		<!-- 班级荣誉增加 -->
+    		<forward name="bjmcInfo"  path="/xsgzgl/pjpy/general/bjry/bjmcInfo.jsp" />      <!-- 获取班级名称 -->
+    		<forward name="bjryglCk"  path="/xsgzgl/pjpy/general/bjry/bjryglCk.jsp" />      <!-- 获取班级查看 -->
+    		<forward name="bjryglWh"  path="/xsgzgl/pjpy/general/bjry/bjryglWh.jsp" />      <!-- 获取班级修改 -->
+    		
+		</action>
+		<action path="/pjpy_bjrygl_ajax"
+        		parameter="method"
+        		name="bjryglForm"
+        		scope="request"
+		        type="xsgzgl.pjpy.general.bjry.BjryglAjax">
+		</action>
+		<!-- =====================================班级荣誉管理end===================================================== -->	
+	</action-mappings>
+</struts-config>

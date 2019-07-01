@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/rcsw_xwzswh.do" location="0,0" dimension="208,84" />
+  <StrutsActivity path="/rcsw/nbty/xwzsAdd.jsp" location="350,50" dimension="172,48" />
+  <StrutsActivity path="/rcsw/nbty/xwzsModi.jsp" location="650,50" dimension="178,48" />
+  <StrutsActivity path="/rcsw/nbty/xwzswh.jsp" location="21,184" dimension="166,48" />
+  <StrutsTransition id="/rcsw_xwzswh.do,xwzsAdd,/rcsw/nbty/xwzsAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="104,42" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rcsw_xwzswh.do,xwzsModi,/rcsw/nbty/xwzsModi.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="104,42" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rcsw_xwzswh.do,xwzswh,/rcsw/nbty/xwzswh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="104,84" />
+      <AbsolutePoint location="104,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

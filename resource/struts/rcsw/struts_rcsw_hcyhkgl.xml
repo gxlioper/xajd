@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -火车优惠卡管理-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="hcyhkJcszForm" type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcyhkjcsz.HcyhkJcszForm" />
+    	<form-bean name="hcccqjtxForm" type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcccqjtx.HcccqjtxForm" />
+    	<form-bean name="hcccqjshForm" type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcccqjsh.HcccqjshForm" />
+    	<form-bean name="hcccqjjgForm" type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcccqjjg.HcccqjjgForm" />
+    	<form-bean name="hcyhklxForm" type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcyhklx.HcyhklxForm" />
+    	<form-bean name="hcqjForm" type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcyhqjdr.HcqjForm" />
+    	<form-bean name="hczdForm" type="com.zfsoft.xgxt.rcsw.hczd.HczdForm" />
+	</form-beans>
+	
+	<action-mappings>
+	
+	<action path="/rcsw_hcyhk_jcsz" forward="/rcsw_hcyhk_jcszgl.do?method=hcyhkJcsz"/>	<!-- 火车优惠卡管理基础设置 -->
+	<action path="/rcsw_hcyhk_jcszgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcyhkjcsz.HcyhkJcszAction" 
+   			name="hcyhkJcszForm"         
+   			parameter="method">	
+   		<forward name="hcyhkJcsz" path="/xsgzgl/rcsw/hcyhkgl/hcyhkJcsz/hcyhkJcsz.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_hcyhk_hcccqjtx" forward="/rcsw_hcyhk_hcccqjtxgl.do?method=hcccqjtxManage"/>	<!-- 火车优惠卡管理火车乘车区间填写 -->
+	<action path="/rcsw_hcyhk_hcccqjtxgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcccqjtx.HcccqjtxAction" 
+   			name="hcccqjtxForm"   
+   			parameter="method">	
+   		<forward name="hcccqjtxManage" path="/xsgzgl/rcsw/hcyhkgl/hcccqjtx/hcccqjtxManage.jsp"></forward>
+   		<forward name="addHcccqjtx" path="/xsgzgl/rcsw/hcyhkgl/hcccqjtx/addHcccqjtx.jsp"></forward>
+   		<forward name="updateHcccqjtx" path="/xsgzgl/rcsw/hcyhkgl/hcccqjtx/updateHcccqjtx.jsp"></forward>
+   		<forward name="viewHcccqjtx" path="/xsgzgl/rcsw/hcyhkgl/hcccqjtx/viewHcccqjtx.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_hcyhk_hcccqjsh" forward="/rcsw_hcyhk_hcccqjshgl.do?method=hcccqjshManage"/>	<!-- 火车优惠卡管理火车乘车区间审核 -->
+	<action path="/rcsw_hcyhk_hcccqjshgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcccqjsh.HcccqjshAction" 
+   			name="hcccqjshForm"   
+   			parameter="method">	
+   		<forward name="hcccqjshManage" path="/xsgzgl/rcsw/hcyhkgl/hcccqjsh/hcccqjshManage.jsp"></forward>
+   		<forward name="hcccqjDgsh" path="/xsgzgl/rcsw/hcyhkgl/hcccqjsh/hcccqjDgsh.jsp"></forward> 
+   		<forward name="viewHcccqjsh" path="/xsgzgl/rcsw/hcyhkgl/hcccqjsh/viewHcccqjsh.jsp"></forward>
+   		<forward name="hcccPlsh" path="/xsgzgl/rcsw/hcyhkgl/hcccqjsh/hcccPlsh.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_hcyhk_hcccqjjg" forward="/rcsw_hcyhk_hcccqjjggl.do?method=hcccqjjgManage"/>	<!-- 火车优惠卡管理火车乘车区间结果 -->
+	<action path="/rcsw_hcyhk_hcccqjjggl"
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcccqjjg.HcccqjjgAction" 
+   			name="hcccqjjgForm"   
+   			parameter="method">	  
+   		<forward name="hcccqjjgManage" path="/xsgzgl/rcsw/hcyhkgl/hcccqjjg/hcccqjjgManage.jsp"></forward>
+   		<forward name="addHcccqjjg" path="/xsgzgl/rcsw/hcyhkgl/hcccqjjg/addHcccqjjg.jsp"></forward>
+   		<forward name="updateHcccqjjg" path="/xsgzgl/rcsw/hcyhkgl/hcccqjjg/updateHcccqjjg.jsp"></forward>
+   		<forward name="viewHcccqjjg" path="/xsgzgl/rcsw/hcyhkgl/hcccqjjg/viewHcccqjjg.jsp"></forward>
+	</action>
+	<!--火车乘车区间导入   浙江旅游个性化 -->
+	<action path="/rcsw_hcyhk_hcyhqjdr" forward="/hcyhk_hcyhqjdr.do?method=hcqjManage"/>
+	<action path="/hcyhk_hcyhqjdr"
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcyhqjdr.HcqjAction" 
+   			name="hcqjForm"   
+   			parameter="method">	  
+   		<forward name="hcqjManage" path="/xsgzgl/rcsw/hcyhkgl/hcqjdr/hcyhk/hcyhklist.jsp"></forward>
+   		<forward name="drjsp" path="/xsgzgl/rcsw/hcyhkgl/hcqjdr/hcyhk/dr.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_hcyhkgl_hcyhklx" forward="/rcsw_hcyhkgl_hcyhklxgl.do?method=hcyhklxManage"/>	<!-- 火车优惠卡类型维护 -->
+	<action path="/rcsw_hcyhkgl_hcyhklxgl" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.hcyhkgl.hcyhklx.HcyhklxAction" 
+   			name="hcyhklxForm"   
+   			parameter="method">	
+   		<forward name="hcyhklxManage" path="/xsgzgl/rcsw/hcyhkgl/hcyhklx/hcyhklxManage.jsp"></forward>
+   		<forward name="addHcyhklx" path="/xsgzgl/rcsw/hcyhkgl/hcyhklx/addHcyhklx.jsp"></forward>
+   		<forward name="updateHcyhklx" path="/xsgzgl/rcsw/hcyhkgl/hcyhklx/updateHcyhklx.jsp"></forward>
+	</action>
+	
+	
+	<action path="/rcsw_hczdgl_hczdwh" forward="/hczdgl_hczdwh.do?method=hczdList"/>	<!-- 火车站点维护 -->
+	<action path="/hczdgl_hczdwh" 
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.hczd.HczdAction" 
+   			name="hczdForm"   
+   			parameter="method">	
+   		<forward name="hczdList" path="/xsgzgl/rcsw/hczd/hczdList.jsp"></forward>
+   		<forward name="hczdAdd" path="/xsgzgl/rcsw/hczd/hczdAdd.jsp"></forward>
+   		<forward name="hczdUpdate" path="/xsgzgl/rcsw/hczd/hczdUpdate.jsp"></forward>
+	</action>
+	</action-mappings>
+</struts-config>

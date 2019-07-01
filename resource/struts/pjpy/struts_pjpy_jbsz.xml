@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="pjpyJbszForm" type="xgxt.pjpy.comm.pjpy.jbsz.PjpyJbszForm"/>
+		<form-bean name="pjpyLcszForm" type="xgxt.pjpy.comm.pjpy.lcsz.PjpyLcszForm"/>
+    	<form-bean name="pjpyRyqdForm" type="xgxt.pjpy.comm.pjpy.ryqd.PjpyRyqdForm" />
+    	<form-bean name="pjpyXmszForm" type="xgxt.pjpy.comm.pjpy.xmsz.PjpyXmszForm" />
+    	<form-bean name="pjpyZjffForm" type="xgxt.pjpy.tjzy.zjff.PjpyZjffForm" />
+    	<form-bean name="pjpyBcpjForm" type="xgxt.pjpy.tjzy.bcpj.PjpyBcpjForm" />
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/pjpy_zhsz"			forward="/pjpyJbsz.do?method=pjpyZhsz"/>
+		<action path="/pjpy_jbsz_gylcxs" 	forward="/pjpy/comm/pjpy/pjlcDisplay.jsp"/>	<!-- 流程图展示 -->
+    	<action path="/pjpy_pjjbsz" 		forward="/pjpyJbsz.do?method=pjjbsz"/>		<!-- 基本设置 -->
+		<action path="/pjpy_pjlcsz" 		forward="/pjpyLcsz.do?method=pjlcsz"/>		<!-- 流程设置 -->
+		<action path="/pjpy_pjryqd" 		forward="/pjpyRyqd.do?method=pjryqd"/>		<!-- 人员确定 -->
+		<action path="/pjpy_pjxmsz" 		forward="/pjpyXmsz.do?method=pjxmsz"/>		<!-- 项目设置 -->
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 基本设置 -->
+    	
+    	<!-- 评奖基本设置 -->
+    	<action path="/pjpyJbsz" 
+        		parameter="method"  
+        		name="pjpyJbszForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.pjpy.jbsz.PjpyJbszAction">	
+		       
+			<forward name="pjjbsz"    		path="/pjpy/comm/pjpy/jbsz/pjjbsz.jsp" />
+			<forward name="pjpyZhsz"    	path="/pjpy/comm/pjpy/jbsz/pjpyZhsz.jsp" />
+		
+		</action>
+		
+		<!-- 评奖流程设置 -->
+    	<action path="/pjpyLcsz" 
+        		parameter="method"  
+        		name="pjpyLcszForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.pjpy.lcsz.PjpyLcszAction">	
+
+			<forward name="pjlcsz"    	path="/pjpy/comm/pjpy/jbsz/pjlcsz.jsp" />
+			<forward name="pjlcszOne"   path="/pjpy/comm/pjpy/jbsz/pjlcszOne.jsp" />
+			
+		</action>
+		
+		<!-- 评奖人员确定 -->
+    	<action path="/pjpyRyqd" 
+    			parameter="method"  
+       			name="pjpyRyqdForm" 
+       			scope="request"
+    			type="xgxt.pjpy.comm.pjpy.ryqd.PjpyRyqdAction">
+    		<forward name="pjryqd" path="/pjpy/comm/pjpy/jbsz/pjryqd.jsp"/>
+    		<forward name="pjztmdsz" path="/pjpy/comm/pjpy/jbsz/pjztmdsz.jsp"/>
+   		 </action>
+   		 
+   		<!-- 评奖项目设置 -->
+    	<action path="/pjpyXmsz" 
+    			parameter="method"  
+       			name="pjpyXmszForm" 
+       			scope="request"
+    			type="xgxt.pjpy.comm.pjpy.xmsz.PjpyXmszAction">
+    		<forward name="pjxmsz" path="/pjpy/comm/pjpy/jbsz/pjxmsz.jsp"/>
+    		<forward name="pjxmszOne" path="/pjpy/comm/pjpy/jbsz/pjxmszOne.jsp"/>
+    		<forward name="pjxmszFlow" path="/pjpy/comm/pjpy/jbsz/pjxmszFlow.jsp"/>
+   		 </action>
+		
+		<!-- 评奖_天津职业_资金发放 -->
+    	<action path="/pjpy_tjzy_zjff" 
+        		parameter="method"  
+        		name="pjpyZjffForm" 
+        		scope="request"
+		        type="xgxt.pjpy.tjzy.zjff.PjpyZjffAction">	
+		       
+			<forward name="zjffManage"    		path="/pjpy/tjzy/zjff/zjffManage.jsp" />
+		
+		</action>
+		
+		<!-- 评奖_天津职业_资金发放 -->
+    	<action path="/pjpy_tjzy_zjff_ajax" 
+        		parameter="method"  
+        		name="pjpyZjffForm" 
+        		scope="request"
+		        type="xgxt.pjpy.tjzy.zjff.PjpyZjffAjax">	
+		   
+		
+		</action>
+		
+		<!-- 评奖_天津职业_本次评奖 -->
+    	<action path="/pjpy_tjzy_bcpj" 
+        		parameter="method"  
+        		name="pjpyBcpjForm" 
+        		scope="request"
+		        type="xgxt.pjpy.tjzy.bcpj.PjpyBcpjAction">	
+		       
+			<forward name="bcpjManage"    		path="/pjpy/tjzy/bcpj/bcpjManage.jsp" />
+		
+		</action>
+		
+		<!-- 评奖_天津职业_本次评奖 -->
+    	<action path="/pjpy_tjzy_bcpj_ajax" 
+        		parameter="method"  
+        		name="pjpyBcpjForm" 
+        		scope="request"
+		        type="xgxt.pjpy.tjzy.bcpj.PjpyBcpjAjax">	
+		   
+		
+		</action>
+	</action-mappings>
+</struts-config>

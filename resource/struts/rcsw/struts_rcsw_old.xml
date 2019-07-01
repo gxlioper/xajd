@@ -1,0 +1,246 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+		<form-bean name="wjscForm" type="xgxt.wjsc.WjscForm" />
+		<form-bean name="jyglForm" type="xgxt.base.form.JyglForm" />
+		<form-bean name="mpglForm" type="xgxt.rcgl.nbzy.MpglForm" />
+		<form-bean name="xsfwzdzxglForm" type="xgxt.rcgl.nbcs.XsfwzdzxglForm" />
+		<form-bean name="bylfglForm" type="xgxt.rcgl.nbcs.BylfglForm" />
+		<form-bean name="xfxxglForm" type="xgxt.rcgl.nbcs.XfxxglForm" />
+		<form-bean name="AssociationForm" type="xgxt.xljk.xlxh.Form.AssociationForm" />
+		<form-bean name="qjglForm" type="xgxt.rcgl.zjjj.qjgl.ZjjjQjglForm" />
+		<form-bean name="cdtyQjglForm" type="xgxt.rcgl.cdty.qjgl.CdtyQjglForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>	
+	
+<!-- <<<<<<<<<<<<<<<<<<<日常事务: 学生证补办-查询 重庆科技>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		
+		<action path="/cqkj_xszbb_querry" parameter="xszbbQuerryCqkj"
+			name="commanForm" scope="request" type="xgxt.action.cqkj.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/cqkj/xszbb_querry.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 学生证补办-详细查看 重庆科技>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		
+		<action path="/cqkj_xszbb_viewmore" parameter="xszbbViewmoreCqkj"
+			name="commanForm" scope="request" type="xgxt.action.cqkj.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/cqkj/xszbb_viewmore.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 学生证补办-添加 重庆科技>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->	
+		<action path="/cqkj_xszbb_input" parameter="xszbbInputCqkj"
+			name="commanForm" scope="request" type="xgxt.action.cqkj.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/cqkj/xszbb_input.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 学生证补办-修改 重庆科技>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->	
+		<action path="/cqkj_xszbb_update" parameter="xszbbUpdateCqkj"
+			name="commanForm" scope="request" type="xgxt.action.cqkj.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/cqkj/xszbb_input.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 日常考核查询 长沙民政>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->	
+		<action path="/csmz_rckh_query" parameter="rckhQueryCsmz"
+			name="commanForm" scope="request" type="xgxt.action.csmz.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/csmz/csmz_rckh_query.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 日常考核增加 长沙民政>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->	
+		<action path="/addRckh" parameter="addRckh"
+			name="commanForm" scope="request" type="xgxt.action.csmz.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/csmz/addrckh.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 日常考核修改 长沙民政>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->	
+		<action path="/updateRckh" parameter="updateRckh"
+			name="commanForm" scope="request" type="xgxt.action.csmz.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/csmz/updaterckh.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 日常考核内容查看 长沙民政>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->	
+		<action path="/viewmorerckh" parameter="rckhMoreQuery"
+			name="commanForm" scope="request" type="xgxt.action.csmz.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/csmz/viewmorerckh.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 工作周报查询 长沙民政>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->	
+		<action path="/csmz_gzzb_query" parameter="gzzbQueryCsmz"
+			name="commanForm" scope="request" type="xgxt.action.csmz.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/csmz/csmz_gzzb_query.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 工作周报增加 长沙民政>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->	
+		<action path="/addGzzb" parameter="addGzzb"
+			name="commanForm" scope="request" type="xgxt.action.csmz.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/csmz/addgzzb.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 工作周报修改 长沙民政>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->	
+		<action path="/updateGzzb" parameter="updateGzzb"
+			name="commanForm" scope="request" type="xgxt.action.csmz.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/csmz/updategzzb.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 工作周报内容查看 长沙民政>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->	
+		<action path="/viewmoregzzb" parameter="gzzbMoreQuery"
+			name="commanForm" scope="request" type="xgxt.action.csmz.RcswAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/rcsw/csmz/viewmoregzzb.jsp" />
+		</action>
+		
+        <!--浙江机电日常事务学费催缴-->
+    	<action 
+    		path="/rcswXfcj"
+    		name="commanForm"
+    		parameter="method" 
+    		type="xgxt.rcgl.zjjdzyjsxy.action.RcsqXfcjAction">
+    		<forward name="success" path="/sjcz/xfcjb.jsp" />
+    	</action>
+    	
+    	<!--宁波职业 名片工程 -->
+    	<action path="/nbzympgc" 
+				name="mpglForm" 
+				type="xgxt.rcgl.nbzy.MpglAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+				<forward name ="bysmpxxwh" path="/rcsw/nbzy/bysmpxxwh.jsp"/>
+				<forward name = "bysmpxxwhOne" path="/rcsw/nbzy/bysmpxxwhOne.jsp"/>
+				<forward name ="xyftjmdj" path="/rcsw/nbzy/xyftjmdj.jsp"/>
+				<forward name ="xyftjmsh" path="/rcsw/nbzy/xyftjmsh.jsp"/>
+				<forward name ="xyftjmshOne" path="/rcsw/nbzy/xyftjmshOne.jsp"/>
+				<forward name ="xyftjmshReport" path="/rcsw/nbzy/xyftjmshReport.jsp"/>
+		</action>
+		<!--三江学院　户口管理 -->
+    	<action path="/xshkgl" 
+				name="mpglForm" 
+				type="xgxt.rcgl.nbzy.MpglAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+				<forward name ="addhkxx" path="/rcsw/sjxy/addhkxx.jsp"/>
+				<forward name = "updatehkxx" path="/rcsw/sjxy/updatehkxx.jsp"/>
+				<forward name ="hkxxgl" path="/rcsw/sjxy/hkxxgl.jsp"/>
+				<forward name ="hkglInfoPub" path="/rcsw/sjxy/hkglInfoPub.jsp"/>
+				<forward name ="viewhkglInfo" path="/rcsw/sjxy/viewhkglInfo.jsp"/>
+		</action>
+		<!--三江学院　身份证补办 -->
+    	<action path="/xssfzbb" 
+				name="mpglForm" 
+				type="xgxt.rcgl.nbzy.MpglAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+				<forward name ="sfzbbsq" path="/rcsw/sjxy/sfzbbsq.jsp"/>
+				<forward name ="sfzbbsh" path="/rcsw/sjxy/sfzbbsh.jsp"/>
+				<forward name = "updatesfzsqxx" path="/rcsw/sjxy/updatesfzsqxx.jsp"/>
+				<forward name ="sfzbbshcx" path="/rcsw/sjxy/sfzbbshcx.jsp"/>
+				<forward name ="sfzbbshxscx" path="/rcsw/sjxy/sfzbbshxscx.jsp"/>
+		</action>
+		
+		<!--宁波城市职业技术学院     学生指导服务中心管理 -->
+    	<action path="/xsfwzdzx" 
+				name="xsfwzdzxglForm" 
+				type="xgxt.rcgl.nbcs.XsfwzdzxglAction" 
+				parameter="method"
+				scope="request">
+				<forward name ="xslfslrgl" path="/rcsw/nbcs/xslfslrgl.jsp"/>
+				<forward name ="xslfslrxxAdd" path="/rcsw/nbcs/xslfslrxxAdd.jsp"/>
+				<forward name ="xslfslrxxModi" path="/rcsw/nbcs/xslfslrxxModi.jsp"/>
+				<forward name ="xslfxxgl" path="/rcsw/nbcs/xslfxxgl.jsp"/>
+				<forward name ="xslfxxAdd" path="/rcsw/nbcs/xslfxxAdd.jsp"/>
+				<forward name ="xslfxxModi" path="/rcsw/nbcs/xslfxxModi.jsp"/>
+				<forward name ="xslfhfdj" path="/rcsw/nbcs/xslfhfdj.jsp"/>
+				<forward name ="cqxxgl" path="/rcsw/nbcs/cqxxgl.jsp"/>
+				<forward name ="cqxxAdd" path="/rcsw/nbcs/cqxxAdd.jsp"/>
+				<forward name ="cqxxModi" path="/rcsw/nbcs/cqxxModi.jsp"/>				
+		</action>
+		
+		<!--宁波城市职业技术学院   毕业礼服管理-->	
+		<action path="/bylfgl" 
+				name="bylfglForm" 
+				type="xgxt.rcgl.nbcs.BylfglAction" 
+				parameter="method"
+				scope="request">
+				<forward name ="bylfgl" path="/rcsw/nbcs/bylfgl.jsp"/>		
+				<forward name ="bylfsqAdd" path="/rcsw/nbcs/bylfsqAdd.jsp"/>
+				<forward name ="bylfsqModi" path="/rcsw/nbcs/bylfsqModi.jsp"/>
+				<forward name ="bylfshgl" path="/rcsw/nbcs/bylfshgl.jsp"/>					
+				<forward name ="bylfsqAudi" path="/rcsw/nbcs/bylfsqAudi.jsp"/>
+				<forward name ="bylfghdj" path="/rcsw/nbcs/bylfghdj.jsp"/>
+				<forward name ="bylfgh" path="/rcsw/nbcs/bylfgh.jsp"/>
+		</action>
+		<!--宁波城市职业技术学院   学生学费信息管理-->	
+		<action path="/xfxx" 
+				name="xfxxglForm" 
+				type="xgxt.rcgl.nbcs.XfxxglAction" 
+				parameter="method"
+				scope="request">
+				<forward name ="xfxxgl" path="/rcsw/nbcs/xsxfxxgl.jsp"/>
+				<forward name ="xsxfxxAdd" path="/rcsw/nbcs/xsxfxxAdd.jsp"/>	
+				<forward name ="xsxfxxModi" path="/rcsw/nbcs/xsxfxxModi.jsp"/>
+				<forward name ="jcfjsgl" path="/rcsw/nbcs/jcfjsgl.jsp"/>	
+				<forward name ="jcfjsxxAdd" path="/rcsw/nbcs/jcfjsxxAdd.jsp"/>
+				<forward name ="jcfjsxxModi" path="/rcsw/nbcs/jcfjsxxModi.jsp"/>
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 请假管理>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    	<action path="/rcsw_qjsq" forward="/zjjj_rcsw_qjgl.do?method=xsqjUpdate"/>
+    	<action path="/rcsw_xsqjsh" forward="/zjjj_rcsw_qjgl.do?method=qjshManage"/>
+    	<action path="/rcsw_xsqjcx" forward="/zjjj_rcsw_qjgl.do?method=qjcxManage"/>
+    	<action path="/rcsw_xsqjdsjsh" forward="/zjjj_rcsw_qjgl.do?method=qjshManage&amp;userStatus=zr"/>
+    	<action path="/rcsw_xsqjfdysh" forward="/zjjj_rcsw_qjgl.do?method=qjshManage&amp;userStatus=fdy"/>
+    	
+    	<action 
+    		path="/zjjj_rcsw_qjgl"
+    		name="qjglForm" scope="request"
+    		parameter="method" 
+    		type="xgxt.rcgl.zjjj.qjgl.ZjjjQjglAction">
+    		
+    		<forward name="xsqjUpdate" path="/rcsw/zjjj/qjgl/xsqjUpdate.jsp"/>
+    		<forward name="qjshManage" path="/rcsw/zjjj/qjgl/qjshManage.jsp"/>
+    		<forward name="qjshUpdate" path="/rcsw/zjjj/qjgl/qjshUpdate.jsp"/>
+    		<forward name="qjxgUpdate" path="/rcsw/zjjj/qjgl/qjxgUpdate.jsp"/>
+    		<forward name="qjcxManage" path="/rcsw/zjjj/qjgl/qjcxManage.jsp"/>
+    		<forward name="qjglPrint" path="/rcsw/zjjj/qjgl/qjglPrint.jsp"/>
+    	</action>
+    	
+    	<!-- <<<<<<<<<<<<<<<<<<<日常事务: 城都体育请假管理>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    	<action path="/rcsw_cdty_qjsq"  forward="/cdty_rcsw_qjgl.do?method=xsqjUpdate"/>
+    	<action path="/rcsw_cdty_qjsh1" forward="/cdty_rcsw_qjgl.do?method=qjshManage&amp;qx=sh1"/>
+    	<action path="/rcsw_cdty_qjsh2" forward="/cdty_rcsw_qjgl.do?method=qjshManage&amp;qx=sh2"/>
+    	<action path="/rcsw_cdty_qjsh3" forward="/cdty_rcsw_qjgl.do?method=qjshManage&amp;qx=sh3"/>
+    	<action path="/rcsw_cdty_qjsh4" forward="/cdty_rcsw_qjgl.do?method=qjshManage&amp;qx=sh4"/>
+    	<action path="/rcsw_cdty_qjcx"  forward="/cdty_rcsw_qjgl.do?method=qjcxManage"/>
+    	
+    	<action 
+    		path="/cdty_rcsw_qjgl"
+    		name="cdtyQjglForm" scope="request"
+    		parameter="method" 
+    		type="xgxt.rcgl.cdty.qjgl.CdtyQjglAction">
+    		
+    		<forward name="xsqjUpdate" path="/rcsw/cdty/qjgl/xsqjUpdate.jsp"/>
+    		<forward name="qjshManage" path="/rcsw/cdty/qjgl/qjshManage.jsp"/>
+    		<forward name="qjshUpdate" path="/rcsw/cdty/qjgl/qjshUpdate.jsp"/>
+    		<forward name="qjxgUpdate" path="/rcsw/cdty/qjgl/qjxgUpdate.jsp"/>
+    		<forward name="qjcxManage" path="/rcsw/cdty/qjgl/qjcxManage.jsp"/>
+    		<forward name="qjglPrint" path="/rcsw/cdty/qjgl/qjglPrint.jsp"/>
+    	</action>
+		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

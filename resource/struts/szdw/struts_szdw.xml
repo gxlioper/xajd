@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="teaInfoForm" type="xsgzgl.szdw.teainfo.TeaInfoForm" />
+    	<form-bean name="szdwTxgbForm" type="xsgzgl.szdw.txgb.SzdwTxgbForm" />
+    	<form-bean name="generalSzdwGeneralForm" type="xsgzgl.szdw.general.SzdwGeneralForm" />
+    	<form-bean name="zdlskhForm" type="com.zfsoft.xgxt.szdw.sdkj.ZdlskhForm" />
+    	<form-bean name="fdyrzsqForm" type="com.zfsoft.xgxt.szdw.fdyrz.FdyrzsqForm" />
+    	<form-bean name="szdwCsszForm" type="com.zfsoft.xgxt.szdw.cssz.SzdwCsszForm" />
+    	<form-bean name="fdyjtffForm" type="com.zfsoft.xgxt.szdw.jtff.FdyjtffForm" />
+		<form-bean name="szdwThjlForm" type="com.zfsoft.xgxt.szdw.thjl.SzdwThjlForm" />
+    	<form-bean name="jcszForm1" type="com.zfsoft.xgxt.szdw.thjl.jcsz.JcszForm" />
+		<form-bean name="szdwThjlShForm" type="com.zfsoft.xgxt.szdw.thjl.thjlsh.SzdwThjlShForm" />
+    	<form-bean name="szdwThlxForm" type="com.zfsoft.xgxt.szdw.thjl.thlx.SzdwThlxForm" />
+    	<form-bean name="szdwZdgzxskForm" type="com.zfsoft.xgxt.szdw.thjl.zdgzxsk.SzdwZdgzxskForm" />
+    	
+    	<form-bean name="fdyxxModel" type="com.zfsoft.xgxt.szdw.fdyxx.FdyxxModel" />
+    	<form-bean name="fdyxgCsszModel" type="com.zfsoft.xgxt.szdw.xgsz.CsszModel"/>
+    	<form-bean name="xfjsForm" type="com.zfsoft.xgxt.szdw.xfjs.xfjsForm"/>  
+    	<form-bean name="syglForm" type="com.zfsoft.xgxt.szdw.sygl.SyglForm"/>
+		<form-bean name="jfxxForm" type="com.zfsoft.xgxt.szdw.jfxxwh.JfxxForm"/>
+		<form-bean name="ywxsypxForm" type="com.zfsoft.xgxt.szdw.fdyzyhfz.ywxsypx.YwxsypxForm"/>
+		<form-bean name="pxJgForm" type="com.zfsoft.xgxt.szdw.fdyzyhfz.ywxsypxJg.PxJgForm"/>
+		<form-bean name="jcgzTjModel" type="com.zfsoft.xgxt.szdw.fdyzyhfz.jcxgztj.JcgzTjModel"/>
+		<form-bean name="zyfzTjModel" type="com.zfsoft.xgxt.szdw.fdyzyhfz.zyhfztj.ZyfzTjModel"/>
+		<form-bean name="ktxmyjqkForm" type="com.zfsoft.xgxt.szdw.fdyzyhfz.ktxmyjqk.KtxmyjqkForm"/>
+		<form-bean name="gzfForm" type="com.zfsoft.xgxt.szdw.fdyzyhfz.gzf.GzfForm"/>
+		<form-bean name="lwForm" type="com.zfsoft.xgxt.szdw.fdyzyhfz.lw.LwForm"/>
+		<form-bean name="zzForm" type="com.zfsoft.xgxt.szdw.fdyzyhfz.zz.ZzForm"/>
+		<form-bean name="hjqkForm" type="com.zfsoft.xgxt.szdw.fdyzyhfz.hjqk.HjqkForm"/>
+		<form-bean name="fdydkForm" type="com.zfsoft.xgxt.szdw.fdydk.FdydkForm"/>
+	</form-beans>
+
+	<action-mappings>
+  
+ 			<action path="/szdw_xsgb_txgb"  forward="/szdwTxgb.do?method=txgbCx"/>
+  
+		<action path="/szdw_teaInfo" 
+    			scope="request"
+    			type="xsgzgl.szdw.teainfo.TeaInfoAction" 
+    			name="teaInfoForm"
+    			parameter="method">
+    			
+    		<forward name="teaInfo" path="/xsgzgl/szdw/teaInfo/teaInfo.jsp"/>
+    		<forward name="teaManage" path="/xsgzgl/szdw/teaInfo/teaManage.jsp"/>
+		</action>
+		
+		<!-- 思政队伍团学干部 -->
+		<action path="/szdwTxgb" 
+    			scope="request"
+    			type="xsgzgl.szdw.txgb.SzdwTxgbAction" 
+    			name="szdwTxgbForm"
+    			parameter="method">
+    			
+    		<forward name="txgbCx" path="/xsgzgl/szdw/txgb/txgbCx.jsp"/>
+    		<forward name="txgbWh" path="/xsgzgl/szdw/txgb/txgbWh.jsp"/>
+    		<forward name="txgbCk" path="/xsgzgl/szdw/txgb/txgbCk.jsp"/>
+    		
+		</action>
+		
+		<action path="/szdwTxgb_ajax" 
+    			scope="request"
+    			type="xsgzgl.szdw.txgb.SzdwTxgbAjax" 
+    			name="szdwTxgbForm"
+    			parameter="method">
+  
+		</action>
+		
+		<!-- ======================== The Last begin ================================== -->	
+		
+		<!-- 思政队伍维护 -->
+		<action path="/szdw_general_dwwh" forward="/general_szdw.do?method=szdwDwwh"/>
+		<!-- 教师信息维护 -->
+		<action path="/szdw_general_fdyxxwh" forward="/general_szdw.do?method=fdyxxwh"/>
+		<!-- 思政队伍辅导员编班 -->
+		<action path="/szdw_general_szbb" forward="/general_szdw.do?method=szdwSzbb"/>
+		<!-- 思政队伍班主任编班 -->
+		<action path="/szdw_general_szbzrbb" forward="/general_szdw.do?method=szdwSzBzrbb"/>
+		<!-- 查询统计_思政人员统计 -->
+		<action path="/szdw_general_tjcx_szry" forward="/general_szdw.do?method=tjcxSzry"/>
+		<!-- 查询统计_部门情况统计 -->
+		<action path="/szdw_general_tjcx_bmqk" forward="/general_szdw.do?method=tjcxBmqk"/>
+		<!-- 山东科技_指导教师考核分录入 -->
+		<action path="/szdw_sdkj_zdjskh" forward="/sdkj_zdjskh.do?method=zdjskh"/>
+		<!-- 浙江中医药  学风建设维护 -->
+		<action path="/szdw_xfjswh" forward="/szdw_xfjsgl.do?method=xfjsList"/>
+		<!--山东科技_指导教师考核分录入  -->
+		<action path="/sdkj_zdjskh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.sdkj.SzdwSdkjZdjskhAction" 
+    			name="zdlskhForm"
+    			parameter="method">
+    		<forward name="jskhlr" path="/xsgzgl/szdw/sdkj/jskh/jskhlr.jsp"/>
+    		<forward name="jskhck" path="/xsgzgl/szdw/sdkj/jskh/jskhck.jsp"/>
+		</action>
+		<!-- 通用 -->
+		<action path="/general_szdw" 
+    			scope="request"
+    			type="xsgzgl.szdw.general.SzdwGeneralAction" 
+    			name="generalSzdwGeneralForm"
+    			parameter="method">
+    		<forward name="getBjqkInfo" path="/xsgzgl/szdw/general/tjcx/bmqk/getBjqkInfo.jsp"/>	
+    		<forward name="getFdyInfo" path="/xsgzgl/szdw/general/tjcx/bmqk/getFdyInfo.jsp"/>	
+    		<forward name="getBzrInfo" path="/xsgzgl/szdw/general/tjcx/bmqk/getBzrInfo.jsp"/>	
+    		<forward name="getSzryInfo" path="/xsgzgl/szdw/general/tjcx/szry/getSzryInfo.jsp"/>	
+    		<forward name="setQQqh" path="/xsgzgl/szdw/general/szbb/setQQqh.jsp"/>
+			<forward name="jsxxList" path="/xsgzgl/szdw/general/dwwh/jsxxList.jsp"/>
+			<forward name="fdyBbList" path="/xsgzgl/szdw/general/szbb/fdyBbList.jsp"/>
+			<forward name="bzrBbList" path="/xsgzgl/szdw/general/szbb/szBzrbbSearch.jsp"/>
+			<forward name="xsxxList" path="/xsgzgl/szdw/general/szbb/xsxxList.jsp"/>
+			<forward name="szbbSetting" path="/xsgzgl/szdw/general/szbb/szbbSetting.jsp"/>
+		</action>
+		
+		<!--书院维护 -->
+		<action path="/xg_xtwh_syglwh" forward="/xtwh_syglwh.do?method=syList"/>
+		<action path="/xtwh_syglwh" 
+    			scope="request"
+    				type="com.zfsoft.xgxt.szdw.sygl.SyglAction" 
+    			name="syglForm"
+    			parameter="method">
+    		<forward name="syList" path="/xsgzgl/szdw/sygl/sylist.jsp"/>
+    		<forward name="syadd" path="/xsgzgl/szdw/sygl/syadd.jsp"></forward>
+   			<forward name="syupdate" path="/xsgzgl/szdw/sygl/syupdate.jsp"></forward>
+   			<forward name="bjManage" path="/xsgzgl/szdw/sygl/bjManage.jsp"></forward>
+		</action>
+		<!--学风建设管理 -->
+		<action path="/szdw_xfjsgl" 
+    			scope="request"
+    				type="com.zfsoft.xgxt.szdw.xfjs.xfjsAction" 
+    			name="xfjsForm"
+    			parameter="method">
+    		<forward name="xfjsList" path="/xsgzgl/szdw/xfjs/xfjslist.jsp"/>
+    		<forward name="addXfjs" path="/xsgzgl/szdw/xfjs/addXfjs.jsp"/>
+    		<forward name="updateXf" path="/xsgzgl/szdw/xfjs/updateXfjs.jsp"/>
+    		<forward name="viewXf" path="/xsgzgl/szdw/xfjs/viewXfjs.jsp"/>
+    		<forward name="bjManage" path="/xsgzgl/szdw/xfjs/bjManage.jsp"/>
+		</action>
+		<!--思政队伍维护 -->
+		<action path="/szdw_dwwh" 
+    			scope="request"
+    			type="xsgzgl.szdw.general.dwwh.DwwhAction" 
+    			name="generalSzdwGeneralForm"
+    			parameter="method">
+    			<forward name="szdwwhjzgxx" path="/xsgzgl/szdw/general/dwwh/szdwwhjzgxx.jsp"></forward>
+    			<forward name="ckJzgxx" path="/xsgzgl/szdw/general/dwwh/ckJzgxx.jsp"></forward>
+    			<forward name="dwwhzj" path="/xsgzgl/szdw/general/dwwh/dwwhzj.jsp"></forward>
+    			<forward name="yxjr" path="/xsgzgl/szdw/general/dwwh/yxjrqksz.jsp"></forward>
+    			<forward name="viewDbs" path="/xsgzgl/szdw/general/dwwh/viewDbs.jsp"></forward>
+    			<!-- 江西科技师范学院思政队伍辅导员信息个性化 -->
+    			<forward name="szdwwhjzgxx_11318" path="/xsgzgl/szdw/general/dwwh/jxsf_11318/szdwwhjzgxx.jsp"></forward>
+    			<forward name="ckJzgxx_11318" path="/xsgzgl/szdw/general/dwwh/jxsf_11318/ckJzgxx.jsp"></forward>
+    			
+    			<forward name="szdwwhjzgxx_13023" path="/xsgzgl/szdw/general/dwwh/zjyx_13023/szdwwhjzgxx.jsp"></forward>
+    			<forward name="ckJzgxx_13023" path="/xsgzgl/szdw/general/dwwh/zjyx_13023/ckJzgxx.jsp"></forward>
+    			
+    			<forward name="szdwSz_10352" path="/xsgzgl/szdw/general/dwwh/lsxy_10352/szdwSz_10352.jsp"/>	
+    	</action>
+    	
+    	<!--思政队伍编班 -->
+		<action path="/szdw_szbb" 
+    			scope="request"
+    			type="xsgzgl.szdw.general.szbb.SzbbAction" 
+    			name="generalSzdwGeneralForm"
+    			parameter="method">
+    		<forward name="jslx" path="/xsgzgl/szdw/general/szbb/jslx.jsp"></forward>
+    		<forward name="jsbb" path="/xsgzgl/szdw/general/szbb/jsbb.jsp"></forward>
+    		
+    	</action>
+    			
+    	<!--查询统计_思政人员统计 -->
+		<action path="/szdw_tjcx_szbb" 
+    			scope="request"
+    			type="xsgzgl.szdw.general.tjcx.szry.SzryAction" 
+    			name="generalSzdwGeneralForm"
+    			parameter="method"/>
+    			
+    	<!--查询统计_部门情况统计 -->
+		<action path="/szdw_tjcx_bmqk" 
+    			scope="request"
+    			type="xsgzgl.szdw.general.tjcx.bmqk.BmqkAction" 
+    			name="generalSzdwGeneralForm"
+    			parameter="method"/>
+    			
+		<!-- ======================== The Last end   ================================== -->
+		<action path="/szdw_fdyrz_sq" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.fdyrz.FdyrzsqAction" 
+    			name="fdyrzsqForm"
+    			parameter="method">
+    			<forward name="gjcxFdyrz_wdsq" path="/xsgzgl/szdw/fdyrz/gjcxFdyrzsq.jsp"></forward>
+    			<forward name="fdyrzsq" path="/xsgzgl/szdw/fdyrz/fdyrzsq.jsp"></forward>
+    			<forward name="fdyrzbj" path="/xsgzgl/szdw/fdyrz/fdyrzbj.jsp"></forward>
+    			<forward name="fdyrzsqxg" path="/xsgzgl/szdw/fdyrz/fdyrzsqxg.jsp"></forward>
+    	</action>
+		<action path="/szdw_fdyrz_sh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.fdyrz.FdyrzshAction" 
+    			name="fdyrzsqForm"
+    			parameter="method">
+    			<forward name="gjcxFdyrzsh" path="/xsgzgl/szdw/fdyrz/gjcxFdyrzsh.jsp"></forward>
+    			<forward name="fdyrzsh" path="/xsgzgl/szdw/fdyrz/fdyrzsh.jsp"></forward>
+    			<forward name="fdyrzbj" path="/xsgzgl/szdw/fdyrz/fdyrzbj.jsp"></forward>
+    			<forward name="fdyrzPlsh" path="/xsgzgl/szdw/fdyrz/fdyrzPlsh.jsp"></forward>
+    	</action>	
+    	<action path="/szdw_cssz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.cssz.SzdwCsszAction" 
+    			name="szdwCsszForm"
+    			parameter="method">
+    			<forward name="szdw_cssz" path="/xsgzgl/szdw/cssz/szdw_cssz.jsp"></forward>
+    			<forward name="fdycssz" path="/xsgzgl/szdw/cssz/fdycssz.jsp"></forward>
+    			<forward name="bgbcssz" path="/xsgzgl/szdw/cssz/bgbcssz.jsp"></forward>
+    			<forward name="fdypxCssz" path="/xsgzgl/szdw/cssz/fdypxCssz.jsp"></forward>
+    			<forward name="bbsjCssz" path="/xsgzgl/szdw/cssz/bbsjCssz.jsp"></forward>
+    	</action>
+    	<action path="/szdw_fdyjtff" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.jtff.FdyjtffAction" 
+    			name="fdyjtffForm"
+    			parameter="method">
+    			<forward name="cxFdyjtffList" path="/xsgzgl/szdw/fdyjtff/cxFdyjtffList.jsp"></forward>
+    			<forward name="addFdyjtff" path="/xsgzgl/szdw/fdyjtff/addFdyjtff.jsp"></forward>
+    			<forward name="showFdys" path="/xsgzgl/szdw/fdyjtff/showFdys.jsp"></forward>
+    			<forward name="showFdysAnother" path="/xsgzgl/szdw/fdyjtff/showFdysAnother.jsp"></forward>
+    			<forward name="showFdysNotF5" path="/xsgzgl/szdw/fdyjtff/showFdysNotF5.jsp"></forward>
+    			<forward name="showFdysQsdsNotF5" path="/xsgzgl/szdw/fdyjtff/showFdysQsdsNotF5.jsp"></forward>
+    			<forward name="updateFdyjtff" path="/xsgzgl/szdw/fdyjtff/updateFdyjtff.jsp"></forward>
+    			<forward name="viewFdyjtff" path="/xsgzgl/szdw/fdyjtff/viewFdyjtff.jsp"></forward>
+    	</action>
+    	
+    	
+    	<!-- ======================== 思政谈话记录 begin ================================== -->
+		<action path="/szdw_thjl_jcsz" forward="/szdw_thjl_jcszwh.do?method=jcsz"/>
+		<action path="/szdw_thjl_jcszwh" scope="request"
+				type="com.zfsoft.xgxt.szdw.thjl.jcsz.JcszAction"
+				name="jcszForm1"
+				parameter="method">
+			<forward name="jcsz" path="/xsgzgl/szdw/thjl/jcsz/jcsz.jsp" />
+		</action>
+
+    	<action path="/szdw_thjl_thjl" forward="/szdw_thjl.do?method=thjlManage" />
+		<action path="/szdw_thjl_thjl_sq" forward="/szdw_thjl.do?method=sqList" />
+
+    	<action path="/szdw_thjl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.thjl.SzdwThjlAction"
+    			name="szdwThjlForm"
+    			parameter="method">
+
+   				<forward name="thjlManage" path="/xsgzgl/szdw/thjl/thjlManage.jsp"/>
+	 	       <forward name="thjlDetail" path="/xsgzgl/szdw/thjl/thjlDetail.jsp"/>
+	 	       <forward name="thjlDetailByXh" path="/xsgzgl/szdw/thjl/thjlDetailByXh.jsp"/>
+	 	       <forward name="getJsInfo" path="/xsgzgl/szdw/thjl/selectJs.jsp"/>
+				<forward name="sqList" path="/xsgzgl/szdw/thjl/sqList.jsp"/>
+				<forward name="zjsq" path="/xsgzgl/szdw/thjl/zjsq.jsp"/>
+    	</action>
+
+		<action path="/szdw_thjl_thjl_sh" forward="/szdw_thjl_sh.do?method=shList" />
+		<action path="/szdw_thjl_sh"
+				scope="request"
+				type="com.zfsoft.xgxt.szdw.thjl.thjlsh.SzdwThjlShAction"
+				name="szdwThjlShForm"
+				parameter="method">
+
+			<forward name="shList" path="/xsgzgl/szdw/thjl/thjlsh/shList.jsp"/>
+			<forward name="sh" path="/xsgzgl/szdw/thjl/thjlsh/sh.jsp"/>
+			<forward name="plsh" path="/xsgzgl/szdw/thjl/thjlsh/plsh.jsp"/>
+		</action>
+    	<!-- ======================== 思政谈话记录 end ================================== -->
+    	
+    	<!-- ======================== 思政谈话类型 begin ================================== -->
+    	
+    	<action path="/szdw_thjl_thlx" forward="/szdw_thlx.do?method=queryThlx" />
+
+    	<action path="/szdw_thlx" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.thjl.thlx.SzdwThlxAction" 
+    			name="szdwThlxForm"
+    			parameter="method">
+    			
+	 	       	<forward name="queryThlx" path="/xsgzgl/szdw/thjl/thlx/queryThlx.jsp"/>
+	    		<forward name="addThlx" path="/xsgzgl/szdw/thjl/thlx/addThlx.jsp"/>
+	    		<forward name="updateThlx" path="/xsgzgl/szdw/thjl/thlx/updateThlx.jsp"/>
+    	</action>
+    	
+    	<!-- ======================== 思政谈话类型 end ================================== -->	
+    	
+    	<!-- ======================== 思政重点关注学生库 begin ================================== -->	
+    	
+    	<action path="/szdw_thjl_zdgzxsk" forward="/szdw_zdgzxsk.do?method=zdgzxskManage" />
+    	
+    	<action path="/szdw_zdgzxsk" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.thjl.zdgzxsk.SzdwZdgzxskAction" 
+    			name="szdwZdgzxskForm"
+    			parameter="method">
+    			
+   			  	<forward name="zdgzxskManage" path="/xsgzgl/szdw/thjl/zdgzxsk/zdgzxskManage.jsp"/>
+    			
+    	</action>
+    	
+    	<!-- ======================== 思政重点关注学生库 end ================================== -->	
+    	
+    	
+    	<action path="/szdw_fdyxx_zdpz" forward="/szdw_fdyxx.do?method=zdpz" />
+    	<action path="/szdw_fdyxx_xgsq" forward="/szdw_fdyxx.do?method=xgsq" />
+    	<action path="/szdw_fdyxx_xgsh" forward="/szdw_fdyxx.do?method=xgshList" />
+    	<action path="/szdw_fdyxx_cssz" forward="/szdwFdyxxCssz.do?method=cssz" />
+    	
+    	<action path="/szdw_fdyxx" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.fdyxx.FdyxxAction" 
+    			name="fdyxxModel"
+    			parameter="method">
+   			  	<forward name="fdyxxEdit" path="/xsgzgl/szdw/fdyxx/fdyxxEdit.jsp"/>
+   			  	<forward name="fdyxxView" path="/xsgzgl/szdw/fdyxx/fdyxxView.jsp"/>
+   			  	<forward name="zdpz" path="/xsgzgl/szdw/fdyxx/zdpz.jsp"/>
+   			  	<forward name="xgsq" path="/xsgzgl/szdw/fdyxx/xgsq.jsp"/>
+   			  	<forward name="xgshList" path="/xsgzgl/szdw/fdyxx/xgshList.jsp"/>
+   			  	<forward name="xgsh" path="/xsgzgl/szdw/fdyxx/fdysh.jsp"/>
+   			  	<forward name="plsh" path="/xsgzgl/szdw/fdyxx/plsh.jsp"/>
+   			  	<forward name="xgjgCk" path="/xsgzgl/szdw/fdyxx/xgjgCk.jsp"/>
+   			  	<forward name="jssfwh" path="/xsgzgl/szdw/fdyxx/jssfwh.jsp"/>
+    	</action>
+    	
+    	<action path="/szdwFdyxxCssz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.xgsz.CsszAction" 
+    			name="fdyxgCsszModel"
+    			parameter="method">
+   			  	<forward name="cssz" path="/xsgzgl/szdw/fdyxx/cssz.jsp"/>
+    	</action>
+
+		<!--家访-->
+		<action path="/szdw_jfxxwh" forward="/szdw_jfxx.do?method=jfjlList" />
+		<action path="/szdw_jfxx"
+				scope="request"
+				type="com.zfsoft.xgxt.szdw.jfxxwh.JfxxAction"
+				name="jfxxForm"
+				parameter="method">
+			<forward name="jfjlList" path="/xsgzgl/szdw/jfxx/jfjlList.jsp"/>
+			<forward name="add" path="/xsgzgl/szdw/jfxx/add.jsp"/>
+			<forward name="update" path="/xsgzgl/szdw/jfxx/update.jsp"/>
+			<forward name="view" path="/xsgzgl/szdw/jfxx/view.jsp"/>
+			<forward name="selectStudent" path="/xsgzgl/szdw/jfxx/selectStudent.jsp"/>
+		</action>
+
+		<action path="/szdw_fdy_ywxxypx_sq" forward="/szdw_fdy_ywxxypx.do?method=ywxxypxSqList"/>
+		<action path="/szdw_fdy_ywxxypx_sh" forward="/szdw_fdy_ywxxypx.do?method=ywxxypxShList"/>
+		<action path="/szdw_fdy_ywxxypx"
+				scope="request"
+				type="com.zfsoft.xgxt.szdw.fdyzyhfz.ywxsypx.YwxsypxAction"
+				name="ywxsypxForm"
+				parameter="method">
+			<forward name="cssz" path="/xsgzgl/szdw/fdyzyhfz/ywxxypx/cssz.jsp"/>
+			<forward name="ywxxypxsqList" path="/xsgzgl/szdw/fdyzyhfz/ywxxypx/ywxxypxsqList.jsp"/>
+			<forward name="add" path="/xsgzgl/szdw/fdyzyhfz/ywxxypx/add.jsp"/>
+			<forward name="update" path="/xsgzgl/szdw/fdyzyhfz/ywxxypx/update.jsp"/>
+			<forward name="view" path="/xsgzgl/szdw/fdyzyhfz/ywxxypx/view.jsp"/>
+			<forward name="ywxxypxshList" path="/xsgzgl/szdw/fdyzyhfz/ywxxypx/ywxxypxshList.jsp"/>
+			<forward name="sh" path="/xsgzgl/szdw/fdyzyhfz/ywxxypx/sh.jsp"/>
+			<forward name="plsh" path="/xsgzgl/szdw/fdyzyhfz/ywxxypx/plsh.jsp"/>
+		</action>
+
+		<action path="/szdw_fdy_ywxxypx_jg" forward="/szdw_fdy_ywxxypxjg.do?method=ywxxypxJgList"/>
+		<action path="/szdw_fdy_ywxxypxjg"
+				scope="request"
+				type="com.zfsoft.xgxt.szdw.fdyzyhfz.ywxsypxJg.PxJgAction"
+				name="pxJgForm"
+				parameter="method">
+			<forward name="ywxxypxjgList" path="/xsgzgl/szdw/fdyzyhfz/ywxxypxjg/ywxxypxjgList.jsp"/>
+			<forward name="add" path="/xsgzgl/szdw/fdyzyhfz/ywxxypxjg/add.jsp"/>
+			<forward name="update" path="/xsgzgl/szdw/fdyzyhfz/ywxxypxjg/update.jsp"/>
+			<forward name="view" path="/xsgzgl/szdw/fdyzyhfz/ywxxypxjg/view.jsp"/>
+		</action>
+
+		<action path="/szdw_fdy_ktxmyjqk" forward="/szdw_fdy_ktxmyjqkwh.do?method=ktxmyjqkList"/>
+		<action path="/szdw_fdy_ktxmyjqkwh"
+				name="ktxmyjqkForm"
+				scope="request"
+				type="com.zfsoft.xgxt.szdw.fdyzyhfz.ktxmyjqk.KtxmyjqkAction"
+		        parameter="method">
+			<forward name="ktxmyjqkList" path="/xsgzgl/szdw/fdyzyhfz/ktxmyjqk/ktxmyjqkList.jsp"/>
+			<forward name="add" path="/xsgzgl/szdw/fdyzyhfz/ktxmyjqk/add.jsp"/>
+			<forward name="update" path="/xsgzgl/szdw/fdyzyhfz/ktxmyjqk/update.jsp"/>
+			<forward name="view" path="/xsgzgl/szdw/fdyzyhfz/ktxmyjqk/view.jsp"/>
+		</action>
+
+		<action path="/szdw_fdy_gzf" forward="/szdw_fdy_gzfwh.do?method=gzfList"/>
+		<action path="/szdw_fdy_gzfwh"
+				name="gzfForm"
+				scope="request"
+				type="com.zfsoft.xgxt.szdw.fdyzyhfz.gzf.GzfAction"
+				parameter="method">
+			<forward name="gzfList" path="/xsgzgl/szdw/fdyzyhfz/gzf/gzfList.jsp"/>
+			<forward name="add" path="/xsgzgl/szdw/fdyzyhfz/gzf/add.jsp"/>
+			<forward name="update" path="/xsgzgl/szdw/fdyzyhfz/gzf/update.jsp"/>
+			<forward name="view" path="/xsgzgl/szdw/fdyzyhfz/gzf/view.jsp"/>
+		</action>
+
+		<action path="/szdw_fdy_lw" forward="/szdw_fdy_lwwh.do?method=lwList"/>
+		<action path="/szdw_fdy_lwwh"
+				name="lwForm"
+				scope="request"
+				type="com.zfsoft.xgxt.szdw.fdyzyhfz.lw.LwAction"
+				parameter="method">
+			<forward name="lwList" path="/xsgzgl/szdw/fdyzyhfz/lw/lwList.jsp"/>
+			<forward name="add" path="/xsgzgl/szdw/fdyzyhfz/lw/add.jsp"/>
+			<forward name="update" path="/xsgzgl/szdw/fdyzyhfz/lw/update.jsp"/>
+			<forward name="view" path="/xsgzgl/szdw/fdyzyhfz/lw/view.jsp"/>
+		</action>
+
+		<action path="/szdw_fdy_zz" forward="/szdw_fdy_zzwh.do?method=zzList"/>
+		<action path="/szdw_fdy_zzwh"
+				name="zzForm"
+				scope="request"
+				type="com.zfsoft.xgxt.szdw.fdyzyhfz.zz.ZzAction"
+				parameter="method">
+			<forward name="zzList" path="/xsgzgl/szdw/fdyzyhfz/zz/zzList.jsp"/>
+			<forward name="add" path="/xsgzgl/szdw/fdyzyhfz/zz/add.jsp"/>
+			<forward name="update" path="/xsgzgl/szdw/fdyzyhfz/zz/update.jsp"/>
+			<forward name="view" path="/xsgzgl/szdw/fdyzyhfz/zz/view.jsp"/>
+		</action>
+
+		<action path="/szdw_fdy_hjqk" forward="/szdw_fdy_hjqkwh.do?method=hjqkList"/>
+		<action path="/szdw_fdy_hjqkwh"
+				name="hjqkForm"
+				scope="request"
+				type="com.zfsoft.xgxt.szdw.fdyzyhfz.hjqk.HjqkAction"
+				parameter="method">
+			<forward name="hjqkList" path="/xsgzgl/szdw/fdyzyhfz/hjqk/hjqkList.jsp"/>
+			<forward name="add" path="/xsgzgl/szdw/fdyzyhfz/hjqk/add.jsp"/>
+			<forward name="update" path="/xsgzgl/szdw/fdyzyhfz/hjqk/update.jsp"/>
+			<forward name="view" path="/xsgzgl/szdw/fdyzyhfz/hjqk/view.jsp"/>
+		</action>
+
+		<!--辅导员带课-->
+		<action path="/szdw_fyd_fdydk" forward="/szdw_fdy_fdydkjg.do?method=jgList"/>
+		<action path="/szdw_fdy_fdydkjg"
+				name="fdydkForm"
+				scope="request"
+				type="com.zfsoft.xgxt.szdw.fdydk.FdydkAction"
+				parameter="method">
+			<forward name="jgList" path="/xsgzgl/szdw/fdydk/fdydkjgList.jsp"/>
+			<forward name="add" path="/xsgzgl/szdw/fdydk/addjg.jsp"/>
+			<forward name="updatePage" path="/xsgzgl/szdw/fdydk/updatePage.jsp"/>
+			<forward name="view" path="/xsgzgl/szdw/fdydk/view.jsp"/>
+		</action>
+
+		<!--辅导员基础性工作统计-->
+		<action path="/szdw_fdy_jcxgztj" forward="/szdw_fdyjcxgztj.do?method=jcxgztjList"/>
+		<action path="/szdw_fdyjcxgztj"
+				scope="request"
+				name="jcgzTjModel"
+				type="com.zfsoft.xgxt.szdw.fdyzyhfz.jcxgztj.JcgzTjAction"
+				parameter="method">
+			<forward name="jcxgztjList" path="/xsgzgl/szdw/fdyzyhfz/tjqk/jcxgztjList.jsp"/>
+		</action>
+		<!--辅导员职业化发展统计-->
+		<action path="/szdw_fdy_zyhfztj" forward="/szdw_fdyzyhfztj.do?method=zyhfztjList"/>
+		<action path="/szdw_fdyzyhfztj"
+				scope="request"
+				name="zyfzTjModel"
+				type="com.zfsoft.xgxt.szdw.fdyzyhfz.zyhfztj.ZyfzTjAction"
+				parameter="method">
+			<forward name="zyhfztjList" path="/xsgzgl/szdw/fdyzyhfz/tjqk/zyhfztjList.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

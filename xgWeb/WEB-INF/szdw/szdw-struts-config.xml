@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="szdwForm" type="xgxt.szdw.form.common.CommonForm" />
+		<form-bean name="wdglForm" type="xgxt.szdw.form.common.WdglForm" />		
+		<form-bean name="bjtsxmForm" type="xgxt.szdw.nbzy.BjtsxmForm" />
+		<form-bean name="xjchForm" type="xgxt.szdw.zjlg.XjchForm" />										
+	</form-beans>
+
+	<global-forwards />
+
+	<action-mappings>
+	<!-- <<<<<<<<<<<<<<<<<<思政队伍>>>>>>>>>>>>>>>>>> -->
+		<action path="/szdwfzjy" 
+				name="szdwForm" 
+				type="xgxt.szdw.action.common.CommonAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+			<forward name="xssqYcjy" path="/szdw/fzjy/xssqYcjy.jsp" />
+			<forward name="xssqJzfdy" path="/szdw/fzjy/xssqJzfdy.jsp" />
+			<forward name="xssqWspyxjgr" path="/szdw/fzjy/xssqWspyxjgr.jsp" />
+			<forward name="xssqXsjlsbgr" path="/szdw/fzjy/xssqXsjlsbgr.jsp" />
+			<forward name="sbsjsz" path="/szdw/fzjy/sbsjsz.jsp" />
+			<forward name="jyltxt" path="/szdw/fzjy/jyltxt.jsp" />
+			<forward name="xsrxjyOne" path="/szdw/fzjy/xsrxjyOne.jsp" />
+			<forward name="fdyltOne" path="/szdw/fzjy/fdyltOne.jsp" />
+			<forward name="yxdxsxsltOne" path="/szdw/fzjy/yxdxsxsltOne.jsp" />
+			<forward name="hyjtOne" path="/szdw/fzjy/hyjtOne.jsp" />
+			<forward name="ycjySh" path="/szdw/fzjy/ycjySh.jsp" />
+			<forward name="jzfdySh" path="/szdw/fzjy/jzfdySh.jsp" />
+			<forward name="wspyxjgrSh" path="/szdw/fzjy/wspyxjgrSh.jsp" />
+			<forward name="xsjlsbgrSh" path="/szdw/fzjy/xsjlsbgrSh.jsp" />
+			<forward name="xssbsh" path="/szdw/fzjy/xssbsh.jsp" />
+			<forward name="wspyjtsb" path="/szdw/fzjy/wspyjtsb.jsp" />
+			<forward name="xsjljtsb" path="/szdw/fzjy/xsjljtsb.jsp" />
+			<forward name="jtsbsh" path="/szdw/fzjy/jtsbsh.jsp" />
+			<forward name="wspyjtsh" path="/szdw/fzjy/wspyjtsh.jsp" />
+			<forward name="xsjljtsh" path="/szdw/fzjy/xsjljtsh.jsp" />
+			<forward name="zwpjb" path="/szdw/zgkd/fdyzpb.jsp" />
+			<forward name="zwpjbRep" path="/szdw/zgkd/fdyzpReport.jsp" />
+			<forward name="fdygzwjjg" path="/szdw/fdygzwjjg.jsp" />
+			<forward name="fdybjLsManage" path="/szdw/fdybjLsManage.jsp" />
+			<forward name="fdybjjcsz" path="/szdw/fdybjjcsz.jsp" />
+			<forward name="fdybjrLsjl" path="/szdw/fdybjrLsjl.jsp" />
+		<!-- <<<<<<<<<<<<<<<<<<辅导员相关信息>>>>>>>>>>>>>>>>>> -->
+			<forward name="fdyxgxx" path="/szdw/fzjy/fdyxgxx.jsp" />
+			<forward name="fdyjndsOne" path="/szdw/fzjy/fdyjndsOne.jsp" />
+			<forward name="fdymxfwOne" path="/szdw/fzjy/fdymxfwOne.jsp" />
+		</action>
+		<action path="/szdw_wdgl" 
+				name="wdglForm" 
+				type="xgxt.szdw.action.common.WdglAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+				<forward name ="wdgl" path="/szdw/zgkd/wdgl.jsp"/>
+				<forward name = "wdff" path="/szdw/zgkd/wdff.jsp"/>
+				<forward name = "dzwdffgl" path="/szdw/zgkd/dzwdffgl.jsp"/>
+				<forward name = "dzwdgl" path="/szdw/zgkd/dzwdgl.jsp"/>
+		</action>
+		<action path="/bjtsxm" 
+				name="bjtsxmForm" 
+				type="xgxt.szdw.nbzy.BjtsxmAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+			<forward name="bjtsxmSb" path="/szdw/nbzy/bjsexmSb.jsp" />
+			<forward name="bjtsxmSbjg" path="/szdw/nbzy/bjsexmSbjg.jsp" />
+			<forward name="bjtsxmsbPrint" path="/szdw/nbzy/bjsexmSbPrint.jsp" />
+			<forward name="bjtsxmJs" path="/szdw/nbzy/bjsexmJs.jsp" />
+			<forward name="bjtsxmJsjd" path="/szdw/nbzy/bjsexmJsjd.jsp" />
+			<forward name="bjtsxmjsjdPrint" path="/szdw/nbzy/bjsexmJsjdPrint.jsp" />
+			<forward name="bjtsxmjsys" path="/szdw/nbzy/bjsexmjsys.jsp" />
+			<forward name="bjtsxmYs" path="/szdw/nbzy/bjsexmYs.jsp" />
+			<forward name="bjtsxmYsPrint" path="/szdw/nbzy/bjsexmYsPrint.jsp" />
+			<forward name="bjtsxmYqys" path="/szdw/nbzy/bjtsxmYqys.jsp" />
+			<forward name="bjtsxmYqysSq" path="/szdw/nbzy/bjsexmYqysSq.jsp" />
+			<forward name="bjtsxmYqysPrint" path="/szdw/nbzy/bjtsxmYqysPrint.jsp" />
+		</action>
+		<action path="/szdw_zjlg" 
+				name="xjchForm" 
+				type="xgxt.szdw.zjlg.XjchAction" 
+				parameter="method"
+				scope="request"
+				validate="false">
+				<!-- 申请主页面 -->
+				<forward name="sqManage" path="/szdw/zjlg/sqManage.jsp" />
+				<!-- 审核主页面 -->
+				<forward name="shManage" path="/szdw/zjlg/shManage.jsp" />
+				<forward name="cxManage" path="/szdw/zjlg/cxManage.jsp" />
+				<forward name="xjchSh" path="/szdw/zjlg/xjchSh.jsp" />
+				<forward name="xjchCx" path="/szdw/zjlg/xjchCx.jsp" />
+				<forward name="xjchJg" path="/szdw/zjlg/xjchjg.jsp" />
+				<!--申请页面 -->
+				<forward name="mffdySq" path="/szdw/zjlg/mffdySq.jsp" />
+				<forward name="yxbzrSq" path="/szdw/zjlg/yxbzrSq.jsp" />
+				<forward name="mffdyChek" path="/szdw/zjlg/mffdyChek.jsp" />
+				<forward name="yxbzrChek" path="/szdw/zjlg/yxbzrChek.jsp" />
+				
+				<!-- 反馈信息申请主页面 -->
+				<forward name="xxFksqManage" path="/szdw/zjlg/xxFksqManage.jsp" />
+				<!-- 反馈信息审核主页面 -->
+				<forward name="xxFkshManage" path="/szdw/zjlg/xxFkshManage.jsp" />
+				<forward name="xxFkcxManage" path="/szdw/zjlg/xxFkcxManage.jsp" />
+				<!-- 反馈信息审核 -->
+				<forward name="xxFkSh" path="/szdw/zjlg/xxFkSh.jsp" />
+				<forward name="pxxxfkChek" path="/szdw/zjlg/pxxxfkChek.jsp" />
+				<forward name="gzxxfkChek" path="/szdw/zjlg/gzxxfkChek.jsp" />
+				<!-- 反馈信息申请 -->
+				<forward name="pxxxfkSq" path="/szdw/zjlg/pxxxfkSq.jsp" />
+				<forward name="gzxxfkSq" path="/szdw/zjlg/gzxxfkSq.jsp" />
+				<!-- 反馈信息结果查询 -->
+				<forward name="xxfkJg" path="/szdw/zjlg/xxfkJg.jsp" />
+		</action>
+	</action-mappings>
+  <message-resources parameter="xgxt.base.ApplicationResources" /> 
+</struts-config>

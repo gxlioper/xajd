@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpyzzdxwh.do" location="950,50" dimension="220,84" />
+  <StrutsActivity path="/pjpy/zzdx/zsprintone.jsp" location="350,50" dimension="190,48" />
+  <StrutsActivity path="/about:blank" location="0,196" dimension="112,48" />
+  <StrutsActivity path="/pjpy/xibeierminyuan/pjpy_xbemy_jxjjgqry.jsp" location="212,196" dimension="304,48" />
+  <StrutsActivity path="/pjpy/xibeierminyuan/pjpy_xbemy_xysbjxj.jsp" location="616,196" dimension="298,48" />
+  <StrutsActivity path="/pjpy/zzdx/zsprintmore.jsp" />
+  <StrutsTransition id="/pjpyzzdxwh.do,zsprintmore,/pjpy/zzdx/zsprintmore.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1060,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyzzdxwh.do,zsprintone,/pjpy/zzdx/zsprintone.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1060,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

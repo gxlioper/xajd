@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -假期留校(重庆三峡)-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="LxxmszForm" type="com.zfsoft.xgxt.rcsw.jqlxcqsx.lxxmsz.LxxmszForm" />
+    	<form-bean name="LxmdwhForm" type="com.zfsoft.xgxt.rcsw.jqlxcqsx.lxmdwh.LxmdwhForm" />
+    	<form-bean name="LxmdwhjlForm" type="com.zfsoft.xgxt.rcsw.jqlxcqsx.lxmdwhjl.LxmdwhjlForm" />
+	</form-beans>
+
+	<action-mappings>
+	
+	<action path="/xg_rcsw_cqsx_jqlx_lxxmsz" forward="/jqlx_lxxmsz.do?method=getXmszCx"/>	<!-- 假期留校设置 -->
+	<action path="/jqlx_lxxmsz"
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.jqlxcqsx.lxxmsz.LxxmszAction"
+   			name="LxxmszForm"
+   			parameter="method">
+   		<forward name="cx" path="/xsgzgl/rcsw/jqlxcqsx/lxxmsz/lxxmszcx.jsp"></forward>
+   		<forward name="add" path="/xsgzgl/rcsw/jqlxcqsx/lxxmsz/addlxxmsz.jsp"></forward>
+   		<forward name="update" path="/xsgzgl/rcsw/jqlxcqsx/lxxmsz/xglxxmsz.jsp"></forward>
+   		<forward name="ck" path="/xsgzgl/rcsw/jqlxcqsx/lxxmsz/cklxxmsz.jsp"></forward>
+   		
+	</action>
+	
+	<action path="/xg_rcsw_cqsx_jqlx_lxmdwh" forward="/jqlx_lxmdwh.do?method=getMdwhCx"/>	<!-- 假期留校结果 -->
+	<action path="/jqlx_lxmdwh"
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.jqlxcqsx.lxmdwh.LxmdwhAction" 
+   			name="LxmdwhForm"
+   			parameter="method">	
+   		<forward name="cx" path="/xsgzgl/rcsw/jqlxcqsx/lxmdwh/lxmdwhcx.jsp"></forward>
+   		<forward name="plwh" path="/xsgzgl/rcsw/jqlxcqsx/lxmdwh/plwhlxmd.jsp"></forward>
+   		<forward name="update" path="/xsgzgl/rcsw/jqlxcqsx/lxmdwh/xglxmd.jsp"></forward>
+   		<forward name="ck" path="/xsgzgl/rcsw/jqlxcqsx/lxmdwh/cklxmd.jsp"></forward>
+   		<forward name="getstu" path="/xsgzgl/rcsw/jqlxcqsx/lxmdwh/getCanAddStuList.jsp"></forward>
+	</action>
+	
+	<!-- 假期留校名单维护记录 -->
+	<action path="/jqlx_lxmdwhjl"
+			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.jqlxcqsx.lxmdwhjl.LxmdwhjlAction" 
+   			name="LxmdwhjlForm"
+   			parameter="method">	
+		<forward name="lxmdwhjlList" path="/xsgzgl/rcsw/jqlxcqsx/lxmdwhjl/lxmdwhjlList.jsp"></forward>
+		<forward name="lxmdwhjlShow" path="/xsgzgl/rcsw/jqlxcqsx/lxmdwhjl/lxmdwhjlShow.jsp"></forward>
+	</action>
+	
+	</action-mappings>
+</struts-config>

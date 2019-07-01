@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="csmz_gyglForm" type="xgxt.xsgygl.csmzzyjsxy.GyglCsmzActionForm"/>
+	</form-beans>
+	<global-forwards />
+
+	<action-mappings>
+		<action path="/fdy_tb" forward="/csmz_gygl.do?method=fdy_wstb"/>
+		<action path="/stu_fkxx" forward="/csmz_gygl.do?method=stu_fkxxcx"/>
+		<action path="/fdy_xqtjcx" forward="/csmz_gygl.do?method=xqcx_Default"/>
+       <action path="/stuHouseInfo" forward="/csmz_gygl.do?method=xsrzqk_Tj"/>
+		<!--实际的路径-->
+		<action path="/csmz_gygl" parameter="method"  name="csmz_gyglForm" scope="request"
+		        type="xgxt.xsgygl.csmzzyjsxy.GyglCsmzAction">
+		        <forward name="gygl_fdywstb" path="/gygl/csmzzyjsxy/fdy_wstb.jsp"></forward>
+		        <forward name="savefdy_tbxx" path="/csmz_gygl.do?method=fdy_wstb"></forward>
+		        <forward name="stu_fkxx" path="/gygl/csmzzyjsxy/stu_fkxx.jsp"></forward>
+		        <forward name="stu_fkxxView" path="/gygl/csmzzyjsxy/stu_fkxxView.jsp"></forward>
+		        <forward name="fdyxq_cxDef" path="/gygl/csmzzyjsxy/xqcx_default.jsp"></forward> 
+		        <forward name="fdy_xqxx_add" path="/gygl/csmzzyjsxy/fdy_xqxx_add.jsp"></forward> 
+		        <forward name="fdy_xqxx_modi" path="/gygl/csmzzyjsxy/fdy_xqxx_modi.jsp"></forward>
+		        <forward name="fdy_xqxx_view" path="/gygl/csmzzyjsxy/fdy_xqxx_view.jsp"></forward> 
+		        <forward name="xsDormDistribute" path="/gygl/csmzzyjsxy/xsDormDistribute.jsp"></forward>
+		        <forward name="xsBedDistribute" path="/gygl/csmzzyjsxy/xsBedDistribute.jsp"></forward> 
+		        <forward name="cwsFp" path="/gygl/csmzzyjsxy/cwsFp.jsp"></forward>	
+		        <forward name="xsDDSCH" path="/gygl/csmzzyjsxy/xsDormDataSearch.jsp"></forward>	
+		        <forward name="xsZSXX" path="/gygl/csmzzyjsxy/xsZsXxAdd.jsp"></forward>
+		        <forward name="ssHfDetail" path="/gygl/csmzzyjsxy/ssHfDetail.jsp"></forward>
+		        <forward name="xsrzxxview" path="/gygl/csmzzyjsxy/xsrzxxview.jsp"></forward>
+		        <forward name="cwFpDetail" path="/gygl/csmzzyjsxy/cwFpDetail.jsp"></forward> 
+		        <forward name="xsrzqk_Tj" path="/gygl/csmzzyjsxy/xsrzqk_Tj.jsp"></forward>  
+		        <forward name="rzqktj" path="/gygl/csmzzyjsxy/rzqktj.jsp"></forward>  
+		</action>
+	</action-mappings>
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources" />
+</struts-config>

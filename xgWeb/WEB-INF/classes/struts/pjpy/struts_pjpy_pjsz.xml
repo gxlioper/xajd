@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyCommForm" type="xgxt.pjpy.comm.pjpy.PjpyCommForm"/>
+		<form-bean name="pjpyXmszForm" type="xgxt.pjpy.comm.pjpy.xmsz.PjpyXmszForm"/>
+		<form-bean name="pjpyRsszForm" type="xgxt.pjpy.comm.pjpy.rssz.PjpyRsszForm"/>
+	</form-beans>
+
+	<action-mappings>
+		
+	<!--=========================== 评奖评优新版设置 ================================= -->
+	 <action path="/pjpy_xmsz_rssz" forward="/pjpy_comm_rssz.do?method=rsszManage"/>     <!-- 人数设置 -->
+
+	 <action path="/pjpy_comm_rssz" parameter="method"
+		name="pjpyRsszForm" scope="request"
+		type="xgxt.pjpy.comm.pjpy.rssz.PjpyRsszAction">
+		
+		<forward name="rsszCssz" path="/pjpy/comm/pjpy/xmsz/rsszCssz.jsp" />
+		<forward name="rsszManage" path="/pjpy/comm/pjpy/xmsz/rsszManage.jsp" />
+		<forward name="rsszUpdate" path="/pjpy/comm/pjpy/xmsz/rsszUpdate.jsp" />
+		<forward name="rsszFlow" path="/pjpy/comm/pjpy/jbsz/rsszFlow.jsp" />
+		<forward name="rsszManageFlow" path="/pjpy/comm/pjpy/jbsz/rsszManageFlow.jsp" />
+	 </action>
+	 
+	</action-mappings>
+
+</struts-config>

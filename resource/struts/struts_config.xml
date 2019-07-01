@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	
+	<!-- 通用跳转页面 -->
+	<global-forwards>
+		<forward name="error" path="/message/prompt.jsp"></forward>
+		
+	</global-forwards>
+
+	<message-resources parameter="config.ApplicationResources" />
+</struts-config>

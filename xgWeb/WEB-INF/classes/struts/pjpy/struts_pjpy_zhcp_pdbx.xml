@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+	
+		<form-bean name="zhcpPdbxForm" type="xgxt.pjpy.comm.zhcp.pdbx.ZhcpPdbxForm"/>
+		
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/zhcp_pdbx_xspf" 		forward="/zhcpPdbx.do?method=pdbxLr"/>		<!-- 学生评价品德分 -->
+		<action path="/zhcp_pdbx_lsck" 		forward="/zhcpPdbx.do?method=pdbxCx"/>		<!-- 老师查看品德分 -->
+		<!-- 基本设置 -->
+    	
+    	<!-- 综测基本设置 -->
+    	<action path="/zhcpPdbx" 
+        		parameter="method"  
+        		name="zhcpPdbxForm" 
+        		scope="request"
+		        type="xgxt.pjpy.comm.zhcp.pdbx.ZhcpPdbxAction">	
+		       
+			<forward name="pdbxLr"    	path="/pjpy/comm/zhcp/pdbx/pdbxLr.jsp" />
+			<forward name="pdbxCx"    	path="/pjpy/comm/zhcp/pdbx/pdbxCx.jsp" />
+			<forward name="pdbxQd"    	path="/pjpy/comm/zhcp/pdbx/pdbxQd.jsp" />
+		</action>
+		
+	</action-mappings>
+</struts-config>

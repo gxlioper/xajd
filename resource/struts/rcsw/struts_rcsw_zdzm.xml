@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="rcswZdzmCsszForm" type="com.zfsoft.xgxt.rcsw.zdzm.cssz.ZdzmCsszForm" />
+		<form-bean name="rcswZdzmSqForm" type="com.zfsoft.xgxt.rcsw.zdzm.sq.ZdzmSqForm" />
+		<form-bean name="rcswZdzmShForm" type="com.zfsoft.xgxt.rcsw.zdzm.sh.ZdzmShForm" />
+		<form-bean name="rcswZdzmJgForm" type="com.zfsoft.xgxt.rcsw.zdzm.jggl.ZdzmJgForm" />
+	</form-beans>
+	<action-mappings>
+		<!-- 参数设置-->
+		<action path="/rcsw_zdzm_cssz" forward="/rcsw_zdzm_csszgl.do?method=queryCssz"/>
+		<!-- 申请 -->
+		<action path="/rcsw_zdzmsq" forward="/rcsw_zdzm_sqgl.do?method=queryZdzmSqList"/>
+		<!-- 审核-->
+		<action path="/rcsw_zdzmsh" forward="/rcsw_zdzm_shgl.do?method=queryZdzmShList"/>
+		<!-- 结果-->
+		<action path="/rcsw_zdzmjg" forward="/rcsw_zdzm_jggl.do?method=queryZdzmJgList"/>
+		
+		<action path="/rcsw_zdzm_csszgl" 
+				name="rcswZdzmCsszForm" 
+				type="com.zfsoft.xgxt.rcsw.zdzm.cssz.ZdzmCsszAction"
+				parameter="method" scope="request">
+			<forward name="queryCssz" path="/xsgzgl/rcsw/zdzm/zdzm_cssz.jsp" />
+		</action>
+		
+		<action path="/rcsw_zdzm_sqgl" 
+				name="rcswZdzmSqForm" 
+				type="com.zfsoft.xgxt.rcsw.zdzm.sq.ZdzmSqAction"
+				parameter="method" scope="request">
+			<forward name="queryZdzmSqList" path="/xsgzgl/rcsw/zdzm/zdzm_sq_list.jsp" />
+			<forward name="addZdzmSq" path="/xsgzgl/rcsw/zdzm/zdzm_sq.jsp" />
+			<forward name="updateZdzmSq" path="/xsgzgl/rcsw/zdzm/zdzm_sq_xg.jsp" />
+			<forward name="viewZdzmSq" path="/xsgzgl/rcsw/zdzm/zdzm_sq_ck.jsp" />
+			<forward name="print" path="/xsgzgl/rcsw/zdzm/printZdzm.jsp" />
+		</action>
+		
+		
+		<action path="/rcsw_zdzm_shgl" 
+				name="rcswZdzmShForm" 
+				type="com.zfsoft.xgxt.rcsw.zdzm.sh.ZdzmShAction"
+				parameter="method" scope="request">
+			<forward name="queryZdzmShList" path="/xsgzgl/rcsw/zdzm/zdzm_sh_list.jsp" />
+			<forward name="shZdzmsq" path="/xsgzgl/rcsw/zdzm/zdzm_sh_sh.jsp" />
+			<forward name="viewZdzmsq" path="/xsgzgl/rcsw/zdzm/zdzm_sh_ck.jsp" />
+			<forward name="zdzmPlsh" path="/xsgzgl/rcsw/zdzm/zdzmPlsh.jsp" />
+		</action>
+		
+		<action path="/rcsw_zdzm_jggl" 
+				name="rcswZdzmJgForm" 
+				type="com.zfsoft.xgxt.rcsw.zdzm.jggl.ZdzmJgAction"
+				parameter="method" scope="request">
+			<forward name="queryZdzmJgList" path="/xsgzgl/rcsw/zdzm/zdzm_jg_list.jsp" />
+			<forward name="addZdzmJg" path="/xsgzgl/rcsw/zdzm/zdzm_jg.jsp" />
+			<forward name="updateZdzmJg" path="/xsgzgl/rcsw/zdzm/zdzm_jg_xg.jsp" />
+			<forward name="viewZdzmJg" path="/xsgzgl/rcsw/zdzm/zdzm_jg_ck.jsp" />
+			<forward name="print" path="/xsgzgl/rcsw/zdzm/printZdzm.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

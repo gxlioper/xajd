@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="dynaForm" type="org.apache.struts.action.DynaActionForm"><!-- test.forms.DynaActionFormTest -->
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="dynaForm" parameter="method" path="/csmz_xszz"
+				scope="request"	type="xgxt.xszz.csmz.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- 长沙民政职业技术学院 "学生资助"-"困难生申请页面"-->
+			<forward name="knssq" path="/xszz/csmz/knssq.jsp" />
+			<forward name="jtjjqkdcb" path="/xszz/csmz/jtjjqkdcb.jsp" />
+			<forward name="pksdjb" path="/xszz/csmz/pksdjb.jsp" />
+			<!-- 长沙民政职业技术学院 "学生资助"-"困难生审核页面"-->
+			<forward name="knssh" path="/xszz/csmz/knssh.jsp" />
+			<forward name="knsshXxxx" path="/xszz/csmz/knsshXxxx.jsp" />
+			<forward name="knsshExp" path="/about:blank" />
+			<!-- 长沙民政职业技术学院 "学生资助"-"国家助学贷款申请页面"-->
+			<forward name="gjzxdksq" path="/xszz/csmz/gjzxdksq.jsp" />
+			<forward name="gjzxdksqb" path="/xszz/csmz/gjzxdksqb.jsp" />
+			<!-- 长沙民政职业技术学院 "学生资助"-"国家助学贷款审核页面"-->
+			<forward name="gjzxdksh" path="/xszz/csmz/gjzxdksh.jsp" />
+			<forward name="gjzxdkshXxxx" path="/xszz/csmz/gjzxdkshXxxx.jsp" />
+			<forward name="gjzxdkshExp" path="/about:blank" />
+			<!-- 长沙民政职业技术学院 "学生资助"-"国家奖学金申请页面"-->
+			<forward name="gjjxjsq" path="/xszz/csmz/gjjxjsq.jsp" />
+			<forward name="gjjxjsqb" path="/xszz/csmz/gjjxjsqb.jsp" />
+			<!-- 长沙民政职业技术学院 "学生资助"-"国家奖学金审核页面"-->
+			<forward name="gjjxjsh" path="/xszz/csmz/gjjxjsh.jsp" />
+			<forward name="gjjxjshXxxx" path="/xszz/csmz/gjjxjshXxxx.jsp" />
+			<forward name="gjjxjshExp" path="/about:blank" />
+			<!-- 长沙民政职业技术学院 "学生资助"-"国家励志奖学金申请页面"-->
+			<forward name="gjlzjxjsq" path="/xszz/csmz/gjlzjxjsq.jsp" />
+			<forward name="gjlzjxjsqb" path="/xszz/csmz/gjlzjxjsqb.jsp" />
+			<!-- 长沙民政职业技术学院 "学生资助"-"国家励志奖学金审核页面"-->
+			<forward name="gjlzjxjsh" path="/xszz/csmz/gjlzjxjsh.jsp" />
+			<forward name="gjlzjxjshXxxx" path="/xszz/csmz/gjlzjxjshXxxx.jsp" />
+			<forward name="gjlzjxjshExp" path="/about:blank" />
+			<!-- 长沙民政职业技术学院 "学生资助"-"国家助学金申请页面"-->
+			<forward name="gjzxjsq" path="/xszz/csmz/gjzxjsq.jsp" />
+			<forward name="gjzxjsqb" path="/xszz/csmz/gjzxjsqb.jsp" />
+			<!-- 长沙民政职业技术学院 "学生资助"-"国家助学金审核页面"-->
+			<forward name="gjzxjsh" path="/xszz/csmz/gjzxjsh.jsp" />
+			<forward name="gjzxjshXxxx" path="/xszz/csmz/gjzxjshXxxx.jsp" />
+			<forward name="gjzxjshExp" path="/about:blank" />
+		</action>
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

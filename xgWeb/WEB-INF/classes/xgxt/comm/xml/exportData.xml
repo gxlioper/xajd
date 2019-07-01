@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<append>
+	<!-- 在校学生信息查询条件 -->
+	<query path="stu_info_query.do?method=stuInfo">
+		<sql value=""> and (sfyby='否' or sfyby is null) and (sfzx='在校' or sfzx is null)
+		</sql>
+	</query>
+	
+	<!-- 历史学生信息查询条件 -->
+	<query path="stu_info_query.do?method=stuInfo&amp;sfzxk=no">
+		<sql value=""> and (sfyby='是' or sfzx='不在校')
+		</sql>
+	</query>
+	
+<!--	<query path="stu_info_query.do?method=stuInfo&amp;sfzxk=no">-->
+<!--		<sql value="xn-xq-nd-xmlx-ffsj"> and xn=? and xq=? and nd=? and xmlx=? and ffsj=?-->
+<!--		</sql>-->
+<!--	</query>-->
+	
+	<!-- 浙江理工大学日常事管查询条件 -->
+	<query path="zzlgdx_rcsw.do?method=cgjDate">
+		<sql value="nj-xh-sfzh-xydm-zydm-bjdm"> and nj=? and xh like '%'||?||'%' and sfzh like '%'||?||'%' and xydm=? and zydm=? and bjdm=?
+		</sql>
+	</query>
+	
+	<!-- 浙江理工大学学校评奖审核查询条件 -->
+	<query path="XxSearch">
+		<sql value="xmdm"> and xmdm = ?
+		</sql>
+	</query>
+	
+	<!-- 浙江理工大学学院评奖审核查询条件 -->
+	<query path="XySearch">
+		<sql value="exp_xydm-xmdm"> and xydm = ? and xmdm = ?
+		</sql>
+	</query>
+	
+	<!-- 浙江理工大学班主任评奖审核查询条件 -->
+	<query path="BzrSearch">
+		<sql value="xmdm-username"> and xmdm = ? and exists (select 1 from bzrbbb b where bjdm=b.bjdm where zgh = ?) 
+		</sql>
+	</query>
+	
+	<!-- 浙江理工大学辅导员评奖审核查询条件 -->
+	<query path="FdySearch">
+		<sql value="xmdm-username"> and xmdm = ? and exists (select 1 from fdybjb b where a.bjdm=b.bjdm where zgh = ? ) 
+		</sql>
+	</query>
+	
+	<!-- 浙江理工大学班主任兼任辅导员评奖审核查询条件 -->
+	<query path="BzrJfdySearch">
+		<sql value="xmdm-username"> and xmdm = ? and exists (select 1 from bzrbbb b where bjdm=b.bjdm where zgh = ?) 
+		</sql>
+	</query>
+	
+</append>

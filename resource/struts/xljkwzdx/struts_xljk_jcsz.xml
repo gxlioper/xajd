@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="xlwtlxwhForm" type="com.zfsoft.xgxt.xljkwzdx.zcsz.lxwh.XlwtlxwhForm" />
+    	<form-bean name="fdlxwhForm" type="com.zfsoft.xgxt.xljkwzdx.zcsz.lxwh.FdlxwhForm" />
+    	<!-- 心理委员管理基础设置FORM -->
+    	<form-bean name="xlwygljcszForm" type="com.zfsoft.xgxt.xljkwzdx.xlwygl.jcsz.JcszForm" />
+    	<form-bean name="xlwyglxssqglForm" type="com.zfsoft.xgxt.xljkwzdx.xlwygl.xssqgl.XssqForm" />
+    	<form-bean name="xlwyglzbrcglForm" type="com.zfsoft.xgxt.xljkwzdx.xlwygl.zbrcgl.ZbrcForm" />
+    	<form-bean name="xlwyglxxsbglForm" type="com.zfsoft.xgxt.xljkwzdx.xlwygl.xxsbgl.XxsbForm" />
+    	<form-bean name="xlwyglxxsbjgglForm" type="com.zfsoft.xgxt.xljkwzdx.xlwygl.xxsbjggl.XxsbjgForm" />
+    	<!-- 心理危机预警管理 -->
+    	<form-bean name="xlwjyjkForm" type="com.zfsoft.xgxt.xljkwzdx.xlwjyjgl.xlwjyjk.XlwjyjkForm" />
+    	<form-bean name="wgwtwhForm" type="com.zfsoft.xgxt.xljkwzdx.xlwjyjgl.wgwtwh.WgwtwhForm" />
+    	<form-bean name="ylxlxsglForm" type="com.zfsoft.xgxt.xljkwzdx.xlwjyjgl.ylxlxsgl.YlxlxsglForm" />
+    	<form-bean name="xlfdjlForm" type="com.zfsoft.xgxt.xljkwzdx.xlwjyjgl.xlfdjl.XlfdjlForm" />
+    	
+    	
+	</form-beans>
+	
+	<action-mappings>
+		
+  		<action path="/xljk_jcsz_lxwh" forward="/xljk_xlwtlxwh.do?method=queryXlwtlx"/>	
+		
+		<action path="/xljk_xlwygl_jcsz" forward="/xljk_xlwygl_jcszwh.do?method=cxJcsz"/>
+		
+		<action path="/xljk_xlwygl_xssqgl" forward="/xljk_xlwygl_xssqglwh.do?method=cx"/>
+		
+		<action path="/xljk_xlwygl_zbrcgl" forward="/xljk_xlwygl_zbrcglwh.do?method=cx"/>
+		
+		<action path="/xljk_xlwygl_xxsbgl" forward="/xljk_xlwygl_xxsbglwh.do?method=cx"/>
+		
+		<action path="/xljk_xlwygl_xxsbshgl" forward="/xljk_xlwygl_xxsbglwh.do?method=shcx"/>
+		
+		<action path="/xljk_xlwygl_xxsbjggl" forward="/xljk_xlwygl_xxsbjgglwh.do?method=cx"/>
+		
+		<action path="/xljk_xlwjyjgl_xlwjyjkgl" forward="/xljk_xlwjyjgl_xlwjyjkglwh.do?method=cx"/>
+		
+		<action path="/xljk_xlwjyjgl_wgwtwhgl" forward="/xljk_xlwjyjgl_wgwtwh.do?method=cx"/>
+		
+		<action path="/xljk_xlwjyjgl_ylxlxsgl" forward="/xljk_xlwjyjgl_ylxlxsglwh.do?method=cx"/>
+		
+		<action path="/xljk_xlwjyjgl_mtlrglgl" forward="/xljk_xlwjyjgl_ylxlxsglwh.do?method=mtlrcx"/>
+		
+		<action path="/xljk_xlwjyjgl_xlfdjlgl" forward="/xljk_xlwjyjgl_xlfdjlglwh.do?method=cx"/>
+		
+		<action path="/xljk_xlwtlxwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.zcsz.lxwh.XlwtlxwhAction" 
+    			name="xlwtlxwhForm"
+    			parameter="method">
+    			
+    		<forward name="queryXlwtlxwh" path="/xljkwzdx/jcsz/lxwh/queryXlwtlxwh.jsp"/>
+    		<forward name="addXlwtlx" path="/xljkwzdx/jcsz/lxwh/addXlwtlx.jsp"/>
+    		<forward name="updateXlwtlx" path="/xljkwzdx/jcsz/lxwh/updateXlwtlx.jsp"/>
+		</action>
+		
+		<action path="/xljk_fdlxwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.zcsz.lxwh.FdlxwhAction" 
+    			name="fdlxwhForm"
+    			parameter="method">
+    			
+    		<forward name="queryFdlxwh" path="/xljkwzdx/jcsz/lxwh/queryFdlxwh.jsp"/>
+    		<forward name="addFdlx" path="/xljkwzdx/jcsz/lxwh/addFdlx.jsp"/>
+    		<forward name="updateFdlx" path="/xljkwzdx/jcsz/lxwh/updateFdlx.jsp"/>
+		</action>
+		
+		<action path="/xljk_xlwygl_jcszwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xlwygl.jcsz.JcszAction" 
+    			name="xlwygljcszForm"
+    			parameter="method">
+    		<forward name="cxJcsz" path="/xljkwzdx/xlwygl/jcsz/jcsz.jsp"/>
+		</action>
+		
+		<action path="/xljk_xlwygl_xssqglwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xlwygl.xssqgl.XssqAction" 
+    			name="xlwyglxssqglForm"
+    			parameter="method">
+    		<forward name="cx" path="/xljkwzdx/xlwygl/xssqgl/cx.jsp"/>
+    		<forward name="xz_bjwy" path="/xljkwzdx/xlwygl/xssqgl/xz_bjwy.jsp"/>
+    		<forward name="xz_tsxs" path="/xljkwzdx/xlwygl/xssqgl/xz_tsxs.jsp"/>
+    		<forward name="ck_bjwy" path="/xljkwzdx/xlwygl/xssqgl/ck_bjwy.jsp"/>
+    		<forward name="ck_tsxs" path="/xljkwzdx/xlwygl/xssqgl/ck_tsxs.jsp"/>
+    		<forward name="xg_bjwy" path="/xljkwzdx/xlwygl/xssqgl/xg_bjwy.jsp"/>
+    		<forward name="xg_tsxs" path="/xljkwzdx/xlwygl/xssqgl/xg_tsxs.jsp"/>
+		</action>
+		
+		<action path="/xljk_xlwygl_zbrcglwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xlwygl.zbrcgl.ZbrcAction" 
+    			name="xlwyglzbrcglForm"
+    			parameter="method">
+    		<forward name="cx" path="/xljkwzdx/xlwygl/zbrcgl/cx.jsp"/>
+    		<forward name="xz" path="/xljkwzdx/xlwygl/zbrcgl/xz.jsp"/>
+    		<forward name="xg" path="/xljkwzdx/xlwygl/zbrcgl/xg.jsp"/>
+    		<forward name="cx_sbbj" path="/xljkwzdx/xlwygl/zbrcgl/cx_sbbj.jsp"/>
+		</action>
+		
+		<action path="/xljk_xlwygl_xxsbglwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xlwygl.xxsbgl.XxsbAction" 
+    			name="xlwyglxxsbglForm"
+    			parameter="method">
+    		<forward name="cx" path="/xljkwzdx/xlwygl/xxsbgl/cx.jsp"/>
+    		<forward name="sb" path="/xljkwzdx/xlwygl/xxsbgl/sb.jsp"/>
+    		<forward name="xg" path="/xljkwzdx/xlwygl/xxsbgl/xg.jsp"/>
+    		<forward name="ck" path="/xljkwzdx/xlwygl/xxsbgl/ck.jsp"/>
+    		<forward name="shcx" path="/xljkwzdx/xlwygl/xxsbsh/sh_cx.jsp"/>
+    		<forward name="sh" path="/xljkwzdx/xlwygl/xxsbsh/sh.jsp"/>
+    		<forward name="plsh" path="/xljkwzdx/xlwygl/xxsbsh/plsh.jsp"/>
+    		<forward name="shck" path="/xljkwzdx/xlwygl/xxsbsh/ck.jsp"/>
+		</action>
+		
+		<action path="/xljk_xlwygl_xxsbjgglwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xlwygl.xxsbjggl.XxsbjgAction" 
+    			name="xlwyglxxsbjgglForm"
+    			parameter="method">
+    		<forward name="cx" path="/xljkwzdx/xlwygl/xxsbjggl/cx.jsp"/>
+    		<forward name="sb" path="/xljkwzdx/xlwygl/xxsbjggl/sb.jsp"/>
+    		<forward name="xg" path="/xljkwzdx/xlwygl/xxsbjggl/xg.jsp"/>
+    		<forward name="ck" path="/xljkwzdx/xlwygl/xxsbjggl/ck.jsp"/>
+		</action>
+		
+		<action path="/xljk_xlwjyjgl_xlwjyjkglwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xlwjyjgl.xlwjyjk.XlwjyjkAction" 
+    			name="xlwjyjkForm"
+    			parameter="method">
+    		<forward name="cx" path="/xljkwzdx/xlwjyjgl/xlwjyjkgl/cx.jsp"/>
+    		<forward name="xz" path="/xljkwzdx/xlwjyjgl/xlwjyjkgl/xz.jsp"/>
+    		<forward name="xg" path="/xljkwzdx/xlwjyjgl/xlwjyjkgl/xg.jsp"/>
+    		<forward name="ck" path="/xljkwzdx/xlwjyjgl/xlwjyjkgl/ck.jsp"/>
+		</action>
+		
+		<action path="/xljk_xlwjyjgl_wgwtwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xlwjyjgl.wgwtwh.WgwtwhAction" 
+    			name="wgwtwhForm"
+    			parameter="method">
+    		<forward name="cx" path="/xljkwzdx/xlwjyjgl/wgwtwh/cx.jsp"/>
+    		<forward name="xz" path="/xljkwzdx/xlwjyjgl/wgwtwh/xz.jsp"/>
+    		<forward name="xg" path="/xljkwzdx/xlwjyjgl/wgwtwh/xg.jsp"/>
+    		<forward name="ck" path="/xljkwzdx/xlwjyjgl/wgwtwh/ck.jsp"/>
+    		<forward name="tj" path="/xljkwzdx/xlwjyjgl/tj.jsp"/>
+		</action>
+		
+		<action path="/xljk_xlwjyjgl_ylxlxsglwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xlwjyjgl.ylxlxsgl.YlxlxsglAction" 
+    			name="ylxlxsglForm"
+    			parameter="method">
+    		<forward name="cx" path="/xljkwzdx/xlwjyjgl/ylxlxsgl/cx.jsp"/>
+    		<forward name="mtlrcx" path="/xljkwzdx/xlwjyjgl/ylxlxsgl/mtlr_cx.jsp"/>
+    		<forward name="xz" path="/xljkwzdx/xlwjyjgl/ylxlxsgl/xz.jsp"/>
+    		<forward name="xg" path="/xljkwzdx/xlwjyjgl/ylxlxsgl/xg.jsp"/>
+    		<forward name="mtlr" path="/xljkwzdx/xlwjyjgl/ylxlxsgl/mtlr.jsp"/>
+    		<forward name="mtlrck" path="/xljkwzdx/xlwjyjgl/ylxlxsgl/mtlr_ck.jsp"/>
+    		<forward name="tj" path="/xljkwzdx/xlwjyjgl/tj.jsp"/>
+		</action>
+
+		<action path="/xljk_xlwjyjgl_xlfdjlglwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xlwjyjgl.xlfdjl.XlfdjlAction" 
+    			name="xlfdjlForm"
+    			parameter="method">
+    		<forward name="cx" path="/xljkwzdx/xlwjyjgl/xlfdjl/cx.jsp"/>
+    		<forward name="xz" path="/xljkwzdx/xlwjyjgl/xlfdjl/xz.jsp"/>
+    		<forward name="xg" path="/xljkwzdx/xlwjyjgl/xlfdjl/xg.jsp"/>
+    		<forward name="ck" path="/xljkwzdx/xlwjyjgl/xlfdjl/ck.jsp"/>
+		</action>	
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="fbglgzpztjform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.gzsd.gzpz.FbglGzpzTjForm" />
+		<form-bean name="fbglXsxxForm"
+			type="com.zfsoft.xgxt.xsxx.fbgl.xsxx.FbglXsxxForm" />
+		<form-bean name="fbglgzdmform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.gzsd.FbglGzdmForm" />
+		<form-bean name="fbgltjgzform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.gzsd.FbglTjgzForm" />
+		<form-bean name="fbglbbglform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.bbgl.FbglBbglForm" />
+		<form-bean name="fbglgzpztjxxform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.gzsd.gzpz.FbglGzpzTjXxForm" />
+	</form-beans>
+	<action-mappings>
+		<!-- 分班管理规则设定-->
+		<action path="/fbglgzsd" forward="/fbglgzpztj.do?method=list" />
+		<action path="/fbglgzpztj" name="fbglgzpztjform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.gzsd.gzpz.FbglGzpzTjAction"
+			parameter="method" scope="request">
+			<forward name="fbglgzpztjlb" path="/xsxx/fbgl/gzsd/tjgzpz/fbglgzpztjlb.jsp" />
+			<forward name="fbglgzpztjzj" path="/xsxx/fbgl/gzsd/tjgzpz/fbglgzpztjzj.jsp" />
+			<forward name="fbglgzpztjxg" path="/xsxx/fbgl/gzsd/tjgzpz/fbglgzpztjxg.jsp" />
+			<forward name="fbglgzpztjck" path="/xsxx/fbgl/gzsd/tjgzpz/fbglgzpztjck.jsp" />
+		</action>
+
+		<!-- 分班管理规则代码-->
+		<action path="/fbglgzdmbase" forward="/fbglgzdm.do?method=list" />
+		<action path="/fbglgzdm" name="fbglgzpztjform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.gzsd.FbglGzdmAction" parameter="method"
+			scope="request">
+		</action>
+		<!-- 分班管理编班-->
+		<action path="/fbglbbglbase" forward="/fbglbbgl.do?method=list" />
+		<action path="/fbglbbgl" name="fbglbbglform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.bbgl.FbglBbglAcion" parameter="method"
+			scope="request">
+			<forward name="fbglbbgllb" path="/xsxx/fbgl/bbgl/fbglbbgllb.jsp" />
+			<forward name="fbglbbglzj" path="/xsxx/fbgl/bbgl/fbglbbglzj.jsp" />
+			<forward name="fbglbbglbb" path="/xsxx/fbgl/bbgl/fbglbbglbb.jsp" />
+			<forward name="fbglbbgltb" path="/xsxx/fbgl/bbgl/fbglbbgltb.jsp" />
+			<forward name="fbglbbgltbxx" path="/xsxx/fbgl/bbgl/fbglbbgltbxx.jsp" />
+		</action>
+		<!-- 分班管理条件规则-->
+		<action path="/fbgltjgzbase" forward="/fbgltjgz.do?method=list" />
+		<action path="/fbgltjgz" name="fbgltjgzform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.gzsd.FbglTjgzAction" parameter="method"
+			scope="request">
+		</action>
+		<!-- 分班管理条件规则详细-->
+		<action path="/fbglgzpztjxxbase" forward="/fbglgzpztjxx.do?method=list" />
+		<action path="/fbglgzpztjxx" name="fbglgzpztjxxform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.gzsd.gzpz.FbglGzpzTjXxAction"
+			parameter="method" scope="request">
+		</action>
+
+		<!-- 分班管理-->
+		<action path="/fbglfbbase" forward="/fbgl.do?method=list" />
+		<action path="/fbgl" name="fbglbbglform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.fbgl.FbglAction" parameter="method"
+			scope="request">
+			<forward name="fbgllb" path="/xsxx/fbgl/fbgl/fbgllb.jsp" />
+			<forward name="fbglyfblb" path="/xsxx/fbgl/fbgl/fbglyfblb.jsp" />
+			<forward name="fbglfb" path="/xsxx/fbgl/fbgl/fbglfb.jsp" />
+			<forward name="fbgltb" path="/xsxx/fbgl/fbgl/fbgltb.jsp" />
+		</action>
+		<!-- 编学号-->
+		<action path="/fbglbxhbase" forward="/fbglbxh.do?method=list" />
+		<action path="/fbglbxh" name="fbglbbglform"
+			type="com.zfsoft.xgxt.xsxx.fbgl.bxh.FbglBxhAction" parameter="method"
+			scope="request">
+			<forward name="bxhlb" path="/xsxx/fbgl/bxh/bxhlb.jsp" />
+			<forward name="scxh" path="/xsxx/fbgl/bxh/scxh.jsp" />
+			<forward name="bxhjglb" path="/xsxx/fbgl/bxh/bxhjglb.jsp" />
+		</action>
+		<!-- 分班管理学生信息-->
+		<action path="/fbglxsxxbase" forward="/fbglxsxx.do?method=list" />
+		<action path="/fbglxsxx" name="fbglXsxxForm"
+			type="com.zfsoft.xgxt.xsxx.fbgl.xsxx.FbglXsxxAction" parameter="method"
+			scope="request">
+			<forward name="fbglxsxxlb" path="/xsxx/fbgl/xsxx/fbglxsxxlb.jsp" />
+			<forward name="fbglxsxxzj" path="/xsxx/fbgl/xsxx/fbglxsxxzj.jsp" />
+			<forward name="fbglxsxxxg" path="/xsxx/fbgl/xsxx/fbglxsxxxg.jsp" />
+			<forward name="fbglxsxxck" path="/xsxx/fbgl/xsxx/fbglxsxxck.jsp" />
+		</action>
+		<!-- 分班管理结果库 -->
+		<action path="/fbglfbjgbase" forward="/fbglfbjg.do?method=list" />
+		<action path="/fbglfbjg" name="fbglXsxxForm"
+			type="com.zfsoft.xgxt.xsxx.fbgl.fbjg.FbglFbjgAction" parameter="method"
+			scope="request">
+			<forward name="fbglfbjglb" path="/xsxx/fbgl/fbjg/fbglfbjglb.jsp" />
+			<forward name="fbglfbjgzj" path="/xsxx/fbgl/fbjg/fbglfbjgzj.jsp" />
+			<forward name="fbglfbjgxg" path="/xsxx/fbgl/fbjg/fbglfbjgxg.jsp" />
+			<forward name="fbglfbjgck" path="/xsxx/fbgl/fbjg/fbglfbjgck.jsp" />
+			<forward name="fbglfbjgtj" path="/xsxx/fbgl/fbjg/fbglfbjgtj.jsp" />
+			<forward name="fbglfbjgcx" path="/xsxx/fbgl/fbjg/fbglfbjgcx.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    
+    <!-- 助学贷款 2014 -->
+	<form-beans>
+   		<form-bean name="zxdkCsszForm" type="com.zfsoft.xgxt.zxdk.cssz.ZxdkCssz" />
+   		<form-bean name="zxdkXyddkForm" type="com.zfsoft.xgxt.zxdk.xyddk.XyddkModel" />
+   		<form-bean name="zxdkSyddkForm" type="com.zfsoft.xgxt.zxdk.syddk.SyddkModel" />
+   		<form-bean name="zxdkSydksqshForm" type="com.zfsoft.xgxt.zxdk.syddk.SydkSqshModel" />
+   		<form-bean name="zxdkWyxxForm" type="com.zfsoft.xgxt.zxdk.xyddk.WyxxModel" />
+   		<form-bean name="zxdkWyjlForm" type="com.zfsoft.xgxt.zxdk.xyddk.WyjlModel" />
+   		<form-bean name="zxdkHkztForm" type="com.zfsoft.xgxt.zxdk.hkzt.HkztModel" />
+   		<form-bean name="zxdkTqhkForm" type="com.zfsoft.xgxt.zxdk.tqhk.TqhkModel" />
+   		<form-bean name="zxdkHkjgForm" type="com.zfsoft.xgxt.zxdk.tqhk.HkjgModel" />
+   		
+   		<!-- 基层就业贷款补偿 -->
+   		<form-bean name="dkbcCsszForm" type="com.zfsoft.xgxt.zxdk.dkbc.cssz.DkbcCssz" />
+   		<form-bean name="dkbcDmwhForm" type="com.zfsoft.xgxt.zxdk.dkbc.dmwh.BfqxModel" />
+   		<form-bean name="dkbcSqshForm" type="com.zfsoft.xgxt.zxdk.dkbc.sqsh.DkbcModel" />
+   		<form-bean name="dkbcSqjgForm" type="com.zfsoft.xgxt.zxdk.dkbc.bcjg.BcjgModel" />
+   		<form-bean name="dkbcTjszForm" type="com.zfsoft.xgxt.zxdk.dkbc.tjsz.TjszForm" />
+   		<form-bean name="jcjyForm" type="com.zfsoft.xgxt.zxdk.dkbc.jcjy.JcjyModel" />
+   		
+   		
+   		<!-- 退役学生资助 -->
+   		<form-bean name="tyxsCsszForm" type="com.zfsoft.xgxt.zxdk.tyxs.cssz.TyxsCssz"/>
+   		<form-bean name="tyxsZzsqForm" type="com.zfsoft.xgxt.zxdk.tyxs.zzsq.TyxsZzsq"/>
+   		<form-bean name="tyxsZzjgForm" type="com.zfsoft.xgxt.zxdk.tyxs.shjg.TyxsZzjg"/>
+   	    
+   	    <!-- 入伍服兵役补偿代偿 -->
+   	    <form-bean name="rwfbyCsszForm" type="com.zfsoft.xgxt.zxdk.rwfbybc.cssz.RwfbyCssz"/>
+   	    <form-bean name="rwfbysqshForm" type="com.zfsoft.xgxt.zxdk.rwfbybc.sqsh.RwfbysqshModel"/>
+   	    <form-bean name="rwfbydcjgForm" type="com.zfsoft.xgxt.zxdk.rwfbybc.dcjg.RwfbydcjgModel"/>
+   	    
+   	    <!--浙江大学校内无息贷款-->
+   	    <!-- 参数设置 -->
+   	    <form-bean name="XnwxdkCsszModel" type="com.zfsoft.xgxt.zxdk.xnwxdk.cssz.XnwxdkCsszModel"/>
+   	    <!-- 申请 -->
+   	    <form-bean name="XnwxdkSqModel" type="com.zfsoft.xgxt.zxdk.xnwxdk.sq.XnwxdkSqModel"/>
+   	    <!-- 审核 -->
+   	    <form-bean name="XnwxdkShModel" type="com.zfsoft.xgxt.zxdk.xnwxdk.sh.XnwxdkShModel"/>
+   	    <!-- 结果 -->
+   	    <form-bean name="XnwxdkJgModel" type="com.zfsoft.xgxt.zxdk.xnwxdk.jg.XnwxdkJgModel"/>
+   	    
+   	      
+   	    <!--浙江大学校内无息贷款减免-->
+   	    <!-- 参数设置 -->
+   	    <form-bean name="XnwxdkjmCsszModel" type="com.zfsoft.xgxt.zxdk.xnwxdkjm.cssz.XnwxdkjmCsszModel"/>
+   		<!-- 申请 -->
+   	    <form-bean name="XnwxdkjmsqModel" type="com.zfsoft.xgxt.zxdk.xnwxdkjm.sq.XnwxdkjmsqModel"/>
+   	    <form-bean name="XnwxdkjmshModel" type="com.zfsoft.xgxt.zxdk.xnwxdkjm.sh.XnwxdkjmshModel"/>
+   	    <form-bean name="XnwxdkjmJgModel" type="com.zfsoft.xgxt.zxdk.xnwxdkjm.jg.XnwxdkjmJgModel"/>
+   	    
+   	    <!-- 浙江大学生源地贷款还款维护 -->
+   	    <form-bean name="syddkhkwhForm" type="com.zfsoft.xgxt.zxdk.syddk.hkwh.SyddkhkwhForm"></form-bean>
+   	    <!-- 浙江大学校园地贷款还款维护 -->
+   	    <form-bean name="xyddkhkwhForm" type="com.zfsoft.xgxt.zxdk.xyddk.xyddkhkwh.XyddkhkwhForm"></form-bean>
+   	    <!-- 华师大贷款额度设置 -->
+   	    <form-bean name="JesxForm" type="com.zfsoft.xgxt.zxdk.xyddk.jesx.JesxForm"/>
+   	    <!-- 续贷申请 -->
+   	    <form-bean name="HsdxdForm" type="com.zfsoft.xgxt.zxdk.xyddk.hsdxd.HsdxdForm"/>
+	</form-beans>
+	
+	
+	<action-mappings>
+		<action path="/zxdk_gjdk_cssz" forward="/zxdkCssz.do?method=gjdkCssz"/> 
+		<action path="/zxdk_syddk_cssz" forward="/zxdkCssz.do?method=syddkCssz"/> 
+		<action path="/zxdk_gjdk_dksq" forward="/zxdkXyddk.do?method=dksqList"/> 
+		<action path="/zxdk_gjdk_dksh" forward="/zxdkXyddk.do?method=dkshList"/> 
+		<action path="/zxdk_gjdk_dkjg" forward="/zxdkDkjg.do?method=dkjgList"/> 
+		<action path="/zxdk_gjdk_xdsq" forward="/zxdkDkjg.do?method=xdsq"/>
+		<action path="/zxdk_gjdk_xdsh" forward="/zxdkDkjg.do?method=getXdshList"/>
+		<action path="/zxdk_gjdk_wyjl" forward="/zxdkWyjl.do?method=wyjlList"/> 
+		<action path="/zxdk_syddm_dkwh" forward="/zxdkSyddk.do?method=dkxxList"/> 
+		<action path="/zxdk_gjdk_wygl" forward="/zxdkWygl.do?method=wyxxList"/> 
+		<action path="/zxdk_tqhk_cssz" forward="/zxdkCssz.do?method=tqhkCssz"/> 
+		<action path="/zxdk_tqhk_hkzt" forward="/zxdkHkzt.do?method=hkztList"/> 
+		<action path="/zxdk_tqhk_hksq" forward="/zxdkTqhk.do?method=hksqList"/> 
+		<action path="/zxdk_tqhk_hksh" forward="/zxdkTqhk.do?method=hkshList"/> 
+		<action path="/zxdk_tqhk_hkjg" forward="/zxdkHkjg.do?method=hkjgList"/> 
+
+
+		<!-- 退役学生资助 开始-->
+
+		<action path="/zxdk_tyxs_cssz" forward="/tyxs_cssz.do?method=tyxsCssz"/> 
+		<action path="/zxdk_tyxs_zzsq" forward="/tyxs_zzsq.do?method=tyxsZzsq"/>	 
+		<action path="/zxdk_tyxs_zzsh" forward="/tyxs_zzsq.do?method=tyxsZzsh"/> 
+		<action path="/zxdk_tyxs_zzjg" forward="/tyxs_zzjg.do?method=tyxsZzjg"/> 		
+		<action path="/zxdk_tyxs_add" forward="/tyxs_zzsq.do?method=zzsq"/> 
+
+		<action path="/tyxs_cssz" 
+	    	type="com.zfsoft.xgxt.zxdk.tyxs.cssz.TyxsCsszAction"
+	    	parameter="method"
+	    	name="tyxsCsszForm"
+	    	scope="request">
+			<forward name="tyxsCssz" path="/xsgzgl/zxdk/tyxs/cssz/tyxsCssz.jsp"/>
+		</action>
+
+		<action path="/tyxs_zzsq" 
+	    	type="com.zfsoft.xgxt.zxdk.tyxs.zzsq.TyxsZzsqAction"
+	    	parameter="method"
+	    	name="tyxsZzsqForm"
+	    	scope="request">
+			<forward name="zzsq" path="/xsgzgl/zxdk/tyxs/sqsh/zzsq.jsp"/>
+			<forward name="zzsqList" path="/xsgzgl/zxdk/tyxs/sqsh/zzsqList.jsp"/>				
+			<forward name="xgZzsq" path="/xsgzgl/zxdk/tyxs/sqsh/xgzzsq.jsp"/>					
+			<forward name="zzshList" path="/xsgzgl/zxdk/tyxs/sqsh/zzshList.jsp"/>
+			<forward name="zzsh" path="/xsgzgl/zxdk/tyxs/sqsh/zzsh.jsp"/>
+			<forward name="ckZzsq" path="/xsgzgl/zxdk/tyxs/sqsh/ckZzsq.jsp"/>			
+		</action>
+			
+		<action path="/tyxs_zzjg" 
+	    	type="com.zfsoft.xgxt.zxdk.tyxs.shjg.TyxsZzjgAction"
+	    	parameter="method"
+	    	name="tyxsZzjgForm"
+	    	scope="request">
+			<forward name="zzjgList" path="/xsgzgl/zxdk/tyxs/sqsh/zzjgList.jsp"/>
+			<forward name="addZzjg" path="/xsgzgl/zxdk/tyxs/sqsh/addZzjg.jsp"/>
+			<forward name="editZzjg" path="/xsgzgl/zxdk/tyxs/sqsh/editZzjg.jsp"/>
+			<forward name="ckZzjg" path="/xsgzgl/zxdk/tyxs/sqsh/ckZzjg.jsp"/>
+			<forward name="xdsq" path="/xsgzgl/zxdk/tyxs/sqsh/xdsq.jsp"/>
+		</action>
+		<!-- 退役学生资助结束-->
+		
+		
+	    <!-- 入伍服兵役 -->
+	    <action path="/zxdk_rwfby_cssz" forward="/rwfby_cssz.do?method=cssz"/> 
+	    <action path="/zxdk_rwfby_dcsq" forward="/rwfby_sqsh.do?method=dcsqList"/> 
+	    <action path="/zxdk_rwfby_dcsh" forward="/rwfby_sqsh.do?method=dcshList"/> 
+	    <action path="/zxdk_rwfby_dcjg" forward="/rwfby_dcjg.do?method=dcjgList"/> 
+	    <action path="/rwfby_cssz" 
+	    		type="com.zfsoft.xgxt.zxdk.rwfbybc.cssz.RwfbyCsszAction"
+	    		parameter="method"
+	    		name="rwfbyCsszForm"
+	    		scope="request">
+			<forward name="cssz" path="/xsgzgl/zxdk/rwfby/cssz/cssz.jsp"/>
+		</action>
+		<action path="/rwfby_sqsh" 
+	    		type="com.zfsoft.xgxt.zxdk.rwfbybc.sqsh.RwfbysqshAction"
+	    		parameter="method"
+	    		name="rwfbysqshForm"
+	    		scope="request">
+			<forward name="dcsqList" path="/xsgzgl/zxdk/rwfby/sqsh/rwfbydcsqList.jsp"/>
+			<forward name="dcsq" path="/xsgzgl/zxdk/rwfby/sqsh/rwfbydcsq.jsp"/>
+			<forward name="xgsq" path="/xsgzgl/zxdk/rwfby/sqsh/xgsq.jsp"/>
+			<forward name="cksq" path="/xsgzgl/zxdk/rwfby/sqsh/cksq.jsp"/>
+			<forward name="dcshList" path="/xsgzgl/zxdk/rwfby/sqsh/rwfbydcshList.jsp"/>
+			<forward name="dcsh" path="/xsgzgl/zxdk/rwfby/sqsh/rwfbydcsh.jsp"/>
+		</action>
+		<action path="/rwfby_dcjg" 
+	    		type="com.zfsoft.xgxt.zxdk.rwfbybc.dcjg.RwfbydcjgAction"
+	    		parameter="method"
+	    		name="rwfbydcjgForm"
+	    		scope="request">
+			<forward name="dcjgList" path="/xsgzgl/zxdk/rwfby/dcjg/dcjgList.jsp"/>
+			<forward name="dcjgAdd" path="/xsgzgl/zxdk/rwfby/dcjg/dcjgAdd.jsp"/>
+			<forward name="dcjgEdit" path="/xsgzgl/zxdk/rwfby/dcjg/dcjgEdit.jsp"/>
+			<forward name="dcjgView" path="/xsgzgl/zxdk/rwfby/dcjg/dcjgView.jsp"/>
+			<forward name="dcjgImport" path="/xsgzgl/zxdk/rwfby/dcjg/dcjgImport.jsp"/>
+		</action>
+		
+		<!-- 基层就业贷款补偿 -->
+		<action path="/zxdk_jcjy_cssz" forward="/dkbc_cssz.do?method=cssz"/> 
+		<action path="/zxdk_jcjy_dmwh" forward="/dkbc_dmwh.do?method=bfqxList"/> 
+		<action path="/zxdk_jcjy_bcsq" forward="/dkbc_sqsh.do?method=dkbcList"/> 
+		<action path="/zxdk_jcjy_bcsh" forward="/dkbc_sqsh.do?method=bcshList"/> 
+		<action path="/zxdk_jcjy_bcjg" forward="/dkbc_bcjg.do?method=bcjgList"/>
+		<action path="/zxdk_jcjy_tjsz" forward="/dkbc_tjsz.do?method=tjszCk"/>  
+		<action path="/zxdk_jcjy_bcdc" forward="/jcjy_bcdc.do?method=bcdcList"/>
+		
+		<action path="/dkbc_tjsz" 
+	    		type="com.zfsoft.xgxt.zxdk.dkbc.tjsz.TjszAction"
+	    		parameter="method"
+	    		name="dkbcTjszForm"
+	    		scope="request">
+	    	<forward name="tjszCk" path="/xsgzgl/zxdk/dkbc/tjsz/tjszCk.jsp"></forward><!-- 条件设置查看 -->
+			<forward name="tjszCx" path="/xsgzgl/zxdk/dkbc/tjsz/tjszCx.jsp"></forward><!-- 条件设置查询 -->
+			<forward name="tjszXn" path="/xsgzgl/zxdk/dkbc/tjsz/tjszXn.jsp"></forward><!-- 条件设置-学年学期选择 -->
+			<forward name="tjszTjzDiv" path="/xsgzgl/zxdk/dkbc/tjsz/tjszTjzDiv.jsp"></forward><!-- 条件设置-条件值弹层选择 -->
+		</action>
+		
+		<action path="/dkbc_cssz" 
+	    		type="com.zfsoft.xgxt.zxdk.dkbc.cssz.DkbcCsszAction"
+	    		parameter="method"
+	    		name="dkbcCsszForm"
+	    		scope="request">
+			<forward name="cssz" path="/xsgzgl/zxdk/dkbc/cssz/cssz.jsp"/>
+		</action>
+		
+		<action path="/dkbc_dmwh" 
+	    		type="com.zfsoft.xgxt.zxdk.dkbc.dmwh.BfqxAction"
+	    		parameter="method"
+	    		name="dkbcDmwhForm"
+	    		scope="request">
+			<forward name="bfqxList" path="/xsgzgl/zxdk/dkbc/dmwh/bfqxList.jsp"/>
+			<forward name="dmwhAdd" path="/xsgzgl/zxdk/dkbc/dmwh/dmwhAdd.jsp"/>
+			<forward name="dmwhEdit" path="/xsgzgl/zxdk/dkbc/dmwh/dmwhEdit.jsp"/>
+		</action>
+		
+		<action path="/dkbc_sqsh" 
+	    		type="com.zfsoft.xgxt.zxdk.dkbc.sqsh.DkbcAction"
+	    		parameter="method"
+	    		name="dkbcSqshForm"
+	    		scope="request">
+			<forward name="dkbcList" path="/xsgzgl/zxdk/dkbc/sqsh/dkbcList.jsp"/>
+			<forward name="bcsq" path="/xsgzgl/zxdk/dkbc/sqsh/bcsq.jsp"/>
+			<forward name="xgsq" path="/xsgzgl/zxdk/dkbc/sqsh/xgsq.jsp"/>
+			<forward name="bcshList" path="/xsgzgl/zxdk/dkbc/sqsh/bcshList.jsp"/>
+			<forward name="bcsh" path="/xsgzgl/zxdk/dkbc/sqsh/bcsh.jsp"/>
+			<forward name="cksq" path="/xsgzgl/zxdk/dkbc/sqsh/cksq.jsp"/>
+		</action>
+		
+		<action path="/dkbc_bcjg" 
+	    		type="com.zfsoft.xgxt.zxdk.dkbc.bcjg.BcjgAction"
+	    		parameter="method"
+	    		name="dkbcSqjgForm"
+	    		scope="request">
+			<forward name="bcjgList" path="/xsgzgl/zxdk/dkbc/bcjg/bcjgList.jsp"/>
+			<forward name="bcjgAdd" path="/xsgzgl/zxdk/dkbc/bcjg/bcjgAdd.jsp"/>
+			<forward name="bcjgEdit" path="/xsgzgl/zxdk/dkbc/bcjg/bcjgEdit.jsp"/>
+			<forward name="bcjgView" path="/xsgzgl/zxdk/dkbc/bcjg/bcjgView.jsp"/>
+		</action>
+		
+		
+	    <action path="/zxdkCssz" 
+	    		type="com.zfsoft.xgxt.zxdk.cssz.ZxdkCsszAction"
+	    		parameter="method"
+	    		name="zxdkCsszForm"
+	    		scope="request">
+			<forward name="gjdkCssz" path="/xsgzgl/zxdk/cssz/gjdkCssz.jsp"/>
+			<forward name="syddkCssz" path="/xsgzgl/zxdk/cssz/syddkCssz.jsp"/>
+			<forward name="tqhkCssz" path="/xsgzgl/zxdk/cssz/tqhkCssz.jsp"/>
+		</action>
+		
+	    <action path="/zxdkXyddk" 
+	    		type="com.zfsoft.xgxt.zxdk.xyddk.XyddkAction"
+	    		parameter="method"
+	    		name="zxdkXyddkForm"
+	    		scope="request">
+			<forward name="dksqList" path="/xsgzgl/zxdk/xyddk/dksqList.jsp"/>
+			<forward name="dksq" path="/xsgzgl/zxdk/xyddk/dksq.jsp"/>
+			<forward name="dksh" path="/xsgzgl/zxdk/xyddk/dksh.jsp"/>
+			<forward name="dksh_zjdx" path="/xsgzgl/zxdk/xyddk/dksh_zjdx.jsp"/>
+			<forward name="xgDksq" path="/xsgzgl/zxdk/xyddk/xgDksq.jsp"/>
+			<forward name="ckDksq" path="/xsgzgl/zxdk/xyddk/ckDksq.jsp"/>
+			<forward name="dkshList" path="/xsgzgl/zxdk/xyddk/dkshList.jsp"/>
+		</action>
+		
+	    <action path="/zxdkDkjg" 
+	    		type="com.zfsoft.xgxt.zxdk.xyddk.DkjgAction"
+	    		parameter="method"
+	    		name="zxdkXyddkForm"
+	    		scope="request">
+			<forward name="dkjgList" path="/xsgzgl/zxdk/xyddk/dkjgList.jsp"/>
+			<forward name="addDkjg" path="/xsgzgl/zxdk/xyddk/addDkjg.jsp"/>
+			<forward name="editDkjg" path="/xsgzgl/zxdk/xyddk/editDkjg.jsp"/>
+			<forward name="ckDkjg" path="/xsgzgl/zxdk/xyddk/ckDkjg.jsp"/>
+			<forward name="xdsq" path="/xsgzgl/zxdk/xyddk/xdsq.jsp"/>
+			<forward name="ckDkjg_zjdx" path="/xsgzgl/zxdk/xyddk/ckDkjg_zjdx.jsp"/>
+			<forward name="xdshlist" path="/xsgzgl/zxdk/xyddk/xdsh.jsp"/>
+			<forward name="xdDgsh" path="/xsgzgl/zxdk/xyddk/xdDgsh.jsp"/>
+			<forward name="xdPlsh" path="/xsgzgl/zxdk/xyddk/xdPlsh.jsp"/>
+			<forward name="view" path="/xsgzgl/zxdk/xyddk/viewXdsh.jsp"/>
+		</action>
+		
+		<action path="/zxdkWyjl" 
+	    		type="com.zfsoft.xgxt.zxdk.xyddk.WyjlAction"
+	    		parameter="method"
+	    		name="zxdkWyjlForm"
+	    		scope="request">
+			<forward name="wyjlList" path="/xsgzgl/zxdk/xyddk/wyjlList.jsp"/>
+			<forward name="addWyjl" path="/xsgzgl/zxdk/xyddk/addWyjl.jsp"/>
+			<forward name="editWyjl" path="/xsgzgl/zxdk/xyddk/editWyjl.jsp"/>
+			<forward name="ckWyjl" path="/xsgzgl/zxdk/xyddk/ckWyjl.jsp"/>
+		</action>
+		
+	    
+	    <action path="/zxdkSyddk" 
+	    		type="com.zfsoft.xgxt.zxdk.syddk.SyddkAction"
+	    		parameter="method"
+	    		name="zxdkSyddkForm"
+	    		scope="request">
+			<forward name="dkxxList" path="/xsgzgl/zxdk/syddk/dkxxList.jsp"/>
+			<forward name="addDkxx" path="/xsgzgl/zxdk/syddk/zjDkxx.jsp"/>
+			<forward name="editDkxx" path="/xsgzgl/zxdk/syddk/xgDkxx.jsp"/>
+			<forward name="ckDkxx" path="/xsgzgl/zxdk/syddk/ckDkxx.jsp"/>
+			<forward name="addDkxx_zjdx" path="/xsgzgl/zxdk/syddk/zjDkxx_zjdx.jsp"/>
+			<forward name="editDkxx_zjdx" path="/xsgzgl/zxdk/syddk/xgDkxx_zjdx.jsp"/>
+			<forward name="ckDkxx_zjdx" path="/xsgzgl/zxdk/syddk/ckDkxx_zjdx.jsp"/>
+	    </action>
+	    
+	    <!-- 生源地贷款申请审核 -->
+	   <action path="/zxdk_sydk_dksq" forward="/zxdk_sydk.do?method=dksqList"/> 
+	   <action path="/zxdk_sydk_dksh" forward="/zxdk_sydk.do?method=dkshList"/>
+	   <action path="/zxdk_sydk" 
+	    		type="com.zfsoft.xgxt.zxdk.syddk.SydkSqshAction"
+	    		parameter="method"
+	    		name="zxdkSydksqshForm"
+	    		scope="request">
+	    	<forward name="dksqList" path="/xsgzgl/zxdk/syddk/dksqList.jsp"/>
+			<forward name="dksq" path="/xsgzgl/zxdk/syddk/dksq.jsp"/>
+			<forward name="dksh" path="/xsgzgl/zxdk/syddk/dksh.jsp"/>
+			<forward name="xgDksq" path="/xsgzgl/zxdk/syddk/xgDksq.jsp"/>
+			<forward name="ckDksq" path="/xsgzgl/zxdk/syddk/ckDksq.jsp"/>
+			<forward name="dkshList" path="/xsgzgl/zxdk/syddk/dkshList.jsp"/>
+			<forward name="dksq_zjdx" path="/xsgzgl/zxdk/syddk/dksq_zjdx.jsp" />
+			<forward name="xgDksq_zjdx" path="/xsgzgl/zxdk/syddk/xgDksq_zjdx.jsp"/>
+			<forward name="ckDksq_zjdx" path="/xsgzgl/zxdk/syddk/ckDksq_zjdx.jsp"/>
+			<forward name="dksh_zjdx" path="/xsgzgl/zxdk/syddk/dksh_zjdx.jsp"/>
+			<forward name="sydPlsh" path="/xsgzgl/zxdk/syddk/plsh_zjdx.jsp"/>
+	    </action>
+	    
+	    <action path="/zxdkWygl" 
+	    		type="com.zfsoft.xgxt.zxdk.xyddk.WyxxAction"
+	    		parameter="method"
+	    		name="zxdkWyxxForm"
+	    		scope="request">
+			<forward name="wyxxList" path="/xsgzgl/zxdk/xyddk/wyxxList.jsp"/>
+			<forward name="wybz" path="/xsgzgl/zxdk/xyddk/wybz.jsp"/>
+	    </action>
+	    
+	    <action path="/zxdkHkzt" 
+	    		type="com.zfsoft.xgxt.zxdk.hkzt.HkztAction"
+	    		parameter="method"
+	    		name="zxdkHkztForm"
+	    		scope="request">
+			<forward name="hkztList" path="/xsgzgl/zxdk/hkzt/hkztList.jsp"/>
+			<forward name="dmwhAdd" path="/xsgzgl/zxdk/hkzt/dmwhAdd.jsp"/>
+			<forward name="dmwhEdit" path="/xsgzgl/zxdk/hkzt/dmwhEdit.jsp"/>
+	    </action>
+	    
+	    <action path="/zxdkTqhk" 
+	    		type="com.zfsoft.xgxt.zxdk.tqhk.TqhkAction"
+	    		parameter="method"
+	    		name="zxdkTqhkForm"
+	    		scope="request">
+			<forward name="hksq" path="/xsgzgl/zxdk/tqhk/hksq.jsp"/>
+			<forward name="xgsq" path="/xsgzgl/zxdk/tqhk/xgsq.jsp"/>
+			<forward name="hksqList" path="/xsgzgl/zxdk/tqhk/hksqList.jsp"/>
+			<forward name="hkshList" path="/xsgzgl/zxdk/tqhk/hkshList.jsp"/>
+			<forward name="hksh" path="/xsgzgl/zxdk/tqhk/hksh.jsp"/>
+			<forward name="viewHksq" path="/xsgzgl/zxdk/tqhk/viewHksq.jsp"/>
+	    </action>
+	    
+	    <action path="/zxdkHkjg" 
+	    		type="com.zfsoft.xgxt.zxdk.tqhk.HkjgAction"
+	    		parameter="method"
+	    		name="zxdkHkjgForm"
+	    		scope="request">
+			<forward name="hkjgList" path="/xsgzgl/zxdk/tqhk/hkjgList.jsp"/>
+			<forward name="addTqhk" path="/xsgzgl/zxdk/tqhk/addTqhk.jsp"/>
+			<forward name="editTqhk" path="/xsgzgl/zxdk/tqhk/editTqhk.jsp"/>
+			<forward name="viewTqhk" path="/xsgzgl/zxdk/tqhk/viewTqhk.jsp"/>
+	    </action>
+	    
+	    <!-- 浙江大学校内无息贷款 -->
+	     <!-- 参数设置 -->
+	     <action path="/zxdk_xnwxdk_cssz" forward="/xnwxdk_cssz.do?method=cssz"/> 
+	     <action path="/xnwxdk_cssz" type="com.zfsoft.xgxt.zxdk.xnwxdk.cssz.XnwxdkCsszAction"
+	      parameter="method" name="XnwxdkCsszModel" scope="request">
+	     	<forward name="cssz" path="/xsgzgl/zxdk/xnwxdk/cssz/cssz.jsp"/>
+	     </action>
+	     
+	      <!-- 申请 -->
+	     <action path="/zxdk_xnwxdk_sq" forward="/xnwxdk_sq.do?method=getXnwxdksqCx"/> 
+	     <action path="/xnwxdk_sq" type="com.zfsoft.xgxt.zxdk.xnwxdk.sq.XnwxdkSqAction" 
+	      parameter="method" name="XnwxdkSqModel" scope="request">
+	       <forward name="cx" path="/xsgzgl/zxdk/xnwxdk/sq/xnwxdksqcx.jsp"/>
+	       <forward name="add" path="/xsgzgl/zxdk/xnwxdk/sq/addxnwxdk.jsp"/>
+	       <forward name="update" path="/xsgzgl/zxdk/xnwxdk/sq/updatexnwxdk.jsp"/>
+	       <forward name="view" path="/xsgzgl/zxdk/xnwxdk/sq/xnwxdksqview.jsp"/>
+	     </action>
+	     
+	      <!-- 审核 -->
+	      
+	     <action path="/zxdk_xnwxdk_sh" forward="/xnwxdk_sh.do?method=getXnwxdkshCx"/> 
+	     <action path="/xnwxdk_sh" type="com.zfsoft.xgxt.zxdk.xnwxdk.sh.XnwxdkShAction" parameter="method" name="XnwxdkShModel" scope="request">
+	       <forward name="cx" path="/xsgzgl/zxdk/xnwxdk/sh/xnwxdkshcx.jsp"/>
+	       <forward name="dgsh" path="/xsgzgl/zxdk/xnwxdk/sh/dgsh.jsp"/>
+	       <forward name="plsh" path="/xsgzgl/zxdk/xnwxdk/sh/plsh.jsp"/>
+	       <forward name="view" path="/xsgzgl/zxdk/xnwxdk/sh/xnwxdkshview.jsp"/>
+	     </action>
+	     
+	      <!-- 结果 -->
+	     <action path="/zxdk_xnwxdk_jg" forward="/xnwxdk_jg.do?method=getXnwxdkjgCx"/> 
+	     <action path="/xnwxdk_jg" type="com.zfsoft.xgxt.zxdk.xnwxdk.jg.XnwxdkJgAction" parameter="method" name="XnwxdkJgModel" scope="request">
+	     	<forward name="cx" path="/xsgzgl/zxdk/xnwxdk/jg/xnwxdkjgcx.jsp"/>
+	       <forward name="add" path="/xsgzgl/zxdk/xnwxdk/jg/addxnwxdkjg.jsp"/>
+	       <forward name="update" path="/xsgzgl/zxdk/xnwxdk/jg/updatexnwxdkjg.jsp"/>
+	       <forward name="view" path="/xsgzgl/zxdk/xnwxdk/jg/xnwxdkjgview.jsp"/>
+	     </action>
+	      <!-- 浙江大学校内无息借款减免 -->
+	     <!-- 参数设置 -->
+	     <action path="/zxdk_xnwxdkjm_cssz" forward="/xnwxdkjm_cssz.do?method=cssz"/> 
+	     <action path="/xnwxdkjm_cssz" type="com.zfsoft.xgxt.zxdk.xnwxdkjm.cssz.XnwxdkjmCsszAction"
+	      parameter="method" name="XnwxdkjmCsszModel" scope="request">
+	     	<forward name="cssz" path="/xsgzgl/zxdk/xnwxdkjm/cssz/cssz.jsp"/>
+	     </action>
+	     
+	      <!-- 申请 -->
+	     <action path="/zxdk_xnwxdkjm_sq" forward="/xnwxdkjm_sq.do?method=getXnwxdksqCx"/> 
+	     <action path="/xnwxdkjm_sq" type="com.zfsoft.xgxt.zxdk.xnwxdkjm.sq.XnwxdkjmsqAction" 
+	      parameter="method" name="XnwxdkjmsqModel" scope="request">
+	       <forward name="cx" path="/xsgzgl/zxdk/xnwxdkjm/sq/xnwxdksqcx.jsp"/>
+	       <forward name="add" path="/xsgzgl/zxdk/xnwxdkjm/sq/addxnwxdk.jsp"/>
+	       <forward name="update" path="/xsgzgl/zxdk/xnwxdkjm/sq/updatexnwxdk.jsp"/>
+	       <forward name="view" path="/xsgzgl/zxdk/xnwxdkjm/sq/xnwxdksqview.jsp"/>
+	     </action>
+	     
+	      <!-- 审核 -->
+	      
+	     <action path="/zxdk_xnwxdkjm_sh" forward="/xnwxdkjm_sh.do?method=getXnwxdkshCx"/> 
+	     <action path="/xnwxdkjm_sh" type="com.zfsoft.xgxt.zxdk.xnwxdkjm.sh.XnwxdkjmshAction" parameter="method" name="XnwxdkjmshModel" scope="request">
+	       <forward name="cx" path="/xsgzgl/zxdk/xnwxdkjm/sh/xnwxdkshcx.jsp"/>
+	       <forward name="dgsh" path="/xsgzgl/zxdk/xnwxdkjm/sh/dgsh.jsp"/>
+	       <forward name="plsh" path="/xsgzgl/zxdk/xnwxdkjm/sh/plsh.jsp"/>
+	       <forward name="view" path="/xsgzgl/zxdk/xnwxdkjm/sh/xnwxdkshview.jsp"/>
+	     </action>
+	     
+	      <!-- 结果 -->
+	     <action path="/zxdk_xnwxdkjm_jg" forward="/xnwxdkjm_jg.do?method=getXnwxdkjgCx"/> 
+	     <action path="/xnwxdkjm_jg" type="com.zfsoft.xgxt.zxdk.xnwxdkjm.jg.XnwxdkjmJgAction" parameter="method" name="XnwxdkjmJgModel" scope="request">
+	     	<forward name="cx" path="/xsgzgl/zxdk/xnwxdkjm/jg/xnwxdkjgcx.jsp"/>
+	       <forward name="add" path="/xsgzgl/zxdk/xnwxdkjm/jg/addxnwxdkjg.jsp"/>
+	       <forward name="update" path="/xsgzgl/zxdk/xnwxdkjm/jg/updatexnwxdkjg.jsp"/>
+	       <forward name="view" path="/xsgzgl/zxdk/xnwxdkjm/jg/xnwxdkjgview.jsp"/>
+	     </action>
+	     
+	     <!-- 浙大个性化 ！校园地贷款还款维护 -->
+		 <action path="/zxdk_xyddk_hkwh" forward="/xyddk_hk.do?method=getXyddkhkwh"/> 
+	     <action name="xyddkhkwhForm" 
+				parameter="method" 
+				path="/xyddk_hk"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.xyddk.xyddkhkwh.XyddkhkwhAction">
+			<forward name="xyddkHkwhList" path="/xsgzgl/zxdk/xyddk/xyddkhkwh/listHkwh.jsp" /> 		<!-- 查询页面  -->
+		    <forward name="xyddkHkwhAdd" path="/xsgzgl/zxdk/xyddk/xyddkhkwh/addHkwh.jsp" />			<!-- 增加页面  -->
+			<forward name="xyddkHkwhUpdate" path="/xsgzgl/zxdk/xyddk/xyddkhkwh/editHkwh.jsp" />		<!-- 修改页面  -->
+			<forward name="xyddkHkwhView" path="/xsgzgl/zxdk/xyddk/xyddkhkwh/viewHkwh.jsp" />		<!-- 查看页面  -->
+		 </action>
+		 
+	     <!-- 浙大个性化！生源地贷款还款维护 -->
+	     <action path="/zxdk_syddm_hkwh" forward="/syddk_hk.do?method=getSyddkhkwh"/> 
+	     <action name="syddkhkwhForm" 
+				parameter="method" 
+				path="/syddk_hk"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.syddk.hkwh.SyddkhkwhAction">
+			<forward name="listHkwh" path="/xsgzgl/zxdk/syddk/hkwh/listHkwh.jsp" /> 	<!-- 查询页面  -->
+		    <forward name="addHkwh" path="/xsgzgl/zxdk/syddk/hkwh/addHkwh.jsp" />		<!-- 增加页面  -->
+			<forward name="editHkwh" path="/xsgzgl/zxdk/syddk/hkwh/editHkwh.jsp" />		<!-- 修改页面  -->
+			<forward name="viewHkwh" path="/xsgzgl/zxdk/syddk/hkwh/viewHkwh.jsp" />		<!-- 查看页面  -->
+		 </action>
+		 
+		 <!-- 华师大贷款额度设置 -->
+		 <action path="/zxdk_gjdk_jesx" forward="/gjdk_jesx.do?method=getJesxCx"/>
+		 <action path="/gjdk_jesx" parameter="method" name="JesxForm"
+		 	scope="request" type="com.zfsoft.xgxt.zxdk.xyddk.jesx.JesxAction" >
+		 	<forward name="cx" path="/xsgzgl/zxdk/xyddk/jesx/jesxcx.jsp"/>
+		 	<forward name="plwh" path="/xsgzgl/zxdk/xyddk/jesx/plwhdkjesx.jsp"/>
+		 	<forward name="ck" path="/xsgzgl/zxdk/xyddk/jesx/jesxck.jsp"/>
+		 </action>
+		 
+		 <!-- 续贷申请 -->
+		 <action path="/zxdk_gjdk_xdsqnew" forward="/gjdk_xdsqnew.do?method=xdCsh"/>
+		 <action path="/zxdk_gjdk_hsdfd" forward="/gjdk_xdsqnew.do?method=fdCx"/>
+		 <action path="/gjdk_xdsqnew" parameter="method" name="HsdxdForm"
+			scope="request" type="com.zfsoft.xgxt.zxdk.xyddk.hsdxd.HsdxdAction">
+		 	<forward name="xdcsh" path="/xsgzgl/zxdk/xyddk/xdsq/xdsq.jsp"/>
+		 	<forward name="hsdfd" path="/xsgzgl/zxdk/xyddk/xdsq/hsdfdcx.jsp"/>
+		 	<forward name="fdwh" path="/xsgzgl/zxdk/xyddk/xdsq/fdwh.jsp"/>
+		 	<forward name="fdck" path="/xsgzgl/zxdk/xyddk/xdsq/fdck.jsp"/>
+		 </action>
+		 
+		 <!-- 基层就业_浙大个性化！ -->
+		 <action path="/jcjy_bcdc" 
+	    		type="com.zfsoft.xgxt.zxdk.dkbc.jcjy.JcjyAction"
+	    		parameter="method"
+	    		name="jcjyForm"
+	    		scope="request">
+			<forward name="bcdcList" path="/xsgzgl/zxdk/dkbc/jcjy/jcjyList.jsp"/>
+			<forward name="jcjyAdd" path="/xsgzgl/zxdk/dkbc/jcjy/jcjyAdd.jsp"/>
+			<forward name="jcjyUpdate" path="/xsgzgl/zxdk/dkbc/jcjy/jcjyUpdate.jsp"/>
+			<forward name="jcjyView" path="/xsgzgl/zxdk/dkbc/jcjy/jcjyView.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

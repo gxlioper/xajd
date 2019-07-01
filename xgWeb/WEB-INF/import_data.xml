@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="commanForm" type="xgxt.form.CommanForm"/>  
+	</form-beans>
+
+	<action-mappings>
+	<!--数据导入-->
+     <action 
+    	path="/impAndChkData" 
+    	type="xgxt.sjdrdc.ImportDataAction"
+    	name="commanForm"
+    	parameter="method">
+    	<forward name="checkorimport" path="/sjcz/checkOrImportData.jsp"/><!-- 显示选择数据检测还是数据最终导入的页面 -->
+    	<forward name="dataMatching" path="/sjcz/dataMatching.jsp"/><!-- 显示字段对照的页面 -->
+    	<forward name="showExcelData" path="/about:blank" />  <!-- 对于检测导入数据有问题的数据输出到excel -->
+    	</action>
+    	
+      <action 
+    	path="/configureExportData" 
+    	type="xgxt.sjdrdc.ExportDataAction"
+    	name="commanForm"
+    	parameter="method">
+    	<forward name="choiceExportFields" path="/sjcz/choiceExportFields.jsp"/>
+    	</action>
+	</action-mappings>
+	
+</struts-config>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyCzxxActionForm" type="xgxt.pjpy.czxx.PjpyCzxxActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_czxx_tjkcjb" 	   forward="/czxxPjpyTycj.do?method=tjkcjb"/>    <!-- 体育课成绩查询 -->
+		<action path="/pjpy_czxx_tydlfjfb"     forward="/czxxPjpyTycj.do?method=tydlfjfb"/>  <!-- 体育锻炼，附加分维护 -->
+		<action path="/pjpy_czxx_addTyfjfxx"   forward="/czxxPjpyTycj.do?method=addTyfjfxx"/><!-- 增加体育附加分信息 -->
+		<action path="/pjpy_czxx_tydlcjb"      forward="/czxxPjpyTycj.do?method=tydlcjb"/>   <!-- 体育锻炼成绩信息 -->
+		<action path="/pjpy_czxx_addTydlfxx"   forward="/czxxPjpyTycj.do?method=addTydlfxx"/><!-- 增加体育锻炼成绩信息 -->
+		<action path="/pjpy_czxx_tycjb"        forward="/czxxPjpyTycj.do?method=tycjb"/><!-- 体育成绩查询 -->
+		<action path="/pjpy_czxx_zhszcpwh"     forward="/czxxPjpyTycj.do?method=zhszcpwh"/> <!-- 综合素质测评 -->
+		<action path="/pjpy_czxx_viewZhszcpxx" forward="/czxxPjpyTycj.do?method=viewZhszcpxx"/><!-- 显示综测评信息 --> 
+		
+	    <!-- 实际路径 -->	
+		<action path="/czxxPjpyTycj"
+				type="xgxt.pjpy.czxx.tycj.PjpyTycjAction"
+				name="pjpyCzxxActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 条件设置 -->
+		<forward name="tjkcjb" path="/pjpy/czxx/tycj/tykcjb.jsp" />
+		<forward name="tydlfjfb" path="/pjpy/czxx/tycj/tydlfjfb.jsp"/>
+		<forward name="addTyfjfxx" path="/pjpy/czxx/tycj/addTyfjfxx.jsp"/>
+		<forward name="tydlcjb"  path="/pjpy/czxx/tycj/tydlcjb.jsp"/>
+		<forward name="addTydlfxx" path="/pjpy/czxx/tycj/addTydlfxx.jsp"/>
+		<forward name="tycjb" path="/pjpy/czxx/tycj/tycjb.jsp"/>
+		<forward name="zhszcpwh" path="/pjpy/czxx/zhszcpwh.jsp"/>
+		<forward name="viewZhszcpxx" path="/pjpy/czxx/viewZhszcpxx.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config>

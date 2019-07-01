@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到井冈山大学的配置文件,wjcf_jgsdx.xml    -->
+		<action path="/wjcf_jgsdx_cxcfsqdefault"      forward="/wjcfjgsdxwh.do?method=cxcfSqDefault"></action> <!-- 撤消处分申请页面 -->
+		<action path="/cxcfsqsave"                    forward="/wjcfjgsdxwh.do?method=cxcfSqSave"></action><!-- 撤消处分申请保存 -->
+		<action path="/wjcf_jgsdx_cxcfcxdefault"      forward="/wjcfjgsdxwh.do?method=cxcfCxdefault"></action><!-- 撤消处分查询页面 -->
+		<action path="/cxcfcx"                        forward="/wjcfjgsdxwh.do?method=cxcfCx" ></action><!-- 撤消处分查询 -->
+		<action path="/cxcfprint"                     forward="/wjcfjgsdxwh.do?method=cxcfPrint"></action><!-- 撤消处分打印 -->
+		<action path="/cxcfdel"                       forward="/wjcfjgsdxwh.do?method=cxcfDel"></action><!-- 撤消处分删除 -->
+		<action path="/wjcf_jgsdx_cxcfxxspdefault"    forward="/wjcfjgsdxwh.do?method=cxcfXxspDefault"></action><!-- 撤消处分学校审批默认页面 -->
+		<action path="/cxcfspqry"                     forward="/wjcfjgsdxwh.do?method=cxcfspQry"></action><!-- 撤消处分学校审批查询页面 -->
+		<action path="/cxcfsp"                        forward="/wjcfjgsdxwh.do?method=cxcfSp"></action><!-- 撤消处分学校审批 -->
+		<action path="/cxcfview"                      forward="/wjcfjgsdxwh.do?method=cxcfView"></action><!-- 撤消处分详细信息显示 -->
+		<action path="/cxcfspsave"                    forward="/wjcfjgsdxwh.do?method=cxcfSpSave"></action><!-- 撤消处分审批保存 -->
+		<action path="/cxcfinfo"                      forward="/wjcfjgsdxwh.do?method=cxcfInfo"></action>
+		<action path="/stucxcfview"                   forward="/wjcfjgsdxwh.do?method=stuCxcfView"></action>
+	</action-mappings>
+</struts-config>

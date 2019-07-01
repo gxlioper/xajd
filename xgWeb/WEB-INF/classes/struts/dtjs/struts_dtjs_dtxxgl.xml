@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="shlcpzForm" type="com.zfsoft.xgxt.dtjs.dtxxgl.shlcpz.ShlcpzForm" />
+		<form-bean name="dtxxsqForm" type="com.zfsoft.xgxt.dtjs.dtxxgl.dtxxsq.DtxxsqForm" />
+		<form-bean name="dtxxshForm" type="com.zfsoft.xgxt.dtjs.dtxxgl.dtxxsh.DtxxshForm" />
+		<form-bean name="dtxxjgForm" type="com.zfsoft.xgxt.dtjs.dtxxgl.dtxxjg.DtxxjgForm" />
+		<form-bean name="dtxxTjForm" type="com.zfsoft.xgxt.dtjs.dtxxgl.dtxxTj.DtxxTjForm" />
+		<form-bean name="zjsySxhbForm" type="com.zfsoft.xgxt.dtjs.dtxxgl.zjsysxhb.ZjsySxhbForm" />
+		<form-bean name="dtjsTyzcglTyzcForm" type="com.zfsoft.xgxt.dtjs.tyzcgl.tyzc.TyzcForm"></form-bean>
+	</form-beans>
+	<action-mappings>
+		<!-- 党团信息管理 审批流程配置-->
+		<action path="/shlcpzbase" forward="/shlcpz.do?method=list" />
+		<action path="/shlcpz" name="shlcpzForm" parameter="method"
+			scope="request" type="com.zfsoft.xgxt.dtjs.dtxxgl.shlcpz.ShlcpzAction">
+			
+			<forward name="shlcpzlb" path="/xsgzgl/dtjs/dtxxglnew/shlcpz/shlcpzlb.jsp" />
+			<forward name="shlcpzzj" path="/xsgzgl/dtjs/dtxxglnew/shlcpz/shlcpzzj.jsp" />
+			<forward name="shlcpzxg" path="/xsgzgl/dtjs/dtxxglnew/shlcpz/shlcpzxg.jsp" />
+			<forward name="shlcpzck" path="/xsgzgl/dtjs/dtxxglnew/shlcpz/shlcpzck.jsp" />
+		</action>
+		<!-- 党团信息申请-->
+		<action path="/dtxxsqbase" forward="/dtxxsq.do?method=list" />
+		<action path="/dtxxsq" name="dtxxsqForm" parameter="method"
+			scope="request" type="com.zfsoft.xgxt.dtjs.dtxxgl.dtxxsq.DtxxsqAction">
+			<forward name="dtxxsqlb" path="/xsgzgl/dtjs/dtxxglnew/dtxxsq/dtxxsqlb.jsp" />
+			<forward name="dtxxsqzj" path="/xsgzgl/dtjs/dtxxglnew/dtxxsq/dtxxsqzj.jsp" />
+			<forward name="dtxxsqxg" path="/xsgzgl/dtjs/dtxxglnew/dtxxsq/dtxxsqxg.jsp" />
+			<forward name="dtxxsqck" path="/xsgzgl/dtjs/dtxxglnew/dtxxsq/dtxxsqck.jsp" />
+		</action>
+		<!-- 党团信息审核-->
+		<action path="/dtxxshbase" forward="/dtxxsh.do?method=list" />
+		<action path="/dtxxsh" name="dtxxshForm" parameter="method"
+			scope="request" type="com.zfsoft.xgxt.dtjs.dtxxgl.dtxxsh.DtxxshAction">
+			<forward name="dtxxshlb" path="/xsgzgl/dtjs/dtxxglnew/dtxxsh/dtxxshlb.jsp" />
+			<forward name="dtxxshck" path="/xsgzgl/dtjs/dtxxglnew/dtxxsh/dtxxshck.jsp" />
+			<forward name="dtxxsh" path="/xsgzgl/dtjs/dtxxglnew/dtxxsh/dtxxsh.jsp" />
+			<forward name="dtxxplsh" path="/xsgzgl/dtjs/dtxxglnew/dtxxsh/dtxxPlsh.jsp" />
+		</action>
+		<!-- 党团信息结果-->
+		<action path="/dtxxjgbase" forward="/dtxxjg.do?method=list" />
+		<action path="/dtxxjg" name="dtxxjgForm" parameter="method"
+			scope="request" type="com.zfsoft.xgxt.dtjs.dtxxgl.dtxxjg.DtxxjgAction">
+			<forward name="dtxxjglb" path="/xsgzgl/dtjs/dtxxglnew/dtxxjg/dtxxjglb.jsp" />
+			<forward name="dtxxjgzj" path="/xsgzgl/dtjs/dtxxglnew/dtxxjg/dtxxjgzj.jsp" />
+			<forward name="dtxxjgxg" path="/xsgzgl/dtjs/dtxxglnew/dtxxjg/dtxxjgxg.jsp" />
+			<forward name="dtxxjgck" path="/xsgzgl/dtjs/dtxxglnew/dtxxjg/dtxxjgck.jsp" />
+			<forward name="edit" path="/xsgzgl/dtjs/dtxxglnew/dtxxjg/edit.jsp" />
+			<forward name="view" path="/xsgzgl/dtjs/dtxxglnew/dtxxjg/view.jsp" />
+		</action>
+				<!-- 党团信息结果-->
+		<action path="/zjsy_sxhbList" forward="/zjsy_sxhb.do?method=list" />
+		<action path="/zjsy_sxhb" name="zjsySxhbForm" parameter="method"
+			scope="request" type="com.zfsoft.xgxt.dtjs.dtxxgl.zjsysxhb.ZjsySxhbAction">
+			<forward name="sxhbjg" path="/xsgzgl/dtjs/dtxxglnew/zjsysxhb/sxhbjg.jsp" />
+			<forward name="addSxhb" path="/xsgzgl/dtjs/dtxxglnew/zjsysxhb/addSxhb.jsp" />
+			<forward name="modSxhb" path="/xsgzgl/dtjs/dtxxglnew/zjsysxhb/modSxhb.jsp" />
+		</action>
+		
+		<!-- 团员注册 begin -->
+		<action path="/dtjs_tyzcgl"  forward="/dtjs_tyzc.do?method=tyzcManage"></action>
+		<action path="/dtjs_tyzc" 
+				scope="request"
+				type="com.zfsoft.xgxt.dtjs.tyzcgl.tyzc.TyzcAction"
+				name="dtjsTyzcglTyzcForm"
+				parameter="method">
+				<forward name="tyzcManage" path="/xsgzgl/dtjs/tyzcgl/tyzc/tyzcManage.jsp"></forward>		
+				<forward name="tyzcDgzc" path="/xsgzgl/dtjs/tyzcgl/tyzc/tyzcDgzc.jsp"></forward>
+				<forward name="tyzcPlzc" path="/xsgzgl/dtjs/tyzcgl/tyzc/tyzcPlzc.jsp"></forward>
+				<forward name="tyzcCancel" path="/xsgzgl/dtjs/tyzcgl/tyzc/tyzcCancel.jsp"></forward>
+				<forward name="tyzcView" path="/xsgzgl/dtjs/tyzcgl/tyzc/tyzcView.jsp"></forward>
+		</action>
+		<!-- 团员注册 end -->
+		
+		<!-- 党团信息统计-->
+		<action path="/dtxxTjbase" forward="/dtxxTj.do?method=list" />
+		<action path="/dtxxTj" name="dtxxTjForm" parameter="method"
+			scope="request" type="com.zfsoft.xgxt.dtjs.dtxxgl.dtxxTj.DtxxTjAction">
+			<forward name="dtxxTjManage" path="/xsgzgl/dtjs/dtxxglnew/dtxxTj/dtxxTjManage.jsp" />
+		</action>
+		<!-- 党团信息统计-->
+		
+	</action-mappings>
+</struts-config>

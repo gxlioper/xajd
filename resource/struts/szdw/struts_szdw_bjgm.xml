@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		 <form-bean name="bjgmBzrkhForm" type="xgxt.szdw.bjgm.bzrkh.BjgmBzrkhForm" />				
+	</form-beans>
+
+	<global-forwards />
+	
+	<action-mappings>
+     <!-- <<<<<<<<<<<<<<<<<<思政队伍【班主任考核】>>>>>>>>>>>>>>>>>> -->		
+	<action path="/bjgm_fdykh_bzrkh" forward="/bjgm_fdykh.do?method=bzrkhManage"/>
+	<action path="/bjgm_fdykh_bzrkhAdd" forward="/bjgm_fdykh.do?method=bzrkhAdd"/>
+	<action path="/bjgm_fdykh_bzrkhSave" forward="/bjgm_fdykh.do?method=bzrkhSave"/>
+	<action path="/bjgm_fdykh_bzrkhEdit" forward="/bjgm_fdykh.do?method=bzrkhEdit"/>
+	<action path="/bjgm_fdykh_bzrkhUpdate" forward="/bjgm_fdykh.do?method=bzrkhUpdate"/>
+	<action path="/bjgm_fdykh_bzrkhDelete" forward="/bjgm_fdykh.do?method=bzrkhDelete"/>
+	<action path="/bjgm_fdykh_bzrkhView" forward="/bjgm_fdykh.do?method=bzrkhView"/>
+    <action 
+    	path="/bjgm_fdykh" 
+    	name="bjgmBzrkhForm"
+    	type="xgxt.szdw.bjgm.bzrkh.BjgmBzrkhAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="manage" path="/szdw/bjgm/bzrkh/bzrkhManage.jsp"/>
+    	<forward name="add" path="/szdw/bjgm/bzrkh/bzrkhAdd.jsp"/>
+    	<forward name="update" path="/szdw/bjgm/bzrkh/bzrkhUpdate.jsp"/>
+    	<forward name="view" path="/szdw/bjgm/bzrkh/bzrkhView.jsp"/>
+    	<forward name="delete" path="/bjgm_fdykh_bzrkh.do"></forward>
+    </action>	
+    
+	</action-mappings>
+  <message-resources parameter="xgxt.base.ApplicationResources" /> 
+</struts-config>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <!--表单配置-->
+	<form-beans>
+	    <!--参数设置-->
+		<form-bean name="CsszhjxfForm" type="com.zfsoft.xgxt.xszz.hjxf.cssz.CsszForm"/>
+		<!--申请-->
+		<form-bean name="HjxfSqForm" type="com.zfsoft.xgxt.xszz.hjxf.sq.HjxfSqForm"/>
+		<!--审核-->
+		<form-bean name="HjxfShForm" type="com.zfsoft.xgxt.xszz.hjxf.sh.HjxfShForm"/>
+		<!--结果-->
+		<form-bean name="HjxfJgForm" type="com.zfsoft.xgxt.xszz.hjxf.jg.HjxfJgForm"/>
+	</form-beans>
+
+	<!--path配置-->
+	<action-mappings>
+		<!--参数设置-->
+		<action path="/xszz_hjxf_cssz" forward="/hjxf_cssz.do?method=getCsszCx"/> 
+		<action path="/hjxf_cssz" 
+	    	type="com.zfsoft.xgxt.xszz.hjxf.cssz.CsszAction"
+	    	parameter="method"
+	    	name="CsszhjxfForm"
+	    	scope="request">
+			<forward name="cssz" path="/xsgzgl/xszz/hjxf/cssz/cssz.jsp"/>
+		</action>
+		
+		<!--申请-->
+		<action path="/xszz_hjxf_sq" forward="/hjxf_sq.do?method=getSqCx"/> 
+		<action path="/hjxf_sq" 
+	    	type="com.zfsoft.xgxt.xszz.hjxf.sq.HjxfSqAction"
+	    	parameter="method"
+	    	name="HjxfSqForm"
+	    	scope="request">
+			<forward name="cx" path="/xsgzgl/xszz/hjxf/sq/hjxfcx.jsp"/>
+			<forward name="add" path="/xsgzgl/xszz/hjxf/sq/addhjxfsq.jsp"/>
+			<forward name="update" path="/xsgzgl/xszz/hjxf/sq/updatehjxfsq.jsp"/>
+			<forward name="view" path="/xsgzgl/xszz/hjxf/sq/hjxfsqck.jsp"/>
+		</action>
+		
+		<!--审核-->
+		<action path="/xszz_hjxf_sh" forward="/hjxf_sh.do?method=getShCx"/> 
+		<action path="/hjxf_sh" 
+	    	type="com.zfsoft.xgxt.xszz.hjxf.sh.HjxfShAction"
+	    	parameter="method"
+	    	name="HjxfShForm"
+	    	scope="request">
+			<forward name="cx" path="/xsgzgl/xszz/hjxf/sh/hjxfshcx.jsp"/>
+			<forward name="dgsh" path="/xsgzgl/xszz/hjxf/sh/dgsh.jsp"/>
+			<forward name="plsh" path="/xsgzgl/xszz/hjxf/sh/plsh.jsp"/>
+			<forward name="view" path="/xsgzgl/xszz/hjxf/sh/hjxfck.jsp"/>
+		</action>
+		
+		<!--结果-->
+		<action path="/xszz_hjxf_jg" forward="/hjxf_jg.do?method=getJgCx"/> 
+		<action path="/hjxf_jg" 
+	    	type="com.zfsoft.xgxt.xszz.hjxf.jg.HjxfJgAction"
+	    	parameter="method"
+	    	name="HjxfJgForm"
+	    	scope="request">
+			<forward name="cx" path="/xsgzgl/xszz/hjxf/jg/hjxfjgcx.jsp"/>
+			<forward name="add" path="/xsgzgl/xszz/hjxf/jg/addhjxfjg.jsp"/>
+			<forward name="update" path="/xsgzgl/xszz/hjxf/jg/updatehjxfjg.jsp"/>
+			<forward name="view" path="/xsgzgl/xszz/hjxf/jg/hjxfjgck.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzYnysActionForm" type="xgxt.xszz.ynys.XszzYnysActionForm">
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+		<action name="xszzYnysActionForm" parameter="method" path="/xszz_ynys"
+				scope="request"	type="xgxt.xszz.ynys.XszzYnysAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- 云南艺术学院 "学生资助"-"国家励志奖学金"-->
+			<forward name="data_gjlzjxj" path="/xszz/ynys/data_gjlzjxj.jsp" />
+			<forward name="gjlzjxj_queryOne" path="/xszz/ynys/gjlzjxj_queryOne.jsp" />	
+			<!-- 云南艺术学院 "学生资助"-"奖助学金申请审核"-->
+			<forward name="jzxjsq" path="/xszz/ynys/jzxjsq.jsp" />
+			<forward name="jzxjshOne" path="/xszz/ynys/jzxjshOne.jsp" />
+			<forward name="jzxjsh" path="/xszz/ynys/jzxjsh.jsp" />
+			<forward name="jzxjprint" path="/xszz/ynys/jzxjprint.jsp"/>
+			<!-- 云南艺术学院 "学生资助"-"省政府励志奖学金"-->
+			<forward name="data_szflzjxj" path="/xszz/ynys/data_szflzjxj.jsp" />
+			<forward name="szflzjxj_queryOne" path="/xszz/ynys/szflzjxj_queryOne.jsp" />
+			<!-- 云南艺术学院 "学生资助"-"数据导出"-->
+			<forward name="common_exp" path="/about:blank" />
+			<!-- 云南艺术学院 "学生资助"-"学费缓缴" -->
+			<forward name="xfhjsq" path="/xszz/ynys/xfhjsq.jsp" />
+			<forward name="xfhjsqSave" path="/xszz/ynys/xfhjsq.jsp" />
+			<forward name="xfhjsqb" path="/xszz/ynys/xfhjsqb.jsp" />
+			<forward name="xfhjsh" path="/xszz/ynys/xfhjsh.jsp" />
+			<forward name="xfhjshOne" path="/xszz/ynys/xfhjshOne.jsp" />
+			<forward name="xfhjshSave" path="/xszz/ynys/xfhjshOne.jsp" />
+			<forward name="xfhjExp" path="/about:blank" />
+		</action>	
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

@@ -1,0 +1,1461 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+		<form-bean name="wjscForm" type="xgxt.wjsc.WjscForm" />
+		<form-bean name="jyglForm" type="xgxt.base.form.JyglForm" />
+		<form-bean name="bdszForm" type="xgxt.bdsz.BdszForm"/>
+		<form-bean name="AssociationForm"
+			type="xgxt.xljk.xlxh.Form.AssociationForm" />
+		<form-bean name="xnxqwhForm" type="xgxt.action.zjly.XnxqwhForm"/>
+	</form-beans>
+	
+	<!-- 自动异常处理，所说这个不实用，改用手动的了
+	
+	<global-exceptions>
+	  	<exception 
+	  		key="errors.detail" 
+	  		type="common.exception.SystemException"
+	  		scope="request"
+	  		handler="common.exception.SystemExceptionHandler"
+	  		path="/message/prompt.jsp"
+	  		></exception>
+	  </global-exceptions>
+	-->
+	
+	<global-forwards >
+		<forward name="error" path="/message/prompt.jsp"></forward>
+	</global-forwards>
+	<action-mappings>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 测试 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="testPrint"
+			path="/test_print" scope="request"
+			type="xgxt.action.TestPrintAction">
+			<forward name="success" path="/testPrint.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，发送错误信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="errMsg" path="/errMsg"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="success" path="/message/error.jsp"/>
+		</action>
+		
+		<action path="/prompt" name="commanForm" parameter="errMsg"
+				scope="request" type="xgxt.action.CommanAction">
+			<forward name="success" path="/message/prompt.jsp"/>
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，显示各个模块的新闻 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="newsContent"
+			path="/newsContent" scope="request" type="xgxt.action.NewsAction">
+			<forward name="success" path="/newsContent.jsp" />
+		</action>
+		<action name="commanForm" parameter="moreNews"
+			path="/moreNews" scope="request" type="xgxt.action.NewsAction">
+			<forward name="success" path="/moreNews.jsp" />
+		</action>
+		<action name="commanForm" parameter="showNews" path="/showNews"
+			scope="request" type="xgxt.action.NewsAction">
+			<forward name="success" path="/showNews.jsp" />
+			<forward name="newsQuery" path="/comm/news/newsQuery.jsp" />
+		</action>
+		<action name="commanForm" parameter="saveNews" path="/saveNews"
+			scope="request" type="xgxt.action.NewsAction">
+			<forward name="success" path="/newsPub.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，各个模块的新闻发布 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="newsPub" path="/newsPub"
+			scope="request" type="xgxt.action.NewsAction">
+			<forward name="success" path="/newsPub.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 北京联合，新闻维护 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="newsManage"
+			path="/newsManage" scope="request" type="xgxt.action.NewsAction">
+			<forward name="success" path="/bjlh/newsManage.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 北京联合，新闻维护修改页面>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="newsManageUpdate"
+			path="/newsManageUpdate" scope="request"
+			type="xgxt.action.NewsAction">
+			<forward name="success" path="/bjlh/newsManageUpdate.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 北京联合，新闻维护修改保存>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="saveNewsManage"
+			path="/saveNewsManage" scope="request"
+			type="xgxt.action.NewsAction">
+			<forward name="success" path="/bjlh/newsManageUpdate.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 首页新闻图片显示顺序>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="newsPigManage"
+			path="/newsPigManage" scope="request"
+			type="xgxt.action.NewsAction">
+			<forward name="success" path="/newsPigManage.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 首页新闻图片显示顺序维护>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="newsInfo"
+			path="/newsInfo" scope="request"
+			type="xgxt.action.NewsAction">
+			<forward name="newsInfo" path="/newsInfo.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，用户登陆(统一身份认证登陆) >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="tyrzLogin" path="/tyrzLogin"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+			<forward name="stuLogin" path="/stuPage.jsp" redirect="true"/>
+			<forward name="teaLogin" path="/teaPage.jsp" redirect="true"/>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，用户登陆(本系统登陆) >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="userLogin" path="/chkLogin"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+			<forward name="success" path="/default.jsp" redirect="true"/>
+			<forward name="stuLogin" path="/stuPage.jsp" redirect="true"/>
+			<forward name="teaLogin" path="/teaPage.jsp" redirect="true"/>
+		</action>
+		
+		<action name="commanForm" parameter="getPublicKey" path="/getPublicKey"
+			scope="request" type="xgxt.action.CommanAction">
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，用户登陆(本系统登陆,用于模式是login.do的情况) >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="userLogin" path="/login"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+			<forward name="success" path="/default.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，用户登陆(共享身份验证) >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="chkLoginDbCenter"
+			path="/chkLoginDbCenter" scope="request"
+			type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+			<forward name="success" path="/default.jsp" />
+			<forward name="sj" path="/sjLogin.jsp" />
+			<forward name="gzdx_err" path="/gzdx_errmsg.jsp" />
+			<forward name="returnMain_err" path="/returnMain_err.jsp" redirect="true"/>
+			<forward name="stuLogin" path="/stuPage.jsp" redirect="true"/>
+			<forward name="teaLogin" path="/teaPage.jsp" redirect="true"/>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 厦门理工，用户登陆(共享身份验证) >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="chkXmlgLoginDbCenter"
+			path="/chkXmlgLoginDbCenter" scope="request"
+			type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+			<forward name="success" path="/default.jsp" />
+			<forward name="stuLogin" path="/stuPage.jsp" redirect="true"/>
+			<forward name="teaLogin" path="/teaPage.jsp" redirect="true"/>
+		</action>
+        <!-- 浙江商业,用户登陆(统一身份验证) -->
+		<action name="commanForm" parameter="chkZjsyLoginDbCenter"
+			path="/chkZjsyLoginDbCenter" scope="request"
+			type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+			<forward name="success" path="/default.jsp" />
+			<forward name="stuLogin" path="/stuPage.jsp" redirect="true"/>
+			<forward name="teaLogin" path="/teaPage.jsp" redirect="true"/>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块,辅导员用户类型切换 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="fdyChange" path="/fdyUserChange"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+			<forward name="success" path="/main1.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块,用户类型切换 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="userTypeChange" path="/userTypeChange"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+			<forward name="success" path="/main1.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 用户类型菜单切换 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="userMenuChange" path="/userMenuChange"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+			<forward name="success" path="/main1.jsp" />
+		</action>
+		
+		<action name="commanForm" parameter="chkZjsytjDl"
+			path="/chkZjsytjdl" scope="request"
+			type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+			<forward name="success" path="/zjsy.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，用户退出 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="userLogout"
+			path="/chkLogout" scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/login.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，更改密码 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="chgPass" path="/chgPass"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/pass_edit.jsp" />
+		</action>
+		<action name="commanForm" parameter="passEdit" path="/pass_edit"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="success" path="/xtwh/pass_edit.jsp" />
+		</action>
+		<action name="commanForm" parameter="xgMmQz" path="/xgMmQz"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xgMmQz.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，菜单初始化 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="initMenu" path="/initMenu"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success_top" path="/top.jsp" />
+			<forward name="success_left" path="/left.jsp" />
+			<forward name="success_top_list" path="/menuConter.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块结束 >>>>>>>>>>>>>>>>>>>>-->
+
+		<!--<<<<<<<<<<<<<<<<<<<< 系统维护子系统－权限维护－组维护 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="INITGROUPPOWER"
+			path="/group_man" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/group_man.jsp" />
+		</action>
+		<action path="/saveGroupPower" parameter="SAVEGROUPPOWER"
+			name="commanForm" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/group_man.do" />
+		</action>
+		<action path="/addGroup" parameter="ADDGROUP" name="commanForm"
+			scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/group_man.do" />
+		</action>
+		<action path="/modiGroup" parameter="MODIGROUP"
+			name="commanForm" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/group_man.do" />
+		</action>
+		<action path="/delGroup" parameter="DELGROUP" name="commanForm"
+			scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/group_man.do" />
+		</action>
+		<action path="/szGroup" parameter="SZGROUP"
+			name="commanForm" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/group_man.do" />
+		</action>
+		<!--导出组权限-->
+		<action path="/expGroup" parameter="EXPGROUP"
+			name="commanForm" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/group_man.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 系统维护子系统－权限维护－用户维护 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="INITUSERPAGE"
+			path="/user_man" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/user_man.jsp" />
+		</action>
+		<action name="commanForm" parameter="SAVEUSERPOWER"
+			path="/saveUserPower" scope="request"
+			type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/user_man.do" />
+		</action>
+		<action name="commanForm" parameter="ADDUSER" path="/addUser"
+			scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/user_man.do" />
+		</action>
+		<action name="commanForm" parameter="MODIUSER" path="/modiUser"
+			scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/user_man.do" />
+		</action>
+		<action name="commanForm" parameter="DELUSER" path="/delUser"
+			scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/user_man.do" />
+		</action>
+		<action name="commanForm" parameter="VIEWUSERPASSWORD"
+			path="/viewUserPassword" scope="request"
+			type="xgxt.action.SysManAction">
+			<forward name="success" path="/user_man.do" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<action name="commanForm" parameter="userorder"
+			path="/user_order" scope="request"
+			type="xgxt.action.SysManAction">
+			<forward name="success" path="/xtwh/user_order.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<action name="commanForm" parameter="EXPUSER"
+			path="/expUser" scope="request"
+			type="xgxt.action.SysManAction">
+			<forward name="success" path="user_man.do" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 系统维护子系统－代码维护 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="CODEINIT" path="/code_man"
+			scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/code_man.jsp" />
+		</action>
+		<action name="commanForm" parameter="CODECONF" path="/codeConf"
+			scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 系统维护子系统-思想教育-班级党员关系 >>>>>>>>>>>>>>>>>>>>-->
+		<action path="/bjdydygxb" parameter="bjdydygxb"
+			name="commanForm" type="xgxt.action.SysManAction" scope="request">
+			<forward name="success" path="/xtwh/bjdydygxb.jsp"></forward>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 系统维护子系统－操作日志 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="LOGSEARCH"
+			path="/log_search" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/log_search.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 系统维护子系统－操作日志-详细查看 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="logViewinfo"
+			path="/logViewinfo" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/log_viewinfo.jsp" />
+		</action>
+		
+		
+		<!--<<<<<<<<<<<<<<<<<<<< 系统维护子系统－数据备份 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="dataBackup"
+			path="/data_backup" scope="request"
+			type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/data_backup.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 系统维护子系统－系统初始化 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="systemInit"
+			path="/system_init" scope="request"
+			type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/system_init.jsp" />
+			<forward name="successBjlh"
+				path="/xtwh/system_init_bjlh.jsp" />
+		</action>
+		<action name="commanForm" parameter="baseDataInit"
+			path="/base_data_init" scope="request"
+			type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/base_data_init.jsp" />
+		</action>
+		
+		<action name="commanForm" parameter="baseDataExp"
+			path="/base_data_exp" scope="request"
+			type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/base_data_exp.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，学生密码初始化 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="STUPWDINIT"
+			path="/stu_pwd_init" scope="request"
+			type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/stu_pwd_init.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 系统维护子系统结束 >>>>>>>>>>>>>>>>>>>>-->
+
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－数据查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/data_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/data_search.jsp" />
+			<forward name="cqkj" path="/cqkj_xszbb_querry.do" />
+		</action>
+		
+		<action name="commanForm" parameter="PRINT"
+			path="/data_print" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/pjpy/xysf/rychprint.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－学生信息查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuInfo" path="/stu_info"
+			scope="request" type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/stu_info.jsp" />
+		</action>
+		<action name="commanForm" parameter="familyInfo"
+			path="/modi_stu_famil" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/stu_family_query.jsp" />
+			<forward name="stufamily_bjlydx"
+				path="/shgc/stu_info/bjlydx/stu_family_bjlydx.jsp" />
+			<forward name="stufamily"
+				path="/sjcz/stu_family_modify.jsp" />
+			<forward name="stu_hzzy_family"
+				path="/shgc/stu_info/hzzy/stu_hzzy_family_modify.jsp" />
+			<forward name="stu_whlgdx_family"
+				path="/shgc/stu_info/whlgdx/stu_family_whlgdx.jsp" />
+			<forward name="stu_zjsyzy_family"
+				path="/shgc/stu_info/zjsyzy/stu_family_zjsyzy.jsp" />
+				
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－查看学生详细信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuInfoXX"
+			path="/stu_info_xx" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/stu_info_xx.jsp" />
+			<forward name="success2" path="/hzjy/xsjbxx_input.jsp" />
+			<forward name="success3" path="/hzjy/hzjy_xssq.jsp" />
+			<forward name="zbdx_xsxx_modi"
+				path="/zbdx/xsxx/modi_stu_info.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－查看学生家庭信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuFamilyDetail"
+			path="/stu_family_detail" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="success" path="/sjcz/stu_family_modify.jsp" />
+		</action>
+		<action name="commanForm" parameter="stuInfoDetails"
+			path="/stu_info_details" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="zjlgstuinfo" path="/xsxx/zjlg/stu_info_xx.jsp" />
+			<forward name="success" path="/sjcz/stu_info_xx.jsp" />
+			<forward name="zgkydxStudetails" path="/xsxx/zgkd/stu_info_xx.jsp" />
+			<forward name="sjxyStuInto" path="/jygl/zgmy/jyxyslqdj_viewmore.jsp" />
+			<forward name="print" path="/xsxx/stu_info_xx_print.jsp" />
+			<forward name="xsxxcx" path="/xsxx/comm/jbxx/xsxxcx.jsp" />
+			<forward name="xsxxcxcs" path="/xsxx/comm/jbxx/xsxxcxcs.jsp" />
+			<forward name="xsxxcxPrint" path="/xsxx/comm/jbxx/stu_info_xx_print.jsp" />
+			<forward name="hzsfxy" path="/sjcz/xxgxh/stu_info_xx_hzsfxy.jsp" />
+			<forward name="cdtyxy" path="/sjcz/xxgxh/stu_info_xx_cdtyxy.jsp" />
+		</action>
+		<action name="commanForm" parameter="modiStuInfo"
+			path="/modi_stu_info" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/modi_stu_info.jsp" />
+			<forward name="zbdx_xsxx_modi"
+				path="/zbdx/xsxx/modi_stu_info.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－查看详细信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="modiData" path="/modiData"
+			scope="request" type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<action path="/modiData2" name="commanForm" parameter="modiData"
+			type="xgxt.action.DataAction">
+			<forward name="false" path="/errMsg.do"></forward>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－统计分析模块中的数据查询页面初始化>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DATAQUERY"
+			path="/data_query" scope="request"
+			type="xgxt.action.StatisicalAction">
+			<forward name="success" path="/tjfx/data_query.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－统计分析模块中的数据查询>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DODATAQUERY"
+			path="/do_data_query" scope="request"
+			type="xgxt.action.StatisicalAction">
+			<forward name="success" path="/tjfx/queryTable.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－统计初始化>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="STATISICALINIT"
+			path="/statisicalInit" scope="request"
+			type="xgxt.action.StatisicalAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/tjfx/statisical.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－统计>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="STATISICAL"
+			path="/statisical" scope="request"
+			type="xgxt.action.StatisicalAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/tjfx/statisicalTable.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－统计数据后导出>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DATAEXPORT"
+			path="/dataexport" scope="request"
+			type="xgxt.action.StatisicalAction">
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－查询 数据后导出>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DATAEXPORTFORQ"
+			path="/dataexportforq" scope="request"
+			type="xgxt.action.StatisicalAction">
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－分析>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="ANALYSE" path="/analyse"
+			scope="request" type="xgxt.action.StatisicalAction">
+			<forward name="success" path="/tjfx/analyse.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－文件上传>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="uploadFile"
+			path="/uploadFile" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/importData.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－数据导入界面生成>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="importData"
+			path="/importData" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/import_data.jsp" />
+			<forward name="modity" path="/sjcz/import_data_modi.jsp" />
+		</action>
+		<action name="commanForm" parameter="data_import"
+			path="/data_import" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/data_import.jsp" />
+			<forward name="success2" path="/sjcz/data_import2.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－数据导入>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="saveData"
+			path="/saveUpData" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/data_import_result.jsp" />
+		</action>
+		<action name="commanForm" parameter="impDataCommit"
+			path="/import_data_commit" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/data_import_result.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－数据导出>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="expData" path="/expData"
+			scope="request" type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－数据导出2>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="expData2" path="/expData2"
+			scope="request" type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－数据导出>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="exportData"
+			path="/exportData" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/export_data.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 数据操作通用模块－导出导入操作>>>>>>>>>>>>>>>>-->
+		<action path="/expDataStencil" name="commanForm"
+			type="xgxt.action.DataExpAction" parameter="method" scope="request"
+			validate="false">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 参数设置－奖学金参数设置 >>>>>>>>>>>>>>>>>>>>-->
+
+		<action path="/jxjrsdataexp" name="commanForm"
+			type="xgxt.action.SubConfAction" scope="request"
+			parameter="jxjrsDataExp">
+			<forward name="false" path="/errMsg.do"></forward>
+		</action>
+
+		<action name="commanForm" parameter="chgPriseXnInit"
+			path="/chg_prise_xn" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/chg_prise_xn.jsp" />
+		</action>
+		<action name="commanForm" parameter="xySetStuNum"
+			path="/xySetStuNum" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/xy_set_stu_num.jsp" />
+		</action>
+		<action name="commanForm" parameter="viewFpb" path="/viewFpb"
+			scope="request" type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/view_fpb.jsp" />
+		</action>
+		<action name="commanForm" parameter="viewTotStuNum"
+			path="/viewTotStuNum" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/view_stu_num.jsp" />
+		</action>
+		<action name="commanForm" parameter="priseConfRS"
+			path="/prise_conf_rs" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/prise_conf.jsp" />
+		</action>
+		<action name="commanForm" parameter="initBaseData"
+			path="/initBaseData" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/prise_conf_rs.do" />
+		</action>
+		<action name="commanForm" parameter="chgPriseXn"
+			path="/chgPriseXn" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<action name="commanForm" parameter="chgPriseTime"
+			path="/chgPriseTime" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<action name="commanForm" parameter="chgPriseBat"
+			path="/chgPriseBat" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/set_prise_bat.jsp" />
+		</action>
+		<action name="commanForm" parameter="chgPriseOne"
+			path="/chgPriseOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<action name="commanForm" parameter="priseConfOne"
+			path="/prise_conf_one" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="success" path="/sjcz/prise_conf_one.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 参数设置－奖学金条件设置 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="setPriseCond"
+			path="/prise_condition" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/set_prise_condi.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 参数设置－奖学金兼得规定设置 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="setPriseRuls"
+			path="/prise_conf_ruls" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/set_prise_condi.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 审核－荣誉称号审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="xySetBysStuNum"
+			path="/xySetBysStuNum" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/xy_set_bysstu_num.jsp" />
+		</action>
+		<action name="commanForm" parameter="showYxBysFpb"
+			path="/showYxBysFpb" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/showYxBysFpb.jsp" />
+		</action>
+		<action name="commanForm" parameter="creditCheck"
+			path="/credit_check" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/credit_check.jsp" />
+			<forward name="gzdx_credit_check" path="/pjpy/gzdx/gzdx_credit_check.jsp" />
+			<forward name="zbdx_rychsh" path="/pjpy/zbdx/pjpy_zbdx_rychsh.jsp" />
+		</action>
+		<action name="commanForm" parameter="creditAutoCheck"
+			path="/creditAutoCheck" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/credit_check.do" />
+		</action>
+		<action name="commanForm" parameter="creditChkOne"
+			path="/creditChkOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/credit_check_one.jsp" />
+			<forward name="zbdx_rychsh_checkOne"
+				path="/pjpy/zbdx/pjpy_zbdx_rychsh_studetail.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 审核－奖学金审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="priseCheck"
+			path="/prise_check" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/prise_check.jsp" />
+			<forward name="gzdx_prise_check" path="/pjpy/gzdx/gzdx_prise_check.jsp" />
+		</action>
+		<action name="commanForm" parameter="priseAutoCheck"
+			path="/priseAutoCheck" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/prise_check.do" />
+		</action>
+		<action name="commanForm" parameter="priseChkOne"
+			path="/priseChkOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/prise_check_one.jsp" />
+		</action>
+		<action name="commanForm" parameter="nameList" path="/nameList"
+			scope="request" type="xgxt.action.MakePDF">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+		<action name="commanForm" parameter="viewJxjHz"
+			path="/viewJxjHz" scope="request" type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/view_jxjhzb.jsp" />
+		</action>
+		<action name="commanForm" parameter="setJxjHz" path="/setJxjHz"
+			scope="request" type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/viewJxjHz.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 奖学金及荣誉称号证书打印以及学生证、素质拓展证书打印 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="prisePrint"
+			path="/prise_print" scope="request" type="xgxt.action.MakePDF">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/print/prise_print.jsp" />
+		</action>
+		<action name="commanForm" parameter="stuCardPrint"
+			path="/stu_card_print" scope="request" type="xgxt.action.MakePDF">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/print/stu_card_print.jsp" />
+		</action>
+		<action name="commanForm" parameter="autoCardPrint"
+			path="/auto_card_print" scope="request" type="xgxt.action.MakePDF">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/print/auto_print.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<SHENQI加入综合素质测评>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action name="commanForm" parameter="autoaccount"
+			path="/AutoAccount" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/data_search.do?act=zhsz"></forward>
+			<forward name="dyszjfwh" path="/dyszjfwh.do"></forward>
+		</action>
+		<action name="commanForm" parameter="zhszcpblsz"
+			path="/zhszcpblsz" scope="request" type="xgxt.action.DataAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/sjcz/zhszcpblsz.jsp"></forward>
+		</action>
+		<action name="commanForm" parameter="savablsz" path="/savablsz"
+			scope="request" type="xgxt.action.DataAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/zhszcpblsz.do"></forward>
+		</action>
+
+		<action name="commanForm" parameter="requestPage"
+			path="/requestPage" scope="request" type="xgxt.action.DataAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/sjcz/bjjxhjb.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SHENQI公寓管理<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+		<action name="commanForm" parameter="gydykp" path="/gydykp"
+			scope="request" type="xgxt.action.DataAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/sjcz/gydykp.jsp"></forward>
+		</action>
+		<action name="commanForm" parameter="detailData"
+			path="/detailData" scope="request" type="xgxt.action.DataAction">
+			<forward name="false" path="/errMsg.do"></forward>
+		</action>
+		<action name="commanForm" parameter="modiData3"
+			path="/modiData3" scope="request" type="xgxt.action.DataAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/gygl/xsjlcfxx_add.jsp"></forward>
+		</action>
+		<action name="commanForm" parameter="wmqspb" path="/wmqspb"
+			scope="request" type="xgxt.action.DataAction">
+			<forward name="false" path="/errMsg.do"></forward>
+			<forward name="success" path="/sjcz/wmqspb.jsp"></forward>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 奖学金申请－申请以及总表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="priseApply"
+			path="/prise_apply" scope="request" type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/jxjsq.jsp" />
+		</action>
+		<action name="commanForm" parameter="priseApplyAll"
+			path="/prise_result" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/jxjsq_all.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 荣誉称号申请－申请以及总表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="creditApply"
+			path="/credit_apply" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/rychsq.jsp" />
+		</action>
+		<action name="commanForm" parameter="creditApplyAll"
+			path="/credit_result" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/rychsq_all.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 专项奖学金汇总 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="SPECIALPRISE"
+			path="/specialprise" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="success" path="/sjcz/specialprise.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 奖学金评审登记表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jxjpsdjb" path="/jxjpsdjb"
+			scope="request" type="xgxt.action.ApplyAction">
+			<forward name="success" path="/sqb/jxjpsdjb.jsp" />
+			<forward name="success_nbty" path="/pjpy/nbty/jxj/jxjprint.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 专项奖学金汇总表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="XSZXJXJHZB"
+			path="/xszxjxjhzb" scope="request" type="xgxt.action.ApplyAction">
+			<forward name="success" path="/sqb/xszxjxjhzb.jsp" />
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 一般统计分析页面初始化 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DATASTATISICAL"
+			path="/data_statisical" scope="request"
+			type="xgxt.action.StatisicalAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/tjfx/data_statisical.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 对外交流－信息发布 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="commInfoPub"
+			path="/comm_pub" scope="request" type="xgxt.action.InfoPubAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/dwjlxxfb.jsp" />
+		</action>
+		<action name="commanForm" parameter="commInfoSearch"
+			path="/data_search2" scope="request"
+			type="xgxt.action.InfoPubAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/dwjlxx.jsp" />
+			<forward name="gwcx" path="/sjcz/gwcx.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 对外交流－对外交流申请以及总表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="commApply"
+			path="/comm_apply" scope="request" type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/dwjlsq.jsp" />
+		</action>
+		<action name="commanForm" parameter="commApplyAll"
+			path="/comm_result" scope="request" type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/dwjlsq_all.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 对外交流－对外交流奖学金申请以及总表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="commMoneyApply"
+			path="/comm_money_apply" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/dwjljxjsq.jsp" />
+		</action>
+		<action name="commanForm" parameter="commMoneyApplyAll"
+			path="/comm_money_result" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/dwjljxjsq_all.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 心理健康－题库维护 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/test_paper_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/test_paper_search.jsp" />
+		</action>
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/test_question_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/sjcz/test_question_search.jsp" />
+		</action>
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/test_option_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/test_option_search.jsp" />
+		</action>
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/test_paperQuestion_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/sjcz/test_paperQuestion_search.jsp" />
+		</action>
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/stinfo_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/stinfo_search.jsp" />
+		</action>
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/test_online" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/test_online.jsp" />
+		</action>
+		<action name="commanForm" parameter="createTestPaper"
+			path="/create_test_paper" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/test_online_paper.jsp" />
+		</action>
+		<action name="commanForm" parameter="submitTestPaper"
+			path="/submit_testPaper" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/test_result_view.jsp" />
+		</action>
+		<action name="commanForm" parameter="xlcscj" path="/xlcscj"
+			scope="request" type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/xlcscjcx.jsp" />
+		</action>
+		<action name="commanForm" parameter="xlcsstfx" path="/xlcsstfx"
+			scope="request" type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/test_result_view.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 公寓管理－信息维护 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/ssxx_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/ssxx_search.jsp" />
+		</action>
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/dorm_Using_Search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/dorm_Using_Search.jsp" />
+		</action>
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/daily_note_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/daily_note_search.jsp" />
+		</action>
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/weekly_collect_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/sjcz/weekly_collect_search.jsp" />
+		</action>
+		<action name="commanForm" parameter="xszsxxcheck"
+			path="/xszsxx_check" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/xszsxx_check.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 学生资助－困难生申请以及总表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="neederApply"
+			path="/needer_apply" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/knssqb.jsp" />
+		</action>
+		<action name="commanForm" parameter="neederApplyAll"
+			path="/needer_apply_result" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/knssqb_all.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 学生资助－学校贷学金申请以及总表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="collegeApply"
+			path="/college_money_apply" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/xxzxdksqb.jsp" />
+		</action>
+		<action name="commanForm" parameter="collegeApplyAll"
+			path="/college_money_apply_result" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/xxzxdksqb_all.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 学生资助－结果查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="nationApply"
+			path="/nation_money_apply" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/gjzxdksqb.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 学生资助－国家助学贷款申请以及总表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="assisResult"
+			path="/assis_result" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/assis_result.jsp" />
+		</action>
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/assis_result_t" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/assis_result_t.jsp" />
+		</action>
+		<action name="commanForm" parameter="nationApplyAll"
+			path="/nation_money_apply_result" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/gjzxdksqb_all.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块－申请表保存 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="saveApply"
+			path="/applySave" scope="request" type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 审核－学生资助审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="assisCheck"
+			path="/assis_check" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/assis_check.jsp" />
+		</action>
+		<action name="commanForm" parameter="assisChkOne"
+			path="/assisChkOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/assis_check_one.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 审核－对外交流审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="commCheck"
+			path="/comm_check" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/comm_check.jsp" />
+		</action>
+		<action name="commanForm" parameter="commChkOne"
+			path="/commChkOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/comm_check_one.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 审核－对外交流奖学金审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="commMonCheck"
+			path="/comm_money_check" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/comm_money_check.jsp" />
+		</action>
+		<action name="commanForm" parameter="commMonChkOne"
+			path="/commMonChkOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/sjcz/comm_money_check_one.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 勤工助学－经费管理 >>>>>>>>>>>>>>>>>>>>-->
+		<!--<<<<<<<<<<<<<<<<<<<< 勤工助学－经费管理-经费记录查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/work_outlay_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/work_outlay_search.jsp" />
+		</action>
+		<action 
+		    name="commanForm" 
+			parameter="workerApplyAll"
+			path="/post_stu_result"
+			type="xgxt.action.ApplyAction"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/gwsq_all.jsp" />
+			<forward name="success_teacher"
+				path="/qgzx/zbdx_qgzx/qgzx_sqjgcx.jsp" />
+			<forward name="qgzx_result_print"
+				path="/qgzx/zbdx_qgzx/qgzx_result_print.jsp" />
+		</action>
+		<action 
+		    name="commanForm" 
+			parameter="printsqb"
+			path="/print_sqb"
+			type="xgxt.action.ApplyAction"
+			scope="request">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/gwsq_print.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 审核－岗位审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="postCheck"
+			path="/post_check" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/post_check.jsp" />
+		</action>
+		<action name="commanForm" parameter="postChkOne"
+			path="/postChkOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="qgzx_ynys_gwsh"
+				path="/qgzx/ynys/qgzx_ynys_gwsh.jsp" />
+			<forward name="success" path="/sjcz/post_check_one.jsp" />
+			<forward name="gzdx_gwsh" path="/qgzx/gzdx/gzdx_gwsh.jsp" />
+		</action>
+
+
+		<action name="commanForm" parameter="qgzxLsgwxx"
+			path="/qgzxLsgwxx" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="qgzxLsgwxx" path="/qgzx/zjjs/qgzxLsgwxx.jsp" />
+		</action>
+		
+		<action name="commanForm" parameter="lsgwView"
+			path="/qgzxLsgwView" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="lsgwView" path="/qgzx/zjjs/qgzxLsgwView.jsp" />
+		</action>
+		
+		<action name="commanForm" parameter="postStuChk"
+			path="/post_stu_check" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/post_stu_check.jsp" />
+			<forward name="zgdzdx" path="/qgzx/zgdzdx/zgdzdx_post_stu_check.jsp" />
+			
+		</action>
+		
+		<action name="commanForm" parameter="postStuChkOne"
+			path="/postStuChkOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/post_stu_check_one.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 勤工助学－酬金发放 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="commInfoSearch"
+			path="/work_pay_put" scope="request"
+			type="xgxt.action.InfoPubAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/work_pay_put.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 公寓管理 >>>>>>>>>>>>>>>>>>>>-->
+		<!--<<<<<<<<<<<<<<<<<<<< 辅导员管理 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="fdyxx" path="/fdyxx"
+			scope="request" type="xgxt.action.InfoPubAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/fdyxx.jsp" />
+		</action>
+		<action name="commanForm" parameter="fdyxxOne" path="/fdyxxOne"
+			scope="request" type="xgxt.action.InfoPubAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/fdyxxwh.jsp" />
+			<forward name="fdyxxOne_whlg"
+				path="/fdyxxOne_whlg.do?act=view&amp;type=one" redirect="true" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<< 武汉理工辅导员信息维护 >>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="fdyglForm" parameter="fdyxxOne_whlg"
+			path="/fdyxxOne_whlg" scope="request"
+			type="xgxt.szdw.whlgdx.Whlgdx_InfoPubAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="fdyxxOne_whgl" path="/sjcz/fdyxxwh_whlg.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<< 无锡商职 思政队伍统计 >>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="wxszsjtj" path="/wxsz_sjtj"
+			scope="request" type="xgxt.action.InfoPubAction">
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 日常管理 >>>>>>>>>>>>>>>>>>>>-->
+		<!--<<<<<<<<<<<<<<<<<<<< 补办申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="putAgainApply"
+			path="/putAgain_apply" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/bbsq.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 补办打印 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="printAgainApply"
+			path="/printAgain_apply" scope="request"
+			type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 车次查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/train_time_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/train_time_search.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 汽车车次查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/bus_time_search" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/bus_time_search.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 参数设置－车票预定时间设置 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="ticketConf"
+			path="/ticket_conf" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/ticket_conf.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 车票预订 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="ticketBook"
+			path="/ticket_book" scope="request" type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/ticket_book.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 订票情况查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="ticketBookSearch"
+			path="/ticket_book_search" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/ticket_book_search.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 车票统计查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="ticketBookTotalSearch"
+			path="/ticket_total_search" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/sjcz/ticket_total_search.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 学生个人订票信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuTicketBookSearch"
+			path="/stu_ticket_book_search" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/sqb/stu_ticket_book_search.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 订票情况维护 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="ticketBookEdit"
+			path="/ticket_book_edit" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/ticket_book_edit.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 订票成功提示信息维护 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="method"
+			path="/ticket_book_appsucess" scope="request"
+			type="xgxt.rcgl.TicketAction">
+			<forward name="delCpydInfo" path="/sjcz/stu_ticket_del.jsp" />
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/sjcz/ticket_book_message.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<学生档案管理>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuarchives"
+			path="/stu_archives" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/stu_archives.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 查看学生档案详细信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuhdjxjinfo"
+			path="/stu_archives_info_details" scope="request"
+			type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/sjcz/stu_archives_info_details.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 活动中心申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="playApply"
+			path="/play_apply" scope="request" type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/hdzxsq.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 活动中心审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="playCheck"
+			path="/play_check" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/play_check.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 学费缓交申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="xfhjApply"
+			path="/xfhj_apply" scope="request" type="xgxt.action.ApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sqb/xfhjsq.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 心理健康－心理协会 >>>>>>>>>>>>>>>>>>>>-->
+		<action attribute="AssociationForm" name="AssociationForm"
+			parameter="Association" path="/Association_action" scope="request"
+			type="xgxt.xljk.xlxh.action.Association_action">
+			<forward name="MemberSearch" path="/MemberSearch.do" />
+			<forward name="XLJK_XLXHHD" path="/XLJK_XLXHHD.do" />
+
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 心理健康－心理协会－会员搜索>>>>>>>>>>>>>>>>>>>>-->
+		<action attribute="AssociationForm" name="AssociationForm"
+			parameter="Member_Search" path="/MemberSearch" scope="request"
+			type="xgxt.xljk.xlxh.action.MemberSearch">
+			<forward name="ReturnToJsp"
+				path="/shgc/xljk/xlxh/Association_Menber_index.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 心理健康－心理协会－活动记录>>>>>>>>>>>>>>>>>>>>-->
+		<action attribute="AssociationForm" name="AssociationForm"
+			path="/XLJK_XLXHHD" scope="request"
+			type="xgxt.xljk.xlxh.action.XLJK_XLXHHDAction">
+			<forward name="ReturnToJsp_XLXHHD" path="" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<教师密码生成>>>>>>>>>>>>>>>>>>> -->
+		<action path="/AllTeaUser" parameter="AllTeaUser"
+			name="commanForm" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/user_man.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<教师密码单个初始化>>>>>>>>>>>>>>>>>>> -->
+		<action path="/chagTeaPass" parameter="initPass"
+			name="commanForm" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/user_man.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<日常事务: 学生证打印>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/noticePrintOne" parameter="noticePrintOne"
+			name="commanForm" scope="request" type="xgxt.action.MakePDF">
+			<forward name="szxxxszld" path="/print/szxxxszs.jsp"></forward>
+			<forward name="szxxxszdd" path="/print/szxxxszs2.jsp"></forward>
+			<forward name="zgdzdxszdd" path="/print/szxxxszs3.jsp"></forward>
+			<forward name="dzdxwztz" path="/print/dzdxwztz.jsp"></forward>
+			<forward name="zgdzdxld" path="/print/zgdzdxld.jsp"></forward>
+			<forward name="hbsfxszdd" path="/print/hbsfxszdd.jsp"></forward>
+			<forward name="hbsfxszld" path="/print/hbsfxszld.jsp"></forward>
+			<forward name="print_note" path="/print/print_note.jsp"></forward>
+		</action>
+		<action name="commanForm" parameter="user_query"
+			path="/user_query" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/xtwh/user_query.jsp" />
+		</action>
+		<action path="/xslxOperation"
+			type="xgxt.xslx.action.XslxOperationAction" />
+		<action path="/stuinfo2" type="xgxt.base.action.Stuinfo2Action" />
+		<action path="/ticketAction"
+			type="xgxt.rcgl.TicketActionAction" />
+		<action path="/xbemyStudentInfoAction"
+			type="xgxt.studentInfo.xbemy.XbemyStudentInfoActionAction" />
+		<action path="/message" type="xgxt.action.MessageAction"
+			name="commanForm" parameter="method">
+			<forward name="success" path="/hzjy/message.jsp"></forward>
+			<forward name="page" path="/hzjy/messageModi.jsp"></forward>
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<辅导员信息同步>>>>>>>>>>>>>>>>>>> -->
+		<action path="/fdyxxQuery" parameter="fdyxxQuery"
+			name="commanForm" scope="request" type="xgxt.action.SysManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/fdygl/nbzy/fdyxxtb.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<矿大学信息引用心里约谈信息>>>>>>>>>>>>>>>>>>> -->
+		<action path="/xsxxytxx" parameter="xsxxytxx"
+			name="commanForm" scope="request" type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<矿大学信息引用重点关注学生>>>>>>>>>>>>>>>>>>> -->
+		<action path="/xsxxzdgz" parameter="xsxxzdgz"
+			name="commanForm" scope="request" type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+		</action>
+		
+		<!--为Portallet提供新闻查询-->
+		<action 
+			path="/xtwhPortallet" 
+			parameter="method"
+			name="commanForm" 
+			scope="request" 
+			type="xgxt.xtwh.portallet.XtwhForPortalletAction">
+			<forward name="success" path="/xtwh/portallet/portalletXwcx.jsp" />
+		</action>
+		
+		<action 
+			path="/queryNews"
+			name="commanForm" 
+			scope="request" 
+			forward="/xtwhPortallet.do?method=queryNews">
+		</action>
+		<!--end为Portallet提供新闻查询-->
+		
+		<!-- <<<<<<<<<<<<<<<<<<<广州大学设立岗位信息表打印>>>>>>>>>>>>>>>>>>> -->
+		<action name="commanForm" parameter="gzdxscgwxxbPrint"
+			path="/gzdx_scgwxxbPrint" scope="request" type="xgxt.action.InfoPubAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/qgzx/gzdx/gzdx_scgwb.jsp" />
+		</action>
+		
+		<!--心理约谈情况-->
+		<action name="commanForm" parameter="DATASEARCH"
+			path="/xljk_ytqk" scope="request" type="xgxt.xljk.xlyt.action.XlytAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/data_search.jsp" />
+		</action>
+		
+		<!-- 自定义表单-->
+		<action path="/ty_bdsz" forward="/bdsz.do?method=bdszManage&amp;mkmc=rcsw"/>
+		
+		<action path="/bdsz" 
+        		parameter="method"  
+        		name = "bdszForm"
+        		scope="request"
+		        type="xgxt.bdsz.BdszAction">		
+        
+        <forward name="bdszManage" path="/bdsz/bdszManage.jsp" />
+        <forward name="bdszUpdata" path="/bdsz/bdszUpdata.jsp"/>
+        </action>
+		
+		<!-- 西华师范学工登录口 -->
+		<action name="commanForm" parameter="userLogin" path="/xhsfLogin"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/other/xhsf/xhsf_login.jsp" />
+			<forward name="success" path="/other/xhsf/xhsf_login.jsp" />
+		</action>
+		
+		<!-- 河南师范学工登录认证口 -->
+		<action name="commanForm" parameter="hnsfSSOLogin" path="/hnsfSSOLogin"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/other/hnsf/hnsfdx.jsp" />
+			<forward name="success" path="/default.jsp" />
+		</action>
+		
+		<!-- 黑龙江科技学院 -->
+		<action name="commanForm" parameter="hljKjxySSOLogin" path="/hljKjxySSOLogin"
+			scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="stuLogin" path="/stuPage.jsp" redirect="true"/>
+			<forward name="teaLogin" path="/teaPage.jsp" redirect="true"/>
+			<forward name="success" path="/default.jsp" />
+		</action>
+
+		<!--三易拓单点漫游-->
+		<action name="commanForm" parameter="thauthallSSOLogin" path="/thauthallSSOLogin"
+				scope="request" type="xgxt.action.CommanAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="stuLogin" path="/stuPage.jsp" redirect="true"/>
+			<forward name="teaLogin" path="/teaPage.jsp" redirect="true"/>
+			<forward name="success" path="/default.jsp" />
+		</action>
+
+		<action path="/gllgdx_ssoLogin" forward="/zfxg_casLogin.do?method=zfxg_casLogin"/>
+		<!--<<<<<<<<<<<<<<<<<<<< 通用模块，所有统一身份认证入口 2013-9-17>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zfxg_casLogin"
+			path="/zfxg_casLogin" scope="request"
+			type="xgxt.action.CommanAction">
+			<forward name="errorMsg" path="/errmsg.jsp" />
+			<forward name="stuLogin" path="/stuPage.jsp" />
+			<forward name="teaLogin" path="/teaPage.jsp" />
+		</action>
+		
+		<action name="commanForm" parameter="bbdcExport" path="/bbdcExport"
+			scope="request" type="xgxt.action.DataManAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+		
+		<!-- 浙江旅游学院办事大厅学年学期统一维护 -->
+		<action path="/xg_xtwh_bsdtxnxqwh" forward="/xtwh_bsdtxnxqwh.do?method=xnxqSz"/>	<!-- 参数设置 -->
+		<action path="/xtwh_bsdtxnxqwh" 
+	   			scope="request"
+	   			type="xgxt.action.zjly.XnxqwhAction" 
+	   			name="xnxqwhForm"         
+	   			parameter="method">
+	   		<forward name="xnxqSz" path="/xtwh/zjly/xnxqSz.jsp"></forward>
+		</action>
+	</action-mappings>	
+	
+</struts-config>

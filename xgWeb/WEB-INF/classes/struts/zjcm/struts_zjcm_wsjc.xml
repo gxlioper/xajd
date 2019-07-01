@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<!-- 评分组管理 -->
+		<form-bean name="PfzForm" type="com.zfsoft.xgxt.zjcm.wsjc.pfz.PfzForm" />
+	<!-- 打分规则管理 -->
+		<form-bean name="DfgzForm" type="com.zfsoft.xgxt.zjcm.wsjc.dfgz.DfgzForm" />
+	<!-- 卫生分录入 -->
+		<form-bean name="WsflrForm" type="com.zfsoft.xgxt.zjcm.wsjc.wsflr.WsflrForm" />
+	<!-- 卫生分录入 -->
+		<form-bean name="WsfcxForm" type="com.zfsoft.xgxt.zjcm.wsjc.wsfcx.WsfcxForm" />
+	<!-- 卫生分统计 -->
+		<form-bean name="WsftjForm" type="com.zfsoft.xgxt.zjcm.wsjc.wsftj.WsftjForm" />
+	</form-beans>
+	<action-mappings>
+	
+	<action path="/cjWsf_pfz" forward="/cjWsfPfz.do?method=getPfzlList" /><!-- 评分组管理-->
+	<action path="/cjWsf_dfgz" forward="/cjWsfDfgz.do?method=getDfgzList" /><!-- 评分组管理-->
+	<action path="/cjWsf_wsflr" forward="/cjWsflr.do?method=getWsflrList" /><!-- 卫生分录入-->
+	<action path="/cjWsf_wsfcx" forward="/cjWsfcx.do?method=getWsfcxList" /><!-- 卫生分查询-->
+	<action path="/cjWsf_wsftj" forward="/cjWsftj.do?method=getWsftjList" /><!-- 卫生分查询-->
+	<action path="/cjWsf_wsftjajax" forward="/cjWsftjajax.do?method=getWsftjList" />
+	
+		<!-- 评分组 -->
+		<action path="/cjWsfPfz" name="PfzForm" type="com.zfsoft.xgxt.zjcm.wsjc.pfz.PfzAction"
+			parameter="method" scope="request">
+			
+			<forward name="getPfzlList" path="/xsgzgl/zjcm/wsjc/pfz/getPfzlList.jsp" />
+			<forward name="addPfz" path="/xsgzgl/zjcm/wsjc/pfz/addPfz.jsp" />
+			<forward name="updatePfz" path="/xsgzgl/zjcm/wsjc/pfz/updatePfz.jsp" />
+			<forward name="showPfcyList" path="/xsgzgl/zjcm/wsjc/pfz/pfcyList.jsp" />
+			<forward name="viewPfzList" path="/xsgzgl/zjcm/wsjc/pfz/viewPfzList.jsp" />
+		</action>
+	
+		<!-- 打分规则 -->
+		<action path="/cjWsfDfgz" name="DfgzForm" type="com.zfsoft.xgxt.zjcm.wsjc.dfgz.DfgzAction"
+			parameter="method" scope="request">
+			
+			<forward name="getDfgzList" path="/xsgzgl/zjcm/wsjc/dfgz/getDfgzList.jsp" />
+			<forward name="addDfgz" path="/xsgzgl/zjcm/wsjc/dfgz/addDfgz.jsp" />
+			<forward name="updateDfgz" path="/xsgzgl/zjcm/wsjc/dfgz/updateDfgz.jsp"/>
+			<forward name="getCcqsList" path="/xsgzgl/zjcm/wsjc/dfgz/getCcqsList.jsp"></forward>
+			<forward name="gzsd" path="/xsgzgl/zjcm/wsjc/dfgz/gzsd.jsp"/>
+			<forward name="viewGzsz" path="/xsgzgl/zjcm/wsjc/dfgz/viewGzsz.jsp"/>
+		</action>
+		
+		<!-- 卫生分录入-->
+		<action path="/cjWsflr" name="WsflrForm" type="com.zfsoft.xgxt.zjcm.wsjc.wsflr.WsflrAction"
+			parameter="method" scope="request">		
+			<forward name="getWsflrList" path="/xsgzgl/zjcm/wsjc/wsflr/getWsflrList.jsp" />
+			<forward name="addWsflrList" path="/xsgzgl/zjcm/wsjc/wsflr/addWsflrList.jsp" />
+			<forward name="viewqs" path="/xsgzgl/zjcm/wsjc/wsflr/viewqs.jsp" />
+		</action>
+		
+		<!-- 卫生分查询-->
+		<action path="/cjWsfcx" name="WsfcxForm" type="com.zfsoft.xgxt.zjcm.wsjc.wsfcx.WsfcxAction"
+			parameter="method" scope="request">		
+			<forward name="getWsfcxList" path="/xsgzgl/zjcm/wsjc/wsfcx/getWsfcxList.jsp" />
+			<forward name="editWsfcx" path="/xsgzgl/zjcm/wsjc/wsfcx/editWsfcx.jsp" />
+			<forward name="viewWsfcx" path="/xsgzgl/zjcm/wsjc/wsfcx/viewWsfcx.jsp" />
+		</action>
+		
+		
+		<!-- 卫生分统计-->
+		<action path="/cjWsftj" name="WsftjForm" type="com.zfsoft.xgxt.zjcm.wsjc.wsftj.WsftjAction"
+			parameter="method" scope="request">		
+			<forward name="getWsftjList" path="/xsgzgl/zjcm/wsjc/wsftj/getWsftjList.jsp" />
+		</action>
+		<action path="/cjWsftjajax" name="WsftjForm" type="com.zfsoft.xgxt.zjcm.wsjc.wsftj.WsftjAjaxAction"
+			parameter="method" scope="request">		
+			<forward name="getWsftjList" path="/xsgzgl/zjcm/wsjc/wsftj/getWsftjList.jsp" />
+		</action>
+			
+	</action-mappings>
+</struts-config>

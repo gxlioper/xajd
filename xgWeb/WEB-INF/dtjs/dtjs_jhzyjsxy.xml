@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="jhzyYydxForm" type="xgxt.dtjs.jhzy.yydx.JhzyYydxForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+	    <!-- 显示路径 -->
+	    <!-- 业余党校 -->
+        <action path="/jhzyYydxsq" forward="/jhzyYydx.do?method=jhzyYydxsq"/>	<!-- 学生申请 -->
+        <action path="/jhzyYydxsh" forward="/jhzyYydx.do?method=jhzyYydxsh"/>	<!-- 业余党校审核 -->
+        <action path="/jhzyYydxcx" forward="/jhzyYydx.do?method=jhzyYydxcx"/>	<!-- 学生业余党校情况查询 -->	
+        <action path="/jhzyYydxkcap" forward="/jhzyYydx.do?method=jhzyYydxkcap"/>	<!-- 业余党校日课程安排查询 -->
+        <action path="/jhzyYydxcjlr" forward="/jhzyYydx.do?method=jhzyYydxcjlr"/>	<!-- 业余党校成绩录入 -->				 	 
+		
+        <!-- 实际路径 -->
+        <action path="/jhzyYydx" parameter="method" name="jhzyYydxForm" scope="request"
+		        type="xgxt.dtjs.jhzy.yydx.JhzyYydxAction">
+		<!-- 业余党校申请页面 -->	
+		<forward name="jhzyYydxsq" path="/dtjs/jhzy/yydx/jhzyYydxsq.jsp" />
+		<forward name="jhzyYydxsh" path="/dtjs/jhzy/yydx/jhzyYydxsh.jsp" />
+		<forward name="jhzyYydxshOne" path="/dtjs/jhzy/yydx/jhzyYydxshOne.jsp" />
+		<forward name="jhzyYydxcjlr" path="/dtjs/jhzy/yydx/jhzyYydxcjlr.jsp" />
+		<forward name="jhzyYydxcx" path="/dtjs/jhzy/yydx/jhzyYydxcx.jsp" />	
+		<!-- 日课程安排查询页面 -->	
+		<forward name="kcapManage" path="/dtjs/jhzy/yydx/kcapManage.jsp" />
+		<!-- 日课程安排增加 -->	
+		<forward name="xkcapAdd" path="/dtjs/jhzy/yydx/xkcapAdd.jsp" />
+		<!-- 日课程安排修改，查看 -->	
+		<forward name="xkcapUpdate" path="/dtjs/jhzy/yydx/xkcapUpdate.jsp" />
+        </action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

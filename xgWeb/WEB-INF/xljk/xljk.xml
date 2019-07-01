@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="zjlg_xljkForm" type="xgxt.xljk.zjlg.form.XljkZjlgForm" />
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+	<action path="/xljk_stu_info_zjlg" parameter="method" name="zjlg_xljkForm"
+			scope="request" type="xgxt.xljk.zjlg.action.XljkZjlgAtion">
+			<forward name="zjlg_xlzxs" path="/xljk/zjlg/xlzxsManage.jsp"></forward>
+		</action>
+		<!--心理咨询师-->
+		<action path="/zjlgXlzxs" forward="/zjlg_xljk.do?method=xlzxsManage&amp;tableName=zjlg_xlzxs" />
+		<!--心理健康指导老师-->
+<!--		<action path="/zjlgXljkzdls" forward="/zjlg_xljk.do?method=xljkzdlsManage" />-->
+		<action path="/zjlgXljkzdls" forward="/zjlg_xljk.do?method=xlzxsManage&amp;tableName=zjlg_xljkzdls" />
+		<!--心理咨询学生助理-->
+		<action path="/zjlgXlzxxszl" forward="/zjlg_xljk.do?method=xlzxsManage&amp;tableName=zjlg_xlzxxszl" />
+<!--		<action path="/zjlgXlzxxszl" forward="/zjlg_xljk.do?method=xlzxxszlManage" />-->
+		<!--心理协会会员-->
+<!--		<action path="/zjlgXlxhhy" forward="/zjlg_xljk.do?method=xlxhhyManage" />-->
+		<action path="/zjlgXlxhhy" forward="/zjlg_xljk.do?method=xlzxsManage&amp;tableName=zjlg_xlxhhy" />
+		<!--心里普查表-->
+		<action path="/xlpcb" forward="/zjlg_xljk.do?method=xlpcbManage" />
+<!--		<action path="/zjlgXlxhhy" forward="/zjlg_xljk.do?method=xlzxsManage&amp;tableName=zjlg_xlxhhy" />-->
+		<!--心理委员-->
+<!--		<action path="/zjlgXlwy" forward="/zjlg_xljk.do?method=xlwyManage" />-->
+		<action path="/zjlgXlwy" forward="/zjlg_xljk.do?method=xlzxsManage&amp;tableName=zjlg_xlwy" />
+		<!--工作联系/>-->
+		<action path="/zjlgGzlx" forward="/zjlg_xljk.do?method=gzlxManage" />
+		<!--公用-->
+		<action path="/zjlg_xljk" parameter="method" name="zjlg_xljkForm"
+			scope="request" type="xgxt.xljk.zjlg.action.XljkZjlgAtion">
+<!--			心理咨询师-->
+			<forward name="zjlg_xlzxs" path="/xljk/zjlg/xlzxsManage.jsp"></forward>
+			<forward name="zjlg_xlzxsAdd" path="/xljk/zjlg/xlzxsAdd.jsp"></forward>
+<!--			心理健康指导老师-->
+			<forward name="zjlg_xljkzdls" path="/xljk/zjlg/xljkzdlsManage.jsp"></forward>
+			<forward name="zjlg_xljkzdlsAdd" path="/xljk/zjlg/xljkzdlsAdd.jsp"></forward>
+<!--			心理咨询学生助理-->
+			<forward name="zjlg_xlzxxszl" path="/xljk/zjlg/xlzxxszlManage.jsp"></forward>
+			<forward name="zjlg_xlzxxszlAdd" path="/xljk/zjlg/xlzxxszlAdd.jsp"></forward>
+<!--			心理协会会员-->
+			<forward name="zjlg_xlxhhy" path="/xljk/zjlg/xlxhhyManage.jsp"></forward>
+			<forward name="zjlg_xlxhhyAdd" path="/xljk/zjlg/xlxhhyAdd.jsp"></forward>
+<!--			心理委员-->
+			<forward name="zjlg_xlwy" path="/xljk/zjlg/xlwyManage.jsp"></forward>
+			<forward name="zjlg_xlwyAdd" path="/xljk/zjlg/xlwyAdd.jsp"></forward>
+			<!--			心里普查-->
+			<forward name="xlpc_manager" path="/xljk/zjlg/xlpcManage.jsp"></forward>
+			<forward name="xlpc_add" path="/xljk/zjlg/xlpcAdd.jsp"></forward>
+			<!--			工作联系-->
+			<forward name="gzlx_manager" path="/xljk/zjlg/gzlxManage.jsp"></forward>
+			<forward name="zjlg_gzlxb" path="/xljk/zjlg/gzlxManage.jsp"></forward>
+			<forward name="gzlx_add" path="/xljk/zjlg/gzlxAdd.jsp"></forward>
+			<forward name="gzlx_print" path="/xljk/zjlg/gzlxPrint.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources key="xljk"
+		parameter="xgxt.base.ApplicationResources" />
+</struts-config>

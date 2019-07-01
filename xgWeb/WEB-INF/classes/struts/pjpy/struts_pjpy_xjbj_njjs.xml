@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config 
+PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="xjbjForm" type="xgxt.pjpy.njjs.XjbjForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/njjs_yxbjt" 	forward="/njjsXjbj.do?method=xjbjsq"/>	<!-- 先进班级申请 -->
+		<action path="/njjs_yxbjtgl" 	forward="/njjsXjbj.do?method=xjbjManage"/>	<!-- 先进班级管理 -->
+		<action path="/njjs_yxbjtsh" 	forward="/njjsXjbj.do?method=xjbjAudi"/>	<!-- 先进班级审核 -->
+		
+    	<!-- 先进班级 -->
+    	<action path="/njjsXjbj" 
+        		parameter="method"  
+        		name="xjbjForm" 
+        		scope="request"
+		        type="xgxt.pjpy.njjs.XjbjAction">	
+		       
+			
+			<forward name="xjbjsq" path="/pjpy/njjs/xjbjsq.jsp"></forward>
+			<forward name="xjbjManage" path="/pjpy/njjs/xjbjManage.jsp"></forward>
+			<forward name="xjbjAudi" path="/pjpy/njjs/xjbjAudi.jsp"></forward>
+			<forward name="xjbjUpdate" path="/pjpy/njjs/xjbjUpdate.jsp"></forward>
+			<forward name="xjbjDgsh" path="/pjpy/njjs/xjbjDgsh.jsp"></forward>
+		</action>
+		
+		
+	</action-mappings>
+</struts-config>

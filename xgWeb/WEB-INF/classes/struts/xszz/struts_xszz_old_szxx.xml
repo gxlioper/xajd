@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzForm" type="xgxt.form.XszzForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!--<<<<<<<<<<<<<<<<<<<< 深圳信息技术学院-国家奖学金审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_szxx_gjjxjsq" 
+		   path="/auditing_szxx_gjjxjsq" scope="request"
+		   type="xgxt.action.szxxjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/szxxjsxy/auditing_szxx_gjjxjsq.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_szxx_gjjxjsq_one" 
+		   path="/auditing_szxx_gjjxjsq_one" scope="request"
+		   type="xgxt.action.szxxjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/szxxjsxy/auditing_szxx_gjjxjsq_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 深圳信息技术学院-国家助学金审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_szxx_gjzxjsq" 
+		   path="/auditing_szxx_gjzxjsq" scope="request"
+		   type="xgxt.action.szxxjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/szxxjsxy/auditing_szxx_gjzxjsq.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_szxx_gjzxjsq_one" 
+		   path="/auditing_szxx_gjzxjsq_one" scope="request"
+		   type="xgxt.action.szxxjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/szxxjsxy/auditing_szxx_gjzxjsq_one.jsp"/>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 深圳信息技术学院-外设助学金审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_szxx_wszxjsq" 
+		   path="/auditing_szxx_wszxjsq" scope="request"
+		   type="xgxt.action.szxxjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/szxxjsxy/auditing_szxx_wszxjsq.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_szxx_wszxjsq_one" 
+		   path="/auditing_szxx_wszxjsq_one" scope="request"
+		   type="xgxt.action.szxxjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/szxxjsxy/auditing_szxx_wszxjsq_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 深圳信息技术学院-校内助学金审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_szxx_xnzxjsq" 
+		   path="/auditing_szxx_xnzxjsq" scope="request"
+		   type="xgxt.action.szxxjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/szxxjsxy/auditing_szxx_xnzxjsq.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_szxx_xnzxjsq_one" 
+		   path="/auditing_szxx_xnzxjsq_one" scope="request"
+		   type="xgxt.action.szxxjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/szxxjsxy/auditing_szxx_xnzxjsq_one.jsp"/>   
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

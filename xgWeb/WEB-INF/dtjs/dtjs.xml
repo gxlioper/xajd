@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="dtjsForm" type="xgxt.dtjs.DtjsForm"/>
+		<form-bean name="tsdzbForm" type="xgxt.dtjs.tsdzb.TsdzbForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+	
+	<!-- 党建 -->
+    <action path="/dtjs_zbgl" forward="/dtjs_forward.do?method=zbglForward"/>	<!-- 支部管理 -->
+    <action path="/dtjs_rdsq" forward="/dtjs_forward.do?method=rdsqForward"/>	<!-- 入党申请 -->
+    <action path="/dtjs_jjfz" forward="/dtjs_forward.do?method=jjfzForward"/>	<!-- 入党积极分子 -->
+    <action path="/dtjs_fzdx" forward="/dtjs_forward.do?method=fzdxForward"/>	<!-- 发展对象 -->
+	<action path="/dtjs_ybdy" forward="/dtjs_forward.do?method=ybdyForward"/>	<!-- 预备党员 -->
+	<action path="/dtjs_zsdy" forward="/dtjs_forward.do?method=zsdyForward"/>	<!-- 正式党员 -->
+	<action path="/dtjs_sjtj" forward="/dtjs_forward.do?method=sjtjForward"/>	<!-- 数据统计 -->
+	<action path="/dtjs_pxxx" forward="/dtjs_forward.do?method=pxxxForward"/>	<!-- 党课培训 -->
+	<action path="/dtjs_dkmd" forward="/dtjs_forward.do?method=dkmdForward"/>	<!-- 党课培训 -->
+	<action path="/dtjs_sxhb" forward="/dtjs_forward.do?method=sxhbForward"/>	<!-- 思想汇报 -->
+	
+    <!-- 团建 -->
+    <action path="/dtjs_tyxx" 	forward="/dtjs_forward.do?method=tyxxForward"/>	<!-- 团员信息 -->
+    <action path="/dtjs_ftypx" 	forward="/dtjs_forward.do?method=ftypxForward"/><!-- 非团员培训 -->
+    <action path="/dtjs_typx"	forward="/dtjs_forward.do?method=typxForward"/>	<!-- 团员培训 -->
+	<action path="/dtjs_tnty" 	forward="/dtjs_forward.do?method=tntyForward"/>	<!-- 团内推优 -->
+	<action path="/dtjs_tyzc" 	forward="/dtjs_forward.do?method=tyzcForward"/>	<!-- 团内注册 -->
+	
+    <!-- 实际路径 -->
+    <action path="/dtjs_forward"  parameter="method"   name="dtjsForm"  scope="request"  type="xgxt.dtjs.DtjsAction"/>
+    
+    <action path="/dtjs_tsdzbgl_tsdzb" 	forward="/dtjs_tsdzb.do?method=getTsdzbList"/>	<!-- 特色党支部管理  -->
+    
+    <action path="/dtjs_tsdzbgl_tsdzbsh" forward="/dtjs_tsdzbsh.do?method=getTsdzbShList"/>	<!-- 特色党支部审核  -->
+    
+    <action path="/dtjs_tsdzb" 
+        		parameter="method"  
+        		name="tsdzbForm" 
+        		scope="request"
+		        type="xgxt.dtjs.tsdzb.TsdzbAction">		        
+		<!-- 特色团支部维护 -->
+		<forward name="tsdzbList" path="/xsgzgl/dtjs/tsdzb/tsdzbList.jsp" />
+		<forward name="addTsdzb" path="/xsgzgl/dtjs/tsdzb/addTsdzb.jsp" />
+		<forward name="editTsdzb" path="/xsgzgl/dtjs/tsdzb/editTsdzb.jsp" />
+		<forward name="viewTsdzb" path="/xsgzgl/dtjs/tsdzb/viewTsdzb.jsp" />
+	</action>
+	
+	<action path="/dtjs_tsdzbsh" 
+        		parameter="method"  
+        		name="tsdzbForm" 
+        		scope="request"
+		        type="xgxt.dtjs.tsdzb.TsdzbShAction">		        
+		<!-- 特色团支部审核 -->
+		<forward name="tsdzbshList" path="/xsgzgl/dtjs/tsdzb/tsdzbshList.jsp" />
+		<forward name="dgsh" path="/xsgzgl/dtjs/tsdzb/dgsh.jsp" />
+	</action>
+    
+	</action-mappings>
+
+</struts-config>

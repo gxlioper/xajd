@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	
+	<form-beans>
+		<form-bean name="ZhcpForm" type="com.zfsoft.xgxt.pjpy.xzhcp.ZhcpForm"/>
+		<!-- 申请 -->
+		<form-bean name="ZhcpDjForm" type="com.zfsoft.xgxt.pjpy.xzhcp.sq.ZhcpDjForm"/>
+		<!-- 审核 -->
+		<form-bean name="ZhcpShForm" type="com.zfsoft.xgxt.pjpy.xzhcp.sh.ZhcpShForm"/>
+		<!-- 结果 -->
+		<form-bean name="ZhcpJgForm" type="com.zfsoft.xgxt.pjpy.xzhcp.jg.ZhcpJgForm"/>
+	</form-beans> 
+	
+	<action-mappings>
+		<action path="/pjpy_xzhcp_cssz" forward="/xzhcp_cssz.do?method=jcsz"/>
+		<action path="/xzhcp_cssz" name="ZhcpForm" parameter="method" scope="request" type="com.zfsoft.xgxt.pjpy.xzhcp.ZhcpAction" >
+			<forward name="cssz" path="/xsgzgl/pjpy/xzhcp/cssz/cssz.jsp"/>
+		</action>
+		<!-- 申请 -->	
+		<action path="/pjpy_xzhcp_zcdj" forward="/xzhcp_zcdj.do?method=getZhcpDjList"/>
+		<action path="/xzhcp_zcdj" name="ZhcpDjForm" parameter="method" scope="request" type="com.zfsoft.xgxt.pjpy.xzhcp.sq.ZhcpDjAction">
+			<forward name="cx" path="/xsgzgl/pjpy/xzhcp/sq/getSqList.jsp"/>
+			<forward name="add" path="/xsgzgl/pjpy/xzhcp/sq/addSq.jsp"/>
+			<forward name="update" path="/xsgzgl/pjpy/xzhcp/sq/updateSq.jsp"/>
+			<forward name="view" path="/xsgzgl/pjpy/xzhcp/sq/view.jsp"/>
+		</action>
+		<!-- 审核 -->
+		<action path="/pjpy_xzhcp_zcsh" forward="/xzhcp_zcsh.do?method=getZhcpShList"/>
+		<action path="/xzhcp_zcsh" name="ZhcpShForm" parameter="method" scope="request" type="com.zfsoft.xgxt.pjpy.xzhcp.sh.ZhcpShAction">
+			<forward name="cx" path="/xsgzgl/pjpy/xzhcp/sh/getxzhcpsh.jsp"/>
+			<forward name="dgsh" path="/xsgzgl/pjpy/xzhcp/sh/xzhcpsh.jsp"/>
+			<forward name="plsh" path="/xsgzgl/pjpy/xzhcp/sh/zhcpplsh.jsp"/>
+		</action>
+		<!-- 结果 	-->
+		<action path="/pjpy_xzhcp_zcjg" forward="/xzhcp_zcjg.do?method=getZhcpJgList"/>
+		<action path="/xzhcp_zcjg" name="ZhcpJgForm" scope="request" parameter="method" type="com.zfsoft.xgxt.pjpy.xzhcp.jg.ZhcpJgAction">
+			<forward name="cx" path="/xsgzgl/pjpy/xzhcp/jg/getSqList.jsp"/>
+			<forward name="add" path="/xsgzgl/pjpy/xzhcp/jg/addSq.jsp"/>
+			<forward name="update" path="/xsgzgl/pjpy/xzhcp/jg/updateSq.jsp"/>
+			<forward name="view" path="/xsgzgl/pjpy/xzhcp/jg/view.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

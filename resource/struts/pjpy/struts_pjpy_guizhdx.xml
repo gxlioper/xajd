@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="guizhdxForm" type="xgxt.pjpy.guizhdx.GuizhdxForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/guizdx_xjmj" 	   forward="/guizhdx.do?method=xjbjUpdate"/> <!--  -->
+	    <action path="/guizdx_xjmjsh" forward = "/guizhdx.do?method=xjbjSh"/>
+	    <action path="/guizdx_xjbjManage" forward = "/guizhdx.do?method=xjbjManage"/>
+	    <action path="/guizhdx_tjsz" forward = "/guizhdx.do?method=pjpyTjsz"/>
+	  
+	    <!-- 综测分数查询 -->
+		<action path="/guizhdx_zcfscx" forward="/guizhdx.do?method=zcfscx"/>
+	    
+	    <!-- 实际路径 -->	
+		<action path="/guizhdx"
+				type="xgxt.pjpy.guizhdx.GuizhdxAction"
+				name="guizhdxForm"
+				parameter="method"
+				scope="request">
+	
+		<forward name="xjbjManage" path="/pjpy/guizhdx/xjbjManage.jsp" />
+		<forward name="xjbjUpdate"  path="/pjpy/guizhdx/xjbjUpdate.jsp"/>
+		<forward name="xjbjSh" path="/pjpy/guizhdx/xjbjSh.jsp"/>
+		<forward name="xjbjOne" path="/pjpy/guizhdx/xjbjUpdate.jsp"/>
+		<forward name="xjbjDy" path="/pjpy/guizhdx/xjbjDy.jsp"/>
+		
+		<forward name="zcfscx" path="/pjpy/guizhdx/zcfscx.jsp"/>
+		</action>
+		
+		
+		<!-- 展现路径 -->
+		<action path="/typj_tjsz" forward = "/typj.do?method=tjsz"/>
+		<action path="/typj_jxjsq" forward = "/typj.do?method=jxjsq"/>
+		<action path="/typj_jxjsh" forward="/typj.do?method=jxjsh"/>
+		<action path="/typj_jxjcx" forward="/typj.do?method=jxjcx"/>
+		<action path="/typj_jxjsb" forward="/typj.do?method=jxjsb"/>		
+		<action path="/typj_yrchsq" forward="/typj.do?method=rychsq"/>
+		<action path="/typj_yrchcx" forward="/typj.do?method=rychcx"/>
+		<action path="/typj_yrchsh" forward="/typj.do?method=rychsh"/>
+		
+		<action path="/typj"
+				type="xgxt.pjpy.guizhdx.GuizhdxAction"
+				name="guizhdxForm"
+				parameter="method"
+				scope="request">
+				
+			
+			<forward name="tjsz" path="/pjpy/typj/tjsz.jsp"/>
+			<forward name="jxjsq" path="/pjpy/typj/jxjsq.jsp"/>
+			<forward name="jxjsh" path="/pjpy/typj/jxjsh.jsp"/>
+			<forward name="jxjView" path="/pjpy/typj/jxjView.jsp" />
+			<forward name="jxjcx" path="/pjpy/typj/jxjcx.jsp"/>
+			<forward name="jxjsb" path="/pjpy/typj/jxjsb.jsp"/>
+			<forward name="rychShsz" path="/pjpy/typj/rychShsz.jsp"/>
+			<forward name="rychsq" path="/pjpy/typj/rychsq.jsp"/>
+			<forward name="rychcx" path="/pjpy/typj/rychcx.jsp"/>
+			<forward name="rychView" path="/pjpy/typj/rychView.jsp"/>
+			<forward name="rychsh" path="/pjpy/typj/rychsh.jsp"/>
+			<forward name="jxjPrint" path="/pjpy/typj/jxjPrint.jsp"/>
+			<forward name="rychPrint" path="/pjpy/typj/rychPrint.jsp"/>
+			<forward name="guizhdx_jxjPrint" path="/pjpy/guizhdx/guizhdx_jxjPrint.jsp"/>
+			<forward name="guizhdx_rychPrint" path="/pjpy/guizhdx/guizhdx_rychPrint.jsp"/>
+			<forward name="nnzy_jxjPrint" path="/pjpy/typj/nnzy_jxjPrint.jsp"/>
+			<forward name="nbcs_gjjxj" path="/pjpy/typj/nbcs_gjjxj.jsp"/>
+			<forward name="nbcs_lzjxj" path="/pjpy/typj/nbcs_lzjxj.jsp"/>
+			<forward name="nbcs_szynljxj" path="/pjpy/typj/nbcs_szynljxj.jsp"/>
+			
+			
+			<forward name="priseCheck" path="/pjpy/priseCheck.jsp"/>
+			<forward name="priseCheckOne" path="/pjpy/priseCheckOne.jsp"/>
+			<forward name="creditCheck" path="/pjpy/creditCheck.jsp"/>
+			<forward name="creditCheckOne" path="/pjpy/creditCheckOne.jsp"/>
+			<forward name="priseResult" path="/pjpy/priseResult.jsp"/>
+			<forward name="creditResult" path="/pjpy/creditResult.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

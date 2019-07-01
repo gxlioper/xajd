@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    <form-bean name="xbemyQgzxForm" type="xgxt.qgzx.xbemy.XbemyQgzxForm" />
+	</form-beans>
+
+	<global-forwards />
+
+	<action-mappings>
+		<action 
+			path="/xbemyQgzx" 
+			name="xbemyQgzxForm" 
+			type="xgxt.qgzx.xbemy.XbemyQgzxAction"
+			parameter="method">
+			<!--西北二民院字段维护-->
+			<forward name="show_file_info" path="/qgzx/xbemy/filed_info.jsp"/>
+			<forward name="field_manager" path="/qgzx/xbemy/fieldManager.jsp"/>
+			<!--西北二民院报表维护-->
+			<forward name="report_manager" path="/qgzx/xbemy/reportManager.jsp"/>	
+			<forward name="show_report_info" path="/qgzx/xbemy/report_info.jsp"/>
+			<!--西北二民院岗位信息报表-->	
+			<forward name="print_gwxx" path="/qgzx/xbemy/printReport.jsp"/>				
+			<forward name="false" path="/errMsg.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

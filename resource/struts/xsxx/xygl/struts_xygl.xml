@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    <!-- 校友管理 -->
+	<form-beans>
+		<form-bean name="xyglForm" type="com.zfsoft.xgxt.xsxx.xygl.XyglForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/xsxx_xygl" forward="/xsxx_xyglxx.do?method=xyglList" />		
+		
+		<!-- 校友管理 -->
+		<action path="/xsxx_xyglxx" scope="request"
+			type="com.zfsoft.xgxt.xsxx.xygl.XyglAction" name="xyglForm"
+			parameter="method">
+			<forward name="xyglList" path="/xsgzgl/xsxx/xygl/xyglCx.jsp" />
+			<forward name="xyglCk" path="/xsgzgl/xsxx/xygl/xyglCk.jsp" />
+			<forward name="xyglXg" path="/xsgzgl/xsxx/xygl/xyglXg.jsp" />
+			<forward name="xyglZj" path="/xsgzgl/xsxx/xygl/xyglZj.jsp" />			
+		</action>
+	
+
+	</action-mappings>
+</struts-config>

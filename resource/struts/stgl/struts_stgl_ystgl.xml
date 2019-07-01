@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<!-- 基础设置 -->
+		<form-bean name="YstglDmwhForm" type="com.zfsoft.xgxt.ystgl.dmwh.YstglDmwhForm" />
+	
+	<!-- 艺术团管理 -->
+		<form-bean name="YstwhForm" type="com.zfsoft.xgxt.ystgl.jtgl.ystwh.YstwhForm" />
+		<form-bean name="YstStzhwhForm" type="com.zfsoft.xgxt.ystgl.stzhwh.StzhwhForm" />
+	<!-- 入团管理-->
+		<form-bean name="YstRtsqForm" type="com.zfsoft.xgxt.ystgl.rtgl.rtsq.YstRtsqForm" />
+		<form-bean name="YstRtshForm" type="com.zfsoft.xgxt.ystgl.rtgl.rtsh.YstRtshForm" />
+		<form-bean name="YstRtjgForm" type="com.zfsoft.xgxt.ystgl.rtgl.rtjg.YstRtjgForm" />
+	
+	
+	</form-beans>
+	<action-mappings>
+	<!-- 代码维护 -->
+	<action path="/ystgl_jcsz_dmwh" forward="/ystglDmwh.do?method=getYstlbList" />
+	
+		<!-- 代码维护 -->
+		<action path="/ystglDmwh" name="YstglDmwhForm" type="com.zfsoft.xgxt.ystgl.dmwh.YstglDmwhAction"
+			parameter="method" scope="request">
+			<forward name="addYstlb" path="/xsgzgl/ystgl/dmwh/addYstlb.jsp" />
+			<forward name="updateYstlb" path="/xsgzgl/ystgl/dmwh/updateYstlb.jsp" />
+			<forward name="getYstlbList" path="/xsgzgl/ystgl/dmwh/getYstlbList.jsp" />
+			<forward name="addXmlb" path="/xsgzgl/ystgl/dmwh/addXmlb.jsp" />
+			<forward name="updateXmlb" path="/xsgzgl/ystgl/dmwh/updateXmlb.jsp" />
+			<forward name="getXmlbList" path="/xsgzgl/ystgl/dmwh/getXmlbList.jsp" />
+			<forward name="addGkdw" path="/xsgzgl/ystgl/dmwh/addGkdw.jsp" />
+			<forward name="updateGkdw" path="/xsgzgl/ystgl/dmwh/updateGkdw.jsp" />
+			<forward name="getGkdwList" path="/xsgzgl/ystgl/dmwh/getGkdwList.jsp" />
+		</action>
+		
+	
+	<!-- 艺术团管理 -->	
+		<action path="/ystgl_ystgl_ystwh" forward="/ystglYstwh.do?method=getYstwhList" />
+		<!-- 艺术团管理-艺术团维护-->
+		<action path="/ystglYstwh" name="YstwhForm" type="com.zfsoft.xgxt.ystgl.jtgl.ystwh.YstwhAction"
+			parameter="method" scope="request">
+			<forward name="addYstwh" path="/xsgzgl/ystgl/jtgl/ystwh/addYstwh.jsp" />
+			<forward name="editYstwh" path="/xsgzgl/ystgl/jtgl/ystwh/editYstwh.jsp" />
+			<forward name="viewYstwh" path="/xsgzgl/ystgl/jtgl/ystwh/viewYstwh.jsp" />
+			<forward name="getYstwhList" path="/xsgzgl/ystgl/jtgl/ystwh/getYstwhList.jsp" />
+			<forward name="xmsz" path="/xsgzgl/ystgl/jtgl/ystwh/xmsz.jsp" />
+			<forward name="copyYstxx" path="/xsgzgl/ystgl/jtgl/ystwh/copyYstxx.jsp" />
+		</action>
+	<!-- 入团管理 -->	
+		<action path="/ystgl_rtgl_rtsq" forward="/ystglRtsq.do?method=getYstRtsqList" />
+		<!-- 入团管理-入团申请-->
+		<action path="/ystglRtsq" name="YstRtsqForm" type="com.zfsoft.xgxt.ystgl.rtgl.rtsq.YstRtsqAction"
+			parameter="method" scope="request">
+			<forward name="addYstRtsq" path="/xsgzgl/ystgl/rtgl/rtsq/addYstRtsq.jsp" />
+			<forward name="editYstRtsq" path="/xsgzgl/ystgl/rtgl/rtsq/editYstRtsq.jsp" />
+			<forward name="viewYstRtsq" path="/xsgzgl/ystgl/rtgl/rtsq/viewYstRtsq.jsp" />
+			<forward name="getYstRtsqList" path="/xsgzgl/ystgl/rtgl/rtsq/getYstRtsqList.jsp" />
+			<forward name="getYstxmList" path="/xsgzgl/ystgl/rtgl/rtsq/getYstxmList.jsp" />
+		</action>
+		<!-- 入团管理-入团审核-->
+		<action path="/ystgl_rtgl_rtsh" forward="/ystglRtsh.do?method=getYstRtshList" />
+		<action path="/ystglRtsh" name="YstRtshForm" type="com.zfsoft.xgxt.ystgl.rtgl.rtsh.YstRtshAction"
+			parameter="method" scope="request">
+			<forward name="getYstRtshList" path="/xsgzgl/ystgl/rtgl/rtsh/getRtshList.jsp" />
+			<forward name="rtDgsh" path="/xsgzgl/ystgl/rtgl/rtsh/rtDgsh.jsp" />
+			<forward name="rtPlsh" path="/xsgzgl/ystgl/rtgl/rtsh/rtPlsh.jsp" />
+			<forward name="view" path="/xsgzgl/ystgl/rtgl/rtsh/rtShview.jsp" />
+		</action>
+		<!-- 入团管理-入团结果-->
+		<action path="/ystgl_rtgl_rtjg" forward="/ystglRtjg.do?method=getYstRtjgList" />
+		<action path="/ystglRtjg" name="YstRtjgForm" type="com.zfsoft.xgxt.ystgl.rtgl.rtjg.YstRtjgAction"
+			parameter="method" scope="request">
+			<forward name="addYstRtjg" path="/xsgzgl/ystgl/rtgl/rtjg/addYstRtjg.jsp" />
+			<forward name="editYstRtjg" path="/xsgzgl/ystgl/rtgl/rtjg/editYstRtjg.jsp" />
+			<forward name="viewYstRtjg" path="/xsgzgl/ystgl/rtgl/rtjg/viewYstRtjg.jsp" />
+			<forward name="getYstRtjgList" path="/xsgzgl/ystgl/rtgl/rtjg/getYstRtjgList.jsp" />
+		</action>
+		<!-- 艺术团综合维护 -->
+		<action path="/ystgl_ystgl_stzhwh" forward="/ystglStzhwh.do?method=getStzhwhList" />
+		<action path="/ystglStzhwh" name="YstStzhwhForm" type="com.zfsoft.xgxt.ystgl.stzhwh.StzhwhAction"
+			parameter="method" scope="request">
+			<forward name="getStzhwhList" path="/xsgzgl/ystgl/stzhwh/getStzhwhlist.jsp" />
+			<forward name="viewstzhwhck" path="/xsgzgl/ystgl/stzhwh/stzhwhview.jsp" />
+			<forward name="viewztwh" path="/xsgzgl/ystgl/stzhwh/stcyztwh.jsp" />
+			<forward name="viewcjpd" path="/xsgzgl/ystgl/stzhwh/Stcjpd.jsp" />
+			<forward name="getStcycjList" path="/xsgzgl/ystgl/stzhwh/getStcycjlist.jsp" />
+			<forward name="viewscjpd" path="/xsgzgl/ystgl/stzhwh/cjpdview.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

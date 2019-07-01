@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xljkZgmsxyForm" type="xgxt.xljk.zgmsxy.form.XljkZgmsxyForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+	<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<中国美术学院  心理健康>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<心理咨询中心教育活动>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action name="xljkZgmsxyForm" path="/xljk_zgmsxy" scope="request"  parameter="method"
+		type="xgxt.xljk.zgmsxy.action.XljkZgmsxyAction" validate="false">
+			<forward name="xljkjyzx" path="/xljk/zgmsxy/xljkjyzx.jsp" />
+			<forward name="wxshtz" path="/xljk/zgmsxy/wxshtz.jsp" />
+			<!-- 咨询师信息 -->
+			<forward name="zxs_queryOne" path="/xljk/zgmsxy/zxs_queryOne.jsp" />
+			<forward name="data_zxs" path="/xljk/zgmsxy/data_zxs.jsp" />
+			<!-- 咨询师资源 -->
+			<forward name="zxszy_queryOne" path="/xljk/zgmsxy/zxszy_queryOne.jsp" />
+			<forward name="data_zxszy" path="/xljk/zgmsxy/data_zxszy.jsp" />
+			<forward name="common_exp" path="/about:black" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

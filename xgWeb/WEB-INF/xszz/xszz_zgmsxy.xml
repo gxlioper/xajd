@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzZgmsxyActionForm"
+			type="xgxt.xszz.zgmsxy.XszzZgmsxyActionForm" /><!-- test.forms.DynaActionFormTest -->
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+
+		<action name="xszzZgmsxyActionForm" parameter="method"
+			path="/zgmsxy_xszz" scope="request"
+			type="xgxt.xszz.zgmsxy.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- "困难生认定"-->
+			<forward name="knsrdsq" path="/xszz/zgmsxy/knsrdsq.jsp" />
+			<forward name="knsrdsqSave" path="/xszz/zgmsxy/knsrdsq.jsp" />
+			<forward name="jtqkdcsqb" path="/xszz/zgmsxy/jtqkdcsqb.jsp" />
+			<forward name="knsrdsqb" path="/xszz/zgmsxy/knsrdsqb.jsp" />
+			<forward name="knsrdplsh" path="/xszz/zgmsxy/knsrdplsh.jsp" />
+			<forward name="knsrdsh" path="/xszz/zgmsxy/knsrdsh.jsp" />
+			<forward name="knsrdshOne" path="/xszz/zgmsxy/knsrdshOne.jsp" />
+			<forward name="knsrdshSave" path="/xszz/zgmsxy/knsrdshOne.jsp" />
+			<forward name="knsrdExp" path="/about:blank" />
+			<!-- "国家助学贷款申请"-->
+			<forward name="zgmy_gjzxdksq" path="/xszz/zgmsxy/zgmy_gjzxdksq.jsp" />
+			<forward name="zgmy_gjzxdksqSave" path="/xszz/zgmsxy/zgmy_gjzxdksq.jsp" />
+			<forward name="gjzxdksqjg" path="/xszz/zgmsxy/gjzxdksqjg.jsp" />
+			<!-- "助学贷款时间维护"-->
+			<forward name="zxdksjcsh" path="/about:blank" />
+			<forward name="data_zxdksj" path="/xszz/zgmsxy/data_zxdksj.jsp" />
+			<forward name="zxdksjEdit" path="/xszz/zgmsxy/zxdksjEdit.jsp"/>
+			<forward name="zxdksjPlsz" path="/xszz/zgmsxy/zxdksjPlEdit.jsp"/>
+			<!--毕业生信息审核-->
+			<forward name="bysxxsh" path="/xszz/zgmsxy/bysxxsh.jsp"/>
+			<forward name="bysxxOne" path="/xszz/zgmsxy/bysxxOne.jsp"/>
+			<forward name="bysxxExp" path="/about:blank" />
+			<!--毕业生信息申请-->
+			<forward name="bysxxcjsq" path="/xszz/zgmsxy/bysxxcjsq.jsp"/>
+			<forward name="bysprint" path="/xszz/zgmsxy/bysprint.jsp"/>
+			<!-- "国家助学贷款审核"-->
+			<forward name="gjzxdksh" path="/xszz/zgmsxy/gjzxdksh.jsp" />
+			<forward name="gjzxdkshOne" path="/xszz/zgmsxy/gjzxdkshOne.jsp" />
+			<forward name="gjzxdkshSave" path="/xszz/zgmsxy/gjzxdkshOne.jsp" />
+			<forward name="gjzxdkExp" path="/about:blank" />
+			<forward name="gjzxdksbxx" path="/xszz/zgmsxy/gjzxdksbxx.jsp" />
+			<forward name="gjzxdksbExp" path="/about:blank" />
+			<!-- 成都体育生源地贷款 -->
+			<forward name="syddkManage" path="/xszz/zgmsxy/syddkManage.jsp" />	
+			<forward name="syddkUpdate" path="/xszz/zgmsxy/syddkUpdate.jsp" />	
+			<!-- 成都体育生源地贷款end -->
+			
+			<!-- 国家助学贷款发放begin -->
+			<forward name="gjzxdkff" path="/xszz/zgmsxy/gjzxdkff.jsp" />	
+			<!-- 国家助学贷款发放end -->
+			
+			<!-- 学生申请 begin-->
+			<forward name="xssq_xssq" path="/xszz/zgmsxy/xssq_xssq.jsp" />
+			<forward name="xssq_xssqSave" path="/xszz/zgmsxy/xssq_xssq.jsp" />
+			<forward name="xssqsh" path="/xszz/zgmsxy/xssq_xssqsh.jsp" />
+			<forward name="xssqcx" path="/xszz/zgmsxy/xssq_xssqcx.jsp" />
+			<forward name="xssqshOne" path="/xszz/zgmsxy/xssqshOne.jsp" />
+			<forward name="xssqView" path="/xszz/zgmsxy/xssqView.jsp" />
+			<forward name="xssq_xssqAdd" path="/xszz/zgmsxy/xssq_xssqAdd.jsp" />
+			<!-- 学生申请 end-->
+		</action>
+		
+		
+
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp" />
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

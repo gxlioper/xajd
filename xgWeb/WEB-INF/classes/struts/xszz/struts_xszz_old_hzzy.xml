@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzForm" type="xgxt.form.XszzForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-家庭情况调查申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="hzzy_jtqkdc" 
+		   path="/hzzy_jtqkdc" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/hzzy_jtqkdc.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-家庭情况调查申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="hzzy_jtqkdcb" 
+		   path="/hzzy_jtqkdcb" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/hzzy_jtqkdcb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-家庭情况调查审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_hzzy_jtqkdc" 
+		   path="/auditing_hzzy_jtqkdc" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/auditing_hzzy_jtqkdc.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_hzzy_jtqkdc_one" 
+		   path="/auditing_hzzy_jtqkdc_one" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/auditing_hzzy_jtqkdc_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-绿色通道申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="hzzy_lstdsq" 
+		   path="/hzzy_lstdsq" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/hzzy_lstdsq.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-绿色通道申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="hzzy_lstdsqb" 
+		   path="/hzzy_lstdsqb" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/hzzy_lstdsqb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-绿色通道审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_hzzy_lstdsq" 
+		   path="/auditing_hzzy_lstdsq" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/auditing_hzzy_lstdsq.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_hzzy_lstdsq_one" 
+		   path="/auditing_hzzy_lstdsq_one" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/auditing_hzzy_lstdsq_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-关爱基金申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="hzzy_gajjsq" 
+		   path="/hzzy_gajjsq" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/hzzy_gajjsq.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-关爱基金申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="hzzy_gajjsqb" 
+		   path="/hzzy_gajjsqb" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/hzzy_gajjsqb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-关爱基金审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_hzzy_gajjsq" 
+		   path="/auditing_hzzy_gajjsq" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/auditing_hzzy_gajjsq.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_hzzy_gajjsq_one" 
+		   path="/auditing_hzzy_gajjsq_one" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/auditing_hzzy_gajjsq_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-贫困生困难补助申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="hzzy_pksknbz" 
+		   path="/hzzy_pksknbz" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/hzzy_pksknbz.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-贫困生困难补助申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="hzzy_pksknbzb" 
+		   path="/hzzy_pksknbzb" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/hzzy_pksknbzb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-贫困生困难补助审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_hzzy_pksknbz" 
+		   path="/auditing_hzzy_pksknbz" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/auditing_hzzy_pksknbz.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_hzzy_pksknbz_one" 
+		   path="/auditing_hzzy_pksknbz_one" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/auditing_hzzy_pksknbz_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-开发区慈善总会"金秋助学"申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="hzzy_jqzx" 
+		   path="/hzzy_jqzx" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/hzzy_jqzx.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-开发区慈善总会"金秋助学"申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="hzzy_jqzxb" 
+		   path="/hzzy_jqzxb" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/hzzy_jqzxb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 杭州职业技术学院-开发区慈善总会"金秋助学"审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_hzzy_jqzx" 
+		   path="/auditing_hzzy_jqzx" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/auditing_hzzy_jqzx.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_hzzy_jqzx_one" 
+		   path="/auditing_hzzy_jqzx_one" scope="request"
+		   type="xgxt.action.hzzyjsxy.XszzAction">  
+		     <forward name="success" path="/xszz/hzzy/auditing_hzzy_jqzx_one.jsp"/>   
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

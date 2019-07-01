@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="zjlgDtjsForm" type="xgxt.dtjs.zjlg.ZjlgDtjsForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+    <action path="/zjlg_dtjs_zbgl" forward="/zjlgDtjsZbgl.do?method=zbglManage"/>	<!-- 支部管理 -->
+    <action path="/zjlg_dtjs_pxxx" forward="/zjlgDtjsPxxx.do?method=pxxxManage"/>	<!-- 培训信息 -->
+    <action path="/zjlg_dtjs_jjfz" forward="/zjlgDtjsJjfz.do?method=jjfzManage"/>	<!-- 入党积极分子 -->
+    <action path="/zjlg_dtjs_ybdy" forward="/zjlgDtjsYbdy.do?method=ybdyManage"/>	<!-- 预备党员 -->
+    <action path="/zjlg_dtjs_zsdy" forward="/zjlgDtjsZsdy.do?method=zsdyManage"/>	<!-- 正式党员 -->
+    <action path="/zjlg_dtjs_zzgx" forward="/zjlgDtjsZzgx.do?method=zzgxManage"/>	<!-- 组织关系转接 -->
+    <action path="/zjlg_dtjs_zbxx" forward="/zjlgDtjsZbgl.do?method=zbxxManage"/>	<!-- 支部信息 -->
+    <action path="/zjlg_dtjs_zbwh" forward="/zjlgDtjsZbgl.do?method=zbwhManage"/>	<!-- 支部维护 -->
+    <action path="/zjlg_dtjs_zbdy" forward="/zjlgDtjsZbgl.do?method=zbdyManage"/>	<!-- 支部党员 -->
+    
+    <!-- 实际路径 -->
+        <action path="/zjlgDtjsZbgl" 
+        		parameter="method"  
+        		name="zjlgDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.zjlg.zbgl.ZbglAction">
+		        	        
+		<!-- 支部管理 -->
+		<forward name="zbglManage" path="/dtjs/zjlg/zbgl/zbglManage.jsp" />
+		<forward name="zbxxManage" path="/dtjs/zjlg/zbgl/zbxxManage.jsp" />
+		<forward name="zbwhManage" path="/dtjs/zjlg/zbgl/zbwhManage.jsp" />
+		<forward name="zbwhUpdate" path="/dtjs/zjlg/zbgl/zbwhUpdate.jsp" />
+		<forward name="zbwhManage" path="/dtjs/zjlg/zbgl/zbwhManage.jsp" />
+		<forward name="zbdyManage" path="/dtjs/zjlg/zbgl/zbdyManage.jsp" />
+		</action>
+
+ 	<!-- 实际路径 -->
+        <action path="/zjlgDtjsPxxx" 
+        		parameter="method"  
+        		name="zjlgDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.zjlg.pxxx.PxxxAction">		        
+		<!-- 培训信息 -->
+		<forward name="pxxxManage" path="/dtjs/zjlg/pxxx/pxxxManage.jsp" />
+		<forward name="pxxxUpdate" path="/dtjs/zjlg/pxxx/pxxxUpdate.jsp" />
+		</action>
+		
+	 <!-- 实际路径 -->
+        <action path="/zjlgDtjsJjfz" 
+        		parameter="method"  
+        		name="zjlgDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.zjlg.jjfz.JjfzAction">		        
+		<!-- 入党积极分子 -->
+		<forward name="jjfzManage" path="/dtjs/zjlg/jjfz/jjfzManage.jsp" />
+		<forward name="jjfzUpdate" path="/dtjs/zjlg/jjfz/jjfzUpdate.jsp" />
+		</action>
+		
+	<!-- 实际路径 -->
+        <action path="/zjlgDtjsYbdy" 
+        		parameter="method"  
+        		name="zjlgDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.zjlg.ybdy.YbdyAction">		        
+		<!-- 预备党员 -->
+		<forward name="ybdyManage" path="/dtjs/zjlg/ybdy/ybdyManage.jsp" />
+		<forward name="ybdyUpdate" path="/dtjs/zjlg/ybdy/ybdyUpdate.jsp" />
+		</action>
+
+	<!-- 实际路径 -->
+        <action path="/zjlgDtjsZsdy" 
+        		parameter="method"  
+        		name="zjlgDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.zjlg.zsdy.ZsdyAction">		        
+		<!-- 正式党员 -->
+		<forward name="zsdyManage" path="/dtjs/zjlg/zsdy/zsdyManage.jsp" />
+		<forward name="zsdyUpdate" path="/dtjs/zjlg/zsdy/zsdyUpdate.jsp" />
+		<forward name="lxrxxManage" path="/dtjs/zjlg/zsdy/lxrxxManage.jsp" />
+		</action>
+				
+    <!-- 实际路径 -->
+        <action path="/zjlgDtjsZzgx" 
+        		parameter="method"  
+        		name="zjlgDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.zjlg.zzgx.ZzgxAction">		        
+		<!-- 组织关系转接 -->
+		<forward name="zzgxManage" path="/dtjs/zjlg/zzgx/zzgxManage.jsp" />
+		<forward name="zzgxUpdate" path="/dtjs/zjlg/zzgx/zzgxUpdate.jsp" />
+		</action>
+			
+	</action-mappings>
+
+</struts-config>

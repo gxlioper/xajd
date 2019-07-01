@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="gyglForm" 	 type="xgxt.xsgygl.portallet.gyglForm"/>
+		<form-bean name="gyglTyForm" type="xgxt.xsgygl.GyglTyForm"/>
+		<form-bean name="comm_gyglForm" type="xgxt.xsgygl.csmzzyjsxy.GyglCsmzActionForm"/>
+	</form-beans>
+	
+	<action-mappings>
+		<action path="/XsGyXxGl" parameter="method"  name="gyglForm" scope="request"
+		        type="xgxt.xsgygl.portallet.gyglAction">
+		        <forward name="xsGyXxQuerry" path="/gygl/portallet/xxgyxx.jsp"></forward>
+		        <forward name="xsGyXxView" path="/gygl/portallet/xxgyxx_view.jsp"></forward>
+		</action>	
+		<action path="/XsGyXxGl_portallet" forward="/XsGyXxGl.do?method=xsGyXxQuerry"></action>		
+
+		<!-- ====================================我是传媒学院的============================================== -->
+		
+		<!-- 卫生检查 -->
+    	<action path="/zjcm_gygl_wsjc" 	forward="/zjcmGygl.do?method=wsjcManage"/>	<!-- 卫生检查 -->		
+    	<action path="/zjcm_gygl_wstj" 	forward="/zjcmGygl.do?method=wsjcTj"/>		<!-- 卫生检查统计 -->		
+    	
+    	<!-- 公寓报修 -->
+    	<action path="/zjcm_gygl_bxsq" 	forward="/zjcmGygl.do?method=gybxSq"/>		<!-- 申请 -->	
+    	<action path="/zjcm_gygl_bxsh" 	forward="/zjcmGygl.do?method=bxshManage"/>	<!-- 审核 -->	
+    	<action path="/zjcm_gygl_bxjg" 	forward="/zjcmGygl.do?method=bxjgManage"/>	<!-- 结果 -->
+    	<action path="/zjcm_gygl_bxtj" 	forward="/zjcmGygl.do?method=bxtjManage"/>	<!-- 统计 -->
+    	
+    	<!-- ====================================传媒OVER============================================== -->
+    	
+		<!-- ====================================我是通用版本的============================================== -->
+		
+		<!-- 宿舍分配 -->
+		<action path="/tybb_gygl_cxfp_ss" 	forward="/commGygl.do?method=cxfpSsManage"/>	<!-- 撤销分配（宿舍） -->
+    	
+    	<!-- 卫生检查 -->
+    	<action path="/ty_gygl_wsjc_cssz" 	forward="/commWsjc.do?method=csszManage"/>	<!-- 参数设置 -->
+    	<action path="/ty_gygl_wsjc_kbbb" 	forward="/commWsjc.do?method=kbbbManage"/>	<!-- 空白报表 -->
+    	<action path="/ty_gygl_wsjc_fslr" 	forward="/commWsjc.do?method=fslrManage"/>	<!-- 分数录入 -->
+    	<action path="/ty_gygl_wsjc_fscx" 	forward="/commWsjc.do?method=fscxManage"/>	<!-- 结果查询 -->
+<!--    <action path="/zjcm_gygl_wsjc" 	forward="/commWsjc.do?method=wsjcManage"/>	 特殊寝室 -->
+    	<action path="/ty_gygl_wsjc_fstj" 	forward="/commWsjc.do?method=fstjManage"/>	<!-- 结果统计 -->
+    	
+    	<action path="/ty_gygl_wsjc_xsfslr" forward="/commWsjc.do?method=xsfslrManage"/> <!-- 学生卫生分录入 -->
+    	<action path="/ty_gygl_wsjc_xsfsck" forward="/commWsjc.do?method=xsfsckManage"/> <!-- 学生卫生分查看 -->
+    	
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	<!-- 传媒学院 -->
+		<action path="/zjcmGygl" 
+        		parameter="method"  
+        		name="gyglTyForm" 
+        		scope="request"
+		        type="xgxt.xsgygl.zjcm.ZjcmGyglAction">		
+		                
+			<!-- 卫生检查 -->
+			<forward name="wsjcManage"    path="/gygl/zjcm/wsjcManage.jsp" />
+			<forward name="wsjcUpdate"    path="/gygl/zjcm/wsjcUpdate.jsp" />
+			<forward name="wsjcView"      path="/gygl/zjcm/wsjcView.jsp" />
+			<forward name="wsjcTj"        path="/gygl/zjcm/wsjcTj.jsp" />
+			<forward name="fyxxView"      path="/gygl/zjcm/fyxxView.jsp" />
+			
+			<!-- 公寓报修 -->
+			<forward name="gybxSq"    	path="/gygl/zjcm/gybx/gybxSq.jsp" />		<!-- 申请 -->
+			<forward name="bxshManage"  path="/gygl/zjcm/gybx/bxshManage.jsp" />	<!-- 审核 -->
+			<forward name="gybxSh"    	path="/gygl/zjcm/gybx/gybxSh.jsp" />
+			<forward name="bxjgManage"  path="/gygl/zjcm/gybx/bxjgManage.jsp" />	<!-- 结果 -->
+			<forward name="gybxPj"    	path="/gygl/zjcm/gybx/gybxPj.jsp" />		<!-- 评价 -->
+			<forward name="bxtjManage"  path="/gygl/zjcm/gybx/bxtjManage.jsp" />	<!-- 统计 -->
+			
+		</action>
+	
+		<!-- 中国地大 -->
+		
+    	<action path="/zgddGygl" 
+        		parameter="method"  
+        		name="gyglTyForm" 
+        		scope="request"
+		        type="xgxt.xsgygl.zgdzdx.GyglZgddAction">	
+		        
+			<!-- 房源库 图表统计 -->
+			<forward name="rykTbtj"    path="/gygl/zgdzdx/rykTbtj.jsp" />
+		</action>
+		
+		<!-- ====================================以下是通用本版，上面是单独版本============================================== -->
+		
+		<!-- 通用版本 -->	
+    	<action path="/commGygl" 
+        		parameter="method"  
+        		name="gyglTyForm" 
+        		scope="request"
+		        type="xgxt.xsgygl.comm.GyglCommAction">	
+		        
+			<!-- 撤销分配（宿舍） -->
+			<forward name="cxfpSsManage"    path="/gygl/comm/cxfpSsManage.jsp" />
+		</action>
+		
+		<!-- 卫生检查 -->	
+    	<action path="/commWsjc" 
+        		parameter="method"  
+        		name="gyglTyForm" 
+        		scope="request"
+		        type="xgxt.xsgygl.wsjc.GyglWsjcAction">	
+		        
+			<!-- 参数设置 -->
+			<forward name="csszManage"    path="/gygl/wsjc/csszManage.jsp" />
+			<!-- 空白报表 -->
+			<forward name="kbbbManage"    path="/gygl/wsjc/kbbbManage.jsp" />
+			<!-- 分数录入 -->
+			<forward name="fslrManage"    path="/gygl/wsjc/fslrManage.jsp" />
+			<!-- 寝室信息 -->
+			<forward name="qsInfo"    	  path="/gygl/wsjc/qsInfo.jsp" />
+			<!-- 学生信息 -->
+			<forward name="xsInfo"    	  path="/gygl/wsjc/xsInfo.jsp" />
+			<!-- 分数查询 -->
+			<forward name="fscxManage"    path="/gygl/wsjc/fscxManage.jsp" />
+			<!-- 分数统计 -->
+			<forward name="fstjManage"    path="/gygl/wsjc/fstjManage.jsp" />
+			<!-- 学生分数 -->
+			<forward name="xsfslrManage"  path="/gygl/wsjc/xsmk/xsfslrManage.jsp" />
+			<!-- 学生分数录入 -->
+			<forward name="xsfslrUpdate"  path="/gygl/wsjc/xsmk/xsfslrUpdate.jsp" />
+			<!-- 学生分数查看主界面 -->
+			<forward name="xsfsckManage"  path="/gygl/wsjc/xsmk/xsfsckManage.jsp" />
+			<!-- 学生分数查看详细 -->
+			<forward name="xsfsckUpdate"  path="/gygl/wsjc/xsmk/xsfsckUpdate.jsp" />
+			<!-- 学生分数统计选择 -->
+			<forward name="xsfsTj"  path="/gygl/wsjc/xsmk/xsfsTj.jsp" />
+		</action>
+		
+		<!-- 学生入住情况统计分析 -->
+		 <action path="/stuHouseInfoTjFx" forward="/comm_gygl.do?method=xsrzqk_Tj"/>
+		<!--实际的路径-->
+		<action path="/comm_gygl" parameter="method"  name="comm_gyglForm" scope="request"
+		        type="xgxt.xsgygl.comm.tj.GyglCommTjAction">
+		        <forward name="xsrzqk_TjFx" path="/gygl/comm/tj/xsrzqk_TjFx.jsp"></forward>  
+		</action>
+	</action-mappings>
+	
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources" />
+</struts-config>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyWhlgdxForm" type="xgxt.pjpy.whlgdx.PjpyWhlgdxForm"/>  
+	</form-beans>
+
+	<action-mappings>
+	<!--武汉理工大学评奖评优-->
+    <action 
+    	path="/pjpy_whlgdx" 
+    	type="xgxt.pjpy.whlgdx.PjpyWhlgdxAction"
+    	name="pjpyWhlgdxForm"
+    	parameter="method">    
+		<!--综合素质测评-->
+    	<forward name="zhszcp_search" path="/pjpy/whlgdx/whlgdx_zhszcp_main.jsp"/><!-- 查询首页面 -->
+    	<forward name="zhszcp_detail" path="/pjpy/whlgdx/whlgdx_zhszcp_detail.jsp"/><!-- 详细信息页面 -->  
+    	<forward name="zhszcp_add" path="/pjpy/whlgdx/whlgdx_zhszcp_add.jsp"/><!-- 综合素质测评增加页面 --> 
+		<!--先进班级-->
+    	<forward name="xjbj_search" path="/pjpy/whlgdx/whlgdx_xjbj_main.jsp"/><!-- 先进班级查询首页 --> 
+    	<forward name="xjbj_detail" path="/pjpy/whlgdx/whlgdx_xjbj_detail.jsp"/><!-- 先进班级详细信息页面 -->      	  	
+    	<forward name="xjbj_add" path="/pjpy/whlgdx/whlgdx_xjbj_add.jsp"/><!-- 先进班级增加 --> 
+		<!--参数设置-->
+		<forward name="viewFpb" path="/pjpy/whlgdx/whlgdx_cssz_mefpb.jsp"/><!-- 查看名额分配表 --> 
+		<forward name="tjssInit" path="/pjpy/whlgdx/whlgdx_cssz_tjsz.jsp"/><!-- 条件设置首页面 --> 	
+		<forward name="tjszAdd" path="/pjpy/whlgdx/whlgdx_cssz_tjszAdd.jsp"/><!-- 条件设置增加 -->		
+		<!--奖学金-->
+		<forward name="jxjApply" path="/pjpy/whlgdx/whlgdx_pjpy_apply.jsp"/><!-- 奖学金申请页面 -->
+		<forward name="prise_check_one" path="/pjpy/whlgdx/whlgdx_jxjsq_check.jsp"/><!-- 奖学金审核页面 -->
+		<!--荣誉称号-->
+		<forward name="rychApply" path="/pjpy/whlgdx/whlgdx_rych_apply.jsp"/><!-- 荣誉称号申请页面 -->		
+		<forward name="rychCheck" path="/pjpy/whlgdx/whlgdx_rych_check.jsp"/><!-- 荣誉称号单个审核页面 -->		
+		
+    </action>
+	</action-mappings>
+
+	<message-resources key="pjpyhbsf" parameter="xgxt.pjpy.whlgdx.pjpywhlgdx" />
+
+</struts-config>

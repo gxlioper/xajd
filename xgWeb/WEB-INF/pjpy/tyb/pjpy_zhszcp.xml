@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyZhszcpwhActionForm" type="xgxt.pjpy.tyb.zhszcp.action.PjpyZhszcpwhActionForm"/>
+		<form-bean name="pjpyZhcpjxjActionForm" type="xgxt.pjpy.tyb.zhszcp.action.PjpyZhcpjxjActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_tyb_zhszcpSjwh"           forward="/pjpyTybZhszcp.do?method=zhszcpSjwh"/>      <!-- 综测四级数据维护 -->
+	   	<action path="/pjpy_tyb_zhszcpAdd"            forward="/pjpyTybZhszcp.do?method=zhszcpAdd"/>       <!-- 综测四级数据增加 -->
+	   	<action path="/pjpy_tyb_zhszcpZdzx"         forward="/pjpyTybZhszcp.do?method=zhszcpZdzx"/>    <!-- 综测自定义字段展现 -->
+		<action path="/pjpy_tyb_zhszcpSjsh"        forward="/pjpyTybZhszcp.do?method=zhszcpSjsh"/>      <!-- 德育测评审核 -->	  
+		<action path="/pjpy_tyb_zhszcp"            forward="/pjpyTybZhszcp.do?method=zhszcpHz"/>          <!-- 综测总分统计查询 -->
+		<action path="/pjpy_tyb_countZccj"         forward="/pjpyTybZhszcp.do?method=countZccj"/>      <!-- 计算综测成绩 -->
+		<action path="/zccjtj"                     forward="/pjpyTybZhszcp.do?method=zccjtj"/>      <!-- 计算综测成绩 -->
+		<action path="/pjpy_tyb_picexport"          forward="/pjpyTybZhszcp.do?method=picexport"/>
+		
+		<action path="/pjpy_tyb_zcsjwh" forward="/pjpyZcsjwh.do?method=zcsjwh" />  <!-- 综测数据维护第二套 -->
+		<action path="/pjpy_tyb_zcsjwhQuery" forward="/pjpyZcsjwh.do?method=zcsjwhQuery" />  <!-- 综测数据维护第二套 查询 -->
+
+
+	    
+	    <!-- 实际路径 -->	
+		<action path="/pjpyTybZhszcp"
+				type="xgxt.pjpy.tyb.zhszcp.action.PjpyZhszcpwhAction"
+				name="pjpyZhszcpwhActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 实际跳转JSP路径 -->
+		<forward name="query"  path="/pjpy/tyb/zhszcp/zhcpsjQuery.jsp" />
+		<forward name="zhszcpAdd"  path="/pjpy/tyb/zhszcp/zhszcpAdd.jsp"/>
+		<forward name="zhszcpModi"  path="/pjpy/tyb/zhszcp/zhszcpModi.jsp"/>		
+		<forward name="zhszcpSh"  path="/pjpy/tyb/zhszcp/zhszcpSh.jsp" />
+		<forward name="zhszcpZdzx" path="/pjpy/tyb/zhszcp/zhszcpZdzx.jsp"/>
+		<forward name="zhszcpShOne"  path="/pjpy/tyb/zhszcp/zhszcpShOne.jsp"/>
+		<forward name="zhszcpHz"   path="/pjpy/tyb/zhszcp/zhszcpHz.jsp"/>
+		<forward name="zccjtj"   path="/pjpy/tyb/zhszcp/zhszcpCjtj.jsp"/>
+		</action>
+		
+		
+		<action path="/zhcpjxjsq" forward="/pjpyTybZhcpjxj.do?method=zhcpjxjSq"/>      <!-- 综合测评奖学金申请 -->
+		<action path="/zhcpjxjsh" forward="/pjpyTybZhcpjxj.do?method=zhcpjxjSh"/>      <!-- 综合测评奖学金审核 -->
+		<action path="/zhcpjxjcx" forward="/pjpyTybZhcpjxj.do?method=zhcpjxjCx"/>      <!-- 综合测评奖学金查询 -->
+		<action path="/zhcpjxjsb" forward="/pjpyTybZhcpjxj.do?method=zhcpjxjSb"/>      <!-- 综合测评奖学金上报 -->
+		
+		 <!-- 实际路径 -->	
+		<action path="/pjpyTybZhcpjxj"
+				type="xgxt.pjpy.tyb.zhszcp.action.PjpyZhcpjxjAction"
+				name="pjpyZhcpjxjActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 实际跳转JSP路径 -->		
+		<forward name="zhcpjxjsq"  path="/pjpy/tyb/zhszcp/zhcpjxjsq.jsp"/>
+		<forward name="zhcpjxjsh"  path="/pjpy/tyb/zhszcp/zhcpjxjsh.jsp" />
+		<forward name="zhcpjxjcx"  path="/pjpy/tyb/zhszcp/zhcpjxjcx.jsp" />
+		<forward name="zhcpjxjView" path="/pjpy/tyb/zhszcp/zhcpjxjView.jsp" />
+		<forward name="zhcpjxjSb" path="/pjpy/tyb/zhszcp/zhcpjxjsb.jsp" />
+		
+		</action>
+		
+		<action path="/pjpyZcsjwh"
+				type="xgxt.pjpy.tyb.zhszcp.action.PjpyZcsjwhAction"
+				name="pjpyZhszcpwhActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 实际跳转JSP路径 -->		
+		<forward name="zcsjwh_second"  path="/pjpy/tyb/zcsjwh/zcsjwh_second.jsp"/>
+		
+		</action>
+		
+	</action-mappings>
+
+</struts-config>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	
+	<form-beans>
+		<form-bean name="qxxscxForm" type="com.zfsoft.xgxt.xsxx.qxxscx.QxxscxForm"></form-bean>
+	</form-beans>
+	
+	<action-mappings>	
+		<!-- 展现路径 -->
+		<action path="/xsxx_zjdx_qxxscx" forward="/xsxx_zjdx_qxxscxgl.do?method=getQxxscxList"></action><!-- 查询页面 -->
+		<!-- 实际路径 -->	
+		<action name="qxxscxForm" 
+				parameter="method" 
+				path="/xsxx_zjdx_qxxscxgl"
+				scope="request"	
+				type="com.zfsoft.xgxt.xsxx.qxxscx.QxxscxAction">
+			<forward name="getQxxscxList" path="/xsgzgl/xsxx/qxxscx/qxxscx.jsp" /><!-- 查询页面  -->
+		</action>
+	</action-mappings>
+	
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="tbxsForm" type="com.zfsoft.xgxt.zdxljk.tbxs.TbxsModel" />
+    	<form-bean name="ecmmForm" type="com.zfsoft.xgxt.zdxljk.ecmm.EcmmModel" />
+	</form-beans>
+
+	<action-mappings>
+  		<action path="/zdxljk_tbxs" forward="/zdxljkTbxs.do?method=tbxsList"/>	
+  		<action path="/zdxljk_ecmm" forward="/zdxljkEcmm.do?method=ecmmList"/>	
+  		
+		<action path="/zdxljkTbxs" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.zdxljk.tbxs.TbxsAction" 
+    			name="tbxsForm"
+    			parameter="method">
+    		<forward name="ecdl" path="/xsgzgl/zdxljk/tbxs/ecdl.jsp"/>
+    		<forward name="tbxsList" path="/xsgzgl/zdxljk/tbxs/tbxsList.jsp"/>
+    		<forward name="addThjl" path="/xsgzgl/zdxljk/tbxs/addThjl.jsp"/>
+    		<forward name="editThjl" path="/xsgzgl/zdxljk/tbxs/editThjl.jsp"/>
+    		<forward name="viewThjl" path="/xsgzgl/zdxljk/tbxs/viewThjl.jsp"/>
+    		<forward name="szgz" path="/xsgzgl/zdxljk/tbxs/szgz.jsp"/>
+		</action>
+		
+		<action path="/zdxljkEcmm" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.zdxljk.ecmm.EcmmAction" 
+    			name="ecmmForm"
+    			parameter="method">
+   			<forward name="ecmmList" path="/xsgzgl/zdxljk/ecmm/ecmmList.jsp"/>
+   			<forward name="addEcmm" path="/xsgzgl/zdxljk/ecmm/addEcmm.jsp"/>
+   			<forward name="editEcmm" path="/xsgzgl/zdxljk/ecmm/editEcmm.jsp"/>
+   			<forward name="initEcmm" path="/xsgzgl/zdxljk/ecmm/initEcmm.jsp"/>
+		</action>
+		
+		
+	</action-mappings>
+</struts-config>

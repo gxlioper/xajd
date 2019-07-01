@@ -1,0 +1,1385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+		<form-bean name="jyglForm" type="xgxt.base.form.JyglForm" />
+		<form-bean name="xxxForm" type="xgxt.base.form.XxxForm" />
+		<form-bean name="xsjyglForm" type="xgxt.jygl.form.JyglForm" />
+		<form-bean name="zjgxJyxxForm" type="xgxt.form.ZjgxJyxxForm" />
+		<form-bean name="jhzyForm" type="xgxt.jygl.form.JhzyForm" />
+		<form-bean name="bdzblForm" type="xgxt.jygl.form.BdzblForm" />
+		<form-bean name="syxxForm" type="xgxt.jygl.jyglnbty.SyxxForm" />
+		<form-bean name="njjsJyglForm" type="xgxt.jygl.njjs.NjjsJyglForm" />
+	</form-beans>
+
+	<global-forwards />
+	<action-mappings>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——毕业生信息上报数据传入 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="bysxxapply"
+			path="/bysjbxxb_input" scope="request" 
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/bysjbxxb.jsp" />
+			<forward name="success2" path="/jygl/ynys/bysjbxxb.jsp" />
+			<forward name="success3" path="/jygl/dzxsxxsb.jsp"/>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生信息保存 >>>>>>>>>>>>>>>>>>>>-->
+		<action parameter="bysxxapply" name="commanForm"
+			path="/bysjbxxbSave" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/bysjbxxb.jsp" />
+			<forward name="success2" path="/jygl/ynys/bysjbxxb.jsp" />
+			<forward name="success3" path="/jygl/dzxsxxsb.jsp"/>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生信息查询窗口弹出并查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action parameter="JyglQueryStuInfo" name="commanForm"
+			path="/jygl_queryStuInfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/stu_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生信息查询投送 >>>>>>>>>>>>>>>>>>>>-->
+		<action parameter="bysxxapply" name="commanForm"
+			path="/bysjbxx_query_send" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/bysjbxxb.jsp" />
+			<forward name="success2" path="/jygl/ynys/bysjbxxb.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生信息查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="JyglDataSearch"
+			path="/bysjbxxquerydododo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/bysjbxxb_query.jsp" />
+			<forward name="success2"
+				path="/jygl/ynys/bysjbxxb_query.jsp" />
+		</action>
+
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生信息删除 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="JyglBysjbxxbDel"
+			path="/JyglBysjbxxbDel" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/bysjbxxb_query.jsp" />
+			<forward name="success2"
+				path="/jygl/ynys/bysjbxxb_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生信息批量删除 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="JyglBysjbxxbDel"
+			path="/JyglBysjbxxbDelall" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/bysjbxxb_query.jsp" />
+			<forward name="success2"
+				path="/jygl/ynys/bysjbxxb_query.jsp" />
+		</action>
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生查看详细信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="JyglViewMoreinfo"
+			path="/JyglViewMoreinfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/bysjbxxb_morequery.jsp" />
+			<forward name="successsh" path="/jygl/xsxxsh.jsp" />
+			<forward name="success2"
+				path="/jygl/ynys/bysjbxxb_morequery.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生信息修改页面登陆 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="JyglInfoUpdate"
+			path="/turnJyglInfoUpdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/bysjbxxb_update.jsp" />
+			<forward name="success2"
+				path="/jygl/ynys/bysjbxxb_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生信息修改提交 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="JyglInfoUpdate"
+			path="/JyglInfoUpdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/bysjbxxb_update.jsp" />
+			<forward name="success2"
+				path="/jygl/ynys/bysjbxxb_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生信息导出 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglexpData"
+			path="/jyglxsjbxxbDataExport" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——就业协议数据传入 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyInput"
+			path="/jyxy_input" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_input.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_input.jsp" />
+			<forward name="success2" path="/jygl/ynys/jyxy_input.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——毕业生信息弹出窗口然后查询 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyTurnInfo"
+			path="/jyxyTurnInfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jygl_xsjbxx_query.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_input.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——毕业生信息发送到页面 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyInput"
+			path="/inputJyxyStuInfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_input.jsp" />
+			<forward name="success1" path="/jygl/cgxys_input.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_input.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——就业协议查询 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="JyxyDataSearch"
+			path="/JyxyDataSearch" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_query_sh.jsp" />
+			<forward name="success2" path="/jygl/ynys/jyxy_query.jsp" />
+		</action>
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—就业协议保存 逻辑还未判断>>>>>>>>>>>>>>>>>>>>-->
+		<action parameter="jyxyInput" name="commanForm" path="/savejyxy"
+			scope="request" type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_input.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_input.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—就业协议详细信息窗口>>>>>>>>>>>>>>>>>>>>-->
+		<action parameter="JyglJyxyViewMoreinfo" name="commanForm"
+			path="/JyglJyxyViewMoreinfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_morequery.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_morequery.jsp" />
+			<forward name="success2"
+				path="/jygl/ynys/jyxy_morequery.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——就业协议删除 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="JyxyDataSearch"
+			path="/JyglJyxyDel" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_query_sh.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——就业协议辅导员审核窗口弹出 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglJyxyFdysh"
+			path="/turnjyxyfdysh" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_fdysh.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_fdysh.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——就业协议辅导员审核提交 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglJyxyFdysh"
+			path="/jyglJyxyFdysh" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_fdysh.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_fdysh.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——就业协议学校审核窗口弹出 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglJyxyXxsh"
+			path="/turnjyxyxxsh" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_xxsh.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_xxsh.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——就业协议学校审核提交 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglJyxyXxsh"
+			path="/jyglJyxyXxsh" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_xxsh.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_xxsh.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——就业协议修改窗口弹出——及修改 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglJyxyUpdate"
+			path="/turnjyxyupdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_update.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——就业协议修改内容刷新 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglJyxyUpdate"
+			path="/refreshjyxyupdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——就业协议修改内容保存>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglJyxyUpdate"
+			path="/savejyxyupdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction"> 
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_update.jsp" />
+			<forward name="success2" path="/jygl/ynys/jyxy_update.jsp" />
+			<forward name="successdz" path="/jygl/jyxydz_update.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—就业协议信息导出 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglexpData"
+			path="/jygljyxyDataExport" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—就业协议审核结果查询——页面打开 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglJyxyResultQuery"
+			path="/jyglJyxyResultQuery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_result.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—就业协议书领取登记查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglJyxyLqdj"
+			path="/jygl_xylqdj" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/zgmy/jyxyslqdj_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—就业协议书领取登记查询-详细信息查看 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="viewJyxyLqdjInfo"
+			path="/viewJyxyLqdjInfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/zgmy/jyxyslqdj_viewmore.jsp" />
+		</action>
+        <!--<<<<<<<<<<<<<<<<<<<< 就业管理—就业协议书导出 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglexpData"
+			path="/jyxyslqdjDataExport" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+         <!--<<<<<<<<<<<<<<<<<<<< 就业管理—就业协议补领申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyBlsq"
+			path="/jygl_xyblsq" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgmy/jyxyblsq.jsp" />
+		</action>
+         <!--<<<<<<<<<<<<<<<<<<<< 就业管理—就业协议补领申请查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyBlsqQuery"
+			path="/jygl_xyblgl" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgmy/jyxyblsq_query.jsp" />
+		</action>
+        <!--<<<<<<<<<<<<<<<<<<<< 就业管理—就业协议补领申请-详细查看-审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyBlsqViewMore"
+			path="/jyxyBlsqViewMore" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgmy/jyxyblsq_viewmore.jsp" />
+			<forward name="xysh" path="/jygl/zgmy/jyxyblsq_xysh.jsp" />
+			<forward name="xxsh" path="/jygl/zgmy/jyxyblsq_xxsh.jsp" />
+		</action>
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业生信息上报 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="ahgc_jyglBysxxSb"
+			path="/ahgc_jyglBysxxSb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/ahgcjygl/bysxxsb.jsp" />
+		</action>
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向页面打开 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="byqxInput" path="/byqxopen"
+			scope="request" type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/byqx_input.jsp" />
+			<forward name="success2" path="/jygl/zzsf/byqx_input.jsp" />
+			<forward name="success3" path="/jygl/ynys/byqx_input.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向弹出学生信息查询窗口 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyTurnInfo"
+			path="/byqxTurnInfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/byqx_xsjbxx_query.jsp" />
+			<forward name="success2"
+				path="/jygl/zzsf/byqx_xsjbxx_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向 发送学生基本信息过去 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="byqxInput"
+			path="/inputByqxStuInfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/byqx_input.jsp" />
+			<forward name="success2" path="/jygl/zzsf/byqx_input.jsp" />
+			<forward name="success3" path="/jygl/ynys/byqx_input.jsp" />
+			<forward name="bysjytj" path="/jygl/zgldgx/bysjytjb_add.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向信息保存 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="byqxInput" path="/savebyqx"
+			scope="request" type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/byqx_input.jsp" />
+			<forward name="success2" path="/jygl/zzsf/byqx_input.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向查询页面打开 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="byqxQuery"
+			path="/openbyqxqueryweb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/byqx_query.jsp" />
+			<forward name="success2" path="/jygl/zzsf/byqx_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="byqxQuery"
+			path="/byqxquery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/byqx_query.jsp" />
+			<forward name="success2" path="/jygl/zzsf/byqx_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向详细信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="byqxViewMoreQuery"
+			path="/viewmorebyqxinfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/byqx_morequery.jsp" />
+			<forward name="success2"
+				path="/jygl/zzsf/byqx_morequery.jsp" />
+			<forward name="success3"
+				path="/jygl/ynys/byqx_morequery.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向删除 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="byqxQuery"
+			path="/byqxdelete" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/byqx_query.jsp" />
+			<forward name="success2" path="/jygl/zzsf/byqx_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向修改 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglByqxUpdate"
+			path="/jyglByqxUpdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/byqx_update.jsp" />
+			<forward name="success2" path="/jygl/zzsf/byqx_update.jsp" />
+			<forward name="success3" path="/jygl/ynys/byqx_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向导出 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglexpData"
+			path="/jyglbyqxDataExport" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—毕业去向审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglByqxSh"
+			path="/jyglByqxSh" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/byqx_xxsh.jsp" />
+			<forward name="success2" path="/jygl/zzsf/byqx_xxsh.jsp" />
+		</action>
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询教师登记 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxTeaInput"
+			path="/openteainputweb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_teacherinput.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询教师登记 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxTeaInput"
+			path="/jyzx_xszxyy_save" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_teacherinput.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—学生咨询预约 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxYuyuequery"
+			path="/jyzx_xszxyy" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_xszxyy.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—学生咨询预约-咨询师查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxYuyuequery"
+			path="/jyzx_zxsquery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_xszxyy.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—学生咨询预约-咨询师删除 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxYuyuequery"
+			path="/jyzx_zxsdel" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_xszxyy.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—学生咨询预约-咨询师详细信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxViewMoreInfo"
+			path="/jyzxViewMoreInfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_zxs_morequery.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—学生咨询预约-咨询师修改 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxZxsUpdate"
+			path="/jyzxZxsUpdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_zxs_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—学生咨询预约-咨询师预约(页面打开) >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxZxsYuyue"
+			path="/jyzxZxsYuyue" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_zxyuyue.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—学生咨询预约-咨询师预约(提交预约申请) >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxZxsYuyue"
+			path="/saveYuyue" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_zxyuyue.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询预约管理-页面打开 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxZxyygl"
+			path="/openZxyyglWeb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_zxyygl.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询预约管理-查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxZxyygl"
+			path="/zxyyglquery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_zxyygl.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询预约管理-删除 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxZxyygl"
+			path="/zxyygldel" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_result.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询预约管理-看详细信息 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zxyyglViewMoreInfo"
+			path="/zxyyglViewMoreInfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/jyzx_zxyygl_morequery.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询预约管理-回复预约 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="answerYuyue"
+			path="/answerYuyue" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_answerYuyue.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询预约管理-修改预约弹出窗口 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="updateYuyue"
+			path="/open_updateYuyue" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/jyzx_zxyuyue_update.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询预约管理-修改预约 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="updateYuyue"
+			path="/updateYuyue" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/jyzx_zxyuyue_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询预约管理-预约结果查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzxResultQuery"
+			path="/jyzxResultQuery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzx_result.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—咨询预约管理-学生回复 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="answerYuyueStu"
+			path="/answerYuyueStu" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/jyzx_answerYuyue_stu.jsp" />
+		</action>
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——文件上传 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglgetfile"
+			path="/jyglgetfile" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jygl_getfile.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——文件删除>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jygldelfile"
+			path="/jygldelfile" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jygl_getfile.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——教师表格下载>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglteafiledown"
+			path="/jyglteafiledown" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jygl_teacherfile.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——学生表格下载>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglstufiledown"
+			path="/jyglstufiledown" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jygl_studentfile.jsp" />
+		</action>
+
+
+
+
+
+
+
+
+
+		<!-- 和上面相关联的还没改的 -->
+		<action name="commanForm" parameter="postStuChkOne"
+			path="/postStuChkOne" scope="request"
+			type="xgxt.action.SubConfAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/sjcz/post_stu_check_one.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历页面打开>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="grjlApply"
+			path="/grjlApply" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_input.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历弹出学生信息查询窗口>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyTurnInfo"
+			path="/grjlTurnInfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_xsjbxx_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——个人简历学生信息弹出窗口然后查询 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyTurnInfo"
+			path="/grjlquerygo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_xsjbxx_query.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历学生信息填充 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="grjlApply"
+			path="/stuinfo_input" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_input.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历保存 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="grjlApply" path="/savegrjl"
+			scope="request" type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_input.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历审核页面打开  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zjlgjyxyexp"
+			path="/dataExportzjlg" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历审核页面打开  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="grjlQuerySh"
+			path="/grjlOpenWeb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_query_sh.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历审核页面查询数据  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="grjlQuerySh"
+			path="/grjlquerysh" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_query_sh.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历审核窗口弹出  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglGrjlsh"
+			path="/grjlshwindow" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_sh.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历审核提交  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglGrjlsh"
+			path="/grjlshsave" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_sh.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历批量审核通过  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="grjlQuerySh"
+			path="/grjlshallpass" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_query_sh.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历详细查看  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="grjlViewMoreinfo"
+			path="/grjlViewMoreinfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_more_query.jsp" />
+		</action>
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历删除  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="grjlQuerySh"
+			path="/JyglGrjlDel" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_query_sh.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历修改-学校  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="grjlUpdate"
+			path="/grjlUpdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－个人简历结果查询  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="grjlResultQuery"
+			path="/grjlResultQuery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/grjl_result.jsp" />
+		</action>
+
+
+
+
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－政策文件页面显示  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="showzcwjlist"
+			path="/zcwjfb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zcwjfb.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－政策文件详细信息  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="showmorezcwj"
+			path="/showmorezcwj" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/show_morezcwj.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－政策文件发布  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="showzcwjlist"
+			path="/savezcwj" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zcwjfb.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－政策文件删除  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="showzcwjlist"
+			path="/zcwjdel" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zcwjfb.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－政策文件修改  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zcwjupdate"
+			path="/zcwjupdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zcwj_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－政策文件查询  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zcwjquery"
+			path="/zcwjquery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zcwj_query.jsp" />
+		</action>
+
+
+
+
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息发布页面打开  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxfb" path="/zpxxfb"
+			scope="request" type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxxfb.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息保存  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxfb" path="/zpxxsave"
+			scope="request" type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxxfb.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息查询  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxquery"
+			path="/zpxxquery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxx_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息的详细查看  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxViewMoreinfo"
+			path="/zpxxViewMoreinfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxx_morequery.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息删除  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxquery" path="/zpxxdel"
+			scope="request" type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxx_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息修改  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxupdate"
+			path="/zpxxupdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxx_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息-个人简历投递页面打开  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxSendGrjl"
+			path="/opensendgrjlweb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxx_sendgrjl.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息-投简历  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxSendGrjl"
+			path="/sendgrjl" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxx_sendgrjl.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息-企业查询个人简历  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxResultQuery"
+			path="/seegrjl" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxx_result.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息-企业查询个人简历——删除  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxResultQuery"
+			path="/deletegrjlinfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxx_result.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息-企业查询个人简历——个人详细信息  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxViewMoreGrjlInfo"
+			path="/zpxxViewMoreGrjlInfo" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/zpxx_grjl_morequery.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息-企业意见反馈——页面打开、意见保存  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxReturnMess"
+			path="/zpxxReturnMess" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxx_returnmess.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息-企业意见反馈查询——页面打开、查询  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxReturnMessQuery"
+			path="/zpxxReturnMessQuery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/zpxx_returnmess_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息-企业意见反馈查询——删除  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxReturnMessQuery"
+			path="/zpxxReturnMessDel" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/zpxx_returnmess_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－招聘信息-企业意见反馈查询——详细信息  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zpxxReturnMessMoreQuery"
+			path="/messmorequery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/zpxx_mess_morequery.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理－毕业生信息上报时学生基本信息查询  >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuquery" path="/stuquery"
+			scope="request" type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/stu_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——跳转代码库查询器 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="turndmkqueryjsp"
+			path="/turndmkqueryjsp" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/dmk_query.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——代码库查询器 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="dmkquery" path="/dmkquery"
+			scope="request" type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/dmk_query.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——模块维护——就业招聘维护——打开页面 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzpWeiHu"
+			path="/openJyzpweihuWeb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzp_weihu.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——模块维护——就业招聘维护——指定用户 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzpWeiHu"
+			path="/adduser_jyzp" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzp_weihu.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——模块维护——就业招聘维护——删除用户 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyzpWeiHu"
+			path="/deleteuser_jyzp" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyzp_weihu.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——模块维护——就业协议维护——打开页面 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyWeiHu"
+			path="/openJyxyweihuWeb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_weihu.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——模块维护——就业协议维护——指定用户 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyWeiHu"
+			path="/adduser_jyxy" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_weihu.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——模块维护——就业协议维护——删除用户 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxyWeiHu"
+			path="/deleteuser_jyxy" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxy_weihu.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——模块维护——用户操作明细——页面打开 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="userczmx"
+			path="/openCzmxWeb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jygl_userczmx.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——模块维护——用户操作明细——查询 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="userczmx"
+			path="/userczmxquery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jygl_userczmx.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——模块维护——用户操作明细——删除 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="userczmx"
+			path="/userczmxdelete" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jygl_userczmx.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< 就业管理——模块维护——用户操作明细——清空当前数据 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="userczmx"
+			path="/userczmxdeleteall" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jygl_userczmx.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<  就业管理——模块维护——用户操作明细—导出 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyglexpData"
+			path="/czmxDataExport" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/about:blank" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<  就业管理——统计分析———数据一键统计 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="onebutton"
+			path="/openonebuttonweb" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/one_button.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<  就业管理——统计分析———就业情况统计 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyqktj"
+			path="/jyqktj" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyqktj.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 就业网  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<!--<<<<<<<<<<<<<<<<<<<<  就业管理——学生就业信息—学生就业信息查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuinfo"
+			path="/stuxsjyxxquery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/stu_xsjyxx.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<  就业管理——学生就业信息—学生就业信息录入 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuinfoInput"
+			path="/stuxsjyxxinput" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/nblg/add_stujyxxinfo.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<  就业管理——学生就业信息—学生就业信息详细查看 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuinfomorequery"
+			path="/stuxsjyxxmorequery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/nblg/stujyxxinfo_morequery.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<  就业管理——学生就业信息—学生就业信息修改 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuinfoUpdate"
+			path="/stuinfoUpdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success"
+				path="/jygl/nblg/update_stujyxxinfo.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<<  就业管理——学生就业信息—学生就业信息录入—学生信息查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="stuinfoquery"
+			path="/stuinfoquery" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/nblg/stuinfoquery.jsp" />
+		</action>
+
+		<!--<<<<<<<<<<<<<<<<<<<<  就业管理——学生就业信息——学生就业统计 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="xsjytj" path="/xsjytj"
+			scope="request" type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/nblg/xsjytj.jsp" />
+		</action>
+	    <!--<<<<<<<<<<<<<<<<<<<< 就业管理－就业促进会  >>>>>>>>>>>>>>>>>>>>-->
+	<action path="/jycjh_hyxx" forward="/jyglInfo.do?method=searchHyxx"></action>
+	<action path="/jycjh_hdqk" forward="/jyglInfo.do?method=searchHdqk"></action>
+    <action
+      attribute="xsjyglForm"
+      name="xsjyglForm"
+      parameter="method"
+      path="/jyglInfo"
+      scope="request"
+      type="xgxt.jygl.action.JyglInfoAction">
+      <forward name="hyxx" path="/jygl/jycjh_hyxx.jsp" />
+      <forward name="member_modi"
+				path="/jygl/jycjh_hyxx_modi.jsp" />
+			<forward name="member_insert"
+				path="/jygl/jycjh_hyxx_add.jsp" />
+			<forward name="member_detail"
+				path="/jygl/jycjh_hyxx_view.jsp" />
+			<forward name="hdqk_index"
+				path="/jygl/jycjh_hdqk_index.jsp" />
+			<forward name="hdqk_add"
+				path="/jygl/jycjh_hdqk_add.jsp" />
+			<forward name="hdqk_view"
+				path="/jygl/jycjh_hdqk_view.jsp" />
+			<forward name="hdqk_modi"
+				path="/jygl/jycjh_hdqk_modi.jsp" />
+     </action>
+     <!-- 单位信息录入-->
+		<action name="commanForm" parameter="dwxxInput"
+			path="/dwxxInput" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/nblg/add_dwxx.jsp" />
+			<forward name="successgo" path="/jygl/nblg/view_dwxx.jsp" />
+			<forward name="successupdate" path="/jygl/nblg/update_dwxx.jsp" />
+			<forward name="sendgo" path="/jygl/zpxxfb.jsp" />
+		</action>
+     <!--单位信息管理 -->
+		<action name="commanForm" parameter="dwxxmkwh"
+			path="/dwxxmkwh" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/dwxxmkgl.jsp" />
+		</action>
+		<!-- 单位来访信息登记    地质大学-->
+		<action name="commanForm" parameter="dwlfxx"
+			path="/dwlfxx" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/dwlfxxdj.jsp" />
+			<forward name="sect" path="/jygl/dwlfxxcx.jsp" />
+			<forward name="updatesuss" path="/dwlfxx.do?doType=sect" />
+		</action>
+		<!-- 单位信息更新-->
+		<action name="commanForm" parameter="dwxxUpdate"
+			path="/dwxxUpdate" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/nblg/update_dwxx.jsp" />
+		</action>
+		<!-- 单位信息更新-->
+		<action name="commanForm" parameter="zpxxdw"
+			path="/zpxxdw" scope="request" 
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zpxxfbdw.jsp" />
+		</action>
+		<!-- 学生信息审核-->
+		<action name="commanForm" parameter="xsxxsh"
+			path="/xsxxsh" scope="request" 
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/xsxxsh.jsp" />
+			<forward name="successdz" path="/jygl/bysjbxxb_query.jsp" />
+		</action>
+				<!--<<<<<<<<<<<<<<<<<<<<  就业管理——学生就业信息——签约情况对比统计 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="obtainEmploy_stati" path="/obtainEmploy_stati"
+			scope="request" type="xgxt.action.StatisicalAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/obtainEmploy_stati.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<（浙江工商）  就业管理——就业信息—就业信息统计维护 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="zjgxJyxxForm" parameter="jyxxtjwh"
+			path="/jyxxtjwh" scope="request"
+			type="xgxt.jygl.action.ZjgsjyxxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zjgsjyxx_query.jsp" />
+			<forward name="successadd" path="/jygl/jyxxtj_input.jsp" />
+			<forward name="success1" path="/jygl/jyxxtj_update.jsp" />
+			<forward name="success2" path="/jygl/jyxxtj_view.jsp" />
+		</action>
+			<!--<<<<<<<<<<<<<<<<<<<<（浙江工商）  就业管理——重购协议书 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="zjgxJyxxForm" parameter="cgjyxys"
+			path="/cgjyxys" scope="request"
+			type="xgxt.jygl.action.ZjgsjyxxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/cgxys_query.jsp" />
+			<forward name="successadd" path="/jygl/cgxys_input.jsp" />
+			<forward name="success1" path="/jygl/cgxys_update.jsp" />
+			<forward name="success2" path="/jygl/cgxys_view.jsp" />
+		</action>
+		
+		<action name="zjgxJyxxForm" parameter="jyxysbbsq"
+			path="/jyxysbbsq" scope="request"
+			type="xgxt.jygl.action.ZjgsjyxxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="jyxysbbsq" path="/jygl/jyxysbbsq.jsp" />
+			<forward name="jyxysbbsqview" path="/jygl/jyxysbbsqview.jsp" />
+			<forward name="jyxysbbxysbh" path="/jygl/jyxysbbxysbh.jsp" />
+		</action>
+		<action name="zjgxJyxxForm" parameter="jyxysbbgl"
+			path="/jyxysbbgl" scope="request"
+			type="xgxt.jygl.action.ZjgsjyxxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="jyxysbbcx" path="/jygl/jyxysbbSearch.jsp" />
+		</action>
+			<!--<<<<<<<<<<<<<<<<<<<<中国劳动关系学院  就业管理——统计分析———毕业生生源统计 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="byssytj"
+			path="/byssytj" scope="request"
+			type="xgxt.jygl.action.JyglCurrentAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgldgx/byssytj.jsp" />
+		</action>
+			<!--<<<<<<<<<<<<<<<<<<<<中国劳动关系学院  就业管理——院系级专业介绍 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="yxjzyjs"
+			path="/yxjzyjs" scope="request"
+			type="xgxt.jygl.action.JyglCurrentAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgldgx/yxjzyjs_query.jsp" />
+			<forward name="add" path="/jygl/zgldgx/yxjzyjs_add.jsp" />
+			<forward name="view" path="/jygl/zgldgx/yxjzyjs_view.jsp" />
+			<forward name="update" path="/jygl/zgldgx/yxjzyjs_update.jsp" />
+			<forward name="shenhe" path="/jygl/zgldgx/yxjzyjs_shenhe.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<中国劳动关系学院  就业管理——院系级专业介绍 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="bysjcxxtj"
+			path="/bysjcxxtj" scope="request"
+			type="xgxt.jygl.action.JyglCurrentAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgldgx/bysjcxxtj.jsp" />
+			<forward name="expdata" path="/about:blank" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<中国劳动关系学院  就业管理——院系级专业介绍 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="bysbmtj"
+			path="/bysbm" scope="request"
+			type="xgxt.jygl.action.JyglCurrentAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgldgx/bysbm_query.jsp" />
+			<forward name="add" path="/jygl/zgldgx/bysbm_add.jsp" />
+			<forward name="view" path="/jygl/zgldgx/bysbm_view.jsp" />
+			<forward name="update" path="/jygl/zgldgx/bysbm_update.jsp" />
+			<forward name="shenhe" path="/jygl/zgldgx/bysbm_shenhe.jsp" />
+		</action>
+		<action name="commanForm" parameter="zphcs"
+			path="/zphcs" scope="request"
+			type="xgxt.jygl.action.JyglCurrentAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgldgx/zphcs_query.jsp" />
+			<forward name="add" path="/jygl/zgldgx/zphcs_add.jsp" />
+			<forward name="update" path="/jygl/zgldgx/zphcs_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<中国劳动关系学院  就业管理——就业意向调查 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyyxdc"
+			path="/jyyxdcb" scope="request"
+			type="xgxt.jygl.action.JyglCurrentAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgldgx/jyyxdc_query.jsp" />
+			<forward name="add" path="/jygl/zgldgx/jyyxdc_add.jsp" />
+			<forward name="view" path="/jygl/zgldgx/jyyxdc_view.jsp" />
+			<forward name="update" path="/jygl/zgldgx/jyyxdc_update.jsp" />
+			<forward name="successtj" path="/jygl/zgldgx/jyyxdctj_query.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<中国劳动关系学院  就业管理——毕业生过就业推荐表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="bysjytjb"
+			path="/bysjytjb" scope="request"
+			type="xgxt.jygl.action.JyglCurrentAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgldgx/bysjytjb_query.jsp" />
+			<forward name="add" path="/jygl/zgldgx/bysjytjb_add.jsp" />
+			<forward name="view" path="/jygl/zgldgx/bysjytjb_view.jsp" />
+			<forward name="update" path="/jygl/zgldgx/bysjytjb_update.jsp" />
+			<forward name="successshenhe" path="/jygl/zgldgx/bysjytjb_shenhe.jsp" />
+			<forward name="sczp" path="/jygl/zgldgx/picture_import.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<中国劳动关系学院  就业管理——毕业生就业进展情况统计表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="bysjyjzqk"
+			path="/bysjyjzqk" scope="request"
+			type="xgxt.jygl.action.JyglCurrentAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgldgx/bysjyjzqk_query.jsp" />
+			<forward name="add" path="/jygl/zgldgx/bysjyjzqk_add.jsp" />
+			<forward name="view" path="/jygl/zgldgx/bysjyjzqk_view.jsp" />
+			<forward name="update" path="/jygl/zgldgx/bysjyjzqk_update.jsp" />
+			<forward name="successtj" path="/jygl/zgldgx/bysjyjzqktj_query.jsp" />
+		</action>
+			<!--<<<<<<<<<<<<<<<<<<<<中国劳动关系学院  就业管理——院系级专业介绍 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyjzjkbs"
+			path="/jyjzjkbs" scope="request"
+			type="xgxt.jygl.action.JyglCurrentAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zgldgx/jyjzjkbs_query.jsp" />
+			<forward name="add" path="/jygl/zgldgx/jyjzjkbs_add.jsp" />
+			<forward name="view" path="/jygl/zgldgx/jyjzjkbs_view.jsp" />
+			<forward name="update" path="/jygl/zgldgx/jyjzjkbs_update.jsp" />
+			<forward name="shenhe" path="/jygl/zgldgx/jyjzjkbs_shenhe.jsp" />
+		</action>
+			<!--<<<<<<<<<<<<<<<<<<<<金华职业  就业管理——就业上报时间设置 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="jhzyForm" parameter="method"
+			path="/jysbsjsz" scope="request"
+			type="xgxt.jygl.action.JhzyJyglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jhzy/jysb/jysb_sjsz.jsp" />
+			<forward name="add" path="/jygl/zgldgx/jyjzjkbs_add.jsp" />
+			<forward name="view" path="/jygl/zgldgx/jyjzjkbs_view.jsp" />
+			<forward name="update" path="/jygl/zgldgx/jyjzjkbs_update.jsp" />
+			<forward name="shenhe" path="/jygl/zgldgx/jyjzjkbs_shenhe.jsp" />
+			<forward name="byssytj" path="/jygl/zgldgx/byssytj.jsp" />
+			<forward name="blank" path="/about:blank" />
+		</action>
+			<!--<<<<<<<<<<<<<<<<<<<<金华职业   就业管理——就业上报 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="jhzyForm" parameter="method"
+			path="/jhzyjysb" scope="request"
+			type="xgxt.jygl.action.JhzyJyglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jhzy/jysb/jysb_query.jsp" />
+			<forward name="add" path="/jygl/jhzy/jysb/jysb_add.jsp" />
+			<forward name="view" path="/jygl/jhzy/jysb/jysb_view.jsp" />
+			<forward name="update" path="/jygl/jhzy/jysb/jysb_update.jsp" />
+			<forward name="shenhe" path="/jygl/jhzy/jysb/jysb_shenhe.jsp" />
+			<forward name="byssytj" path="/jygl/jhzy/jysb/byssytj.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<金华职业   就业管理—招聘次数 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="jhzyForm" parameter="method"
+			path="/jhzyzphcs" scope="request"
+			type="xgxt.jygl.action.JhzyJyglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jhzy/zphtj/zphcs_query.jsp" />
+			<forward name="update" path="/jygl/jhzy/zphtj/zphcs_update.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—在线咨询申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zxzxshtz"
+			path="/jyglxszxsq" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zxzxsq.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 就业管理—职业咨询—在线咨询查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="zxzxshcx"
+			path="/jyglxszxcx" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/zxzxcx.jsp" />
+			<forward name="success1" path="/jygl/zxzxxsview.jsp" />
+			<forward name="success2" path="/jygl/zxzxxsviewstu.jsp" />
+		</action>
+
+		<action name="jhzyForm" parameter="method"
+			path="/xmlg_bysdalx" scope="request"
+			type="xgxt.jygl.action.JhzyJyglAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jhzy/zphtj/xmlg_query.jsp" />
+			<forward name="add" path="/jygl/jhzy/zphtj/xmlg_update.jsp" />
+			<forward name="print" path="/jygl/jhzy/zphtj/xmlg_print.jsp" />
+			<forward name="sh" path="/jygl/jhzy/zphtj/xmlg_sh.jsp" />
+		</action>
+		<action name="bdzblForm" parameter="method"
+			path="/bdzbl" scope="request"
+			type="xgxt.jygl.action.JyglBdzblAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="bdzblsq" path="/jygl/bdzblsq.jsp" />
+			<forward name="bdzblsqSearch" path="/jygl/bdzblsqSearch.jsp" />
+			<forward name="bdzblAudi" path="/jygl/bdzblAudiSearch.jsp" />
+			<forward name="bdzblAudiOne" path="/jygl/bdzblAudi.jsp" />
+			<forward name="bdzblSearch" path="/jygl/bdzblSearch.jsp" />
+			<forward name="bdzblModi" path="/jygl/bdzblModi.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<  就业信息录入 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxxlr"
+			path="/jyxxlr" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxxwh.jsp" />
+			<forward name="operationOne" path="/jygl/operationOne.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<  就业信息查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxxcx"
+			path="/jyxxcx" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxxcx.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<  就业信息统计 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="commanForm" parameter="jyxxtj"
+			path="/jyxxtj" scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="success" path="/jygl/jyxxtj.jsp" />
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<<  月度报表 >>>>>>>>>>>>>>>>>>>>-->
+		
+		<action name="commanForm" 
+			parameter="ydtj"
+			path="/jyydbb"
+			scope="request"
+			type="xgxt.jygl.action.JyglApplyAction">
+			<forward name="ydtj" path="/jygl/ydtj.jsp"/>
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<<<  就业信息查询 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="syxxForm" parameter="method"
+			path="/nbtybysy" scope="request"
+			type="xgxt.jygl.jyglnbty.SyxxAction">
+			<forward name="false" path="/errMsg.do" />
+			<forward name="bysysq" path="/jygl/nbty/syxxSq.jsp" />
+			<forward name="bysycx" path="/jygl/nbty/syxxSearch.jsp" />
+			<forward name="bysysh" path="/jygl/nbty/syxxShSearch.jsp" />
+			<forward name="bysyView" path="/jygl/nbty/syxxView.jsp" />
+			<forward name="bysyUpdate" path="/jygl/nbty/syxxUpdate.jsp" />
+		</action>
+		
+		<!--<<<<<<<<<<<<<<<<<<< 南京技师就业管理 >>>>>>>>>>>>>>>>>>>>>>>>-->
+		<action path="/jygl_xssbgl" forward="/njjs_jygl.do?method=xssbManage" />
+		<action path="/jygl_byqxgl" forward="/njjs_jygl.do?method=byqxManage" />
+		<action path="/jygl_xssxgl" forward="/njjs_jygl.do?method=xssxManage" />
+		<action path="/jygl_xssbcx" forward="/njjs_jygl.do?method=sbcxManage" />
+		
+		<action name="njjsJyglForm" parameter="method"
+			path="/njjs_jygl" scope="request"
+			type="xgxt.jygl.njjs.NjjsJyglAction">
+			<forward name="byqxQuery" path="/jygl/njjs/byqxQuery.jsp"/>
+			<forward name="xssbManage" path="/jygl/njjs/xssbManage.jsp"/>
+			<forward name="sbcxManage" path="/jygl/njjs/sbcxManage.jsp"/>
+			<forward name="xssbModi"   path="/jygl/njjs/xssbModi.jsp"/>
+			<forward name="xssbUpdate" path="/jygl/njjs/xssbUpdate.jsp"/>
+			
+			<forward name="byqxManage" path="/jygl/njjs/byqxManage.jsp"/>
+			<forward name="byqxUpdate" path="/jygl/njjs/byqxUpdate.jsp"/>
+			
+			<forward name="xssxManage" path="/jygl/njjs/xssxManage.jsp"/>
+			<forward name="xssxUpdate" path="/jygl/njjs/xssxUpdate.jsp"/>
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<< end  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		
+	</action-mappings>
+
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

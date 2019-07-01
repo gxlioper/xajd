@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="jxglTyForm" type="xgxt.jxgl.JxglTyForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+	
+	<!-- 信息维护 -->
+    <action path="/jxgl_jxllcj" forward="/jxgl_forward.do?method=jxllcjForward"/>	<!-- 军训理论成绩维护 -->
+	<action path="/jxgl_jxjncj" forward="/jxgl_forward.do?method=jxjncjForward"/>	<!-- 军训技能成绩维护 -->
+	<action path="/jxgl_jxcjck" forward="/jxgl_forward.do?method=jxcjckForward"/>	<!-- 军训成绩查看 -->
+	
+	<!-- 免缓训 -->
+    <action path="/jxgl_mhxsq" forward="/jxgl_forward.do?method=mhxsqForward"/>	<!-- 申请 -->
+    <action path="/jxgl_mhxsh" forward="/jxgl_forward.do?method=mhxshForward"/>	<!-- 审核 -->
+    <action path="/jxgl_mhxjg" forward="/jxgl_forward.do?method=mhxjgForward"/>	<!-- 结果查询 -->
+    
+    <!-- 实际路径 -->
+    <action path="/jxgl_forward"  parameter="method"   name="jxglTyForm"  scope="request"  type="xgxt.jxgl.JxglTyAction"/>
+    
+	</action-mappings>
+
+</struts-config>

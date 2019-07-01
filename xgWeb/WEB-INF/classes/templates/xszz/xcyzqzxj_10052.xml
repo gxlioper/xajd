@@ -1,0 +1,4581 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?mso-application progid="Word.Document"?>
+<w:wordDocument xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:wsp="http://schemas.microsoft.com/office/word/2003/wordml/sp2" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
+<w:ignoreSubtree w:val="http://schemas.microsoft.com/office/word/2003/wordml/sp2"/>
+<o:DocumentProperties>
+<o:Author> </o:Author>
+<o:LastAuthor>微软用户</o:LastAuthor>
+<o:Revision>3</o:Revision>
+<o:TotalTime>2</o:TotalTime>
+<o:Created>2015-10-16T02:42:00Z</o:Created>
+<o:LastSaved>2015-10-16T02:46:00Z</o:LastSaved>
+<o:Pages>2</o:Pages>
+<o:Words>106</o:Words>
+<o:Characters>608</o:Characters>
+<o:Company>WwW.YlmF.CoM</o:Company>
+<o:Lines>5</o:Lines>
+<o:Paragraphs>1</o:Paragraphs>
+<o:CharactersWithSpaces>713</o:CharactersWithSpaces>
+<o:Version>12</o:Version>
+</o:DocumentProperties>
+<w:fonts>
+<w:defaultFonts w:ascii="Times New Roman" w:fareast="宋体" w:h-ansi="Times New Roman" w:cs="Times New Roman"/>
+<w:font w:name="Times New Roman">
+<w:panose-1 w:val="02020603050405020304"/>
+<w:charset w:val="00"/>
+<w:family w:val="Roman"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="E0002AFF" w:usb-1="C0007841" w:usb-2="00000009" w:usb-3="00000000" w:csb-0="000001FF" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="宋体">
+<w:altName w:val="SimSun"/>
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="288F0000" w:usb-2="00000016" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="Cambria Math">
+<w:panose-1 w:val="02040503050406030204"/>
+<w:charset w:val="00"/>
+<w:family w:val="Roman"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="E00002FF" w:usb-1="420024FF" w:usb-2="00000000" w:usb-3="00000000" w:csb-0="0000019F" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="仿宋_GB2312">
+<w:altName w:val="Arial Unicode MS"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="00000000" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@宋体">
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="288F0000" w:usb-2="00000016" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@仿宋_GB2312">
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="00000000" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+</w:fonts>
+<w:lists>
+<w:listDef w:listDefId="0">
+<w:lsid w:val="63A046A7"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="8DE2981C"/>
+<w:lvl w:ilvl="0" w:tplc="C2F82408">
+<w:start w:val="2"/>
+<w:lvlText w:val="%1."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:ind w:left="360" w:hanging="360"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:hint="default"/>
+</w:rPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:ind w:left="840" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:ind w:left="1260" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:ind w:left="1680" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:ind w:left="2100" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:ind w:left="2520" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:ind w:left="2940" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:ind w:left="3360" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:ind w:left="3780" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:listDef w:listDefId="1">
+<w:lsid w:val="71132C65"/>
+<w:plt w:val="HybridMultilevel"/>
+<w:tmpl w:val="167E335A"/>
+<w:lvl w:ilvl="0" w:tplc="FD8A58C0">
+<w:start w:val="1"/>
+<w:lvlText w:val="%1."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="360"/>
+</w:tabs>
+<w:ind w:left="360" w:hanging="360"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+</w:lvl>
+<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%2)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="840"/>
+</w:tabs>
+<w:ind w:left="840" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%3."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1260"/>
+</w:tabs>
+<w:ind w:left="1260" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%4."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="1680"/>
+</w:tabs>
+<w:ind w:left="1680" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%5)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2100"/>
+</w:tabs>
+<w:ind w:left="2100" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%6."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2520"/>
+</w:tabs>
+<w:ind w:left="2520" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+<w:start w:val="1"/>
+<w:lvlText w:val="%7."/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="2940"/>
+</w:tabs>
+<w:ind w:left="2940" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="4"/>
+<w:lvlText w:val="%8)"/>
+<w:lvlJc w:val="left"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3360"/>
+</w:tabs>
+<w:ind w:left="3360" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+<w:start w:val="1"/>
+<w:nfc w:val="2"/>
+<w:lvlText w:val="%9."/>
+<w:lvlJc w:val="right"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="list" w:pos="3780"/>
+</w:tabs>
+<w:ind w:left="3780" w:hanging="420"/>
+</w:pPr>
+</w:lvl>
+</w:listDef>
+<w:list w:ilfo="1">
+<w:ilst w:val="1"/>
+</w:list>
+<w:list w:ilfo="2">
+<w:ilst w:val="0"/>
+</w:list>
+</w:lists>
+<w:styles>
+<w:versionOfBuiltInStylenames w:val="7"/>
+<w:latentStyles w:defLockedState="off" w:latentStyleCount="267">
+<w:lsdException w:name="Normal"/>
+<w:lsdException w:name="heading 1"/>
+<w:lsdException w:name="heading 2"/>
+<w:lsdException w:name="heading 3"/>
+<w:lsdException w:name="heading 4"/>
+<w:lsdException w:name="heading 5"/>
+<w:lsdException w:name="heading 6"/>
+<w:lsdException w:name="heading 7"/>
+<w:lsdException w:name="heading 8"/>
+<w:lsdException w:name="heading 9"/>
+<w:lsdException w:name="caption"/>
+<w:lsdException w:name="Title"/>
+<w:lsdException w:name="Subtitle"/>
+<w:lsdException w:name="Strong"/>
+<w:lsdException w:name="Emphasis"/>
+<w:lsdException w:name="No Spacing"/>
+<w:lsdException w:name="List Paragraph"/>
+<w:lsdException w:name="Quote"/>
+<w:lsdException w:name="Intense Quote"/>
+<w:lsdException w:name="Subtle Emphasis"/>
+<w:lsdException w:name="Intense Emphasis"/>
+<w:lsdException w:name="Subtle Reference"/>
+<w:lsdException w:name="Intense Reference"/>
+<w:lsdException w:name="Book Title"/>
+<w:lsdException w:name="TOC Heading"/>
+</w:latentStyles>
+<w:style w:type="paragraph" w:default="on" w:styleId="a">
+<w:name w:val="Normal"/>
+<wx:uiName wx:val="正文"/>
+<w:rsid w:val="005B1297"/>
+<w:pPr>
+<w:widowControl w:val="off"/>
+<w:jc w:val="both"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:kern w:val="2"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="24"/>
+<w:lang w:val="EN-US" w:fareast="ZH-CN" w:bidi="AR-SA"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:default="on" w:styleId="a0">
+<w:name w:val="Default Paragraph Font"/>
+<wx:uiName wx:val="默认段落字体"/>
+</w:style>
+<w:style w:type="table" w:default="on" w:styleId="a1">
+<w:name w:val="Normal Table"/>
+<wx:uiName wx:val="普通表格"/>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:lang w:val="EN-US" w:fareast="ZH-CN" w:bidi="AR-SA"/>
+</w:rPr>
+<w:tblPr>
+<w:tblInd w:w="0" w:type="dxa"/>
+<w:tblCellMar>
+<w:top w:w="0" w:type="dxa"/>
+<w:left w:w="108" w:type="dxa"/>
+<w:bottom w:w="0" w:type="dxa"/>
+<w:right w:w="108" w:type="dxa"/>
+</w:tblCellMar>
+</w:tblPr>
+</w:style>
+<w:style w:type="list" w:default="on" w:styleId="a2">
+<w:name w:val="No List"/>
+<wx:uiName wx:val="无列表"/>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a3">
+<w:name w:val="header"/>
+<wx:uiName wx:val="页眉"/>
+<w:basedOn w:val="a"/>
+<w:link w:val="Char"/>
+<w:rsid w:val="008946CA"/>
+<w:pPr>
+<w:pBdr>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="1" w:color="auto"/>
+</w:pBdr>
+<w:tabs>
+<w:tab w:val="center" w:pos="4153"/>
+<w:tab w:val="right" w:pos="8306"/>
+</w:tabs>
+<w:snapToGrid w:val="off"/>
+<w:jc w:val="center"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="Char">
+<w:name w:val="页眉 Char"/>
+<w:basedOn w:val="a0"/>
+<w:link w:val="a3"/>
+<w:rsid w:val="008946CA"/>
+<w:rPr>
+<w:kern w:val="2"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a4">
+<w:name w:val="footer"/>
+<wx:uiName wx:val="页脚"/>
+<w:basedOn w:val="a"/>
+<w:link w:val="Char0"/>
+<w:rsid w:val="008946CA"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="center" w:pos="4153"/>
+<w:tab w:val="right" w:pos="8306"/>
+</w:tabs>
+<w:snapToGrid w:val="off"/>
+<w:jc w:val="left"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Times New Roman"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="Char0">
+<w:name w:val="页脚 Char"/>
+<w:basedOn w:val="a0"/>
+<w:link w:val="a4"/>
+<w:rsid w:val="008946CA"/>
+<w:rPr>
+<w:kern w:val="2"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+</w:styles>
+<w:shapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="5122">
+<o:colormenu v:ext="edit" strokecolor="none"/>
+</o:shapedefaults>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1"/>
+</o:shapelayout>
+</w:shapeDefaults>
+<w:docPr>
+<w:view w:val="print"/>
+<w:zoom w:percent="100"/>
+<w:bordersDontSurroundHeader/>
+<w:bordersDontSurroundFooter/>
+<w:stylePaneFormatFilter w:val="3F01"/>
+<w:defaultTabStop w:val="420"/>
+<w:drawingGridVerticalSpacing w:val="156"/>
+<w:displayHorizontalDrawingGridEvery w:val="0"/>
+<w:displayVerticalDrawingGridEvery w:val="2"/>
+<w:punctuationKerning/>
+<w:characterSpacingControl w:val="CompressPunctuation"/>
+<w:optimizeForBrowser/>
+<w:validateAgainstSchema/>
+<w:saveInvalidXML w:val="off"/>
+<w:ignoreMixedContent w:val="off"/>
+<w:alwaysShowPlaceholderText w:val="off"/>
+<w:hdrShapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="5122">
+<o:colormenu v:ext="edit" strokecolor="none"/>
+</o:shapedefaults>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="2"/>
+</o:shapelayout>
+</w:hdrShapeDefaults>
+<w:footnotePr>
+<w:footnote w:type="separator">
+<w:p wsp:rsidR="000D6733" wsp:rsidRDefault="000D6733">
+<w:r>
+<w:separator/>
+</w:r>
+</w:p>
+</w:footnote>
+<w:footnote w:type="continuation-separator">
+<w:p wsp:rsidR="000D6733" wsp:rsidRDefault="000D6733">
+<w:r>
+<w:continuationSeparator/>
+</w:r>
+</w:p>
+</w:footnote>
+</w:footnotePr>
+<w:endnotePr>
+<w:endnote w:type="separator">
+<w:p wsp:rsidR="000D6733" wsp:rsidRDefault="000D6733">
+<w:r>
+<w:separator/>
+</w:r>
+</w:p>
+</w:endnote>
+<w:endnote w:type="continuation-separator">
+<w:p wsp:rsidR="000D6733" wsp:rsidRDefault="000D6733">
+<w:r>
+<w:continuationSeparator/>
+</w:r>
+</w:p>
+</w:endnote>
+</w:endnotePr>
+<w:compat>
+<w:spaceForUL/>
+<w:balanceSingleByteDoubleByteWidth/>
+<w:doNotLeaveBackslashAlone/>
+<w:ulTrailSpace/>
+<w:doNotExpandShiftReturn/>
+<w:adjustLineHeightInTable/>
+<w:breakWrappedTables/>
+<w:snapToGridInCell/>
+<w:wrapTextWithPunct/>
+<w:useAsianBreakRules/>
+<w:dontGrowAutofit/>
+<w:useFELayout/>
+</w:compat>
+<wsp:rsids>
+<wsp:rsidRoot wsp:val="005B1297"/>
+<wsp:rsid wsp:val="0000038A"/>
+<wsp:rsid wsp:val="000029B3"/>
+<wsp:rsid wsp:val="00037472"/>
+<wsp:rsid wsp:val="000750BF"/>
+<wsp:rsid wsp:val="000766D4"/>
+<wsp:rsid wsp:val="000C4340"/>
+<wsp:rsid wsp:val="000C5060"/>
+<wsp:rsid wsp:val="000D3236"/>
+<wsp:rsid wsp:val="000D6733"/>
+<wsp:rsid wsp:val="001605D6"/>
+<wsp:rsid wsp:val="001A1190"/>
+<wsp:rsid wsp:val="001B7C3C"/>
+<wsp:rsid wsp:val="00211BA5"/>
+<wsp:rsid wsp:val="002219C4"/>
+<wsp:rsid wsp:val="00231CE0"/>
+<wsp:rsid wsp:val="0026468D"/>
+<wsp:rsid wsp:val="00327766"/>
+<wsp:rsid wsp:val="00387F9B"/>
+<wsp:rsid wsp:val="003977DB"/>
+<wsp:rsid wsp:val="003B78E1"/>
+<wsp:rsid wsp:val="003F5E4E"/>
+<wsp:rsid wsp:val="00444F7A"/>
+<wsp:rsid wsp:val="004B2398"/>
+<wsp:rsid wsp:val="004D49AA"/>
+<wsp:rsid wsp:val="005748CE"/>
+<wsp:rsid wsp:val="005831D3"/>
+<wsp:rsid wsp:val="005B1297"/>
+<wsp:rsid wsp:val="005B3C51"/>
+<wsp:rsid wsp:val="006C6FB3"/>
+<wsp:rsid wsp:val="00706989"/>
+<wsp:rsid wsp:val="007A50AE"/>
+<wsp:rsid wsp:val="007D03D3"/>
+<wsp:rsid wsp:val="00813F4F"/>
+<wsp:rsid wsp:val="0086657D"/>
+<wsp:rsid wsp:val="00882AC0"/>
+<wsp:rsid wsp:val="008946CA"/>
+<wsp:rsid wsp:val="008A171B"/>
+<wsp:rsid wsp:val="008A28D3"/>
+<wsp:rsid wsp:val="008E42E0"/>
+<wsp:rsid wsp:val="009C2B9F"/>
+<wsp:rsid wsp:val="00B94CAD"/>
+<wsp:rsid wsp:val="00BE29A4"/>
+<wsp:rsid wsp:val="00DB2ACD"/>
+<wsp:rsid wsp:val="00E06EEE"/>
+<wsp:rsid wsp:val="00E610C9"/>
+<wsp:rsid wsp:val="00EB31FE"/>
+<wsp:rsid wsp:val="00F12115"/>
+</wsp:rsids>
+</w:docPr>
+<w:body>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:line="240" w:line-rule="at-least"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="36"/>
+</w:rPr>
+<w:t>新长城自强助学金候选学生申请表</w:t>
+</w:r>
+</w:p>
+<w:tbl>
+<w:tblPr>
+<w:tblW w:w="9737" w:type="dxa"/>
+<w:jc w:val="center"/>
+<w:tblInd w:w="163" w:type="dxa"/>
+<w:tblBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideH w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideV w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tblBorders>
+<w:tblLayout w:type="Fixed"/>
+</w:tblPr>
+<w:tblGrid>
+<w:gridCol w:w="1283"/>
+<w:gridCol w:w="2120"/>
+<w:gridCol w:w="1424"/>
+<w:gridCol w:w="1418"/>
+<w:gridCol w:w="758"/>
+<w:gridCol w:w="1226"/>
+<w:gridCol w:w="1508"/>
+</w:tblGrid>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>姓    名</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${xm!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>性    别</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2176" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${xb!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2734" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vmerge w:val="restart"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B3C51" wsp:rsidP="00AC1F99">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="auto"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:pict>
+<v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+<v:stroke joinstyle="miter"/>
+<v:formulas>
+<v:f eqn="if lineDrawn pixelLineWidth 0"/>
+<v:f eqn="sum @0 1 0"/>
+<v:f eqn="sum 0 0 @1"/>
+<v:f eqn="prod @2 1 2"/>
+<v:f eqn="prod @3 21600 pixelWidth"/>
+<v:f eqn="prod @3 21600 pixelHeight"/>
+<v:f eqn="sum @0 0 1"/>
+<v:f eqn="prod @6 1 2"/>
+<v:f eqn="prod @7 21600 pixelWidth"/>
+<v:f eqn="sum @8 21600 0"/>
+<v:f eqn="prod @7 21600 pixelHeight"/>
+<v:f eqn="sum @10 21600 0"/>
+</v:formulas>
+<v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+<o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype>
+<w:binData w:name="wordml://02000001.jpg" xml:space="preserve">${photo!}
+</w:binData>
+<v:shape id="_x0000_i1025" type="#_x0000_t75" style="width:75pt;height:89.25pt">
+<v:imagedata src="wordml://02000001.jpg" o:title="无标题22"/>
+</v:shape>
+</w:pict>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>出生日期</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${csny!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>民    族</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2176" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${mzmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2734" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vmerge/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>政治面貌</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${zzmmmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="008946CA" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>学    </w:t>
+</w:r>
+<w:r wsp:rsidR="005B1297">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>号</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2176" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${xh!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2734" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vmerge/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>学校名称</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${xxmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>专    业</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2176" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${zymc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2734" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:vmerge/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>学    制</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${xz!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>入学时间</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4910" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="001605D6">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:ind w:first-line-chars="300" w:first-line="720"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${rxny!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>通信地址</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="8454" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jtdz!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:ind w:right-chars="-59" w:right="-124"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>邮    编</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="0086657D">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jtyb!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005831D3">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:ind w:first-line-chars="50" w:first-line="120"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>宿舍电话</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4910" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="0086657D">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>（请加区号）</w:t>
+</w:r>
+<w:r wsp:rsidR="007D03D3">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${qsxx.qsdh!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="00327766" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>手机号码</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${sjhm!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>E-mail</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4910" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${dzyx!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00327766" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="00327766" wsp:rsidRDefault="00327766" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>微信号</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="00327766" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${zd3!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="00327766" wsp:rsidRDefault="00327766" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>QQ</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4910" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+</w:tcPr>
+<w:p wsp:rsidR="00327766" wsp:rsidRDefault="007D03D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${qqhm!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>英语水平</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="0086657D">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${wydj!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>计算机水平</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4910" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="0086657D">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jsjdj!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>家庭地址</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="8454" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jtdz!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>家庭邮编</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="007D03D3" wsp:rsidP="0086657D">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jtyb!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>家庭电话</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4910" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+</w:rPr>
+<w:t>（请加区号）</w:t>
+</w:r>
+<w:r wsp:rsidR="007D03D3">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jtdh!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005831D3" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+<w:vmerge w:val="restart"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="005831D3" wsp:rsidP="005831D3">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="560" w:line-rule="exact"/>
+<w:ind w:first-line-chars="100" w:first-line="240"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>家 庭</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="005831D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="560" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>主 要</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="005831D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="560" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>成 员</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="005831D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>姓 名</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="005831D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>年 龄</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1418" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="005831D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>与本人关系</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1984" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="005831D3" wsp:rsidP="008A28D3">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>职 业</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1508" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="005831D3" wsp:rsidP="008A28D3">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>年收入（元）</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<#list jtcyxxList_zymzdx as jtcyxx_zymzdx>
+<w:tr wsp:rsidR="005831D3" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+<w:vmerge/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="005831D3" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2120" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="007D03D3" wsp:rsidP="007D03D3">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jtcyxx_zymzdx.cyxm!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1424" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="007D03D3" wsp:rsidP="007D03D3">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jtcyxx_zymzdx.cynl!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1418" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="007D03D3" wsp:rsidP="005831D3">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jtcyxx_zymzdx.cygxmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1984" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="007D03D3" wsp:rsidP="007D03D3">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jtcyxx_zymzdx.cyzy!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1508" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005831D3" wsp:rsidRDefault="007D03D3" wsp:rsidP="007D03D3">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${jtcyxx_zymzdx.cynsr!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+</#list>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:cantSplit/>
+<w:trHeight w:val="2825"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="00231CE0">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:ind w:first-line-chars="50" w:first-line="120"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t> 经 济</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005748CE" wsp:rsidP="00231CE0">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="560" w:line-rule="exact"/>
+<w:ind w:first-line-chars="50" w:first-line="120"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t> 困 难</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="001605D6">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="560" w:line-rule="exact"/>
+<w:ind w:left-chars="-100" w:left="-1" w:hanging-chars="87" w:hanging="209"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>  原 因</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="001605D6">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="560" w:line-rule="exact"/>
+<w:ind w:left-chars="-100" w:left="-1" w:hanging-chars="87" w:hanging="209"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>  举 要</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="8454" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C5060" wsp:rsidRDefault="009C2B9F" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="520" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>${sqly!}</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="001605D6">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="320" w:line-rule="exact"/>
+<w:ind w:first-line-chars="1846" w:first-line="4433"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>本人签字：</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="320" w:line-rule="exact"/>
+<w:ind w:first-line="1800"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>                      年    月     日</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:trHeight w:val="170"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:ind w:left-chars="-1" w:left="176" w:hanging="178"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="001605D6" wsp:rsidP="005B1297">
+<w:pPr>
+<w:tabs>
+<w:tab w:val="left" w:pos="235"/>
+</w:tabs>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:ind w:left-chars="-82" w:left="-172" w:first-line="227"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>院</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="001605D6" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>系</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>意</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>见</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="8454" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="000C4340" wsp:rsidRDefault="000C4340" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>                    </w:t>
+</w:r>
+<w:r wsp:rsidR="001605D6">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>签字人（加盖公章）</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>：</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>                  年   月</w:t>
+</w:r>
+<w:r wsp:rsidR="000C4340">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t> 日</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="005B1297" wsp:rsidTr="005831D3">
+<w:trPr>
+<w:trHeight w:val="3229"/>
+<w:jc w:val="center"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1283" w:type="dxa"/>
+</w:tcPr>
+<w:p wsp:rsidR="00B94CAD" wsp:rsidRDefault="004D49AA" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:ind w:left-chars="-1" w:left="-2" w:first-line-chars="23" w:first-line="55"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>学</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="004D49AA" wsp:rsidP="00B94CAD">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:ind w:left-chars="-1" w:left="-2" w:first-line-chars="23" w:first-line="55"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>生</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="008946CA" wsp:rsidRDefault="004D49AA" wsp:rsidP="00B94CAD">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:ind w:left-chars="-1" w:left="-2" w:first-line-chars="23" w:first-line="55"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>处</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>意</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>见</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="8454" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+</w:tcPr>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="000C4340">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="000C4340" wsp:rsidRDefault="000C4340" wsp:rsidP="000C4340">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="000C4340" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>                      </w:t>
+</w:r>
+<w:r wsp:rsidR="005B1297">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>签字人（加盖公章）：       </w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="000C4340" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:after="100" w:after-autospacing="on" w:line="360" w:line-rule="exact"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>                  </w:t>
+</w:r>
+<w:r wsp:rsidR="005B1297">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>年   月</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>  </w:t>
+</w:r>
+<w:r wsp:rsidR="005B1297">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t> 日</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+</w:tbl>
+<w:p wsp:rsidR="007A50AE" wsp:rsidRDefault="007A50AE" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:line="320" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:line="320" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>填表说明：</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="0000038A" wsp:rsidP="0000038A">
+<w:pPr>
+<w:spacing w:line="320" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>1. </w:t>
+</w:r>
+<w:r wsp:rsidR="005B1297">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>请如实填写以上信息，否则将不被列为候选资助学生。</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="001605D6">
+<w:pPr>
+<w:spacing w:line="320" w:line-rule="exact"/>
+<w:ind w:left="432" w:hanging-chars="180" w:hanging="432"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>2</w:t>
+</w:r>
+<w:r wsp:rsidR="0000038A">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>. </w:t>
+</w:r>
+<w:r wsp:rsidR="000C4340">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>院系、学校意见主要是针对学生是否</w:t>
+</w:r>
+<w:r wsp:rsidR="003F5E4E">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>家庭经济困难</w:t>
+</w:r>
+<w:r wsp:rsidR="000C4340">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>及</w:t>
+</w:r>
+<w:r wsp:rsidR="003F5E4E">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>学习成绩、品行</w:t>
+</w:r>
+<w:r wsp:rsidR="000C4340">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>描述</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>。</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:line="320" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>3. 将个人一寸照片粘贴照片处。</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="005B1297">
+<w:pPr>
+<w:spacing w:line="320" w:line-rule="exact"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>4. </w:t>
+</w:r>
+<w:r wsp:rsidR="003F5E4E">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>提交申请的学生必须家庭经济困难</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>、</w:t>
+</w:r>
+<w:r wsp:rsidR="000C4340">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>自强拼搏</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>。</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="005B1297" wsp:rsidRDefault="005B1297" wsp:rsidP="001605D6">
+<w:pPr>
+<w:spacing w:line="320" w:line-rule="exact"/>
+<w:ind w:left="240" w:hanging-chars="100" w:hanging="240"/>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>5.</w:t>
+</w:r>
+<w:r wsp:rsidR="00211BA5">
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:fareast="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:b-cs/>
+<w:sz w:val="24"/>
+</w:rPr>
+<w:t>另附新长城自强助学金申请书（介绍家庭情况、申请理由、对新长城的理解及自己的人生理想）。</w:t>
+</w:r>
+</w:p>
+<w:sectPr wsp:rsidR="005B1297" wsp:rsidSect="000766D4">
+<w:hdr w:type="odd">
+<wx:pBdrGroup>
+<wx:borders>
+<wx:bottom wx:val="solid" wx:bdrwidth="15" wx:space="1" wx:color="auto"/>
+</wx:borders>
+<w:p wsp:rsidR="00387F9B" wsp:rsidRDefault="000766D4" wsp:rsidP="0026468D">
+<w:pPr>
+<w:pStyle w:val="a3"/>
+<w:jc w:val="left"/>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:noProof/>
+</w:rPr>
+<w:pict>
+<v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+<v:stroke joinstyle="miter"/>
+<v:formulas>
+<v:f eqn="if lineDrawn pixelLineWidth 0"/>
+<v:f eqn="sum @0 1 0"/>
+<v:f eqn="sum 0 0 @1"/>
+<v:f eqn="prod @2 1 2"/>
+<v:f eqn="prod @3 21600 pixelWidth"/>
+<v:f eqn="prod @3 21600 pixelHeight"/>
+<v:f eqn="sum @0 0 1"/>
+<v:f eqn="prod @6 1 2"/>
+<v:f eqn="prod @7 21600 pixelWidth"/>
+<v:f eqn="sum @8 21600 0"/>
+<v:f eqn="prod @7 21600 pixelHeight"/>
+<v:f eqn="sum @10 21600 0"/>
+</v:formulas>
+<v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+<o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype>
+<w:binData w:name="wordml://03000002.png" xml:space="preserve">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
+FQ/ARUgRts+ScxpLlE7zaDB3LaGF3Pfff389BETzokbRWg6ZdBnA6aefvsMOO8AFX9HXMjQoefvb
+385J3nPPPYpb7ISib7755mURoel0gjsJUjIvt6iTs3xAkEkxlXToq0L2lltuqRyApOpie0cDK2kU
+idTiQoJEPvPggw+On1hllVU23njjr3zlKxtssIGYX221BFBgkbuDqpIFYULIYBvJhOMn6ycb0ThA
+p3qKdACwUkgrEUcccYQA5Mgjj/zkJz8p0Jg6daogC4xyrfA0Kxduz6xbOYI1Cd21N69S/b3++uvv
+uususis1qQIx/YUwfUasLRLphNLSIssohx9+uGo09FRSgTvRwyhzUchWiB+oTTjYylFykmQsUlkQ
+CKgkqz5p/1133un6wgVVgHf/ddf/fvXVT2pr+/UuuzpnT4uTp6dGio3d//dpe35yjzXeO2n9N22s
+FnDXA3dXPSz07InUv98ksD47qjrv7lERePDxh+b35rDg6YADDuBIKdyBBx4IVoF01armGGDWSSmT
+MydtznluEaeJ5ykEBX3pS19qCZpmM91aRvMSWvaXcEaT1ALdQikhaSFG+gdHYD9/9c1vflO9QI1A
+M9PJvKxNqqI5Dz0D54pJNbUxoknJPhKBC+L0Ga0Knb4FZ+nz73//u0FZDh/OnAS9/POiFHtqDvf0
+GT395KLzpNyKqcYqAfMrX/nKD33oQ66st9560DNTSHZdessgA08tHAgnLdaqoYZRDb1lMFditd12
+21n7iA4P3H/9t5mRA7VCMyVMwxnURJzANWSk2zQT2DtaqTu4S5/J/CmqQxrIN7g9E4RuiIeJ9DlK
+5ZM0I9wcA+jzwF9VrqnFo4/9UFymRTWRpULG0uh0xQI1PMB8/rnKfufvstPMuytoUMYjZLKev3DB
+3AoSqhKfg9krCq792jV2+9Trb55+c8WLRVXNr7fxIISU4pWC4p+urcTgOOuss/bff3+0gafPfe5z
+8oJ6wQ8w8RThSSVFpnIvvDdrsXrit1LQkkJHSC5G3Xfffff+9IyMdY6fuLfWWmsxOS2FqZ/97Gff
+/OY381cSfv3UFgu55dQCuLttttnm5psrXiVabnqkOBdQi0q5V90hlolyIUx0KEB56623vulNb0qF
+stAgOyggmHnppx7jig2kgT+lHqZjLF2h/Pe//71+DjvsMFde8IIXgLkPf/jDwunIIh3mvOm8gh2J
+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
+YIJ=
+</w:binData>
+<v:shape id="_x0000_s2051" type="#_x0000_t75" style="position:absolute;margin-left:274.5pt;margin-top:-23.05pt;width:180.9pt;height:37.95pt;z-index:2">
+<v:imagedata src="wordml://03000002.png" o:title=""/>
+<w10:wrap type="square"/>
+</v:shape>
+</w:pict>
+</w:r>
+<w:r>
+<w:rPr>
+<w:noProof/>
+</w:rPr>
+<w:pict>
+<v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+<v:stroke joinstyle="miter"/>
+<v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype>
+<v:shape id="_x0000_s2050" type="#_x0000_t202" style="position:absolute;margin-left:-42pt;margin-top:-23.05pt;width:158.7pt;height:33.75pt;z-index:1;mso-wrap-style:none" stroked="f">
+<v:textbox style="mso-next-textbox:#_x0000_s2050;mso-fit-shape-to-text:t">
+<w:txbxContent>
+<w:p wsp:rsidR="0026468D" wsp:rsidRDefault="000766D4">
+<w:r wsp:rsidRPr="000766D4">
+<w:pict>
+<w:binData w:name="wordml://03000003.png" xml:space="preserve">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
+</w:binData>
+<v:shape id="_x0000_i1026" type="#_x0000_t75" style="width:180.75pt;height:32.25pt">
+<v:imagedata src="wordml://03000003.png" o:title="顶新Logo"/>
+</v:shape>
+</w:pict>
+</w:r>
+<w:r wsp:rsidR="008A171B">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>       </w:t>
+</w:r>
+</w:p>
+</w:txbxContent>
+</v:textbox>
+</v:shape>
+</w:pict>
+</w:r>
+<w:r wsp:rsidR="008A171B">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>                                                                                 </w:t>
+</w:r>
+</w:p>
+</wx:pBdrGroup>
+</w:hdr>
+<w:pgSz w:w="11906" w:h="16838"/>
+<w:pgMar w:top="1440" w:right="1800" w:bottom="1440" w:left="1800" w:header="851" w:footer="992" w:gutter="0"/>
+<w:cols w:space="425"/>
+<w:docGrid w:type="lines" w:line-pitch="312"/>
+</w:sectPr>
+</w:body>
+</w:wordDocument>

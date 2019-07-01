@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="zzyrxmglActionForm" type="com.zfsoft.xgxt.zzyrxmgl.zzyrxmgl.ZzyrxmglActionForm"/>
+		<form-bean name="jzbgForm" type="com.zfsoft.xgxt.rcsw.jzbg.JzbgForm"/>
+		<form-bean name="jcsszForm" type="com.zfsoft.xgxt.zzyrxmgl.zzyrxmgl.cssz.JcsszForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+ 	    <action path="/zzyrxmgl_cssz" forward="/zzyrxmglcssz.do?method=cssz"/>	<!-- 基础设置 -->
+	    <action path="/zzyrxmgl_xmgl" 	forward="/zzyrxmglxmgl.do?method=xmglManage"/> <!-- 项目管理 -->
+	    <action path="/zzyrxmgl_fdgl"   forward="/zzyrxmglfdgl.do?method=fdglManage"/> <!-- 辅导管理-->
+	    <action path="/zzyrxmgl_bfdgl"  forward="/zzyrxmglbfdgl.do?method=bfdglManage"/> <!-- 被辅导管理 -->
+	    <action path="/zzyrxmgl_fdxxgl" forward="/zzyrxmglfdxxgl.do?method=fdxxglManage"/>  <!-- 辅导信息管理 -->
+ 		<action path="/zzyrxmgl_fdxxsh" forward="/zzyrxmglfdxxgl.do?method=fdxxshManage"/>  <!-- 辅导信息审核 -->
+		<!-- 杭师大 讲座报告 -->
+		<action path="/jzbg_jzbggl"   forward="/jzbggl.do?method=jzbgList"/> <!-- 讲座报告管理 -->
+	    <action path="/jzbg_jzbgpj"  forward="/jzbggl.do?method=jzpjList"/> <!-- 讲座报告评价-->
+ 		<!-- 讲座报告 -->	
+		<action path="/jzbggl"
+				type="com.zfsoft.xgxt.rcsw.jzbg.JzbgAction"
+				name="jzbgForm"
+				parameter="method"
+				scope="request">
+				
+			<!-- 返回页面 -->
+			<forward name="jzbgList" path="/xsgzgl/rcsw/jzbg/jzbgList.jsp" />
+			<forward name="addJzbg" path="/xsgzgl/rcsw/jzbg/addJzbg.jsp" />
+			<forward name="xgJzbg" path="/xsgzgl/rcsw/jzbg/xgJzbg.jsp" />
+			<forward name="ckJzbg" path="/xsgzgl/rcsw/jzbg/ckJzbg.jsp" />
+			<forward name="jzpjList" path="/xsgzgl/rcsw/jzbg/jzpjList.jsp" />
+			<forward name="pjJzbg" path="/xsgzgl/rcsw/jzbg/pjJzbg.jsp" />
+			<forward name="ckJzbgStu" path="/xsgzgl/rcsw/jzbg/ckJzbgStu.jsp" />
+		</action>
+		<!-- 基础设置 -->
+		<action path="/zzyrxmglcssz" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.zzyrxmgl.zzyrxmgl.cssz.JcszAction" 
+	   			name="jcsszForm"         
+	   			parameter="method">
+	   		<forward name="jcssz" path="/xsgzgl/zzyrxmgl/zzyrxmgl/cssz/cssz.jsp"></forward>
+		</action>
+	    <!-- 项目管理 -->	
+		<action path="/zzyrxmglxmgl"
+				type="com.zfsoft.xgxt.zzyrxmgl.zzyrxmgl.xmgl.XmglAction"
+				name="zzyrxmglActionForm"
+				parameter="method"
+				scope="request">
+				
+			<!-- 返回页面 -->
+			<forward name="xmglManage" path="/xsgzgl/zzyrxmgl/zzyrxmgl/xmgl/xmglManage.jsp" />
+			<forward name="xmglManage2" path="/xsgzgl/zzyrxmgl/zzyrxmgl/xmgl/xmglManage2.jsp" />
+			<forward name="viewXmgl" path="/xsgzgl/zzyrxmgl/zzyrxmgl/xmgl/viewXmgl.jsp" />
+			<forward name="viewXmgl2" path="/xsgzgl/zzyrxmgl/zzyrxmgl/xmgl/viewXmgl2.jsp" />
+		</action>
+		
+		<!-- 辅导管理 -->	
+		<action path="/zzyrxmglfdgl"
+				type="com.zfsoft.xgxt.zzyrxmgl.zzyrxmgl.fdgl.FdglAction"
+				name="zzyrxmglActionForm"
+				parameter="method"
+				scope="request">
+				
+			<!-- 返回页面 -->
+			<forward name="fdglManage" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdgl/fdglManage.jsp" />
+			<forward name="fdglManage2" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdgl/fdglManage2.jsp" />
+			<forward name="addFdgl" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdgl/addFdgl.jsp" />
+			<forward name="updateFdgl" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdgl/updateFdgl.jsp" />
+			<forward name="viewFdgl" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdgl/viewFdgl.jsp" />
+			<forward name="viewBmrs" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdgl/viewBmrs.jsp" />
+			<forward name="txFdgl" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdgl/txFdgl.jsp" />
+		</action>
+		
+		<!-- 被辅导管理 -->	
+		<action path="/zzyrxmglbfdgl"
+				type="com.zfsoft.xgxt.zzyrxmgl.zzyrxmgl.bfdgl.BfdglAction"
+				name="zzyrxmglActionForm"
+				parameter="method"
+				scope="request">
+				
+			<!-- 返回页面 -->
+			<forward name="bfdglManage" path="/xsgzgl/zzyrxmgl/zzyrxmgl/bfdgl/bfdglManage.jsp" />
+			<forward name="addBfdgl" path="/xsgzgl/zzyrxmgl/zzyrxmgl/bfdgl/addBfdgl.jsp" />
+			<forward name="updateBfdgl" path="/xsgzgl/zzyrxmgl/zzyrxmgl/bfdgl/updateBfdgl.jsp" />
+			<forward name="viewBfdgl" path="/xsgzgl/zzyrxmgl/zzyrxmgl/bfdgl/viewBfdgl.jsp" />
+			<forward name="addBfdgljl" path="/xsgzgl/zzyrxmgl/zzyrxmgl/bfdgl/addBfdgljl.jsp" />
+			<forward name="addBfdglpj" path="/xsgzgl/zzyrxmgl/zzyrxmgl/bfdgl/addBfdglpj.jsp" />
+		</action>
+		
+		<!-- 辅导信息管理 -->	
+		<action path="/zzyrxmglfdxxgl"
+				type="com.zfsoft.xgxt.zzyrxmgl.zzyrxmgl.fdxxgl.FdxxglAction"
+				name="zzyrxmglActionForm"
+				parameter="method"
+				scope="request">
+				
+			<!-- 返回页面 -->
+			<forward name="fdxxglManage" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdxxgl/fdxxglManage.jsp" />
+			<forward name="fdxxshManage" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdxxgl/fdxxshManage.jsp" />
+			<forward name="addFdxxglpj" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdxxgl/addFdxxglpj.jsp" />
+			<forward name="viewFdxxgl" path="/xsgzgl/zzyrxmgl/zzyrxmgl/fdxxgl/viewFdxxgl.jsp" />
+		</action>
+		
+	</action-mappings>
+
+</struts-config>

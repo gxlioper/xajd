@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="csmz_sztzForm" type="xgxt.sztz.csmzzyjsxy.SztzCsmzActionForm"/>
+	</form-beans>
+	<global-forwards />
+	<action-mappings>
+		<!--展现的路径  长沙民政职业技术学院-->
+		<action path="/credithour_sb" forward="/csmzzy_sztz.do?method=xfSb"/>
+		<action path="/credithourManage" forward="/csmzzy_sztz.do?method=xfSbManage"/>
+		<action path="/ccredithour_sh" forward="/csmzzy_sztz.do?method=xfSbShManage"/>
+		<!--实际的路径 -->
+		<action path="/csmzzy_sztz" parameter="method"  name="csmz_sztzForm" scope="request"
+		        type="xgxt.sztz.csmzzyjsxy.SztzCsmzAction">
+		        <forward name="creditHSb" path="/sztz/csmzzyjsxy/creditHSb.jsp"></forward>
+		        <forward name="xfSbManage" path="/sztz/csmzzyjsxy/xfSbManage.jsp"></forward>
+		        <forward name="xfSbView" path="/sztz/csmzzyjsxy/xfsbMview.jsp"></forward>
+		        <forward name="xfSbModi" path="/sztz/csmzzyjsxy/xfSbModi.jsp"></forward>
+		        <forward name="xfsbshM" path="/sztz/csmzzyjsxy/xfSbShManage.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources key="gygl" parameter="xgxt.base.ApplicationResources"/>
+</struts-config>

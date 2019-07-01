@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="czxxDtjsForm" type="xgxt.dtjs.czxx.CzxxDtjsForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+    <action path="/gdby_dtjs_pxxx"  forward="/gdby_dtjs.do?method=pxxxManage"/>	<!-- 党课培训 -->
+    <action path="/gdby_dtjs_dkmd"  forward="/gdby_dtjs.do?method=dkmdManage"/>	<!-- 党课名单 -->
+    
+    <!-- 实际路径 -->
+
+    <action path="/gdby_dtjs" 
+        		parameter="method"  
+        		name="czxxDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.gdby.dyxx.DyxxGdbyAction">		        
+		<!-- 培训信息 -->
+		<forward name="pxxxManage" path="/dtjs/gdby/dyxx/pxxxManage.jsp" />
+		<forward name="pxxxUpdate" path="/dtjs/gdby/dyxx/pxxxUpdate.jsp" />
+		<forward name="pxxxCssz" path="/dtjs/gdby/dyxx/dkpxCssz.jsp"/>
+		<!-- 党课名单 -->
+		<forward name="dkmdManage" path="/dtjs/gdby/dyxx/dkmdManage.jsp" />
+		<forward name="dkmdUpdate" path="/dtjs/czxx/dyxx/dkmdUpdate.jsp" />		
+	</action>
+	
+	</action-mappings>
+
+</struts-config>

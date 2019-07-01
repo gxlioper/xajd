@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyZzdxActionForm" type="xgxt.pjpy.zzdx.PjpyZzdxActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/pjpyzzdxwh"
+				type="xgxt.pjpy.zzdx.PjpyZzdxAction"
+				name="pjpyZzdxActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="zsprintone"       path="/pjpy/zzdx/zsprintone.jsp" />
+			<forward name="zsprintmore"      path="/pjpy/zzdx/zsprintmore.jsp"></forward>
+			<forward name="rychprintpage"    path="/pjpy/zzdx/rychprint.jsp"></forward>
+			<forward name="rychprintone"     path="/pjpy/zzdx/rychprintone.jsp"></forward>
+			<forward name="rychprintmore"    path="/pjpy/zzdx/rychprintmore.jsp"></forward>
+ 		</action>
+
+	</action-mappings>
+
+	<message-resources key="pjpyzzdx" parameter="xgxt.pjpy.zzdx.pjpyzzdx" />
+
+</struts-config>

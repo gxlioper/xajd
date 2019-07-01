@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyHhgxyActionForm" type="xgxt.pjpy.hhgxy.PjpyHhgxyActionForm"/>
+		<form-bean name="pjpyHhgxyPjtjForm" type="xgxt.pjpy.hhgxy.pjtj.PjpyHhgxyPjtjForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<action path="/pjpy_hhgxy_dycxfwh" 	   forward="/pjpyhhgxyzhwh.do?method=dycxfWh"/> <!-- 德育操作分维护 -->
+		<action path="/hhgxy_dycxfview"        forward="/pjpyhhgxyzhwh.do?method=dycxfView"/><!-- 德育操作分修改显示详细信息 -->
+		<action path="/hhgxy_dycxfAdd"         forward="/pjpyhhgxyzhwh.do?method=dycxfAdd"/><!-- 德育操作分增加页面 -->
+        
+        <!-- 实际路径 -->	
+		<action path="/pjpyhhgxyzhwh"
+				type="xgxt.pjpy.hhgxy.zhszcp.PjpyHhgxyZhszcpAction"
+				name="pjpyHhgxyActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="dycxpage"       path="/pjpy/hhgxy/zhcp/dycxpage.jsp" />
+			<forward name="dycxview"       path="/pjpy/hhgxy/zhcp/dycxview.jsp"/>
+		</action>
+		
+		 <!-- 淮海工学院评奖统计 -->	
+		<action path="/pjpyHhgxyPjtj"
+				type="xgxt.pjpy.hhgxy.pjtj.PjpyHhgxyPjtjAction"
+				name="pjpyHhgxyPjtjForm"
+				parameter="method"
+				scope="request">
+
+		</action>
+	</action-mappings>
+   
+	<message-resources key="" parameter="" />
+
+</struts-config>

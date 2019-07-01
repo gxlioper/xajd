@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		 <form-bean name="fdypxXmwhForm" type="com.zfsoft.xgxt.szdw.fdypx.FdypxXmwhForm" />	
+		 <form-bean name="fdypxXmsqForm" type="com.zfsoft.xgxt.szdw.fdypx.FdypxXmsqForm" />		
+		 <form-bean name="fdypxXmshForm" type="com.zfsoft.xgxt.szdw.fdypx.FdypxXmshForm" />			
+	</form-beans>
+
+	<global-forwards />
+	<action-mappings>
+	<!--培训项目维护-->
+    <action 
+    	path="/szdw_fdypxxmwh" 
+    	name="fdypxXmwhForm"
+    	type="com.zfsoft.xgxt.szdw.fdypx.FdypxXmwhAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="list" path="/xsgzgl/szdw/fdypx/xmwh/fdypxxmwhList.jsp"/>
+    	<forward name="xzxmlist" path="/xsgzgl/szdw/fdypx/xmwh/fdypxxmxzList.jsp"/>
+    	<forward name="add" path="/xsgzgl/szdw/fdypx/xmwh/fdypxxmAdd.jsp"/>
+    	<forward name="update" path="/xsgzgl/szdw/fdypx/xmwh/fdypxxmUpdate.jsp"/>
+    	<forward name="view" path="/xsgzgl/szdw/fdypx/xmwh/fdypxxmView.jsp"/>
+    	<forward name="xzview" path="/xsgzgl/szdw/fdypx/xmwh/fdypxxmxzView.jsp"/>
+    </action>	
+    <!--培训项目申请-->
+    <action 
+    	path="/szdw_fdypxxmsq" 
+    	name="fdypxXmsqForm"
+    	type="com.zfsoft.xgxt.szdw.fdypx.FdypxXmsqAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="list" path="/xsgzgl/szdw/fdypx/xmsq/fdypxxmsqList.jsp"/>
+    	<forward name="add" path="/xsgzgl/szdw/fdypx/xmsq/fdypxxmsqAdd.jsp"/>
+    	<!--
+    	<forward name="update" path="/xsgzgl/szdw/fdypx/xmsq/fdypxxmsqUpdate.jsp"/>
+    	-->
+    	<forward name="fdypxxmsqXg" path="/xsgzgl/szdw/fdypx/xmsq/fdypxxmsqXg.jsp"/>
+    	<forward name="view" path="/xsgzgl/szdw/fdypx/xmsq/fdypxxmView.jsp"/>
+    </action>
+    <!--培训项目审核-->
+	 <action 
+    	path="/szdw_fdypxxmsh" 
+    	name="fdypxXmshForm"
+    	type="com.zfsoft.xgxt.szdw.fdypx.FdypxXmshAction" 
+    	parameter="method"
+    	scope="request">  
+    	<forward name="list" path="/xsgzgl/szdw/fdypx/xmsh/fdypxxmshList.jsp"/>
+    	<forward name="jglist" path="/xsgzgl/szdw/fdypx/xmsh/fdypxjgList.jsp"/>
+    	<forward name="fdypxsh" path="/xsgzgl/szdw/fdypx/xmsh/fdypxxmsh.jsp"/>
+    	<forward name="fdypxck" path="/xsgzgl/szdw/fdypx/xmsh/fdypxjg.jsp"/>
+    	<forward name="fdypxxmPlsh" path="/xsgzgl/szdw/fdypx/xmsh/fdypxxmPlsh.jsp" />
+    	<forward name="yhdpxxm" path="/xsgzgl/szdw/fdypx/xmwh/fdypxxmxzYhdpxxm.jsp"/>
+    </action>
+	</action-mappings>
+  <message-resources parameter="xgxt.base.ApplicationResources" /> 
+</struts-config>

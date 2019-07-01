@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<!-- 楼栋管理 -->
+    	<form-bean name="gyglnewLdglForm" type="xsgzgl.gygl.ldgl.LdglForm" />
+    	<!-- 寝室管理 -->
+     	<form-bean name="gyglnewQsglForm" type="xsgzgl.gygl.qsgl.QsglForm" />
+     	<!-- 用电管理 -->
+    	<form-bean name="ydxxForm" type="xsgzgl.gygl.ydgl.YdxxForm" />
+     	<!-- 床位管理 -->
+     	<form-bean name="gyglnewCwglForm" type="xsgzgl.gygl.cwgl.CwglForm" />
+     	<!-- 床位分配管理 -->
+    	<form-bean name="gyglnewCwfpglForm" type="xsgzgl.gygl.cwfpgl.CwfpglForm" />
+     	<!-- 信息统计 -->
+    	<form-bean name="gyglnewXxtjForm" type="xsgzgl.gygl.xxtj.XxtjForm" />
+     	<!-- 床位入住管理 -->
+    	<form-bean name="gyglnewCwrzglForm" type="xsgzgl.gygl.cwrzgl.CwrzglForm" />
+     	<!-- 退宿管理 -->
+    	<form-bean name="gyglnewTsglForm" type="xsgzgl.gygl.tsgl.TsglForm" />
+    	<!-- 参数设置 -->
+    	<form-bean name="gyglnewCsszForm" type="xsgzgl.gygl.cssz.CsszForm" />
+    	<!-- 学生住宿管理 -->
+    	<form-bean name="gyglnewXszsglForm" type="xsgzgl.gygl.xszsgl.XszsglForm" />
+    	<!-- 学生住宿统计 -->
+    	<form-bean name="gyglnewXszstjForm" type="xsgzgl.gygl.xszstj.XszstjForm" />
+    	<!-- 住宿信息管理 -->
+    	<form-bean name="gyglnewZsxxglForm" type="xsgzgl.gygl.zsxxgl.ZsxxglForm" />
+    	<!-- 公寓报修管理 -->
+    	<form-bean name="gyglnewGybxglForm" type="xsgzgl.gygl.gybxgl.GybxglForm" />
+    	<!-- 每日记录管理 -->
+    	<form-bean name="gyglnewMrjlglForm" type="xsgzgl.gygl.mrjl.MrjlglForm" />
+    	<!-- 公寓管理人员-->
+    	<form-bean name="gyglnewGyglryForm" type="xsgzgl.gygl.gyglry.GyglryForm" />
+    	<!-- 公寓纪律代码维护-->
+    	<form-bean name="gyjldmglForm" type="xsgzgl.gygl.gyjldmgl.GyjldmglForm" />
+    	<!-- 公寓纪律信息维护 -->
+    	<form-bean name="gyjlxxglForm" type="xsgzgl.gygl.gyjlxxgl.GyjlxxglForm" />
+    	<!-- 公寓纪律信息维护(个性化) -->
+    	<form-bean name="gyjlxxwhForm" type="com.zfsoft.xgxt.gygl.gyjlxxwh.GyjlxxwhForm" />
+    	<!-- 卫生检查   贵州大学-->
+    	<form-bean name="gzdxGyglTyForm" type="xsgzgl.gygl.wsjc.gzdx.GyglTyForm"/>
+    	<!-- 文明寝室评比   贵州大学-->
+    	<form-bean name="gzdxGyglWmqsForm" type="xsgzgl.gygl.wmqs.gzdx.GyglWmqsForm"/>
+    	<!--  卫生检查 检查日程管理 -->
+    	<form-bean name="gyglJcrcglForm" type="xsgzgl.gygl.wsjc.jcrcgl.GyglJcrcglForm"/>
+    	<!--  卫生检查 卫生分录入 -->
+    	<form-bean name="fslrForm" type="xsgzgl.gygl.wsjc.fslr.FslrForm"/>
+    	<!--  卫生检查 卫生分查询 -->
+    	<form-bean name="fscxForm" type="xsgzgl.gygl.wsjc.fscx.FscxForm"/>
+    	<!--  日常检查寝室走访 -->
+    	<form-bean name="qszfForm" type="xsgzgl.gygl.rcjc.qszf.QszfForm"/>
+    	<!--  日常检查卫生检查 -->
+    	<form-bean name="wsjcForm" type="xsgzgl.gygl.rcjc.wsjc.WsjcForm"/>
+    	<!--  假期留校 -->
+    	<form-bean name="jqlxForm" type="xsgzgl.gygl.jqlx.GyglJqlxForm"/>
+    	<!--  公寓纪律信息管理（新） -->
+    	<form-bean name="gyjlxxglNewForm" type="xsgzgl.gygl.gyjlxxglnew.GyjlxxglNewForm"/>
+    	<!--  公寓评优维护 -->
+    	<form-bean name="gypywhForm" type="xsgzgl.gygl.gypy.gypywh.GypywhForm"/>
+		<!-- 楼栋考核管理 -->
+    	<form-bean name="ldkhglForm" type="xsgzgl.gygl.hzsf.LdkhglForm"/>
+    	<!--员工职位代码 -->
+    	<form-bean name="gyygzwdmglForm" type="xsgzgl.gygl.gyyggl.GyygzwdmglForm"/>
+    	<form-bean name="gyygxxglForm" type="xsgzgl.gygl.gyyggl.GyygxxglForm"/>
+    	
+    	<!--公寓物品 -->
+    	<form-bean name="gywpxxForm" type="com.zfsoft.xgxt.gygl.gywp.GywpxxForm"/>
+    	
+    	<!--寝室导师维护（NEW） -->
+    	<form-bean name="qsdswhForm" type="com.zfsoft.xgxt.gygl.qsdsgl.QsdswhForm"/>
+    	<!--寝室导师考核（NEW） -->
+    	<form-bean name="qsdskhForm" type="com.zfsoft.xgxt.gygl.qsdsgl.qsdskh.QsdskhForm"/>
+    	
+    	<!--公寓意见箱（NEW） -->
+    	<form-bean name="gyyjxForm" type="com.zfsoft.xgxt.gygl.gyyjx.GyyjxForm"/>
+    	
+    	<!--来访登记表 -->
+    	<form-bean name="lfrydjForm" type="xsgzgl.gygl.lfryxxgl.LfrydjForm"/>
+    	
+    	<!--贵重物品出门登记表 -->
+    	<form-bean name="gzwpcmdjForm" type="xsgzgl.gygl.gzwpcmdjgl.GzwpcmdjForm"/>
+    	<!--校外住宿管理 START -->
+    	<!--校外住宿结果 -->
+    	<form-bean name="XyzsglForm" type="xsgzgl.gygl.xyzsgl.jg.XyzsglForm"/>
+    	<!--校外住宿申请 -->
+    	<form-bean name="XyzsSqForm" type="xsgzgl.gygl.xyzsgl.sq.XyzsSqForm"/>
+    	<!--校外住宿基础参数设置 -->
+    	<form-bean name="XyzsJcszForm" type="xsgzgl.gygl.xyzsgl.jcsz.XyzsJcszForm"/>
+    	<!--校外住宿审核 -->
+    	<form-bean name="XyzsShForm" type="xsgzgl.gygl.xyzsgl.sh.XyzsShForm"/>
+    	<!-- 公寓报修类别人员维护 -->
+    	<form-bean name="GybxRyglForm" type="xsgzgl.gygl.gybxgl.GybxRyglForm"/>
+    	<!-- 浙江旅游公寓奖惩维护 -->
+    	<form-bean name="GyjcWhForm" type="xsgzgl.gygl.zjlygyjcwh.jg.GyjcWhForm"/>
+    	<!-- 水电费统计功能，青岛滨海 -->
+    	<form-bean name="sdfTjForm" type="xsgzgl.gygl.sdftj.sdfTjForm" />
+    	<!-- 卫生检查 学生分 -->
+    	<form-bean name="xswsjcForm" type="xsgzgl.gygl.rcjc.xswsjc.XswsjcForm" />
+    	<!-- 天津机电卫生分form -->
+    	<form-bean name="tjjdWsfForm" type="xsgzgl.gygl.rcjc.tjjd.TjjdWsfForm" />
+    	
+    	<form-bean name="kflrForm" type="xsgzgl.gygl.wsjc.fslr.KflrForm" />
+    	
+    	<!-- 苏州卫生学生卫生分form -->
+    	<form-bean name="XswsfForm" type="xsgzgl.gygl.rcjc.xswsf.XswsfForm" />
+    	<!-- 苏州卫生文明寝室学生名单form -->
+    	<form-bean name="WmqsxsmdForm" type="xsgzgl.gygl.rcjc.wmqsxsmd.WmqsxsmdForm" />
+
+		<form-bean name="ldxxglForm" type="xsgzgl.gygl.xjdfygl.ldxxgl.LdxxglForm" />
+		<form-bean name="qsxxglForm" type="xsgzgl.gygl.xjdfygl.qsxxgl.QsxxglForm" />
+		<form-bean name="cwxxglForm" type="xsgzgl.gygl.xjdfygl.cwxxgl.CwxxglForm" />
+		<form-bean name="ktsqForm" type="xsgzgl.gygl.xjdgybz.ktsq.KtsqForm" />
+		<form-bean name="ktsqjgForm" type="xsgzgl.gygl.xjdgybz.ktsqjg.KtsqjgForm" />
+		<form-bean name="sfqscjsqForm" type="xsgzgl.gygl.sfqs.sfqscj.sfqscjsq.SfqscjsqForm" />
+		<form-bean name="sfqscjjgForm" type="xsgzgl.gygl.sfqs.sfqscj.sfqscjjg.SfqscjjgForm" />
+		<form-bean name="sfqskhsqForm" type="xsgzgl.gygl.sfqs.sfqskh.sfqskhsq.SfqskhsqForm" />
+		<form-bean name="sfqskhjgForm" type="xsgzgl.gygl.sfqs.sfqskh.sfqskhjg.SfqskhjgForm" />
+		<form-bean name="fsbjForm" type="xsgzgl.gygl.xjdfygl.fsbj.FsbjForm" />
+		<form-bean name="zcxxFrom" type="xsgzgl.gygl.zcgl.zcxx.ZcxxFrom" />
+		<form-bean name="zcfpForm" type="xsgzgl.gygl.zcgl.zcfp.ZcfpForm"/>
+		<form-bean name="cwdhForm" type="xsgzgl.gygl.cwdh.CwdhForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/gyglnew_gylcxs" 	forward="/xsgzgl/gygl/gyglDisplay.jsp"/>						<!-- 流程图展示 -->
+		<action path="/gyglnew_ldgl_ldgl" 	forward="/gyglnew_ldgl.do?method=ldglManage"/>				<!-- 楼栋管理 -->
+		<action path="/gyglnew_qsgl_qsgl" 	forward="/gyglnew_qsgl.do?method=qsglManage"/>				<!-- 寝室管理 -->
+    	<action path="/gyglnew_cwgl_cwgl" 	forward="/gyglnew_cwgl.do?method=cwglManage"/>				<!-- 床位管理 -->
+    	<action path="/gyglnew_xxtj_xxtj" 	forward="/gyglnew_xxtj.do?method=xxtjManage"/>				<!-- 房源统计 -->
+		<action path="/gyglnew_cwfpgl_cwfp"   forward="/gyglnew_cwfpgl.do?method=cwfpglManage"/>		<!-- 床位分配管理 -->
+		<action path="/gyglnew_cwrzgl_cwrz"   forward="/gyglnew_cwrzgl.do?method=cwrzglManage"/>		<!-- 床位入住管理 -->
+		<action path="/gyglnew_tsgl_tsgl"   forward="/gyglnew_tsgl.do?method=tsglManage"/>				<!-- 退宿管理 -->
+		<action path="/gyglnew_xszsgl_xszsgl"   forward="/gyglnew_xszsgl.do?method=xszsglManage"/>		<!-- 学生住宿管理 -->
+		<action path="/gyglnew_xszstj_xszstj"   forward="/gyglnew_xszstj.do?method=xszstjManage"/>		<!-- 学生住宿统计 -->
+		<action path="/gyglnew_xszstj_ztqksyt"   forward="/gyglnew_xszstj.do?method=ztqksyt"/>			<!-- 宿舍总体情况示意图 -->
+		<action path="/gyglnew_xszstj_ssljtxxt"   forward="/gyglnew_xszstj.do?method=ssljtxxt"/>			<!-- 宿舍总体情况示意图 -->
+		<action path="/gyglnew_xszstj_gxssfbt"   forward="/gyglnew_xszstj.do?method=gxssfbt"/>			<!-- 各系宿舍分布图 -->
+		<action path="/gyglnew_xszstj_gxkcwxx"   forward="/gyglnew_xszstj.do?method=gxkcwxx"/>			<!-- 各系空床位信息 -->
+		
+		<action path="/gyglnew_zsxxgl_zsgldmgl" 	forward="/gyglnew_zsxxgl.do?method=zsxxgldmManage"/>		<!-- 住宿信息管理 代码维护-->
+    	<action path="/gyglnew_zsxxgl_zsxxgl" 	forward="/gyglnew_zsxxgl.do?method=zsxxglManage"/>		<!-- 住宿信息管理 -->
+    	<action path="/gyglnew_gybxgl_gybxgl" 	forward="/gyglnew_gybxgl.do?method=gybxglManage"/>		<!-- 公寓报修管理(管理员) -->
+    	<action path="/gyglnew_gybxgl_gybxgl_bxfp" 	forward="/gyglnew_gybxgl_bxfp.do?method=gybxglManageBxfp"/>		<!-- 公寓报修管理(管理员) -->
+    	<action path="/gyglnew_gybxgl_gybxgl_menu" 	forward="/gyglnew_gybxgl.do?method=gybxglMenu"/>		<!-- 菜单跳转到指定地址（温州大学定制） -->
+    	<action path="/gyglnew_gybxgl_gybxgl_stu" 	forward="/gyglnew_gybxgl.do?method=gybxglStudent"/>	<!-- 公寓报修管理(学生)-->
+    	<action path="/gyglnew_mrjlgl_mrjlgl" 	forward="/gyglnew_mrjlgl.do?method=mrjlglManage"/>		<!-- 每日记录-->
+    	<action path="/gyglnew_gyglry_gyglry" 	forward="/gyglnew_gyglry.do?method=gyglryManage"/>		<!-- 公寓管理人员-->
+    	
+    	<action path="/gyglnew_gyjldmgl_gyjldmgl" forward="/gyglnew_gyjldmgl.do?method=gyjldlManage"/>	<!-- 公寓纪律代码维护 -->
+    	<action path="/gyglnew_gyjlgl_gyjlgl" forward="/gyglnew_gyjlgl.do?method=gyjlxxManage"/>		<!-- 公寓纪律信息维护 -->
+    	<action path="/gyglnew_gyjlgl_gyjlcx" forward="/gyglnew_gyjlgl.do?method=gyjlcxQuery"/>			<!-- 公寓纪律信息查询 -->
+    	<action path="/gyglnew_gyjlgl_gyjlzj" forward="/gyglnew_gyjlgl.do?method=gyjlxxZj"/>			<!-- 公寓纪律信息增加 -->
+    	<action path="/gyglnew_gyjlgl_gyjlxg" forward="/gyglnew_gyjlgl.do?method=gyjlxxXg"/>			<!-- 公寓纪律信息修改 -->
+    	<action path="/gyglnew_gyjlgl_gyjlxscx" forward="/gyglnew_gyjlgl.do?method=gyjlxsCx"/>			<!-- 公寓纪律学生查询 -->
+    	
+    	<action path="/gyglnew_gyjlgl_gyjlcl" forward="/gyglnew_gyjlgl.do?method=gyjlxxCl"/>			<!-- 公寓纪律信息处理 -->
+    	<action path="/gyglnew_gyjlgl_gyjlclwh" forward="/gyglnew_gyjlgl.do?method=gyjlxxClwh"/>		<!-- 公寓纪律信息处理维护-->
+    	<action path="/gyglnew_gyjlgl_gyjlsh" forward="/gyglnew_gyjlgl.do?method=gyjlSh"/>				<!-- 公寓纪律审核 -->
+    	<action path="/gyglnew_gyjlgl_gyjlclsh" forward="/gyglnew_gyjlgl.do?method=gyjlClsh"/>			<!-- 公寓纪律单个审核 -->
+    	<action path="/gyglnew_gyjlgl_xsjlxxck" forward="/gyglnew_gyjlgl.do?method=xsjlxxck"/>			<!-- 学生纪律信息查看 -->
+    	
+    	<!-- 公寓纪律信息new 局部刷新 -->
+    	
+    	<action path="/gygl_gyjlglnew_gyjlxxwh"	forward="/gyjl_gyjlglnew.do?method=gyjlxxwh"/>	<!-- 公寓纪律信息维护 -->
+    	<action path="/gyjl_gyjlglnew_gyjlxscx" forward="/gyjl_gyjlglnew.do?method=gyjlxscx"/>	<!-- 公寓纪律查询学生 -->
+    	<action path="/gygl_gyjlglnew_gyjlxxcl"	forward="/gyjl_gyjlglnew.do?method=gyjlxxcl"/>	<!-- 公寓纪律信息处理 -->
+    	<action path="/gygl_gyjlglnew_gyjlxxsh"	forward="/gyjl_gyjlglnew.do?method=gyjlxxsh"/>	<!-- 公寓纪律信息审核 -->
+    	<action path="/gygl_gyjlglnew_xsjlxxcx"	forward="/gyjl_gyjlglnew.do?method=xsjlxxcx"/>	<!-- 学生纪律信息查询 -->
+    	
+    	
+    	<!-- 卫生检查  贵州大学 -->
+    	<action path="/gzdx_gygl_wsjc_cssz" 	forward="/gzdxWsjc.do?method=csszManage"/>	<!-- 参数设置 -->
+    	<action path="/gzdx_gygl_wsjc_kbbb" 	forward="/gzdxWsjc.do?method=kbbbManage"/>	<!-- 空白报表 -->
+    	<action path="/gzdx_gygl_wsjc_fslr" 	forward="/gzdxWsjc.do?method=fslrManage"/>	<!-- 分数录入 -->
+    	<action path="/gzdx_gygl_wsjc_fscx" 	forward="/gzdxWsjc.do?method=fscxManage"/>	<!-- 结果查询 -->
+<!--    <action path="/zjcm_gygl_wsjc" 	forward="/commWsjc.do?method=wsjcManage"/>	 特殊寝室
+-->
+    	<action path="/gzdx_gygl_wsjc_fstj" 	forward="/gzdxWsjc.do?method=fstjManage"/>	<!-- 结果统计 -->
+    	
+    	<action path="/gzdx_gygl_wsjc_xsfslr" forward="/gzdxWsjc.do?method=xsfslrManage"/> <!-- 学生卫生分录入 -->
+    	<action path="/gzdx_gygl_wsjc_xsfsck" forward="/gzdxWsjc.do?method=xsfsckManage"/> <!-- 学生卫生分查看 -->
+    	<!-- 文明寝室评比  贵州大学 -->
+    	<action path="/gzdx_gygl_wmqs_qsgswh" 	forward="/gzdxWmqs.do?method=qsgswhManage"/>	<!-- 文明寝室个数维护 -->
+    	<action path="/gzdx_gygl_wmqs_qssq" 	forward="/gzdxWmqs.do?method=qssqManage"/>	<!-- 文明寝室申请 -->
+    	<action path="/gzdx_gygl_wmqs_qssh" 	forward="/gzdxWmqs.do?method=qsshManage"/>	<!-- 文明寝室审核 -->
+    	<action path="/gzdx_gygl_wmqs_qsgl" 	forward="/gzdxWmqs.do?method=qsglManage"/>	<!-- 文明寝室管理 -->
+    	
+    	<!-- 卫生检查 通用-->
+    	<action path="/gyglnew_wsjc_jcrcgl" 	forward="/gyglnew_jcrcgl.do?method=jcrcglCx"/>	<!-- 卫生检查日程管理查询 -->
+    	<action path="/gyglnew_wsjc_fslr" 	forward="/gyglnew_fslr.do?method=fslrCx"/>	<!-- 卫生分录入 -->
+    	<action path="/gyglnew_wsjc_fscx" 	forward="/gyglnew_fscx.do?method=fscxCx"/>	<!-- 卫生分查询 -->
+    	
+    	<action path="/gyglnew_xswsjc_jcgl" 	forward="/gyglnew_xswsjc.do?method=xswsjcList"/>
+    	<action path="/gyglnew_xswsjc_wsjcdjtj" 	forward="/gyglnew_xswsjc.do?method=wsjcdjtj"/>
+    	
+    	<!-- 卫生检查统计  天津机电卫生分统计-->
+    	<action path="/gyglnew_tjjdwsftj" 	forward="/gyglnew_tjjdwsf.do?method=viewWsftjList"/>
+    	
+    	
+    	<!-- 日常检查 金华-->
+    	<action path="/gyglnew_rcjc_qszf" 	forward="/gyglnew_qszf.do?method=qszfCx"/>	<!-- 卫生检查日程管理查询 -->
+    	<action path="/gyglnew_rcjc_wsjc" 	forward="/gyglnew_wsjc.do?method=wsjcCx"/>	<!-- 卫生检查日程管理查询 -->
+    	
+    	<!-- 公寓评优 -->
+    	<action path="/gygl_gypygl_gypywh" 	forward="/gygl_gypywh.do?method=gypyCx"/>	<!-- 公寓评优维护 -->
+    	
+    	<!-- 公寓评优 -->
+    	<action path="/gygl_gypygl_gypycx" 	forward="/gygl_gypywh.do?method=gypyCx"/>	<!-- 公寓评优维护 -->
+    	
+    	<!-- 楼栋考核管理 -->
+    	<action path="/gygl_ldkhgl_ldkhgl" 	forward="/gygl_ldkhgl.do?method=ldkhgl"/>	<!-- 楼栋考核管理-->
+    	
+    	
+    	<!-- 公寓员工管理 -->
+    	<action path="/gygl_gyyggl_dmwh" forward="/gyglnew_gyygzwdmgl.do?method=gyygzwdmManage"/>	<!-- 公寓职位代码维护 -->
+    	<action path="/gygl_gyygxxgl" forward="/gyglnew_gyygxxgl.do?method=gyygxxManage"/>	<!-- 公寓员工维护 -->
+    	
+    	<!-- 寝室导师维护（NEW） -->
+    	<action path="/gygl_qsdswhgl" forward="/gygl_qsdswh.do?method=qsdswhManage"/>	
+    	<action path="/gygl_qsdskhgl" forward="/gygl_qsdskh.do?method=qsdskhManage"/>	<!-- 寝室导师考核 -->
+    	
+    	<!-- 浙江旅游公寓奖惩维护 -->
+    	<action path="/gygl_zjly_jcxxwh" forward="/zjly_jcxxwh.do?method=getGyjcWhCx"/>
+    	
+    	<!-- =====================================楼栋管理=====================================================
+-->	
+    	<action path="/gyglnew_ldgl" 
+    			scope="request"
+    			type="xsgzgl.gygl.ldgl.LdglAction" 
+    			name="gyglnewLdglForm"
+    			parameter="method"
+    	>	
+    		<forward name="success" path="/xsgzgl/gygl/ldgl/ldglManage.jsp"/>
+    		<forward name="add" path="/xsgzgl/gygl/ldgl/ldglAdd.jsp"/>
+    		<forward name="update" path="/xsgzgl/gygl/ldgl/ldglUpdate.jsp"/>
+    		<forward name="ldfpUpdate" path="/xsgzgl/gygl/ldgl/ldfpUpdate.jsp"/>
+    		<forward name="ldfpUpdate_12861" path="/xsgzgl/gygl/ldgl/ldfpUpdate_12861.jsp"/>
+    		<forward name="ldglQsxxplwh" path="/xsgzgl/gygl/ldgl/ldglQsxxplwh.jsp"/>
+    		<forward name="ldfpUpdateNew" path="/xsgzgl/gygl/ldgl/ldfpUpdateNew.jsp"/>
+		</action>
+		
+		<!-- =====================================床位分配管理=================================================
+-->	
+		<action path="/gyglnew_cwfpgl" 
+    			scope="request"
+    			type="xsgzgl.gygl.cwfpgl.CwfpglAction" 
+    			name="gyglnewCwfpglForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/gygl/cwfpgl/cwfpglManage.jsp"/>
+    		<forward name="sdfp" path="/xsgzgl/gygl/cwfpgl/cwfpglSdfp.jsp"/>
+    		<forward name="success_xy" path="/xsgzgl/gygl/cwfpgl/cwfpglManage_xy.jsp"/>
+    		<forward name="sdfp_xy" path="/xsgzgl/gygl/cwfpgl/cwfpglSdfp_xy.jsp"/>
+		</action>
+
+		<!--西交大床位管理(改不动旧代码,重写，新加菜单，action service dao重写了，from使用旧的)-->
+		<action path="/gygl_zsgl_cwfp" forward="/gygl_zsgl_cwgl.do?method=cwfpList"/>
+		<action path="/gygl_zsgl_cwgl"
+				scope="request"
+				type="xsgzgl.gygl.cwfpgl.CwfpglNewAction"
+				name="gyglnewCwfpglForm"
+				parameter="method">
+			<forward name="cwfpList" path="/xsgzgl/gygl/cwfpgl/cwfpList.jsp"/>
+			<forward name="cwfp" path="/xsgzgl/gygl/cwfpgl/cwfp.jsp"/>
+			<forward name="sycwfp" path="/xsgzgl/gygl/cwfpgl/sycwfp.jsp"/>
+		</action>
+
+		<!--床位调换-->
+		<action path="/gygl_zsgl_cwdh" forward="/gygl_zsgl_cwdhgl.do?method=cwdh"/>
+		<action path="/gygl_zsgl_cwdhgl"
+				scope="request"
+				type="xsgzgl.gygl.cwdh.CwdhAction"
+				name="cwdhForm"
+				parameter="method">
+			<forward name="cwdh" path="/xsgzgl/gygl/cwdh/cwdh.jsp"/>
+		</action>
+    	<!-- =====================================寝室管理=====================================================
+-->	    	
+    	<action path="/gyglnew_qsgl" 
+    			scope="request"
+    			type="xsgzgl.gygl.qsgl.QsglAction" 
+    			name="gyglnewQsglForm"
+    			parameter="method">	
+    		
+    		<forward name="qsglManage" path="/xsgzgl/gygl/qsgl/qsglManage.jsp"/>
+    		<forward name="qswhAdd" path="/xsgzgl/gygl/qsgl/qswhAdd.jsp"/>
+    		<forward name="qswhModi" path="/xsgzgl/gygl/qsgl/qswhModi.jsp"/>
+    		<forward name="qswhView" path="/xsgzgl/gygl/qsgl/qswhView.jsp"/>
+    		<forward name="importData" path="/xsgzgl/gygl/qsgl/qsglImportData.jsp"/>
+    		<forward name="qsglQsssInit" path="/xsgzgl/gygl/qsgl/qsglQsssInit.jsp"/>
+    		<forward name="plwhTypeOfQs" path="/xsgzgl/gygl/qsgl/plwhTypeOfQs.jsp"/>
+		</action>
+		<!-- =====================================用电管理====================================================-->	    	
+    	<action path="/ydxxgl" forward="/ydXxgl.do?method=getYdlist"/>
+		<action path="/ydXxgl" 
+	   			scope="request"
+	   			type="xsgzgl.gygl.ydgl.YdxxAction" 
+	   			name="ydxxForm"         
+	   			parameter="method">
+	   			<forward name="getYdlist" path="/xsgzgl/gygl/ydgl/ydxx/ydxxlist.jsp"/>
+	   			<forward name="ydxxAdd" path="/xsgzgl/gygl/ydgl/ydxx/ydxxAdd.jsp"/>
+	   			<forward name="ydxxUpdate" path="/xsgzgl/gygl/ydgl/ydxx/ydxxUpdate.jsp"/>
+	   			<forward name="ydxxView" path="/xsgzgl/gygl/ydgl/ydxx/ydxxView.jsp"/>
+		</action>	
+		<!-- =====================================床位管理=====================================================
+-->		
+		<action path="/gyglnew_cwgl" 
+    			scope="request"
+    			type="xsgzgl.gygl.cwgl.CwglAction" 
+    			name="gyglnewCwglForm"
+    			parameter="method">	
+    		
+    		<forward name="cwglManage" path="/xsgzgl/gygl/cwgl/cwglManage.jsp"/>
+    		<forward name="cwwhAdd" path="/xsgzgl/gygl/cwgl/cwwhAdd.jsp"/>
+    		<forward name="cwwhModi" path="/xsgzgl/gygl/cwgl/cwwhModi.jsp"/>
+    		<forward name="cwwhView" path="/xsgzgl/gygl/cwgl/cwwhView.jsp"/>
+    		<forward name="cwwhModibl" path="/xsgzgl/gygl/cwgl/cwwhModibl.jsp"/>
+    		<forward name="cwglPlts" path="/xsgzgl/gygl/cwgl/cwglPlts.jsp"/>
+    		<forward name="cwglPlts2" path="/xsgzgl/gygl/cwgl/cwglPlts2.jsp"/>
+    		<forward name="cwglCwssInit" path="/xsgzgl/gygl/cwgl/cwglCwssInit.jsp"/>
+    		<forward name="stuInfo"	path="/xsgzgl/gygl/cwgl/gygl_stuInfo.jsp" />
+    		<forward name="cwdd"	path="/xsgzgl/gygl/cwgl/cwglCwdd.jsp" />
+		</action>
+		
+		<!-- =====================================信息统计=====================================================
+-->
+		<action path="/gyglnew_xxtj" 
+    			scope="request"
+    			type="xsgzgl.gygl.xxtj.XxtjAction" 
+    			name="gyglnewXxtjForm"
+    			parameter="method">	
+    		
+    		<forward name="xxtjManage" path="/xsgzgl/gygl/xxtj/xxtjManage.jsp"/>
+    		<forward name="xxtjDetail" path="/xsgzgl/gygl/xxtj/xxtjDetail.jsp"/>
+		</action>
+		
+		<!-- =====================================床位入住管理=================================================
+-->	
+		<action path="/gyglnew_cwrzgl" 
+    			scope="request"
+    			type="xsgzgl.gygl.cwrzgl.CwrzglAction" 
+    			name="gyglnewCwrzglForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/gygl/cwrzgl/cwrzglManage.jsp"/>
+    		<forward name="sdfp" path="/xsgzgl/gygl/cwrzgl/cwrzglSdfp.jsp"/>
+    		<forward name="importData" path="/xsgzgl/gygl/cwrzgl/cwrzglImportData.jsp"/>
+    		<forward name="success_xy" path="/xsgzgl/gygl/cwrzgl/cwrzglManage_xy.jsp"/>
+    		<forward name="sdfp_xy" path="/xsgzgl/gygl/cwrzgl/cwrzglSdfp_xy.jsp"/>
+    		<forward name="sdfp_zy" path="/xsgzgl/gygl/cwrzgl/cwrzglSdfp_zy.jsp"/>
+		</action>
+		
+		<!-- =====================================退宿管理=================================================
+-->
+		<action path="/gyglnew_tsgl" 
+    			scope="request"
+    			type="xsgzgl.gygl.tsgl.TsglAction" 
+    			name="gyglnewTsglForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/gygl/tsgl/tsglManage.jsp"/>
+    		<forward name="tsglView" path="/xsgzgl/gygl/tsgl/tsglView.jsp"/>		
+		</action>
+		
+		<!-- =====================================时间设置=====================================================
+-->
+		<action path="/gyglnew_cssz_sjsz" forward="/gyglnew_cssz.do?method=sjszManage" />
+		<action path="/gyglnew_cssz_czcssz" forward="/gyglnew_cssz.do?method=czcsszManage" />
+		
+		<action path="/gyglnew_cssz" 
+    			scope="request"
+    			type="xsgzgl.gygl.cssz.CsszAction" 
+    			name="gyglnewCsszForm"
+    			parameter="method">	
+    		
+    		<forward name="sjszManage" path="/xsgzgl/gygl/cssz/sjszManage.jsp"/>
+    		<forward name="czcsszManage" path="/xsgzgl/gygl/cssz/czcsszManage.jsp"/>
+    		<forward name="qySjsz" path="/xsgzgl/gygl/cssz/qySjsz.jsp"/>
+		</action>
+		
+		<!-- =====================================学生住宿管理=================================================
+-->			
+		<action path="/gyglnew_xszsgl" 
+    			scope="request"
+    			type="xsgzgl.gygl.xszsgl.XszsglAction" 
+    			name="gyglnewXszsglForm"
+    			parameter="method">	
+    		<forward name="success" path="/xsgzgl/gygl/xszsgl/xszsglManage.jsp"/>
+    		<forward name="bzxbzsz" path="/xsgzgl/gygl/xszsgl/bzxbzsz.jsp"></forward> 
+    		<forward name="xszsxxView" path="/xsgzgl/gygl/xszsgl/xszsxxView.jsp"></forward>  		
+		</action>
+		
+		<!-- =====================================学生住宿统计=================================================
+-->			
+		<action path="/gyglnew_xszstj" 
+    			scope="request"
+    			type="xsgzgl.gygl.xszstj.XszstjAction" 
+    			name="gyglnewXszstjForm"
+    			parameter="method">	
+    		<forward name="xxzstjManage" path="/xsgzgl/gygl/xszstj/xszstjManage.jsp"/>   		
+    	    <forward name="xxzstjDetail" path="/xsgzgl/gygl/xszstj/xszstjDetail.jsp"/>   		
+    	    <forward name="xxzstjXsxx" path="/xsgzgl/gygl/xszstj/xszstjXsxx.jsp"/> 
+    	    <forward name="qsfbbTj" path="/xsgzgl/gygl/xszstj/qsfbbTj.jsp"/> 
+    	    <forward name="ztqksyt" path="/xsgzgl/gygl/xszstj/ztqksyt.jsp"/> 
+    	    <forward name="ssljtxxt" path="/xsgzgl/gygl/xszstj/ssljtxxt.jsp"/>
+    	    <forward name="gxssfbt" path="/xsgzgl/gygl/xszstj/gxssfbt.jsp"/> 
+    	    <forward name="gxkcwxx" path="/xsgzgl/gygl/xszstj/gxkcwxx.jsp"/>
+		</action>
+		
+		<!-- =====================================住宿信息管理=====================================================
+-->		
+		<action path="/gyglnew_zsxxgl" 
+    			scope="request"
+    			type="xsgzgl.gygl.zsxxgl.ZsxxglAction" 
+    			name="gyglnewZsxxglForm"
+    			parameter="method">	    		
+    		<forward name="zsxxglManage" path="/xsgzgl/gygl/zsxxgl/zsxxglManage.jsp"/>
+    		<forward name="zsxxCwdd" path="/xsgzgl/gygl/zsxxgl/zsxxCwdd.jsp"/>
+    		<forward name="zsxxgldmManage" path="/xsgzgl/gygl/zsxxgl/zsxxgldmManage.jsp"/>
+    		<forward name="rzyyZj" path="/xsgzgl/gygl/zsxxgl/rzyyZj.jsp"/>
+    		<forward name="pllx" path="/xsgzgl/gygl/zsxxgl/pllx.jsp"/>
+    		<forward name="pllxview" path="/xsgzgl/gygl/zsxxgl/pllxview.jsp"/>
+    		<forward name="xswjxxView" path="/xsgzgl/gygl/zsxxgl/xswjxxView.jsp"/>
+    		<forward name="updateBz" path="/xsgzgl/gygl/zsxxgl/updateBz.jsp"/>
+    		<forward name="updateBzBatch" path="/xsgzgl/gygl/zsxxgl/updateBzBatch.jsp"/>
+		</action>
+		
+		<!-- =====================================公寓报修管理=====================================================
+-->		
+		<action path="/gyglnew_gybxgl" 
+    			scope="request"
+    			type="xsgzgl.gygl.gybxgl.GybxglAction" 
+    			name="gyglnewGybxglForm"
+    			parameter="method">	    		
+    		<forward name="gybxglManage" path="/xsgzgl/gygl/gybxgl/gybxglManage.jsp"/>
+    		<forward name="gybxglStudent" path="/xsgzgl/gygl/gybxgl/gybxglStudent.jsp"/>
+    		<forward name="gybxglAdd" path="/xsgzgl/gygl/gybxgl/gybxglAdd.jsp"/>
+    		<forward name="gybxglUpdate" path="/xsgzgl/gygl/gybxgl/gybxglUpdate.jsp"/>
+    		<forward name="gybxglView" path="/xsgzgl/gygl/gybxgl/gybxglView.jsp"/>
+    		<forward name="gybxglfpView" path="/xsgzgl/gygl/gybxgl/gybxglfpView.jsp"/>
+    		<forward name="gybxglPj" path="/xsgzgl/gygl/gybxgl/gybxglPj.jsp"/>
+    		<forward name="gybxglMenu_10351" path="/xsgzgl/gygl/gybxgl/xxgxh/gybxglMenu_10351.jsp"/>
+    		<forward name="gybxglfpUpdate" path="/xsgzgl/gygl/gybxgl/gybxglfpUpdate.jsp"/>
+		</action>
+		<!-- 黑龙江农垦职业学院公寓报修分配-->
+		<action path="/gyglnew_gybxgl_bxfp" 
+    			scope="request"
+    			type="xsgzgl.gygl.gybxgl.GybxglAction" 
+    			name="gyglnewGybxglForm"
+    			parameter="method">	    		
+    		<forward name="gybxglManagebxfp" path="/xsgzgl/gygl/gybxgl/gybxglManagebxfp.jsp"/>
+    		
+		</action>
+		
+		<!-- 公寓类型人员维护 -->
+		<action path="/gyglnew_bxrywh" forward="/gyglnew_bxlbrywh.do?method=bxlbList"/>
+		
+		<action path="/gyglnew_bxlbrywh" 
+    			scope="request"
+    			type="xsgzgl.gygl.gybxgl.GybxRyglAction" 
+    			name="GybxRyglForm"
+    			parameter="method">	    		
+    		<forward name="gyglnew_bxlbrywh" path="/xsgzgl/gygl/gybxgl/gybxRyglList.jsp"/>
+    		<forward name="gybxRywhList" path="/xsgzgl/gygl/gybxgl/gybxRywhList.jsp"/>
+    		<forward name="viewBxlbYhList" path="/xsgzgl/gygl/gybxgl/ViewgybxRywhList.jsp"/>
+		</action>
+		
+		
+		<!-- =====================================每日记录管理=====================================================
+-->	
+		<action path="/gyglnew_mrjlgl" 
+    			scope="request"
+    			type="xsgzgl.gygl.mrjl.MrjlglAction" 
+    			name="gyglnewMrjlglForm"
+    			parameter="method">	    		
+    		<forward name="mrjlglManage" path="/xsgzgl/gygl/mrjl/mrjlglManage.jsp"/>
+    		<forward name="mrjlglUpdate" path="/xsgzgl/gygl/mrjl/mrjlglUpdate.jsp"/>
+    		<forward name="mrjlglModi" path="/xsgzgl/gygl/mrjl/mrjlglModi.jsp"/>
+		</action>
+		
+		<!-- =====================================公寓管理人员=====================================================
+-->	
+		<action path="/gyglnew_gyglry" 
+    			scope="request"
+    			type="xsgzgl.gygl.gyglry.GyglryAction" 
+    			name="gyglnewGyglryForm"
+    			parameter="method">	    		
+    		<forward name="gyglryManage" path="/xsgzgl/gygl/gyglry/gyglryManage.jsp"/>
+    		<forward name="gyglryFp" path="/xsgzgl/gygl/gyglry/gyglryFp.jsp"/>
+    		<forward name="gyglryQxfp" path="/xsgzgl/gygl/gyglry/gyglQxfp.jsp"/>
+    		<forward name="gyglydr" path="/xsgzgl/gygl/gyglry/gyglydr.jsp"/>
+		</action>
+		
+		<!-- =====================================公寓纪律代码维护=================================================
+-->
+		<action path="/gyglnew_gyjldmgl"
+				scope="request"
+				type="xsgzgl.gygl.gyjldmgl.GyjldmglAction"
+				name="gyjldmglForm"
+				parameter="method">
+			<forward name="gyjldlManage" path="/xsgzgl/gygl/gyjldmgl/gyjldlManage.jsp"/>
+			<forward name="gyjllbManage" path="/xsgzgl/gygl/gyjldmgl/gyjllbManage.jsp"/>
+			<forward name="gyjlcfManage" path="/xsgzgl/gygl/gyjldmgl/gyjlcfManage.jsp"/>
+			<forward name="gyjldlZj" path="/xsgzgl/gygl/gyjldmgl/gyjldlZj.jsp"/>
+			<forward name="gyjllbZj" path="/xsgzgl/gygl/gyjldmgl/gyjllbZj.jsp"/>
+			<forward name="gyjlcfZj" path="/xsgzgl/gygl/gyjldmgl/gyjlcfZj.jsp"/>
+			<forward name="zjlydmwh" path="/xsgzgl/gygl/gyjldmgl/zjlydmwh.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/gyjldmgl/zjlydmwhzj.jsp"/>
+			<forward name="update" path="/xsgzgl/gygl/gyjldmgl/zjlydmwhxg.jsp"/>
+			<forward name="ck" path="/xsgzgl/gygl/gyjldmgl/zjlydmwhck.jsp"/>
+		</action>
+		
+		<!-- =====================================公寓纪律信息维护=================================================
+-->
+		<action path="/gyglnew_gyjlgl"
+				scope="request"
+				type="xsgzgl.gygl.gyjlxxgl.GyjlxxglAction"
+				name="gyjlxxglForm"
+				parameter="method">
+			<forward name="gyjlxxManage" path="/xsgzgl/gygl/gyjlxxgl/gyjlxxManage.jsp"/>
+			<forward name="gyjlxxEdit" path="/xsgzgl/gygl/gyjlxxgl/gyjlxxEdit.jsp"/>
+			<forward name="gyjlxxView" path="/xsgzgl/gygl/gyjlxxgl/gyjlxxView.jsp"/>
+			<forward name="gyjlcxQuery" path="/xsgzgl/gygl/gyjlxxgl/gyjlcxQuery.jsp"/>
+			<forward name="gyjlcxView" path="/xsgzgl/gygl/gyjlxxgl/gyjlcxView.jsp"/>
+			<forward name="gyjlclView" path="/xsgzgl/gygl/gyjlxxgl/gyjlclView.jsp"/>
+			<forward name="gyjlxxZj" path="/xsgzgl/gygl/gyjlxxgl/gyjlxxZj.jsp"/>
+			<forward name="gyjlxxXg" path="/xsgzgl/gygl/gyjlxxgl/gyjlxxXg.jsp"/>
+			<forward name="gyjlxsCx" path ="/xsgzgl/gygl/gyjlxxgl/gyjlxsCx.jsp"/>
+			<forward name="gyjlxxCl" path="/xsgzgl/gygl/gyjlxxgl/gyjlxxCl.jsp"/>
+			<forward name="gyjlxxClwh" path="/xsgzgl/gygl/gyjlxxgl/gyjlxxClwh.jsp"/>
+			<forward name="gyjlSh" path="/xsgzgl/gygl/gyjlxxgl/gyjlSh.jsp"/>
+			<forward name="gyjlClsh" path="/xsgzgl/gygl/gyjlxxgl/gyjlClsh.jsp"/>
+			<forward name="xsjlxxCk" path="/xsgzgl/gygl/gyjlxxgl/xsjlxxCk.jsp"/>
+		</action>
+		
+		<!-- =====================================公寓纪律信息维护_new=================================================
+-->
+
+		<action path="/gyjl_gyjlglnew"
+				scope="request"
+				type="xsgzgl.gygl.gyjlxxglnew.GyjlxxglNewAction"
+				name="gyjlxxglNewForm"
+				parameter="method">
+				
+			<forward name="gyjlxxwh" path="/xsgzgl/gygl/gyjlxxglnew/gyjlxxwh.jsp"/>
+			<forward name="gyjlZj" path="/xsgzgl/gygl/gyjlxxglnew/gyjlZj.jsp"/>
+			<forward name="gyjlxxcl" path="/xsgzgl/gygl/gyjlxxglnew/gyjlxxcl.jsp"/>
+			<forward name="gyjlxxsh" path="/xsgzgl/gygl/gyjlxxglnew/gyjlxxsh.jsp"/>
+			<forward name="gyjlxscx" path="/xsgzgl/gygl/gyjlxxglnew/gyjlxsCx.jsp"/>
+			<forward name="xsjlxxcx" path="/xsgzgl/gygl/gyjlxxglnew/xsjlxxcx.jsp"/>
+			
+			
+		</action>
+		<!-- 湖南城市学院公寓纪律个性化 -->
+		<action path="/gygl_gyjlglnew_gyjlxxwh_new"	forward="/gyjl_gyjlwh.do?method=gyjlxxwhList"/>	<!-- 公寓纪律信息维护 -->
+		<action path="/gyjl_gyjlwh"
+				scope="request"
+				type="com.zfsoft.xgxt.gygl.gyjlxxwh.GyjlxxwhAction"
+				name="gyjlxxwhForm"
+				parameter="method">
+				
+			<forward name="gyjlxxwhList" path="/xsgzgl/gygl/gyjlxxwh/gyjlxxwhList.jsp"/>
+			<forward name="gyjlxxwhZj" path="/xsgzgl/gygl/gyjlxxwh/gyjlZj.jsp"/>
+			<forward name="gyjlxxwhXg" path="/xsgzgl/gygl/gyjlxxwh/gyjlXg.jsp"/>
+			<forward name="gyjlxxwhCk" path="/xsgzgl/gygl/gyjlxxwh/gyjlxxwhCk.jsp"/>
+		</action>
+		
+		<action path="/gyjl_gyjlglnew_ajax"
+				scope="request"
+				type="xsgzgl.gygl.gyjlxxglnew.GyjlxxglNewAjax"
+				name="gyjlxxglNewForm"
+				parameter="method">
+				
+			
+		</action>
+		
+		<!-- =====================================卫生检查   贵州大学=====================================================
+-->	
+    	<action path="/gzdxWsjc" 
+        		parameter="method"  
+        		name="gzdxGyglTyForm" 
+        		scope="request"
+		        type="xsgzgl.gygl.wsjc.gzdx.GyglWsjcAction">	
+		        
+			<!-- 参数设置 -->
+			<forward name="csszManage"    path="/xsgzgl/gygl/wsjc/gzdx/csszManage.jsp" />
+			<!-- 空白报表 -->
+			<forward name="kbbbManage"    path="/xsgzgl/gygl/wsjc/gzdx/kbbbManage.jsp" />
+			<!-- 分数录入 -->
+			<forward name="fslrManage"    path="/xsgzgl/gygl/wsjc/gzdx/fslrManage.jsp" />
+			<!-- 寝室信息 -->
+			<forward name="qsInfo"    	  path="/xsgzgl/gygl/wsjc/gzdx/qsInfo.jsp" />
+			<!-- 学生信息 -->
+			<forward name="xsInfo"    	  path="/xsgzgl/gygl/wsjc/gzdx/xsInfo.jsp" />
+			<!-- 分数查询 -->
+			<forward name="fscxManage"    path="/xsgzgl/gygl/wsjc/gzdx/fscxManage.jsp" />
+			<!-- 分数统计 -->
+			<forward name="fstjManage"    path="/xsgzgl/gygl/wsjc/gzdx/fstjManage.jsp" />
+			<!-- 学生分数 -->
+			<forward name="xsfslrManage"  path="/xsgzgl/gygl/wsjc/gzdx/xsmk/xsfslrManage.jsp" />
+			<!-- 学生分数录入 -->
+			<forward name="xsfslrUpdate"  path="/xsgzgl/gygl/wsjc/gzdx/xsmk/xsfslrUpdate.jsp" />
+			<!-- 学生分数查看主界面 -->
+			<forward name="xsfsckManage"  path="/xsgzgl/gygl/wsjc/gzdx/xsmk/xsfsckManage.jsp" />
+			<!-- 学生分数查看详细 -->
+			<forward name="xsfsckUpdate"  path="/xsgzgl/gygl/wsjc/gzdx/xsmk/xsfsckUpdate.jsp" />
+			<!-- 学生分数统计选择 -->
+			<forward name="xsfsTj"  path="/xsgzgl/gygl/wsjc/gzdx/xsmk/xsfsTj.jsp" />
+		</action>
+		<!-- =====================================文明寝室评比   贵州大学=====================================================
+-->	
+    	<action path="/gzdxWmqs"
+        		parameter="method"
+        		name="gzdxGyglWmqsForm"
+        		scope="request"
+		        type="xsgzgl.gygl.wmqs.gzdx.GyglWmqsAction">
+		        
+			<!-- 文明寝室个数维护 -->
+			<forward name="qsgswhManage"  path="/xsgzgl/gygl/wmqs/gzdx/wmqsgswhManage.jsp" />
+			<!-- 空白报表 -->
+			<forward name="qssqManage"    path="/xsgzgl/gygl/wmqs/gzdx/wmqssqManage.jsp" />
+			<!-- 分数录入 -->
+			<forward name="qsshManage"    path="/xsgzgl/gygl/wmqs/gzdx/wmqsshManage.jsp" />
+			<!-- 寝室信息 -->
+			<forward name="qsglManage"    path="/xsgzgl/gygl/wmqs/gzdx/wmqsglManage.jsp" />
+			<!-- 寝室信息修改 -->
+			<forward name="wmqsglModi"    path="/xsgzgl/gygl/wmqs/gzdx/wmqsglModi.jsp" />
+		</action>
+		
+		<!-- 卫生检查日程管理 begin  -->
+		<action path="/gyglnew_jcrcgl"
+        		parameter="method"
+        		name="gyglJcrcglForm"
+        		scope="request"
+		        type="xsgzgl.gygl.wsjc.jcrcgl.GyglJcrcglAction">
+		        
+			<!-- 卫生检查 检查日程管理查询  -->
+			<forward name="jcrcglCx"  path="/xsgzgl/gygl/wsjc/jcrcgl/jcrcglCx.jsp" />
+			<!-- 卫生检查 检查日程管理维护  -->
+			<forward name="jcrcglWh"  path="/xsgzgl/gygl/wsjc/jcrcgl/jcrcglWh.jsp" />
+			<!-- 卫生检查 检查日程管理查看  -->
+			<forward name="jcrcglCk"  path="/xsgzgl/gygl/wsjc/jcrcgl/jcrcglCk.jsp" />
+		</action>
+		
+		<action path="/gyglnew_jcrcglForZjSyJs"
+        		parameter="method"
+        		name="gyglJcrcglForm"
+        		scope="request"
+		        type="xsgzgl.gygl.wsjc.jcrcgl.GyglJcrcglForZjSyJsAction">
+		</action>
+		
+		<action path="/gyglnew_jcrcgl_ajax"
+        		parameter="method"
+        		name="gyglJcrcglForm"
+        		scope="request"
+		        type="xsgzgl.gygl.wsjc.jcrcgl.GyglJcrcglAjax">
+		   
+		</action>
+		<!-- 卫生检查日程管理 end  -->
+		
+		<!-- 卫生检查 学生分 -->
+		<action path="/gyglnew_xswsjc"
+        		parameter="method"
+        		name="xswsjcForm"
+        		scope="request"
+		        type="xsgzgl.gygl.rcjc.xswsjc.XswsjcAction">
+			<forward name="xswsjcList"  path="/xsgzgl/gygl/wsjc/xswsjc/xswsjcList.jsp" />
+			<forward name="xswsjcEdit"  path="/xsgzgl/gygl/wsjc/xswsjc/xswsjcEdit.jsp" />
+			<forward name="wsjcdjtj"  path="/xsgzgl/gygl/wsjc/xswsjc/wsjcdjtj.jsp" />
+		</action>
+		
+		
+		
+		
+		<!-- 卫生分录入 begin  -->
+		<action path="/gyglnew_fslr"
+        		parameter="method"
+        		name="fslrForm"
+        		scope="request"
+		        type="xsgzgl.gygl.wsjc.fslr.FslrAction">
+		        
+			<!-- 卫生分录入查询  -->
+			<forward name="fslrCx"  path="/xsgzgl/gygl/wsjc/fslr/fslrCx.jsp" />
+			<!-- 卫生分录入查找  -->
+			<forward name="fslrCz"  path="/xsgzgl/gygl/wsjc/fslr/fslrCz.jsp" />
+			<!-- 卫生分录入保存  -->
+			<forward name="fslrCk"  path="/xsgzgl/gygl/wsjc/fslr/fslrCk.jsp" />
+			<!-- 卫生分导入  -->
+			<forward name="importData"  path="/xsgzgl/gygl/wsjc/fslr/fslrImportData.jsp" />
+			<!-- 卫生分扣分录入详细页面  -->
+			<forward name="fslrDetail"  path="/xsgzgl/gygl/wsjc/fslr/fslrDetail.jsp" />
+			<!-- 浙江传媒统计查询 -->
+			<forward name="tjcx" path="/xsgzgl/gygl/wsjc/fslr/zjcmTjcx.jsp"/>
+		</action>
+		
+		<!-- 扣分录入 begin  -->
+		<action path="/gyglnew_kslr"
+        		parameter="method"
+        		name="kflrForm"
+        		scope="request"
+		        type="xsgzgl.gygl.wsjc.fslr.KflrAction">
+			
+		</action>
+		
+		<action path="/gyglnew_fslr_ajax"
+        		parameter="method"
+        		name="fslrForm"
+        		scope="request"
+		        type="xsgzgl.gygl.wsjc.fslr.FslrAjax">
+		   
+		</action>
+		<!-- 卫生分录入end  -->
+		
+		<!-- 卫生分查询 begin  -->
+		<action path="/gyglnew_fscx"
+        		parameter="method"
+        		name="fscxForm"
+        		scope="request"
+		        type="xsgzgl.gygl.wsjc.fscx.FscxAction">
+		        
+			<!-- 卫生分查询查询  -->
+			<forward name="fscxCx"  path="/xsgzgl/gygl/wsjc/fscx/fscxCx.jsp" />
+			<!-- 卫生分查询维护  -->
+			<forward name="fscxWh"  path="/xsgzgl/gygl/wsjc/fscx/fscxWh.jsp" />
+			<!-- 卫生分查询查看  -->
+			<forward name="fscxCk"  path="/xsgzgl/gygl/wsjc/fscx/fscxCk.jsp" />
+			<!-- 卫生分公寓按月导出 -->
+			<forward name="gyywsfDc"  path="/xsgzgl/gygl/wsjc/fscx/gyywsfDc.jsp" />
+		</action>
+		
+		<action path="/gyglnew_fscx_ajax"
+        		parameter="method"
+        		name="fscxForm"
+        		scope="request"
+		        type="xsgzgl.gygl.wsjc.fscx.FscxAjax">
+		   
+		</action>
+		<!-- 卫生分查询end  -->
+		
+		<!-- 寝室走访 begin  -->
+		<action path="/gyglnew_qszf"
+        		parameter="method"
+        		name="qszfForm"
+        		scope="request"
+		        type="xsgzgl.gygl.rcjc.qszf.QszfAction">
+		        
+			<!-- 寝室走访查询  -->
+			<forward name="qszfCx"  path="/xsgzgl/gygl/rcjc/qszf/qszfCx.jsp" />
+			<!-- 寝室走访增加  -->
+			<forward name="qszfZj"  path="/xsgzgl/gygl/rcjc/qszf/qszfZj.jsp" />
+			<!-- 下寝次数统计  -->
+			<forward name="xqcsTj"  path="/xsgzgl/gygl/rcjc/qszf/xqcsTj.jsp" />
+			<!-- 寝室走访修改  -->
+			<forward name="qszfXg"  path="/xsgzgl/gygl/rcjc/qszf/qszfXg.jsp" />
+			<!-- 获得走访老师信息  -->
+			<forward name="zflsInfo"  path="/xsgzgl/gygl/rcjc/qszf/zflsInfo.jsp" />
+		</action>
+		
+		<action path="/gyglnew_qszf_ajax"
+        		parameter="method"
+        		name="qszfForm"
+        		scope="request"
+		        type="xsgzgl.gygl.rcjc.qszf.QszfAjax">
+		   
+		</action>
+		<!-- 寝室走访end  -->
+		
+		<!-- 卫生检查 begin  -->
+		<action path="/gyglnew_wsjc"
+        		parameter="method"
+        		name="wsjcForm"
+        		scope="request"
+		        type="xsgzgl.gygl.rcjc.wsjc.WsjcAction">
+		        
+			<!-- 卫生检查查询  -->
+			<forward name="wsjcCx"  path="/xsgzgl/gygl/rcjc/wsjc/wsjcCx.jsp" />
+			<!-- 卫生检查增加  -->
+			<forward name="wsjcZj"  path="/xsgzgl/gygl/rcjc/wsjc/wsjcZj.jsp" />
+			<!-- 卫生检查修改  -->
+			<forward name="wsjcXg"  path="/xsgzgl/gygl/rcjc/wsjc/wsjcXg.jsp" />
+		</action>
+		
+		<action path="/gyglnew_wsjc_ajax"
+        		parameter="method"
+        		name="wsjcForm"
+        		scope="request"
+		        type="xsgzgl.gygl.rcjc.wsjc.WsjcAjax">
+		</action>
+		<!-- 卫生检查end  -->
+		
+		<!-- 卫生检查 begin  -->
+		
+		<action path="/jqlx_lxsz" forward="/gyglnew_jqlx.do?method=lxszManage"/>
+		<action path="/jqlx_lxsq" forward="/gyglnew_jqlx.do?method=lxsqManage"/>
+		<action path="/jqlx_lxsh" forward="/gyglnew_jqlx.do?method=lxshManage"/>
+		<action path="/jqlx_lxjg" forward="/gyglnew_jqlx.do?method=lxjgManage"/>
+		
+		<action path="/gyglnew_jqlx"
+        		parameter="method"
+        		name="jqlxForm"
+        		scope="request"
+		        type="xsgzgl.gygl.jqlx.GyglJqlxAction">
+		        
+			<!-- 假期留校设置  -->
+			<forward name="lxszManage"  path="/xsgzgl/gygl/jqlx/lxszManage.jsp" />
+			<!-- 假期留校申请  -->
+			<forward name="lxsqManage"  path="/xsgzgl/gygl/jqlx/lxsqManage.jsp" />
+			<!-- 假期留校审核  -->
+			<forward name="lxshManage"  path="/xsgzgl/gygl/jqlx/lxshManage.jsp" />
+			<!-- 假期留校结果  -->
+			<forward name="lxjgManage"  path="/xsgzgl/gygl/jqlx/lxjgManage.jsp" />
+			<!-- 假期留校增加  -->
+			<forward name="lxjgZj"  path="/xsgzgl/gygl/jqlx/lxjgWh.jsp" />
+			<!-- 假期留校修改  -->
+			<forward name="lxjgCk"  path="/xsgzgl/gygl/jqlx/lxjgCk.jsp" />
+			
+			<forward name="lxshDetail"  path="/xsgzgl/gygl/jqlx/lxshDetail.jsp" />
+		</action>
+		
+		<action path="/gyglnew_jqlx_ajax"
+        		parameter="method"
+        		name="jqlxForm"
+        		scope="request"
+		         type="xsgzgl.gygl.jqlx.GyglJqlxAjax">
+		</action>
+		<!-- 卫生检查end  -->
+		
+		
+		<!-- 公寓评优 begin  -->
+		
+		<!-- 公寓评优维护  -->
+		<action path="/gygl_gypywh"
+        		parameter="method"
+        		name="gypywhForm"
+        		scope="request"
+		        type="xsgzgl.gygl.gypy.gypywh.GypywhAction">
+			<forward name="gypyCx"  path="/xsgzgl/gygl/gypy/gypywh/gypyCx.jsp" />  <!-- 公寓评优查询-->
+			<forward name="pyqsCx"  path="/xsgzgl/gygl/gypy/gypywh/pyqsCx.jsp" />  <!-- 评优寝室查询 -->
+		</action>
+		
+		<action path="/gygl_gypywh_ajax"
+        		parameter="method"
+        		name="gypywhForm"
+        		scope="request"
+		        type="xsgzgl.gygl.gypy.gypywh.GypywhAjax">
+		</action>
+		
+		<!-- 公寓评优end  -->
+		<!-- 楼栋考核管理 -->
+		<action path="/gygl_ldkhgl"
+        		parameter="method"
+        		name="ldkhglForm"
+        		scope="request"
+		        type="xsgzgl.gygl.hzsf.LdkhglAction">
+			<forward name="ldkhgl"  path="/xsgzgl/gygl/hzsf/ldkhgl.jsp" />  <!-- 楼栋考核管理 -->
+			<forward name="khcjwh"  path="/xsgzgl/gygl/hzsf/khcjwh.jsp" />  <!-- 考核成绩维护 -->
+		</action>
+		
+		<action path="/gygl_ldkhgl_ajax"
+        		parameter="method"
+        		name="ldkhglForm"
+        		scope="request"
+		        type="xsgzgl.gygl.hzsf.LdkhglAjax">
+		</action>
+		<!-- 楼栋考核管理end -->
+		
+		<!-- =====================================公寓员工维护============================================== -->
+		<action path="/gyglnew_gyygzwdmgl"
+				scope="request"
+				type="xsgzgl.gygl.gyyggl.GyygzwdmglAction"
+				name="gyygzwdmglForm"
+				parameter="method">
+			<forward name="gyygzwdmManage" path="/xsgzgl/gygl/gyyggl/gyygzwdmManage.jsp"/>
+			<forward name="addZwdm" path="/xsgzgl/gygl/gyyggl/addZwdm.jsp"/>
+			<forward name="updateZwdm" path="/xsgzgl/gygl/gyyggl/updateZwdm.jsp"/>
+		</action>
+		
+			<!-- =====================================公寓员工维护============================================== -->
+		<action path="/gyglnew_gyygxxgl"
+				scope="request"
+				type="xsgzgl.gygl.gyyggl.GyygxxglAction"
+				name="gyygxxglForm"
+				parameter="method">
+			<forward name="gyygxxManage" path="/xsgzgl/gygl/gyyggl/gyygxxManage.jsp"/>
+			<forward name="zjYg" path="/xsgzgl/gygl/gyyggl/zjYg.jsp"/>
+			<forward name="xgYg" path="/xsgzgl/gygl/gyyggl/xgYg.jsp"/>
+			<forward name="ckYg" path="/xsgzgl/gygl/gyyggl/ckYg.jsp"/>
+		</action>
+			<!-- =====================================公寓物品维护  潍坊学院============================================== -->
+		<action path="/gygl_qywpxx"
+				scope="request"
+				type="com.zfsoft.xgxt.gygl.gywp.GywpxxAction"
+				name="gywpxxForm"
+				parameter="method">
+			<forward name="cxGywplrxxList" path="/xsgzgl/gygl/gywp/cxGywplrxxList.jsp"/>
+			<forward name="cxGywpxxList" path="/xsgzgl/gygl/gywp/cxGywpxxList.jsp"/>
+			<forward name="addGywpxx" path="/xsgzgl/gygl/gywp/addGywpxx.jsp"/>
+			<forward name="updateGywpxx" path="/xsgzgl/gygl/gywp/updateGywpxx.jsp"/>
+			<forward name="viewGywpxx" path="/xsgzgl/gygl/gywp/viewGywpxx.jsp"/>
+		</action>
+		
+		
+		
+		<!-- =====================================寝室导师维护（新）开始============================================== -->
+		<action path="/gygl_qsdswh"
+				scope="request"
+				type="com.zfsoft.xgxt.gygl.qsdsgl.QsdswhAction"
+				name="qsdswhForm"
+				parameter="method">
+			<forward name="qsdswhManage" path="/xsgzgl/gygl/qsdsgl/qsdswhManage.jsp"/>
+			<forward name="qsdswhAdd" path="/xsgzgl/gygl/qsdsgl/qsdswhAdd.jsp"/>
+			<forward name="qsdswhUpdate" path="/xsgzgl/gygl/qsdsgl/qsdswhUpdate.jsp"/>
+			<forward name="qsdswhQsxxView" path="/xsgzgl/gygl/qsdsgl/qsdswhQsxxView.jsp"/>
+			<forward name="qsdswhQsxxViewForWzdx" path="/xsgzgl/gygl/qsdsgl/qsdswhQsxxViewForWzdx.jsp"/>
+		</action>
+		<!-- =====================================寝室导师维护（新）结束============================================== -->
+		<!-- =====================================寝室导师考核（新）开始============================================== -->
+		<action path="/gygl_qsdskh"
+				scope="request"
+				type="com.zfsoft.xgxt.gygl.qsdsgl.qsdskh.QsdskhAction"
+				name="qsdskhForm"
+				parameter="method">
+			<forward name="qsdskhManage" path="/xsgzgl/gygl/qsdsgl/qsdskh/qsdskhManage.jsp"/>
+			<forward name="qsdskhAdd" path="/xsgzgl/gygl/qsdsgl/qsdskh/qsdskhAdd.jsp"/>
+			<forward name="qsdskhUpdate" path="/xsgzgl/gygl/qsdsgl/qsdskh/qsdskhUpdate.jsp"/>
+		</action>
+		<!-- =====================================寝室导师考核（新）结束============================================== -->
+		
+		
+		<!-- =====================================公寓意见箱（新）开始============================================== -->
+		<action path="/gygl_yjxdmwhgl" forward="/gygl_gyyjxdmwh.do?method=listDmwh"/>	
+		<action path="/gygl_yjxstugl"  forward="/gygl_gyyjxstu.do?method=listStu"/>
+		<action path="/gygl_jxjggl"  forward="/gygl_gyyjxstu.do?method=listGl"/>		
+		
+		<action path="/gygl_gyyjxdmwh"
+				scope="request"
+				type="com.zfsoft.xgxt.gygl.gyyjx.GyyjxdmwhAction"
+				name="gyyjxForm"
+				parameter="method">
+			<forward name="listDmwh" path="/xsgzgl/gygl/gyyjx/gyyjxdmwh.jsp"/>
+			<forward name="gyyjxdmwhAddUpdate" path="/xsgzgl/gygl/gyyjx/gyyjxdmAddUpdate.jsp"/>
+		</action>
+		
+		<action path="/gygl_gyyjxstu"
+				scope="request"
+				type="com.zfsoft.xgxt.gygl.gyyjx.GyyjxStuAction"
+				name="gyyjxForm"
+				parameter="method">
+			<forward name="listStu" path="/xsgzgl/gygl/gyyjx/gyyjxStu.jsp"/>
+			<forward name="gyyjxStuAddUpdate" path="/xsgzgl/gygl/gyyjx/gyyjxStuAddUpdate.jsp"/>
+			<forward name="queryGyyjxx" path="/xsgzgl/gygl/gyyjx/gyyjxStuQuery.jsp"></forward>
+			
+			<forward name="listGl" path="/xsgzgl/gygl/gyyjx/gyyjxGl.jsp"></forward>
+			<forward name="gyyjfk" path="/xsgzgl/gygl/gyyjx/gyyjFk.jsp"></forward>
+		</action>
+		<!-- =====================================公寓意见箱（新）结束============================================== -->
+		
+		
+		<!-- =====================================来访人员登记管理开始============================================== -->
+		<action path="/gygl_lfryxxgl" forward="/gygl_lfrydj.do?method=lfrydjManage"/>		
+		<action path="/gygl_lfrydj"
+				scope="request"
+				type="xsgzgl.gygl.lfryxxgl.LfrydjAction"
+				name="lfrydjForm"
+				parameter="method">
+			<forward name="lfrydjManage" path="/xsgzgl/gygl/lfryxxgl/lfrydjManage.jsp"/>
+			<forward name="lfrydjAdd" path="/xsgzgl/gygl/lfryxxgl/lfrydjAdd.jsp"/>
+			<forward name="lfrydjUpdate" path="/xsgzgl/gygl/lfryxxgl/lfrydjUpdate.jsp"/>
+			<forward name="showStudents" path="/xsgzgl/gygl/lfryxxgl/showStudents.jsp"/>
+			<forward name="viewLfxx" path="/xsgzgl/gygl/lfryxxgl/viewLfxx.jsp"/>
+			<forward name="xsxxView" path="/xsgzgl/gygl/lfryxxgl/xsxxView.jsp"/>		
+		</action>	
+		<!-- =====================================来访人员登记管理结束============================================== -->
+		
+		
+		<!-- =====================================贵重物品出门登记管理开始============================================== -->
+		<action path="/gygl_gzwpcmdjgl" forward="/gygl_gzwpcmdj.do?method=gzwpcmdjManage"/>
+		<action path="/gygl_gzwpcmdj"
+				scope="request"
+				type="xsgzgl.gygl.gzwpcmdjgl.GzwpcmdjAction"
+				name="gzwpcmdjForm"
+				parameter="method">
+			<forward name="gzwpcmdjManage" path="/xsgzgl/gygl/gzwpcmdjgl/gzwpcmdjManage.jsp"/>
+			<forward name="gzwpcmdjAdd" path="/xsgzgl/gygl/gzwpcmdjgl/gzwpcmdjAdd.jsp"/>
+			<forward name="gzwpcmdjUpdate" path="/xsgzgl/gygl/gzwpcmdjgl/gzwpcmdjUpdate.jsp"/>
+			<forward name="showStudents" path="/xsgzgl/gygl/gzwpcmdjgl/showStudents.jsp"/>
+			<forward name="viewWpxx" path="/xsgzgl/gygl/gzwpcmdjgl/viewWpxx.jsp"/>
+		</action>
+		<!-- =====================================校外住宿管理结果============================================== -->		
+		<action path="/gygl_xyzsjg" forward="/gygl_xyzsjggl.do?method=getXyzsList"/>
+		<action path="/gygl_xyzsjggl"
+				scope="request"
+				type="xsgzgl.gygl.xyzsgl.jg.XyzsglAction"
+				name="XyzsglForm"
+				parameter="method">
+			<forward name="getXyzsList" path="/xsgzgl/gygl/xyzs/xyzsjg/xyzsjglist.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/xyzs/xyzsjg/XyZsjg.jsp"/>
+			<forward name="view" path="/xsgzgl/gygl/xyzs/xyzsjg/XyZsjgView.jsp"/>
+			<forward name="editZsjg" path="/xsgzgl/gygl/xyzs/xyzsjg/XyZsjgEdit.jsp"/>
+		</action>
+			<!-- =====================================校外住宿管理申请============================================== -->		
+		<action path="/gygl_xyzssq" forward="/gygl_xyzssqgl.do?method=getXyzsSqList"/>
+		<action path="/gygl_xyzssqgl"
+				scope="request"
+				type="xsgzgl.gygl.xyzsgl.sq.XyzsSqAction"
+				name="XyzsSqForm"
+				parameter="method">
+			<forward name="getXyzsSqList" path="/xsgzgl/gygl/xyzs/xyzssq/XyzsSqList.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/xyzs/xyzssq/XyZssqAdd.jsp"/>
+			<forward name="view" path="/xsgzgl/gygl/xyzs/xyzssq/XyZssqView.jsp"/>
+			<forward name="editZssq" path="/xsgzgl/gygl/xyzs/xyzssq/XyZssqEdit.jsp"/>
+		</action>
+		<!-- =====================================校外住宿管理基础参数设置============================================== -->
+		<action path="/gygl_xyzsjcsz" forward="/gygl_xyzsjcszgl.do?method=jcsz"/>
+		<action path="/gygl_xyzsjcszgl"
+				scope="request"
+				type="xsgzgl.gygl.xyzsgl.jcsz.XyzsJcszAction"
+				name="XyzsJcszForm"
+				parameter="method">
+			<forward name="jcsz" path="/xsgzgl/gygl/xyzs/xyzsjcsz/jcsz.jsp"/>
+		</action>
+		<!-- =====================================校外住宿管理审核============================================== -->
+		<action path="/gygl_xyzssh" forward="/gygl_xyzsshgl.do?method=getXyzsshlist"/>
+		<action path="/gygl_xyzsshgl"
+				scope="request"
+				type="xsgzgl.gygl.xyzsgl.sh.XyzsShAction"
+				name="XyzsShForm"
+				parameter="method">
+			<forward name="xyzsshlist" path="/xsgzgl/gygl/xyzs/xyzssh/Xyzsshlist.jsp"/>
+			<forward name="zsDgsh" path="/xsgzgl/gygl/xyzs/xyzssh/zsDgsh.jsp"/>
+			<forward name="zsPlsh" path="/xsgzgl/gygl/xyzs/xyzssh/zsPlsh.jsp"/>
+		</action>				
+		
+		<!-- 浙江旅游公寓奖惩维护 -->
+    	<action path="/zjly_jcxxwh" scope="request" type="xsgzgl.gygl.zjlygyjcwh.jg.GyjcWhAction"
+				name="GyjcWhForm"
+				parameter="method">
+			<forward name="cx" path="/xsgzgl/gygl/gyjcwh/gyjcwhcx.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/gyjcwh/addgyjcwh.jsp"/>
+			<forward name="view" path="/xsgzgl/gygl/gyjcwh/ckgyjcwh.jsp"/>
+			<forward name="edit" path="/xsgzgl/gygl/gyjcwh/updategyjcwh.jsp"/>
+    	</action>
+    	
+    	<!-- 青岛滨海，水电费统计 -->
+    	<action path="/xg_gygl_sdftj" forward="/gygl_sdftj.do?method=getSdfTjCx"/>
+    	<action path="/gygl_sdftj" scope="request" type="xsgzgl.gygl.sdftj.sdfTjAction" name="sdfTjForm"
+				parameter="method" >
+    		<forward name="cx" path="/xsgzgl/gygl/sdftj/getSdfTjCx.jsp" />
+    		<forward name="add" path="/xsgzgl/gygl/sdftj/addSdfTj.jsp" />
+    		<forward name="edit" path="/xsgzgl/gygl/sdftj/editSdfTj.jsp" />
+    		<forward name="ck" path="/xsgzgl/gygl/sdftj/ckSdfTj.jsp" />
+    	</action>
+    	
+    	
+    	<!-- 天津机电，卫生分统计。分楼栋和学院 -->
+    	<action path="/gyglnew_tjjdwsf" scope="request" type="xsgzgl.gygl.rcjc.tjjd.TjjdWsfAction" name="tjjdWsfForm"
+				parameter="method" >
+			<forward name="viewWsftjList" path="/xsgzgl/gygl/rcjc/tjjd/viewWsftjList.jsp" />
+    	</action>
+    	 
+    	 <!-- =====================================学生卫生分（苏州卫生）============================================== -->
+    	<action path="/gyglnew_xswsf_xswsfgl" 	forward="/gyglnew_xswsf_12688.do?method=xswsfManage"/>
+		<action path="/gyglnew_xswsf_12688"
+				scope="request"
+				type="xsgzgl.gygl.rcjc.xswsf.XswsfAction"
+				name="XswsfForm"
+				parameter="method">
+			<forward name="xswsfManage" path="/xsgzgl/gygl/wsjc/xswsf/xswsfManage.jsp"/>
+			<forward name="xswsjcEdit" path="/xsgzgl/gygl/wsjc/xswsf/xswsfEdit.jsp"/>
+			<forward name="printWmqs" path="/xsgzgl/gygl/wsjc/xswsf/printWmqs.jsp"/>
+			<forward name="xswsjcView" path="/xsgzgl/gygl/wsjc/xswsf/xswsfView.jsp"/>
+		</action>		
+		
+		 <!-- =====================================文明寝室学生名单维护（苏州卫生）============================================== -->
+    	<action path="/gyglnew_wmqsxsmd_wmqsxsmdgl" 	forward="/gyglnew_wmqsxsmd_12688.do?method=wmqsxsmdManage"/>
+		<action path="/gyglnew_wmqsxsmd_12688"
+				scope="request"
+				type="xsgzgl.gygl.rcjc.wmqsxsmd.WmqsxsmdAction"
+				name="WmqsxsmdForm"
+				parameter="method">
+			<forward name="wmqsxsmdManage" path="/xsgzgl/gygl/wsjc/wmqsxsmd/wmqsxsmdManage.jsp"/>
+			<forward name="wmqsxsEdit" path="/xsgzgl/gygl/wsjc/wmqsxsmd/editWmqsxs.jsp"/>
+			<forward name="wmqsxsAdd" path="/xsgzgl/gygl/wsjc/wmqsxsmd/addWmqsxs.jsp"/>
+			<forward name="wmqsxsView" path="/xsgzgl/gygl/wsjc/wmqsxsmd/viewWmqsxs.jsp"/>
+		</action>
+
+		<action path="/gygl_fygl_ldxxgl" forward="/gygl_fygl_ldxxgl10698.do?method=ldxxList"/>
+		<action path="/gygl_fygl_ldxxgl10698"
+				scope="request"
+				type="xsgzgl.gygl.xjdfygl.ldxxgl.LdxxglAction"
+				name="ldxxglForm"
+				parameter="method">
+			<forward name="ldxxList" path="/xsgzgl/gygl/xjdfygl/ldxxgl/ldxxList.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/xjdfygl/ldxxgl/add.jsp"/>
+			<forward name="update" path="/xsgzgl/gygl/xjdfygl/ldxxgl/update.jsp"/>
+			<forward name="qssc" path="/xsgzgl/gygl/xjdfygl/ldxxgl/qssc.jsp"/>
+			<forward name="qsscCk" path="/xsgzgl/gygl/xjdfygl/ldxxgl/qsscCk.jsp"/>
+		</action>
+
+		<action path="/gygl_fygl_qsxxgl" forward="/gygl_fygl_qsxxgl10698.do?method=qsxxList"/>
+		<action path="/gygl_zsgl_qsfp" forward="/gygl_fygl_qsxxgl10698.do?method=qsfpList"/>
+		<action path="/gygl_fygl_qsxxgl10698"
+				scope="request"
+				type="xsgzgl.gygl.xjdfygl.qsxxgl.QsxxglAction"
+				name="qsxxglForm"
+				parameter="method">
+			<forward name="qsxxList" path="/xsgzgl/gygl/xjdfygl/qsxxgl/qsxxList.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/xjdfygl/qsxxgl/add.jsp"/>
+			<forward name="update" path="/xsgzgl/gygl/xjdfygl/qsxxgl/update.jsp"/>
+			<forward name="plxgqs" path="/xsgzgl/gygl/xjdfygl/qsxxgl/plxgqs.jsp"/>
+			<forward name="xgcw" path="/xsgzgl/gygl/xjdfygl/qsxxgl/xgcw.jsp"/>
+			<forward name="qssscsh" path="/xsgzgl/gygl/xjdfygl/qsxxgl/qssscsh.jsp"/>
+			<forward name="qsfpList" path="/xsgzgl/gygl/xjdfygl/qsxxgl/qsfpList.jsp"/>
+			<forward name="qsfp" path="/xsgzgl/gygl/xjdfygl/qsxxgl/qsfp.jsp"/>
+		</action>
+
+		<action path="/gygl_fygl_cwxxgl" forward="/gygl_fygl_cwxxgl10698.do?method=cwxxList"/>
+		<action path="/gygl_fygl_zsqxgl" forward="/gygl_fygl_cwxxgl10698.do?method=list"/>
+		<action path="/gygl_fygl_fyyc" forward="/gygl_fygl_cwxxgl10698.do?method=fyycList"/>
+		<action path="/gygl_fygl_cwxxgl10698"
+				scope="request"
+				type="xsgzgl.gygl.xjdfygl.cwxxgl.CwxxglAction"
+				name="cwxxglForm"
+				parameter="method">
+			<forward name="cwxxList" path="/xsgzgl/gygl/xjdfygl/cwxxgl/cwxxList.jsp"/>
+			<forward name="plbl" path="/xsgzgl/gygl/xjdfygl/cwxxgl/plbl.jsp"/>
+			<forward name="cwsscsh" path="/xsgzgl/gygl/xjdfygl/cwxxgl/cwsscsh.jsp"/>
+			<forward name="rz" path="/xsgzgl/gygl/xjdfygl/cwxxgl/rz.jsp"/>
+			<forward name="ts" path="/xsgzgl/gygl/xjdfygl/cwxxgl/ts.jsp"/>
+			<forward name="list" path="/xsgzgl/gygl/xjdfygl/cwxxgl/list.jsp"/>
+			<forward name="szdqsj" path="/xsgzgl/gygl/xjdfygl/cwxxgl/szdqsj.jsp"/>
+			<forward name="fyycList" path="/xsgzgl/gygl/xjdfygl/cwxxgl/fyycList.jsp"/>
+		</action>
+
+		<action path="/gygl_fygl_fsbj" forward="/gygl_fygl_fsbjwh.do?method=list"/>
+		<action path="/gygl_fygl_fsbjwh"
+				scope="request"
+				type="xsgzgl.gygl.xjdfygl.fsbj.FsbjAction"
+				name="fsbjForm"
+				parameter="method">
+			<forward name="list" path="/xsgzgl/gygl/xjdfygl/fsbj/list.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/xjdfygl/fsbj/add.jsp"/>
+		</action>
+
+		<action path="/gygl_gybz_jcsz" forward="/gygl_gybz_wh.do?method=jcsz"/>
+		<action path="/gygl_gybz_ktsq" forward="/gygl_gybz_wh.do?method=ktsqList"/>
+		<action path="/gygl_gybz_ktsh" forward="/gygl_gybz_wh.do?method=ktshList"/>
+		<action path="/gygl_gybz_wh"
+				scope="request"
+				type="xsgzgl.gygl.xjdgybz.ktsq.KtsqAction"
+				name="ktsqForm"
+				parameter="method">
+			<forward name="jcsz" path="/xsgzgl/gygl/xjdgybz/ktsq/jcsz.jsp"/>
+			<forward name="ktsqList" path="/xsgzgl/gygl/xjdgybz/ktsq/ktsqList.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/xjdgybz/ktsq/add.jsp"/>
+			<forward name="update" path="/xsgzgl/gygl/xjdgybz/ktsq/update.jsp"/>
+			<forward name="view" path="/xsgzgl/gygl/xjdgybz/ktsq/view.jsp"/>
+			<forward name="ktshList" path="/xsgzgl/gygl/xjdgybz/ktsq/ktshList.jsp"/>
+			<forward name="sh" path="/xsgzgl/gygl/xjdgybz/ktsq/sh.jsp"/>
+			<forward name="plsh" path="/xsgzgl/gygl/xjdgybz/ktsq/plsh.jsp"/>
+		</action>
+
+		<action path="/gygl_gybz_ktjg" forward="/gygl_gybz_ktjgwh.do?method=ktjgList"/>
+		<action path="/gygl_gybz_ktjgwh"
+				scope="request"
+				type="xsgzgl.gygl.xjdgybz.ktsqjg.KtsqjgAction"
+				name="ktsqjgForm"
+				parameter="method">
+			<forward name="ktjgList" path="/xsgzgl/gygl/xjdgybz/ktsqjg/ktjgList.jsp"/>
+		</action>
+
+		<action path="/gygl_sfqs_jcsz" forward="/gygl_sfqscj_wh.do?method=jcsz"/>
+		<action path="/gygl_sfqscj_sq" forward="/gygl_sfqscj_wh.do?method=sqList"/>
+		<action path="/gygl_sfqscj_sh" forward="/gygl_sfqscj_wh.do?method=shList"/>
+		<action path="/gygl_sfqscj_wh"
+				scope="request"
+				type="xsgzgl.gygl.sfqs.sfqscj.sfqscjsq.SfqscjsqAction"
+				name="sfqscjsqForm"
+				parameter="method">
+			<forward name="jcsz" path="/xsgzgl/gygl/sfqs/sfqscj/sfqscjsq/jcsz.jsp"/>
+			<forward name="sqList" path="/xsgzgl/gygl/sfqs/sfqscj/sfqscjsq/sqList.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/sfqs/sfqscj/sfqscjsq/add.jsp"/>
+			<forward name="update" path="/xsgzgl/gygl/sfqs/sfqscj/sfqscjsq/update.jsp"/>
+			<forward name="shList" path="/xsgzgl/gygl/sfqs/sfqscj/sfqscjsq/shList.jsp"/>
+			<forward name="sh" path="/xsgzgl/gygl/sfqs/sfqscj/sfqscjsq/sh.jsp"/>
+			<forward name="plsh" path="/xsgzgl/gygl/sfqs/sfqscj/sfqscjsq/plsh.jsp"/>
+			<forward name="view" path="/xsgzgl/gygl/sfqs/sfqscj/sfqscjsq/view.jsp"/>
+		</action>
+
+		<action path="/gygl_sfqscj_jg" forward="/gygl_sfqscj_jgwh.do?method=jgList"/>
+		<action path="/gygl_sfqscj_jgwh"
+				scope="request"
+				type="xsgzgl.gygl.sfqs.sfqscj.sfqscjjg.SfqscjjgAction"
+				name="sfqscjjgForm"
+				parameter="method">
+			<forward name="jgList" path="/xsgzgl/gygl/sfqs/sfqscj/sfqscjjg/jgList.jsp"/>
+		</action>
+
+		<action path="/gygl_sfqskh_sq" forward="/gygl_sfqskh_wh.do?method=sqList"/>
+		<action path="/gygl_sfqskh_sh" forward="/gygl_sfqskh_wh.do?method=shList"/>
+		<action path="/gygl_sfqskh_wh"
+				scope="request"
+				type="xsgzgl.gygl.sfqs.sfqskh.sfqskhsq.SfqskhsqAction"
+				name="sfqskhsqForm"
+				parameter="method">
+			<forward name="sqList" path="/xsgzgl/gygl/sfqs/sfqskh/sfqskhsq/sqList.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/sfqs/sfqskh/sfqskhsq/add.jsp"/>
+			<forward name="update" path="/xsgzgl/gygl/sfqs/sfqskh/sfqskhsq/update.jsp"/>
+			<forward name="shList" path="/xsgzgl/gygl/sfqs/sfqskh/sfqskhsq/shList.jsp"/>
+			<forward name="sh" path="/xsgzgl/gygl/sfqs/sfqskh/sfqskhsq/sh.jsp"/>
+			<forward name="plsh" path="/xsgzgl/gygl/sfqs/sfqskh/sfqskhsq/plsh.jsp"/>
+			<forward name="view" path="/xsgzgl/gygl/sfqs/sfqskh/sfqskhsq/view.jsp"/>
+		</action>
+
+		<action path="/gygl_sfqskh_jg" forward="/gygl_sfqskh_jgwh.do?method=jgList"/>
+		<action path="/gygl_sfqskh_jgwh"
+				scope="request"
+				type="xsgzgl.gygl.sfqs.sfqskh.sfqskhjg.SfqskhjgAction"
+				name="sfqskhjgForm"
+				parameter="method">
+			<forward name="jgList" path="/xsgzgl/gygl/sfqs/sfqskh/sfqskhjg/jgList.jsp"/>
+		</action>
+
+		<action path="/gygl_zcgl_zcxxwh" forward="/gygl_zcgl_zcxxgl.do?method=zcxxList"/>
+		<action path="/gygl_zcgl_zcxxgl"
+				scope="request"
+				type="xsgzgl.gygl.zcgl.zcxx.ZcxxAction"
+				name="zcxxFrom"
+				parameter="method">
+			<forward name="zcxxList" path="/xsgzgl/gygl/zcgl/zcxx/zcxxList.jsp"/>
+			<forward name="add" path="/xsgzgl/gygl/zcgl/zcxx/add.jsp"/>
+			<forward name="update" path="/xsgzgl/gygl/zcgl/zcxx/update.jsp"/>
+			<forward name="view" path="/xsgzgl/gygl/zcgl/zcxx/view.jsp"/>
+		</action>
+
+		<action path="/gygl_zcgl_zcfpwh" forward="/gygl_zcgl_zcfpgl.do?method=zcfpList"/>
+		<action path="/gygl_zcgl_zcfpgl"
+				scope="request"
+				type="xsgzgl.gygl.zcgl.zcfp.ZcfpAction"
+				name="zcfpForm"
+				parameter="method">
+			<forward name="zcfpList" path="/xsgzgl/gygl/zcgl/zcfp/zcfpList.jsp"/>
+			<forward name="fp" path="/xsgzgl/gygl/zcgl/zcfp/fp.jsp"/>
+			<forward name="update" path="/xsgzgl/gygl/zcgl/zcfp/update.jsp"/>
+		</action>
+
+	</action-mappings>
+</struts-config>

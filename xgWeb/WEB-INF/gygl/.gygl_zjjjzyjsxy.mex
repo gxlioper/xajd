@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/lzManage.do" location="100,0" dimension="100,60" />
+  <StrutsActivity path="/czManage.do" location="300,0" dimension="100,60" />
+  <StrutsActivity path="/zjjjzy_Gygl.do" location="110,160" dimension="280,84" />
+  <StrutsActivity path="/gygl/zjjjzyjsxy/lzAdd.jsp" location="0,344" dimension="196,48" />
+  <StrutsActivity path="/gygl/zjjjzyjsxy/lzManage.jsp" location="296,344" dimension="214,48" />
+  <StrutsTransition id="/czManage.do,null,/zjjjzy_Gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,60" />
+      <AbsolutePoint location="350,110" />
+      <AbsolutePoint location="320,110" />
+      <AbsolutePoint location="320,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjjjzy_Gygl.do,lzM,/gygl/zjjjzyjsxy/lzManage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="320,244" />
+      <AbsolutePoint location="320,294" />
+      <AbsolutePoint location="403,294" />
+      <AbsolutePoint location="403,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zjjjzy_Gygl.do,lzAdd,/gygl/zjjjzyjsxy/lzAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="180,244" />
+      <AbsolutePoint location="180,294" />
+      <AbsolutePoint location="98,294" />
+      <AbsolutePoint location="98,344" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/lzManage.do,null,/zjjjzy_Gygl.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="150,60" />
+      <AbsolutePoint location="150,110" />
+      <AbsolutePoint location="180,110" />
+      <AbsolutePoint location="180,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

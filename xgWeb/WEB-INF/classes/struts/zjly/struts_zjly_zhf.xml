@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <!--表单配置-->
+	<form-beans>
+	    <!--参数设置-->
+		<form-bean name="ZhfCsszForm" type="com.zfsoft.xgxt.zjly.zhf.cssz.ZhfCsszForm"/>
+		<form-bean name="ZhfForm" type="com.zfsoft.xgxt.zjly.zhf.sq.ZhfForm"/>
+		<!-- 计分项目导入 -->
+		<form-bean name="ZhfDrForm" type="com.zfsoft.xgxt.zjly.zhf.zhfdr.ZhfDrForm"/>
+		<form-bean name="zhfhzForm" type="com.zfsoft.xgxt.zjly.zhf.zhfhz.ZhfhzForm"/>
+		<form-bean name="ZhfXmmkForm" type="com.zfsoft.xgxt.zjly.zhf.xmwh.ZhfXmmkwhForm"/>
+		<form-bean name="ZhfJfxmForm" type="com.zfsoft.xgxt.zjly.zhf.xmwh.ZhfJfxmwhForm"/>
+		<form-bean name="zhfdelForm" type="com.zfsoft.xgxt.zjly.zhf.dellog.ZhfdelForm"/>
+	</form-beans>
+
+	<!--path配置-->
+	<action-mappings>
+		<!--参数设置-->
+		<action path="/xg_zjly_zhfcssz" forward="/zhf_cssz.do?method=cssz"/>
+		<!-- 申请 -->
+		<action path="/xg_zjly_zhfsq" forward="/zhf_sq.do?method=getZhfsqList"/>
+		 <!-- 计分项目导入 -->
+		 <action path="/xg_zjly_zhfdr" forward="/zjly_zhfdr.do?method=getZhfdrCx&amp;lb=dr"/>
+		 <!-- 审核 -->
+		<action path="/xg_zjly_zhfsh" forward="/zhf_sh.do?method=getZhfshList&amp;lb=sh"/>
+		<action path="/xg_zjly_zhfxg" forward="/zhf_sh.do?method=getZhfshList&amp;lb=xg"/>
+		<action path="/xg_zjly_zhszfhz" forward="/zhf_hz.do?method=getZhfhzList"/>
+		<!-- 项目维护 -->
+		<action path="/xg_zjly_zhfxmwh" forward="/zhf_xmmkwh.do?method=getZhfXmmkwhList"/>
+		 <!-- 参数设置 -->
+		<action path="/zhf_cssz" 
+	    	type="com.zfsoft.xgxt.zjly.zhf.cssz.ZhfCsszAction"
+	    	parameter="method"
+	    	name="ZhfCsszForm"
+	    	scope="request">
+			<forward name="cssz" path="/xsgzgl/zjly/zhf/cssz/cssz.jsp"/>
+		</action>
+		<!-- 导出 -->
+		<action path="/xg_zjly_xxsxdc" forward="/zjly_zhfdr.do?method=getZhfdrCx&amp;lb=dc"/>
+		<action path="/xg_zjly_mkxxdc" forward="/zhf_sh.do?method=getZhfshList&amp;lb=dc"/>
+		<action path="/xg_zjly_hzbdc" forward="/zjly_zhfdr.do?method=getZhfdrCx&amp;lb=hzdc"/>
+		<action path="/xg_zjly_dellog" forward="/zjly_dellog.do?method=getZhfDelList"/>
+		<!-- 综合分删除日志-->
+		<action path="/zjly_dellog" 
+	    	type="com.zfsoft.xgxt.zjly.zhf.dellog.ZhfdelAction"
+	    	parameter="method"
+	    	name="zhfdelForm"
+	    	scope="request">
+			<forward name="zhfdelCx" path="/xsgzgl/zjly/zhf/dellog/zhfdelCx.jsp"/>
+		</action>
+		<!-- 综合分申请 -->
+		<action path="/zhf_sq" 
+	    	type="com.zfsoft.xgxt.zjly.zhf.sq.ZhfAction"
+	    	parameter="method"
+	    	name="ZhfForm"
+	    	scope="request">
+			<forward name="getZhfsqList" path="/xsgzgl/zjly/zhf/sq/getZhfsqList.jsp"/>
+			<forward name="addZhfsq" path="/xsgzgl/zjly/zhf/sq/addZhfsq.jsp"/>
+			<forward name="updateZhfsq" path="/xsgzgl/zjly/zhf/sq/updateZhfsq.jsp"/>
+			<forward name="viewZhfsq" path="/xsgzgl/zjly/zhf/sq/viewZhfsq.jsp"/>
+		</action>
+		
+		<!-- 计分项目导入 -->
+		<action path="/zjly_zhfdr" 
+	    	type="com.zfsoft.xgxt.zjly.zhf.zhfdr.ZhfDrAction"
+	    	parameter="method"
+	    	name="ZhfDrForm"
+	    	scope="request">
+			<forward name="getZhfdrCx" path="/xsgzgl/zjly/zhf/zhfdr/getZhfdrCx.jsp"/>
+			<forward name="drprepare" path="/xsgzgl/zjly/zhf/zhfdr/drprepare.jsp"/>
+			<forward name="updateJg" path="/xsgzgl/zjly/zhf/zhfdr/updatejg.jsp"/>
+			<forward name="viewJg" path="/xsgzgl/zjly/zhf/zhfdr/viewjg.jsp"/>
+			<forward name="getXxsxdc" path="/xsgzgl/zjly/zhf/zhfdr/xxsxdc.jsp"/><!-- 浙江旅游详细事项导出 -->
+			<forward name="getHzxxdc" path="/xsgzgl/zjly/zhf/zhfdr/hzsxdc.jsp"/><!-- 浙江旅游汇总信息导出 -->
+		</action>
+		
+		<!-- 综合分审核 -->
+		<action path="/zhf_sh" 
+	    	type="com.zfsoft.xgxt.zjly.zhf.sh.ZhfshAction"
+	    	parameter="method"
+	    	name="ZhfForm"
+	    	scope="request">
+			<forward name="getZhfshList" path="/xsgzgl/zjly/zhf/sh/getZhfshList.jsp"/>
+			<forward name="shZhfsq" path="/xsgzgl/zjly/zhf/sh/shZhfsq.jsp"/>
+			<forward name="viewZhfsh" path="/xsgzgl/zjly/zhf/sh/viewZhfsh.jsp"/>
+			<forward name="ZhfshListforxg" path="/xsgzgl/zjly/zhf/sh/zhfshListforxg.jsp"/>
+			<forward name="viewZhfxg" path="/xsgzgl/zjly/zhf/sh/viewZhfxg.jsp"/>
+			<forward name="getMkxxdc" path="/xsgzgl/zjly/zhf/sh/mkxxdc.jsp"/><!-- 浙江旅游模块信息导出 -->
+		</action>
+		
+		
+		
+		<action path="/zhf_hz" 
+	    	type="com.zfsoft.xgxt.zjly.zhf.zhfhz.ZhfhzAction"
+	    	parameter="method"
+	    	name="zhfhzForm"
+	    	scope="request">
+			<forward name="getZhfhzList" path="/xsgzgl/zjly/zhf/zhfhz/zhfhzList.jsp"/>
+		</action>
+		
+		<!-- 项目维护 -->
+		<action path="/zhf_xmmkwh" 
+	    	type="com.zfsoft.xgxt.zjly.zhf.xmwh.ZhfXmmkwhAction"
+	    	parameter="method"
+	    	name="ZhfXmmkForm"
+	    	scope="request">
+			<forward name="getZhfXmmkwhList" path="/xsgzgl/zjly/zhf/xmwh/getZhfXmmkwhList.jsp"/>
+			<forward name="addZhfXmmk" path="/xsgzgl/zjly/zhf/xmwh/addZhfXmmk.jsp"/>
+			<forward name="updateZhfXmmk" path="/xsgzgl/zjly/zhf/xmwh/updateZhfXmmk.jsp"/>		
+		</action>
+		
+		<action path="/zhf_jfxmwh" 
+	    	type="com.zfsoft.xgxt.zjly.zhf.xmwh.ZhfJfxmwhAction"
+	    	parameter="method"
+	    	name="ZhfJfxmForm"
+	    	scope="request">
+			<forward name="addZhfJfxm" path="/xsgzgl/zjly/zhf/xmwh/addZhfJfxm.jsp"/>
+			<forward name="updateZhfJfxm" path="/xsgzgl/zjly/zhf/xmwh/updateZhfJfxm.jsp"/>
+			<forward name="getBmList" path="/xsgzgl/zjly/zhf/xmwh/getBmList.jsp"/>
+			<forward name="jdsz" path="/xsgzgl/zjly/zhf/xmwh/jdsz.jsp"/>							
+		</action>
+		
+	</action-mappings>
+
+</struts-config>

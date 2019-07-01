@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzNbzyjsxyActionForm" type="xgxt.xszz.nbzyjsxy.XszzNbzyjsxyActionForm"><!-- test.forms.DynaActionFormTest -->
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="xszzNbzyjsxyActionForm" parameter="method" path="/nbzyjsxy_xszz"
+				scope="request"	type="xgxt.xszz.nbzyjsxy.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- 宁波职业技术学院 "学生资助"-"捐款管理"-->
+			<forward name="data_jkrxx" path="/xszz/nbzyjsxy/data_jkrxx.jsp" />
+			<forward name="jkrxxExp" path="/about:blank" />
+			<forward name="jkrxxEdit" path="/xszz/nbzyjsxy/jkrxxEdit.jsp"/>
+			<forward name="jkrxxEditSave" path="/xszz/nbzyjsxy/jkrxxEdit.jsp"/>
+			<forward name="jkrxxTj" path="/xszz/nbzyjsxy/jkrxxTj.jsp"/>
+			<!-- 宁波职业技术学院 "学生资助"-"思源基金"-->
+			<forward name="syjjsq" path="/xszz/nbzyjsxy/syjjsq.jsp" />
+			<forward name="syjjsqSave" path="/xszz/nbzyjsxy/syjjsq.jsp" />
+			<forward name="syjjsqb" path="/xszz/nbzyjsxy/syjjsqb.jsp" />
+			<forward name="syjjsh" path="/xszz/nbzyjsxy/syjjsh.jsp" />
+			<forward name="syjjTj" path="/xszz/nbzyjsxy/syjjTj.jsp" />
+			<forward name="syjjshOne" path="/xszz/nbzyjsxy/syjjshOne.jsp" />
+			<forward name="syjjshSave" path="/xszz/nbzyjsxy/syjjshOne.jsp" />
+			<forward name="syjjExp" path="/about:blank" />
+		</action>
+		
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

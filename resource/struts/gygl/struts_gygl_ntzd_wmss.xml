@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<!-- 南通职大-管理 -->
+    	<form-bean name="ntzdForm" type="xsgzgl.gygl.ntzd.NtzdForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/gygl_ntzd_nykhxs" 	forward="/gygl_ntzd.do?method=nykhxsManage"/>				<!-- 月考核系数维护-->
+		<action path="/gygl_ntzd_bjydf" 	forward="/gygl_ntzd.do?method=bjydfManage"/>				<!-- 班级月得分 -->
+		<action path="/gygl_ntzd_xyydf" 	forward="/gygl_ntzd.do?method=xyydfManage"/>				<!-- 学院月得分 -->
+    	<action path="/gygl_ntzd_tsqstj" 	forward="/gygl_ntzd.do?method=tsqstjManage"/>				<!-- 特殊寝室统计 -->
+    	
+    	<!-- =====================================南通职大-管理=====================================================
+-->	
+    	<action path="/gygl_ntzd" 
+    			scope="request"
+    			type="xsgzgl.gygl.ntzd.NtzdAction" 
+    			name="ntzdForm"
+    			parameter="method">	
+    		<forward name="nykhxsManage" 	path="/xsgzgl/gygl/ntzd/nykhxsManage.jsp"/> 		
+    		<forward name="nykhxsAdd" 		path="/xsgzgl/gygl/ntzd/nykhxsAdd.jsp"/>
+    		<forward name="nykhxsUpdate" 	path="/xsgzgl/gygl/ntzd/nykhxsUpdate.jsp"/>
+    		<forward name="bjydfManage" 	path="/xsgzgl/gygl/ntzd/bjydfManage.jsp"/>
+    		<forward name="xyydfManage" 	path="/xsgzgl/gygl/ntzd/xyydfManage.jsp"/>
+    		<forward name="tsqstjManage" 	path="/xsgzgl/gygl/ntzd/tsqstjManage.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

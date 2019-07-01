@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+        "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    <!-- 学生信息  -->
+    <form-beans>
+        <form-bean name="xsxxForm" type="com.zfsoft.xgxt.xsxx.xsgl.XsxxForm"/>
+        <form-bean name="xsxxglModel" type="com.zfsoft.xgxt.xsxx.xsxxgl.xxgl.XsxxglModel"/>
+        <form-bean name="shlcModel" type="com.zfsoft.xgxt.xsxx.xsxxgl.shlc.ShlcModel"/>
+        <!-- 学生信息表单导出-->
+        <form-bean name="ExportModel" type="com.zfsoft.xgxt.xsxx.xsxxgl.bddc.ExportModel"/>
+        <form-bean name="xscjForm" type="com.zfsoft.xgxt.xsxx.xsxxgl.xscjcx.XscjForm"/>
+        <form-bean name="kcxxForm" type="com.zfsoft.xgxt.xsxx.xsxxgl.kcxxcx.KcxxForm"/>
+        <form-bean name="xsxfcjForm" type="com.zfsoft.xgxt.xsxx.xsxxgl.xsxfcjcx.XsxfcjForm"/>
+        <form-bean name="syxyForm" type="com.zfsoft.xgxt.xsxx.xsxxgl.syxydy.SyxyForm"/>
+    </form-beans>
+
+    <action-mappings>
+        <!-- 学生管理 -->
+        <action path="/xsxx_xsgl"
+                name="xsxxForm"
+                type="com.zfsoft.xgxt.xsxx.xsgl.XsxxAction"
+                scope="request"
+                parameter="method">
+            <forward name="showStudentsNotF5" path="/xsgzgl/xsxx/xsgl/showStudentsNotF5.jsp"></forward>
+            <forward name="showStudentsAjax" path="/xsgzgl/xsxx/xsgl/showStudentsAjax.jsp"></forward>
+            <forward name="showQgzxStudents" path="/xsgzgl/xsxx/xsgl/showQgzxStudents.jsp"></forward>
+            <forward name="showGzkhStudents" path="/xsgzgl/xsxx/xsgl/showGzkhStudents.jsp"></forward>
+            <forward name="showStudents" path="/xsgzgl/xsxx/xsgl/showStudents.jsp"></forward>
+            <forward name="showStudentsKnsrdsqBjpy" path="/xsgzgl/xsxx/xsgl/showStudentsKnsrdsqBjpy.jsp"></forward>
+            <forward name="showStudentsAll" path="/xsgzgl/xsxx/xsgl/showStudentsAll.jsp"></forward>
+            <forward name="showStudentsForGygl" path="/xsgzgl/gygl/comm/showStudents.jsp"></forward>
+            <forward name="showStudentsForGyglSsyd" path="/xsgzgl/gygl/comm/ssyd/showStudentsSsyd.jsp"></forward>
+            <forward name="showStudentsForXlfdlr" path="/xljkwzdx/xlwjyjgl/xlfdjl/showStudents.jsp"></forward>
+            <forward name="showStudentsForJjlsk" path="/xsgzgl/jjgl/jjzg/showStudents.jsp"></forward>
+            <forward name="showStudentsForXxsbjggl" path="/xljkwzdx/xlwygl/xxsbjggl/showStudents.jsp"></forward>
+            <forward name="showStudentsForTsxs" path="/xsgzgl/xlzx/tsxx/showStudents.jsp"></forward>
+            <forward name="selectStudentsNew" path="/xsgzgl/xsxx/xsgl/selectStudentsNew.jsp"></forward>
+            <forward name="cxdashowStudents" path="/xsgzgl/rcsw/cxda/showStudents.jsp"></forward>
+            <forward name="showJxStudents" path="/xsgzgl/xsxx/xsgl/showJxStudents.jsp"></forward>
+            <forward name="showStudentsForZzdgl" path="/xsgzgl/gygl/zzdgl/comm/showStudentsForZzdgl.jsp"></forward>
+            <forward name="showStudentsForXnwxjkhk"
+                     path="/xsgzgl/zxdk/xnwxjkhk/comm/showStudentsForXnwxjkhk.jsp"></forward>
+            <forward name="showStudentsForHkxx"
+                     path="/xsgzgl/zxdk/ypzl/ypzldxjhk/comm/showStudentsForHkxx.jsp"></forward>
+            <forward name="showStudentsForByHkxx"
+                     path="/xsgzgl/zxdk/byhkgl/jg/comm/showStudentsForByHkxx.jsp"></forward>
+            <forward name="showStudentsForXydHkwh"
+                     path="/xsgzgl/zxdk/xyddk/xyddkhkwh/comm/showStudentsForXydHkwh.jsp"></forward> <!-- 校园地已贷人员过滤 -->
+            <forward name="showStudentsForSydHkwh"
+                     path="/xsgzgl/zxdk/syddk/hkwh/comm/showStudentsForSydHkwh.jsp"></forward> <!-- 生源地已贷人员过滤 -->
+            <forward name="showStudentsForTsxsByTy" path="/xsgzgl/xsxx/xsgl/selectStudentsForTsxs.jsp"></forward>
+            <forward name="showStudentsCjffAdd"
+                     path="/xsgzgl/qgzx/zjdx/cjff/showStudentsCjffAdd.jsp"></forward><!-- 酬金发放增加查询所有学生不分权限！ -->
+            <forward name="showStudentsdzzgxzc"
+                     path="/xsgzgl/dtjs/zzgxzc/zcsq/showStudents.jsp"></forward><!-- 党组织关系转出查询页面个性化！ -->
+            <forward name="showStudentsForXiAnKjGwSq"
+                     path="/xsgzgl/qgzx/xsgw/showStudents.jsp"></forward><!-- 西安科技大学勤工助学申请岗位个性化 -->
+            <forward name="showStudentsForQshr"
+                     path="/xsgzgl/gygl/zsxxgl/showStudents.jsp"></forward><!-- 西安科技大学勤工助学申请岗位个性化 -->
+            <forward name="showStudentsForTgb" path="/xsgzgl/twgl/tgb/showStudentsForTgb.jsp"></forward>
+            <forward name="selectDy" path="/xsgzgl/hdgl/hdxx/selectDy.jsp"></forward>
+
+
+        </action>
+
+
+        <!-- 学生信息管理-->
+        <action path="/xsxx_xsxxgl_cxzxs" forward="/xsxx_xsxxgl.do?method=xsxxglCxZxs"/>        <!-- 在校生信息管理 -->
+        <action path="/xsxx_xsxxgl_cxfzxs" forward="/xsxx_xsxxgl.do?method=xsxxglCxFzxs"/>        <!-- 非在校生信息管理 -->
+        <action path="/xsxx_xsxxgl_xxck" forward="/xsxx_xsxxgl.do?method=xxck"/>                <!-- 信息查看(学生操作) -->
+        <action path="/xsxx_xsxxgl_cxzxs_read"
+                forward="/xsxx_xsxxgl.do?method=xsxxglCxZxsRead"/>    <!-- 在校生信息管理,只包含查询和查看，赤峰学院个性化 -->
+        <action path="/xsxx_xycx" forward="/xsxx_xsxxgl.do?method=xycx"/>        <!-- 浙江大学学园查询，个性格 -->
+
+        <action path="/xsxx_xsxxgl"
+                scope="request"
+                type="com.zfsoft.xgxt.xsxx.xsxxgl.xxgl.XsxxglAction"
+                name="xsxxglModel"
+                parameter="method">
+            <forward name="xsxxglCxZxs" path="/xsgzgl/xsxx/xsxxgl/xsxxglCx.jsp"></forward><!-- 在校生查询 -->
+            <forward name="xsxxglCxFzxs" path="/xsgzgl/xsxx/xsxxgl/xsxxglCx.jsp"></forward><!-- 非在校生查询 -->
+            <forward name="mmcsh" path="/xsgzgl/xsxx/xsxxgl/mmcsh.jsp"></forward><!-- 密码初始化 -->
+            <forward name="mmcshPl" path="/xsgzgl/xsxx/xsxxgl/mmcshPl.jsp"></forward><!-- 密码初始化-根据查询结果批量 -->
+            <forward name="xsxxglZj" path="/xsgzgl/xsxx/xsxxgl/xsxxglZj.jsp"></forward><!-- 增加 -->
+            <forward name="xsxxglXg" path="/xsgzgl/xsxx/xsxxgl/xsxxglXg.jsp"></forward><!-- 修改 -->
+            <forward name="xsxxglCk" path="/xsgzgl/xsxx/xsxxgl/xsxxglCk.jsp"></forward><!-- 查看 -->
+            <forward name="xxck" path="/xsgzgl/xsxx/xsxxgl/xxck.jsp"></forward><!-- 信息查看(学生操作)  -->
+            <forward name="xsxxglCxZxsRead"
+                     path="/xsgzgl/xsxx/xsxxgl/cfxy/xsxxglCx.jsp"></forward><!-- 在校生查询,只包含查询和查看 -->
+            <forward name="xsxxglCkByCfxy"
+                     path="/xsgzgl/xsxx/xsxxgl/cfxy/xsxxglCk.jsp"></forward><!-- 查看,赤峰学院个性化，去除身份证显示 -->
+            <forward name="xycx" path="/xsgzgl/xsxx/xsxxgl/cfxy/xycx.jsp"></forward><!-- 浙江大学学园查询，个性格 -->
+            <forward name="sxzt" path="/xsgzgl/xsxx/xsxxgl/sxzt.jsp"></forward>
+
+            <forward name="viewZdLsjl" path="/xsgzgl/xsxx/xsxxgl/viewZdLsjl.jsp"></forward>
+            <forward name="viewJtcyLsjl" path="/xsgzgl/xsxx/xsxxgl/viewJtcyLsjl.jsp"></forward>
+        </action>
+
+        <!-- 学生信息修改申请-->
+        <action path="/xsxx_xsxxxg_xgsq" forward="/xsxx_xsxxxg.do?method=xgsq"/>        <!-- 学生信息修改申请(学生) -->
+        <action path="/xsxx_xsxxxg_xgsh" forward="/xsxx_xsxxxg.do?method=xgsh"/>        <!-- 学生信息修改审核 -->
+        <action path="/xsxx_xsxxxg_xgjg" forward="/xsxx_xsxxxg.do?method=xgjg"/>        <!-- 学生信息修改结果 -->
+        <action path="/xsxx_xsxxgl_grfjsc" forward="/xsxx_xsxxxg.do?method=grfjsc"/>
+        <action path="/xsxx_xsxxxg"
+                scope="request"
+                type="com.zfsoft.xgxt.xsxx.xsxxgl.xxxg.XxxgAction"
+                name="xsxxglModel"
+                parameter="method">
+            <forward name="xgsq" path="/xsgzgl/xsxx/xxxg/xgsq.jsp"></forward><!-- 学生信息修改申请(学生)-->
+            <forward name="xgsh" path="/xsgzgl/xsxx/xxxg/xgsh.jsp"></forward><!-- 学生信息修改审核列表 -->
+            <forward name="xgshZj" path="/xsgzgl/xsxx/xxxg/xgshZj.jsp"></forward><!-- 学生信息修改审核记录 -->
+            <forward name="xgshPlzj" path="/xsgzgl/xsxx/xxxg/xgshPlzj.jsp"></forward><!-- 学生信息修改批量审核 -->
+            <forward name="xgjg" path="/xsgzgl/xsxx/xxxg/xgjg.jsp"></forward><!-- 学生信息修改结果  -->
+            <forward name="xgjgCk" path="/xsgzgl/xsxx/xxxg/xgjgCk.jsp"></forward><!-- 学生信息修改结果查看 -->
+            <forward name="grhjfjsc" path="/xsgzgl/xsxx/xxxg/grhjfjsc.jsp"></forward><!-- 北京中医药个人附件上传 -->
+            <forward name="upload" path="/xsgzgl/xsxx/xxxg/uploadgrhjfj.jsp"></forward><!-- 北京中医药个人附件上传 -->
+            <forward name="view" path="/xsgzgl/xsxx/xxxg/viewgrhjfj.jsp"></forward><!-- 北京中医药个人附件上传 -->
+        </action>
+
+        <action path="/xsxx_xsxxxgsh"
+                scope="request"
+                type="com.zfsoft.xgxt.xsxx.xsxxgl.shlc.ShlcAction"
+                name="shlcModel"
+                parameter="method">
+        </action>
+
+        <!-- 学生信息表单导出-->
+        <action path="/xsxx_hzdc"
+                scope="request"
+                type="com.zfsoft.xgxt.xsxx.xsxxgl.bddc.ExportAction"
+                name="ExportModel"
+                parameter="method">
+            <forward name="xsxxdcprepare" path="/xsgzgl/xsxx/xsxxgl/xsxxdcprepare.jsp"></forward><!-- 表单导出 -->
+        </action>
+
+        <!--学生成绩查询-->
+        <action path="/xsxx_xsxxgl_cjcx" forward="/xscjcx.do?method=xscjList"></action>
+        <action path="/xsxx_xsxxgl_cjfx" forward="/xscjcx.do?method=xscjfxList"></action>
+        <action path="/xscjcx"
+                scope="request"
+                type="com.zfsoft.xgxt.xsxx.xsxxgl.xscjcx.XscjAction"
+                name="xscjForm"
+                parameter="method">
+            <forward name="xscjList" path="/xsgzgl/xsxx/xscjcx/xscjList.jsp"></forward>
+            <forward name="xscjfxList" path="/xsgzgl/xsxx/xscjcx/xscjfxList.jsp"></forward>
+            <forward name="getXscj" path="/xsgzgl/xsxx/xscjcx/xscj.jsp"></forward>
+        </action>
+
+
+        <!--学生学分成绩查询-->
+        <action path="/xsxx_xsxxgl_xfcjcx" forward="/xsxfcjcx.do?method=xsxfcjList"></action>
+        <action path="/xsxfcjcx"
+                scope="request"
+                type="com.zfsoft.xgxt.xsxx.xsxxgl.xsxfcjcx.XsxfcjAction"
+                name="xsxfcjForm"
+                parameter="method">
+            <forward name="xsxfcjList" path="/xsgzgl/xsxx/xsxfcjcx/xsxfcjList.jsp"></forward>
+            <forward name="getXscj" path="/xsgzgl/xsxx/xscjcx/xscj.jsp"></forward>
+        </action>
+
+        <!--书院学院对应-->
+        <action path="/xsxx_xsxxgl_syxydy" forward="/syxydy.do?method=syXyList"></action>
+        <action path="/syxydy"
+                scope="request"
+                type="com.zfsoft.xgxt.xsxx.xsxxgl.syxydy.SyxyAction"
+                name="syxyForm"
+                parameter="method">
+            <forward name="syXyList" path="/xsgzgl/xsxx/syxydy/syxydy.jsp"></forward>
+        </action>
+
+
+        <action path="/xsxx_xsxxgl_kcxxcx" forward="/xsxx_xsxxgl_kcxxwh.do?method=kcxxList"></action>
+        <action path="/xsxx_xsxxgl_kcxxwh"
+                scope="request"
+                type="com.zfsoft.xgxt.xsxx.xsxxgl.kcxxcx.KcxxAction"
+                name="kcxxForm"
+                parameter="method">
+            <forward name="kcxxList" path="/xsgzgl/xsxx/kcxxcx/kcxxList.jsp"></forward>
+        </action>
+    </action-mappings>
+
+</struts-config>

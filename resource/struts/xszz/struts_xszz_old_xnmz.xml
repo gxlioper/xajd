@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzForm" type="xgxt.form.XszzForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!--<<<<<<<<<<<<<<<<<<<< 西南民族大学-困难生审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_xnmz_kns" 
+		   path="/auditing_xnmz_kns" scope="request"
+		   type="xgxt.action.xnmz.XszzAction">  
+		     <forward name="success" path="/xszz/xnmz/auditing_xnmz_kns.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_xnmz_kns_one" 
+		   path="/auditing_xnmz_kns_one" scope="request"
+		   type="xgxt.action.xnmz.XszzAction">  
+		     <forward name="success" path="/xszz/xnmz/auditing_xnmz_kns_one.jsp"/>   
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

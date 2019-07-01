@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfZjcmActionForm" type="xgxt.wjcf.zjcm.WjcfZjcmActionForm"/>
+	</form-beans>
+	<action-mappings>
+		<!-- 执行路径 -->
+		<action path="/wjcf_zjcm_lxcksjsz"     forward="/wjcfzjcmwh.do?method=lxckSjsz"/>
+		<action path="/wjcf_zjcm_cfbprint"     forward="/wjcfzjcmwh.do?method=cfbprint"/>
+	    <action path="/wjcf_zjcm_cfhzb"        forward="/wjcfzjcmwh.do?method=cfhzb"/>
+	    <action path="/wjcf_zjcm_jclxcbb"      forward="/wjcfzjcmwh.do?method=jclxcbb"/>
+	    <action path="/wjcf_zjcm_stulxckxx"    forward="/wjcfzjcmwh.do?method=stulxckxx"/>
+	    <action path="/wjcf_cdty_cfbprint"    forward="/wjcfzjcmwh.do?method=cdtycfbPrint"/>
+	    
+	    <!-- 跳转路径 -->
+		<action path="/wjcfzjcmwh"
+				type="xgxt.wjcf.zjcm.WjcfZjcmAction"
+				name="wjcfZjcmActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="lxckSjsz"     path="/wjcf/zjcm/lxckSjsz.jsp" />
+			<forward name="cfbprint"     path="/wjcf/zjcm/cfbprint.jsp"/>
+			<forward name="jclxcbb"      path="/wjcf/zjcm/jclxcbb.jsp"/>
+			<forward name="stulxckxx"    path="/wjcf/zjcm/stulxckxx.jsp"/>
+			<forward name="cdtycfbPrint"     path="/wjcf/zjcm/cdtycfbPrint.jsp" />
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

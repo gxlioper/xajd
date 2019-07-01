@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到长沙民政的配置文件,pjpy_csmz.xml    -->
+		<action path="/pjpy_csmz_apply"     forward="/pjpycsmzwh.do?method=jxjSqDefault"></action> <!-- 奖学金申请默认页面 -->
+		<action path="/jtjxjsqdefault"      forward="/pjpycsmzwh.do?method=jtjxjSqDefault"></action><!-- 其它奖学金申请默认页面 -->
+		<action path="/shjxjsqdefault"      forward="/pjpycsmzwh.do?method=shjxjSqDefault"></action><!-- 社会奖学金审核默认页面 -->
+		<action path="/saveshjxjsq"         forward="/pjpycsmzwh.do?method=saveShJxj"></action><!-- 保存社会奖学金 -->
+		<action path="/jxjsqqrydefault"     forward="/pjpycsmzwh.do?method=jxjsqQryDefault"></action><!-- 奖学金申请结果查询默认页面 -->
+		<action path="/shjxjqrydefault"     forward="/pjpycsmzwh.do?method=shjxjQryDefault"></action><!-- 社会奖学金查询 -->
+		<action path="/shjxjqry"            forward="/pjpycsmzwh.do?method=shjxjQry"></action><!-- 社会奖学金查询 -->
+		<action path="/modishjxj"           forward="/pjpycsmzwh.do?method=shjxjModi"></action><!-- 社会奖学金修改 -->
+		<action path="/delshjxj"            forward="/pjpycsmzwh.do?method=shjxjDel"></action><!-- 社会奖学金删除 -->
+		<action path="/jxjshdefault"        forward="/pjpycsmzwh.do?method=jxjShDefault"></action><!-- 奖学金审核默认页面 -->
+		<action path="/shjxjshdefault"      forward="/pjpycsmzwh.do?method=shjxjShDefault"></action><!-- 社会奖学金审核默认页面 -->
+		<action path="/shjxjshqry"          forward="/pjpycsmzwh.do?method=shjxjShQry"></action><!-- 社会奖学金审核查询 -->
+		<action path="/shjxjsh"             forward="/pjpycsmzwh.do?method=shjxjSh"></action><!-- 社会奖学金审核 -->
+		<action path="/shjxjshone"          forward="/pjpycsmzwh.do?method=shjxjShOne"></action><!-- 社会奖学金单个审核页面 -->
+		<action path="/shjxjpriseone"       forward="/pjpycsmzwh.do?method=shjxjPriseOne"></action><!-- 社会奖学金单个审核 -->
+		<action path="/saveshjxjsq1"        forward="/pjpycsmzwh.do?method=saveShJxj1"></action><!-- 修改社会奖学金 -->
+		<action path="/pjpydmwhadd"         forward="/pjpycsmzwh.do?method=pjpydmwhAdd"></action><!-- 代码维护增加 -->
+		<action path="/pjpydmsave"          forward="/pjpycsmzwh.do?method=pjpydmSave"></action><!-- 代码保存 -->
+		<action path="/pjpydmwhdel"         forward="/pjpycsmzwh.do?method=pjpydmwhDel"></action><!-- 代码删除 -->
+		<action path="/pjpydmalldel"        forward="/pjpycsmzwh.do?method=pjpydmAllDel"></action><!-- 代码全部删除 -->
+		<action path="/pjpydmmodi"          forward="/pjpycsmzwh.do?method=pjpydmModi"></action><!-- 代码修改 -->
+		<action path="/dmmodi"              forward="/pjpycsmzwh.do?method=dmModi"></action><!-- 单个修改 -->
+		<action path="/jxjbbexp"            forward="/pjpycsmzwh.do?method=jxjbbExp"></action><!-- 奖学金申请报表输出 -->
+		<action path="/stuxgjxjxx"          forward="/pjpycsmzwh.do?method=stuXgjxjxx"></action><!-- 学生奖学金信息修改 -->
+		<action path="/stujxjdel"           forward="/pjpycsmzwh.do?method=stujxjDel"></action><!-- 学生奖学金删除 -->
+		<action path="/sturychdel"          forward="/pjpycsmzwh.do?method=sturychDel"></action><!-- 学生荣誉称号删除 -->
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/xsxx_zgkd.do" location="650,50" dimension="262,84" />
+  <StrutsActivity path="/xsxx/zgkd/stu_family_zgkd.jsp" location="50,350" dimension="220,48" />
+  <StrutsActivity path="/xsxx/zgkd/stu_audi_zgkd.jsp" location="350,350" dimension="208,48" />
+  <StrutsActivity path="/xsxx/zgkd/stu_info_zgkd.jsp" location="950,250" dimension="208,48" />
+  <StrutsActivity path="/xsxx/zgkd/zgkd_stu_modinfo.jsp" location="350,50" dimension="226,48" />
+  <StrutsActivity path="/xsxx/zgkd/dispatchPower.jsp" location="650,250" dimension="208,48" />
+  <StrutsActivity path="/xsxx/zzdx/printGjbb.jsp" location="0,196" dimension="184,48" />
+  <StrutsActivity path="about:blank" location="490,196" dimension="106,48" />
+  <StrutsActivity path="/xsxx/zgkd/stu_check_one.jsp" />
+  <StrutsTransition id="/xsxx_zgkd.do,stuCheckOne,/xsxx/zgkd/stu_check_one.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="781,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsxx_zgkd.do,stuInfoAudi,/xsxx/zgkd/stu_audi_zgkd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="781,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsxx_zgkd.do,stu_family,/xsxx/zgkd/stu_family_zgkd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="873,134" />
+      <AbsolutePoint location="873,374" />
+      <AbsolutePoint location="270,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsxx_zgkd.do,success,/xsxx/zgkd/dispatchPower.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="781,134" />
+      <AbsolutePoint location="781,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsxx_zgkd.do,stumodi,/xsxx/zgkd/zgkd_stu_modinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="781,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xsxx_zgkd.do,stu_info,/xsxx/zgkd/stu_info_zgkd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="781,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

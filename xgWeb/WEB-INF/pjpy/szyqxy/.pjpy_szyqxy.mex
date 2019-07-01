@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/szyc_zznlManage.do" location="90,0" dimension="142,60" />
+  <StrutsActivity path="/pjpyszyqwh.do" location="0,160" dimension="322,84" />
+  <StrutsTransition id="/szyc_zznlManage.do,null,/pjpyszyqwh.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="161,60" />
+      <AbsolutePoint location="161,160" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

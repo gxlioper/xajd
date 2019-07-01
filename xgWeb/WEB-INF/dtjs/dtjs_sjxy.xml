@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="sjxyDtjsForm" type="xgxt.dtjs.sjxy.SjxyDtjsForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+    <action path="/sjxy_dtjs_zbgl" 	forward="/sjxyDtjsZbgl.do?method=zbglManage"/>	<!-- 党总支 -->
+    <action path="/sjxy_dtjs_dzb"  	forward="/sjxyDtjsZbgl.do?method=dzbUpdate"/>	<!-- 党支部 -->
+	<action path="/sjxy_dtjs_rdsq"  forward="/sjxyDtjsDyxx.do?method=rdsqManage"/>	<!-- 入党申请 -->
+	<action path="/sjxy_dtjs_jjfz"  forward="/sjxyDtjsDyxx.do?method=jjfzManage"/>	<!-- 入党积极分子 -->
+	<action path="/sjxy_dtjs_ybdy"  forward="/sjxyDtjsDyxx.do?method=ybdyManage"/>	<!-- 预备党员 -->
+	<action path="/sjxy_dtjs_zsdy"  forward="/sjxyDtjsDyxx.do?method=zsdyManage"/>	<!-- 正式党员 -->
+    <action path="/sjxy_dtjs_sjtj"  forward="/sjxyDtjsSjtj.do?method=dyxgsjtj"/>	<!-- 数据统计 -->
+     
+    <!-- 实际路径 -->
+    <action path="/sjxyDtjsZbgl" 
+        		parameter="method"  
+        		name="sjxyDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.sjxy.zbgl.ZbglAction">		        
+		<!-- 党总支 -->
+		<forward name="zbglManage" path="/dtjs/sjxy/zbgl/zbglManage.jsp" />
+		<forward name="dzzUpdate" path="/dtjs/sjxy/zbgl/dzzUpdate.jsp" />
+		<!-- 党支部 -->
+		<forward name="dzbUpdate" path="/dtjs/sjxy/zbgl/dzbUpdate.jsp" />
+	</action>
+
+    <action path="/sjxyDtjsDyxx" 
+        		parameter="method"  
+        		name="sjxyDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.sjxy.dyxx.DyxxAction">		        
+		<!-- 入党申请 -->
+		<forward name="rdsqManage" path="/dtjs/sjxy/dyxx/rdsqManage.jsp" />
+		<forward name="rdsqUpdate" path="/dtjs/sjxy/dyxx/rdsqUpdate.jsp" />
+		<!-- 入党积极分子 -->
+		<forward name="jjfzManage" path="/dtjs/sjxy/dyxx/jjfzManage.jsp" />
+		<forward name="jjfzUpdate" path="/dtjs/sjxy/dyxx/jjfzUpdate.jsp" />
+		<!-- 预备党员 -->
+		<forward name="ybdyManage" path="/dtjs/sjxy/dyxx/ybdyManage.jsp" />
+		<forward name="ybdyUpdate" path="/dtjs/sjxy/dyxx/ybdyUpdate.jsp" />
+		<!-- 正式党员 -->
+		<forward name="zsdyManage" path="/dtjs/sjxy/dyxx/zsdyManage.jsp" />
+		<forward name="zsdyUpdate" path="/dtjs/sjxy/dyxx/zsdyUpdate.jsp" />
+	</action>
+		
+    <action path="/sjxyDtjsSjtj" 
+        		parameter="method"  
+        		name="sjxyDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.sjxy.sjtj.SjtjAction">		        
+		<!-- 数据统计 -->
+		<forward name="dyxgsjtj" path="/dtjs/sjxy/sjtj/dyxgsjtj.jsp" />
+	</action>
+	</action-mappings>
+
+</struts-config>

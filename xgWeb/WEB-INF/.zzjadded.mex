@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/addStuInfo.do" location="350,50" dimension="154,88" />
+  <StrutsActivity path="/yxbys.do" location="950,50" dimension="147,88" />
+  <StrutsActivity path="/rychqsb.do" location="50,150" dimension="147,88" />
+  <StrutsActivity path="/xy_priseConf.do" location="950,250" dimension="147,88" />
+  <StrutsActivity path="/xy_priseConf_one.do" location="50,350" dimension="172,84" />
+  <StrutsActivity path="/syzy_zhszcp.do" location="650,450" dimension="172,84" />
+  <StrutsActivity path="/topic_pub.do" location="950,450" dimension="172,84" />
+  <StrutsActivity path="/topic_object.do" location="350,550" dimension="172,84" />
+  <StrutsActivity path="/topic_list.do" location="950,650" dimension="172,84" />
+  <StrutsActivity path="/topic_read.do" location="350,750" dimension="172,84" />
+  <StrutsActivity path="/sjcz/addStuInfo.jsp" location="650,50" dimension="127,49" />
+  <StrutsActivity path="/sqb/yxbys.jsp" location="645,240" dimension="101,49" />
+  <StrutsActivity path="/sqb/rychqsb.jsp" location="350,250" dimension="110,49" />
+  <StrutsActivity path="/added/xy_priseConf.jsp" location="350,350" dimension="149,49" />
+  <StrutsActivity path="/added/prise_conf_one.jsp" location="350,450" dimension="190,48" />
+  <StrutsActivity path="/added/syzy_zhszcp.jsp" location="50,650" dimension="172,48" />
+  <StrutsActivity path="/sjcz/wsbgztb.jsp" location="50,550" dimension="142,48" />
+  <StrutsActivity path="/sjcz/wsbgdxzb.jsp" location="650,650" dimension="148,48" />
+  <StrutsActivity path="/sjcz/wsbgztlb.jsp" location="50,750" dimension="148,48" />
+  <StrutsActivity path="/sjcz/wsbgztread.jsp" location="50,850" dimension="160,48" />
+  <StrutsActivity path="/added/xy_priseConfOne.jsp" location="650,350" dimension="196,48" />
+  <StrutsActivity path="/topic_read.do" location="350,750" dimension="172,84" />
+  <StrutsActivity path="/sjcz/wsbgzt.jsp" location="650,750" dimension="136,48" />
+  <StrutsActivity path="/sjcz/wsbgztread.jsp" />
+  <StrutsActivity path="/getNewsFile.do" />
+  <StrutsActivity path="/batEditor/upload.jsp" />
+  <StrutsTransition id="/getNewsFile.do,success,/batEditor/upload.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xy_priseConf.do,success,/added/xy_priseConf.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,314" />
+      <AbsolutePoint location="424,314" />
+      <AbsolutePoint location="424,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/topic_object.do,success,/sjcz/wsbgdxzb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="436,592" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rychqsb.do,success,/sqb/rychqsb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="197,184" />
+      <AbsolutePoint location="405,184" />
+      <AbsolutePoint location="405,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xy_priseConf_one.do,success,/added/prise_conf_one.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="136,392" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/topic_pub.do,success,/sjcz/wsbgztb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1036,450" />
+      <AbsolutePoint location="1036,414" />
+      <AbsolutePoint location="297,414" />
+      <AbsolutePoint location="297,574" />
+      <AbsolutePoint location="192,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxbys.do,success,/sqb/yxbys.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,114" />
+      <AbsolutePoint location="695,114" />
+      <AbsolutePoint location="695,240" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/topic_read.do,success,/sjcz/wsbgztlb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,783" />
+      <AbsolutePoint location="198,783" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addStuInfo.do,success,/sjcz/addStuInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="504,84" />
+      <AbsolutePoint location="650,84" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/topic_list.do,success,/sjcz/wsbgztlb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,713" />
+      <AbsolutePoint location="124,713" />
+      <AbsolutePoint location="124,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/topic_read.do,success,/sjcz/wsbgzt.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="522,783" />
+      <AbsolutePoint location="650,783" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/topic_read.do,success,/sjcz/wsbgztread.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="436,792" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/syzy_zhszcp.do,success,/added/syzy_zhszcp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="hznyXljkZxzxForm" type="xgxt.xljk.hzny.HznyXljkZxzxForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 		 
+ 		 <!-- 心理健康 在线咨询 -->
+ 		
+ 		 <action path="/hn_xljk_zxsgl"  forward="/xljk_hzny.do?method=zxsglManage"   />   <!-- 咨询师管理 -->
+ 		 <action path="/hn_xljk_tsxsgl"  forward="/xljk_hzny.do?method=tsxsglManage"   />   <!-- 特殊学生管理 -->
+ 		 <action path="/hn_xljk_zxzx"  forward="/xljk_hzny.do?method=zxzxManage"   />   <!-- 在线咨询 -->
+ 		 <action path="/hn_xljk_xszx"  forward="/xljk_hzny.do?method=xszxManage"   />   <!-- 学生咨询 -->
+ 		 <action path="/hn_xljk_zxjl"  forward="/xljk_hzny.do?method=zxjlManage"   />  <!-- 咨询记录 -->
+ 		
+ 	     <action path="/xljk_hzny"     
+ 	     		 name="hznyXljkZxzxForm"
+ 	     		 type="xgxt.xljk.hzny.HznyXljkZxzxAction"
+ 	     		 scope="request"
+ 	     		 parameter="method"
+ 	      >
+ 	       <forward name="zxsglManage" path="/xljk/hzny/zxzx/zxsglManage.jsp"/>
+ 	       <forward name="tsxsglManage" path="/xljk/hzny/zxzx/tsxsglManage.jsp"/>
+ 	       <forward name="zxzxManage" path="/xljk/hzny/zxzx/zxzxManage.jsp"/>
+ 	       <forward name="xszxManage" path="/xljk/hzny/zxzx/xszxManage.jsp"/>
+ 	       <forward name="zxjlManage" path="/xljk/hzny/zxzx/zxjlManage.jsp"/>
+ 	       
+ 	       <forward name="zxsglDetail" path="/xljk/hzny/zxzx/zxsglDetail.jsp"/>
+ 	       <forward name="tsxsglDetail" path="/xljk/hzny/zxzx/tsxsglDetail.jsp"/>
+ 	       <forward name="zxzxDetail" path="/xljk/hzny/zxzx/zxzxDetail.jsp"/>
+ 	       <forward name="xszxDetail" path="/xljk/hzny/zxzx/xszxDetail.jsp"/>
+ 	       <forward name="zxjlDetail" path="/xljk/hzny/zxzx/zxjlDetail.jsp"/>
+ 	     </action>  
+ 	     
+ 	      <action path="/hn_xljk_zxsgl"  forward="/xljk_hzny.do?method=zxsglManage"   />   <!-- 咨询师管理 -->
+ 		 <action path="/hn_xljk_tsxsgl"  forward="/xljk_hzny.do?method=tsxsglManage"   />   <!-- 特殊学生管理 -->
+ 		 <action path="/hn_xljk_zxzx"  forward="/xljk_hzny.do?method=zxzxManage"   />   <!-- 在线咨询 -->
+ 		 <action path="/hn_xljk_xszx"  forward="/xljk_hzny.do?method=xszxManage"   />   <!-- 学生咨询 -->
+ 		 <action path="/hn_xljk_zxjl"  forward="/xljk_hzny.do?method=zxjlManage"   />  <!-- 咨询记录 -->
+ 		
+ 	     <action path="/xljk_hzny_ajax"     
+ 	     		 name="hznyXljkZxzxForm"
+ 	     		 type="xgxt.xljk.hzny.HznyXljkZxzxAjax"
+ 	     		 scope="request"
+ 	     		 parameter="method"
+ 	      >
+ 	       <forward name="zxsglManage" path="/xljk/hzny/zxzx/zxsglManage.jsp"/>
+ 	       <forward name="tsxsglManage" path="/xljk/hzny/zxzx/tsxsglManage.jsp"/>
+ 	       <forward name="zxzxManage" path="/xljk/hzny/zxzx/zxzxManage.jsp"/>
+ 	       <forward name="xszxManage" path="/xljk/hzny/zxzx/xszxManage.jsp"/>
+ 	       <forward name="zxjlManage" path="/xljk/hzny/zxzx/zxjlManage.jsp"/>
+ 	       
+ 	       <forward name="zxsglDetail" path="/xljk/hzny/zxzx/zxsglDetail.jsp"/>
+ 	       <forward name="tsxsglDetail" path="/xljk/hzny/zxzx/tsxsglDetail.jsp"/>
+ 	       <forward name="zxzxDetail" path="/xljk/hzny/zxzx/zxzxDetail.jsp"/>
+ 	       <forward name="xszxDetail" path="/xljk/hzny/zxzx/xszxDetail.jsp"/>
+ 	       <forward name="zxjlDetail" path="/xljk/hzny/zxzx/zxjlDetail.jsp"/>
+ 	     </action>  
+ 	     
+	</action-mappings>
+
+</struts-config>

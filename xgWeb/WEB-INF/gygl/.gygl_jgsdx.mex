@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/jgsdx_gygl.do" location="50,50" dimension="268,84" />
+  <StrutsActivity path="/gygl/jgsdx/wmqssb.jsp" location="50,350" dimension="172,48" />
+  <StrutsActivity path="/gygl/jgsdx/wmqsshcx.jsp" location="350,350" dimension="184,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/xqcx_default.jsp" location="650,50" dimension="238,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/stu_fkxxView.jsp" location="950,50" dimension="238,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/stu_fkxx.jsp" location="650,150" dimension="214,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/fdy_xqxx_add.jsp" location="950,150" dimension="238,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/fdy_xqxx_modi.jsp" location="50,250" dimension="244,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/fdy_wstb.jsp" location="650,250" dimension="214,48" />
+  <StrutsActivity path="/gygl/csmzzyjsxy/fdy_xqxx_view.jsp" location="950,250" dimension="244,48" />
+  <StrutsActivity path="gygl/jgsdx/wmqssb.jsp" location="350,250" dimension="166,48" />
+  <StrutsActivity path="/gygl/jgsdx/jgsdx_wmqssh.jsp" />
+  <StrutsTransition id="/jgsdx_gygl.do,jgsdx_wmqssbsh,/gygl/jgsdx/jgsdx_wmqssh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="184,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jgsdx_gygl.do,jgsdx_wmqsshcx,/gygl/jgsdx/wmqsshcx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="318,83" />
+      <AbsolutePoint location="531,83" />
+      <AbsolutePoint location="531,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jgsdx_gygl.do,jgsdx_wmqssb,/gygl/jgsdx/wmqssb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="309,134" />
+      <AbsolutePoint location="309,374" />
+      <AbsolutePoint location="222,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

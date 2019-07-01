@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="gb2312">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Language" content="gb2312" />
+<meta content="all" name="robots" />
+<style type="text/css">
+<!--
+.h1 {
+	font-size: 14px;
+	font-weight: bolder;
+	color: #000;
+	font-family: "宋体";
+}
+.h2 {
+	font-size: 16px;
+	font-weight: bolder;
+	color: #000;
+	font-family: "宋体";
+}
+-->
+</style>
+<script type="text/javascrit">
+	var  rqvar = new Date();
+	var rq =  rqvar.getYear()+"-"+rqvar.getMonth()+"-"+rqvar.getDay();
+	var fzrq = prompt("日期格式为xxxx-xx-xx\n请输入发证日期：",rq);
+	var bfrq = prompt("日期格式为xxxx-xx-xx\n请输入发证日期：",rq);
+	document.getElementById("fzrq").innerText = fzrq;
+	document.getElementById("bfrq").innerText = bfrq;
+</script>
+</head>
+<link rel="icon" href="images/icon.ico" type="image/x-icon" />
+	<link id="csss" rel="stylesheet" rev="stylesheet" href="style/main.css"
+		type="text/css" media="all" />
+<script language="javascript" src="../js/jsFunction.js"></script>
+<script language="javascript" src="../js/function.js"></script>
+<body onload='getValue()'>
+<DIV class="h1 " STYLE="position: absolute; top: 89mm; left: 30mm;" id="fzrq" name="fzrq">2004-9-1</DIV>
+<DIV class="h1 " STYLE="position: absolute; top: 98mm; left: 30mm;" id="bfrq" name="bfrq">2004-9-1</DIV>
+<DIV class="h2 " STYLE="position: absolute; top: 10mm; left: 110mm;" id="xm" name="xm">张三</DIV>
+<DIV class="h2 " STYLE="position: absolute; top: 20mm; left: 110mm;" id="xb" name="xb">男</DIV>
+<DIV class="h2 " STYLE="position: absolute; top: 30mm; left: 110mm;" id="xh" name="xh">12345678</DIV>
+<DIV class="h2 " STYLE="position: absolute; top: 41mm; left: 110mm;" id="xymc" name="xymc">国际贸易</DIV>
+<DIV class="h2 " STYLE="position: absolute; top: 52mm; left: 110mm;" id="bjmc" name="bjmc">04外语</DIV>
+<DIV class="h2 " STYLE="position: absolute; top: 63mm; left: 110mm;" id="xz" name="xz">四</DIV>
+<DIV class="h2 " STYLE="position: absolute; top: 74mm; left: 110mm;" id="jg" name="jg">杭州</DIV>
+<DIV class="h2 " STYLE="position: absolute; top: 85mm; left: 110mm;" id="csny" name="csny">1986-12-2</DIV>
+<DIV class="h2 " STYLE="position: absolute; top: 95mm; left: 110mm;" id="rxny" name="rxny">2004-9-1</DIV>
+</body>
+</html>

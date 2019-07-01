@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到广东白云学院的配置文件,wjcf_gdby.xml    -->
+		<action path="/wjcfgdbyshdefault"     forward="/wjcfgdbywh.do?method=wjcfshDefault"></action> <!-- 学校审核默认页面 -->
+		<action path="/wjcfshqry"             forward="/wjcfgdbywh.do?method=wjcfshQry"></action><!-- 违纪处分审核前查询 -->
+		<action path="/wjcfshview"            forward="/wjcfgdbywh.do?method=wjcfshView"></action><!-- 违纪处分审核显示详细信息 -->
+		<action path="/wjcfsh"                forward="/wjcfgdbywh.do?method=wjcfSh"></action><!-- 违纪处分单个审核 -->
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    <form-bean name="gyglCwglForm" type="xgxt.gygl.cwgl.GyglCwglForm" />
+		
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/gygl_cwgl_zdfp" 	forward="/gyglCwgl.do?method=cwzdfp"/>		<!-- 床位分配_床位自动分配 -->
+    	<action path="/gygl_cwgl_fpjg" 	forward="/gyglCwgl.do?method=cwfpxxcx"/>	<!-- 床位分配_床位分配信息查询 -->
+    	<action path="/gygl_cwgl_sdfp" 	forward="/gyglCwgl.do?method=cwsdfp"/>		<!-- 床位分配_床位手动分配 -->
+    	<action path="/gygl_cwgl_cwfp" 	forward="/gyglCwgl.do?method=cwxxtj"/>		<!-- 床位分配_床位分配 -->
+    	
+    	<action path="/gyglCwgl" 
+    			scope="request"
+    			type="xgxt.gygl.cwgl.GyglCwglAction" 
+    			name="gyglCwglForm"
+    			parameter="method"
+    	>	
+    		<forward name="axsfpcw" path="/gygl/comm/cwgl/axsfpcw.jsp"/>
+			<forward name="cwzdfp" path="/gygl/comm/cwgl/cwzdfp.jsp"/>
+			<forward name="cwsdfp" path="/gygl/comm/cwgl/cwsdfp.jsp"/>
+			<forward name="xscwfp" path="/gygl/comm/cwgl/xscwfp.jsp"/>
+			<forward name="cwfpxxcx" path="/gygl/comm/cwgl/cwfpxxcx.jsp"/>
+			<forward name="sdfpcw" path="/gygl/comm/cwgl/sdfpcw.jsp"/>
+			<forward name="sdfpcwByHand" path="/gygl/comm/cwgl/sdfpcwByHand.jsp"/>
+			<forward name="cwxxtj" path="/gygl/comm/cwgl/cwxxtj.jsp"/>
+			<forward name="cwfpZdfp" path="/gygl/comm/cwgl/cwfpZdfp.jsp"/>
+			<forward name="sxsdfpcwxs" path="/gygl/comm/cwgl/sxsdfpcwxs.jsp"/>
+		</action>
+		
+    	<!-- ====================================我是万恶的分割线============================================== -->
+    	
+    	
+		
+	</action-mappings>
+</struts-config>

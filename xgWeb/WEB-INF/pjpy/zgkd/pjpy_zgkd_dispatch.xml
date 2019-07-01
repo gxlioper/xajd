@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>
+		<!--	转移到中国矿大的配置文件,pjpy_zgkd.xml    -->
+		<action path="/pjpy_zgkd_zhszcpwh" 	   forward="/pjpyzgkdwh.do?method=zhszcpDefault"></action> <!-- 综合素质测评维护页面 -->
+		<action path="/pjpy_zgkd_szcpadd"      forward="/pjpyzgkdwh.do?method=szcpAdd"></action><!-- 综合素质测评单个增加页面 -->
+		<action path="/pjpy_zgkd_zhszcpview"   forward="/pjpyzgkdwh.do?method=zhszcpView"></action><!-- 综合素质测评单个显示页面 -->
+		<action path="/pjpy_zgkd_zhszcphz"     forward="/pjpyzgkdwh.do?method=zhszcpHz"></action><!-- 综合素质测评统计汇总 -->
+		<action path="/pjpy_zgkd_zhszcpinfo"   forward="/pjpyzgkdwh.do?method=zhszcpInfo"></action><!-- 学生查询综合素质信息 -->
+		<action path="/pjpy_zgkd_pmfssz"       forward="/pjpyzgkdwh.do?method=pmfsSz"/><!-- 综合素质分排名方式设置 -->
+</action-mappings>
+</struts-config>

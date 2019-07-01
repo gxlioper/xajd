@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="zgddJxglForm" type="xgxt.jxgl.zgdd.ZgddJxglForm" />
+	</form-beans>
+ 	<action-mappings>
+ 		<!-- 显示路径 -->
+        <action path="/setGfs" forward="/zgdd_jxgl.do?method=setGfs"/>	<!-- 设置国防生 -->
+        <action path="/gfscjgl" forward="/zgdd_jxgl.do?method=gfscjgl"/>	<!-- 国防生成绩管理 -->
+        <action path="/gfsjxjgl" forward="/zgdd_jxgl.do?method=gfsjxjgl"/>	<!-- 国防生奖学金管理 -->
+        <action path="/gfscqgl" forward="/zgdd_jxgl.do?method=gfscqgl"/>	<!-- 国防生出勤管理 -->
+        <action path="/gfswsgl" forward="/zgdd_jxgl.do?method=gfswsgl"/>	<!-- 国防生卫生管理 -->
+		<!-- 实际路径 -->
+        <action path="/zgdd_jxgl" 
+        		parameter="method"  
+        		name="zgddJxglForm" 
+        		scope="request"
+		        type="xgxt.jxgl.zgdd.ZgddJxglAction">
+		        
+		<!-- 设置国防生 -->
+		<forward name="setGfs" path="/jxgl/zgdd/setGfs.jsp" />
+		<!-- 国防生奖学金管理 -->
+		<forward name="JxjffManage" path="/jxgl/zgdd/jxjff/jxjffManage.jsp" />
+		<forward name="jxjffUpdata" path="/jxgl/zgdd/jxjff/jxjffUpdata.jsp" />
+		<!-- 国防生成绩以及综合测评成绩的统计 -->
+		<forward name="gfscjtj" path="/jxgl/zgdd/gfscjtj_query.jsp" />
+		<!-- 国防生卫生检查统计 -->
+		<forward name="gfswsgl" path="/jxgl/zgdd/wsgl/gfswsgl_query.jsp" />
+		<forward name="gfswsglUpdate" path="/jxgl/zgdd/wsgl/gfswsgl_update.jsp" />
+		<forward name="gfscjtj" path="/jxgl/zgdd/gfscjtj_query.jsp" />		
+        <!-- 国防生出勤管理首页 -->
+		<forward name="gfscqgl" path="/jxgl/zgdd/cqgl/gfscqgl.jsp" />
+		<forward name="gfscqAdd" path="/jxgl/zgdd/cqgl/gfscqAdd.jsp" />
+		<forward name="gfscqModi" path="/jxgl/zgdd/cqgl/gfscqModi.jsp" />		
+		</action>
+	</action-mappings>
+	<message-resources key="zjlgPjpy" parameter="xgxt.pjpy.zjlg.zjlgPjpy" />
+
+</struts-config>

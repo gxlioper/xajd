@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="pjpyShgcActionForm"
+			type="xgxt.pjpy.shgc.PjpyShgcActionForm" /><!-- test.forms.DynaActionFormTest -->
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+
+		<action name="pjpyShgcActionForm" parameter="method"
+			path="/shgc_pjpy_new" scope="request"
+			type="xgxt.pjpy.shgc.PjpyAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- "人数维护"-->
+			<forward name="shgc_pjpy_xmrswh" path="/pjpy/shgc/data_pjpy_xmrswh.jsp" />
+			<forward name="shgc_pjpy_xmrscsh" path="/pjpy/shgc/data_pjpy_xmrswh.jsp"/>
+			<forward name="shgc_pjpy_xmrsPlsz" path="/pjpy/shgc/pjpy_xmrsPlEdit.jsp"/>
+			<forward name="shgc_pjpy_xyrsEdit" path="/pjpy/shgc/pjpy_xyrsEdit.jsp"/>
+			<forward name="shgc_pjpy_zyrsEdit" path="/pjpy/shgc/pjpy_zyrsEdit.jsp"/>
+			<forward name="shgc_pjpy_bjrsEdit" path="/pjpy/shgc/pjpy_bjrsEdit.jsp"/>
+			<forward name="shgc_pjpy_fprsxx" path="/pjpy/shgc/pjpy_fprsxx.jsp"/>
+			<forward name="shgc_pjpy_fprsxxExp" path="/about:blank"/>
+			<forward name="shgc_pjpy_jxjtj" path="/pjpy/shgc/pjpy_jxjtj.jsp"/>
+			<forward name="shgc_pjpy_jxjtjExp" path="/about:blank"/>
+		</action>
+		
+		
+
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp" />
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

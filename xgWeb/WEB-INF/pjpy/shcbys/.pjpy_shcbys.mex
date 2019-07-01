@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpyshcbyswh.do" location="732,0" dimension="286,84" />
+  <StrutsActivity path="/pjpy/shcbys/jxj/cjprint.jsp" location="0,264" dimension="208,48" />
+  <StrutsActivity path="/pjpy/shcbys/jxj/jxjsqprint.jsp" location="308,264" dimension="226,48" />
+  <StrutsActivity path="/pjpy/shcbys/kqdetails.jsp" location="634,264" dimension="196,48" />
+  <StrutsActivity path="/pjpy/shcbys/jxj/sq.jsp" location="930,264" dimension="178,48" />
+  <StrutsActivity path="/pjpy/shcbys/xskqxx.jsp" location="1208,264" dimension="178,48" />
+  <StrutsActivity path="/pjpy/shcbys/jxj/xg.jsp" location="1486,264" dimension="178,48" />
+  <StrutsActivity path="/pjpy/shcbys/jxj/shone.jsp" location="1764,264" dimension="196,48" />
+  <StrutsActivity path="/pjpy/shcbys/jxj/sh.jsp" location="2060,264" dimension="178,48" />
+  <StrutsTransition id="/pjpyshcbyswh.do,jxjshone,/pjpy/shcbys/jxj/shone.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="975,84" />
+      <AbsolutePoint location="975,144" />
+      <AbsolutePoint location="1862,144" />
+      <AbsolutePoint location="1862,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyshcbyswh.do,pt,/pjpy/shcbys/jxj/jxjsqprint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="804,84" />
+      <AbsolutePoint location="804,174" />
+      <AbsolutePoint location="364,174" />
+      <AbsolutePoint location="364,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyshcbyswh.do,kqxxwh,/pjpy/shcbys/xskqxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="918,84" />
+      <AbsolutePoint location="918,204" />
+      <AbsolutePoint location="1297,204" />
+      <AbsolutePoint location="1297,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyshcbyswh.do,jxjprint,/pjpy/shcbys/jxj/jxjsqprint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="832,84" />
+      <AbsolutePoint location="832,204" />
+      <AbsolutePoint location="477,204" />
+      <AbsolutePoint location="477,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyshcbyswh.do,kqxxwhview,/pjpy/shcbys/kqdetails.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="861,84" />
+      <AbsolutePoint location="861,234" />
+      <AbsolutePoint location="732,234" />
+      <AbsolutePoint location="732,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyshcbyswh.do,jxjxg,/pjpy/shcbys/jxj/xg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="947,84" />
+      <AbsolutePoint location="947,174" />
+      <AbsolutePoint location="1575,174" />
+      <AbsolutePoint location="1575,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyshcbyswh.do,cjpt,/pjpy/shcbys/jxj/cjprint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="775,84" />
+      <AbsolutePoint location="775,144" />
+      <AbsolutePoint location="156,144" />
+      <AbsolutePoint location="156,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyshcbyswh.do,jxjsh,/pjpy/shcbys/jxj/sh.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1004,84" />
+      <AbsolutePoint location="1004,114" />
+      <AbsolutePoint location="2149,114" />
+      <AbsolutePoint location="2149,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyshcbyswh.do,jxjsq,/pjpy/shcbys/jxj/sq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="889,84" />
+      <AbsolutePoint location="889,234" />
+      <AbsolutePoint location="1019,234" />
+      <AbsolutePoint location="1019,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyshcbyswh.do,cjprint,/pjpy/shcbys/jxj/cjprint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="746,84" />
+      <AbsolutePoint location="746,114" />
+      <AbsolutePoint location="52,114" />
+      <AbsolutePoint location="52,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+
+	<action-mappings>
+		<!--	转移到宁波理工的配置文件,wjcf_nblg.xml    -->
+		<action path="/wjcf_nblg_cfprint"      forward="/wjcfnblgwh.do?method=cfPrint"></action> <!-- 处分报表打印 -->
+		<action path="/wjcf_nblg_cxprint"      forward="/wjcfnblgwh.do?method=cxPrint"></action>  <!-- 撤消处分报表打印 -->
+		<action path="/wjcf_nblg_wyhjdwh"      forward="/wjcfnblgwh.do?method=wyhjdWh"></action><!-- 委员会决定维护页面 -->
+		<action path="/wjcf_nblg_cfjdUpdate"   forward="/wjcfnblgwh.do?method=cfjdUpdate"></action><!-- 委员会决定 -->
+		<action path="/wjcf_nblg_cdtyWjcx"    forward="/wjcfnblgwh.do?method=cdtyWjcx"></action><!-- 委员会决定 -->
+	</action-mappings>
+</struts-config>

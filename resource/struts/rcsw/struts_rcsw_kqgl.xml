@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+    <form-bean name="rcswKqglXskqForm" type="xgxt.rcsw.kqgl.xskq.RcswKqglXskqForm" />
+	
+		
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+  		<action path="/rcswKqglXskq"
+  				type="xgxt.rcsw.kqgl.xskq.RcswKqglXskqAction"
+  				name="rcswKqglXskqForm"
+  				parameter="method"
+  				scope="request"
+  		>
+  		<forward name="rcswKqglXskqSq" path="/rcsw/kqgl/xskq/rcswKqglXskqSq.jsp"></forward>
+  		<forward name="rcswKqglXskqResult" path="/rcsw/kqgl/xskq/rcswKqglXskqResult.jsp"></forward>
+  		<forward name="rcswKqglXskqSh" path="/rcsw/kqgl/xskq/rcswKqglXskqSh.jsp"></forward>
+  		<forward name="rcswKqglXskqOne" path="/rcsw/kqgl/xskq/rcswKqglXskqOne.jsp"></forward>
+  		<forward name="rcswKqglXskqShOne" path="/rcsw/kqgl/xskq/rcswKqglXskqShOne.jsp"></forward>
+  		<forward name="rcswKqglXskqTj" path="/rcsw/kqgl/xskq/rcswKqglXskqTj.jsp"></forward>
+  		<forward name="allTjxx" path="/rcsw/kqgl/xskq/allTjxx.jsp"></forward>
+  		</action>
+	</action-mappings>
+</struts-config>

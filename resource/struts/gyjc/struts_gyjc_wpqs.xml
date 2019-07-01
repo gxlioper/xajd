@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<!-- 基础设定 -->
+    	<form-bean name="JcsdForm" type="xsgzgl.gyjc.jcsd.JcsdForm" />
+    	<!-- 评分标准-->
+    	<form-bean name="PfbzForm" type="xsgzgl.gyjc.jcsd.PfbzForm" />
+    	<!-- 检查日程-->
+    	<form-bean name="JcrcForm" type="xsgzgl.gyjc.jcrc.JcrcForm" />
+    	<!-- 检查结果录入 -->
+    	<form-bean name="JcjglrForm" type="xsgzgl.gyjc.jcjglr.JcjglrForm" />
+    	
+    	<!-- 抽查结果-->
+    	<form-bean name="ccjgForm" type="xsgzgl.gyjc.ccjgcx.CcjgForm" />
+    	<!-- 抽查项目 -->
+    	<form-bean name="CxxmForm" type="xsgzgl.gyjc.jcsd.CxxmForm" />
+    	<!-- 抽查日程 -->
+    	<form-bean name="CcrcForm" type="xsgzgl.gyjc.jcsd.CcrcForm" />
+    	<!-- 卫生检查 -->
+    	<form-bean name="WsjcForm" type="xsgzgl.gyjc.jcjg.WsjcForm" />
+    	<!-- 卫生抽查 -->
+    	<form-bean name="WsccForm" type="xsgzgl.gyjc.jcjg.WsccForm" />
+		<!-- 报表生成 -->
+		<form-bean name="BbscForm" type="xsgzgl.gyjc.bbtj.BbscForm" />
+		<!-- 寝室考勤 -->
+		<form-bean name="QskqForm" type="xsgzgl.gyjc.jcjg.qskq.QskqForm" />
+    	
+	</form-beans>
+
+	<action-mappings>
+		
+    	<!-- 基础设定 -->
+    	<action path="/xg_gyjc_jcsd" forward="/gyjc_jcsd.do?method=jcsdList"/>
+    	<action path="/xg_gyjc_ryfp" forward="/gyjc_jcsd.do?method=getRyfpList"/>
+    	<action path="/xg_gyjc_pfbz" forward="/gyjc_pfbz.do?method=getPfbzList"/>
+    	<action path="/xg_gyjc_jcrc" forward="/gyjc_jcrc.do?method=getJcrcList"/>
+    	<action path="/xg_gyjc_jcjglr" forward="/gyjc_jcjglr.do?method=getJcjgLrList"/>
+    	<action path="/xg_gyjc_ccxmsz" forward="/gyjc_ccxmsz.do?method=getCxxmList"/>
+    	<action path="/xg_gyjc_ccrcsz" forward="/gyjc_ccrcsz.do?method=getCcrcList"/>
+    	<action path="/xg_gyjc_ccry" forward="/gyjc_ccrcsz.do?method=fpPerson"/>
+
+		<!--统计生成-->
+		<action path="/xg_gyjc_bbsc" forward="/gyjc_bbsc.do?method=getResultList"/>
+		<action path="/gyjc_bbsc" scope="request" type="xsgzgl.gyjc.bbtj.BbscAction"
+				name="BbscForm" parameter="method">
+			<forward name="search" path="/xsgzgl/gyjc/bbtj/bbscList.jsp" />
+			<forward name="wsjcck" path="/xsgzgl/gyjc/jcjg/wsjcjgck.jsp" />
+			<forward name="updatepage" path="/xsgzgl/gyjc/jcjg/wsjcupdate.jsp" />
+
+		</action>
+
+    	<!-- 卫生检查-->
+		<action path="/xg_gyjc_wsjc" forward="/gyjc_wsjc.do?method=wsjcList"/>
+    	<action path="/gyjc_wsjc" scope="request" type="xsgzgl.gyjc.jcjg.WsjcAction" 
+		              name="WsjcForm" parameter="method">
+			<forward name="search" path="/xsgzgl/gyjc/jcjg/wsjcList.jsp" />
+			<forward name="wsjcck" path="/xsgzgl/gyjc/jcjg/wsjcjgck.jsp" />
+			<forward name="updatepage" path="/xsgzgl/gyjc/jcjg/wsjcupdate.jsp" />
+	
+		</action>
+		<!-- 卫生抽查-->
+		<action path="/xg_gyjc_wscc" forward="/gyjc_wscc.do?method=wsccList"/>
+    	<action path="/gyjc_wscc" scope="request" type="xsgzgl.gyjc.jcjg.WsccAction" 
+		              name="WsccForm" parameter="method">
+			<forward name="search" path="/xsgzgl/gyjc/jcjg/wsccList.jsp" />
+			<forward name="wsccck" path="/xsgzgl/gyjc/jcjg/wsccjgck.jsp" />
+			<forward name="updatepage" path="/xsgzgl/gyjc/jcjg/wsccupdate.jsp" />
+	
+		</action>
+    	<action path="/gyjc_jcsd" 
+    			scope="request"
+    			type="xsgzgl.gyjc.jcsd.JcsdAction" 
+    			name="JcsdForm"
+    			parameter="method">	
+    		<forward name="search" path="/xsgzgl/gyjc/jcsd/jcsdSearch.jsp"/>
+    		<forward name="searchRyfp" path="/xsgzgl/gyjc/jcsd/getRyfpList.jsp"/>
+		</action>
+		
+		<!-- 抽查日程设定 -->
+		<action path="/gyjc_ccrcsz" 
+    			scope="request"
+    			type="xsgzgl.gyjc.jcsd.CcrcAction" 
+    			name="CcrcForm"
+    			parameter="method">	
+    		<forward name="search" path="/xsgzgl/gyjc/ccrc/getCcrcList.jsp"/>
+    		<forward name="add" path="/xsgzgl/gyjc/ccrc/addccrc.jsp"/>
+    		<forward name="update" path="/xsgzgl/gyjc/ccrc/updateccrc.jsp"/>
+    		<forward name="fenpei" path="/xsgzgl/gyjc/ccrc/getQsList.jsp"/>
+    		<forward name="searchRyfp" path="/xsgzgl/gyjc/ccrc/getRyfpList.jsp"/>
+    		<forward name="updateRyfp" path="/xsgzgl/gyjc/ccrc/updateRyfpList.jsp"/>
+    		<forward name="updateQs" path="/xsgzgl/gyjc/ccrc/updateQsList.jsp"/>
+		</action>
+		
+		<!-- 抽查项目设定 -->
+		<action path="/gyjc_ccxmsz" 
+    			scope="request"
+    			type="xsgzgl.gyjc.jcsd.CxxmAction" 
+    			name="CxxmForm"
+    			parameter="method">	
+    		<forward name="search" path="/xsgzgl/gyjc/cxxm/getCxxmList.jsp"/>
+    		<forward name="add" path="/xsgzgl/gyjc/cxxm/addCxxm.jsp"/>
+
+		</action>
+		<!-- 评分标准-->
+		<action path="/gyjc_pfbz" 
+    			scope="request"
+    			type="xsgzgl.gyjc.jcsd.PfbzAction" 
+    			name="PfbzForm"
+    			parameter="method">	
+    		<forward name="search" path="/xsgzgl/gyjc/jcsd/getPfbzList.jsp"/>
+    		<forward name="add" path="/xsgzgl/gyjc/jcsd/addPfbz.jsp"/>
+    		<forward name="update" path="/xsgzgl/gyjc/jcsd/updatePfbz.jsp"/>
+		</action>
+		
+		<!-- 检查日程 -->
+		<action path="/gyjc_jcrc" scope="request" type="xsgzgl.gyjc.jcrc.JcrcAction" 
+		              name="JcrcForm" parameter="method">
+			<forward name="search" path="/xsgzgl/gyjc/jcrc/getJcrcList.jsp" />
+			<forward name="add" path="/xsgzgl/gyjc/jcrc/addjcrc.jsp" />
+			<forward name="update" path="/xsgzgl/gyjc/jcrc/updatejcrc.jsp" />
+			<forward name="selLd" path="/xsgzgl/gyjc/jcrc/selLd.jsp" />
+		</action>
+		
+		<!-- 检查结果录入 -->
+		<action path="/gyjc_jcjglr" scope="request" name="JcjglrForm" type="xsgzgl.gyjc.jcjglr.JcjglrAction" parameter="method">
+			<forward name="search" path="/xsgzgl/gyjc/jcjglr/getJcjgLrList.jsp"/>
+			<forward name="searchlrcx" path="/xsgzgl/gyjc/jcjglr/getJcjgLrcxList.jsp"/>
+			<forward name="jcjglr" path="/xsgzgl/gyjc/jcjglr/jcjgLr.jsp"/>
+			<forward name="jcjglrck" path="/xsgzgl/gyjc/jcjglr/jcjglrck.jsp"/>
+		</action>
+			
+    	 <!-- 抽查结果 -->
+		<action path="/xg_gyjc_ccjgcx" forward="/gyjc_ccjgcx.do?method=ccjgList"/>
+    	<action path="/gyjc_ccjgcx" scope="request" type="xsgzgl.gyjc.ccjgcx.CcjgAction" 
+		              name="ccjgForm" parameter="method">
+			<forward name="ccjgList" path="/xsgzgl/gyjc/ccjg/ccjgList.jsp" />
+			<forward name="addCcjg" path="/xsgzgl/gyjc/ccjg/addCcjg.jsp" />
+			<forward name="editCcjg" path="/xsgzgl/gyjc/ccjg/editCcjg.jsp" />
+			<forward name="viewCcjg" path="/xsgzgl/gyjc/ccjg/viewCcjg.jsp" />
+			<forward name="showQsxx" path="/xsgzgl/gyjc/ccjg/showQsxx.jsp" />
+		</action>
+
+		<!-- 寝室考勤-->
+		<action path="/xg_gyjc_qskq" forward="/gyjc_qskq.do?method=getList"/>
+		<action path="/gyjc_qskq" scope="request" type="xsgzgl.gyjc.jcjg.qskq.QskqAction"
+				name="QskqForm" parameter="method">
+			<forward name="qskqList" path="/xsgzgl/gyjc/jcjg/qskq/qskqList.jsp" />
+			<forward name="qskqView" path="/xsgzgl/gyjc/jcjg/qskq/qskqView.jsp" />
+			<forward name="qskqUpdate" path="/xsgzgl/gyjc/jcjg/qskq/qskqUpdate.jsp" />
+
+		</action>
+
+	</action-mappings>
+</struts-config>

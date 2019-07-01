@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="jxglTyForm" type="xgxt.jxgl.JxglTyForm"/>
+	</form-beans>
+	
+	<action-mappings>	
+
+		<!-- 传媒学院 -->
+    	<action path="/zjcm_jxgl_jxcj" 	forward="/zjcmJxgl.do?method=jxcjManage"/>	<!-- 军训成绩维护 -->
+    	
+		<action path="/zjcmJxgl" 
+        		parameter="method"  
+        		name="jxglTyForm" 
+        		scope="request"
+		        type="xgxt.jxgl.zjcm.ZjcmJxglAction">		
+		                
+			<!-- 军训成绩维护 -->
+			<forward name="jxcjManage"    path="/jxgl/zjcm/jxcjManage.jsp" />
+			
+		</action>
+	
+		<!-- 传媒学院 end-->
+		
+		<!-- 贵州大学 -->
+		
+		<!-- 信息维护 -->
+		<action path="/gzdx_jxgl_jxjncj" 	forward="/gzdxJxgl.do?method=jncjManage"/>	<!-- 军训技能成绩管理 -->
+		<action path="/gzdx_jxgl_jxcjck" 	forward="/gzdxJxgl.do?method=cjckManage"/>	<!-- 军训成绩查看 -->
+		
+		<!-- 免缓训 -->
+    	<action path="/gzdx_jxgl_mhxsq" 	forward="/gzdxJxgl.do?method=mhxsq"/>	<!-- 申请 -->
+    	<action path="/gzdx_jxgl_mhxsh" 	forward="/gzdxJxgl.do?method=mhxsh"/>	<!-- 审核 -->
+    	<action path="/gzdx_jxgl_mhxjg" 	forward="/gzdxJxgl.do?method=mhxjg"/>	<!-- 结果查询 -->
+    	
+    	<action path="/gzdxJxgl" 
+        		parameter="method"  
+        		name="jxglTyForm" 
+        		scope="request"
+		        type="xgxt.jxgl.gzdx.JxglGzdxAction">		
+		       
+		<!-- 信息维护 -->        
+		<forward name="jncjManage"    	path="/jxgl/gzdx/jncjManage.jsp" />	<!-- 军训技能成绩管理 -->
+		<forward name="cjckManage"    	path="/jxgl/gzdx/cjckManage.jsp" />	<!-- 军训成绩查看 -->
+		
+		<!-- 免缓训 -->
+		<forward name="mhxsq"    		path="/jxgl/gzdx/mhxsq.jsp" />		<!-- 申请 -->
+		<forward name="mhxsh"    		path="/jxgl/gzdx/mhxsh.jsp" />		<!-- 审核 -->
+		<forward name="mhxjg"    		path="/jxgl/gzdx/mhxjg.jsp" />		<!-- 结果 -->
+		<forward name="mhxManage"    	path="/jxgl/gzdx/mhxManage.jsp" />	<!-- 管理 -->
+		<forward name="mhxUpdate"    	path="/jxgl/gzdx/mhxUpdate.jsp" />	<!-- 修改 -->
+		<forward name="mhxPrint"    	path="/jxgl/gzdx/mhxPrint.jsp" />	<!-- 打印 -->
+		
+		</action>
+		
+		<!-- 贵州大学 end-->
+	</action-mappings>
+
+</struts-config>

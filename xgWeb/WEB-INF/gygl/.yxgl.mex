@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/yxgl/yxgl_xybd.jsp" location="954,470" dimension="125,49" />
+  <StrutsActivity path="/yxgl/yxgl_xybd_one.jsp" location="811,188" dimension="149,49" />
+  <StrutsActivity path="/yxgl/yxgl_bjly_xsbdd.jsp" location="613,188" dimension="153,49" />
+  <StrutsActivity path="/yxgl/yxgl_xyybd.jsp" location="4,752" dimension="131,49" />
+  <StrutsActivity path="/yxgl/yxgl_xyybd_sdjyqy.jsp" location="0,188" dimension="169,49" />
+  <StrutsActivity path="/yxgl/yxgl_xyybd_one.jsp" location="214,188" dimension="155,49" />
+  <StrutsActivity path="/yxgl/yxgl_stbd.jsp" location="192,752" dimension="122,49" />
+  <StrutsActivity path="/yxgl/yxgl_stbd_one.jsp" location="192,470" dimension="146,49" />
+  <StrutsActivity path="/yxgl/yxgl_ssbd.jsp" location="376,752" dimension="123,49" />
+  <StrutsActivity path="/yxgl/yxgl_ssbd_one.jsp" location="0,470" dimension="147,49" />
+  <StrutsActivity path="/yxgl/yxgl_xsjf.jsp" location="562,752" dimension="119,49" />
+  <StrutsActivity path="/yxgl/yxgl_xsjf_one.jsp" location="572,470" dimension="143,49" />
+  <StrutsActivity path="/yxgl/yxgl_lstd.jsp" location="746,752" dimension="118,49" />
+  <StrutsActivity path="/yxgl/yxgl_lstd_one.jsp" location="760,470" dimension="142,49" />
+  <StrutsActivity path="/yxgl/yxgl_lstd_report.jsp" location="414,188" dimension="154,49" />
+  <StrutsActivity path="/yxgl/yxgl_xsgl.jsp" location="929,752" dimension="120,49" />
+  <StrutsActivity path="/yxgl/yxgl_xsgl_one.jsp" location="383,470" dimension="144,49" />
+  <StrutsActivity path="/yxgl/yxgl_xstj.jsp" location="10,1034" dimension="119,49" />
+  <StrutsActivity path="/XsGyXxGl.do" />
+  <StrutsActivity path="/gygl/gdby/xxgyxx.jsp" />
+  <StrutsTransition id="/yxgl_stbd.do,success,/yxgl/yxgl_stbd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="253,652" />
+      <AbsolutePoint location="253,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_xsgl_one.do,success,/yxgl/yxgl_xsgl_one.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="455,370" />
+      <AbsolutePoint location="455,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_stbd_one.do,success,/yxgl/yxgl_stbd_one.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="265,370" />
+      <AbsolutePoint location="265,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_xsgl.do,success,/yxgl/yxgl_xsgl.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="989,652" />
+      <AbsolutePoint location="989,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_xstj.do,success,/yxgl/yxgl_xstj.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="69,934" />
+      <AbsolutePoint location="69,1034" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_xybd_one.do,success,/yxgl/yxgl_xybd_one.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="885,88" />
+      <AbsolutePoint location="885,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_xyybd_sdjyqy.do,success,/yxgl/yxgl_xyybd_sdjyqy.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="84,88" />
+      <AbsolutePoint location="84,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_xyybd.do,success,/yxgl/yxgl_xyybd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="69,652" />
+      <AbsolutePoint location="69,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_ssbd_one.do,success,/yxgl/yxgl_ssbd_one.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="73,370" />
+      <AbsolutePoint location="73,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/XsGyXxGl.do,xsGyXxQuerry,/gygl/gdby/xxgyxx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_xybd.do,success,/yxgl/yxgl_xybd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1016,370" />
+      <AbsolutePoint location="1016,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_xyybd_one.do,success,/yxgl/yxgl_xyybd_one.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="291,88" />
+      <AbsolutePoint location="291,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_lstd.do,success,/yxgl/yxgl_lstd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="805,652" />
+      <AbsolutePoint location="805,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_ssbd.do,success,/yxgl/yxgl_ssbd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="437,652" />
+      <AbsolutePoint location="437,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_lstd_one.do,success,/yxgl/yxgl_lstd_one.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="831,370" />
+      <AbsolutePoint location="831,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_xsjf_one.do,success,/yxgl/yxgl_xsjf_one.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="643,370" />
+      <AbsolutePoint location="643,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_bjly_xsbdd.do,success,/yxgl/yxgl_bjly_xsbdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="689,88" />
+      <AbsolutePoint location="689,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_xsjf.do,success,/yxgl/yxgl_xsjf.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="621,652" />
+      <AbsolutePoint location="621,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yxgl_lstd_report.do,success,/yxgl/yxgl_lstd_report.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="491,88" />
+      <AbsolutePoint location="491,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

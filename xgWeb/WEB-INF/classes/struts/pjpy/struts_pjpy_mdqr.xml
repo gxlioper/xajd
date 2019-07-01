@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    <form-bean name="mdqrForm" type="xgxt.mdqr.MdqrForm" />
+	</form-beans>
+	<action-mappings>
+    <action path="/mdqr" 
+    		type="xgxt.mdqr.MdqrAction" 
+    		parameter="method"
+    		name="mdqrForm"
+    		scope="request">
+		<forward name="mdqrXmsz" path="/mdqr/mdqrXmsz.jsp"/>
+		<forward name="mdqrXmCx" path="/mdqr/mdqrXmCx.jsp"/>
+		<forward name="mdqrWh" path="/mdqr/mdqrWh.jsp"/>
+		<forward name="mdqrCx" path="/mdqr/mdqrCx.jsp"/>
+		<forward name="mdqrQrcx" path="/mdqr/mdqrQrcx.jsp"/>
+		<forward name="mdqrSh" path="/mdqr/mdqrSh.jsp"/>
+		<forward name="mdqrQr" path="/mdqr/mdqrQr.jsp"/>
+	</action>
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    
+    <!-- 工作记录-->
+	<form-beans>
+   		<form-bean name="GzjlLbglForm" type="com.zfsoft.xgxt.szdw.gzjl.lbgl.GzjlLbglForm" />
+   		<form-bean name="GzjlJcszForm" type="com.zfsoft.xgxt.szdw.gzjl.jcsz.GzjlJcszForm" />
+   		<form-bean name="GzjlsqForm" type="com.zfsoft.xgxt.szdw.gzjl.gzjlsq.GzjlsqForm" />
+   		<form-bean name="GzjlshForm" type="com.zfsoft.xgxt.szdw.gzjl.gzjlsh.GzjlshForm" />
+   		<form-bean name="GzjljgForm" type="com.zfsoft.xgxt.szdw.gzjl.gzjljg.GzjljgForm" />			
+	</form-beans>
+	
+	<action-mappings>
+		<action path="/gzjl_gzjljcsz" forward="/gzjljcsz.do?method=jcsz"/>
+		<action path="/gzjl_gzjllbgl" forward="/gzjllb.do?method=gzjllbList"/> 
+		<action path="/gzjl_gzjlsq" forward="/gzjlsq.do?method=gzjlsqList"/> 
+		<action path="/gzjl_gzjlsh" forward="/gzjlsh.do?method=gzjlshList"/>
+		<action path="/gzjl_gzjljg" forward="/gzjljg.do?method=gzjljgList"/>
+		
+		<!-- 基础设置 -->
+		<action path="/gzjljcsz" scope="request"
+			type="com.zfsoft.xgxt.szdw.gzjl.jcsz.GzjlJcszAction" name="GzjlJcszForm"
+			parameter="method">
+			<forward name="jcsz" path="/xsgzgl/szdw/gzjl/jcsz/jcsz.jsp" />		<!-- 参数设置 -->
+		</action>
+		 <!-- 工作记录类别管理 -->
+	    <action path="/gzjllb" 
+	    		type="com.zfsoft.xgxt.szdw.gzjl.lbgl.GzjlLbglAction"
+	    		parameter="method"
+	    		name="GzjlLbglForm"
+	    		scope="request">
+			<forward name="lbglList" path="/xsgzgl/szdw/gzjl/lbgl/lbglList.jsp"/>
+			<forward name="addGzlb" path="/xsgzgl/szdw/gzjl/lbgl/addGzlb.jsp"/>
+			<forward name="updateGzlb" path="/xsgzgl/szdw/gzjl/lbgl/updateGzlb.jsp"/>
+		</action>
+		
+		<!-- 工作记录申请-->
+		<action path="/gzjlsq" 
+	    		type="com.zfsoft.xgxt.szdw.gzjl.gzjlsq.GzjlsqAction"
+	    		parameter="method"
+	    		name="GzjlsqForm"
+	    		scope="request">
+			<forward name="gzjlsqList" path="/xsgzgl/szdw/gzjl/gzjlsq/gzjlsqList.jsp"/>
+			<forward name="gzjlsqZj" path="/xsgzgl/szdw/gzjl/gzjlsq/gzjlsqZj.jsp"/>
+			<forward name="gzjlsqXg" path="/xsgzgl/szdw/gzjl/gzjlsq/gzjlsqXg.jsp"/>
+			<forward name="gzjlsqCk" path="/xsgzgl/szdw/gzjl/gzjlsq/gzjlsqCk.jsp"/>
+			<forward name="getStu" path="/xsgzgl/szdw/gzjl/comm/getStu.jsp"/>
+		</action>
+		
+		<action path="/axcs_GzjlJcsz_ajax" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.szdw.GzjlJcsz.AxcsGzjlJcszAjax" 
+    			name="GzjlJcszForm"
+    			parameter="method">
+    			
+		</action>
+		<!-- 工作记录审核 -->
+		<action path="/gzjlsh" 
+	    		type="com.zfsoft.xgxt.szdw.gzjl.gzjlsh.GzjlshAction"
+	    		parameter="method"
+	    		name="GzjlshForm"
+	    		scope="request">
+			<forward name="gzjlshList" path="/xsgzgl/szdw/gzjl/gzjlsh/gzjlshList.jsp"/>
+			<forward name="gzjlPlsh" path="/xsgzgl/szdw/gzjl/gzjlsh/gzjlPlsh.jsp"/>
+			<forward name="gzjlDgsh" path="/xsgzgl/szdw/gzjl/gzjlsh/gzjlDgsh.jsp"/>
+		</action>
+		
+		<!-- 工作记录结果 -->
+		<action path="/gzjljg" 
+	    		type="com.zfsoft.xgxt.szdw.gzjl.gzjljg.GzjljgAction"
+	    		parameter="method"
+	    		name="GzjljgForm"
+	    		scope="request">
+			<forward name="gzjljgList" path="/xsgzgl/szdw/gzjl/gzjljg/gzjljgList.jsp"/>
+			<forward name="gzjljgZj" path="/xsgzgl/szdw/gzjl/gzjljg/gzjljgZj.jsp"/>
+			<forward name="gzjljgXg" path="/xsgzgl/szdw/gzjl/gzjljg/gzjljgXg.jsp"/>
+			<forward name="gzjljgCk" path="/xsgzgl/szdw/gzjl/gzjljg/gzjljgCk.jsp"/>
+			<forward name="showTeachers" path="/xsgzgl/szdw/gzjl/comm/showTeachers.jsp"/>
+		</action>
+		
+	</action-mappings>
+</struts-config>

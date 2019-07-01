@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- 党课成绩查询 -->
+		<form-bean name="dkcjForm" type="com.zfsoft.xgxt.dtjs.rdjjfzpy.dkcj.DkcjForm"/>
+	</form-beans>
+	<action-mappings>
+	    <!-- 毕业生党支部维护 -->
+		<action path="/dtjs_rdjjfzpy_dkcj" 	forward="/dtjs_dkcj.do?method=getList"/>
+	    <action path="/dtjs_dkcj"
+	    		parameter="method" 
+	    		name="dkcjForm"
+	    		scope="request"  
+	    		type="com.zfsoft.xgxt.dtjs.rdjjfzpy.dkcj.DkcjAction">
+	    	<forward name="dkcjList" path="/xsgzgl/dtjs/rdjjfzpy/dkcj/dkcjList.jsp"/>
+	    	<forward name="dkcjAdd" path="/xsgzgl/dtjs/rdjjfzpy/dkcj/dkcjAdd.jsp"/>
+	    	<forward name="dkcjUpdate" path="/xsgzgl/dtjs/rdjjfzpy/dkcj/dkcjUpdate.jsp"/>
+			<forward name="dkcjView" path="/xsgzgl/dtjs/rdjjfzpy/dkcj/dkcjView.jsp"/>
+	    </action>
+	    
+	</action-mappings>
+</struts-config>

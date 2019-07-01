@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="xsxxXjydForm" type="xgxt.xsxx.comm.xjyd.XsxxXjydForm"/>
+	</form-beans>
+
+	<action-mappings>	
+		
+		<action path="/xsxx_xjydlbgl" 	forward="/xsxxXjyd.do?method=xjydlbgl"/>
+		<action path="/xsxx_xjydsq" 	forward="/xsxxXjyd.do?method=xjydsq"/>
+		<action path="/xsxx_xjydsh" 	forward="/xsxxXjyd.do?method=xjydsh"/>
+		<action path="/xsxx_xjydcx" 	forward="/xsxxXjyd.do?method=xjydcx"/>
+		<action path="/xsxx_ydwhcl" 	forward="/xsxxXjyd.do?method=ydwhcl"/>
+		<action path="/xsxx_xjydtj" 	forward="/xsxxXjyd.do?method=xjydtj"/>
+		
+    	<!-- 学籍异动 -->
+    	<action path="/xsxxXjyd" 
+        		parameter="method"  
+        		name="xsxxXjydForm" 
+        		scope="request"
+		        type="xgxt.xsxx.comm.xjyd.XsxxXjydAction">	
+		       
+		    <forward name="xjydlbgl"    	path="/xsxx/comm/xjyd/xjydlbgl.jsp" />
+		    <forward name="ydlbAdd"    		path="/xsxx/comm/xjyd/ydlbAdd.jsp" />
+		    <forward name="ydlbUpdate"    	path="/xsxx/comm/xjyd/ydlbUpdate.jsp" />
+		    <forward name="xjydsq"    		path="/xsxx/comm/xjyd/xjydsq.jsp" />
+		    <forward name="xjydsh"    		path="/xsxx/comm/xjyd/xjydsh.jsp" />
+		    <forward name="dgshXjyd"    	path="/xsxx/comm/xjyd/dgshXjyd.jsp" />
+		    <forward name="xjydcx"    		path="/xsxx/comm/xjyd/xjydcx.jsp" />
+		    <forward name="lcgzXjyd"    	path="/xsxx/comm/xjyd/lcgzXjyd.jsp" />
+		    <forward name="xjydAdd"    		path="/xsxx/comm/xjyd/xjydAdd.jsp" />
+		    <forward name="xjydUpdate"    	path="/xsxx/comm/xjyd/xjydUpdate.jsp" />
+		    <forward name="ydwhcl"    		path="/xsxx/comm/xjyd/ydwhcl.jsp" />
+		    <forward name="xjydtj"    		path="/xsxx/comm/xjyd/xjydtj.jsp" />
+		    <forward name="cxXjydxs"    	path="/xsxx/comm/xjyd/cxXjydxs.jsp" />
+			
+		</action>
+		
+	</action-mappings>
+</struts-config>

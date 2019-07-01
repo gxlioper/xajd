@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+ 		 <!-- 心理健康 在线咨询 -->
+<struts-config>
+	<form-beans>
+		<form-bean name="zxsglForm" type="com.zfsoft.xgxt.xlzx.zxswh.ZxsglForm"/>
+		<form-bean name="zxspbForm" type="com.zfsoft.xgxt.xlzx.zxswh.ZxspbForm"/>
+		<form-bean name="yysqForm" type="com.zfsoft.xgxt.xlzx.yysq.YysqForm"/>
+		<form-bean name="yysqnewForm" type="com.zfsoft.xgxt.xlzx.yysqnew.YysqForm"/>
+		<form-bean name="zxyyclForm" type="com.zfsoft.xgxt.xlzx.zxyycl.ZxyyclForm"/>
+		<form-bean name="zxyyclnewForm" type="com.zfsoft.xgxt.xlzx.zxyyclnew.ZxyyclForm"/>
+		<form-bean name="tsxsForm" type="com.zfsoft.xgxt.xlzx.tsxsgl.TsxsForm"/>
+		<form-bean name="thjlForm" type="com.zfsoft.xgxt.xlzx.thjl.ThjlForm"/>
+		<form-bean name="xlwjgasbForm" type="com.zfsoft.xgxt.xlzx.xlwjga.xlwjgasb.XlwjgasbForm" />
+		<form-bean name="xlwjgafkForm" type="com.zfsoft.xgxt.xlzx.xlwjga.xlwjgafk.XlwjgafkForm" />
+		<form-bean name="zxzxthjlForm" type="com.zfsoft.xgxt.xlzx.zxzxthjl.ZxzxthjlForm" />
+		<form-bean name="pxwhForm" type="com.zfsoft.xgxt.xlzx.pxwh.PxwhForm" />
+		<form-bean name="xlscjgForm" type="com.zfsoft.xgxt.xlzx.xlsc.XlscjgForm" /><!-- 北京中医药大学-心理筛查 -->
+		<form-bean name="zxzxjlForm" type="com.zfsoft.xgxt.xlzx.zxzxjl.ZxzxjlModel" />
+		<form-bean name="ZxsglyForm" type="com.zfsoft.xgxt.xlzx.zxsgly.ZxsglyForm"/>
+		<form-bean name="ZwpgForm" type="com.zfsoft.xgxt.xlzx.yysq.zwpg.ZwpgForm"/><!-- 湖南城市学院-自我评估 -->
+
+		<form-bean name="zxxzwhForm" type="com.zfsoft.xgxt.xlzx.zxxzwh.ZxxzwhForm"/><!-- 湖南城市学院-自我评估 -->
+
+		<form-bean name="xstxxxForm" type="com.zfsoft.xgxt.xlzx.yysq.xstxxx.XstxxxForm"/><!-- 湖南城市学院-自我评估 -->
+
+		<form-bean name="xlwjgyForm" type="com.zfsoft.xgxt.xlzx.xlwjga.xxlwjgy.XlwjgyForm"/><!-- 心理危机干预 -->
+		<form-bean name="zdgzxsForm" type="com.zfsoft.xgxt.xlzx.xlwjga.zdgzxs.ZdgzxsForm"/><!-- 重点关注学生 -->
+	</form-beans>
+ 	<action-mappings>
+		 <!-- 咨询师维护 -->
+ 		 <action path="/xlzx_zxs_zxs"  forward="/xlzx_zxs.do?method=zxsglManage" />  
+ 		 <!-- 咨询师排班 -->
+ 		 <action path="/xlzx_zxspb_zxspb"  forward="/xlzx_zxspb.do?method=zxsPbDeal" /> 
+ 		 <!-- 预约申请 -->
+ 		 <action path="/xlzx_yysq_yysq"  forward="/xlzx_yysq.do?method=yysqManage" />
+ 		 <!-- 预约申请new -->
+ 		 <action path="/xlzx_yysqnew_yysqnew"  forward="/xlzx_yysqnew.do?method=yysqManage" />
+ 		  <!-- 咨询预约处理 -->
+ 	     <action path="/xlzx_zxyycl_zxyycl"  forward="/xlzx_yysq.do?method=yysqManage" />
+ 		  <!-- 咨询预约处理new -->
+ 	     <action path="/xlzx_zxyyclnew_zxyyclnew"  forward="/xlzx_yysqnew.do?method=yysqManage" />
+ 		  <!-- 特殊学生管理 -->
+ 		 <action path="/xlzx_tsxs_tsxs"  forward="/xlzx_tsxs.do?method=tsxsManage" /> 
+ 		  <!-- 谈话记录管理 -->
+ 		 <action path="/xlzx_thjl_thjl"  forward="/xlzx_thjl.do?method=thjlManage" /> 
+ 		  <!-- 选择学生信息跳转-->
+ 		 <action path="/xlzx_yysq_addxs" forward="/xlzx_yysq.do?method=addYyzxInfo" /> 
+ 		 <!-- 北京中医药大学-心理筛查-->
+ 		 <action path="/xg_xlzx_xlscjg" forward="/xlzx_xlscjg.do?method=xlscjgManage" />
+ 		 <!-- 咨询师维护 -->
+ 	     <action path="/xlzx_zxs"     
+ 	     		 name="zxsglForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.zxswh.ZxsglAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	       <forward name="zxsglManage" path="/xsgzgl/xlzx/zxswh/zxsglManage.jsp"/>
+ 	       <forward name="zxsglDetail" path="/xsgzgl/xlzx/zxswh/zxsglDetail.jsp"/>
+ 	       <forward name="getZxsInfo" path="/xsgzgl/xlzx/zxswh/selectZxs.jsp"/>
+ 	       <forward name="setBatchZgStatus" path="/xsgzgl/xlzx/zxswh/setBatchZgStatus.jsp"/>
+ 	     </action>  
+ 	     
+ 		 <!-- 咨询师排班 --> 		 
+ 	     <action path="/xlzx_zxspb"
+ 	     		 name="zxspbForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.zxswh.ZxspbAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	       
+ 	       <forward name="zxspbDetail" path="/xsgzgl/xlzx/zxswh/zxspbDetail.jsp"/><!-- 咨询师排班详情，按天排班，通用-->
+ 	       <forward name="zxsPbDeal" path="/xsgzgl/xlzx/zxswh/zxsPbDeal.jsp"/><!-- 咨询师排班操作-->
+ 	       <forward name="zxsPbbForXs" path="/xsgzgl/xlzx/yysq/zxsPbbForXs.jsp"/><!-- 咨询师排班表-->
+ 	       <forward name="zxspbDetailSJD" path="/xsgzgl/xlzx/zxswh/zxspbDetailSJD.jsp"/><!-- 咨询师排班详情，按时间段排班，通用-->
+	       <forward name="xlzxcns" path="/xsgzgl/xlzx/yysq/xlzxcns.jsp"/><!-- 咨询服务承诺书-->
+ 	     </action>  
+ 	     
+ 	      <!-- 咨询服务承诺书、自我评估 --> 		
+ 	       <action path="/xlzx_zwpg"
+ 	     		 name="ZwpgForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.zxswh.ZxspbAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+	       <forward name="xlzxcns" path="/xsgzgl/xlzx/yysq/xlzxcns.jsp"/><!-- 咨询服务承诺书-->
+ 	     </action>  
+ 	     
+ 	     
+ 	     <!-- 预约申请 -->   
+ 	     <action path="/xlzx_yysq"     
+ 	     		 name="yysqForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.yysq.YysqAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	     	<forward name="yysqManage" path="/xsgzgl/xlzx/yysq/yysqManage.jsp"/><!-- 预约咨询列表-->
+ 	    	<forward name="yysqDetail" path="/xsgzgl/xlzx/yysq/yysqDetail.jsp"/><!-- 预约详情-->
+ 	    	<forward name="yyzxDetail" path="/xsgzgl/xlzx/yysq/yyzxDetail.jsp"/><!-- 预约咨询详情-->
+			<forward name="addYysqInfo" path="/xsgzgl/xlzx/yysq/addYysqInfo.jsp"/><!-- 新增预约-->
+ 	    	<forward name="xspjInfo" path="/xsgzgl/xlzx/yysq/xspjInfo.jsp"/><!-- 学生评价详情--> 	    	
+ 	    	<forward name="addYyzxInfo" path="/xsgzgl/xlzx/yysq/addYyzxInfo.jsp"/><!-- 新增预约--> 	    	
+ 	    	<forward name="zxyyclManage" path="/xsgzgl/xlzx/zxyycl/zxyyclManage.jsp"/><!-- 咨询预约处理查询 -->
+ 	    	<forward name="zxyyclDetail" path="/xsgzgl/xlzx/zxyycl/zxyyclDetail.jsp"/><!-- 咨询预约处理详情 -->
+ 	    	<forward name="addZxJbxx" path="/xsgzgl/xlzx/zxyycl/addZxJbxx.jsp"/>
+ 	    	<forward name="ckZxzxjl" path="/xsgzgl/xlzx/zxyycl/ckZxzxjl.jsp"/>
+
+			<forward name="zxxz" path="/xsgzgl/xlzx/yysq/zxxz.jsp"/><!-- 咨询须知 -->
+ 	     </action>  
+ 	     
+ 	     <!-- 预约申请new -->   
+ 	     <action path="/xlzx_yysqnew"
+ 	     		 name="yysqnewForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.yysqnew.YysqAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	     	<forward name="yysqManage" path="/xsgzgl/xlzx/yysqnew/yysqManage.jsp"/><!-- 预约咨询列表-->
+ 	     	<forward name="yyfkManage" path="/xsgzgl/xlzx/yysqnew/yyfkManage.jsp"/><!-- 预约咨询反馈列表-->
+ 	     	<forward name="yyjgManage" path="/xsgzgl/xlzx/yysqnew/yyjgManage.jsp"/><!-- 预约咨询结果列表-->
+ 	     	<forward name="updateYyjg" path="/xsgzgl/xlzx/yysqnew/updateYyjg.jsp"/><!-- 中心反馈-->
+ 	     	<forward name="yyjgView" path="/xsgzgl/xlzx/yysqnew/yyjgView.jsp"/><!-- 中心反馈-->
+ 	     	<forward name="yyfkDetail" path="/xsgzgl/xlzx/yysqnew/yyfkDetail.jsp"/><!-- 预约咨询反馈-->
+ 	     	<forward name="zxfkDetail" path="/xsgzgl/xlzx/yysqnew/zxfkDetail.jsp"/><!-- 咨询反馈-->
+ 	     	<forward name="zxfkView" path="/xsgzgl/xlzx/yysqnew/zxfkView.jsp"/><!-- 咨询反馈查看-->
+ 	    	<forward name="yysqDetail" path="/xsgzgl/xlzx/yysqnew/yysqDetail.jsp"/><!-- 预约详情-->
+ 	    	<forward name="addYysqInfo" path="/xsgzgl/xlzx/yysqnew/addYysqInfo.jsp"/><!-- 新增预约-->
+ 	    	<forward name="yyzxDetail" path="/xsgzgl/xlzx/yysqnew/yyzxDetail.jsp"/><!-- 预约咨询详情-->
+ 	    	<forward name="xspjInfo" path="/xsgzgl/xlzx/yysqnew/xspjInfo.jsp"/><!-- 学生评价详情--> 	    	
+ 	    	<forward name="addYyzxInfo" path="/xsgzgl/xlzx/yysqnew/addYyzxInfo.jsp"/><!-- 新增预约--> 	    	
+ 	    	<forward name="updateYyzxInfo" path="/xsgzgl/xlzx/yysqnew/updateYyzxInfo.jsp"/><!-- 修改预约--> 	    	
+ 	    	<forward name="zxyyclManage" path="/xsgzgl/xlzx/zxyyclnew/zxyyclManage.jsp"/><!-- 咨询预约处理查询 -->
+ 	    	<forward name="zxyyclDetail" path="/xsgzgl/xlzx/zxyyclnew/zxyyclDetail.jsp"/><!-- 咨询预约处理详情 -->
+ 	    	<forward name="showZxs" path="/xsgzgl/xlzx/yysqnew/showZxs.jsp"/><!-- 咨询师选择页面（默认全部在岗有效） -->
+
+			 <forward name="qdztwh" path="/xsgzgl/xlzx/zxyyclnew/qdztwh.jsp"/><!-- 签到状态维护 -->
+ 	     </action>
+ 	     
+ 	      <!-- 咨询预约处理申请 -->
+ 	     <action path="/xlzx_zxyycl"     
+ 	     		 name="zxyyclForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.zxyycl.ZxyyclAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	     
+ 	     </action>
+
+		<!-- 学生填写信息 -->
+		<action path="/xlzx_xstxxx"
+				name="xstxxxForm"
+				type="com.zfsoft.xgxt.xlzx.yysq.xstxxx.XstxxxAction"
+				scope="request"
+				parameter="method">
+
+		</action>
+
+		<!-- 咨询预约处理申请new -->
+ 	     <action path="/xlzx_zxyyclnew"     
+ 	     		 name="zxyyclnewForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.zxyyclnew.ZxyyclAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	     
+ 	     </action>  
+
+ 	      <!-- 特殊学生管理 -->
+ 	     <action path="/xlzx_tsxs"
+ 	     		 name="tsxsForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.tsxsgl.TsxsAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	       <forward name="tsxsManage" path="/xsgzgl/xlzx/tsxsgl/tsxsManage.jsp"/>
+ 	       <forward name="tsxsDetail" path="/xsgzgl/xlzx/tsxsgl/tsxsDetail.jsp"/>
+ 	       <forward name="setBatchGzzt" path="/xsgzgl/xlzx/tsxsgl/setBatchGzzt.jsp"/>
+ 	       <forward name="getTsxsInfo" path="/xsgzgl/xlzx/tsxsgl/selectTsxs.jsp"/>
+ 	     </action>  
+ 	     
+ 	      <!-- 谈话记录管理 -->
+ 	     <action path="/xlzx_thjl"
+ 	     		 name="thjlForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.thjl.ThjlAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	       <forward name="thjlManage" path="/xsgzgl/xlzx/thjl/thjlManage.jsp"/>
+ 	       <forward name="thjlDetail" path="/xsgzgl/xlzx/thjl/thjlDetail.jsp"/>
+ 	       <forward name="thjlDetailByXh" path="/xsgzgl/xlzx/thjl/thjlDetailByXh.jsp"/>
+ 	       <forward name="getJsInfo" path="/xsgzgl/xlzx/thjl/selectJs.jsp"/>
+ 	       
+ 	     </action>  
+ 	     
+ 	     <action path="/xlzx_xlwjga_xlwjgasb" forward="/xlzx_xlwjga_xlwjgasbgl.do?method=xlwjgasbManage"/>	<!-- 心理危机个案 -->
+		<action path="/xlzx_xlwjga_xlwjgasbgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.xlzx.xlwjga.xlwjgasb.XlwjgasbAction" 
+	   			name="xlwjgasbForm"         
+	   			parameter="method">	
+	   		<forward name="xlwjgasbManage" path="/xsgzgl/xlzx/xlwjga/xlwjgasb/xlwjgasbManage.jsp"></forward>
+	   		<forward name="addXlwjgasb" path="/xsgzgl/xlzx/xlwjga/xlwjgasb/addXlwjgasb.jsp"></forward>
+	   		<forward name="updateXlwjgasb" path="/xsgzgl/xlzx/xlwjga/xlwjgasb/updateXlwjgasb.jsp"></forward>
+	   		<forward name="viewXlwjgasb" path="/xsgzgl/xlzx/xlwjga/xlwjgasb/viewXlwjgasb.jsp"></forward>
+		</action>
+		
+		<action path="/xlzx_xlwjga_xlwjgafk" forward="/xlzx_xlwjga_xlwjgafkgl.do?method=xlwjgafkManage"/>	<!-- 心理危机个案反馈 -->
+		<action path="/xlzx_xlwjga_xlwjgafkgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.xlzx.xlwjga.xlwjgafk.XlwjgafkAction" 
+	   			name="xlwjgafkForm"         
+	   			parameter="method">	
+	   		<forward name="xlwjgafkManage" path="/xsgzgl/xlzx/xlwjga/xlwjgafk/xlwjgafkManage.jsp"></forward>
+	   		<forward name="updateXlwjgafk" path="/xsgzgl/xlzx/xlwjga/xlwjgafk/updateXlwjgafk.jsp"></forward>
+		</action>
+		
+		<action path="/xlzx_thjl_zxzxthjl" forward="/xlzx_thjl_zxzxthjlgl.do?method=zxzxthjlList"/><!-- 在线咨询谈话记录 -->
+		<action path="/xlzx_thjl_zxzxthjlgl"
+				scope="request"
+				type="com.zfsoft.xgxt.xlzx.zxzxthjl.ZxzxthjlAction"
+				name="zxzxthjlForm"
+				parameter="method">
+			<forward name="zxzxthjlList" path="/xsgzgl/xlzx/zxzxthjl/zxzxthjlList.jsp"></forward>	 <!-- 查询 -->
+			<forward name="zxzxthjlAdd" path="/xsgzgl/xlzx/zxzxthjl/zxzxthjlAdd.jsp"></forward>		 <!-- 增加 -->
+			<forward name="zxzxthjlUpdate" path="/xsgzgl/xlzx/zxzxthjl/zxzxthjlUpdate.jsp"></forward><!-- 修改 -->
+			<forward name="zxzxthjlView" path="/xsgzgl/xlzx/zxzxthjl/zxzxthjlView.jsp"></forward>	 <!-- 查看 -->
+		</action>
+		
+		<action path="/xg_xlzx_pxwh" forward="/xlzx_pxwh.do?method=pxwhList"/><!-- 心理健康培训维护-->
+		<action path="/xg_xlzx_pxbm" forward="/xlzx_pxwh.do?method=pxbmList"/><!-- 心理健康培训报名 -->
+		<action path="/xlzx_pxwh"
+				scope="request"
+				type="com.zfsoft.xgxt.xlzx.pxwh.PxwhAction"
+				name="pxwhForm"
+				parameter="method">
+			<forward name="pxwhList" path="/xsgzgl/xlzx/pxwh/xljkpxwhList.jsp"></forward>	 <!-- 维护查询 -->
+			<forward name="pxwhAdd" path="/xsgzgl/xlzx/pxwh/xljkpxwhAdd.jsp"></forward>		 <!-- 增加 -->
+			<forward name="pxwhEdit" path="/xsgzgl/xlzx/pxwh/xljkpxwhEdit.jsp"></forward><!-- 修改 -->
+			<forward name="pxwhView" path="/xsgzgl/xlzx/pxwh/xljkpxwhView.jsp"></forward>	 <!-- 查看 -->
+			<forward name="pxbmList" path="/xsgzgl/xlzx/pxwh/xljkpxbmList.jsp"></forward>	 <!-- 报名查询 -->
+			<forward name="ybmxsList" path="/xsgzgl/xlzx/pxwh/ybmxsList.jsp"></forward>	 <!-- 已报名学生查看 -->
+		</action>
+		
+		<!-- 心理筛查 -->
+ 	     <action path="/xlzx_xlscjg"     
+ 	     		 name="xlscjgForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.xlsc.XlscjgAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	       <forward name="xlscjgList" path="/xsgzgl/xlzx/xlsc/xlscjgList.jsp"/>
+ 	       <forward name="xlscjgAdd" path="/xsgzgl/xlzx/xlsc/xlscjgAdd.jsp"/>
+ 	       <forward name="xlscjgUpdate" path="/xsgzgl/xlzx/xlsc/xlscjgUpdate.jsp"/>
+ 	       <forward name="xlscjgView" path="/xsgzgl/xlzx/xlsc/xlscjgView.jsp"/>
+ 	     </action>
+		
+		<action path="/xlzx_zxzx_zxzxjl" forward="/zxzx_zxzxjl.do?method=getZxList"/>   <!-- 在线咨询记录-->
+		<action path="/zxzx_zxzxjl"
+				scope="request"
+				type="com.zfsoft.xgxt.xlzx.zxzxjl.ZxzxjlAction"
+				name="zxzxjlForm"
+				parameter="method">
+			<forward name="getZxList" path="/xsgzgl/xlzx/zxzxjl/getZxList.jsp"></forward>	 <!-- 在线咨询记录列表-->
+			<forward name="addZxJbxx" path="/xsgzgl/xlzx/zxzxjl/addZxJbxx.jsp"></forward>	 <!-- 增加在线咨询基本信息-->
+			<forward name="updateZxJbxx" path="/xsgzgl/xlzx/zxzxjl/updateZxJbxx.jsp"></forward>  <!-- 修改在线咨询基本信息-->
+			<forward name="whZxzxjl" path="/xsgzgl/xlzx/zxzxjl/whZxzxjl.jsp"></forward> <!-- 维护在线咨询基本信息-->
+			<forward name="ckZxzxjl" path="/xsgzgl/xlzx/zxzxjl/ckZxzxjl.jsp"></forward> <!-- 查看在线咨询基本信息-->			
+		</action>
+		
+		 <!-- 通用增加心理咨询师管理员菜单 -->
+ 		 <action path="/xg_xlzx_zxsgly" forward="/xlzx_zxsgly.do?method=searchZxsgly"/>
+ 		 <action path="/xlzx_zxsgly"
+ 		 		 scope="request"
+ 		 		 type="com.zfsoft.xgxt.xlzx.zxsgly.ZxsglyAction"
+ 		 		 name="ZxsglyForm"
+ 		 		 parameter="method">
+ 		 	<forward name="cx" path="/xsgzgl/xlzx/zxsgly/searchZxsgly.jsp"/>
+ 		 	<forward name="add" path="/xsgzgl/xlzx/zxsgly/addgly.jsp"/>
+ 		 </action>
+		
+		<!-- 湖南城市学院——自我评估 -->
+ 	     <action path="/xlzx_zwpg"     
+ 	     		 name="ZwpgForm"
+ 	     		 type="com.zfsoft.xgxt.xlzx.yysq.zwpg.ZwpgAction"
+ 	     		 scope="request"
+ 	     		 parameter="method">
+ 	     
+ 	     </action>
+		<!-- 咨询须知 -->
+		<action path="/xlzx_jcsz_xlzxxzwh" forward="/xlzx_xlzxxzwh.do?method=zxxzwh"/>
+		<action path="/xlzx_xlzxxzwh"
+				name="zxxzwhForm"
+				type="com.zfsoft.xgxt.xlzx.zxxzwh.ZxxzwhAction"
+				scope="request"
+				parameter="method">
+			<forward name="zxxzwh" path="/xsgzgl/xlzx/zxxzwh/zxxzwh.jsp"/>
+		</action>
+
+		<action path="/xlzx_xlwjga_xlwjgy" forward="/xlzx_xlwjgy.do?method=getList"/>	<!-- 心理危机干预 -->
+		<action path="/xlzx_xlwjgy"
+				scope="request"
+				type="com.zfsoft.xgxt.xlzx.xlwjga.xxlwjgy.XlwjgyAction"
+				name="xlwjgyForm"
+				parameter="method">
+			<forward name="xlwjgyList" path="/xsgzgl/xlzx/xlwjga/xlwjgy/xlwjgyList.jsp"/>
+			<forward name="xlwjgyAdd" path="/xsgzgl/xlzx/xlwjga/xlwjgy/xlwjgyAdd.jsp"/>
+			<forward name="xlwjgyUpdate" path="/xsgzgl/xlzx/xlwjga/xlwjgy/xlwjgyUpdate.jsp"/>
+			<forward name="xlwjgyView" path="/xsgzgl/xlzx/xlwjga/xlwjgy/xlwjgyView.jsp"/>
+		</action>
+
+		<action path="/xlzx_xlwjga_zdgzxs" forward="/xlzx_zdgzxs.do?method=getList"/>	<!-- 重点关注学生 -->
+		<action path="/xlzx_zdgzxs"
+				scope="request"
+				type="com.zfsoft.xgxt.xlzx.xlwjga.zdgzxs.ZdgzxsAction"
+				name="zdgzxsForm"
+				parameter="method">
+			<forward name="zdgzxsList" path="/xsgzgl/xlzx/xlwjga/zdgzxs/zdgzxsList.jsp"/>
+			<forward name="zdgzxsAdd" path="/xsgzgl/xlzx/xlwjga/zdgzxs/zdgzxsAdd.jsp"/>
+			<forward name="zdgzxsUpdate" path="/xsgzgl/xlzx/xlwjga/zdgzxs/zdgzxsUpdate.jsp"/>
+			<forward name="zdgzxsView" path="/xsgzgl/xlzx/xlwjga/zdgzxs/zdgzxsView.jsp"/>
+		</action>
+
+		
+	</action-mappings>
+
+</struts-config>

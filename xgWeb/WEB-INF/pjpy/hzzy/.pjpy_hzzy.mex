@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pjpyhzzywh.do" location="350,50" dimension="214,84" />
+  <StrutsActivity path="/pjpy/hzy/zhszcp/add.jsp" location="950,150" dimension="184,48" />
+  <StrutsActivity path="/pjpy/hzy/zsld.jsp" location="350,350" dimension="148,48" />
+  <StrutsActivity path="/pjpy/hzy/cjimp.jsp" location="650,50" dimension="154,48" />
+  <StrutsActivity path="/pjpy/hzy/rych/edit.jsp" location="350,250" dimension="178,48" />
+  <StrutsActivity path="/pjpy/hzy/jxj/edit.jsp" location="650,250" dimension="172,48" />
+  <StrutsActivity path="/pjpy/hzy/hzyrychprint.jsp" location="950,250" dimension="196,48" />
+  <StrutsActivity path="/pjpy/hzy/zhszcp/view.jsp" location="50,350" dimension="190,48" />
+  <StrutsActivity path="/pjpy/hzy/zhszcp/default.jsp" location="650,150" dimension="208,48" />
+  <StrutsActivity path="" location="950,50" dimension="40,48" />
+  <StrutsActivity path="/pjpy/cqlkxy/pjpy_cqkjxy_fdysh.jsp" location="0,184" dimension="244,48" />
+  <StrutsActivity path="/pjpy/hzy/rychld.jsp" />
+  <StrutsTransition id="/pjpyhzzywh.do,cjimp,/pjpy/hzy/cjimp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="564,53" />
+      <AbsolutePoint location="650,53" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhzzywh.do,zhszcpadd,/pjpy/hzy/zhszcp/add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="564,113" />
+      <AbsolutePoint location="1042,113" />
+      <AbsolutePoint location="1042,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhzzywh.do,zhszcpview,/pjpy/hzy/zhszcp/view.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,92" />
+      <AbsolutePoint location="289,92" />
+      <AbsolutePoint location="289,374" />
+      <AbsolutePoint location="240,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhzzywh.do,hzzyrychld,/pjpy/hzy/rychld.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="457,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhzzywh.do,hzzyzsld,/pjpy/hzy/zsld.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="564,83" />
+      <AbsolutePoint location="609,83" />
+      <AbsolutePoint location="609,374" />
+      <AbsolutePoint location="498,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhzzywh.do,zhszcpdefault,/pjpy/hzy/zhszcp/default.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="487,134" />
+      <AbsolutePoint location="487,169" />
+      <AbsolutePoint location="650,169" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhzzywh.do,hzzyrychld,,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="457,92" />
+      <AbsolutePoint location="970,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhzzywh.do,jxjmodiview,/pjpy/hzy/jxj/edit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="543,134" />
+      <AbsolutePoint location="543,274" />
+      <AbsolutePoint location="650,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhzzywh.do,rychmodiview,/pjpy/hzy/rych/edit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="427,134" />
+      <AbsolutePoint location="427,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pjpyhzzywh.do,hzyrychprint,/pjpy/hzy/hzyrychprint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="457,134" />
+      <AbsolutePoint location="457,213" />
+      <AbsolutePoint location="1048,213" />
+      <AbsolutePoint location="1048,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

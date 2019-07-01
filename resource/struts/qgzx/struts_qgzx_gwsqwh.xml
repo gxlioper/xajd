@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="qgzxXsgwsqForm" type="xgxt.qgzx.comm.gwsqwh.QgzxXsgwsqForm"/>
+		<form-bean name="wdgwsqForm" type="com.zfsoft.xgxt.qgzx.xsgw.WdgwsqForm"/>
+		<form-bean name="xsgwshForm" type="com.zfsoft.xgxt.qgzx.xsgw.XsgwshForm"/>
+		<form-bean name="jtffForm" type="com.zfsoft.xgxt.qgzx.jtff.JtffForm"/>
+	</form-beans>
+	
+	<action-mappings>		
+		<!-- 学生岗位申请 -->
+    	<action path="/qgzx_gwsqwh_xssq" 	forward="/qgzx_gwsqwh.do?method=xssq"/>
+    	<action path="/qgzx_gwsqwh_query" 	forward="/qgzx_gwsqwh.do?method=query"/>
+    	<action path="/qgzx_gwsqwh_sqbprint" 	forward="/qgzx_gwsqwh.do?method=sqbPrint"/>
+    	
+		<action path="/qgzx_gwsqwh" 
+        		parameter="method"  
+        		name="qgzxXsgwsqForm" 
+        		scope="request"
+		        type="xgxt.qgzx.comm.gwsqwh.QgzxXsgwsqAction">	
+		        	
+			<forward name="xssq" path="/qgzx/comm/gwsqwh/xssq.jsp"/>
+			<forward name="xssqUpdate" path="/qgzx/comm/gwsqwh/xssqUpdate.jsp"/>
+			<forward name="stuInfo" path="/qgzx/comm/gwsqwh/stu_info.jsp"/>
+			<forward name="query" path="/qgzx/comm/gwsqwh/query.jsp"/>
+		</action>
+		
+		<!-- 我的岗位申请 -->
+		<action path="/qgzx_wdgwsq" 
+        		parameter="method"  
+        		name="wdgwsqForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.qgzx.xsgw.WdgwsqAction">
+			<forward name="wdgwsqCx" path="/xsgzgl/qgzx/xsgw/wdgwsqCx.jsp"/>
+			<forward name="wdgwSq" path="/xsgzgl/qgzx/xsgw/wdgwSq.jsp"/>
+			<forward name="wdgwxg" path="/xsgzgl/qgzx/xsgw/wdgwxg.jsp"/>
+			<forward name="wdgwxzCx" path="/xsgzgl/qgzx/xsgw/wdgwxzCx.jsp"/>
+			<forward name="gwxx" path="/xsgzgl/qgzx/xsgw/gwxx.jsp"/>
+			<forward name="wdgwsqCxStu" path="/xsgzgl/qgzx/xsgw/wdgwsqCxStu.jsp"/>
+			<forward name="xsgwxxCk" path="/xsgzgl/qgzx/xsgw/xsgwxxCk.jsp"/>
+			<forward name="qglsjl" path="/xsgzgl/qgzx/xsgw/qglsjl.jsp"/>
+			<forward name="wdgwSqStu" path="/xsgzgl/qgzx/xsgw/wdgwSqStu.jsp"/>
+			<forward name="gwsqjlCxStu" path="/xsgzgl/qgzx/xsgw/gwsqjlCxStu.jsp"/>
+			<forward name="wdqggwCx" path="/xsgzgl/qgzx/xsgw/wdqggwCx.jsp"/>
+			<forward name="lzsq" path="/xsgzgl/qgzx/xsgw/lzsq.jsp"/>
+			<forward name="gwmx" path="/xsgzgl/qgzx/xsgw/gwmx.jsp"/>
+			<forward name="gzmx" path="/xsgzgl/qgzx/xsgw/gzmx.jsp"/>
+
+		</action>
+		<!--学生岗位申请审核 -->
+		<action path="/qgzx_xsgwsh" 
+        		parameter="method"  
+        		name="xsgwshForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.qgzx.xsgw.XsgwshAction">	
+			<forward name="xsgwshCx" path="/xsgzgl/qgzx/xsgw/xsgwshCx.jsp"/>
+			<forward name="xsgwsh" path="/xsgzgl/qgzx/xsgw/xsgwsh.jsp"/>
+			<forward name="xsgwCk" path="/xsgzgl/qgzx/xsgw/xsgwCk.jsp"/>
+			<forward name="plsh" path="/xsgzgl/qgzx/xsgw/plsh.jsp"/>
+			<forward name="zgxsList" path="/xsgzgl/qgzx/xsgw/zgxsList.jsp"/>
+			<forward name="xsgwmx" path="/xsgzgl/qgzx/xsgw/xsgwmx.jsp"/>
+			<forward name="pljg" path="/xsgzgl/qgzx/xsgw/pljg.jsp"/>
+			<forward name="xslzshCx" path="/xsgzgl/qgzx/xsgw/xslzshCx.jsp"/>
+			<forward name="xslzsh" path="/xsgzgl/qgzx/xsgw/xslzsh.jsp"/>
+			<forward name="gzjlList" path="/xsgzgl/qgzx/xsgw/gzjlList.jsp"/>
+			<forward name="ckgzsc" path="/xsgzgl/qgzx/xsgw/ckgzscList.jsp"/>
+			<forward name="zjzgxs" path="/xsgzgl/qgzx/xsgw/zjzgxs.jsp"/>
+
+		</action>
+		
+		<!-- 津贴发放 -->
+		<action path="/qgzx_jtff_list" forward="/qgzx_jtff.do?method=jtffList"/>
+		<action path="/qgzx_jtff" 
+        		parameter="method"  
+        		name="jtffForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.qgzx.jtff.JtffAction">	
+		    <forward name="jtffList" path="/xsgzgl/qgzx/jtff/jtffList.jsp"/>
+			<forward name="jtffAdd" path="/xsgzgl/qgzx/jtff/jtffAdd.jsp"/>
+			<forward name="jtffEdit" path="/xsgzgl/qgzx/jtff/jtffEdit.jsp"/>
+		</action>
+		
+	</action-mappings>
+
+</struts-config>

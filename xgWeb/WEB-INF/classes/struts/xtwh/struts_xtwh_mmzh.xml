@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- 项目申报 -->
+		<!-- 学生拓展项目申请 -->
+		<form-bean name="MmZhForm" type="xgxt.xtwh.mmzh.MmZhForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/mmzhglmmzh" forward="/mmzhgl_mmzh.do?method=checkYh"/>				
+		<!-- 密码找回 -->
+	    <action path="/mmzhgl_mmzh" 
+	    		type="xgxt.xtwh.mmzh.MmZhAction" 
+	    		name="MmZhForm"
+	    		parameter="method"
+	    		scope="request" >
+	    <forward name="viewcheck" path="/xsgzgl/xtwh/mmzh/viewcheck.jsp"/>
+		<forward name="viewzhfs" path="/xsgzgl/xtwh/mmzh/viewzhfs.jsp"/>
+		<forward name="viewyzxx" path="/xsgzgl/xtwh/mmzh/viewyzxx.jsp"/>
+	    <forward name="viewmmbh" path="/xsgzgl/xtwh/mmzh/viewmmbh.jsp"/> 
+	    <forward name="viewgxmm" path="/xsgzgl/xtwh/mmzh/viewgxmm.jsp"/> 
+	    <forward name="viewmbsz" path="/xsgzgl/xtwh/mmzh/viewmbsz.jsp"/>
+		<forward name="viewmmzhfs" path="/xsgzgl/xtwh/mmzh/viewmmzhfs.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

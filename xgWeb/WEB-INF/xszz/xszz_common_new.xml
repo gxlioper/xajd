@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+
+		<action name="commanForm" parameter="method" path="/new_common_xszz"
+				scope="request"	type="xgxt.xszz.common.XszzAction">
+			<forward name="false" path="/errMsg.do" />
+			<!-- "资助项目维护"-->
+			<forward name="data_zzxm" path="/xszz/commonNew/data_zzxm.jsp" />
+			<forward name="zzxmEdit" path="/xszz/commonNew/zzxmEdit.jsp"/>
+			<forward name="zzxmDel" path="/about:blank"/>
+			<!-- "资助金额维护"-->
+			<forward name="data_zzje" path="/xszz/commonNew/data_zzje.jsp" />
+			<forward name="zzjeEdit" path="/xszz/commonNew/zzjeEdit.jsp"/>
+			<forward name="zzjeDel" path="/about:blank"/>
+			<!-- "资助时间维护"-->
+			<forward name="data_zzsj" path="/xszz/commonNew/data_zzsj.jsp" />
+			<forward name="zzsjcsh" path="/xszz/commonNew/data_zzsj.jsp"/>
+			<forward name="zzsjEdit" path="/xszz/commonNew/zzsjEdit.jsp"/>
+			<forward name="zzsjPlsz" path="/xszz/commonNew/zzsjPlEdit.jsp"/>
+			<!-- "资助报表自定义字段维护"-->
+			<forward name="data_zzbbzdyzd" path="/xszz/commonNew/data_zzbbzdyzd.jsp" />
+			<forward name="zzbbzdyzdEdit" path="/xszz/commonNew/zzbbzdyzdEdit.jsp"/>
+			<forward name="zzbbzdyzdDel" path="/about:blank"/>
+			<!-- "资助报表格式维护"-->
+			<forward name="data_zzbbgs" path="/xszz/commonNew/data_zzbbgs.jsp" />
+			<forward name="zzbbgsEdit" path="/xszz/commonNew/zzbbgsEdit.jsp"/>
+			<!-- "还款协议设置"-->
+			<forward name="hkxysz" path="/xszz/commonNew/hkxysz.jsp" />
+			<!-- "助学贷款时间维护"-->
+			<forward name="zxdksjcsh" path="/about:blank" />
+			<forward name="data_zxdksj" path="/xszz/commonNew/data_zxdksj.jsp" />
+			<forward name="zxdksjEdit" path="/xszz/commonNew/zxdksjEdit.jsp"/>
+			<forward name="zxdksjPlsz" path="/xszz/commonNew/zxdksjPlEdit.jsp"/>
+			<!-- "选择菜单"-->
+			<forward name="xszzNewCd" path="/xszz/commonNew/xszzNewCd.jsp" />
+			<forward name="stuResultCd" path="/xszz/commonNew/stuResult.jsp" />
+			<!-- "资助汇总"-->
+			<forward name="xszzJehz" path="/xszz/commonNew/xszzjehz.jsp" />
+			<forward name="xszzJehzExp" path="/about:blank" />
+			<!-- "数据导出"-->
+			<forward name="xszzNewhz" path="/xszz/commonNew/xszzhz.jsp" />
+			<forward name="xszzhzExp" path="/about:blank" />
+			<!-- "资助申请页面"-->
+			<forward name="xszzsq" path="/xszz/commonNew/xszzsq.jsp" />
+			<forward name="xszzsqb" path="/xszz/commonNew/xszzsqb.jsp" />
+			<!-- "资助审核页面"-->
+			<forward name="xszzsh" path="/xszz/commonNew/data_xszzsh.jsp" />
+			<forward name="xszzshXxxx" path="/xszz/commonNew/xszzshXxxx.jsp" />
+			<forward name="xszzshExp" path="/about:blank" />
+			<!-- "国家助学贷款申请页面"-->
+			<forward name="gjzxdksq" path="/xszz/commonNew/gjzxdksq.jsp" />
+			<forward name="gjzxdksqb" path="/xszz/commonNew/gjzxdksqb.jsp" />
+			<!-- "国家助学贷款审核页面"-->
+			<forward name="gjzxdksh" path="/xszz/commonNew/data_gjzxdksh.jsp" />
+			<forward name="gjzxdkshXxxx" path="/xszz/commonNew/gjzxdkshXxxx.jsp" />
+			<forward name="gjzxdkshExp" path="/about:blank" />
+			<!-- "困难生申请页面"-->
+			<forward name="knssq" path="/xszz/commonNew/knssq.jsp" />
+			<forward name="knssqb" path="/xszz/commonNew/knssqb.jsp" />
+			<!-- "困难生审核页面"-->
+			<forward name="knssh" path="/xszz/commonNew/data_knssh.jsp" />
+			<forward name="knsshXxxx" path="/xszz/commonNew/knsshXxxx.jsp" />
+			<forward name="knsshExp" path="/about:blank" />
+		</action>
+		
+		<!-- 删除和保存的逻辑信息的提示页面 -->
+		<action path="/logicError" forward="/logicError.jsp"/>
+		
+		<!-- portallet信息 -->
+		<action 
+    		path="/xszzPortallet" 
+    		type="xgxt.xszz.portallet.XszzForPortalletAction"
+    		parameter="method"
+    		scope="request"
+    		name="commanForm">
+    		<forward name="zzxxPortal" path="/xszz/portallet/zzxxPortalletPage.jsp"/> 
+    		<forward name="zxdkPortal" path="/xszz/portallet/zxdkPortalletPage.jsp"/> 
+    		
+    		<forward name="szzqk" path="/xszz/portallet/szzqk.jsp"/>
+    		<forward name="szzqkShow" path="/xszz/portallet/szzqkShow.jsp"/>
+    	</action>
+    	
+    	<!-- 为portallet提供学生酬金发放信息 -->
+		<action 
+			path="/zzxxPortallet"
+			forward="/xszzPortallet.do?method=zzxxPortal">
+		</action>
+		<action 
+			path="/zxdkPortallet"
+			forward="/xszzPortallet.do?method=zxdkPortal">
+		</action>
+		
+		<action path="/zjlg_szzqk" forward="/xszzPortallet.do?method=szzqk"/>
+		
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

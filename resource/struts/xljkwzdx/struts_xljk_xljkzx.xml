@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    	<form-bean name="zxsxxForm" type="com.zfsoft.xgxt.xljkwzdx.xljkzx.zxsgl.ZxsxxForm" />
+    	<form-bean name="xsyysqForm" type="com.zfsoft.xgxt.xljkwzdx.xljkzx.xsyyzx.XsyysqForm" />
+    	<form-bean name="yyzxfkForm" type="com.zfsoft.xgxt.xljkwzdx.xljkzx.yyzxfk.YyzxfkForm" />
+    	<form-bean name="xlzxclForm" type="com.zfsoft.xgxt.xljkwzdx.xljkzx.xlzxcl.XlzxclForm" />
+    	<form-bean name="xlzxglForm" type="com.zfsoft.xgxt.xljkwzdx.xljkzx.xlzxgl.XlzxglForm" />
+	</form-beans>
+	
+	<action-mappings>
+	
+  		<action path="/xljk_xljkzx_zxsgl" forward="/xljk_zxsgl.do?method=queryZxsxx"/>
+  		<action path="/xljk_xljkzx_xsyyzx" forward="/xljk_xsyyzx.do?method=queryXsyysq"/>
+  		<action path="/xljk_xljkzx_yyzxfk" forward="/xljk_yyzxfk.do?method=queryYyzxfk"/>
+  		<action path="/xljk_xljkzx_xlzxcl" forward="/xljk_xlzxcl.do?method=queryXlzxcl"/>
+  		<action path="/xljk_xljkzx_xlzxgl" forward="/xljk_xlzxgl.do?method=queryXlzxgl"/>
+  		
+  		<action path="/xljk_zxsgl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xljkzx.zxsgl.ZxsxxAction" 
+    			name="zxsxxForm"
+    			parameter="method">
+    			
+    		<forward name="queryZxsxx" path="/xljkwzdx/xljkzx/zxsgl/queryZxsxx.jsp"/>
+    		<forward name="addZxsxx" path="/xljkwzdx/xljkzx/zxsgl/addZxsxx.jsp"/>
+    		<forward name="updateZxsxx" path="/xljkwzdx/xljkzx/zxsgl/updateZxsxx.jsp"/>
+    		<forward name="viewZxsxx" path="/xljkwzdx/xljkzx/zxsgl/viewZxsxx.jsp"/>
+    		<forward name="setZxsxxStatus" path="/xljkwzdx/xljkzx/zxsgl/setZxsxxStatus.jsp"/>
+    		<forward name="setZxyysm" path="/xljkwzdx/xljkzx/zxsgl/setZxyysm.jsp"/>
+		</action>
+		
+		<action path="/xljk_xsyyzx" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xljkzx.xsyyzx.XsyysqAction" 
+    			name="xsyysqForm"
+    			parameter="method">
+    			
+    		<forward name="queryXsyysq" path="/xljkwzdx/xljkzx/xsyysq/queryXsyysq.jsp"/>
+    		<forward name="addXsyysq" path="/xljkwzdx/xljkzx/xsyysq/addXsyysq.jsp"/>
+    		<forward name="updateXsyysq" path="/xljkwzdx/xljkzx/xsyysq/updateXsyysq.jsp"/>
+    		<forward name="cancelXsyysq" path="/xljkwzdx/xljkzx/xsyysq/cancelXsyysq.jsp"/>
+    		<forward name="viewXsyysq" path="/xljkwzdx/xljkzx/xsyysq/viewXsyysq.jsp"/>
+    		<forward name="setZxpj" path="/xljkwzdx/xljkzx/xsyysq/setZxpj.jsp"/>
+    		
+		</action>
+		
+		<action path="/xljk_yyzxfk" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xljkzx.yyzxfk.YyzxfkAction" 
+    			name="yyzxfkForm"
+    			parameter="method">
+    			
+    		<forward name="queryYyzxfk" path="/xljkwzdx/xljkzx/yyzxfk/queryYyzxfk.jsp"/>
+    		<forward name="xlzxYyfk" path="/xljkwzdx/xljkzx/yyzxfk/xlzxYyfk.jsp"/>
+    		<forward name="viewXlzxYyfk" path="/xljkwzdx/xljkzx/yyzxfk/viewXlzxYyfk.jsp"/>
+    		
+		</action>
+		
+		<action path="/xljk_xlzxcl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xljkzx.xlzxcl.XlzxclAction" 
+    			name="xlzxclForm"
+    			parameter="method">
+    			
+    		<forward name="queryXlzxcl" path="/xljkwzdx/xljkzx/xlzxcl/queryXlzxcl.jsp"/>
+    		<forward name="addXlzxcl" path="/xljkwzdx/xljkzx/xlzxcl/addXlzxcl.jsp"/>
+    		<forward name="updateXlzxcl" path="/xljkwzdx/xljkzx/xlzxcl/updateXlzxcl.jsp"/>
+    		<forward name="viewZxFk" path="/xljkwzdx/xljkzx/xlzxcl/viewZxFk.jsp"/>
+    		<forward name="viewXlzxcl" path="/xljkwzdx/xljkzx/xlzxcl/viewXlzxcl.jsp"/>
+		</action>
+		
+		<action path="/xljk_xlzxgl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xljkwzdx.xljkzx.xlzxgl.XlzxglAction" 
+    			name="xlzxglForm"
+    			parameter="method">
+    			
+    		<forward name="queryXlzxgl" path="/xljkwzdx/xljkzx/xlzxgl/queryXlzxgl.jsp"/>
+    		
+		</action>
+		
+	</action-mappings>
+	
+</struts-config>

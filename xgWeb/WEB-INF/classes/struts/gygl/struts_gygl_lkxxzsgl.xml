@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    <form-bean name="lkxxForm" type="com.zfsoft.xgxt.gygl.lkxxgl.LkxxForm" />		
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/xgygl_lkxxgl_zsdj"  forward="/xgygl_lkxxdj.do?method=getLkxxList"/>		<!-- 临客信息管理_临客信息住宿登记 -->
+		    	
+    	<action path="/xgygl_lkxxdj" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.gygl.lkxxgl.LkxxAction" 
+    			name="lkxxForm"
+    			parameter="method">	
+    		<forward name="getLkxxList" path="/xsgzgl/gygl/lkxxgl/getLkxxList.jsp"/>
+    		<forward name="addLkxx" path="/xsgzgl/gygl/lkxxgl/addLkxx.jsp"/>
+    		<forward name="editLkxx" path="/xsgzgl/gygl/lkxxgl/editLkxx.jsp"/>
+    		<forward name="viewLkxx" path="/xsgzgl/gygl/lkxxgl/viewLkxx.jsp"/>
+		</action>
+						
+	</action-mappings>
+</struts-config>

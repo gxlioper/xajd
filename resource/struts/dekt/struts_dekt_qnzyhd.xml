@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+	<form-bean name="dektxmwhForm" type="com.zfsoft.xgxt.dekt.xmwh.DektxmwhForm" />
+	<form-bean name="dektxfsqForm" type="com.zfsoft.xgxt.dekt.xfsq.DektxfsqForm" />
+	<form-bean name="dektxfshForm" type="com.zfsoft.xgxt.dekt.xfsh.DektxfshForm" />
+	<form-bean name="dektxfjgForm" type="com.zfsoft.xgxt.dekt.xfjg.DektxfjgForm" />
+    <form-bean name="qnzyhdForm" type="com.zfsoft.xgxt.dekt.qnzyhd.QnzyhdForm" />
+    <form-bean name="qnzyryForm" type="com.zfsoft.xgxt.dekt.qnzyry.QnzyryForm" />
+		
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/dekt_xmwh_list" 	forward="/dekt_xmwh.do?method=xmwhList"/>
+		<action path="/dekt_xmwh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.dekt.xmwh.DektxmwhAction" 
+    			name="dektxmwhForm"
+    			parameter="method">	
+    		<forward name="xmwhList" path="/xsgzgl/dekt/dektxmwh/xmwhList.jsp"/>
+    		<forward name="splcEdit" path="/xsgzgl/dekt/dektxmwh/splcEdit.jsp"/>
+		</action>
+		
+		
+		<action path="/dekt_xfsq_list" 	forward="/dekt_xfsq.do?method=xfsqList"/>
+		<action path="/dekt_xfsq_sqlb" 	forward="/dekt_xfsq.do?method=xfsqSqlb"/>
+		<action path="/dekt_xfsq" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.dekt.xfsq.DektxfsqAction" 
+    			name="dektxfsqForm"
+    			parameter="method">	
+    		<forward name="xfsqList" path="/xsgzgl/dekt/dektxfsq/xfsqList.jsp"/>
+    		<forward name="xfsqSqlb" path="/xsgzgl/dekt/dektxfsq/xfsqSqlb.jsp"/>
+    		<forward name="xfsqAdd" path="/xsgzgl/dekt/dektxfsq/xfsqAdd.jsp"/>
+    		<forward name="xfsqView" path="/xsgzgl/dekt/dektxfsq/xfsqView.jsp"/>
+    		<forward name="xfsqImport" path="/xsgzgl/dekt/dektxfsq/xfsqImport.jsp"/>
+		</action>
+		
+		<action path="/dekt_xfsh_list" 	forward="/dekt_xfsh.do?method=xfshList"/>
+		<action path="/dekt_xfsh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.dekt.xfsh.DektxfshAction" 
+    			name="dektxfshForm"
+    			parameter="method">	
+    		<forward name="xfshList" path="/xsgzgl/dekt/dektxfsh/xfshList.jsp"/>
+    		<forward name="xfshView" path="/xsgzgl/dekt/dektxfsh/xfshView.jsp"/>
+    		<forward name="xfshDgsh" path="/xsgzgl/dekt/dektxfsh/xfshDgsh.jsp"/>
+    		
+		</action>
+		
+		<action path="/dekt_xfjg_list" 	forward="/dekt_xfjg.do?method=xfjgList"/>
+		<action path="/dekt_xfjg" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.dekt.xfjg.DektxfjgAction" 
+    			name="dektxfjgForm"
+    			parameter="method">	
+    		<forward name="xfjgList" path="/xsgzgl/dekt/dektxfjg/xfjgList.jsp"/>
+    		<forward name="xfjgView" path="/xsgzgl/dekt/dektxfjg/xfjgView.jsp"/>
+    		<forward name="pfzhhd" path="/xsgzgl/dekt/dektxfjg/pfzhhd.jsp"/>
+		</action>
+		
+		
+		
+		<action path="/dekt_qnzyhd_hdlb" 	forward="/zyhd.do?method=zyhdList"/>		<!-- 第二课堂  活动列表-->
+		<action path="/dekt_qnzyhd_yfbhd" 	forward="/zyhd.do?method=yfbhdList"/>		<!-- 第二课堂  已发布活动列表-->
+		<action path="/dekt_qnzyhd_ycjhd" 	forward="/zyhd.do?method=ycjhdList"/>		<!-- 第二课堂  已参加活动列表-->
+		<action path="/dekt_qnzyhd_gssh" 	forward="/zyhdry.do?method=gsshList"/>		<!-- 第二课堂  工时审核活动列表-->
+		<action path="/dekt_qnzyhd_gsjg" 	forward="/zyhdry.do?method=gsjgList"/>		<!-- 第二课堂  工时结果活动列表-->
+		<action path="/dekt_qnzyhd_hdfbsh" 	forward="/zyhd.do?method=hdfbshList"/>	    <!-- 第二课堂  活动发布审核 -->
+    	
+    	
+    	<action path="/zyhd" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.dekt.qnzyhd.QnzyhdAction" 
+    			name="qnzyhdForm"
+    			parameter="method">	
+    		<forward name="zyhdList" path="/xsgzgl/dekt/qnzyhd/zyhdList.jsp"/>          <!-- 第二课堂  活动列表--> 
+    		<forward name="addHdfb" path="/xsgzgl/dekt/qnzyhd/addHdfb.jsp"/>		    <!-- 第二课堂  活动发布-->
+    		<forward name="qnhdrybm" path="/xsgzgl/dekt/qnzyhdry/qnhdrybm.jsp"/>	    <!-- 第二课堂  人员报名-->
+    		<forward name="yfbhdList" path="/xsgzgl/dekt/qnzyhd/yfbhdList.jsp"/>        <!-- 第二课堂  已发布活动列表-->
+    		<forward name="updateHdfb" path="/xsgzgl/dekt/qnzyhd/updateHdfb.jsp"/>      <!-- 第二课堂  修改活动-->
+    		<forward name="ycjhdList" path="/xsgzgl/dekt/qnzyhd/ycjhdList.jsp"/>   		<!-- 第二课堂  已参加活动列表-->
+    		<forward name="hdfbshList" path="/xsgzgl/dekt/qnzyhd/hdfbshList.jsp"/>   	<!-- 第二课堂  活动发布审核列表-->
+    		<forward name="sbDgsh" path="/xsgzgl/dekt/qnzyhd/sbDgsh.jsp"/>   		    <!-- 第二课堂  活动申报单个-->
+    		<forward name="sbPlsh" path="/xsgzgl/dekt/qnzyhd/sbPlsh.jsp"/>   		    <!-- 第二课堂  活动申报批量-->    		
+		</action>
+		
+		<action path="/zyhdry" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.dekt.qnzyry.QnzyryAction" 
+    			name="qnzyryForm"
+    			parameter="method">	
+    		<forward name="rygl" path="/xsgzgl/dekt/qnzyhdry/rygl.jsp"/>                <!-- 报名人员管理 -->           
+    		<forward name="gsshList" path="/xsgzgl/dekt/qnzyhdry/gsshList.jsp"/>		<!-- 服务工时审核列表 -->
+    		<forward name="dgsh" path="/xsgzgl/dekt/qnzyhdry/dgsh.jsp"/>				<!-- 服务工时单个审核 -->
+    		<forward name="plsh" path="/xsgzgl/dekt/qnzyhdry/plsh.jsp"/>     			<!-- 服务工时批量审核 -->
+    		<forward name="gsjgList" path="/xsgzgl/dekt/qnzyhdry/gsjgList.jsp"/>     	<!-- 服务工时审核结果 -->
+    		<forward name="viewZyhd" path="/xsgzgl/dekt/qnzyhdry/viewZyhd.jsp"/>     	<!-- 服务工时审核结果 -->
+    		<forward name="pfzhhd" path="/xsgzgl/dekt/qnzyhdry/pfzhhd.jsp"/>     	<!-- 服务工时审核结果 -->
+		</action>
+				
+	</action-mappings>
+</struts-config>

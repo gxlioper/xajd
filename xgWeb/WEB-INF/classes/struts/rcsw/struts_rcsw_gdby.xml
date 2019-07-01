@@ -1,0 +1,30 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xywhglForm" type="xgxt.qtsj.gdby.XywhglForm"></form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+		<!--广东白云 校园文化管理-->
+		<action path="/gdby_xywhgl"
+				name="xywhglForm"
+				type="xgxt.qtsj.gdby.XywhglAction"
+				parameter="method"
+				scope="request">
+			<forward name="xywhfb" path="/qtsj/gdby/xywhfb.jsp" />
+			<forward name="xywhsqforuser" path="/qtsj/gdby/xywhsqforuser.jsp" />
+			<forward name="xywhsq" path="/qtsj/gdby/xywhsq.jsp" />
+			<forward name="xywhview" path="/qtsj/gdby/xywhview.jsp" />
+			<forward name="xywhsh" path="/qtsj/gdby/xywhsh.jsp" />
+			<forward name="xywhcx" path="/qtsj/gdby/xywhcx.jsp" />
+			<forward name="xywhcxforuser" path="/qtsj/gdby/xywhcxforuser.jsp" />
+			<forward name="xywhshone" path="/qtsj/gdby/xywhshone.jsp" />
+			<forward name="xywhwh" path="/qtsj/gdby/xywhwh.jsp"/>
+		</action>
+    	
+    	
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

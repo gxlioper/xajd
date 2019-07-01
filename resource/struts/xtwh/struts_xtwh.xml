@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="customFormForm" type="xsgzgl.xtwh.general.customform.CustomFormForm" />
+    	<form-bean name="generalXtwhGeneralForm" type="xsgzgl.xtwh.general.XtwhGeneralForm" />
+    	<form-bean name="menuForm" type="xsgzgl.xtwh.general.menu.MenuModel" />
+    	<form-bean name="dynamicForm"  type="org.apache.struts.action.DynaActionForm"></form-bean>
+    	<form-bean name="yhzglNewForm" type="xsgzgl.xtwh.general.qxgl.yhzgl.YhzglNewForm"/>
+    	<form-bean name="yhglNewForm" type="xsgzgl.xtwh.general.qxgl.yhgl.YhglNewForm"/>
+    	<form-bean name="newsManageForm" type="xsgzgl.xtwh.general.news.NewsManageForm"></form-bean>
+    	<form-bean name="mobileMessageForm" type="xsgzgl.xtwh.general.mobilemessage.MobileMessageForm"></form-bean>
+		<form-bean name="xssjtbForm" type="xsgzgl.xtwh.general.xssjtb.XssjtbForm"/>
+    	<form-bean name="cxjgpzForm" type="xsgzgl.xtwh.general.cxjgpz.CxjgpzForm"/>
+    	<form-bean name="myJobsForm" type="xsgzgl.xtwh.wdgz.MyJobsForm"/>
+    	<form-bean name="cxpzForm" type="com.zfsoft.xgxt.xtwh.cxpz.CxpzForm"/>
+    	<form-bean name="bjdlForm" type="com.zfsoft.xgxt.xtwh.bjdl.BjdlModel"/>
+     	<form-bean name="yhForm" type="com.zfsoft.xgxt.xtwh.yhsjfw.YhModel"/>
+    	
+	</form-beans>
+
+	<action-mappings>
+		
+		<!-- 自定义查询列 -->
+		<action path="/xtwh_search_setting" forward="/xtwh_cxpz.do?method=cxpzInit"></action>
+		<action path="/xg_bjdl" forward="/xtwh_bjdl.do?method=viewBjxxList"></action>	
+			
+		<!-- 通用方法 -->
+		<action path="/commUtil" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.commutil.CommUtilAction" 
+    			name="generalXtwhGeneralForm"
+    			parameter="method"/>
+    				
+		<!-- 首頁 -->
+		<action path="/general_xtwh_homepage_ajax" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.homepage.HomePageAction" 
+    			name="generalXtwhGeneralForm"
+    			parameter="method"/>
+		
+		<!-- 权限 -->
+		<action path="/general_xtwh_power" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.power.XtwhPowerAction" 
+    			name="generalXtwhGeneralForm"
+    			parameter="method"/>
+    			
+    	<!-- 审核流 -->
+		<action path="/general_xtwh_flow" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.flow.XtwhFlowAction" 
+    			name="generalXtwhGeneralForm"
+    			parameter="method"/>
+		
+		<!-- 功能菜单 -->
+		<action path="/xtwh_menu" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.menu.MenuAction" 
+    			name="menuForm"
+    			parameter="method"/>
+    			
+    	<!-- 待办工作 -->
+		<action path="/xtwh_wdgz" 
+    			scope="request"
+    			type="xsgzgl.xtwh.wdgz.MyJobsAction" 
+    			name="myJobsForm"
+    			parameter="method">
+			<forward name="jobsMore" 	path="/xsgzgl/xtwh/wdgz/jobsMore.jsp"/>   	
+		</action>
+		<action path="/xtwh_wdgz_other" 
+    			scope="request"
+    			type="xsgzgl.xtwh.wdgz.MyJobsAction" 
+    			name="myJobsForm"
+    			parameter="method">
+			<forward name="jobsMore" 	path="/xsgzgl/xtwh/wdgz/jobsMore.jsp"/>   	
+		</action>
+		
+		<!-- =====================================权限管理NEW==START=====================================-->
+		<!-- 用户组管理 -->
+		<action path="/xtwh_qxgl_yhzglManage" 	forward="/xtwh_qxgl_yhzgl.do?method=yhzglManage"/>
+		
+		
+		<action path="/xtwh_qxgl_yhzgl" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.qxgl.yhzgl.YhzglNewAction" 
+    			name="yhzglNewForm"
+    			parameter="method">	
+    			<!-- 查询页面 -->
+    			<forward name="manage" 	path="/xsgzgl/xtwh/general/qxgl/yhzgl/yhzglManage.jsp"/>   	
+    			<forward name="gnsq" 	path="/xsgzgl/xtwh/general/qxgl/yhzgl/yhzglGnsq.jsp"/>    	
+    			<forward name="view" 	path="/xsgzgl/xtwh/general/qxgl/yhzgl/yhzglView.jsp"/>    
+    			<forward name="add" 	path="/xsgzgl/xtwh/general/qxgl/yhzgl/yhzglzj.jsp"/>  
+    			<forward name="update" 	path="/xsgzgl/xtwh/general/qxgl/yhzgl/yhzglxg.jsp"/>  	
+    			<forward name="copy" 	path="/xsgzgl/xtwh/general/qxgl/yhzgl/yhzglfz.jsp"/>
+    			<forward name="fpyh" 	path="/xsgzgl/xtwh/general/qxgl/yhzgl/yhzglFpyh.jsp"/>    	
+    	</action>
+    	
+    	<action path="/xtwh_qxgl_yhzgl_ajax" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.qxgl.yhzgl.YhzglNewAjax" 
+    			name="yhzglNewForm"
+    			parameter="method"/>	
+		
+		<!-- 用户管理 -->
+		<action path="/xtwh_qxgl_yhglManage" 	forward="/xtwh_qxgl_yhgl.do?method=yhglManage"/>
+		
+		<action path="/xtwh_qxgl_yhgl" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.qxgl.yhgl.YhglNewAction" 
+    			name="yhglNewForm"
+    			parameter="method">	
+    			<!-- 查询页面 -->
+    			<forward name="manage" 	path="/xsgzgl/xtwh/general/qxgl/yhgl/yhglManage.jsp"/>
+    			<forward name="gnsq" 	path="/xsgzgl/xtwh/general/qxgl/yhgl/yhglGnsq.jsp"/>    
+    			<forward name="fz" 	path="/xsgzgl/xtwh/general/qxgl/yhgl/yhglFz.jsp"/>
+    			<forward name="mmcsh" 	path="/xsgzgl/xtwh/general/qxgl/yhgl/yhglmmcsh.jsp"/>
+    			<forward name="mmcshPl" 	path="/xsgzgl/xtwh/general/qxgl/yhgl/yhglmmcshPl.jsp"/>
+    			
+    	</action>
+    	
+    	<action path="/xtwh_qxgl_yhgl_ajax" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.qxgl.yhgl.YhglNewAjax" 
+    			name="yhglNewForm"
+    			parameter="method">
+    	</action>
+		<!-- =====================================权限管理NEW===END======================================-->
+		<!-- =====================================通知公告================================================-->		
+    	<action path="/xtwh_newsManage" forward="/xtwh_news.do?method=newsManage"/>
+    	<action path="/xtwh_news"
+    			scope="request"
+    			type="xsgzgl.xtwh.general.news.NewsManageAction"
+    			name="newsManageForm"
+    			parameter="method">
+    		<forward name="newsManage" path="/xsgzgl/xtwh/general/news/newsManage.jsp"></forward>
+    		<forward name="newsMore" path="/xsgzgl/xtwh/general/news/newsMore.jsp"></forward>
+    		<forward name="newsInfo" path="/xsgzgl/xtwh/general/news/newsInfo.jsp"></forward>
+    	    <forward name="selectqx" path="/xsgzgl/xtwh/general/news/xzqx.jsp"></forward>
+    	    <forward name="yydryView" path="/xsgzgl/xtwh/general/news/yydryView.jsp"></forward>
+    	</action>
+    	<action path="/xtwh_newsAjax"
+    			scope="request"
+    			type="xsgzgl.xtwh.general.news.NewsManageAjax"
+    			name="newsManageForm"
+    			parameter="method">
+    		<forward name="newsUpdate" path="/xsgzgl/xtwh/general/news/newsUpdate.jsp"></forward>
+    		<forward name="newsAdd" path="/xsgzgl/xtwh/general/news/newsAdd.jsp"></forward>
+    		
+    	</action>
+    	
+    	<!-- =====================================手机短信================================================-->		
+    	<action path="/xtwh_mobileMessage" forward="/xtwh_mobileMsg.do?method=mobileMessageList"/>
+    	<action path="/xtwh_mobileMsg"
+    			scope="request"
+    			type="xsgzgl.xtwh.general.mobilemessage.MobileMessageAction"
+    			name="mobileMessageForm"
+    			parameter="method">
+    		<forward name="mobileMessageList" path="/xsgzgl/xtwh/general/mobilemessage/mobileMessageList.jsp"></forward>
+    		<forward name="mobileMsgAdd" path="/xsgzgl/xtwh/general/mobilemessage/mobileMsgAdd.jsp"></forward>
+    		<forward name="mobileMsgView" path="/xsgzgl/xtwh/general/mobilemessage/mobileMsgView.jsp"></forward>
+    	</action>
+    	
+    	
+    	<!-- =====================================系统维护（new）数据同步 开始================================================-->
+  		<action path="/xtwh_xssjtbManage" 	forward="/xtwh_xssjtb.do?method=tbrzManage"/>
+  		
+  		<action path="/xtwh_xssjtb" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.xssjtb.XssjtbAction" 
+    			name="xssjtbForm"
+    			parameter="method">	
+    		<!-- 結果查詢-->
+    		<forward name="tbrzManage" 	path="/xsgzgl/xtwh/general/xssjtb/tbrzManage.jsp"/>
+    		<forward name="ckSbsj" 	path="/xsgzgl/xtwh/general/xssjtb/ckSbsj.jsp"/>
+		</action>
+		<!-- =====================================系统维护（new）数据同步 结束================================================-->
+		
+		<!-- =====================================系统维护（new）查询结果配置 开始================================================-->
+  		<action path="/xtwh_cxjgpzManage" 	forward="/xtwh_cxjgpz.do?method=cxjgpzManage"/>
+  		
+  		<action path="/xtwh_cxjgpz" 
+    			scope="request"
+    			type="xsgzgl.xtwh.general.cxjgpz.CxjgpzAction" 
+    			name="cxjgpzForm"
+    			parameter="method">	
+    		<!-- 結果查詢-->
+    		<forward name="cxjgpzManage" 	path="/xsgzgl/xtwh/general/cxjgpz/cxjgpzManage.jsp"/>
+    		<forward name="xgZdmc" 	path="/xsgzgl/xtwh/general/cxjgpz/xgZdmc.jsp"/>
+    		<forward name="cxjgZdxg" path="/xsgzgl/xtwh/general/cxjgpz/cxjgZdxg.jsp"/>
+		</action>
+		
+		
+		<!-- 自定义查询列 -->
+		<action path="/xtwh_cxpz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xtwh.cxpz.CxpzAction" 
+    			name="cxpzForm"
+    			parameter="method">	
+    			
+    		<forward name="cxpzInit" path="/xsgzgl/xtwh/cxpz/cxpzInit.jsp"></forward>	
+    		<forward name="colList" path="/xsgzgl/xtwh/cxpz/colList.jsp"></forward>	
+    		<forward name="ylxg" path="/xsgzgl/xtwh/cxpz/ylxg.jsp"></forward>	
+		</action>
+		
+		<!-- 班级大类 -->
+		<action path="/xtwh_bjdl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xtwh.bjdl.BjdlAction" 
+    			name="bjdlForm"
+    			parameter="method">
+			<forward name="viewBjxxList" path="/xsgzgl/xtwh/bjdl/viewBjxxList.jsp"></forward>
+			<forward name="szBjdl" path="/xsgzgl/xtwh/bjdl/szBjdl.jsp"></forward>
+		</action>
+		
+		<!-- 用户数据范围 -->
+		<action path="/xtwh_yhsjfw" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xtwh.yhsjfw.YhsjfwAction" 
+    			name="yhForm"
+    			parameter="method">
+			<forward name="yhsjfwCx" path="/xsgzgl/xtwh/yhsjfw/yhsjfwCx.jsp"></forward>
+			<forward name="yhsjfwSq" path="/xsgzgl/xtwh/yhsjfw/yhsjfwSq.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>

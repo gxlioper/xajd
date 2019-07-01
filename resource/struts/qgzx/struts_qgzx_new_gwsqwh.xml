@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="xsgwsqForm" type="com.zfsoft.xgxt.qgzx.xsgwnew.sq.XsgwsqForm"/>
+		<form-bean name="xsgwshnewForm" type="com.zfsoft.xgxt.qgzx.xsgwnew.sh.XsgwshnewForm"/>
+	</form-beans>
+	
+	<action-mappings>
+		
+		<!-- 展现路径 -->
+		<action path="/qgzx_xsgwsqnew_sq" forward="/xsgwsqnew_sq.do?method=getXsgwSqList"></action><!-- 申请查询页面 -->
+		<action path="/qgzx_xsgwshnew_sh" forward="/xsgwshnew_sh.do?method=getXsgwShList"></action><!-- 审核查询页面 -->	
+		<!-- 学生岗位申请 -->
+		<action path="/xsgwsqnew_sq" 
+        		parameter="method"  
+        		name="xsgwsqForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.qgzx.xsgwnew.sq.XsgwsqAction">	
+			<forward name="getXsgwSqList" path="/xsgzgl/qgzx/xsgwnew/sq/xsgwSqList.jsp"/>
+			<forward name="addXsgwSq" path="/xsgzgl/qgzx/xsgwnew/sq/addXsgwSq.jsp"/>
+			<forward name="ckXsgwSq" path="/xsgzgl/qgzx/xsgwnew/sq/ckXsgwSq.jsp"/>
+			<forward name="gwxx" path="/xsgzgl/qgzx/xsgwnew/sq/gwxx.jsp"/>
+			<forward name="wdgwxzCx" path="/xsgzgl/qgzx/xsgwnew/sq/wdgwxzCx.jsp"/>
+			<forward name="ckXsgwJgwh" path="/xsgzgl/qgzx/xsgwnew/sq/ckXsgwJgwh.jsp"/>
+		</action>
+		<!--学生岗位申请审核 -->
+		<action path="/xsgwshnew_sh" 
+        		parameter="method"  
+        		name="xsgwshnewForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.qgzx.xsgwnew.sh.XsgwshAction">	
+			<forward name="getXsgwShList" path="/xsgzgl/qgzx/xsgwnew/sh/xsgwShList.jsp"/>
+			<forward name="xsgwsh" path="/xsgzgl/qgzx/xsgwnew/sh/xsgwsh.jsp"/>
+			<forward name="xsgwCk" path="/xsgzgl/qgzx/xsgwnew/sh/xsgwCk.jsp"/>
+			<forward name="plsh" path="/xsgzgl/qgzx/xsgwnew/sh/plsh.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/wjcfhygxywh.do" location="50,50" dimension="232,84" />
+  <StrutsActivity path="/wjcf/hygxy/gzjygl/default.jsp" location="350,50" dimension="220,48" />
+  <StrutsActivity path="/wjcf/hygxy/gzjygl/add.jsp" location="650,50" dimension="196,48" />
+  <StrutsActivity path="/wjcf/gdby/wjcfshview.jsp" location="0,184" dimension="190,48" />
+  <StrutsActivity path="/wjcf/gdby/wjcfshdefault.jsp" location="290,184" dimension="208,48" />
+  <StrutsActivity path="/wjcf/hygxy/gzjygl/update.jsp" />
+  <StrutsTransition id="/wjcfhygxywh.do,gzjyjldefault,/wjcf/hygxy/gzjygl/default.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfhygxywh.do,gzjyadd,/wjcf/hygxy/gzjygl/add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfhygxywh.do,gzjyview,/wjcf/hygxy/gzjygl/update.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务 -商业保险 -->
+<struts-config>
+	<form-beans>
+    	<form-bean name="sybxForm" type="com.zfsoft.xgxt.rcsw.sybx.SybxForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/rcsw_sybx_cx" 		forward="/rcsw_sybx.do?method=getSybxList"/>		<!-- 商业保险查询 -->
+	
+		<action path="/rcsw_sybx" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.sybx.SybxAction" 
+    			name="sybxForm"
+    			parameter="method">	
+    		<forward name="sybxList" path="/xsgzgl/rcsw/sybx/sybxList.jsp"></forward>
+			<forward name="addSybx" path="/xsgzgl/rcsw/sybx/addSybx.jsp"></forward>
+			<forward name="updateSybx" path="/xsgzgl/rcsw/sybx/updateSybx.jsp"></forward>
+			<forward name="viewSybx" path="/xsgzgl/rcsw/sybx/viewSybx.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+</struts-config>

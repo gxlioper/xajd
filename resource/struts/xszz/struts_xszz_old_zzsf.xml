@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xszzForm" type="xgxt.form.XszzForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-困难生申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_kns" 
+		   path="/zzsf_kns" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_kns.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-困难生申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_knsb" 
+		   path="/zzsf_knsb" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_knsb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-困难生审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_zzsf_kns" 
+		   path="/auditing_zzsf_kns" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_kns.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_zzsf_kns_one" 
+		   path="/auditing_zzsf_kns_one" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_kns_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-校内特困补助申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_tkbz" 
+		   path="/zzsf_tkbz" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_tkbz.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-校内特困补助申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_tkbzb" 
+		   path="/zzsf_tkbzb" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_tkbzb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-校内特困补助审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_zzsf_tkbz" 
+		   path="/auditing_zzsf_tkbz" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_tkbz.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_zzsf_tkbz_one" 
+		   path="/auditing_zzsf_tkbz_one" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_tkbz_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-学生学费减免审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_zzsf_xsxfjm" 
+		   path="/auditing_zzsf_xsxfjm" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_xsxfjm.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_zzsf_xsxfjm_one" 
+		   path="/auditing_zzsf_xsxfjm_one" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_xsxfjm_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家励志奖学金申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_gjlzjxj" 
+		   path="/zzsf_gjlzjxj" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_gjlzjxj.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家励志奖学金申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_gjlzjxjb" 
+		   path="/zzsf_gjlzjxjb" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_gjlzjxjb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家励志奖学金审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_zzsf_gjlzjxj" 
+		   path="/auditing_zzsf_gjlzjxj" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_gjlzjxj.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_zzsf_gjlzjxj_one" 
+		   path="/auditing_zzsf_gjlzjxj_one" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_gjlzjxj_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家奖学金申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_gjjxj" 
+		   path="/zzsf_gjjxj" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_gjjxj.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家奖学金申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_gjjxjb" 
+		   path="/zzsf_gjjxjb" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_gjjxjb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家奖学金审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_zzsf_gjjxj" 
+		   path="/auditing_zzsf_gjjxj" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_gjjxj.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_zzsf_gjjxj_one" 
+		   path="/auditing_zzsf_gjjxj_one" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_gjjxj_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家助学金申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_gjzxj" 
+		   path="/zzsf_gjzxj" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_gjzxj.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家助学金申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_gjzxjb" 
+		   path="/zzsf_gjzxjb" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_gjzxjb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家助学金审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_zzsf_gjzxj" 
+		   path="/auditing_zzsf_gjzxj" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_gjzxj.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_zzsf_gjzxj_one" 
+		   path="/auditing_zzsf_gjzxj_one" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_gjzxj_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-绿色通道申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_lstd" 
+		   path="/zzsf_lstd" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_lstd.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-绿色通道申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_lstdb" 
+		   path="/zzsf_lstdb" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_lstdb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-绿色通道审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_zzsf_lstd" 
+		   path="/auditing_zzsf_lstd" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_lstd.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_zzsf_lstd_one" 
+		   path="/auditing_zzsf_lstd_one" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_lstd_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家助学贷款申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_gjzxdk" 
+		   path="/zzsf_gjzxdk" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_gjzxdk.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家助学贷款申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_gjzxdkb" 
+		   path="/zzsf_gjzxdkb" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_gjzxdkb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-国家助学贷款审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_zzsf_gjzxdk" 
+		   path="/auditing_zzsf_gjzxdk" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_gjzxdk.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_zzsf_gjzxdk_one" 
+		   path="/auditing_zzsf_gjzxdk_one" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_gjzxdk_one.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-生源地信用助学贷款申请 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_sydxyzxdk" 
+		   path="/zzsf_sydxyzxdk" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_sydxyzxdk.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-生源地信用助学贷款申请表 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="zzsf_sydxyzxdkb" 
+		   path="/zzsf_sydxyzxdkb" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/zzsf_sydxyzxdkb.jsp"/>   
+		</action>
+		<!--<<<<<<<<<<<<<<<<<<<< 漳州师范学院-生源地信用助学贷款审核 >>>>>>>>>>>>>>>>>>>>-->
+		<action name="xszzForm" parameter="auditing_zzsf_sydxyzxdk" 
+		   path="/auditing_zzsf_sydxyzxdk" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_sydxyzxdk.jsp"/>   
+		</action>
+		<action name="xszzForm" parameter="auditing_zzsf_sydxyzxdk_one" 
+		   path="/auditing_zzsf_sydxyzxdk_one" scope="request"
+		   type="xgxt.action.zzsf.XszzAction">  
+		     <forward name="success" path="/xszz/zzsf/auditing_zzsf_sydxyzxdk_one.jsp"/>   
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

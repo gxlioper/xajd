@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xgxt>
+	<!-- 我的事项 -->
+	
+	<!-- 我的申请(student) -->
+	<gnmk id="rcsw"> 
+		
+		<gnd>
+			<!-- 预分配名单 -->
+			<gnmc>yfpmd</gnmc> 
+			<sql>
+				select a.ffsj||'-'||b.ffjssj sqzqxx,xmmc,zt shjg from
+					(select a.*, b.zgh,
+       				(case when zgh is not null then '已领取' 
+                       else '未领取' end)zt
+                     from (select *
+                       from xg_swff_ffryb
+                        where 1 = 1) a
+                  left join view_rcsw_swffrqwh b on a.xhzgh = b.zgh
+                    and a.xn = b.xn
+                    and a.xq = b.xq
+                    and a.nd = b.nd
+                    and a.ffsj = b.ffsj
+                    and a.xmlx = b.xmlx)a left join view_rcsw_swffxmwh b on a.xn=b.xn and a.xq=b.xq and a.nd=b.nd and a.ffsj=b.ffsj and a.xmlx=b.xmlx
+					where xhzgh=?
+			</sql>
+		</gnd>
+	</gnmk>
+</xgxt>

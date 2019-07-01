@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/insureChargeList.do" location="950,50" dimension="220,84" />
+  <StrutsActivity path="/insureLogic.do" location="50,150" dimension="220,84" />
+  <StrutsActivity path="/shgc_tbxxwh.do" location="950,250" dimension="220,84" />
+  <StrutsActivity path="/shgc_sqjgcx.do" location="350,450" dimension="250,84" />
+  <StrutsActivity path="/qtsj/xcxy/insureChargeList.jsp" location="350,150" dimension="226,48" />
+  <StrutsActivity path="/errMsg.jsp" location="650,50" dimension="106,48" />
+  <StrutsActivity path="/qtsj/xcxy/insureChargePage.jsp" location="350,50" dimension="226,48" />
+  <StrutsActivity path="/qtsj/shgc/insure_totalinfo.jsp" location="350,250" dimension="226,48" />
+  <StrutsActivity path="/qtsj/shgc/bxlc.jsp" location="650,250" dimension="154,48" />
+  <StrutsActivity path="/qtsj/shgc/insure_search.jsp" location="50,350" dimension="208,48" />
+  <StrutsActivity path="/qtsj/shgc/tbxxAdd.jsp" location="650,350" dimension="172,48" />
+  <StrutsActivity path="/qtsj/shgc/tbxxMod.jsp" location="50,450" dimension="172,48" />
+  <StrutsActivity path="/qtsj/shgc/insureApp_search.jsp" location="650,450" dimension="226,48" />
+  <StrutsActivity path="/qtsj/shgc/tbxx.jsp" location="350,350" dimension="154,48" />
+  <StrutsActivity path="/qtsj/shgc/tbsqAdd.jsp" location="950,450" dimension="172,48" />
+  <StrutsActivity path="/qtsj/shgc/tbsqMod.jsp" />
+  <StrutsTransition id="/shgc_sqjgcx.do,search,/qtsj/shgc/insureApp_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="475,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgc_sqjgcx.do,addTbxx,/qtsj/shgc/tbxxAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="600,492" />
+      <AbsolutePoint location="736,492" />
+      <AbsolutePoint location="736,398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/insureChargeList.do,initpage,/qtsj/xcxy/insureChargeList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1060,134" />
+      <AbsolutePoint location="1060,174" />
+      <AbsolutePoint location="576,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/insureChargeList.do,sucess,/qtsj/xcxy/insureChargePage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,113" />
+      <AbsolutePoint location="463,113" />
+      <AbsolutePoint location="463,98" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgc_tbxxwh.do,addTbxx,/qtsj/shgc/tbxxAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1060,334" />
+      <AbsolutePoint location="1060,374" />
+      <AbsolutePoint location="822,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgc_sqjgcx.do,addTbsq,/qtsj/shgc/tbsqAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="600,513" />
+      <AbsolutePoint location="1036,513" />
+      <AbsolutePoint location="1036,498" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/insureChargeList.do,false,/errMsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,53" />
+      <AbsolutePoint location="756,53" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/insureLogic.do,sucess,/qtsj/shgc/bxlc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="160,234" />
+      <AbsolutePoint location="160,313" />
+      <AbsolutePoint location="727,313" />
+      <AbsolutePoint location="727,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgc_sqjgcx.do,modTbxx,/qtsj/shgc/tbxxMod.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,483" />
+      <AbsolutePoint location="222,483" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgc_tbxxwh.do,search,/qtsj/shgc/insure_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1060,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/insureLogic.do,false,/errMsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="270,213" />
+      <AbsolutePoint location="703,213" />
+      <AbsolutePoint location="703,98" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/insureLogic.do,totalinfo,/qtsj/shgc/insure_totalinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="190,234" />
+      <AbsolutePoint location="190,274" />
+      <AbsolutePoint location="350,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgc_tbxxwh.do,modTbxx,/qtsj/shgc/tbxxMod.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1060,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgc_tbxxwh.do,false,/errMsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,283" />
+      <AbsolutePoint location="879,283" />
+      <AbsolutePoint location="879,83" />
+      <AbsolutePoint location="756,83" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgc_sqjgcx.do,modTbsq,/qtsj/shgc/tbsqMod.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="475,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shgc_sqjgcx.do,false,/errMsg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="591,450" />
+      <AbsolutePoint location="591,74" />
+      <AbsolutePoint location="650,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

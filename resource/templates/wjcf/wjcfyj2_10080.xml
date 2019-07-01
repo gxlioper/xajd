@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?mso-application progid="Word.Document"?>
+<w:wordDocument xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:wsp="http://schemas.microsoft.com/office/word/2003/wordml/sp2" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
+<w:ignoreSubtree w:val="http://schemas.microsoft.com/office/word/2003/wordml/sp2"/>
+<o:DocumentProperties>
+<o:Author>Administrator</o:Author>
+<o:LastAuthor>Administrator</o:LastAuthor>
+<o:Revision>3</o:Revision>
+<o:TotalTime>4</o:TotalTime>
+<o:Created>2018-03-30T08:07:00Z</o:Created>
+<o:LastSaved>2018-04-10T06:03:00Z</o:LastSaved>
+<o:Pages>1</o:Pages>
+<o:Words>30</o:Words>
+<o:Characters>172</o:Characters>
+<o:Lines>1</o:Lines>
+<o:Paragraphs>1</o:Paragraphs>
+<o:CharactersWithSpaces>201</o:CharactersWithSpaces>
+<o:Version>12</o:Version>
+</o:DocumentProperties>
+<w:fonts>
+<w:defaultFonts w:ascii="Calibri" w:fareast="宋体" w:h-ansi="Calibri" w:cs="Times New Roman"/>
+<w:font w:name="Times New Roman">
+<w:panose-1 w:val="02020603050405020304"/>
+<w:charset w:val="00"/>
+<w:family w:val="Roman"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="E0002AFF" w:usb-1="C0007841" w:usb-2="00000009" w:usb-3="00000000" w:csb-0="000001FF" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="宋体">
+<w:altName w:val="SimSun"/>
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="288F0000" w:usb-2="00000016" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="黑体">
+<w:altName w:val="SimHei"/>
+<w:panose-1 w:val="02010609060101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="800002BF" w:usb-1="38CF7CFA" w:usb-2="00000016" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="Cambria Math">
+<w:panose-1 w:val="02040503050406030204"/>
+<w:charset w:val="00"/>
+<w:family w:val="Roman"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="A00002EF" w:usb-1="420020EB" w:usb-2="00000000" w:usb-3="00000000" w:csb-0="0000009F" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="Calibri">
+<w:panose-1 w:val="020F0502020204030204"/>
+<w:charset w:val="00"/>
+<w:family w:val="Swiss"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="E10002FF" w:usb-1="4000ACFF" w:usb-2="00000009" w:usb-3="00000000" w:csb-0="0000019F" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="微软雅黑">
+<w:panose-1 w:val="020B0503020204020204"/>
+<w:charset w:val="86"/>
+<w:family w:val="Swiss"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="80000287" w:usb-1="280F3C52" w:usb-2="00000016" w:usb-3="00000000" w:csb-0="0004001F" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="Tahoma">
+<w:panose-1 w:val="020B0604030504040204"/>
+<w:charset w:val="00"/>
+<w:family w:val="Swiss"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="E1002EFF" w:usb-1="C000605B" w:usb-2="00000029" w:usb-3="00000000" w:csb-0="000101FF" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="Verdana">
+<w:panose-1 w:val="020B0604030504040204"/>
+<w:charset w:val="00"/>
+<w:family w:val="Swiss"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="A10006FF" w:usb-1="4000205B" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="0000019F" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="仿宋_GB2312">
+<w:panose-1 w:val="02010609030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="00000001" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="文鼎CS长宋">
+<w:altName w:val="宋体"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="default"/>
+<w:sig w:usb-0="00000000" w:usb-1="00000000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@微软雅黑">
+<w:panose-1 w:val="020B0503020204020204"/>
+<w:charset w:val="86"/>
+<w:family w:val="Swiss"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="80000287" w:usb-1="280F3C52" w:usb-2="00000016" w:usb-3="00000000" w:csb-0="0004001F" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@宋体">
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="288F0000" w:usb-2="00000016" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@黑体">
+<w:panose-1 w:val="02010609060101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="800002BF" w:usb-1="38CF7CFA" w:usb-2="00000016" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@仿宋_GB2312">
+<w:panose-1 w:val="02010609030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="fixed"/>
+<w:sig w:usb-0="00000001" w:usb-1="080E0000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@文鼎CS长宋">
+<w:charset w:val="86"/>
+<w:family w:val="Modern"/>
+<w:pitch w:val="default"/>
+<w:sig w:usb-0="00000000" w:usb-1="00000000" w:usb-2="00000010" w:usb-3="00000000" w:csb-0="00040000" w:csb-1="00000000"/>
+</w:font>
+</w:fonts>
+<w:styles>
+<w:versionOfBuiltInStylenames w:val="7"/>
+<w:latentStyles w:defLockedState="off" w:latentStyleCount="267">
+<w:lsdException w:name="Normal"/>
+<w:lsdException w:name="heading 1"/>
+<w:lsdException w:name="heading 2"/>
+<w:lsdException w:name="heading 3"/>
+<w:lsdException w:name="heading 4"/>
+<w:lsdException w:name="heading 5"/>
+<w:lsdException w:name="heading 6"/>
+<w:lsdException w:name="heading 7"/>
+<w:lsdException w:name="heading 8"/>
+<w:lsdException w:name="heading 9"/>
+<w:lsdException w:name="caption"/>
+<w:lsdException w:name="Title"/>
+<w:lsdException w:name="Subtitle"/>
+<w:lsdException w:name="Strong"/>
+<w:lsdException w:name="Emphasis"/>
+<w:lsdException w:name="No Spacing"/>
+<w:lsdException w:name="List Paragraph"/>
+<w:lsdException w:name="Quote"/>
+<w:lsdException w:name="Intense Quote"/>
+<w:lsdException w:name="Subtle Emphasis"/>
+<w:lsdException w:name="Intense Emphasis"/>
+<w:lsdException w:name="Subtle Reference"/>
+<w:lsdException w:name="Intense Reference"/>
+<w:lsdException w:name="Book Title"/>
+<w:lsdException w:name="TOC Heading"/>
+</w:latentStyles>
+<w:style w:type="paragraph" w:default="on" w:styleId="a">
+<w:name w:val="Normal"/>
+<wx:uiName wx:val="正文"/>
+<w:rsid w:val="0028700E"/>
+<w:pPr>
+<w:adjustRightInd w:val="off"/>
+<w:snapToGrid w:val="off"/>
+<w:spacing w:after="200"/>
+</w:pPr>
+<w:rPr>
+<w:rFonts w:ascii="Tahoma" w:fareast="微软雅黑" w:h-ansi="Tahoma"/>
+<wx:font wx:val="Tahoma"/>
+<w:sz w:val="22"/>
+<w:sz-cs w:val="22"/>
+<w:lang w:val="EN-US" w:fareast="ZH-CN" w:bidi="AR-SA"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:default="on" w:styleId="a0">
+<w:name w:val="Default Paragraph Font"/>
+<wx:uiName wx:val="默认段落字体"/>
+</w:style>
+<w:style w:type="table" w:default="on" w:styleId="a1">
+<w:name w:val="Normal Table"/>
+<wx:uiName wx:val="普通表格"/>
+<w:rPr>
+<wx:font wx:val="Calibri"/>
+<w:lang w:val="EN-US" w:fareast="ZH-CN" w:bidi="AR-SA"/>
+</w:rPr>
+<w:tblPr>
+<w:tblInd w:w="0" w:type="dxa"/>
+<w:tblCellMar>
+<w:top w:w="0" w:type="dxa"/>
+<w:left w:w="108" w:type="dxa"/>
+<w:bottom w:w="0" w:type="dxa"/>
+<w:right w:w="108" w:type="dxa"/>
+</w:tblCellMar>
+</w:tblPr>
+</w:style>
+<w:style w:type="list" w:default="on" w:styleId="a2">
+<w:name w:val="No List"/>
+<wx:uiName wx:val="无列表"/>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a3">
+<w:name w:val="header"/>
+<wx:uiName wx:val="页眉"/>
+<w:basedOn w:val="a"/>
+<w:link w:val="Char"/>
+<w:rsid w:val="00CA0956"/>
+<w:pPr>
+<w:pBdr>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="1" w:color="auto"/>
+</w:pBdr>
+<w:tabs>
+<w:tab w:val="center" w:pos="4153"/>
+<w:tab w:val="right" w:pos="8306"/>
+</w:tabs>
+<w:jc w:val="center"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Tahoma"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="Char">
+<w:name w:val="页眉 Char"/>
+<w:basedOn w:val="a0"/>
+<w:link w:val="a3"/>
+<w:rsid w:val="00CA0956"/>
+<w:rPr>
+<w:rFonts w:ascii="Tahoma" w:fareast="微软雅黑" w:h-ansi="Tahoma"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a4">
+<w:name w:val="footer"/>
+<wx:uiName wx:val="页脚"/>
+<w:basedOn w:val="a"/>
+<w:link w:val="Char0"/>
+<w:rsid w:val="00CA0956"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="center" w:pos="4153"/>
+<w:tab w:val="right" w:pos="8306"/>
+</w:tabs>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Tahoma"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="Char0">
+<w:name w:val="页脚 Char"/>
+<w:basedOn w:val="a0"/>
+<w:link w:val="a4"/>
+<w:rsid w:val="00CA0956"/>
+<w:rPr>
+<w:rFonts w:ascii="Tahoma" w:fareast="微软雅黑" w:h-ansi="Tahoma"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+</w:styles>
+<w:shapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="8194"/>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1"/>
+</o:shapelayout>
+</w:shapeDefaults>
+<w:docPr>
+<w:view w:val="print"/>
+<w:zoom w:percent="100"/>
+<w:doNotEmbedSystemFonts/>
+<w:bordersDontSurroundHeader/>
+<w:bordersDontSurroundFooter/>
+<w:defaultTabStop w:val="420"/>
+<w:drawingGridVerticalSpacing w:val="156"/>
+<w:displayHorizontalDrawingGridEvery w:val="0"/>
+<w:displayVerticalDrawingGridEvery w:val="2"/>
+<w:punctuationKerning/>
+<w:characterSpacingControl w:val="CompressPunctuation"/>
+<w:optimizeForBrowser/>
+<w:validateAgainstSchema/>
+<w:saveInvalidXML w:val="off"/>
+<w:ignoreMixedContent w:val="off"/>
+<w:alwaysShowPlaceholderText w:val="off"/>
+<w:hdrShapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="8194"/>
+</w:hdrShapeDefaults>
+<w:footnotePr>
+<w:footnote w:type="separator">
+<w:p wsp:rsidR="001600EE" wsp:rsidRPr="002A6C9B" wsp:rsidRDefault="001600EE" wsp:rsidP="00CA0956">
+<w:pPr>
+<w:spacing w:after="0"/>
+<w:rPr>
+<w:rFonts w:cs="Verdana"/>
+<w:b/>
+<w:b-cs/>
+<w:color w:val="000000"/>
+<w:sz w:val="44"/>
+<w:lang w:fareast="EN-US"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:separator/>
+</w:r>
+</w:p>
+</w:footnote>
+<w:footnote w:type="continuation-separator">
+<w:p wsp:rsidR="001600EE" wsp:rsidRPr="002A6C9B" wsp:rsidRDefault="001600EE" wsp:rsidP="00CA0956">
+<w:pPr>
+<w:spacing w:after="0"/>
+<w:rPr>
+<w:rFonts w:cs="Verdana"/>
+<w:b/>
+<w:b-cs/>
+<w:color w:val="000000"/>
+<w:sz w:val="44"/>
+<w:lang w:fareast="EN-US"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:continuationSeparator/>
+</w:r>
+</w:p>
+</w:footnote>
+</w:footnotePr>
+<w:endnotePr>
+<w:endnote w:type="separator">
+<w:p wsp:rsidR="001600EE" wsp:rsidRPr="002A6C9B" wsp:rsidRDefault="001600EE" wsp:rsidP="00CA0956">
+<w:pPr>
+<w:spacing w:after="0"/>
+<w:rPr>
+<w:rFonts w:cs="Verdana"/>
+<w:b/>
+<w:b-cs/>
+<w:color w:val="000000"/>
+<w:sz w:val="44"/>
+<w:lang w:fareast="EN-US"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:separator/>
+</w:r>
+</w:p>
+</w:endnote>
+<w:endnote w:type="continuation-separator">
+<w:p wsp:rsidR="001600EE" wsp:rsidRPr="002A6C9B" wsp:rsidRDefault="001600EE" wsp:rsidP="00CA0956">
+<w:pPr>
+<w:spacing w:after="0"/>
+<w:rPr>
+<w:rFonts w:cs="Verdana"/>
+<w:b/>
+<w:b-cs/>
+<w:color w:val="000000"/>
+<w:sz w:val="44"/>
+<w:lang w:fareast="EN-US"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:continuationSeparator/>
+</w:r>
+</w:p>
+</w:endnote>
+</w:endnotePr>
+<w:compat>
+<w:spaceForUL/>
+<w:balanceSingleByteDoubleByteWidth/>
+<w:doNotLeaveBackslashAlone/>
+<w:ulTrailSpace/>
+<w:doNotExpandShiftReturn/>
+<w:adjustLineHeightInTable/>
+<w:breakWrappedTables/>
+<w:snapToGridInCell/>
+<w:wrapTextWithPunct/>
+<w:useAsianBreakRules/>
+<w:dontGrowAutofit/>
+<w:useFELayout/>
+</w:compat>
+<wsp:rsids>
+<wsp:rsidRoot wsp:val="0028700E"/>
+<wsp:rsid wsp:val="00007AAD"/>
+<wsp:rsid wsp:val="00013D88"/>
+<wsp:rsid wsp:val="0002020D"/>
+<wsp:rsid wsp:val="00025614"/>
+<wsp:rsid wsp:val="00026630"/>
+<wsp:rsid wsp:val="000335D5"/>
+<wsp:rsid wsp:val="00037F6E"/>
+<wsp:rsid wsp:val="00051EDD"/>
+<wsp:rsid wsp:val="00053652"/>
+<wsp:rsid wsp:val="0005387E"/>
+<wsp:rsid wsp:val="00062662"/>
+<wsp:rsid wsp:val="00067975"/>
+<wsp:rsid wsp:val="00086543"/>
+<wsp:rsid wsp:val="00095C46"/>
+<wsp:rsid wsp:val="000A2FD7"/>
+<wsp:rsid wsp:val="000B2538"/>
+<wsp:rsid wsp:val="000B493D"/>
+<wsp:rsid wsp:val="000B6FE2"/>
+<wsp:rsid wsp:val="000C54E5"/>
+<wsp:rsid wsp:val="000D08ED"/>
+<wsp:rsid wsp:val="000D1861"/>
+<wsp:rsid wsp:val="000D569E"/>
+<wsp:rsid wsp:val="000E14DB"/>
+<wsp:rsid wsp:val="000F2DCC"/>
+<wsp:rsid wsp:val="000F74E8"/>
+<wsp:rsid wsp:val="00101EDC"/>
+<wsp:rsid wsp:val="00104547"/>
+<wsp:rsid wsp:val="00110C41"/>
+<wsp:rsid wsp:val="00113C81"/>
+<wsp:rsid wsp:val="0011438B"/>
+<wsp:rsid wsp:val="00116332"/>
+<wsp:rsid wsp:val="00116C28"/>
+<wsp:rsid wsp:val="00117554"/>
+<wsp:rsid wsp:val="00120A92"/>
+<wsp:rsid wsp:val="00123B4F"/>
+<wsp:rsid wsp:val="00127153"/>
+<wsp:rsid wsp:val="001338CA"/>
+<wsp:rsid wsp:val="00137237"/>
+<wsp:rsid wsp:val="00140AC6"/>
+<wsp:rsid wsp:val="00142633"/>
+<wsp:rsid wsp:val="00143586"/>
+<wsp:rsid wsp:val="001452DC"/>
+<wsp:rsid wsp:val="00146214"/>
+<wsp:rsid wsp:val="00153635"/>
+<wsp:rsid wsp:val="0015537F"/>
+<wsp:rsid wsp:val="001600EE"/>
+<wsp:rsid wsp:val="00162ED4"/>
+<wsp:rsid wsp:val="0016319F"/>
+<wsp:rsid wsp:val="001633D8"/>
+<wsp:rsid wsp:val="0016756A"/>
+<wsp:rsid wsp:val="00175E64"/>
+<wsp:rsid wsp:val="00175FBC"/>
+<wsp:rsid wsp:val="001838AF"/>
+<wsp:rsid wsp:val="00186A1C"/>
+<wsp:rsid wsp:val="00192BBA"/>
+<wsp:rsid wsp:val="001A189B"/>
+<wsp:rsid wsp:val="001B52AC"/>
+<wsp:rsid wsp:val="001C4919"/>
+<wsp:rsid wsp:val="001C6163"/>
+<wsp:rsid wsp:val="001D432E"/>
+<wsp:rsid wsp:val="001D6EAA"/>
+<wsp:rsid wsp:val="001E0358"/>
+<wsp:rsid wsp:val="001F0192"/>
+<wsp:rsid wsp:val="001F0B50"/>
+<wsp:rsid wsp:val="001F49B2"/>
+<wsp:rsid wsp:val="001F5AEA"/>
+<wsp:rsid wsp:val="001F73C2"/>
+<wsp:rsid wsp:val="002019C7"/>
+<wsp:rsid wsp:val="00205FC3"/>
+<wsp:rsid wsp:val="0021042E"/>
+<wsp:rsid wsp:val="0022007A"/>
+<wsp:rsid wsp:val="00220803"/>
+<wsp:rsid wsp:val="0022083D"/>
+<wsp:rsid wsp:val="00223FB6"/>
+<wsp:rsid wsp:val="00225253"/>
+<wsp:rsid wsp:val="00241060"/>
+<wsp:rsid wsp:val="0024213D"/>
+<wsp:rsid wsp:val="00246BA5"/>
+<wsp:rsid wsp:val="002517D1"/>
+<wsp:rsid wsp:val="00252969"/>
+<wsp:rsid wsp:val="002532EF"/>
+<wsp:rsid wsp:val="00255290"/>
+<wsp:rsid wsp:val="0025779B"/>
+<wsp:rsid wsp:val="0026562A"/>
+<wsp:rsid wsp:val="00267123"/>
+<wsp:rsid wsp:val="002676F6"/>
+<wsp:rsid wsp:val="00276FD7"/>
+<wsp:rsid wsp:val="002771F9"/>
+<wsp:rsid wsp:val="00281EFC"/>
+<wsp:rsid wsp:val="0028203D"/>
+<wsp:rsid wsp:val="0028347B"/>
+<wsp:rsid wsp:val="00285E49"/>
+<wsp:rsid wsp:val="0028700E"/>
+<wsp:rsid wsp:val="00291CF2"/>
+<wsp:rsid wsp:val="0029367F"/>
+<wsp:rsid wsp:val="00293EB5"/>
+<wsp:rsid wsp:val="00294AB8"/>
+<wsp:rsid wsp:val="00296F63"/>
+<wsp:rsid wsp:val="00297AE1"/>
+<wsp:rsid wsp:val="002A44EA"/>
+<wsp:rsid wsp:val="002B16B5"/>
+<wsp:rsid wsp:val="002B52A6"/>
+<wsp:rsid wsp:val="002C24AB"/>
+<wsp:rsid wsp:val="002C506C"/>
+<wsp:rsid wsp:val="002D0192"/>
+<wsp:rsid wsp:val="002D1C53"/>
+<wsp:rsid wsp:val="002D3CCF"/>
+<wsp:rsid wsp:val="002D4707"/>
+<wsp:rsid wsp:val="002D4BD0"/>
+<wsp:rsid wsp:val="002D7565"/>
+<wsp:rsid wsp:val="002E28B4"/>
+<wsp:rsid wsp:val="002F2A0A"/>
+<wsp:rsid wsp:val="002F2A4E"/>
+<wsp:rsid wsp:val="002F2A8B"/>
+<wsp:rsid wsp:val="0030076B"/>
+<wsp:rsid wsp:val="003037A7"/>
+<wsp:rsid wsp:val="00306A01"/>
+<wsp:rsid wsp:val="003102F9"/>
+<wsp:rsid wsp:val="003137F0"/>
+<wsp:rsid wsp:val="00315F87"/>
+<wsp:rsid wsp:val="00320DC8"/>
+<wsp:rsid wsp:val="00321FDA"/>
+<wsp:rsid wsp:val="00325912"/>
+<wsp:rsid wsp:val="00325E24"/>
+<wsp:rsid wsp:val="003325B2"/>
+<wsp:rsid wsp:val="0033693E"/>
+<wsp:rsid wsp:val="00341590"/>
+<wsp:rsid wsp:val="00343511"/>
+<wsp:rsid wsp:val="00345432"/>
+<wsp:rsid wsp:val="003501BF"/>
+<wsp:rsid wsp:val="00357A8B"/>
+<wsp:rsid wsp:val="003652BF"/>
+<wsp:rsid wsp:val="003709F7"/>
+<wsp:rsid wsp:val="00370D7F"/>
+<wsp:rsid wsp:val="00371FCB"/>
+<wsp:rsid wsp:val="00373A78"/>
+<wsp:rsid wsp:val="0037566B"/>
+<wsp:rsid wsp:val="00376835"/>
+<wsp:rsid wsp:val="00384718"/>
+<wsp:rsid wsp:val="003A292A"/>
+<wsp:rsid wsp:val="003A2A07"/>
+<wsp:rsid wsp:val="003A641F"/>
+<wsp:rsid wsp:val="003A68BB"/>
+<wsp:rsid wsp:val="003B4098"/>
+<wsp:rsid wsp:val="003B543A"/>
+<wsp:rsid wsp:val="003B6D89"/>
+<wsp:rsid wsp:val="003C4CA1"/>
+<wsp:rsid wsp:val="003D5BDA"/>
+<wsp:rsid wsp:val="003E3FA5"/>
+<wsp:rsid wsp:val="003E481D"/>
+<wsp:rsid wsp:val="003E565D"/>
+<wsp:rsid wsp:val="003E6176"/>
+<wsp:rsid wsp:val="003F6037"/>
+<wsp:rsid wsp:val="004017B9"/>
+<wsp:rsid wsp:val="0040355E"/>
+<wsp:rsid wsp:val="00404866"/>
+<wsp:rsid wsp:val="00410A52"/>
+<wsp:rsid wsp:val="00420AD0"/>
+<wsp:rsid wsp:val="004227F8"/>
+<wsp:rsid wsp:val="00424BC1"/>
+<wsp:rsid wsp:val="00424D14"/>
+<wsp:rsid wsp:val="00425E07"/>
+<wsp:rsid wsp:val="00436480"/>
+<wsp:rsid wsp:val="0044089D"/>
+<wsp:rsid wsp:val="0044119E"/>
+<wsp:rsid wsp:val="00443C29"/>
+<wsp:rsid wsp:val="00443D92"/>
+<wsp:rsid wsp:val="00443E12"/>
+<wsp:rsid wsp:val="004449E9"/>
+<wsp:rsid wsp:val="00446112"/>
+<wsp:rsid wsp:val="00450722"/>
+<wsp:rsid wsp:val="0045129B"/>
+<wsp:rsid wsp:val="00452453"/>
+<wsp:rsid wsp:val="0045253D"/>
+<wsp:rsid wsp:val="00453E65"/>
+<wsp:rsid wsp:val="0046032B"/>
+<wsp:rsid wsp:val="00470408"/>
+<wsp:rsid wsp:val="004728CE"/>
+<wsp:rsid wsp:val="0047552B"/>
+<wsp:rsid wsp:val="00483000"/>
+<wsp:rsid wsp:val="00484796"/>
+<wsp:rsid wsp:val="00494481"/>
+<wsp:rsid wsp:val="004A4C36"/>
+<wsp:rsid wsp:val="004B7916"/>
+<wsp:rsid wsp:val="004B7AAE"/>
+<wsp:rsid wsp:val="004B7BE8"/>
+<wsp:rsid wsp:val="004C0C2B"/>
+<wsp:rsid wsp:val="004C2EEC"/>
+<wsp:rsid wsp:val="004D061A"/>
+<wsp:rsid wsp:val="004D36FF"/>
+<wsp:rsid wsp:val="004D39FD"/>
+<wsp:rsid wsp:val="004D45AB"/>
+<wsp:rsid wsp:val="004D7AA6"/>
+<wsp:rsid wsp:val="004E33AD"/>
+<wsp:rsid wsp:val="004E5D8D"/>
+<wsp:rsid wsp:val="005026CA"/>
+<wsp:rsid wsp:val="0050431F"/>
+<wsp:rsid wsp:val="0050588A"/>
+<wsp:rsid wsp:val="00506811"/>
+<wsp:rsid wsp:val="0051170D"/>
+<wsp:rsid wsp:val="0051680B"/>
+<wsp:rsid wsp:val="0052046D"/>
+<wsp:rsid wsp:val="005231E2"/>
+<wsp:rsid wsp:val="00530715"/>
+<wsp:rsid wsp:val="005363B1"/>
+<wsp:rsid wsp:val="00540CB7"/>
+<wsp:rsid wsp:val="005429AF"/>
+<wsp:rsid wsp:val="005434F5"/>
+<wsp:rsid wsp:val="005439D8"/>
+<wsp:rsid wsp:val="005539B5"/>
+<wsp:rsid wsp:val="00553D71"/>
+<wsp:rsid wsp:val="005547D2"/>
+<wsp:rsid wsp:val="005559BF"/>
+<wsp:rsid wsp:val="005571B3"/>
+<wsp:rsid wsp:val="00572481"/>
+<wsp:rsid wsp:val="005738EF"/>
+<wsp:rsid wsp:val="00576418"/>
+<wsp:rsid wsp:val="0058553A"/>
+<wsp:rsid wsp:val="0058761B"/>
+<wsp:rsid wsp:val="00595DA1"/>
+<wsp:rsid wsp:val="005A0052"/>
+<wsp:rsid wsp:val="005A5C6B"/>
+<wsp:rsid wsp:val="005B2578"/>
+<wsp:rsid wsp:val="005B3F84"/>
+<wsp:rsid wsp:val="005B6749"/>
+<wsp:rsid wsp:val="005C0F2B"/>
+<wsp:rsid wsp:val="005C189F"/>
+<wsp:rsid wsp:val="005C5233"/>
+<wsp:rsid wsp:val="005C5418"/>
+<wsp:rsid wsp:val="005D280A"/>
+<wsp:rsid wsp:val="005D58C5"/>
+<wsp:rsid wsp:val="005F1DA5"/>
+<wsp:rsid wsp:val="005F4B3D"/>
+<wsp:rsid wsp:val="00600827"/>
+<wsp:rsid wsp:val="0060162E"/>
+<wsp:rsid wsp:val="00602C6C"/>
+<wsp:rsid wsp:val="00604F30"/>
+<wsp:rsid wsp:val="00611292"/>
+<wsp:rsid wsp:val="00613B8F"/>
+<wsp:rsid wsp:val="00616AFF"/>
+<wsp:rsid wsp:val="00621766"/>
+<wsp:rsid wsp:val="006221F1"/>
+<wsp:rsid wsp:val="00622E09"/>
+<wsp:rsid wsp:val="00627C3C"/>
+<wsp:rsid wsp:val="006312CF"/>
+<wsp:rsid wsp:val="006325F2"/>
+<wsp:rsid wsp:val="0063282B"/>
+<wsp:rsid wsp:val="006404B4"/>
+<wsp:rsid wsp:val="00641124"/>
+<wsp:rsid wsp:val="00641622"/>
+<wsp:rsid wsp:val="00647042"/>
+<wsp:rsid wsp:val="00650AAD"/>
+<wsp:rsid wsp:val="00663599"/>
+<wsp:rsid wsp:val="00667FE1"/>
+<wsp:rsid wsp:val="00672299"/>
+<wsp:rsid wsp:val="006837D0"/>
+<wsp:rsid wsp:val="00692176"/>
+<wsp:rsid wsp:val="006A50D9"/>
+<wsp:rsid wsp:val="006A5D19"/>
+<wsp:rsid wsp:val="006B1AE0"/>
+<wsp:rsid wsp:val="006B24CA"/>
+<wsp:rsid wsp:val="006B56B7"/>
+<wsp:rsid wsp:val="006B5F45"/>
+<wsp:rsid wsp:val="006C016C"/>
+<wsp:rsid wsp:val="006C35DD"/>
+<wsp:rsid wsp:val="006C4FEC"/>
+<wsp:rsid wsp:val="006C559A"/>
+<wsp:rsid wsp:val="006D031F"/>
+<wsp:rsid wsp:val="006D0C8D"/>
+<wsp:rsid wsp:val="006D1AB0"/>
+<wsp:rsid wsp:val="006D3C96"/>
+<wsp:rsid wsp:val="006D452D"/>
+<wsp:rsid wsp:val="006D4CEF"/>
+<wsp:rsid wsp:val="006D5CB7"/>
+<wsp:rsid wsp:val="006D6AE1"/>
+<wsp:rsid wsp:val="006E1B8A"/>
+<wsp:rsid wsp:val="006E3021"/>
+<wsp:rsid wsp:val="006E5C45"/>
+<wsp:rsid wsp:val="006F369B"/>
+<wsp:rsid wsp:val="00700797"/>
+<wsp:rsid wsp:val="00703A5E"/>
+<wsp:rsid wsp:val="007048D8"/>
+<wsp:rsid wsp:val="00717B9C"/>
+<wsp:rsid wsp:val="00722867"/>
+<wsp:rsid wsp:val="007262DE"/>
+<wsp:rsid wsp:val="00734489"/>
+<wsp:rsid wsp:val="007364BA"/>
+<wsp:rsid wsp:val="00737B1E"/>
+<wsp:rsid wsp:val="00740C7F"/>
+<wsp:rsid wsp:val="00742F24"/>
+<wsp:rsid wsp:val="007505AB"/>
+<wsp:rsid wsp:val="00752DB3"/>
+<wsp:rsid wsp:val="00756081"/>
+<wsp:rsid wsp:val="00767D1C"/>
+<wsp:rsid wsp:val="00767EFD"/>
+<wsp:rsid wsp:val="00770B27"/>
+<wsp:rsid wsp:val="00773658"/>
+<wsp:rsid wsp:val="00775D3E"/>
+<wsp:rsid wsp:val="007806E3"/>
+<wsp:rsid wsp:val="00783031"/>
+<wsp:rsid wsp:val="007871DF"/>
+<wsp:rsid wsp:val="00790071"/>
+<wsp:rsid wsp:val="007904E8"/>
+<wsp:rsid wsp:val="00791E2D"/>
+<wsp:rsid wsp:val="00792E69"/>
+<wsp:rsid wsp:val="00795350"/>
+<wsp:rsid wsp:val="007972BD"/>
+<wsp:rsid wsp:val="007A0BF9"/>
+<wsp:rsid wsp:val="007A1381"/>
+<wsp:rsid wsp:val="007A43A4"/>
+<wsp:rsid wsp:val="007A60B3"/>
+<wsp:rsid wsp:val="007B00AB"/>
+<wsp:rsid wsp:val="007C2BBB"/>
+<wsp:rsid wsp:val="007C43F7"/>
+<wsp:rsid wsp:val="007C7E96"/>
+<wsp:rsid wsp:val="007D5AFA"/>
+<wsp:rsid wsp:val="007D6926"/>
+<wsp:rsid wsp:val="007D731A"/>
+<wsp:rsid wsp:val="007E361C"/>
+<wsp:rsid wsp:val="007E6F29"/>
+<wsp:rsid wsp:val="007F074D"/>
+<wsp:rsid wsp:val="007F533C"/>
+<wsp:rsid wsp:val="007F6730"/>
+<wsp:rsid wsp:val="00802DD2"/>
+<wsp:rsid wsp:val="0080362A"/>
+<wsp:rsid wsp:val="0080525D"/>
+<wsp:rsid wsp:val="008059C2"/>
+<wsp:rsid wsp:val="00806828"/>
+<wsp:rsid wsp:val="008068EA"/>
+<wsp:rsid wsp:val="0080780C"/>
+<wsp:rsid wsp:val="008133C3"/>
+<wsp:rsid wsp:val="0081491F"/>
+<wsp:rsid wsp:val="00817D33"/>
+<wsp:rsid wsp:val="0082124F"/>
+<wsp:rsid wsp:val="00825E08"/>
+<wsp:rsid wsp:val="00837D02"/>
+<wsp:rsid wsp:val="0084103F"/>
+<wsp:rsid wsp:val="008411D9"/>
+<wsp:rsid wsp:val="00841236"/>
+<wsp:rsid wsp:val="00851B5C"/>
+<wsp:rsid wsp:val="00853C7A"/>
+<wsp:rsid wsp:val="008543E8"/>
+<wsp:rsid wsp:val="0085490F"/>
+<wsp:rsid wsp:val="00855117"/>
+<wsp:rsid wsp:val="0085694E"/>
+<wsp:rsid wsp:val="008610C8"/>
+<wsp:rsid wsp:val="00862BC2"/>
+<wsp:rsid wsp:val="00867123"/>
+<wsp:rsid wsp:val="00871393"/>
+<wsp:rsid wsp:val="00871506"/>
+<wsp:rsid wsp:val="00880437"/>
+<wsp:rsid wsp:val="00883BE4"/>
+<wsp:rsid wsp:val="008841E2"/>
+<wsp:rsid wsp:val="00884FC4"/>
+<wsp:rsid wsp:val="00892C17"/>
+<wsp:rsid wsp:val="00894C0E"/>
+<wsp:rsid wsp:val="008A0A46"/>
+<wsp:rsid wsp:val="008A41CB"/>
+<wsp:rsid wsp:val="008A59AC"/>
+<wsp:rsid wsp:val="008A5E27"/>
+<wsp:rsid wsp:val="008A653B"/>
+<wsp:rsid wsp:val="008A75DB"/>
+<wsp:rsid wsp:val="008C2677"/>
+<wsp:rsid wsp:val="008D0D13"/>
+<wsp:rsid wsp:val="008D76F1"/>
+<wsp:rsid wsp:val="008E1F27"/>
+<wsp:rsid wsp:val="008E480A"/>
+<wsp:rsid wsp:val="008E7335"/>
+<wsp:rsid wsp:val="008F0388"/>
+<wsp:rsid wsp:val="008F0F61"/>
+<wsp:rsid wsp:val="008F1A29"/>
+<wsp:rsid wsp:val="008F4865"/>
+<wsp:rsid wsp:val="008F7F55"/>
+<wsp:rsid wsp:val="00903587"/>
+<wsp:rsid wsp:val="00905DA8"/>
+<wsp:rsid wsp:val="0090677D"/>
+<wsp:rsid wsp:val="00917395"/>
+<wsp:rsid wsp:val="00917B47"/>
+<wsp:rsid wsp:val="009220F4"/>
+<wsp:rsid wsp:val="00922C44"/>
+<wsp:rsid wsp:val="009357E3"/>
+<wsp:rsid wsp:val="00945AD2"/>
+<wsp:rsid wsp:val="00946B41"/>
+<wsp:rsid wsp:val="0094713F"/>
+<wsp:rsid wsp:val="00951BB5"/>
+<wsp:rsid wsp:val="00952685"/>
+<wsp:rsid wsp:val="00955B70"/>
+<wsp:rsid wsp:val="00955B71"/>
+<wsp:rsid wsp:val="00955E9E"/>
+<wsp:rsid wsp:val="00961A4D"/>
+<wsp:rsid wsp:val="009739A6"/>
+<wsp:rsid wsp:val="00976E7E"/>
+<wsp:rsid wsp:val="0097759A"/>
+<wsp:rsid wsp:val="00981257"/>
+<wsp:rsid wsp:val="00984435"/>
+<wsp:rsid wsp:val="009907E9"/>
+<wsp:rsid wsp:val="009912F7"/>
+<wsp:rsid wsp:val="00991F4D"/>
+<wsp:rsid wsp:val="00997776"/>
+<wsp:rsid wsp:val="009A3853"/>
+<wsp:rsid wsp:val="009A592E"/>
+<wsp:rsid wsp:val="009A643F"/>
+<wsp:rsid wsp:val="009A7CB2"/>
+<wsp:rsid wsp:val="009A7E70"/>
+<wsp:rsid wsp:val="009B40F7"/>
+<wsp:rsid wsp:val="009B4B80"/>
+<wsp:rsid wsp:val="009B5120"/>
+<wsp:rsid wsp:val="009B5720"/>
+<wsp:rsid wsp:val="009B7AF2"/>
+<wsp:rsid wsp:val="009C2601"/>
+<wsp:rsid wsp:val="009C4104"/>
+<wsp:rsid wsp:val="009D119F"/>
+<wsp:rsid wsp:val="009D29C2"/>
+<wsp:rsid wsp:val="009D72DD"/>
+<wsp:rsid wsp:val="009D78B2"/>
+<wsp:rsid wsp:val="009E699E"/>
+<wsp:rsid wsp:val="009E75FA"/>
+<wsp:rsid wsp:val="009F0CD3"/>
+<wsp:rsid wsp:val="009F299E"/>
+<wsp:rsid wsp:val="00A01E60"/>
+<wsp:rsid wsp:val="00A027A2"/>
+<wsp:rsid wsp:val="00A04645"/>
+<wsp:rsid wsp:val="00A049F0"/>
+<wsp:rsid wsp:val="00A06B25"/>
+<wsp:rsid wsp:val="00A10EA5"/>
+<wsp:rsid wsp:val="00A11532"/>
+<wsp:rsid wsp:val="00A15FCA"/>
+<wsp:rsid wsp:val="00A212BF"/>
+<wsp:rsid wsp:val="00A2131D"/>
+<wsp:rsid wsp:val="00A23747"/>
+<wsp:rsid wsp:val="00A326D4"/>
+<wsp:rsid wsp:val="00A33123"/>
+<wsp:rsid wsp:val="00A349C2"/>
+<wsp:rsid wsp:val="00A357D4"/>
+<wsp:rsid wsp:val="00A35C9E"/>
+<wsp:rsid wsp:val="00A40BB5"/>
+<wsp:rsid wsp:val="00A45A3F"/>
+<wsp:rsid wsp:val="00A470C5"/>
+<wsp:rsid wsp:val="00A537BF"/>
+<wsp:rsid wsp:val="00A56AAE"/>
+<wsp:rsid wsp:val="00A571D4"/>
+<wsp:rsid wsp:val="00A66613"/>
+<wsp:rsid wsp:val="00A722C1"/>
+<wsp:rsid wsp:val="00A75301"/>
+<wsp:rsid wsp:val="00A81E13"/>
+<wsp:rsid wsp:val="00A82D47"/>
+<wsp:rsid wsp:val="00A84A8E"/>
+<wsp:rsid wsp:val="00A8799A"/>
+<wsp:rsid wsp:val="00A94B1D"/>
+<wsp:rsid wsp:val="00A970DE"/>
+<wsp:rsid wsp:val="00AA0CB3"/>
+<wsp:rsid wsp:val="00AA2D17"/>
+<wsp:rsid wsp:val="00AB4AE0"/>
+<wsp:rsid wsp:val="00AB5D82"/>
+<wsp:rsid wsp:val="00AB7000"/>
+<wsp:rsid wsp:val="00AC293D"/>
+<wsp:rsid wsp:val="00AD5B6D"/>
+<wsp:rsid wsp:val="00AE0267"/>
+<wsp:rsid wsp:val="00AE07D0"/>
+<wsp:rsid wsp:val="00AE161B"/>
+<wsp:rsid wsp:val="00AE2DD8"/>
+<wsp:rsid wsp:val="00AE422A"/>
+<wsp:rsid wsp:val="00AE4E45"/>
+<wsp:rsid wsp:val="00AF1837"/>
+<wsp:rsid wsp:val="00AF7A16"/>
+<wsp:rsid wsp:val="00B02EA4"/>
+<wsp:rsid wsp:val="00B04C50"/>
+<wsp:rsid wsp:val="00B04EF8"/>
+<wsp:rsid wsp:val="00B065AA"/>
+<wsp:rsid wsp:val="00B1229A"/>
+<wsp:rsid wsp:val="00B13B06"/>
+<wsp:rsid wsp:val="00B223FC"/>
+<wsp:rsid wsp:val="00B22E33"/>
+<wsp:rsid wsp:val="00B241D8"/>
+<wsp:rsid wsp:val="00B2423D"/>
+<wsp:rsid wsp:val="00B3135D"/>
+<wsp:rsid wsp:val="00B37B54"/>
+<wsp:rsid wsp:val="00B406F5"/>
+<wsp:rsid wsp:val="00B41CEA"/>
+<wsp:rsid wsp:val="00B42159"/>
+<wsp:rsid wsp:val="00B55C9D"/>
+<wsp:rsid wsp:val="00B56C27"/>
+<wsp:rsid wsp:val="00B61DF8"/>
+<wsp:rsid wsp:val="00B62B3D"/>
+<wsp:rsid wsp:val="00B62D44"/>
+<wsp:rsid wsp:val="00B64574"/>
+<wsp:rsid wsp:val="00B67C32"/>
+<wsp:rsid wsp:val="00B716CB"/>
+<wsp:rsid wsp:val="00B75D0A"/>
+<wsp:rsid wsp:val="00B82188"/>
+<wsp:rsid wsp:val="00B827B8"/>
+<wsp:rsid wsp:val="00B847F6"/>
+<wsp:rsid wsp:val="00B90549"/>
+<wsp:rsid wsp:val="00B95243"/>
+<wsp:rsid wsp:val="00B95515"/>
+<wsp:rsid wsp:val="00B96B06"/>
+<wsp:rsid wsp:val="00BA392F"/>
+<wsp:rsid wsp:val="00BA6157"/>
+<wsp:rsid wsp:val="00BB6C13"/>
+<wsp:rsid wsp:val="00BC2FF5"/>
+<wsp:rsid wsp:val="00BC439C"/>
+<wsp:rsid wsp:val="00BC6ADA"/>
+<wsp:rsid wsp:val="00BE0024"/>
+<wsp:rsid wsp:val="00BE3160"/>
+<wsp:rsid wsp:val="00C012FC"/>
+<wsp:rsid wsp:val="00C115CF"/>
+<wsp:rsid wsp:val="00C146D8"/>
+<wsp:rsid wsp:val="00C16CE6"/>
+<wsp:rsid wsp:val="00C22FD7"/>
+<wsp:rsid wsp:val="00C3225C"/>
+<wsp:rsid wsp:val="00C36F3C"/>
+<wsp:rsid wsp:val="00C42524"/>
+<wsp:rsid wsp:val="00C51B79"/>
+<wsp:rsid wsp:val="00C5244A"/>
+<wsp:rsid wsp:val="00C61844"/>
+<wsp:rsid wsp:val="00C7052A"/>
+<wsp:rsid wsp:val="00C71197"/>
+<wsp:rsid wsp:val="00C77FE1"/>
+<wsp:rsid wsp:val="00C840FC"/>
+<wsp:rsid wsp:val="00C8459D"/>
+<wsp:rsid wsp:val="00C8535E"/>
+<wsp:rsid wsp:val="00C862C5"/>
+<wsp:rsid wsp:val="00C87207"/>
+<wsp:rsid wsp:val="00C92E3F"/>
+<wsp:rsid wsp:val="00C94C32"/>
+<wsp:rsid wsp:val="00C952AC"/>
+<wsp:rsid wsp:val="00C97B0A"/>
+<wsp:rsid wsp:val="00CA0956"/>
+<wsp:rsid wsp:val="00CA400A"/>
+<wsp:rsid wsp:val="00CA558D"/>
+<wsp:rsid wsp:val="00CA6391"/>
+<wsp:rsid wsp:val="00CB18C1"/>
+<wsp:rsid wsp:val="00CB62D8"/>
+<wsp:rsid wsp:val="00CB69F5"/>
+<wsp:rsid wsp:val="00CB734F"/>
+<wsp:rsid wsp:val="00CC2117"/>
+<wsp:rsid wsp:val="00CC367B"/>
+<wsp:rsid wsp:val="00CC51DC"/>
+<wsp:rsid wsp:val="00CD0820"/>
+<wsp:rsid wsp:val="00CD2A3F"/>
+<wsp:rsid wsp:val="00CD6DDA"/>
+<wsp:rsid wsp:val="00CD71C6"/>
+<wsp:rsid wsp:val="00CD743D"/>
+<wsp:rsid wsp:val="00CE0871"/>
+<wsp:rsid wsp:val="00CE5A27"/>
+<wsp:rsid wsp:val="00CE6554"/>
+<wsp:rsid wsp:val="00CF0A4D"/>
+<wsp:rsid wsp:val="00CF2CA9"/>
+<wsp:rsid wsp:val="00CF2EFE"/>
+<wsp:rsid wsp:val="00CF361A"/>
+<wsp:rsid wsp:val="00CF46EB"/>
+<wsp:rsid wsp:val="00CF5623"/>
+<wsp:rsid wsp:val="00D01D68"/>
+<wsp:rsid wsp:val="00D078EF"/>
+<wsp:rsid wsp:val="00D07A80"/>
+<wsp:rsid wsp:val="00D07AF9"/>
+<wsp:rsid wsp:val="00D12D0D"/>
+<wsp:rsid wsp:val="00D17F27"/>
+<wsp:rsid wsp:val="00D23556"/>
+<wsp:rsid wsp:val="00D269E0"/>
+<wsp:rsid wsp:val="00D33943"/>
+<wsp:rsid wsp:val="00D41268"/>
+<wsp:rsid wsp:val="00D51817"/>
+<wsp:rsid wsp:val="00D6462F"/>
+<wsp:rsid wsp:val="00D676D6"/>
+<wsp:rsid wsp:val="00D71CCE"/>
+<wsp:rsid wsp:val="00D7525E"/>
+<wsp:rsid wsp:val="00D82AC6"/>
+<wsp:rsid wsp:val="00D91ED8"/>
+<wsp:rsid wsp:val="00D91FD1"/>
+<wsp:rsid wsp:val="00D92BC9"/>
+<wsp:rsid wsp:val="00D93E87"/>
+<wsp:rsid wsp:val="00D9652B"/>
+<wsp:rsid wsp:val="00D965A8"/>
+<wsp:rsid wsp:val="00D976A5"/>
+<wsp:rsid wsp:val="00DA0694"/>
+<wsp:rsid wsp:val="00DC1F06"/>
+<wsp:rsid wsp:val="00DE7982"/>
+<wsp:rsid wsp:val="00DF2318"/>
+<wsp:rsid wsp:val="00E01D88"/>
+<wsp:rsid wsp:val="00E039E7"/>
+<wsp:rsid wsp:val="00E046D4"/>
+<wsp:rsid wsp:val="00E111AF"/>
+<wsp:rsid wsp:val="00E15F94"/>
+<wsp:rsid wsp:val="00E200B8"/>
+<wsp:rsid wsp:val="00E22537"/>
+<wsp:rsid wsp:val="00E23171"/>
+<wsp:rsid wsp:val="00E31EF6"/>
+<wsp:rsid wsp:val="00E37A71"/>
+<wsp:rsid wsp:val="00E51EF6"/>
+<wsp:rsid wsp:val="00E55AD3"/>
+<wsp:rsid wsp:val="00E56838"/>
+<wsp:rsid wsp:val="00E63AC6"/>
+<wsp:rsid wsp:val="00E6438B"/>
+<wsp:rsid wsp:val="00E64F76"/>
+<wsp:rsid wsp:val="00E670D2"/>
+<wsp:rsid wsp:val="00E670DA"/>
+<wsp:rsid wsp:val="00E72B01"/>
+<wsp:rsid wsp:val="00E810BC"/>
+<wsp:rsid wsp:val="00E827E6"/>
+<wsp:rsid wsp:val="00E87DCA"/>
+<wsp:rsid wsp:val="00E92E8A"/>
+<wsp:rsid wsp:val="00E94899"/>
+<wsp:rsid wsp:val="00EA6AF5"/>
+<wsp:rsid wsp:val="00EA7A0F"/>
+<wsp:rsid wsp:val="00EB6090"/>
+<wsp:rsid wsp:val="00EC1DF9"/>
+<wsp:rsid wsp:val="00EC4271"/>
+<wsp:rsid wsp:val="00ED36A8"/>
+<wsp:rsid wsp:val="00ED36B7"/>
+<wsp:rsid wsp:val="00ED4571"/>
+<wsp:rsid wsp:val="00ED6348"/>
+<wsp:rsid wsp:val="00EE106D"/>
+<wsp:rsid wsp:val="00EF01F9"/>
+<wsp:rsid wsp:val="00EF3B6B"/>
+<wsp:rsid wsp:val="00EF5680"/>
+<wsp:rsid wsp:val="00F0048A"/>
+<wsp:rsid wsp:val="00F0129D"/>
+<wsp:rsid wsp:val="00F06304"/>
+<wsp:rsid wsp:val="00F07AAE"/>
+<wsp:rsid wsp:val="00F10924"/>
+<wsp:rsid wsp:val="00F13755"/>
+<wsp:rsid wsp:val="00F13B53"/>
+<wsp:rsid wsp:val="00F266A1"/>
+<wsp:rsid wsp:val="00F268AA"/>
+<wsp:rsid wsp:val="00F409C3"/>
+<wsp:rsid wsp:val="00F447A6"/>
+<wsp:rsid wsp:val="00F5424D"/>
+<wsp:rsid wsp:val="00F55961"/>
+<wsp:rsid wsp:val="00F5767F"/>
+<wsp:rsid wsp:val="00F600E8"/>
+<wsp:rsid wsp:val="00F62BD0"/>
+<wsp:rsid wsp:val="00F72C0E"/>
+<wsp:rsid wsp:val="00F72C66"/>
+<wsp:rsid wsp:val="00F76795"/>
+<wsp:rsid wsp:val="00F80E72"/>
+<wsp:rsid wsp:val="00F900D5"/>
+<wsp:rsid wsp:val="00F91DC2"/>
+<wsp:rsid wsp:val="00F928EA"/>
+<wsp:rsid wsp:val="00F92965"/>
+<wsp:rsid wsp:val="00F92A99"/>
+<wsp:rsid wsp:val="00F93322"/>
+<wsp:rsid wsp:val="00F94B81"/>
+<wsp:rsid wsp:val="00FA0A2E"/>
+<wsp:rsid wsp:val="00FA3086"/>
+<wsp:rsid wsp:val="00FA387A"/>
+<wsp:rsid wsp:val="00FA4AE4"/>
+<wsp:rsid wsp:val="00FA5605"/>
+<wsp:rsid wsp:val="00FB3173"/>
+<wsp:rsid wsp:val="00FB7969"/>
+<wsp:rsid wsp:val="00FC52A2"/>
+<wsp:rsid wsp:val="00FD1EED"/>
+<wsp:rsid wsp:val="00FD3E3C"/>
+<wsp:rsid wsp:val="00FD3FE9"/>
+<wsp:rsid wsp:val="00FD435A"/>
+<wsp:rsid wsp:val="00FD65E7"/>
+<wsp:rsid wsp:val="00FE0258"/>
+<wsp:rsid wsp:val="00FE0B19"/>
+<wsp:rsid wsp:val="00FE1932"/>
+<wsp:rsid wsp:val="00FE1CF6"/>
+<wsp:rsid wsp:val="00FE6EF5"/>
+<wsp:rsid wsp:val="00FF02AA"/>
+<wsp:rsid wsp:val="00FF29F4"/>
+<wsp:rsid wsp:val="00FF41DF"/>
+<wsp:rsid wsp:val="00FF6D0C"/>
+</wsp:rsids>
+</w:docPr>
+<w:body>
+<w:p wsp:rsidR="0028700E" wsp:rsidRPr="00CA0956" wsp:rsidRDefault="0028700E" wsp:rsidP="000D1861">
+<w:pPr>
+<w:spacing w:before-lines="100" w:after-lines="50"/>
+<w:ind w:first-line-chars="150" w:first-line="660"/>
+<w:rPr>
+<w:rFonts w:ascii="文鼎CS长宋" w:fareast="黑体"/>
+<wx:font wx:val="文鼎CS长宋"/>
+<w:sz w:val="44"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="00CA0956">
+<w:rPr>
+<w:rFonts w:ascii="文鼎CS长宋" w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:sz w:val="44"/>
+</w:rPr>
+<w:t>关于给予</w:t>
+</w:r>
+<w:r wsp:rsidRPr="00CA0956">
+<w:rPr>
+<w:rFonts w:ascii="文鼎CS长宋" w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="文鼎CS长宋"/>
+<w:sz w:val="44"/>
+</w:rPr>
+<w:t>${xm!}</w:t>
+</w:r>
+<w:r wsp:rsidRPr="00CA0956">
+<w:rPr>
+<w:rFonts w:ascii="文鼎CS长宋" w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:sz w:val="44"/>
+</w:rPr>
+<w:t>同学</w:t>
+</w:r>
+<w:r wsp:rsidRPr="00CA0956">
+<w:rPr>
+<w:rFonts w:ascii="文鼎CS长宋" w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="文鼎CS长宋"/>
+<w:sz w:val="44"/>
+</w:rPr>
+<w:t>${cflbmc!}</w:t>
+</w:r>
+<w:r wsp:rsidRPr="00CA0956">
+<w:rPr>
+<w:rFonts w:ascii="文鼎CS长宋" w:fareast="黑体" w:hint="fareast"/>
+<wx:font wx:val="黑体"/>
+<w:sz w:val="44"/>
+</w:rPr>
+<w:t>的意见</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="0028700E" wsp:rsidRPr="00CA0956" wsp:rsidRDefault="0028700E" wsp:rsidP="0028700E">
+<w:pPr>
+<w:rPr>
+<w:rFonts w:ascii="微软雅黑" w:h-ansi="微软雅黑" w:cs="宋体"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="00CA0956">
+<w:rPr>
+<w:rFonts w:ascii="微软雅黑" w:h-ansi="微软雅黑" w:cs="宋体" w:hint="fareast"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${xm!}，${xb!}，${csrq!}出生，${mzmc!}，${jgmc!}人，${zzmmmc!}，我院(校)${xymc!}系(学院</w:t>
+</w:r>
+<w:r wsp:rsidR="000D1861">
+<w:rPr>
+<w:rFonts w:ascii="微软雅黑" w:h-ansi="微软雅黑" w:cs="宋体" w:hint="fareast"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>)${zymc!}</w:t>
+</w:r>
+<w:r wsp:rsidRPr="00CA0956">
+<w:rPr>
+<w:rFonts w:ascii="微软雅黑" w:h-ansi="微软雅黑" w:cs="宋体" w:hint="fareast"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${bjmc!}学生，学号${xh!}，身份证号${sfzh!}。</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="0028700E" wsp:rsidRPr="00CA0956" wsp:rsidRDefault="0028700E" wsp:rsidP="0028700E">
+<w:pPr>
+<w:rPr>
+<w:rFonts w:ascii="微软雅黑" w:h-ansi="微软雅黑" w:cs="宋体"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="00CA0956">
+<w:rPr>
+<w:rFonts w:ascii="微软雅黑" w:h-ansi="微软雅黑" w:hint="fareast"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${wjssjg!}</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="0028700E" wsp:rsidRPr="00CA0956" wsp:rsidRDefault="0028700E" wsp:rsidP="0028700E">
+<w:pPr>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:cs="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz-cs w:val="32"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="00CA0956">
+<w:rPr>
+<w:rFonts w:ascii="微软雅黑" w:h-ansi="微软雅黑"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${cfyj!}</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="0028700E" wsp:rsidRDefault="0028700E" wsp:rsidP="00AE161B">
+<w:pPr>
+<w:jc w:val="right"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:cs="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:cs="宋体" w:hint="fareast"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>河北工业大学</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:cs="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>${xymc!}</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:cs="宋体" w:hint="fareast"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>学院</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:cs="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>(</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:cs="宋体" w:hint="fareast"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>章</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:cs="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="30"/>
+<w:sz-cs w:val="30"/>
+</w:rPr>
+<w:t>)</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="0028700E" wsp:rsidRDefault="0028700E" wsp:rsidP="0028700E">
+<w:pPr>
+<w:spacing w:line="560" w:line-rule="exact"/>
+<w:ind w:first-line-chars="2650" w:first-line="5830"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体"/>
+<wx:font wx:val="仿宋_GB2312"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:h-ansi="宋体" w:hint="fareast"/>
+<wx:font wx:val="仿宋_GB2312"/>
+</w:rPr>
+<w:t>${nowTime!}</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="0028700E" wsp:rsidRDefault="0028700E" wsp:rsidP="000D1861">
+<w:pPr>
+<w:spacing w:before-lines="50" w:after-lines="50"/>
+<w:ind w:first-line="560"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:sz w:val="28"/>
+<w:sz-cs w:val="28"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312" w:hint="fareast"/>
+<wx:font wx:val="微软雅黑"/>
+<w:sz w:val="28"/>
+<w:sz-cs w:val="28"/>
+</w:rPr>
+<w:t>院长签字：</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="0028700E" wsp:rsidRDefault="0028700E" wsp:rsidP="000D1861">
+<w:pPr>
+<w:spacing w:before-lines="50" w:after-lines="50"/>
+<w:ind w:first-line="422"/>
+<w:rPr>
+<w:rFonts w:ascii="仿宋_GB2312"/>
+<wx:font wx:val="仿宋_GB2312"/>
+<w:b/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="00A537BF" wsp:rsidRDefault="00A537BF"/>
+<w:sectPr wsp:rsidR="00A537BF" wsp:rsidSect="00A537BF">
+<w:pgSz w:w="11906" w:h="16838"/>
+<w:pgMar w:top="1440" w:right="1800" w:bottom="1440" w:left="1800" w:header="851" w:footer="992" w:gutter="0"/>
+<w:cols w:space="425"/>
+<w:docGrid w:type="lines" w:line-pitch="312"/>
+</w:sectPr>
+</w:body>
+</w:wordDocument>

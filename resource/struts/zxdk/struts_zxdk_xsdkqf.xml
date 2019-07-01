@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="xsdkqfForm" type="com.zfsoft.xgxt.zxdk.xsdkqf.XsdkqfForm">
+		</form-bean>
+	</form-beans>
+	<action-mappings>	
+		<!-- 展现路径 -->
+		<action path="/zxdk_hkcx_xsdkqf" forward="/zxdk_xsdkqf.do?method=getXsdkqfList"></action><!-- 查询结果页面 -->
+		<!-- 实际路径 -->	
+		<action name="xsdkqfForm" 
+				parameter="method" 
+				path="/zxdk_xsdkqf"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.xsdkqf.XsdkqfAction">
+			<forward name="getXsdkqfList" path="/xsgzgl/zxdk/xsdkqf/xsdkqfList.jsp" /><!-- 查询结果页面  -->
+		</action>
+	</action-mappings>
+</struts-config>

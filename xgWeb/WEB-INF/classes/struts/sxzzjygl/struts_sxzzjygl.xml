@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+
+    <form-beans>
+                                 <!-- 班级学风建设 -->
+        <!-- 班级学风建设-基础设置-->
+        <form-bean name="BjxfjsjcszForm" type="com.zfsoft.xgxt.sxzzjy.bjxfjs.bjxfjsjcsz.BjxfjsjcszForm" />
+        <!-- 班级学风建设申请-->
+        <form-bean name="BjxfjssqForm" type="com.zfsoft.xgxt.sxzzjy.bjxfjs.bjxfjssq.BjxfjssqForm" />
+        <!-- 班级学风建设审核-->
+        <form-bean name="BjxfjsshForm" type="com.zfsoft.xgxt.sxzzjy.bjxfjs.bjxfjssh.BjxfjsshForm" />
+        <!-- 班级学风建设审核-->
+        <form-bean name="BjxfjsjgForm" type="com.zfsoft.xgxt.sxzzjy.bjxfjs.bjxfjsjg.BjxfjsjgForm" />
+        <!-- 班级学风建设汇报-->
+        <form-bean name="BjxfjshbForm" type="com.zfsoft.xgxt.sxzzjy.bjxfjs.bjxfjshb.BjxfjshbForm" />
+
+                                 <!-- 班级学风建设end-->
+
+                                 <!-- 个人学风建设 -->
+        <!-- 个人学风建设-基础设置-->
+        <form-bean name="GrxfjsjcszForm" type="com.zfsoft.xgxt.sxzzjy.grxfjs.grxfjsjcsz.GrxfjsjcszForm" />
+        <!-- 个人学风建设申请-->
+        <form-bean name="GrxfjssqForm" type="com.zfsoft.xgxt.sxzzjy.grxfjs.grxfjssq.GrxfjssqForm" />
+        <!-- 个人学风建设审核-->
+        <form-bean name="GrxfjsshForm" type="com.zfsoft.xgxt.sxzzjy.grxfjs.grxfjssh.GrxfjsshForm" />
+        <!-- 个人学风建设审核-->
+        <form-bean name="GrxfjsjgForm" type="com.zfsoft.xgxt.sxzzjy.grxfjs.grxfjsjg.GrxfjsjgForm" />
+        <!-- 个人学风建设汇报-->
+        <form-bean name="GrxfjshbForm" type="com.zfsoft.xgxt.sxzzjy.grxfjs.grxfjshb.GrxfjshbForm" />
+
+                                 <!-- 个人学风建设end-->
+
+        <!--主题班会和班级活动-->
+        <!--主题班会基础设置-->
+        <form-bean name="ZtbhjcszForm" type="com.zfsoft.xgxt.sxzzjygl.ztbhgl.ZtbhjcszForm" />
+        <!--主题班会申请-->
+        <form-bean name="ZtbhSqForm" type="com.zfsoft.xgxt.sxzzjygl.ztbhgl.ZtbhSqForm" />
+        <!--主题班会审核-->
+        <form-bean name="ZtbhShForm" type="com.zfsoft.xgxt.sxzzjygl.ztbhgl.ZtbhShForm" />
+        <!--主题班会结果-->
+        <form-bean name="ZtbhJgForm" type="com.zfsoft.xgxt.sxzzjygl.ztbhgl.ZtbhJgForm" />
+        <form-bean name="bzrztbhJgForm" type="com.zfsoft.xgxt.sxzzjygl.bzrztbh.ZtbhJgForm" />
+
+        <!--班级活动基础设置-->
+        <form-bean name="BjhdjcszForm" type="com.zfsoft.xgxt.sxzzjygl.bjhdgl.BjhdjcszForm" />
+        <!--班级活动申请-->
+        <form-bean name="BjhdSqForm" type="com.zfsoft.xgxt.sxzzjygl.bjhdgl.BjhdSqForm" />
+        <!--班级活动结果-->
+        <form-bean name="BjhdJgForm" type="com.zfsoft.xgxt.sxzzjygl.bjhdgl.BjhdJgForm" />
+        <!--班级活动审核-->
+        <form-bean name="BjhdShForm" type="com.zfsoft.xgxt.sxzzjygl.bjhdgl.BjhdShForm" />
+        <!--班级文化互动专区-->
+        <form-bean name="BjwhhdForm" type="com.zfsoft.xgxt.sxzzjygl.bjwhhdzq.BjwhhdForm" />
+        <!--学校无课情况-->
+        <form-bean name="XxwktjForm" type="com.zfsoft.xgxt.sxzzjygl.xxwkqk.XxwktjForm" />
+
+
+                                    <!--明星榜中榜-->
+        <!--校园明星榜中榜管理-->
+        <form-bean name="XymxbzbglForm" type="com.zfsoft.xgxt.sxzzjy.mxbzb.xymxbzbgl.XymxbzbglForm" />
+
+    </form-beans>
+
+    <action-mappings>
+                                    <!-- 班级学风建设 -->
+        <!-- 班级学风建设基础设置-->
+        <action path="/sxzzjy_bjxfjs_jcsz" forward="/sxzzjy_jcsz.do?method=bjxfjsJcsz"/>
+
+        <action path="/sxzzjy_jcsz" scope="request"
+                type="com.zfsoft.xgxt.sxzzjy.bjxfjs.bjxfjsjcsz.BjxfjsjcszAction" name="BjxfjsjcszForm"
+                parameter="method">
+            <forward name="bjxfjsJcsz" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjsjcsz/bjxfjsJcsz.jsp" />
+        </action>
+
+        <!-- 班级学风建设申请-->
+        <action path="/sxzzjy_bjxfjs_bjxfjssq" forward="/sxzzjy_bjxfjssq.do?method=getList"/>
+
+        <action path="/sxzzjy_bjxfjssq" scope="request"
+                type="com.zfsoft.xgxt.sxzzjy.bjxfjs.bjxfjssq.BjxfjssqAction" name="BjxfjssqForm"
+                parameter="method">
+            <forward name="bjxfjssqList" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjssq/bjxfjssqList.jsp" />
+            <forward name="bjxfjssqAdd" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjssq/bjxfjssqAdd.jsp" />
+            <forward name="bjxfjssqUpdate" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjssq/bjxfjssqUpdate.jsp" />
+            <forward name="bjxfjssqView" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjssq/bjxfjssqView.jsp" />
+            <forward name="selectBj" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjssq/selectBj.jsp" />
+        </action>
+
+        <!-- 班级学风建设审核-->
+        <action path="/sxzzjy_bjxfjs_bjxfjssh" forward="/sxzzjy_bjxfjssh.do?method=getList"/>
+
+        <action path="/sxzzjy_bjxfjssh" scope="request"
+                type="com.zfsoft.xgxt.sxzzjy.bjxfjs.bjxfjssh.BjxfjsshAction" name="BjxfjsshForm"
+                parameter="method">
+            <forward name="bjxfjsshList" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjssh/bjxfjsshList.jsp" />
+            <forward name="bjxfjsSh" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjssh/bjxfjsSh.jsp" />
+            <forward name="bjxfjsPlsh" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjssh/bjxfjsPlsh.jsp" />
+        </action>
+
+        <!-- 班级学风建设结果-->
+        <action path="/sxzzjy_bjxfjs_bjxfjsjg" forward="/sxzzjy_bjxfjsjg.do?method=getList"/>
+
+        <action path="/sxzzjy_bjxfjsjg" scope="request"
+                type="com.zfsoft.xgxt.sxzzjy.bjxfjs.bjxfjsjg.BjxfjsjgAction" name="BjxfjsjgForm"
+                parameter="method">
+            <forward name="bjxfjsjgList" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjsjg/bjxfjsjgList.jsp" />
+            <forward name="bjxfjsjgAdd" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjsjg/bjxfjsjgAdd.jsp" />
+            <forward name="bjxfjsjgUpdate" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjsjg/bjxfjsjgUpdate.jsp" />
+            <forward name="bjxfjsjgView" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjsjg/bjxfjsjgView.jsp" />
+            <forward name="selectBj" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjsjg/selectBj.jsp" />
+        </action>
+
+        <!-- 班级学风建设汇报-->
+        <action path="/sxzzjy_bjxfjs_bjxfjshb" forward="/sxzzjy_bjxfjshb.do?method=getList"/>
+
+        <action path="/sxzzjy_bjxfjshb" scope="request"
+                type="com.zfsoft.xgxt.sxzzjy.bjxfjs.bjxfjshb.BjxfjshbAction" name="BjxfjshbForm"
+                parameter="method">
+            <forward name="bjxfjshbList" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjshb/bjxfjshbList.jsp" />
+            <forward name="bjxfjshbAdd" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjshb/bjxfjshbAdd.jsp" />
+            <forward name="bjxfjshbUpdate" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjshb/bjxfjshbUpdate.jsp" />
+            <forward name="bjxfjshbView" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjshb/bjxfjshbView.jsp" />
+            <forward name="selectHblx" path="/xsgzgl/sxzzjygl/bjxfjs/bjxfjshb/selectHblx.jsp" />
+        </action>
+                                    <!-- 班级学风建设end-->
+
+                                    <!-- 个人学风建设 -->
+        <!-- 个人学风建设基础设置-->
+        <action path="/sxzzjy_grxfjs_jcsz" forward="/sxzzjy_grjcsz.do?method=grxfjsJcsz"/>
+
+        <action path="/sxzzjy_grjcsz" scope="request"
+                type="com.zfsoft.xgxt.sxzzjy.grxfjs.grxfjsjcsz.GrxfjsjcszAction" name="GrxfjsjcszForm"
+                parameter="method">
+            <forward name="grxfjsJcsz" path="/xsgzgl/sxzzjygl/grxfjs/grxfjsjcsz/grxfjsJcsz.jsp" />
+        </action>
+
+        <!-- 个人学风建设申请-->
+        <action path="/sxzzjy_grxfjs_grxfjssq" forward="/sxzzjy_grxfjssq.do?method=getList"/>
+
+        <action path="/sxzzjy_grxfjssq" scope="request"
+                type="com.zfsoft.xgxt.sxzzjy.grxfjs.grxfjssq.GrxfjssqAction" name="GrxfjssqForm"
+                parameter="method">
+            <forward name="grxfjssqList" path="/xsgzgl/sxzzjygl/grxfjs/grxfjssq/grxfjssqList.jsp" />
+            <forward name="grxfjssqAdd" path="/xsgzgl/sxzzjygl/grxfjs/grxfjssq/grxfjssqAdd.jsp" />
+            <forward name="grxfjssqUpdate" path="/xsgzgl/sxzzjygl/grxfjs/grxfjssq/grxfjssqUpdate.jsp" />
+            <forward name="grxfjssqView" path="/xsgzgl/sxzzjygl/grxfjs/grxfjssq/grxfjssqView.jsp" />
+        </action>
+
+        <!-- 个人学风建设审核-->
+        <action path="/sxzzjy_grxfjs_grxfjssh" forward="/sxzzjy_grxfjssh.do?method=getList"/>
+
+        <action path="/sxzzjy_grxfjssh" scope="request"
+                type="com.zfsoft.xgxt.sxzzjy.grxfjs.grxfjssh.GrxfjsshAction" name="GrxfjsshForm"
+                parameter="method">
+            <forward name="grxfjsshList" path="/xsgzgl/sxzzjygl/grxfjs/grxfjssh/grxfjsshList.jsp" />
+            <forward name="grxfjsSh" path="/xsgzgl/sxzzjygl/grxfjs/grxfjssh/grxfjsSh.jsp" />
+            <forward name="grxfjsPlsh" path="/xsgzgl/sxzzjygl/grxfjs/grxfjssh/grxfjsPlsh.jsp" />
+        </action>
+
+        <!-- 个人学风建设结果-->
+        <action path="/sxzzjy_grxfjs_grxfjsjg" forward="/sxzzjy_grxfjsjg.do?method=getList"/>
+
+        <action path="/sxzzjy_grxfjsjg" scope="request"
+                    type="com.zfsoft.xgxt.sxzzjy.grxfjs.grxfjsjg.GrxfjsjgAction" name="GrxfjsjgForm"
+                parameter="method">
+            <forward name="grxfjsjgList" path="/xsgzgl/sxzzjygl/grxfjs/grxfjsjg/grxfjsjgList.jsp" />
+            <forward name="grxfjsjgAdd" path="/xsgzgl/sxzzjygl/grxfjs/grxfjsjg/grxfjsjgAdd.jsp" />
+            <forward name="grxfjsjgUpdate" path="/xsgzgl/sxzzjygl/grxfjs/grxfjsjg/grxfjsjgUpdate.jsp" />
+            <forward name="grxfjsjgView" path="/xsgzgl/sxzzjygl/grxfjs/grxfjsjg/grxfjsjgView.jsp" />
+        </action>
+        <!-- 个人学风建设汇报-->
+        <action path="/sxzzjy_grxfjs_grxfjshb" forward="/sxzzjy_grxfjshb.do?method=getList"/>
+
+        <action path="/sxzzjy_grxfjshb" scope="request"
+                type="com.zfsoft.xgxt.sxzzjy.grxfjs.grxfjshb.GrxfjshbAction" name="GrxfjshbForm"
+                parameter="method">
+            <forward name="grxfjshbList" path="/xsgzgl/sxzzjygl/grxfjs/grxfjshb/grxfjshbList.jsp" />
+            <forward name="grxfjshbAdd" path="/xsgzgl/sxzzjygl/grxfjs/grxfjshb/grxfjshbAdd.jsp" />
+            <forward name="grxfjshbUpdate" path="/xsgzgl/sxzzjygl/grxfjs/grxfjshb/grxfjshbUpdate.jsp" />
+            <forward name="grxfjshbView" path="/xsgzgl/sxzzjygl/grxfjs/grxfjshb/grxfjshbView.jsp" />
+            <forward name="selectHblx" path="/xsgzgl/sxzzjygl/grxfjs/grxfjshb/selectHblx.jsp" />
+        </action>
+
+                                 <!-- 个人学风建设end-->
+        <!-- 主题班会基础设置-->
+        <action path="/sxzzjy_ztbhgl_jcsz" forward="/ztbhgl_ztbhjcsz.do?method=ztbhJcsz"/>
+        <action path="/ztbhgl_ztbhjcsz" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.ztbhgl.ZtbhjcszAction"
+                name="ZtbhjcszForm"
+                parameter="method">
+            <forward name="ztbhJcsz" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhjcsz/ztbhJcsz.jsp" />
+        </action>
+        <!-- 主题班会申请-->
+        <action path="/sxzzjy_ztbhgl_ztbhsq" forward="/ztbhgl_ztbhsq.do?method=ztbhSq"/>
+        <action path="/ztbhgl_ztbhsq" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.ztbhgl.ZtbhSqAction"
+                name="ZtbhSqForm"
+                parameter="method">
+            <forward name="ztbhSq" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhsq/ztbhSqList.jsp" />
+            <forward name="ztbhSqAdd" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhsq/ztbhSq.jsp" />
+            <forward name="getXx" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhsq/getXx.jsp" />
+            <forward name="getBj" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhsq/getBj.jsp" />
+            <forward name="ztbhSqEdit" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhsq/ztbhSqEdit.jsp" />
+            <forward name="getHdInfo" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhsq/getHdInfo.jsp" />
+        </action>
+
+        <!-- 主题班会审核-->
+        <action path="/sxzzjy_ztbhgl_ztbhsh" forward="/ztbhgl_ztbhsh.do?method=ztbhSh"/>
+        <action path="/ztbhgl_ztbhsh" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.ztbhgl.ZtbhShAction"
+                name="ZtbhShForm"
+                parameter="method">
+            <forward name="ztbhSh" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhsh/ztbhShList.jsp" />
+            <forward name="ztbhShDgsh" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhsh/ztbhShDgsh.jsp" />
+            <forward name="ztbhShPlsh" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhsh/ztbhShPlsh.jsp" />
+        </action>
+
+
+
+        <!-- 主题班会结果-->
+        <action path="/sxzzjy_ztbhgl_ztbhjg" forward="/ztbhgl_ztbhjg.do?method=ztbhJg"/>
+        <action path="/ztbhgl_ztbhjg" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.ztbhgl.ZtbhJgAction"
+                name="ZtbhJgForm"
+                parameter="method">
+            <forward name="ztbhJg" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhjg/ztbhJgList.jsp" />
+            <forward name="ztbhJgAdd" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhjg/ztbhJgAdd.jsp" />
+            <forward name="getXx" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhjg/getXx.jsp" />
+            <forward name="getBj" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhjg/getBj.jsp" />
+            <forward name="ztbhJgEdit" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhjg/ztbhJgEdit.jsp" />
+            <forward name="ztbhJgUpload" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhjg/ztbhJgUpload.jsp" />
+            <forward name="rdsfxztbh" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhjg/rdsfxztbh.jsp" />
+            <forward name="ztbhJgPlrd" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhjg/plrdsfxztbh.jsp" />
+            <forward name="getHdInfo" path="/xsgzgl/sxzzjygl/ztbhgl/ztbhjg/getHdInfo.jsp" />
+        </action>
+
+        <!--班主任主题班会-->
+        <action path="/sxzzjy_ztbhgl_bzrztbhjg" forward="/ztbhgl_bzrztbhjg.do?method=ztbhJg"/>
+        <action path="/ztbhgl_bzrztbhjg" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.bzrztbh.ZtbhJgAction"
+                name="bzrztbhJgForm"
+                parameter="method">
+            <forward name="ztbhJg" path="/xsgzgl/sxzzjygl/ztbhgl/bzrztbh/ztbhJgList.jsp" />
+            <forward name="ztbhJgAdd" path="/xsgzgl/sxzzjygl/ztbhgl/bzrztbh/ztbhJgAdd.jsp" />
+            <forward name="getXx" path="/xsgzgl/sxzzjygl/ztbhgl/bzrztbh/getXx.jsp" />
+            <forward name="getBj" path="/xsgzgl/sxzzjygl/ztbhgl/bzrztbh/getBj.jsp" />
+            <forward name="ztbhJgEdit" path="/xsgzgl/sxzzjygl/ztbhgl/bzrztbh/ztbhJgEdit.jsp" />
+            <forward name="ztbhJgUpload" path="/xsgzgl/sxzzjygl/ztbhgl/bzrztbh/ztbhJgUpload.jsp" />
+            <forward name="rdsfxztbh" path="/xsgzgl/sxzzjygl/ztbhgl/bzrztbh/rdsfxztbh.jsp" />
+            <forward name="ztbhJgPlrd" path="/xsgzgl/sxzzjygl/ztbhgl/bzrztbh/plrdsfxztbh.jsp" />
+            <forward name="getHdInfo" path="/xsgzgl/sxzzjygl/ztbhgl/bzrztbh/getHdInfo.jsp" />
+        </action>
+
+
+        <!-- 班级活动基础设置-->
+        <action path="/sxzzjy_bjhdgl_jcsz" forward="/bjhdgl_jcsz.do?method=bjhdJcsz"/>
+        <action path="/bjhdgl_jcsz" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.bjhdgl.BjhdjcszAction"
+                name="BjhdjcszForm"
+                parameter="method">
+            <forward name="bjhdJcsz" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdjcsz/bjhdJcsz.jsp" />
+        </action>
+
+
+        <!-- 班级活动申请-->
+        <action path="/sxzzjy_bjhdgl_bjhdsq" forward="/bjhdgl_bjhdsq.do?method=bjhdSq"/>
+        <action path="/bjhdgl_bjhdsq" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.bjhdgl.BjhdSqAction"
+                name="BjhdSqForm"
+                parameter="method">
+            <forward name="bjhdSq" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsq/bjhdSqList.jsp" />
+            <forward name="bjhdSqAdd" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsq/bjhdSqAdd.jsp" />
+            <forward name="getXx" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsq/getXx.jsp" />
+            <forward name="getBj" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsq/getBj.jsp" />
+            <forward name="bjhdSqEdit" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsq/bjhdSqEdit.jsp" />
+            <forward name="getHdInfo" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsq/getHdInfo.jsp" />
+        </action>
+
+
+        <!-- 班级活动结果-->
+        <action path="/sxzzjy_bjhdgl_bjhdjg" forward="/bjhdgl_bjhdjg.do?method=bjhdJg"/>
+        <action path="/bjhdgl_bjhdjg" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.bjhdgl.BjhdJgAction"
+                name="BjhdJgForm"
+                parameter="method">
+            <forward name="bjhdJg" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdjg/bjhdJgList.jsp" />
+            <forward name="bjhdJgAdd" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdjg/bjhdJgAdd.jsp" />
+            <forward name="getXx" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsq/getXx.jsp" />
+            <forward name="getBj" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsq/getBj.jsp" />
+            <forward name="bjhdJgEdit" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdjg/bjhdJgEdit.jsp" />
+            <forward name="bjhdJgUpload" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdjg/bjhdJgUpload.jsp" />
+            <forward name="rdjpbjhd" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdjg/rdjpbjhd.jsp" />
+            <forward name="bjhdJgPlrd" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdjg/plrdjpbjhd.jsp" />
+            <forward name="getHdInfo" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsq/getHdInfo.jsp" />
+        </action>
+
+        <!-- 主题班会审核-->
+        <action path="/sxzzjy_bjhdgl_bjhdsh" forward="/bjhdgl_bjhdsh.do?method=bjhdSh"/>
+        <action path="/bjhdgl_bjhdsh" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.bjhdgl.BjhdShAction"
+                name="BjhdShForm"
+                parameter="method">
+            <forward name="bjhdSh" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsh/bjhdShList.jsp" />
+            <forward name="bjhdShDgsh" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsh/bjhdShDgsh.jsp" />
+            <forward name="bjhdShPlsh" path="/xsgzgl/sxzzjygl/bjhdgl/bjhdsh/bjhdShPlsh.jsp" />
+        </action>
+
+        <!-- 校园明星榜中榜管理-->
+        <action path="/sxzzjy_mxbzb_xymxbzbgl" forward="/sxzzjy_xymxbzbgl.do?method=getList"/>
+        <!-- 校园明星榜中榜-->
+        <action path="/sxzzjy_mxbzb_xymxbzb" forward="/sxzzjy_xymxbzbgl.do?method=xymxbzb"/>
+
+        <action path="/sxzzjy_xymxbzbgl" scope="request"
+                type="com.zfsoft.xgxt.sxzzjy.mxbzb.xymxbzbgl.XymxbzbglAction"
+                name="XymxbzbglForm"
+                parameter="method">
+            <forward name="xymxbzbglList" path="/xsgzgl/sxzzjygl/mxbzb/xymxbzbgl/xymxbzbglList.jsp" />
+            <forward name="xymxbzbglAdd" path="/xsgzgl/sxzzjygl/mxbzb/xymxbzbgl/xymxbzbglAdd.jsp" />
+            <forward name="xymxbzbglUpdate" path="/xsgzgl/sxzzjygl/mxbzb/xymxbzbgl/xymxbzbglUpdate.jsp" />
+            <forward name="xymxbzbglView" path="/xsgzgl/sxzzjygl/mxbzb/xymxbzbgl/xymxbzbglView.jsp" />
+            <forward name="xymxbzb" path="/xsgzgl/sxzzjygl/mxbzb/xymxbzb/xymxbzbManage.jsp" />
+            <forward name="getNewsmore" path="/xsgzgl/sxzzjygl/mxbzb/xymxbzb/getNewsmore.jsp" />
+            <forward name="yydmd" path="/xsgzgl/sxzzjygl/mxbzb/xymxbzbgl/yydmd.jsp" />
+        </action>
+
+        <!-- 班级文化互动专区-->
+        <action path="/sxzzjy_bjwhhdzq_bjwh" forward="/bjwhhdzq_bjwh.do?method=getList"/>
+        <action path="/bjwhhdzq_bjwh" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.bjwhhdzq.BjwhhdAction"
+                name="BjwhhdForm"
+                parameter="method">
+            <forward name="getList" path="/xsgzgl/sxzzjygl/bjwhhdzq/bjwhhdManage.jsp" />
+            <forward name="getNewsmore" path="/xsgzgl/sxzzjygl/bjwhhdzq/getNewsmore.jsp" />
+        </action>
+
+        <!-- 学校无课统计-->
+        <action path="/sxzzjy_xxwkqk_xxwktj" forward="/xxwkqk_xxwktj.do?method=getTjList"/>
+        <action path="/xxwkqk_xxwktj" scope="request"
+                type="com.zfsoft.xgxt.sxzzjygl.xxwkqk.XxwktjAction"
+                name="XxwktjForm"
+                parameter="method">
+            <forward name="getTjList" path="/xsgzgl/sxzzjygl/xxwkqk/xxwktj.jsp" />
+            <forward name="getrqjcInfo" path="/xsgzgl/sxzzjygl/xxwkqk/xyjcrq.jsp" />
+            <forward name="getxyrqInfo" path="/xsgzgl/sxzzjygl/xxwkqk/getxyrqInfo.jsp" />
+        </action>
+
+    </action-mappings>
+</struts-config>

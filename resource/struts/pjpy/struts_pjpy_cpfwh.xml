@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="cpfwhForm" type="com.zfsoft.xgxt.xpjpy.cpfwh.CpfwhForm">
+		</form-bean>
+	</form-beans>
+	<action-mappings>	
+		<!-- 展现路径 -->
+		<action path="/pjpy_cpfwh" forward="/cpfwh_sq.do?method=getCpfwhList"></action><!-- 晨跑分维护查询页面 -->
+		<!-- 实际路径 -->	
+		<action name="cpfwhForm" 
+				parameter="method" 
+				path="/cpfwh_sq"
+				scope="request"	
+				type="com.zfsoft.xgxt.xpjpy.cpfwh.CpfwhAction">
+			<forward name="getCpfwhList" path="/xsgzgl/xpjpy/cpfwh/cpfwhList.jsp" /><!-- 晨跑分维护查询页面  -->
+			<forward name="addCpfwh" path="/xsgzgl/xpjpy/cpfwh/addCpfwh.jsp" /><!-- 晨跑分维护增加  -->
+			<forward name="editCpfwh" path="/xsgzgl/xpjpy/cpfwh/editCpfwh.jsp" /><!-- 晨跑分维护修改  -->
+			<forward name="viewCpfwh" path="/xsgzgl/xpjpy/cpfwh/viewCpfwh.jsp" /><!-- 晨跑分维护查看  -->
+			<forward name="toImportCpfwh" path="/xsgzgl/xpjpy/cpfwh/toImportCpfwh.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

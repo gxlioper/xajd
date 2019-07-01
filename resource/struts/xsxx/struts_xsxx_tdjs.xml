@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<!-- 团队建设 (山东科技 )-->
+	<form-beans>
+    	<form-bean name="tdjsForm" type="com.zfsoft.xgxt.xsxx.tdjs.TdjsForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/tdjs" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.xsxx.tdjs.TdjsAction" 
+    			name="tdjsForm"
+    			parameter="method">
+    		<forward name="tdglManage" path="/xsgzgl/xsxx/tdjs/tdglManage.jsp" />	
+    		<forward name="updateTdinfo" path="/xsgzgl/xsxx/tdjs/updateTdinfo.jsp" />	
+    		<forward name="cjtd" path="/xsgzgl/xsxx/tdjs/cjtd.jsp" />	
+    		<forward name="sctd" path="/xsgzgl/xsxx/tdjs/sctd.jsp" />	
+    		<forward name="fpxs" path="/xsgzgl/xsxx/tdjs/fpxs.jsp" />	
+    		<forward name="showStudents" path="/xsgzgl/xsxx/tdjs/showStudents.jsp" />	
+    	</action>
+	</action-mappings>
+</struts-config>

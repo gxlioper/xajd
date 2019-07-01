@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="whkxscxForm" type="com.zfsoft.xgxt.zxdk.whkxscx.WhkxscxForm">
+		</form-bean>
+	</form-beans>
+	<action-mappings>	
+		<!-- 展现路径 -->
+		<action path="/zxdk_hkcx_xswhk" forward="/zxdk_whkxscx.do?method=getWhkxscxList"></action><!-- 查询页面 -->
+		<!-- 实际路径 -->	
+		<action name="whkxscxForm" 
+				parameter="method" 
+				path="/zxdk_whkxscx"
+				scope="request"	
+				type="com.zfsoft.xgxt.zxdk.whkxscx.WhkxscxAction">
+			<forward name="getWhkxscxList" path="/xsgzgl/zxdk/whkxscx/whkxscxList.jsp" /><!-- 查询页面  -->
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

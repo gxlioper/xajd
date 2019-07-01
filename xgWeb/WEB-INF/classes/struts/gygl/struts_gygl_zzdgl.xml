@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    <form-bean name="zzdglCsszForm" type="com.zfsoft.xgxt.gygl.zzdgl.cssz.CsszForm" />
+	<form-bean name="zzdsqForm" type="com.zfsoft.xgxt.gygl.zzdgl.sq.ZzdsqForm" />
+	<form-bean name="zzdshForm" type="com.zfsoft.xgxt.gygl.zzdgl.sh.ZzdshForm" />
+	<form-bean name="zzdjgForm" type="com.zfsoft.xgxt.gygl.zzdgl.jg.ZzdjgForm" />	
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/xgygl_zzdgl_cssz"  forward="/xgygl_zzdcssz.do?method=cssz"/>		<!-- 转走读管理_参数设置 -->
+		<action path="/xgygl_zzdgl_zdsq"  forward="/xgygl_zdsq.do?method=getZzdsqList"/> <!-- 转走读管理_申请 -->
+		<action path="/xgygl_zzdgl_zdsh"  forward="/xgygl_zdsh.do?method=getZzdshList"/> <!-- 转走读管理_审核 -->
+		<action path="/xgygl_zzdgl_zdjg"  forward="/xgygl_zdjg.do?method=getZzdjgList"/> <!-- 转走读管理_结果 -->
+		<action path="/xgygl_zzdgl_zdqr"  forward="/xgygl_zdqr.do?method=getPageListForQr"/> <!-- 转走读管理_确认 -->
+    	
+    	<action path="/xgygl_zzdcssz" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.gygl.zzdgl.cssz.CsszAction" 
+    			name="zzdglCsszForm"
+    			parameter="method">	
+    		<forward name="cssz" path="/xsgzgl/gygl/zzdgl/cssz/cssz.jsp"/>
+		</action>
+		
+		<action path="/xgygl_zdsq" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.gygl.zzdgl.sq.ZzdsqAction" 
+    			name="zzdsqForm"
+    			parameter="method">	
+    		<forward name="getZzdsqList" path="/xsgzgl/gygl/zzdgl/sq/zzdsqList.jsp"/>
+    		<forward name="addZzdsq" path="/xsgzgl/gygl/zzdgl/sq/addZzdsq.jsp"/>
+    		<forward name="editZzdsq" path="/xsgzgl/gygl/zzdgl/sq/editZzdsq.jsp"/>
+    		<forward name="viewZzdsq" path="/xsgzgl/gygl/zzdgl/sq/viewZzdsq.jsp"/>
+		</action>
+		
+		<action path="/xgygl_zdsh" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.gygl.zzdgl.sh.ZzdshAction" 
+    			name="zzdshForm"
+    			parameter="method">	
+    		<forward name="getZzdshList" path="/xsgzgl/gygl/zzdgl/sh/zzdshList.jsp"/>
+    		<forward name="sbDgsh" path="/xsgzgl/gygl/zzdgl/sh/zzdshDgsh.jsp"/>
+    		<forward name="sbPlsh" path="/xsgzgl/gygl/zzdgl/sh/zzdshPlsh.jsp"/>
+		</action>
+		
+		<action path="/xgygl_zdjg" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.gygl.zzdgl.jg.ZzdjgAction" 
+    			name="zzdjgForm"
+    			parameter="method">	
+    		<forward name="getZzdjgList" path="/xsgzgl/gygl/zzdgl/jg/zzdjgList.jsp"/>
+    		<forward name="addZzdjg" path="/xsgzgl/gygl/zzdgl/jg/addZzdjg.jsp"/>
+    		<forward name="editZzdjg" path="/xsgzgl/gygl/zzdgl/jg/editZzdjg.jsp"/>
+    		<forward name="viewZzdjg" path="/xsgzgl/gygl/zzdgl/jg/viewZzdjg.jsp"/>  		
+		</action>
+		
+		<action path="/xgygl_zdqr" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.gygl.zzdgl.jg.ZzdjgAction" 
+    			name="zzdjgForm"
+    			parameter="method">	
+    		<forward name="getZzdjgqrList" path="/xsgzgl/gygl/zzdgl/jg/zzdqrList.jsp"/>
+    		<forward name="dgqr" path="/xsgzgl/gygl/zzdgl/jg/dgqr.jsp"/>
+    		<forward name="plqr" path="/xsgzgl/gygl/zzdgl/jg/plqr.jsp"/> 		
+		</action>		
+		
+	</action-mappings>
+</struts-config>

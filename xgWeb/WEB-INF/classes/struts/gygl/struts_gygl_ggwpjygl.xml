@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+    <form-bean name="ggwpjyForm" type="com.zfsoft.xgxt.gygl.ggwpgl.GgwpjyForm" />		
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/xgygl_ggwpgl_jydj"  forward="/xgygl_ggwpjydj.do?method=getGgwpjyList"/>		<!-- 临客信息管理_临客信息住宿登记 -->
+    	
+    	<action path="/xgygl_ggwpjydj" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.gygl.ggwpgl.GgwpjyAction" 
+    			name="ggwpjyForm"
+    			parameter="method">	
+    		<forward name="getGgwpjyList" path="/xsgzgl/gygl/ggwpgl/getGgwpjyList.jsp"/>
+    		<forward name="addGgwpjy" path="/xsgzgl/gygl/ggwpgl/addGgwpjy.jsp"/>
+    		<forward name="editGgwpjy" path="/xsgzgl/gygl/ggwpgl/editGgwpjy.jsp"/>
+    		<forward name="viewGgwpjy" path="/xsgzgl/gygl/ggwpgl/viewGgwpjy.jsp"/>
+		</action>
+		
+	</action-mappings>
+</struts-config>

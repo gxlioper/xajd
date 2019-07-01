@@ -1,0 +1,204 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="gb2312">
+	<head>
+		<title>学生工作管理信息系统
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+		<meta http-equiv="Pragma" http-equiv="no-cache" />
+		<meta http-equiv="Cache-Control"
+			http-equiv="no-cache, must-revalidate" />
+		<meta http-equiv="Expires" http-equiv="0" />
+
+		<meta name="Copyright" content="正方软件 zfsoft" />
+	</head>
+	
+	<link rel="icon" href="images/icon.ico" type="image/x-icon" />
+	<link id="csss" rel="stylesheet" rev="stylesheet" href="style/main.css"
+		type="text/css" media="all" />
+	<base target="_self">
+	<script language="javascript">
+		function sq(url){
+			var jtmc = document.getElementById("jtmc").value;
+			var jtrs = document.getElementById("jtrs").value;
+			var fzls = document.getElementById("fzls").value;
+			var xydm = document.getElementById("xydm").value;
+			
+			if(jtmc.length>50){
+				alert("集体名称长度不能大于50");
+			}
+			if(null == jtmc || " "== jtmc
+			|| null == jtrs || " " == jtrs
+			|| null == xydm || " "== xydm
+			|| null == fzls || "" == fzls){
+				alert("请把带*项填写完整！")
+				return false;
+			}
+			document.forms[0].action=url;
+			document.forms[0].submit();	
+					
+		}
+		
+		function check(obj){
+			obj.value = obj.value.replace("%","")
+												  .replace("#","")
+												  .replace("@","")
+												  .replace("!","")
+												  .replace("^","")
+												  .replace("~","")
+												  .replace("&","")
+												  .replace("*","")
+												  .replace("$","");
+		}
+	</script>
+	<body>
+		<script language="javascript" src="js/function.js"></script>
+		<form action="/data_search" styleId="form1" method="post">
+			<div class="title">
+				<div class="title_img" id="title_m">
+					当前位置：${tip }
+				</div>
+			</div>
+			<table width="99%" id="rsT" class="tbstyle">
+				<tr height="30">
+					<td align="center" width="25%">
+						<font color="red">*</font>推荐集体名称
+					</td>
+					<td colspan="3" width="40%">
+						<input type="text"  name="jtmc" id="jtmc"  onblur="check(this)"
+						value="<bean:write property="jtmc" name="pj"/>">
+					</td>
+					<td align="center">
+						<font color="red">*</font>集体人数
+					</td>
+					<td width="20%">
+						<input type="text" onkeyup="value=value.replace(/[^\d]/g,'')" property="jtrs" style="height:23px;width:150px" styleId="jtrs" name="pj"></input>
+					</td>
+				</tr>
+				<tr height="30">
+					<td colspan="1" align="center" width="20%">
+						<font color="red">*</font>所在院、系（部）
+					</td>
+					<td colspan="5">
+						<select property="xydm" styleId="xydm" name="pj">
+							<option value=""></option>
+							<option property="xydm" labelProperty="xymc" collection="xyList"></option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1" align="center">
+						<font color="red">*</font>现任班主任（负责老师）姓名
+					</td>
+					<td colspan="5">
+						<input type="text" maxlength="30" property="fzls" style="height:23px;width:300px" styleId="fzls" name="pj"></input>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1" align="center">
+						<br />
+						主
+						<p>
+							要
+						</p><p>
+							事
+						</p><p>
+							迹
+						</p><p>
+					</p></td>
+					<td colspan="5">
+						<textarea cols="100" rows="9" property="zysj" name="pj"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1" align="center">
+						<p>
+							<br />
+							院、系（部）
+						</p>
+						<p>
+							意见
+							<br />
+						</p>
+					</td>
+					<td colspan="5">
+						<textarea cols="100" rows="6" property="yxyj" name="pj"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1" align="center">
+						学
+						<br />
+						工
+						<br />
+						处
+						<br />
+						意
+						<br />
+						见
+						<br />
+					</td>
+					<td colspan="5">
+						<textarea cols="100" rows="6" property="xgcyj" name="pj"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1" align="center">
+						学
+						<br />
+						院
+						<br />
+						意
+						<br />
+						见
+						<br />
+					</td>
+					<td colspan="5">
+						<textarea cols="100" rows="6" property="xyyj" name="pj"></textarea>
+					</td>
+				</tr>
+			</table>
+			<div class="buttontool" align="center">
+				<logic:equal value="query" name="doType" scope="request">
+					<button class="button2" onclick="window.close();return false;">
+						关&nbsp;&nbsp;闭
+					</button>
+				</logic:equal>
+				<logic:notEqual value="query" name="doType" scope="request">
+					<logic:notEqual value="modi" name="doType" scope="request">
+						<button class="button2" onclick="sq('/xgxt/wxsz_xjjt_sq.do?doType=save');">
+							提 交 申 请
+						</button>
+					</logic:notEqual>
+					<logic:equal value="modi" name="doType" scope="request">
+						<button class="button2" onclick="sq('/xgxt/wxsz_xjjt_sq.do?doType=save');">
+							修&nbsp;&nbsp;改
+						</button>
+					</logic:equal>
+				</logic:notEqual>
+			</div>
+		</form>
+		<script type="text/javascript">
+			var jtmc = document.getElementById("jtmc");
+			if(jtmc.value != null && jtmc.value != ""){
+				jtmc.readOnly='readOnly';
+			}
+		</script>
+		<logic:equal value="true" name="result" scope="request">
+			<script>
+			alert('提交成功');
+			if(window.dialogArguments){
+				Close();
+				window.dialogArguments.document.getElementById("search_go").click();
+			}
+		</script>
+		</logic:equal>
+	</body>
+</html>

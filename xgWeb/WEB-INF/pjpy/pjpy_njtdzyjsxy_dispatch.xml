@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans />
+	<global-forwards />
+	<action-mappings>		
+		<!--	转移到南京铁道职业技术学院的配置文件,pjpy_njtdzyjsxy.xml    -->
+		<action path="/zhszcjImportDefaul" 	forward="/njtdzhszcj.do?method=zhszcjDefault"></action> 
+		<action path="/zhszcjImportSearch" 	forward="/njtdzhszcj.do?method=zhszcjSearch"></action> 
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/wjcfjgsdxwh.do" location="50,50" dimension="232,84" />
+  <StrutsActivity path="/wjcf/jgsdx/wjcfcxcfsq.jsp" location="650,50" dimension="196,48" />
+  <StrutsActivity path="/wjcf/jgsdx/cxcfsp.jsp" location="950,350" dimension="172,48" />
+  <StrutsActivity path="/wjcf/jgsdx/cxcfxxspdefault.jsp" location="650,350" dimension="226,48" />
+  <StrutsActivity path="/wjcf/jgsdx/cxcfview.jsp" location="50,450" dimension="184,48" />
+  <StrutsActivity path="/wjcf/jgsdx/cxcfcxdefault.jsp" location="50,350" dimension="214,48" />
+  <StrutsActivity path="/wjcf/jgsdx/cxcfsqdefault.jsp" location="350,50" dimension="214,48" />
+  <StrutsActivity path="/wjcf/csmz/wjcf_cxmz_cxcfshdefault.jsp" location="1014,184" dimension="268,48" />
+  <StrutsActivity path="/wjcf/csmz/wjcf_csmz_cxcfview.jsp" location="0,184" dimension="238,48" />
+  <StrutsActivity path="/wjcf/csmz/csmz_cxcfcxdefault.jsp" location="338,184" dimension="238,48" />
+  <StrutsActivity path="/wjcf/csmz/csmz_cxcfsqdefault.jsp" location="676,184" dimension="238,48" />
+  <StrutsActivity path="" location="350,350" dimension="40,48" />
+  <StrutsActivity path="/wjcf/jgsdx/stucxcfcx.jsp" location="350,450" dimension="190,48" />
+  <StrutsActivity path="/wjcf/jgsdx/stucxcfview.jsp" />
+  <StrutsTransition id="/wjcfjgsdxwh.do,cxcfsp,/wjcf/jgsdx/cxcfsp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,134" />
+      <AbsolutePoint location="166,149" />
+      <AbsolutePoint location="999,149" />
+      <AbsolutePoint location="999,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfjgsdxwh.do,cxcfview,/wjcf/jgsdx/cxcfview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfjgsdxwh.do,stucxcfview,/wjcf/jgsdx/stucxcfview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfjgsdxwh.do,cxcfprint,/wjcf/jgsdx/wjcfcxcfsq.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfjgsdxwh.do,cxcfxxspdefault,/wjcf/jgsdx/cxcfxxspdefault.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,113" />
+      <AbsolutePoint location="661,113" />
+      <AbsolutePoint location="661,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfjgsdxwh.do,stucxcfcx,/wjcf/jgsdx/stucxcfcx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,83" />
+      <AbsolutePoint location="297,83" />
+      <AbsolutePoint location="297,474" />
+      <AbsolutePoint location="350,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfjgsdxwh.do,cxcfcxdefault,/wjcf/jgsdx/cxcfcxdefault.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="253,134" />
+      <AbsolutePoint location="253,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/wjcfjgsdxwh.do,cxcfsqdefault,/wjcf/jgsdx/cxcfsqdefault.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="166,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

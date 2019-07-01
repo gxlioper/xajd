@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -活动考核管理-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="HdkhglForm" type="com.zfsoft.xgxt.rcsw.hdkhgl.HdkhglForm" />
+    	
+	</form-beans>
+	<action-mappings>
+		<action path="/rcsw_hdkhgl_hddj" forward="/hdkhgl_hddj.do?method=getHddjList"/>
+		<action path="/rcsw_hdkhgl_jlygx" forward="/hdkhgl_jlygx.do?method=getJlyGxList"/>	
+		<!-- 活动登记 -->
+		<action path="/hdkhgl_hddj" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.hdkhgl.HdkhglAction"
+    			name="HdkhglForm"         
+    			parameter="method">	
+    		<forward name="getHddjList" path="/xsgzgl/rcsw/hdkhgl/kqdj/getHddjList.jsp"></forward>
+    		<forward name="kqdj" path="/xsgzgl/rcsw/hdkhgl/kqdj/Kqdj.jsp"></forward>
+    		<forward name="ck" path="/xsgzgl/rcsw/hdkhgl/kqdj/kqdjview.jsp"></forward>
+    		<forward name="plkqdj" path="/xsgzgl/rcsw/hdkhgl/kqdj/plkqdj.jsp"></forward>
+		</action>
+		
+		<!-- 记录与感想-->
+		<action path="/hdkhgl_jlygx" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.hdkhgl.HdkhglAction"
+    			name="HdkhglForm"         
+    			parameter="method">	
+    		<forward name="getJlyGxList" path="/xsgzgl/rcsw/hdkhgl/jlygx/getJlyGxList.jsp"></forward>
+    		<forward name="jlygx" path="/xsgzgl/rcsw/hdkhgl/jlygx/jlygx.jsp"></forward>
+    		<forward name="viewjlygx" path="/xsgzgl/rcsw/hdkhgl/jlygx/viewjlygx.jsp"></forward>
+		</action>
+	</action-mappings>
+</struts-config>

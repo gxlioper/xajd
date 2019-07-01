@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="cdfzPjpyForm" type="xgxt.pjpy.cdfz.CdfzPjpyForm"/>
+		
+	</form-beans>
+
+	<action-mappings>	
+		
+		
+
+    	<!-- 奖学金汇总统计 -->
+    	<action path="/cdfzPjpy" 
+        		parameter="method"  
+        		name="cdfzPjpyForm" 
+        		scope="request"
+		        type="xgxt.pjpy.cdfz.CdfzPjpyAction">	
+		    <forward name="jxhzManage"    		path="/pjpy/cdfz/jxhzManage.jsp" />   
+			<forward name="grhjhzManage"    	path="/pjpy/cdfz/grhjhzManage.jsp" />
+			
+		
+		</action>
+	</action-mappings>
+</struts-config>

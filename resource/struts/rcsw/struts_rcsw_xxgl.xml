@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务木块 -学生献血功能 -->
+<struts-config>
+	<form-beans>
+    	<form-bean name="xsxxglForm" type="com.zfsoft.xgxt.rcsw.xxgl.XsxxglForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/rcsw_xsxxgl" 
+    			scope="request"
+    			type="com.zfsoft.xgxt.rcsw.xxgl.XsxxglAction" 
+    			name="xsxxglForm"
+    			parameter="method">	
+    		<forward name="gjcxXxgl" path="/xsgzgl/rcsw/xxgl/gjcxXsxx.jsp"></forward>
+			<forward name="zjXxgl" path="/xsgzgl/rcsw/xxgl/zjXsxx.jsp"></forward>
+			<forward name="xgXxgl" path="/xsgzgl/rcsw/xxgl/xgXsxx.jsp"></forward>
+			<forward name="ckXxgl" path="/xsgzgl/rcsw/xxgl/ckXsxx.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+</struts-config>

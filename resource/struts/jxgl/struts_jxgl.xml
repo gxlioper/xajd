@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<!-- ###################################################################################################################### -->
+		<!-- ============================================通用版本start============================================================= -->	
+		<!-- ###################################################################################################################### -->
+	
+		<form-bean name="jxglJxxxwhForm" type="xsgzgl.jxgl.general.jxxxwh.JxglJxxxwhForm" />
+		<form-bean name="jxjzglFrom" type="xsgzgl.jxgl.general.jxjzgl.jxjzgl.JxjzglFrom" /><!-- 军训建制管理 -->
+		<form-bean name="lsjzglFrom" type="xsgzgl.jxgl.general.jxjzgl.lsjzgl.LsjzglFrom" /><!-- 历史建制管理 -->
+		<form-bean name="jxglJxcjglForm" type="xsgzgl.jxgl.general.jxcjgl.JxglJxcjglForm" />
+		<form-bean name="jxglJxbxglForm" type="xsgzgl.jxgl.general.jxbxgl.JxglJxbxglForm" />
+		<form-bean name="JxqjjgForm" type="xsgzgl.jxgl.general.jxqjgl.JxqjjgForm" />        <!-- 军训请假管理 -->
+		<form-bean name="JxkqjgForm" type="xsgzgl.jxgl.general.jxkqgl.jxkqjg.JxkqjgForm" />  <!--军训考勤管理 -->
+		<form-bean name="qxjxzgForm" type="xsgzgl.jxgl.general.jxxxwh.qxjxzg.QxjxzgForm" />  <!--军训取消资格信息管理 -->
+		
+		<form-bean name="jcszForm" type="xsgzgl.jxgl.general.gfjyqk.gfjyjcsz.JcszForm" /><!--国防教育基础设置  -->
+		<form-bean name="gfjysqForm" type="xsgzgl.jxgl.general.gfjyqk.gfjyqksq.GfjysqForm" /><!--国防教育申请  -->
+		<form-bean name="gfjyshForm" type="xsgzgl.jxgl.general.gfjyqk.gfjyqksh.GfjyshForm" /><!--国防教育审核  -->
+		<form-bean name="gfjyjgForm" type="xsgzgl.jxgl.general.gfjyqk.gfjyqkjg.GfjyjgForm" /><!--国防教育结果  -->
+		<!-- ###################################################################################################################### -->
+		<!-- ============================================通用版本end============================================================= -->	
+		<!-- ###################################################################################################################### -->
+	
+	
+	
+		<!-- ###################################################################################################################### -->
+		<!-- ============================================湖州师范start============================================================= -->	
+		<!-- ###################################################################################################################### -->
+    	<form-bean name="jxglCsszForm" type="xsgzgl.jxgl.hzsf.cssz.JxglCsszForm" />
+    	<form-bean name="jxglDmwhForm" type="xsgzgl.jxgl.hzsf.dmwh.JxglDmwhForm" />
+    	<form-bean name="jxglGrryForm" type="xsgzgl.jxgl.hzsf.grry.JxglGrryForm" />
+    	<form-bean name="jxglTdryForm" type="xsgzgl.jxgl.hzsf.tdry.JxglTdryForm" />
+    	<!-- ###################################################################################################################### -->
+		<!-- ============================================湖州师范end============================================================= -->	
+		<!-- ###################################################################################################################### -->
+    	
+	</form-beans>
+
+	<action-mappings>
+		<!-- ###################################################################################################################### -->
+		<!-- ============================================通用版本start============================================================= -->	
+		<!-- ###################################################################################################################### -->
+		<action path="/jxgl_jcxxwh_jxxxwh" forward="/jxgl_jxxxwh.do?method=jxxxCx"/><!-- 军训信息维护 -->
+		<action path="/jxgl_jxkhgl_jxcjgl" forward="/jxgl_jxcjgl.do?method=jxcjCx"/><!-- 军训成绩管理 -->
+		<action path="/jxgl_jxkhgl_jxbxgl" forward="/jxgl_jxbxgl.do?method=jxbxCx"/><!-- 军训表现管理 -->
+		<action path="/jxjzgl_jxjzgl_cxJxjz" forward="/jxjzgl_cxJxjz.do?method=cxJxjz"/><!-- 军训建制查询 -->
+		<action path="/jxjzgl_lsjzgl_cxLsjz" forward="/lsjzgl_cxLsjz.do?method=cxLsjz"/><!-- 历史建制查询 -->
+		<action path="/jxgl_jzdjwh" forward="/jxgl_jxxxwh.do?method=jzdjwh"/><!-- 军训建制等级维护 -->
+		<action path="/jxgl_jxqjgl_qjjggl" forward="/jxqjjg.do?method=jxqjjgList"/><!-- 军训请假结果维护 -->
+		<action path="/jxgl_jxkqgl_kqjggl" forward="/jxkqjg.do?method=jxkqjgList"/><!-- 军训考勤结果维护 -->
+		<action path="/jxgl_jxxxwh_qxjxzg" forward="/qxjxzg.do?method=qxjxzgList"/><!-- 军训取消资格信息管理 -->
+		<!-- =====================================军训信息维护start===================================================== -->
+		<action path="/jxgl_jxxxwh" 
+    			scope="request"
+    			type="xsgzgl.jxgl.general.jxxxwh.JxglJxxxwhAction" 
+    			name="jxglJxxxwhForm"
+    			parameter="method">
+    		<forward name="jxxxCx" 	path="/xsgzgl/jxgl/general/jxxxwh/jxxxCx.jsp"/>		<!-- 军训信息查询-->
+    		<forward name="jxmdCx" 	path="/xsgzgl/jxgl/general/jxxxwh/jxmdCx.jsp"/>		<!-- 军训名单查询-->
+    		<forward name="jxmdXg" 	path="/xsgzgl/jxgl/general/jxxxwh/jxxxXg.jsp"/>	
+    		<forward name="jzdjwh" 	path="/xsgzgl/jxgl/general/jxxxwh/jzdjwh.jsp"/>		<!-- 军训建制登记维护-->
+    		<forward name="jxxx" path="/xsgzgl/jxgl/general/jxxxwh/jxxx.jsp"/>
+    		<forward name="viewJxxx" path="/xsgzgl/jxgl/general/jxxxwh/viewJxxx.jsp"/>
+		</action>
+		<action path="/jxgl_jxxxwh_ajax"
+        		parameter="method"
+        		name="jxglJxxxwhForm"
+        		scope="request"
+		        type="xsgzgl.jxgl.general.jxxxwh.JxglJxxxwhAjax">
+		</action>
+		<!-- =====================================军训信息维护end===================================================== -->
+		<!-- =====================================国防教育审核流程start===================================================== -->
+		
+		<action path="/gfjy_gfjyqk_jcsz" forward="/gfjyqk_jcsz.do?method=gfjyJcsz"/>	<!-- 国防教育情况基础设置 -->
+		<action path="/gfjyqk_jcsz" 
+	   			scope="request"
+	   			type="xsgzgl.jxgl.general.gfjyqk.gfjyjcsz.JcszAction" 
+	   			name="jcszForm"         
+	   			parameter="method">	
+	   		<forward name="gfjyJcsz" path="/xsgzgl/jxgl/general/gfjyqk/jcsz/gfjyJcsz.jsp"></forward>
+		</action>
+	
+		<action path="/gfjy_gfjyqk_sq" forward="/gfjyqk_sq.do?method=gfjySqList"/>	<!-- 国防教育情况申请 -->
+		<action path="/gfjyqk_sq" 
+	   			scope="request"
+	   			type="xsgzgl.jxgl.general.gfjyqk.gfjyqksq.GfjysqAction" 
+	   			name="gfjysqForm"         
+	   			parameter="method">
+	   		<forward name="gfjySq" path="/xsgzgl/jxgl/general/gfjyqk/sq/gfqksqList.jsp"></forward>
+	   		<forward name="gfqkzj" path="/xsgzgl/jxgl/general/gfjyqk/sq/gfqkzj.jsp"></forward>
+	   		<forward name="gfqkxg" path="/xsgzgl/jxgl/general/gfjyqk/sq/gfqkxg.jsp"></forward>
+	   		<forward name="gfqkck" path="/xsgzgl/jxgl/general/gfjyqk/sq/gfqkck.jsp"></forward>
+		</action>
+			<action path="/gfjy_gfjyqk_sh" forward="/gfjyqk_sh.do?method=gfjyShList"/>	<!-- 国防教育情况审核 -->
+		<action path="/gfjyqk_sh" 
+	   			scope="request"
+	   			type="xsgzgl.jxgl.general.gfjyqk.gfjyqksh.GfjyshAction" 
+	   			name="gfjyshForm"         
+	   			parameter="method">
+	   		<forward name="gfjySh" path="/xsgzgl/jxgl/general/gfjyqk/sh/gfqkshList.jsp"></forward>
+	   		<forward name="gfqkck" path="/xsgzgl/jxgl/general/gfjyqk/sh/gfqkck.jsp"></forward>
+	   		<forward name="gfqkDgsh" path="/xsgzgl/jxgl/general/gfjyqk/sh/gfqkDgsh.jsp"></forward>
+	   		<forward name="gfqkPlsh" path="/xsgzgl/jxgl/general/gfjyqk/sh/gfqkPlsh.jsp"></forward>
+		</action>
+		<action path="/gfjy_gfjyqk_jg" forward="/gfjyqk_jg.do?method=gfjyJgList"/>	<!-- 国防教育情况结果 -->
+		<action path="/gfjyqk_jg" 
+	   			scope="request"
+	   			type="xsgzgl.jxgl.general.gfjyqk.gfjyqkjg.GfjyjgAction" 
+	   			name="gfjyjgForm"         
+	   			parameter="method">
+	   		<forward name="gfjyJg" path="/xsgzgl/jxgl/general/gfjyqk/jg/gfqkjgList.jsp"></forward>
+	   		<forward name="gfjyzj" path="/xsgzgl/jxgl/general/gfjyqk/jg/gfqkzj.jsp"></forward>
+	   		<forward name="gfqkxg" path="/xsgzgl/jxgl/general/gfjyqk/jg/gfqkxg.jsp"></forward>
+	   		<forward name="gfqkck" path="/xsgzgl/jxgl/general/gfjyqk/jg/gfqkck.jsp"></forward>
+		</action>
+		<!-- =====================================国防教育审核流程end===================================================== -->
+		
+		<!-- =====================================军训成绩管理start===================================================== -->
+		<action path="/jxgl_jxcjgl" 
+    			scope="request"
+    			type="xsgzgl.jxgl.general.jxcjgl.JxglJxcjglAction" 
+    			name="jxglJxcjglForm"
+    			parameter="method">
+    		<forward name="jxcjCx" 	path="/xsgzgl/jxgl/general/jxcjgl/jxcjCx.jsp"/>		<!-- 军训成绩查询-->
+		</action>
+		<action path="/jxgl_jxcjgl_ajax"
+        		parameter="method"
+        		name="jxglJxcjglForm"
+        		scope="request"
+		        type="xsgzgl.jxgl.general.jxcjgl.JxglJxcjglAjax">
+		</action>
+		<!-- =====================================军训成绩管理end===================================================== -->
+		
+		<!-- =====================================军训表现管理start===================================================== -->
+		<action path="/jxgl_jxbxgl" 
+    			scope="request"
+    			type="xsgzgl.jxgl.general.jxbxgl.JxglJxbxglAction" 
+    			name="jxglJxbxglForm"
+    			parameter="method">
+    		<forward name="jxbxCx" 	path="/xsgzgl/jxgl/general/jxbxgl/jxbxCx.jsp"/>		<!-- 军训表现查询-->
+    		<forward name="bxmdCx" 	path="/xsgzgl/jxgl/general/jxbxgl/bxmdCx.jsp"/>		<!-- 表现名单查询-->
+		</action>
+		<action path="/jxgl_jxbxgl_ajax"
+        		parameter="method"
+        		name="jxglJxbxglForm"
+        		scope="request"
+		        type="xsgzgl.jxgl.general.jxbxgl.JxglJxbxglAjax">
+		</action>
+		<!-- =====================================军训表现管理end===================================================== -->
+		<!-- 军训请假管理 -->
+		<action path="/jxqjjg" 
+    			scope="request"
+    			type="xsgzgl.jxgl.general.jxqjgl.JxqjjgAction" 
+    			name="JxqjjgForm"
+    			parameter="method">
+    		<forward name="jxqjjgList" path="/xsgzgl/jxgl/general/jxqjgl/jxqjjgList.jsp"/>
+			<forward name="add" path="/xsgzgl/jxgl/general/jxqjgl/add.jsp"/>
+			<forward name="update" path="/xsgzgl/jxgl/general/jxqjgl/update.jsp"/>
+			<forward name="show" path="/xsgzgl/jxgl/general/jxqjgl/show.jsp"/>
+		</action>
+		<!-- 军训请假管理 -->
+		
+		<!-- 军训取消资格信息管理 -->
+		<action path="/qxjxzg" 
+    			scope="request"
+    			type="xsgzgl.jxgl.general.jxxxwh.qxjxzg.QxjxzgAction" 
+    			name="qxjxzgForm"
+    			parameter="method">
+    		<forward name="qxjxzgList" path="/xsgzgl/jxgl/general/jxxxwh/qxjxzg/qxjxzgList.jsp"/>
+			<forward name="viewJxxx" path="/xsgzgl/jxgl/general/jxxxwh/qxjxzg/viewJxxx.jsp"/>
+		</action>
+		<!-- 军训取消资格信息管理 -->
+			
+		<!-- 军训考勤管理 -->
+		<action path="/jxkqjg" 
+    			scope="request"
+    			type="xsgzgl.jxgl.general.jxkqgl.jxkqjg.JxkqjgAction" 
+    			name="JxkqjgForm"
+    			parameter="method">
+    		<forward name="jxkqjgList" path="/xsgzgl/jxgl/general/jxkqgl/jxkqjg/jxkqjgList.jsp"/>
+			<forward name="add" path="/xsgzgl/jxgl/general/jxkqgl/jxkqjg/add.jsp"/>
+			<forward name="update" path="/xsgzgl/jxgl/general/jxkqgl/jxkqjg/update.jsp"/>
+			<forward name="show" path="/xsgzgl/jxgl/general/jxkqgl/jxkqjg/show.jsp"/>
+		</action>
+		<!-- 军训考勤管理 -->
+		
+	
+		<!-- ###################################################################################################################### -->
+		<!-- ============================================通用版本end============================================================= -->	
+		<!-- ###################################################################################################################### -->
+	
+	
+	
+	
+		<!-- ###################################################################################################################### -->
+		<!-- ============================================湖州师范start============================================================= -->	
+		<!-- ###################################################################################################################### -->
+		
+  		<action path="/jxgl_jcsz_cssz" forward="/jxgl_cssz.do?method=cssz"/><!-- 参数设置 -->
+  		<action path="/jxgl_jcsz_dmwh" forward="/jxgl_dmwh.do?method=grryWh"/><!-- 代码维护 -->
+  		<action path="/jxgl_jxhj_grry" forward="/jxgl_grry.do?method=grryCx"/><!-- 个人荣誉查询 -->
+  		<action path="/jxgl_jxhj_tdry" forward="/jxgl_tdry.do?method=tdryCx"/><!-- 团队荣誉查询 -->
+		
+  		<!-- =====================================参数设置===================================================== -->	
+		<action path="/jxgl_cssz" 
+    			scope="request"
+    			type="xsgzgl.jxgl.hzsf.cssz.JxglCsszAction" 
+    			name="jxglCsszForm"
+    			parameter="method">
+    		<forward name="cssz" 	path="/xsgzgl/jxgl/hzsf/cssz/cssz.jsp"/>		<!-- 参数设置 -->
+		</action>
+		<action path="/jxgl_cssz_ajax"
+        		parameter="method"
+        		name="jxglCsszForm"
+        		scope="request"
+		        type="xsgzgl.jxgl.hzsf.cssz.JxglCsszAjax">
+		</action>
+		<!-- =====================================基础代码维护===================================================== -->	
+		<action path="/jxgl_dmwh" 
+    			scope="request"
+    			type="xsgzgl.jxgl.hzsf.dmwh.JxglDmwhAction" 
+    			name="jxglDmwhForm"
+    			parameter="method">
+    		<forward name="grryWh" 	path="/xsgzgl/jxgl/hzsf/dmwh/grryWh.jsp"/>		<!-- 个人荣誉维护 -->
+    		<forward name="tdryWh" 	path="/xsgzgl/jxgl/hzsf/dmwh/tdryWh.jsp"/>		<!-- 个人荣誉维护 -->
+		</action>
+		<action path="/jxgl_dmwh_ajax"
+        		parameter="method"
+        		name="jxglDmwhForm"
+        		scope="request"
+		        type="xsgzgl.jxgl.hzsf.dmwh.JxglDmwhAjax">
+		</action>
+				<!-- =====================================个人荣誉获奖===================================================== -->	
+		<action path="/jxgl_grry" 
+    			scope="request"
+    			type="xsgzgl.jxgl.hzsf.grry.JxglGrryAction" 
+    			name="jxglGrryForm"
+    			parameter="method">
+    		<forward name="grryCx" 	path="/xsgzgl/jxgl/hzsf/grry/grryCx.jsp"/>		<!-- 个人荣誉查询 -->
+    		<forward name="grryZj" 	path="/xsgzgl/jxgl/hzsf/grry/grryZj.jsp"/>		<!-- 个人荣誉增加 -->
+    		<forward name="grryXg" 	path="/xsgzgl/jxgl/hzsf/grry/grryXg.jsp"/>		<!-- 个人荣誉修改 -->
+    		<forward name="getJxxs" path="/xsgzgl/jxgl/hzsf/grry/getJxxs.jsp"/>		<!-- 获得军训学生名单 -->
+		</action>
+		<action path="/jxgl_grry_ajax"
+        		parameter="method"
+        		name="jxglGrryForm"
+        		scope="request"
+		        type="xsgzgl.jxgl.hzsf.grry.JxglGrryAjax">
+		</action>
+				<!-- =====================================团队荣誉获奖===================================================== -->	
+		<action path="/jxgl_tdry" 
+    			scope="request"
+    			type="xsgzgl.jxgl.hzsf.tdry.JxglTdryAction" 
+    			name="jxglTdryForm"
+    			parameter="method">
+    		<forward name="tdryCx" 	path="/xsgzgl/jxgl/hzsf/tdry/tdryCx.jsp"/>		<!-- 团队荣誉查询 -->
+    		<forward name="tdryZj" 	path="/xsgzgl/jxgl/hzsf/tdry/tdryZj.jsp"/>		<!-- 团队荣誉增加 -->
+    		<forward name="tdryXg" 	path="/xsgzgl/jxgl/hzsf/tdry/tdryXg.jsp"/>		<!-- 团队荣誉修改 -->
+		</action>
+		<action path="/jxgl_tdry_ajax"
+        		parameter="method"
+        		name="jxglTdryForm"
+        		scope="request"
+		        type="xsgzgl.jxgl.hzsf.tdry.JxglTdryAjax">
+		</action>
+		<!-- ###################################################################################################################### -->
+		<!-- ============================================湖州师范end============================================================= -->	
+		<!-- ###################################################################################################################### -->
+		
+		<!-- =====================================军训建制管理===================================================== -->	
+		<action path="/jxjzgl_cxJxjz" 
+    			scope="request"
+    			type="xsgzgl.jxgl.general.jxjzgl.jxjzgl.JxjzglAction" 
+    			name="jxjzglFrom"
+    			parameter="method">
+    		<forward name="cxJxjz" 	path="/xsgzgl/jxgl/general/jxjzgl/jxjzgl/cxJxjz.jsp"/>		<!-- 查询军训建制 -->
+    		<forward name="cxJzwh" 	path="/xsgzgl/jxgl/general/jxjzgl/jxjzgl/cxJzwh.jsp"/>		<!-- 查询建制维护 -->
+    		<forward name="cxWhjzmd" 	path="/xsgzgl/jxgl/general/jxjzgl/jxjzgl/cxWhjzmd.jsp"/>	<!-- 查询维护建制名单 -->
+    		<forward name="cxJzmd" 	path="/xsgzgl/jxgl/general/jxjzgl/jxjzgl/cxJzmd.jsp"/>	<!-- 查询建制名单 -->
+		</action>
+		<action path="/jxjzgl_cxJxjz_ajax"
+        		parameter="method"
+        		name="jxjzglFrom"
+        		scope="request"
+		        type="xsgzgl.jxgl.general.jxjzgl.jxjzgl.JxjzglAction">
+		</action>
+		
+		<!-- =====================================历史建制管理===================================================== -->	
+		<action path="/lsjzgl_cxLsjz" 
+    			scope="request"
+    			type="xsgzgl.jxgl.general.jxjzgl.lsjzgl.LsjzglAction" 
+    			name="lsjzglFrom"
+    			parameter="method">
+    		<forward name="cxLsjz" 	path="/xsgzgl/jxgl/general/jxjzgl/lsjzgl/cxLsjz.jsp"/>		<!-- 查询历史建制 -->
+    		<forward name="cxLsjzmd" 	path="/xsgzgl/jxgl/general/jxjzgl/lsjzgl/cxLsjzmd.jsp"/>		<!-- 查询历史建制名单 -->
+		</action>
+		<action path="/lsjzgl_cxLsjz_ajax"
+        		parameter="method"
+        		name="lsjzglFrom"
+        		scope="request"
+		        type="xsgzgl.jxgl.general.jxjzgl.lsjzgl.LsjzglAction">
+		</action>
+	</action-mappings>
+</struts-config>

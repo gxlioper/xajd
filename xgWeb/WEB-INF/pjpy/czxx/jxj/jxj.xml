@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyCzxxActionForm" type="xgxt.pjpy.czxx.PjpyCzxxActionForm"/>
+	</form-beans>
+ 	<action-mappings>
+ 	    <!-- 展现路径 -->
+	    <action path="/pjpy_czxx_jxjAdd" 	   forward="/czxxPjpyJxj.do?method=jxjAdd"/> <!-- 奖学金申请页面 -->
+	    <action path="/pjpy_czxx_jxjQuery"     forward="/czxxPjpyJxj.do?method=jxjQuery"/><!-- 奖学金查询维护 -->
+	    <action path="/pjpy_czxx_jxjModi"      forward="/czxxPjpyJxj.do?method=jxjModi"/> <!-- 奖学金修改 -->
+	    <action path="/pjpy_czxx_jxjsh"        forward="/czxxPjpyJxj.do?method=jxjsh"/> <!-- 奖学金审核 -->
+	    <action path="/pjpy_czxx_jxjshjg"      forward="/czxxPjpyJxj.do?method=jxjshjg"/> <!-- 奖学金审核结果 -->
+	    <action path="/pjpy_czxx_jxjDggrsh"    forward="/czxxPjpyJxj.do?method=jxjDggrsh"/> <!-- 奖学金单个审核 -->
+		<action path="/pjpy_czxx_jxjBmsh"      forward="/czxxPjpyJxj.do?method=jxjBmsh"/> <!-- 学院，学校奖学金审核 -->
+		<action path="/pjpy_czxx_xyjxjshView"  forward="/czxxPjpyJxj.do?method=xyjxjshView"/><!-- 学院奖学金审核显示 -->
+		<action path="/pjpy_czxx_print"  forward="/czxxPjpyJxj.do?method=print"/><!-- 学院奖学金审核显示 -->
+		
+	    <!-- 实际路径 -->	
+		<action path="/czxxPjpyJxj"
+				type="xgxt.pjpy.czxx.jxj.PjpyCzxxJxjAction"
+				name="pjpyCzxxActionForm"
+				parameter="method"
+				scope="request">
+				
+		<!-- 条件设置 -->
+		<forward name="query" path="/pjpy/czxx/jxj/query.jsp" />
+		<forward name="add"  path="/pjpy/czxx/jxj/add.jsp"/>
+		<forward name="update"  path="/pjpy/czxx/jxj/update.jsp"/>
+		<forward name="grsh"  path="/pjpy/czxx/jxj/grsh.jsp"/>
+		<forward name="jtsh"  path="/pjpy/czxx/jxj/jtsh.jsp"/>
+		<forward name="jxjDggrsh" path="/pjpy/czxx/jxj/jxjDggrsh.jsp"/>
+		<forward name="jxjBmsh" path="/pjpy/czxx/jxj/jxjBmsh.jsp"/>
+		<forward name="xyjxjshView" path="/pjpy/czxx/jxj/xyjxjshView.jsp"/>
+		<forward name="print" path="/pjpy/czxx/bbprint.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config>

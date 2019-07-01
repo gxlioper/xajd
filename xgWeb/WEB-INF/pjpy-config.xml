@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="PjpyForm" type="xgxt.pjpy.PjpyForm"/>
+		<form-bean name="PjpyZbdxSssppdsjszForm" type="xgxt.pjpy.PjpyZbdxSssppdsjszForm"></form-bean>
+		<form-bean name="PjpyZbdxJspdForm" type="xgxt.pjpy.PjpyZbdxJspdForm"></form-bean>
+		<form-bean name="PjpyBjldForm" type="xgxt.pjpy.bjly.PjpyForBjldFrom"></form-bean>
+		<form-bean name="commanForm" type="xgxt.form.CommanForm" />
+		<form-bean name="ZbdxPjpyForm" type="xgxt.pjpy.zbdx.ZbdxPjpyForm"></form-bean>
+		<form-bean name="ZzsfPjpyForm" type="xgxt.pjpy.zzsf.ZzsfPjpyForm"></form-bean>
+    <form-bean name="pjpyZjsyzyForm" type="xgxt.pjpy.zjsyzy.PjpyZjsyzyForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+
+	<action-mappings>
+	    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：智育素质积分维护>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/dyszjfwh"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="dyszjfwh"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_dyszjfwh.jsp" />						
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：德育素质积分维护>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/dyszwh"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="dyszwh"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/dyszjfwh.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：设置绩点标准>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_jxjdmb_jdsd"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="jdsd"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_jxjdmb_jdsd.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：上海工程技术大学优秀、自强奖学金申请>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_apply"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="applyForPrise"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_shgc_apply.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：上海工程技术大学宝钢奖学金申请表>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_apply_bg"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="bgPriseApplication"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_bgprise_apply.jsp" />
+		</action>
+		
+		<!-- @author:ChenHuamao		上海工程技术大学	上 海 地 铁 教 育 奖-->
+		<action path="/pjpy_apply_dt"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="dtPriseApplication"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_dtprise_apply.jsp" />
+		</action>
+		
+		<!-- @author:ChenHuamao		上海工程技术大学	索尼奖学金-->
+		<action path="/pjpy_sonyprise_apply"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="sonyPriseApplication"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_sony_apply.jsp" />
+		</action>
+		
+		<!-- @author:ChenHuamao		上海工程技术大学	交运奖学金-->
+		<action path="/pjpy_jiaoyunPrise_apply"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="jiaoyunPriseApplication"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_shgc_jiaoyun_apply.jsp" />
+		</action>
+		
+		<!-- @author:ChenHuamao		上海工程技术大学	上联奖学金-->
+		<action path="/pjpy_shanglianPrise_apply"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="shanglianPriseApplication"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_shgc_shanglian_apply.jsp" />
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：上海工程技术大学宝钢奖学金申请表>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_apply_sony"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="sonyPriseApplication"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_sony_apply.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：上海工程技术大学优秀、自强奖学金申请表打印>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_apply_print"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyForm"
+				parameter="applicationPrint"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_shgc_apply_page.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<SQ　评奖评优：江苏信息查看学生成绩>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/stu_cj_details" parameter="stu_cj_details" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction" validate="false">
+			<forward name="success" path="/pjpy/pjpy_stu_cjxx.jsp"></forward>		
+		</action>
+		<action path="/exportPrint" parameter="exportPrint" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+			<forward name="success" path="/about:blank" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：中北大学师生思品评定时间设定>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zbdx_sssppdsjsz"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyZbdxSssppdsjszForm"
+				parameter="pjpy_zbdx_sssppdsjsz"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/pjpy_zbdx_sssppdsjsz.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：中北大学综合素质测评总分计算>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zbdx_autocalc"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyZbdxSssppdsjszForm"
+				parameter="pjpy_zbdx_autocalc"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/data_search.do?act=zhsz" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：中北大学综合素质思想品德学生评议>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zbdx_xspy"
+				type="xgxt.pjpy.PjpyAction"
+				name="PjpyZbdxJspdForm"
+				parameter="pjpy_zbdx_py"
+				scope="request"
+				validate="false">
+			<forward name="student" path="/pjpy/zbdx/pjpy_zbdx_xspy.jsp" />
+			<forward name="teacher" path="/pjpy/zbdx/pjpy_zbdx_jspy.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：中北大学体育、人文及创新成绩维护>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zbdx_tyrwcxsjcjwh"
+				type="xgxt.pjpy.zbdx.ZbdxPjpyAction"
+				name="ZbdxPjpyForm"
+				parameter="pjpy_zbdx_tyrwcxsjcjwh"
+				scope="request">
+			<forward name="success" path="/pjpy/zbdx/pjpy_zbdx_tyrwcxsjcjwh.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：中北大学体育、人文及创新成绩导出数据到excel>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/exptoexcel"
+				type="xgxt.pjpy.zbdx.ZbdxPjpyAction"
+				name="ZbdxPjpyForm"
+				parameter="exptoexcel"
+				scope="request">
+			<forward name="success" path="/about:blank" />
+		</action>
+		<action path="/pjpy_zbdx_apply" parameter="zbdxPjpyApply" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/pjpy/zbdx/pjpy_zbdx_jxjsq.jsp"></forward>		
+		</action>
+		<action path="/pjpy_zbdx_jxjpsdjb" parameter="zbdxPjpyJxjdjb" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/pjpy/zbdx/pjpy_zbdx_jxjpsdjb.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：中北大学综合素质测评单个维护>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zbdx_weihu_one"
+				type="xgxt.pjpy.zbdx.ZbdxPjpyAction"
+				name="ZbdxPjpyForm"
+				parameter="pjpy_zbdx_weihu_one"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/zbdx/pjpy_zbdx_zhszcp.jsp" />
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<评奖评优：北京林大与年级相关奖学金设置>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<!--奖学金设置 -->
+		<action path="/pjpy_jxjsz"
+				type="xgxt.pjpy.bjly.PjpyForBjldAction"
+				name="commanForm"
+				parameter="pjpy_bjly_jxjsz"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/bjly/pjpy_bjly_jxjsz.jsp" />
+		</action>
+		
+		<action path="/pjpy_jxjsz_one"
+				type="xgxt.pjpy.bjly.PjpyForBjldAction"
+				name="commanForm"
+				parameter="pjpy_bjly_jxjszOne"
+				scope="request"
+				validate="false">
+		</action>
+	
+		<action path="/pjpy_jxjsz_save"
+				type="xgxt.pjpy.bjly.PjpyForBjldAction"
+				name="commanForm"
+				parameter="pjpy_jxjsz_save"
+				scope="request"
+				validate="false">
+		</action>
+		
+		<action path="/pjpy_jxjsz_delComman"
+				type="xgxt.pjpy.bjly.PjpyForBjldAction"
+				name="commanForm"
+				parameter="pjpy_jxjsz_delComman"
+				scope="request"
+				validate="false">
+		</action>
+		<!--奖学金时间设置 -->
+		<action path="/pjpy_jxjsjsz"
+				type="xgxt.pjpy.bjly.PjpyForBjldAction"
+				name="commanForm"
+				parameter="pjpy_jxjsjsz"
+				scope="request"
+				validate="false">
+			<forward name="success" path="/pjpy/bjly/pjpy_jxjsjsz_list.jsp" />
+		</action>
+		
+		<action path="/pjpy_jxjsjsz_save"
+				type="xgxt.pjpy.bjly.PjpyForBjldAction"
+				name="commanForm"
+				parameter="pjpy_jxjsjsz_save"
+				scope="request"
+				validate="false">
+		</action>
+		
+		<action path="/pjpy_jxjsjsz_one"
+				type="xgxt.pjpy.bjly.PjpyForBjldAction"
+				name="commanForm"
+				parameter="pjpy_jxjsjsz_one"
+				scope="request"
+				validate="false">
+		</action>
+		
+		<action path="/pjpy_bjly_tj"
+				type="xgxt.pjpy.bjly.PjpyForBjldAction"
+				name="commanForm"
+				parameter="pjpy_bjly_tj"
+				scope="request"
+				validate="false">
+				<forward name="success" path="/pjpy/bjly/pjpy_jxjsz_tj.jsp" />
+		</action>
+		
+		<action path="/pjpy_bjlydx_apply" parameter="bjlyPjpyApply" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.bjly.PjpyForBjldAction">
+				<forward name="success" path="/pjpy/bjly/pjpy_bjly_jxjsq.jsp"></forward>		
+		</action>
+		<action path="/pjpy_bjly_jxjpsdjb" parameter="zbdxPjpyJxjdjb" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/pjpy/zbdx/pjpy_zbdx_jxjpsdjb.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<SQ 江苏信息评奖评优申请>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_jsxx_apply" parameter="jsxxPjpyApply" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/pjpy/jsxx/pjpy_jsxx_jxjsq.jsp"></forward>
+		</action>
+		<action path="/pjpy_jsxx_jxjpsdjb" parameter="jsxxPjpyJxjdjb" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/pjpy/jsxx/pjpy_jsxx_jxjpsdjb.jsp"></forward>		
+		</action>
+		<action path="/rych_jsxx_apply" parameter="jsxxRychApply" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/pjpy/jsxx/pjpy_jsxx_rychsq.jsp"></forward>		
+		</action>
+		<action path="/dyszjf_print" parameter="dyszjf_print" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/pjpy/jsxx/pjpy_jsxx_dycphz.jsp"></forward>
+		</action>
+		<action path="/zhszcp_print" parameter="zhszcp_print" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/pjpy/jsxx/pjpy_jsxx_zhszcphz.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 漳州师范学院评奖评优申请>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zzsf_apply" parameter="apply" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_jxjsq.jsp"></forward>	
+				<forward name="false" path="/errMsg.do"></forward>	
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 漳州师范学院评奖评优申请保存>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zzsf_apply_save" parameter="saveapplication" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_jxjsq.jsp"></forward>	
+				<forward name="false" path="/errMsg.do"></forward>	
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 漳州师范学院评奖评优申请打印报表>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zzsf_jxjpsdjb" parameter="zzsfPjpyJxjdjb" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_jxjpsdjb.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 漳州师范学院评奖评优荣誉称号申请>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zzsf_rychsq" parameter="zzsfPjpyRychsq" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_rychsq.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 漳州师范学院评奖评优荣誉称号申请保存>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zzsf_rych_save" parameter="zzsfPjpyRychSave" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_rychsq.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 漳州师范学院评奖评优荣誉称号申请打印报表>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_zzsf_rychpsdjb" parameter="zzsfPjpyRychdjb" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_rychpsdjb.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 安徽建筑工业学院评奖评优申请>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_ahjg_apply" parameter="apply" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_jxjsq.jsp"></forward>	
+				<forward name="false" path="/errMsg.do"></forward>	
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 安徽建筑工业学院评奖评优申请保存>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_ahjg_apply_save" parameter="saveapplication" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_jxjsq.jsp"></forward>	
+				<forward name="false" path="/errMsg.do"></forward>	
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 安徽建筑工业学院评奖评优申请打印报表>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_ahjg_jxjpsdjb" parameter="zzsfPjpyJxjdjb" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_jxjpsdjb.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 安徽建筑工业学院评奖评优荣誉称号申请>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_ahjg_rychsq" parameter="zzsfPjpyRychsq" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_rychsq.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<SQ 安徽建筑工业学院评奖评优荣誉称号申请打印报表>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_ahjg_rychpsdjb" parameter="zzsfPjpyRychdjb" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/pjpy_zzsf_rychpsdjb.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<奖学金汇总>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_jxjhz" parameter="jxjhz" name="ZzsfPjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/pjpy/zzsf/jxjhz.jsp"></forward>		
+		</action>
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<奖学金输出汇总>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/pjpy_jxjhz_output" parameter="jxjhz_output" name="ZzsfPjpyForm" scope="request"
+				type="xgxt.pjpy.zzsf.ZzsfPjpyAction">
+				<forward name="success" path="/about:blank"></forward>		
+		</action>
+		
+		<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<sq 杭州职业技术学院成绩导入>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+		<action path="/hzzy_cjimp" parameter="hzzy_cjimp" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/pjpy/hzzy/hzzy_cjimp.jsp"></forward>
+		</action>
+		<action path="/hzzy_cjimpcommit" parameter="hzzy_cjimpcommit" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/hzzy_cjimp.do"></forward>		
+		</action>
+		<action path="/hzzy_cjQlcommit" parameter="hzzy_cjQlcommit" name="PjpyForm" scope="request"
+				type="xgxt.pjpy.PjpyAction">
+				<forward name="success" path="/pjpy/hzzy/hzzy_cjimp.jsp"></forward>		
+		</action>
+    	<action 
+    		path="/pjpy_zjsyzy" 
+    		type="xgxt.pjpy.zjsyzy.PjpyZjsyzyAction"
+    		parameter="method" 
+    		name="pjpyZjsyzyForm"
+    		scope="request">
+    		<forward name="checkOne" path="/pjpy/zjsyzy/prise_check_one.jsp"/>
+    		<forward name="rychCheckOne" path="/pjpy/zjsyzy/credit_check_one.jsp"/> 
+    		 
+    		<forward name="bsxmwh" path="/pjpy/zjsyzy/bsxmwh.jsp"/>  
+    		<forward name="xybsxmwh" path="/pjpy/zjsyzy/xybsxmwh.jsp"/>  
+    		<forward name="addBsxm" path="/pjpy/zjsyzy/addBsxm.jsp"/>  
+    		<forward name="addBsxmJf" path="/pjpy/zjsyzy/addBsxmJf.jsp"/>   
+    		 
+    		<forward name="zyszjfwh" path="/pjpy/zjsyzy/pjpy_zjsyzy_dyszjfwh.jsp" />	
+    		<forward name="szjf" path="/pjpy/zjsyzy/szjf.jsp" />	
+    		<forward name="pjpyhmd" path="/pjpy/zjsyzy/pjpy_zjsyzy_pjpyhmd.jsp" />    
+    		<forward name="hmd" path="/pjpy/zjsyzy/pjpyhmd.jsp" />    	
+    		<forward name="jxjApply" path="/pjpy/zjsyzy/zjsyzyJxjsq.jsp" />
+    		<forward name="bjzhszcpinfo" path="/pjpy/zjsyzy/bjzhszcpinfo.jsp"/>									
+    	</action>
+	</action-mappings>
+
+	<message-resources key="pjpy" parameter="xgxt.base.pjpy" />
+</struts-config>

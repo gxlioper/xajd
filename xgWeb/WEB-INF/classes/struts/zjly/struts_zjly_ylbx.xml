@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <!--表单配置-->
+	<form-beans>
+	    <!--参数设置-->
+		<form-bean name="YlbxForm" type="com.zfsoft.xgxt.zjly.ylbx.YlbxForm"/>
+	</form-beans>
+
+	<!--path配置-->
+	<action-mappings>
+		<!--参数设置-->
+		<action path="/xg_zjly_ylbx" forward="/zjly_ylbx.do?method=getYlbxCx"/> 
+		<action path="/zjly_ylbx" 
+	    	type="com.zfsoft.xgxt.zjly.ylbx.YlbxAction"
+	    	parameter="method"
+	    	name="YlbxForm"
+	    	scope="request">
+	    	<forward name="add" path="/xsgzgl/zjly/ylbx/ylbxadd.jsp"/>
+			<forward name="edit" path="/xsgzgl/zjly/ylbx/ylbxedit.jsp"/>
+			<forward name="cx" path="/xsgzgl/zjly/ylbx/ylbxcx.jsp"/>
+			<forward name="xscx" path="/xsgzgl/zjly/ylbx/ylbxxscx.jsp"/>
+			<forward name="ck" path="/xsgzgl/zjly/ylbx/ylbxck.jsp"/>
+			<forward name="drjsp" path="/xsgzgl/zjly/ylbx/dr.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config>

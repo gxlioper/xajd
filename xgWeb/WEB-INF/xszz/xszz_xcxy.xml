@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xcxyXszzForm" type="xgxt.xszz.xcxy.XcxyXszzForm"></form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>		
+		<action name="xcxyXszzForm" parameter="method" path="/xcxyXszz"
+				scope="request"	type="xgxt.xszz.xcxy.XcxyXszzAction">
+			<forward name="zzxminfo" path="/xszz/xcxy/zzxminfo.jsp" />
+			<forward name="editzzxm" path="/xszz/xcxy/editzzxm.jsp" />
+			<forward name="zzjeinfo" path="/xszz/xcxy/zzjeinfo.jsp" />
+			<forward name="editzzje" path="/xszz/xcxy/editzzje.jsp" />
+			<forward name="zzsjinfo" path="/xszz/xcxy/zzsjinfo.jsp" />
+			<forward name="editzzsj" path="/xszz/xcxy/editzzsj.jsp" />
+			<forward name="zzxmlist" path="/xszz/xcxy/allzzxm.jsp" />
+			<forward name="jxjsqb" path="/xszz/xcxy/jxjsqb.jsp" />
+			<forward name="zxjsqb" path="/xszz/xcxy/zxjsqb.jsp" />
+			<forward name="viewxscj" path="/xszz/xcxy/viewxscj.jsp" />
+			<forward name="zzxmsh" path="/xszz/xcxy/zzxmsh.jsp" />
+			<forward name="viewxssq" path="/xszz/xcxy/viewxssq.jsp" />
+			<forward name="excutesh" path="/xszz/xcxy/excutesh.jsp" />
+			<forward name="queryxszz" path="/xszz/xcxy/queryxszz.jsp" />
+			<forward name="viewzzxx" path="/xszz/xcxy/viewzzxx.jsp" />
+			<forward name="xsviewzzinfo" path="/xszz/xcxy/xsviewzzinfo.jsp" />
+			<forward name="printsqb" path="/xszz/xcxy/printsqb.jsp" />
+			<forward name="printxszz" path="/xszz/xcxy/printxszz.jsp" />
+			<forward name="expdata" path="/about:blank" />
+		</action>	
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

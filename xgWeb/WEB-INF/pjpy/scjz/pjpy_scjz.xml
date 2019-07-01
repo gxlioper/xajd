@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="pjpyScjzActionForm" type="xgxt.pjpy.scjz.PjpyScjzActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<action path="/pjpy_scjz_jxjsq" 	   forward="/pjpyscjzwh.do?method=jxjSq"/> <!-- 奖学金申请页面 -->
+		<action path="/pjpy_scjz_jxjmodi"      forward="/pjpyscjzwh.do?method=jxjModi"/><!-- 奖学金修改页面 -->
+        <action path="/pjpy_scjz_jxjsh"        forward="/pjpyscjzwh.do?method=jxjsh"/><!-- 奖学金审核 -->
+        
+        <!-- 实际路径 -->	
+		<action path="/pjpyscjzwh"
+				type="xgxt.pjpy.scjz.PjpyScjzAction"
+				name="pjpyScjzActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="jxjsqpage" path="/pjpy/scjz/jxjsqpage.jsp"></forward>
+			<forward name="jxjmodipage" path="/pjpy/scjz/jxjmodipage.jsp"/>
+			<forward name="jxjshpage" path="/pjpy/scjz/jxjshpage.jsp"/>
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

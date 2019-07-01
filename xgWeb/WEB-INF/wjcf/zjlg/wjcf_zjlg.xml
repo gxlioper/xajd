@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="wjcfZjlgActionForm" type="xgxt.wjcf.zjlg.WjcfZjlgActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- 展现路径 -->
+		<action path="/wjcf_zjlg_cfsh" 	   forward="/wjcfzjlgwh.do?method=cfshWh"/> <!-- 处分审核维护默认页面 -->
+		<action path="/wjcf_zjlg_cfxxdgsh" 	   forward="/wjcfzjlgwh.do?method=cfxxDgsh"/> <!-- 处分单个审核维护页面 -->
+		<action path="/wjcf_zjlg_cfxxplsh" 	   forward="/wjcfzjlgwh.do?method=cfxxPlsh"/> <!-- 处分单个审核维护页面 -->
+		<action path="/wjcf_zjlg_lxckcx"   forward="/wjcfzjlgwh.do?method=lxckCx"/><!-- 留校察看 -->
+		<action path="/wjcf_zjlg_lxcksjwh"   forward="/wjcfzjlgwh.do?method=lxckSjwh"/><!-- 留校察看数据维护 -->
+		<action path="/wjcf_zjlg_addLxckxx"   forward="/wjcfzjlgwh.do?method=addLxckxx"/><!-- 单个增加留校察看数据 -->
+		<action path="/wjcf_zjlg_addLxckxx2"   forward="/wjcfzjlgwh.do?method=addLxckxx2"/><!-- 单个增加留校察看数据 -->
+		<action path="/wjcf_zjlg_lxckxxquery"   forward="/wjcfzjlgwh.do?method=lxckxxQuery"/><!-- 查询留校察看数据 -->
+		<action path="/wjcf_zjlg_modiLxckxx"   forward="/wjcfzjlgwh.do?method=modiLxckxx"/><!-- 修改留校察看数据 -->
+		<action path="/wjcf_zjlg_delLxckxx"   forward="/wjcfzjlgwh.do?method=delLxckxx"/><!-- 删除留校察看数据 -->
+		<action path="/wjcf_zjlg_lxcksjsh"   forward="/wjcfzjlgwh.do?method=lxckSjsh"/><!-- 留校察看数据审核 -->
+		<action path="/wjcf_zjlg_LxckxxDgsh"   forward="/wjcfzjlgwh.do?method=lxckxxDgsh"/><!-- 留校察看数据单个审核 -->
+		<action path="/wjcf_zjlg_plshLxckxx"   forward="/wjcfzjlgwh.do?method=plshLxckxx"/><!-- 留校察看数据批量审核 -->
+		<action path="/wjcf_zjlg_cfbprint"   forward="/wjcfzjlgwh.do?method=cfbprint"/><!-- 留校察看数据批量审核 -->
+		
+        <!-- 实际路径 -->	
+		<action path="/wjcfzjlgwh"
+				type="xgxt.wjcf.zjlg.WjcfZjlgAction"
+				name="wjcfZjlgActionForm"
+				parameter="method"
+				scope="request">
+			<forward name="cfshWh"       path="/wjcf/zjlg/cfsh.jsp" /><!-- 处分审核维护默认页面 -->
+			<forward name="cfxxDgsh"       path="/wjcf/zjlg/cfxxDgsh.jsp" /><!-- 处分单个审核维护页面 -->
+			<forward name="cfxxPlsh"       path="/wjcf/zjlg/cfxxPlsh.jsp" /><!-- 处分批量审核维护页面 -->
+			<forward name="lxckCx"       path="/wjcf/zjlg/lxckCx.jsp" /><!-- 留校察看维护页面 -->
+			<forward name="lxckSjwh"       path="/wjcf/zjlg/lxckSjwh.jsp" /><!-- 留校察看维护页面 -->
+			<forward name="addLxckxx"       path="/wjcf/zjlg/addLxckxx.jsp" /><!-- 留校察看维护页面 -->
+			<forward name="addLxckxx2"       path="/wjcf/zjlg/addLxckxx2.jsp" /><!-- 留校察看维护页面 -->
+			<forward name="lxckxxQuery"       path="/wjcf/zjlg/lxckxxQuery.jsp" /><!-- 留校察看维护页面 -->
+			<forward name="modiLxckxx"       path="/wjcf/zjlg/modiLxckxx.jsp" /><!-- 修改留校察看数据 -->
+			<forward name="lxckSjsh"       path="/wjcf/zjlg/lxckSjsh.jsp" /><!-- 留校察看数据审核 -->
+			<forward name="lxckxxDgsh"       path="/wjcf/zjlg/lxckxxDgsh.jsp" /><!-- 留校察看数据单个审核 -->
+			<forward name="plshLxckxx"       path="/wjcf/zjlg/plshLxckxx.jsp" /><!-- 留校察看数据单个审核 -->
+			<forward name="cfbprint"       path="/wjcf/zjlg/cfbprint.jsp" /><!-- 留校察看数据单个审核 -->
+		</action>
+
+	</action-mappings>
+
+	<message-resources key="" parameter="" />
+
+</struts-config>

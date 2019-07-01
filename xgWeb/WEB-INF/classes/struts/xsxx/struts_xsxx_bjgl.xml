@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<!--班级管理 -->
+	<form-beans>
+		<form-bean name="bjglForm" type="com.zfsoft.xgxt.xsxx.bjgl.BjglForm"/>
+	</form-beans>
+	<action-mappings>	
+    	<action path="/xsxx_bjgl" 
+        		parameter="method"  
+        		name="bjglForm" 
+        		scope="request"
+		        type="com.zfsoft.xgxt.xsxx.bjgl.BjglAction">	
+		    <forward name="bjList" path="/xsgzgl/szdw/fdyrz/bjCx.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

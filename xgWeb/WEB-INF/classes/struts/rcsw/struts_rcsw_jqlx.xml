@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!-- 日常事务模块 -假期留校-->
+<struts-config>
+	<form-beans>
+    	<form-bean name="jqlxszModel" type="com.zfsoft.xgxt.rcsw.jqlx.JqlxszModel" />
+    	<form-bean name="jqlxModel" type="com.zfsoft.xgxt.rcsw.jqlx.JqlxModel" />
+	</form-beans>
+
+	<action-mappings>
+	
+	<action path="/rcsw_jqlxsz" forward="/rcsw_jqlx_jqlxsz.do?method=jqlxsz"/>	<!-- 假期留校设置 -->
+	<action path="/rcsw_jqlx_jqlxsz"
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.jqlx.JqlxszAction"
+   			name="jqlxszModel"
+   			parameter="method">
+   		<forward name="jqlxsz" path="/xsgzgl/rcsw/jqlx/jqlxsz.jsp"></forward>
+	</action>
+	
+	<action path="/rcsw_jqlxsq" forward="/rcsw_jqlx.do?method=jqlxSqManage"/>	<!-- 假期留校申请 -->
+	<action path="/rcsw_jqlxsh" forward="/rcsw_jqlx.do?method=jqlxShManage"/>	<!-- 假期留校审核 -->
+	<action path="/rcsw_jqlxjg" forward="/rcsw_jqlx.do?method=jqlxJgManage"/>	<!-- 假期留校结果 -->
+	<action path="/rcsw_jqlx"
+   			scope="request"
+   			type="com.zfsoft.xgxt.rcsw.jqlx.JqlxAction" 
+   			name="jqlxModel"
+   			parameter="method">	
+   		<forward name="jqlxSqList" path="/xsgzgl/rcsw/jqlx/jqlxsq_list.jsp"></forward>
+   		<forward name="addJqlx" path="/xsgzgl/rcsw/jqlx/jqlxsq_add.jsp"></forward>
+   		<forward name="updateJqlx" path="/xsgzgl/rcsw/jqlx/jqlxsq_update.jsp"></forward>
+   		<forward name="viewJqlxsq" path="/xsgzgl/rcsw/jqlx/jqlxsq_view.jsp"></forward>
+   		<forward name="jqlxShList" path="/xsgzgl/rcsw/jqlx/jqlxsh_list.jsp"></forward>
+   		<forward name="shDetail" path="/xsgzgl/rcsw/jqlx/jqlxsh_info.jsp"></forward>
+   		<forward name="jqlxJgList" path="/xsgzgl/rcsw/jqlx/jqlxjg_list.jsp"></forward>
+   		<forward name="addJqlxJg" path="/xsgzgl/rcsw/jqlx/jqlxjg_add.jsp"></forward>
+   		<forward name="updateJqlxJg" path="/xsgzgl/rcsw/jqlx/jqlxjg_update.jsp"></forward>
+   		<forward name="jqlxPlsh" path="/xsgzgl/rcsw/jqlx/jqlxsh_batch.jsp"></forward>
+   		<forward name="selectCwxx" path="/xsgzgl/rcsw/jqlx/selectCwxx.jsp"></forward>
+   		<forward name="importData" path="/xsgzgl/rcsw/jqlx/jqlxImportData.jsp"/>
+	</action>
+	
+	</action-mappings>
+</struts-config>

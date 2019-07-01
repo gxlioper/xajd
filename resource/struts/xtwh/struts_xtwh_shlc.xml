@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="xtwhShlcForm" type="xgxt.xtwh.comm.splc.XtwhShlcForm">
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>	
+		<action name="xtwhShlcForm" 
+				parameter="method" 
+				path="/splcNew"
+				scope="request"	
+				type="xgxt.xtwh.comm.splc.XtwhShlcAction">
+			<forward name="splcManage" path="/xtwh/comm/splc/splcManage.jsp" />
+			<forward name="splcAdd" path="/xtwh/comm/splc/splcAdd.jsp" />
+			<forward name="splcLczs" path="/xtwh/comm/splc/splcLczs.jsp" />
+			<forward name="splcYhsz" path="/xtwh/comm/splc/splcYhsz.jsp" />
+			<forward name="splcUpdate" path="/xtwh/comm/splc/splcUpdate.jsp"></forward>
+		</action>
+		
+		<action name="xtwhShlcForm" 
+				parameter="method" 
+				path="/splcAjax"
+				scope="request"	
+				type="xgxt.xtwh.comm.splc.XtwhShlcAjax">
+			<forward name="tsgw" path="/xtwh/comm/splc/splcgw.jsp" />
+			<forward name="tygw" path="/xtwh/comm/splc/splctysz.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="xgxt.base.ApplicationResources" />
+</struts-config>

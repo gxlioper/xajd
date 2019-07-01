@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="czxxDtjsForm" type="xgxt.dtjs.czxx.CzxxDtjsForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+	<!-- 显示路径 -->
+    <action path="/czxx_dtjs_tyxx" 	forward="/czxxDtjsTyxx.do?method=tyxxManage"/>	<!-- 团员信息 -->
+    <action path="/czxx_dtjs_ftypx" forward="/czxxDtjsTyxx.do?method=ftypxManage"/>	<!-- 非团员培训 -->
+	<action path="/czxx_dtjs_typx"  forward="/czxxDtjsTyxx.do?method=typxManage"/>	<!-- 团员培训 -->
+	<action path="/czxx_dtjs_tnty"  forward="/czxxDtjsTyxx.do?method=tntyManage"/>	<!-- 团内推优 -->
+	<action path="/czxx_dtjs_tyzc"  forward="/czxxDtjsTyxx.do?method=tyzcManage"/>	<!-- 团员注册 -->
+    
+    <action path="/czxx_dtjs_rdsq"  forward="/czxxDtjsDyxx.do?method=rdsqManage"/>	<!-- 入党申请 -->
+    <action path="/czxx_dtjs_jjfz"  forward="/czxxDtjsDyxx.do?method=jjfzManage"/>	<!-- 积极分子 -->
+    <action path="/czxx_dtjs_fzdx"  forward="/czxxDtjsDyxx.do?method=fzdxManage"/>	<!-- 发展对象 -->
+    <action path="/czxx_dtjs_ybdy"  forward="/czxxDtjsDyxx.do?method=ybdyManage"/>	<!-- 预备党员 -->
+    <action path="/czxx_dtjs_zsdy"  forward="/czxxDtjsDyxx.do?method=zsdyManage"/>	<!-- 正式党员 -->
+    <action path="/czxx_dtjs_pxxx"  forward="/czxxDtjsDyxx.do?method=pxxxManage"/>	<!-- 党课培训 -->
+    <action path="/czxx_dtjs_dkmd"  forward="/czxxDtjsDyxx.do?method=dkmdManage"/>	<!-- 党课名单 -->
+    <action path="/czxx_dtjs_sxhb"  forward="/czxxDtjsDyxx.do?method=sxhbManage"/>	<!-- 思想汇报 -->
+    
+    <!-- 实际路径 -->
+    <action path="/czxxDtjsTyxx" 
+        		parameter="method"  
+        		name="czxxDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.czxx.tyxx.TyxxAction">		        
+		<!-- 团员信息 -->
+		<forward name="tyxxManage"    path="/dtjs/czxx/tyxx/tyxxManage.jsp" />
+		<forward name="tyxxUpdate"    path="/dtjs/czxx/tyxx/tyxxUpdate.jsp" />
+		<!-- 非团员培训 -->
+		<forward name="ftypxManage"   path="/dtjs/czxx/tyxx/ftypxManage.jsp" />
+		<forward name="ftypxxxUpdate" path="/dtjs/czxx/tyxx/ftypxxxUpdate.jsp" />
+		<!-- 团员培训 -->
+		<forward name="typxManage"    path="/dtjs/czxx/tyxx/typxManage.jsp" />
+		<forward name="typxxxUpdate"  path="/dtjs/czxx/tyxx/typxxxUpdate.jsp" />
+		<!-- 团内推优 -->
+		<forward name="tntyManage"    path="/dtjs/czxx/tyxx/tntyManage.jsp" />
+		<forward name="tntyUpdate"    path="/dtjs/czxx/tyxx/tntyUpdate.jsp" />
+		<!-- 团员注册 -->
+		<forward name="tyzcManage"    path="/dtjs/czxx/tyxx/tyzcManage.jsp" />
+		<forward name="tyzcUpdate"    path="/dtjs/czxx/tyxx/tyzcUpdate.jsp" />
+	</action>
+
+    <action path="/czxxDtjsDyxx" 
+        		parameter="method"  
+        		name="czxxDtjsForm" 
+        		scope="request"
+		        type="xgxt.dtjs.czxx.dyxx.DyxxAction">		        
+		<!-- 入党申请 -->
+		<forward name="rdsqManage" path="/dtjs/czxx/dyxx/rdsqManage.jsp" />
+		<forward name="rdsqUpdate" path="/dtjs/czxx/dyxx/rdsqUpdate.jsp" />
+		<!-- 积极分子 -->
+		<forward name="jjfzManage" path="/dtjs/czxx/dyxx/jjfzManage.jsp" />
+		<forward name="jjfzUpdate" path="/dtjs/czxx/dyxx/jjfzUpdate.jsp" />
+		<forward name="jjfzdjb"    path="/dtjs/czxx/dyxx/jjfzdjb.jsp" />
+		<!-- 发展对象 -->
+		<forward name="fzdxManage" path="/dtjs/czxx/dyxx/fzdxManage.jsp" />
+		<forward name="fzdxUpdate" path="/dtjs/czxx/dyxx/fzdxUpdate.jsp" />
+		<!-- 预备党员 -->
+		<forward name="ybdyManage" path="/dtjs/czxx/dyxx/ybdyManage.jsp" />
+		<forward name="ybdyUpdate" path="/dtjs/czxx/dyxx/ybdyUpdate.jsp" />
+		<!-- 正式党员 -->
+		<forward name="zsdyManage" path="/dtjs/czxx/dyxx/zsdyManage.jsp" />
+		<forward name="zsdyUpdate" path="/dtjs/czxx/dyxx/zsdyUpdate.jsp" />
+		<!-- 学生信息 -->
+		<forward name="xsxxManage" path="/dtjs/czxx/dyxx/xsxxManage.jsp" />
+		<!-- 培训信息 -->
+		<forward name="pxxxManage" path="/dtjs/czxx/dyxx/pxxxManage.jsp" />
+		<forward name="pxxxUpdate" path="/dtjs/czxx/dyxx/pxxxUpdate.jsp" />
+		<!-- 党课名单 -->
+		<forward name="dkmdManage" path="/dtjs/czxx/dyxx/dkmdManage.jsp" />
+		<forward name="dkmdUpdate" path="/dtjs/czxx/dyxx/dkmdUpdate.jsp" />
+		<!-- 思想汇报 -->
+		<forward name="sxhbManage" path="/dtjs/czxx/dyxx/sxhbManage.jsp" />
+		<forward name="sxhbUpdate" path="/dtjs/czxx/dyxx/sxhbUpdate.jsp" />
+		
+	</action>
+	
+	</action-mappings>
+
+</struts-config>

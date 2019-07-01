@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    	<form-bean name="daqdclForm" type="com.zfsoft.xgxt.dagl.qdcl.DaqdclForm" />
+    	<form-bean name="daqdmbForm" type="com.zfsoft.xgxt.dagl.qdmb.DaqdmbForm" />
+    	<form-bean name="daxxglForm" type="com.zfsoft.xgxt.dagl.daxxgl.DaxxglForm" />
+    	<form-bean name="sxdaxxglForm" type="com.zfsoft.xgxt.dagl.sxdaxxgl.daxxwh.SxDaxxglForm" />
+    	<form-bean name="sxDaxxjgForm" type="com.zfsoft.xgxt.dagl.sxdaxxgl.daxxjg.SxDaxxjgForm" />
+    	
+    	<form-bean name="cqxxDaxxjgForm" type="com.zfsoft.xgxt.dagl.cqxxdaxxgl.daxxjg.CqxxDaxxjgForm" />
+    	<form-bean name="cqxxDaxxglForm" type="com.zfsoft.xgxt.dagl.cqxxdaxxgl.daxxwh.CqxxDaxxglForm" />
+    	
+    	<!-- 西藏民族大学（档案管理）BEGIN -->
+    	<form-bean name="dazccsszForm" type="com.zfsoft.xgxt.dagl.xzmzdx.cssz.DazccsszForm"></form-bean> <!-- 参数设置 -->
+    	<form-bean name="dazcsqForm" type="com.zfsoft.xgxt.dagl.xzmzdx.dazcsq.DazcsqForm"></form-bean> <!-- 申请 -->
+    	<form-bean name="dazcshForm" type="com.zfsoft.xgxt.dagl.xzmzdx.dazcsh.DazcshForm"></form-bean> <!-- 审核-->
+    	<form-bean name="dazcjgForm" type="com.zfsoft.xgxt.dagl.xzmzdx.dazcjg.DazcjgForm"></form-bean> <!-- 结果-->
+    	<!-- 西藏民族大学（档案管理）END -->
+	</form-beans>
+
+	<action-mappings>
+    <action 
+    	name="daqdclForm"
+    	parameter="method"
+    	scope="request"
+    	path="/daqdcl" type="com.zfsoft.xgxt.dagl.qdcl.DaqdclAction" >
+    	<forward name="daqdclList" path="/xsgzgl/dagl/qdcl/daqdclList.jsp"/>
+    	<forward name="addDaqdcl" path="/xsgzgl/dagl/qdcl/addDaqdcl.jsp"/>
+    	<forward name="updateDaqdcl" path="/xsgzgl/dagl/qdcl/updateDaqdcl.jsp"/>
+    </action>
+    <action 
+    	name="daqdmbForm"
+    	parameter="method"
+    	scope="request"
+    	path="/daqdmb" type="com.zfsoft.xgxt.dagl.qdmb.DaqdmbAction" >
+    	<forward name="daqdmbList" path="/xsgzgl/dagl/qdmb/daqdmbList.jsp"/>
+    	<forward name="addDaqdmb" path="/xsgzgl/dagl/qdmb/addDaqdmb.jsp"/>
+    	<forward name="updateDaqdmb" path="/xsgzgl/dagl/qdmb/updateDaqdmb.jsp"/>
+    	<forward name="viewDaqdmb" path="/xsgzgl/dagl/qdmb/viewDaqdmb.jsp"/>
+    </action>
+     <action 
+    	name="daxxglForm"
+    	parameter="method"
+    	scope="request"
+    	path="/daxxgl" type="com.zfsoft.xgxt.dagl.daxxgl.DaxxglAction" >
+    	<forward name="daxxglList" path="/xsgzgl/dagl/daxxgl/daxxglList.jsp"/>
+    	<forward name="addDaxxgl" path="/xsgzgl/dagl/daxxgl/addDaxxgl.jsp"/>
+    	<forward name="updateDaxxgl" path="/xsgzgl/dagl/daxxgl/updateDaxxgl.jsp"/>
+    	<forward name="viewDaxxgl" path="/xsgzgl/dagl/daxxgl/viewDaxxgl.jsp"/>
+    	<forward name="bandXsqd" path="/xsgzgl/dagl/daxxgl/bandXsqd.jsp"/>
+    	<forward name="bandXsqdBatch" path="/xsgzgl/dagl/daxxgl/bandXsqdBatch.jsp"/>
+    	<forward name="viewXsqd" path="/xsgzgl/dagl/daxxgl/viewXsqd.jsp"/>
+    </action>
+    <!-- 三峡档案管理维护-->
+    	<action path="/sxdaxxgl" forward="/sxDaxxgl.do?method=getdalist"/>
+		<action path="/sxDaxxgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.dagl.sxdaxxgl.daxxwh.SxDaxxglAction" 
+	   			name="sxdaxxglForm"         
+	   			parameter="method">	
+	   			<forward name="getdalist" path="/xsgzgl/dagl/sxdaxxgl/sxdawh/sxdaxxglList.jsp"/>
+	   			 <forward name="sxdaxxwh" path="/xsgzgl/dagl/sxdaxxgl/sxdawh/sxdaxxwh.jsp"/> 			
+	   			 <forward name="sxdaview" path="/xsgzgl/dagl/sxdaxxgl/sxdawh/sxdaxxview.jsp"/> 			
+		</action>	 
+	<!-- 三峡档案管理结果-->
+    	<action path="/sxdaxxgljg" forward="/sxDaxxjg.do?method=getjglist"/>
+		<action path="/sxDaxxjg" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.dagl.sxdaxxgl.daxxjg.SxDaxxjgAction" 
+	   			name="sxDaxxjgForm"         
+	   			parameter="method">	
+	   			<forward name="getjglist" path="/xsgzgl/dagl/sxdaxxgl/sxdajg/sxdajgList.jsp"/>
+	   			<forward name="dajgView" path="/xsgzgl/dagl/sxdaxxgl/sxdajg/viewdajg.jsp"/>	   	
+		</action>
+		
+		
+		 <!-- 重庆信息档案管理维护 -->
+    	<action path="/cqxxdaxxgl" forward="/cqxxDaxxgl.do?method=getdalist"/>
+		<action path="/cqxxDaxxgl" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.dagl.cqxxdaxxgl.daxxwh.CqxxDaxxglAction" 
+	   			name="cqxxDaxxglForm"         
+	   			parameter="method">	
+	   			<forward name="getdalist" path="/xsgzgl/dagl/cqxxdaxxgl/cqxxdawh/cqxxdaxxglList.jsp"/>
+	   			 <forward name="cqxxdaxxwh" path="/xsgzgl/dagl/cqxxdaxxgl/cqxxdawh/cqxxdaxxwh.jsp"/> 			
+	   			 <forward name="sxdaview" path="/xsgzgl/dagl/cqxxdaxxgl/cqxxdawh/cqxxdaxxview.jsp"/> 			
+		</action>	
+	<!-- 重庆信息档案管理结果-->
+    	<action path="/cqxxdaxxjg" forward="/cqxxDaxxjg.do?method=getjglist"/>
+		<action path="/cqxxDaxxjg" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.dagl.cqxxdaxxgl.daxxjg.CqxxDaxxjgAction" 
+	   			name="cqxxDaxxjgForm"         
+	   			parameter="method">	
+	   			<forward name="getjglist" path="/xsgzgl/dagl/cqxxdaxxgl/cqxxdajg/cqxxdajgList.jsp"/>
+	   			<forward name="dajgView" path="/xsgzgl/dagl/cqxxdaxxgl/cqxxdajg/cqxxviewdajg.jsp"/>	   	
+		</action>		
+		
+		
+		
+		<!-- 西藏民族大学（档案管理）BEGIN -->
+		<!-- 档案转出参数设置 -->
+		<action path="/xsxx_dagl_cssz" forward="/dagl_cssz.do?method=getDazccsszList"/>
+		<action path="/dagl_cssz" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.dagl.xzmzdx.cssz.DazccsszAction" 
+	   			name="dazccsszForm"         
+	   			parameter="method">	
+	   			<forward name="dazccsszList" path="/xsgzgl/dagl/xzmzdx/cssz/dazccsszList.jsp"/>
+		</action>
+		<!-- 档案转出申请 -->
+		<action path="/xsxx_dagl_dazcsq" forward="/dagl_dazcsq.do?method=getDazcsqList"/>
+		<action path="/dagl_dazcsq" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.dagl.xzmzdx.dazcsq.DazcsqAction" 
+	   			name="dazcsqForm"         
+	   			parameter="method">	
+	   			<forward name="dazcsqList" path="/xsgzgl/dagl/xzmzdx/dazcsq/dazcsqList.jsp"/>
+	   			<forward name="dazcsqApply" path="/xsgzgl/dagl/xzmzdx/dazcsq/dazcsqApply.jsp"/>
+	   			<forward name="dazcsqUpdate" path="/xsgzgl/dagl/xzmzdx/dazcsq/dazcsqUpdate.jsp"/>
+	   			<forward name="dazcsqView" path="/xsgzgl/dagl/xzmzdx/dazcsq/dazcsqView.jsp"/>
+		</action>
+		<!-- 档案转出审核 -->
+		<action path="/xsxx_dagl_dazcsh" forward="/dagl_dazcsh.do?method=getDazcshList"/>
+		<action path="/dagl_dazcsh" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.dagl.xzmzdx.dazcsh.DazcshAction" 
+	   			name="dazcshForm"         
+	   			parameter="method">	
+	   			<forward name="dazcshList" path="/xsgzgl/dagl/xzmzdx/dazcsh/dazcshList.jsp"/>
+	   			<forward name="dazcshSingle" path="/xsgzgl/dagl/xzmzdx/dazcsh/dazcshSingle.jsp"/>
+		</action>
+		<!-- 档案转出结果 -->
+		<action path="/xsxx_dagl_dazcjg" forward="/dagl_dazcjg.do?method=getDazcjgList"/>
+		<action path="/dagl_dazcjg" 
+	   			scope="request"
+	   			type="com.zfsoft.xgxt.dagl.xzmzdx.dazcjg.DazcjgAction" 
+	   			name="dazcjgForm"         
+	   			parameter="method">	
+	   			<forward name="dazcjgList" path="/xsgzgl/dagl/xzmzdx/dazcjg/dazcjgList.jsp"/>
+	   			<forward name="dazcjgAdd" path="/xsgzgl/dagl/xzmzdx/dazcjg/dazcjgAdd.jsp"/>
+	   			<forward name="dazcjgUpdate" path="/xsgzgl/dagl/xzmzdx/dazcjg/dazcjgUpdate.jsp"/>
+	   			<forward name="dazcjgView" path="/xsgzgl/dagl/xzmzdx/dazcjg/dazcjgView.jsp"/>
+		</action>	
+		<!-- 西藏民族大学（档案管理）END -->
+	</action-mappings>
+
+</struts-config>
