@@ -220,22 +220,7 @@ function saveForm(){
 						</th>
 					</tr>
 					</tbody>
-					<thead>
-						<tr class="h">
-							<th colspan="4">
-								<span>转正申请信息</span>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th><font color="red">*</font>转正理由<br><font color="red">限制字数（200）</font><br/></th>
-							<td colspan="3">
-								<html:textarea property="zzly" styleId="zzly" onblur="chLengs(this,200);"
-								   style="width:90%;" rows="5"></html:textarea>
-							</td>
-						</tr>
-					</tbody>
+
 				</table>
 				</div>	
 				<div style="height:30px;"></div>
