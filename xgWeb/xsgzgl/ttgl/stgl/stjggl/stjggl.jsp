@@ -220,6 +220,47 @@ function saveForm(){
 						</th>
 					</tr>
 					</tbody>
+					<thead>
+					<tr class="h">
+						<th colspan="4">
+							<span>职务</span>
+						</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="h">
+						<th colspan="7">
+							<table width="100%" >
+								<thead>
+								<tr>
+									<th width='10%' style="text-align:center">学号</th>
+									<th width='10%' style="text-align:center">姓名</th>
+									<th width='10%' style="text-align:center">书院</th>
+									<th width='10%' style="text-align:center">学院</th>
+									<th width='10%' style="text-align:center">专业</th>
+									<th width='10%' style="text-align:center">班级</th>
+									<th width='10%' style="text-align:center">分组</th>
+									<th width='10%' style="text-align:center">电话</th>
+								</tr>
+								</thead>
+								<tbody id="tablebody3">
+								<logic:iterate id="i" name="tzsxxInfo" indexId="index">
+									<tr name='deltr'>
+										<td style='text-align:center'><input name='tzsxh' type='hidden'  value='${i.xh}'/><label name = 'xhname'>${i.xh}</label></td>
+										<td style='text-align:center'><label name = 'xm'>${i.xm}</label></td>
+										<td style='text-align:center'><label name = 'symc'>${i.symc}</label></td>
+										<td style='text-align:center'><label name = 'xymc'>${i.xymc}</label></td>
+										<td style='text-align:center'><label name = 'zymc'>${i.zymc}</label></td>
+										<td style='text-align:center'><label name = 'bjmc'>${i.bjmc}</label></td>
+										<td style='text-align:center'><label name = 'fz'>团支书</label></td>
+										<td style='text-align:center'><label name = 'sjhm'>${i.sjhm}</label></td>
+									</tr>
+								</logic:iterate>
+								</tbody>
+							</table>
+						</th>
+					</tr>
+					</tbody>
 
 				</table>
 				</div>	
