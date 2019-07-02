@@ -76,4 +76,16 @@ public class FdsDao extends SuperDAOImpl<FdsForm> {
         return dao.getMapNotOut(sql.toString(),input);
     }
 
+    public boolean isCanDel(String id){
+        StringBuffer sb=new StringBuffer();
+        sb.append("select yxzt from xg_xyfd_fdsxxb where id=? ");
+        String yxzt=dao.getOneRs(sb.toString(), new String[] {id}, "yxzt");
+        return yxzt.equals("1")?false:true;
+    }
+    public HashMap<String,String> getFds(String id) throws Exception{
+        StringBuilder sql = new StringBuilder();
+        sql.append(" select * from xg_xyfd_fdsxxb where id = ?");
+        String[] input = new String[]{id};
+        return dao.getMapNotOut(sql.toString(),input);
+    }
 }

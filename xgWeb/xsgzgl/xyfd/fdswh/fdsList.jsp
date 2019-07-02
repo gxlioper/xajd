@@ -47,22 +47,6 @@
             jQuery("#dataTable").reloadGrid(map);
         }
 
-        var DCCLBH = "hdgl_hdgl_hdqd.do";//dcclbh,导出功能编号
-
-        //自定义导出 功能
-        function exportConfig() {
-            //DCCLBH导出功能编号,执行导出函数
-            customExport(DCCLBH, ExportData);
-        }
-
-        // 导出方法
-        function ExportData() {
-            setSearchTj();//设置高级查询条件
-            var url = "hdgl_hdgl_hdqd_wh.do?method=export&dcclbh=" + DCCLBH;//dcclbh,导出功能编号
-            url = addSuperSearchParams(url);//设置高级查询参数
-            jQuery("form").eq(0).attr("action", url);
-            jQuery("form").eq(0).submit();
-        }
         function add(){
             showDialog("新增辅导室",700,350,"xyfd_fdswh.do?method=addfds");
         }
@@ -76,34 +60,29 @@
             showDialog("修改活动学生",700,350,"xyfd_fdswh.do?method=updatefds&id="+rows[0].id );
 
         }
-        function deleteQd(){
-            var rows = jQuery("#dataTable").getSeletRow();
-            var qdxxs = new Array();
-            if(rows.length<1){
-                showAlertDivLayer("请选择您要删除的记录");
-                return false;
+        function deleteFds(){
+            var ids = jQuery("#dataTable").getSeletIds();
+            if (ids.length == 0) {
+                showAlertDivLayer("请选择您要删除的记录！");
+            } else {
+                var rows = jQuery("#dataTable").getSeletRow();
+                showConfirmDivLayer("您确定要删除选择的记录吗？", {
+                    "okFun" : function() {
+                        jQuery.post("xyfd_fdswh.do?method=deleteFds", {
+                            values : ids.toString()
+                        }, function(data) {
+                            var mes="成功删除了<font color='green'>&nbsp;"+data["num"]+"&nbsp;</font>条数据";
+                            mes+="</br>";
+                            if(data["nodel"]!="-1"){
+                                mes+="<font color='red'>"+data["nodel"]+"</font>";
+                                mes+="正常运行中不能删除!";
+                            }
+                            showAlertDivLayer(mes);
+                            jQuery("#dataTable").reloadGrid();
+                        }, 'json');
+                    }
+                });
             }
-            for(var i=0;i<rows.length;i++){
-                qdxxs.push(rows[i].xh+"_"+rows[i].hdid);
-            }
-            showConfirmDivLayer("是否确定删除勾选的"+rows.length+"条记录？", {
-                "okFun" : function() {
-                    var url = "hdgl_hdgl_hdqd_wh.do?method=deleteQd";
-                    jQuery.post(url, {
-                        qdxxlist : qdxxs.toString()
-                    }, function(data) {
-                        if (data["success"] == false) {
-                            showAlertDivLayer(data["message"]);
-                        } else {
-                            showAlertDivLayer(data["message"], {}, {
-                                "clkFun" : function(tag) {
-                                    jQuery("#dataTable").reloadGrid();
-                                }
-                            });
-                        }
-                    }, 'json');
-
-                }});
         }
     </script>
 </head>
@@ -121,7 +100,7 @@
             <ul>
                 <li><a href="#" class="btn_zj" onclick="add();return false;">增加</a></li>
                 <li><a href="#" class="btn_xg" onclick="update();return false;">修改</a></li>
-                <li><a href="#" class="btn_sc" onclick="deleteQd();return false;">删除</a></li>
+                <li><a href="#" class="btn_sc" onclick="deleteFds();return false;">删除</a></li>
                 <%--<li><a href="#" class="btn_dr" onclick="importConfig();return false;">导入</a></li>--%>
                 <%--<li><a href="#" class="btn_dc" onclick="exportConfig();return false;">导出</a></li>--%>
                     <%--<li><a href="#" class="btn_dc" onclick="return false;">推送报名数据</a></li>--%>
