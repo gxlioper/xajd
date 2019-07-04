@@ -197,7 +197,16 @@
    		<forward name="stzzsq" path="/xsgzgl/ttgl/stgl/stcygl/stzzsq.jsp"></forward>
    		<forward name="sqxxck" path="/xsgzgl/ttgl/stgl/stcygl/sqxxck.jsp"></forward>
 	</action>
-	
+	<!--组织结构管理-->
+	<action path="/xg_ttgl_stjggl" forward="/ttgl_stjggl.do?method=stjgglList"/>
+	<action path="/ttgl_stjggl"
+			scope="request"
+			type="com.zfsoft.xgxt.ttgl.stgl.stjggl.StjgglAction"
+			name="stcyglForm"
+			parameter="method">
+		<forward name="stjgglList" path="/xsgzgl/ttgl/stgl/stjggl/stjgglList.jsp"/>
+		<forward name="stjggl" path="/xsgzgl/ttgl/stgl/stjggl/stjggl.jsp"/>
+	</action>
 	
 	</action-mappings>
 </struts-config>

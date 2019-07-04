@@ -58,6 +58,8 @@
 		<form-bean name="zzkffForm" type="com.zfsoft.xgxt.xszz.zzkff.ZzkffForm"></form-bean>
 		<!--绿色通道-->
 		<form-bean name="lstdForm" type="com.zfsoft.xgxt.xszz.lstd.LstdForm"></form-bean>
+		<!--综合查询-->
+		<form-bean name="zhcxForm" type="com.zfsoft.xgxt.xszz.zhcx.ZhcxForm"></form-bean>
 	</form-beans>
 
 	<action-mappings>
@@ -552,6 +554,15 @@
 			<forward name="lstdjgList" path="/xsgzgl/xszz/lstd/lstdjgList.jsp"/>
 			<forward name="lstdjgZj" path="/xsgzgl/xszz/lstd/lstdjgZj.jsp"/>
 			<forward name="lstdjgXg" path="/xsgzgl/xszz/lstd/lstdjgXg.jsp"/>
+		</action>
+		<!--综合查询-->
+		<action path="/xszz_new_zhcx" forward="/xszz_newZhcx.do?method=zhcxList"/>
+		<action path="/xszz_newZhcx"
+				scope="request"
+				type="com.zfsoft.xgxt.xszz.zhcx.ZhcxAction"
+				name="zhcxForm"
+				parameter="method">
+			<forward name="zhcxList" path="/xsgzgl/xszz/zhcx/xszzZhcxList.jsp"/>
 		</action>
 
 	</action-mappings>
