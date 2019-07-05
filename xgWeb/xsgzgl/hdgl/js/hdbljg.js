@@ -110,7 +110,24 @@ function changeHdxs(){
         jQuery("#jzlx").val("");
         jQuery("#zxkclx").val("");
 
+        var hdlx = jQuery("#hdlx").val();
+        if ("活动"==hdxs && "4"==hdlx){
+            jQuery("#zysc").show();
+        }else {
+            jQuery("#zysc").hide();
+        }
+
 	}
+}
+
+function changeHdlx() {
+    var hdxs = jQuery("#hdxs").val();
+    var hdlx = jQuery("#hdlx").val();
+    if("活动"==hdxs && "4"==hdlx){
+        jQuery("#zysc").show();
+    }else {
+        jQuery("#zysc").hide();
+    }
 }
 function JzInfoEmpty(){
 	var tr = jQuery("tr[name='zjrxx_tr']");

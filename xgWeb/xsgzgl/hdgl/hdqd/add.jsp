@@ -79,7 +79,7 @@
 </head>
 <body style="width:100%">
 <html:form action="/hdgl_hdgl_hdqd_wh" method="post" styleId="demoForm">
-    <div style='width:100%;height:465px;overflow-x:hidden;overflow-y:auto;'>
+    <div style='width:100%;height:475px;overflow-x:hidden;overflow-y:auto;'>
         <table width="100%" border="0" class="formlist">
             <thead>
             <tr>
@@ -164,6 +164,12 @@
     				            onclick="showCalendar('qtsj','yyyy-MM-dd HH:mm:ss');" ></html:text>
     		    </td>
     		</tr>
+            <tr>
+                <th>Ö¾Ô¸Ê±³¤</th>
+                <td colspan="3">
+                    <html:text property="zyxss" styleId="zyxss"></html:text>
+                </td>
+            </tr>
     		</tbody>
         </table>
     </div>

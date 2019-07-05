@@ -9,6 +9,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.zfsoft.xgxt.hdgl.hdxx.HdxxForm;
+import com.zfsoft.xgxt.hdgl.hdxx.HdxxService;
 import net.sf.json.JSONArray;
 
 import org.apache.commons.beanutils.BeanUtils;
@@ -116,6 +118,34 @@ public class HdblsqshAction extends SuperAction<HdblsqshForm, HdblsqshService>{
 	public ActionForward addHdblsq(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		HdblsqshForm model = (HdblsqshForm)form;
 		HdblsqshService service = new HdblsqshService();
+		HashMap<String,String> map = service.gethdblInfo(model);
+		if(null != map){
+			request.setAttribute("rs", map);
+			if(StringUtils.isNotNull(model.getLy())){
+				HashMap<String,String> map2 = service.gethdInfo(model.getHdid());
+				map2.remove("fjpath");//不替换原有附件
+				map.putAll(map2);
+			}
+			BeanUtils.copyProperties(model, StringUtils.formatData(map));
+			/*活动标签*/
+			if(StringUtils.isNotNull(map.get("hdbq"))){
+				model.setHdbq(map.get("hdbq"));
+				model.setHdbqs(map.get("hdbq").split(","));
+				model.setHdbqmc(map.get("hdbqmc"));
+			}
+		/*能力标签*/
+			if(StringUtils.isNotNull(map.get("nlbq"))){
+				model.setNlbq(map.get("nlbq"));
+				model.setNlbqs(map.get("nlbq").split(","));
+				model.setNlbqmc(map.get("nlbqmc"));
+			}
+		}
+		if (!StringUtil.isNull(model.getXh())) {
+			// 加载学生基本信息
+			XsxxService xsxxService = new XsxxService();
+			HashMap<String, String> xsjbxx = xsxxService.getXsjbxxMore(model.getXh());
+			request.setAttribute("jbxx", xsjbxx);
+		}
 		User user = getUser(request);
 		if ("stu".equals(user.getUserType())) {
 			model.setXh(user.getUserName());
@@ -190,6 +220,11 @@ public class HdblsqshAction extends SuperAction<HdblsqshForm, HdblsqshService>{
 		HashMap<String,String> map = service.gethdblInfo(model);
 		if(null != map){
 			request.setAttribute("rs", map);
+			if(StringUtils.isNotNull(model.getLy())){
+				HashMap<String,String> map2 = service.gethdInfo(model.getHdid());//获取选中的活动信息
+				map2.remove("fjpath");//不替换原有附件
+				map.putAll(map2);
+			}
 			BeanUtils.copyProperties(model, StringUtils.formatData(map));
 			/*活动标签*/
 			if(StringUtils.isNotNull(map.get("hdbq"))){
@@ -211,7 +246,7 @@ public class HdblsqshAction extends SuperAction<HdblsqshForm, HdblsqshService>{
 			request.setAttribute("jbxx", xsjbxx);
 		}
 		
-		String path = "hdgl_hdblsq.do?method=updateHdblsq";
+		String path = "hdgl_hdblsq.do?method=updateHdblsq&sqid=" + model.getSqid();
 		request.setAttribute("path", path);
 		request.setAttribute("jbxxList", jbxxList);
 
@@ -414,6 +449,37 @@ public class HdblsqshAction extends SuperAction<HdblsqshForm, HdblsqshService>{
 		request.setAttribute("rs", model);
 		return mapping.findForward("viewHdblsq");
 
+	}
+
+	/**
+	 * 获取当前系统已有的活动
+	 * @param mapping
+	 * @param form
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
+	public ActionForward getHdxxList(ActionMapping mapping, ActionForm form,
+									 HttpServletRequest request, HttpServletResponse response) throws Exception {
+		HdblsqshForm model = (HdblsqshForm)form;
+		HdblsqshService hdblsqshService = new HdblsqshService();
+		if (QUERY.equalsIgnoreCase(model.getType())) {
+			User user = getUser(request);
+			//生成高级查询对象
+			CommService comService = new CommService();
+			SearchModel searchModel = comService.getSearchModel(request);
+			model.setSearchModel(searchModel);
+			// 查询
+			List<HashMap<String, String>> resultList = hdblsqshService.getHdxxList(model, user);
+			JSONArray dataList = JSONArray.fromObject(resultList);
+			response.getWriter().print(dataList);
+			return null;
+		}
+		String gotoPath = request.getParameter("goto");
+		request.setAttribute("gotoPath", gotoPath);
+		request.setAttribute("path","hdgl_hdgl_hdqd_wh.do?method=getHdxxList");
+		return mapping.findForward("hdxxList");
 	}
 	
 }

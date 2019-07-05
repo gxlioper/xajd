@@ -36,7 +36,8 @@
 						}
 					   return rowObject["qtztmc"];
 					}},
-                    {label:'签退时间',name:'qtsj', index: 'qtsj',width:'8%'}
+                    {label:'签退时间',name:'qtsj', index: 'qtsj',width:'8%'},
+                    {label:'志愿时长',name:'zyxss', index: 'zyxss',width:'8%'}
                 ]
             }
             gridSetting["params"]=getSuperSearch();
@@ -71,7 +72,7 @@
             jQuery("form").eq(0).submit();
         }
         function add(){
-            showDialog("增加活动学生",800,500,"hdgl_hdgl_hdqd_wh.do?method=add");
+            showDialog("增加活动学生",800,520,"hdgl_hdgl_hdqd_wh.do?method=add");
         }
         function update(){
         	var rows = jQuery("#dataTable").getSeletRow();

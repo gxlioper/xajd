@@ -61,6 +61,7 @@ public class HdbljgForm extends ActionForm {
 	private String hddf;//活动打分
 	private String[] hdbqs;
 	private String[] nlbqs;
+	private String zyxss;//志愿小时数
 
 	private String zbf;//主办方
 	private String zjrxm;//主讲人姓名
@@ -69,6 +70,8 @@ public class HdbljgForm extends ActionForm {
 	private String zjrzw;//主讲人职务
 	private String zjrjs;//主讲人介绍
 	private String jzjb;//讲座级别
+	private String ly;//活动来源（用于补录选择已有活动）
+	private String hdid;//活动来源id（大厅发布，用于补录选择已有活动）
 
 	public String getJzjb() {
 		return jzjb;
@@ -728,5 +731,29 @@ public class HdbljgForm extends ActionForm {
 	 */
 	public void setJzlxmc(String jzlxmc) {
 		this.jzlxmc = jzlxmc;
+	}
+
+	public String getLy() {
+		return ly;
+	}
+
+	public void setLy(String ly) {
+		this.ly = ly;
+	}
+
+	public String getHdid() {
+		return hdid;
+	}
+
+	public void setHdid(String hdid) {
+		this.hdid = hdid;
+	}
+
+	public String getZyxss() {
+		return zyxss;
+	}
+
+	public void setZyxss(String zyxss) {
+		this.zyxss = zyxss;
 	}
 }

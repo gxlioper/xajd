@@ -57,6 +57,7 @@ public class HdblshService extends SuperServiceImpl<HdblsqshForm, HdblshDao> {
 		model.setZd1("活动类型");
 		model.setZd4("活动标签");
 		model.setZd7("获得学分");
+		model.setZd11("志愿小时数");
 		String hdlx = form.getHdlx();
 		model.setZd2(hdlx);
 		String hdlxmc = new HdblsqshDao().getHdmc(hdlx);
@@ -86,7 +87,7 @@ public class HdblshService extends SuperServiceImpl<HdblsqshForm, HdblshDao> {
 			}
 			model.setZd10(nlbq.toString());
 		}
-		
+		model.setZd12(form.getZyxss());
 		boolean result = false;
 		try {
 			String zhzt = shlc.runAuditing(model);

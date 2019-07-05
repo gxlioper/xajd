@@ -191,7 +191,16 @@ public class HdblsqshService extends SuperServiceImpl<HdblsqshForm, HdblsqshDao>
 	public HashMap<String,String> gethdblInfo(HdblsqshForm model){
 		return dao.gethdblInfo(model);
 	}
-	
+
+	/**
+	 * @description ：获取大厅推送活动
+	 * @date         ：2018-07-04 17:47
+	 * @param hdid
+	 * @return
+	 */
+	public HashMap<String,String> gethdInfo(String hdid){
+		return dao.gethdInfo(hdid);
+	}
 	/**
 	 * @description	： 获取活动标签list
 	 * @author 		： 柳俊（1282）
@@ -230,4 +239,8 @@ public class HdblsqshService extends SuperServiceImpl<HdblsqshForm, HdblsqshDao>
     public List<HashMap<String,String>> getZjrzcList() {
 		return dao.getZjrzcList();
     }
+
+    public List<HashMap<String,String>> getHdxxList(HdblsqshForm t,User user) throws Exception {
+    	return  dao.getHdxxPageList(t,user);
+	}
 }

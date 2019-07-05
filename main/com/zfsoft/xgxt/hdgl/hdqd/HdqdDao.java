@@ -37,7 +37,8 @@ public class HdqdDao extends SuperDAOImpl<HdqdForm> {
         sql.append("select * from (");
         sql.append("select x.*,a.qdsj,a.qtsj,b.hdmc,b.hddd,b.hdkssj,b.hdjssj,c.xm,");
         sql.append("decode(a.qdzt,'1','ÒÑÇ©µ½','Î´Ç©µ½') qdztmc, ");
-        sql.append("decode(a.qtzt,'1','ÒÑÇ©ÍË','Î´Ç©ÍË') qtztmc ");
+        sql.append("decode(a.qtzt,'1','ÒÑÇ©ÍË','Î´Ç©ÍË') qtztmc, ");
+        sql.append(" a.zyxss ");
         sql.append(" from (select hdid,xh from XG_HDGL_HDRYB where shzt='1' union select hdid,xh from XG_HDGL_ZDHDRYB where shzt='1') x");
         sql.append(" left join XG_HDGL_HDQDXXB a on x.hdid = a.hdid and x.xh = a.xh ");
         sql.append(" left join XG_HDGL_HDXXB b on x.hdid = b.hdid ");
@@ -51,12 +52,12 @@ public class HdqdDao extends SuperDAOImpl<HdqdForm> {
         StringBuilder sql = new StringBuilder();
         String tableName;
         String[] in = null;
-        if("1".equals(t.getBmlx())){
-            tableName = "XG_HDGL_HDRYB(hdid,xh,shzt) values(?,?,?)";
-            in = new String[]{t.getHdid(),t.getXh(),"1"};
-        } else {
+        if("0".equals(t.getBmlx())){
             tableName = "XG_HDGL_ZDHDRYB(hdid,dwid,dwzw,xh,shzt) values(?,?,?,?,?)";
             in = new String[]{t.getHdid(),t.getDwid(),t.getDwzw(),t.getXh(),"1"};
+        } else {
+            tableName = "XG_HDGL_HDRYB(hdid,xh,shzt) values(?,?,?)";
+            in = new String[]{t.getHdid(),t.getXh(),"1"};
         }
         sql.append("insert into ");
         sql.append(tableName);
@@ -132,21 +133,23 @@ public class HdqdDao extends SuperDAOImpl<HdqdForm> {
                 sql.append("qtzt = '0',");
             }
         }
-        sql.append(" qtsj = ? where hdid = ? and xh = ?");
-        String[] in = {t.getQdsj(),t.getQtsj(),t.getHdid(),t.getXh()};
+        sql.append(" qtsj = ? , zyxss = ? where hdid = ? and xh = ?");
+        String[] in = {t.getQdsj(),t.getQtsj(),t.getZyxss(),t.getHdid(),t.getXh()};
         return dao.runUpdate(sql.toString(),in);
     }
 
     public boolean insertQd(HdqdForm t) throws Exception{
         StringBuilder sql = new StringBuilder();
         HashMap<String,String> hdxx = getHdxx(t.getHdid());
-        sql.append("insert into XG_HDGL_HDQDXXB(xh,hdid,qdzt,qdsj,qtzt,qtsj) values(?,?,");
+        sql.append("insert into XG_HDGL_HDQDXXB(xh,hdid,qdzt,qdsj,qtzt,qtsj,zyxss) values(?,?,");
         if(!StringUtil.isNull(hdxx.get("qdkssj"))&&!StringUtil.isNull(hdxx.get("qdjssj"))){
             if(hdxx.get("qdkssj").compareTo(t.getQdsj())<0&&hdxx.get("qdjssj").compareTo(t.getQdsj())>0){
                 sql.append("'1',");
             }else {
                 sql.append("'0',");
             }
+        }else {
+            sql.append("'0',");
         }
         sql.append("?,");
         if (!StringUtil.isNull(hdxx.get("qtkssj"))&&!StringUtil.isNull(hdxx.get("qtjssj"))){
@@ -155,9 +158,11 @@ public class HdqdDao extends SuperDAOImpl<HdqdForm> {
             }else {
                 sql.append("'0',");
             }
+        }else {
+            sql.append("'0',");
         }
-        sql.append("?)");
-        String[] in = {t.getXh(),t.getHdid(),t.getQdsj(),t.getQtsj()};;
+        sql.append("?,?)");
+        String[] in = {t.getXh(),t.getHdid(),t.getQdsj(),t.getQtsj(),t.getZyxss()};
         return dao.runUpdate(sql.toString(),in);
     }
     public boolean delqdxx(HdqdForm t) throws Exception{

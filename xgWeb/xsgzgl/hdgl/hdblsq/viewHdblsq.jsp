@@ -29,6 +29,13 @@
                 }else{
                     jQuery("tr[name='zjrxx_tr']").hide();
                     jQuery("#jzlxTr").hide();
+
+                    var hdlx = '${rs.hdlx}';
+                    if ("活动"==hdxs && "4"==hdlx){
+                        jQuery("#zysc").show();
+                    }else {
+                        jQuery("#zysc").hide();
+                    }
                 }
                 kcjbChange();
 			});
@@ -223,6 +230,14 @@
 							<th>申请获得学分</th>
 							<td>
 								${rs.hdxf}
+							</td>
+						</tr>
+						<tr id="zysc">
+							<th width="15%">
+								志愿时长
+							</th>
+							<td colspan="3">
+								${rs.zyxss}
 							</td>
 						</tr>
 			      		<tr>

@@ -151,6 +151,12 @@
     				            onclick="showCalendar('qtsj','yyyy-MM-dd HH:mm:ss');" ></html:text>
     		    </td>
     		</tr>
+            <tr>
+                <th>Ö¾Ô¸Ê±³¤</th>
+                <td colspan="3">
+                    <html:text property="zyxss" styleId="zyxss"></html:text>
+                </td>
+            </tr>
     		</tbody>
         </table>
     </div>

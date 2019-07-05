@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=GBK"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -16,13 +17,25 @@
 			jQuery(function(){
 				jQuery("#jzlxTr").hide();
                 jQuery("tr[name='zjrxx_tr']").hide();
+                var hdxs = jQuery("#hdxs").val();
+                var hdlx = jQuery("#hdlx").val();
+                if ("活动"==hdxs && "4"==hdlx){
+                    jQuery("#zysc").show();
+                }else {
+                    jQuery("#zysc").hide();
+                }
 			});
+            function selectHd(){
+                var goto = encodeURIComponent('${path}'+'&xh='+'${xh}');
+                showDialog("选择活动",800,500,"hdgl_hdblsq.do?method=getHdxxList&goto="+goto);
+            }
 		</script>
 	</head>
 	<body style="width: 100%">
 		<html:form action="/hdgl_hdbljg" method="post" styleId="hdbljgForm" onsubmit="return false;">
 		<html:hidden property="xn" styleId="xn"/>
 		<html:hidden property="xq" styleId="xq"/>
+		<html:hidden property="xh" styleId="xh"/>
 		<input type="hidden" name="sqsj" value="${sqsj}" />
 			<div style='width:100%;overflow-x:hidden;overflow-y:auto;height: 500px' >
 				<table width="100%" border="0" class="formlist">
@@ -60,6 +73,7 @@
 							</th>
 							<td width="35%">
 								<html:text property="hdmc" styleId="hdmc" maxlength="20"/>
+								<button class="btn_01" type="button" onclick="selectHd();">选择</button>
 							</td>
 							<th>
 								<span><font color="red">*</font>活动时间</span>
@@ -114,7 +128,7 @@
 								<font color="red">*</font><span id="lx_span">活动类型</span>
 							</th>
 							<td>
-								<html:select property="hdlx" styleId="hdlx" style="width:173px">
+								<html:select property="hdlx" styleId="hdlx" style="width:173px" onchange="changeHdlx()">
 									<html:option value="">--请选择--</html:option>
 									<html:options collection="hdlxList" labelProperty="hdlxmc" property="hdlxdm"/>
 								</html:select>
@@ -264,6 +278,14 @@
 							<td>
 								<html:text property="hdxf" styleId="hdxf" maxlength="20"
 										   onblur="clearNoNum(this);return false;"/>
+							</td>
+						</tr>
+						<tr id="zysc">
+							<th width="15%">
+								志愿时长
+							</th>
+							<td colspan="3">
+								<html:text property="zyxss" styleId="zyxss" maxlength="50"/>
 							</td>
 						</tr>
 			      		<tr>

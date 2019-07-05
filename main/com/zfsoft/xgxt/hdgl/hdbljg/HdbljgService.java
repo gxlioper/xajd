@@ -6,6 +6,8 @@ package com.zfsoft.xgxt.hdgl.hdbljg;
 import java.util.HashMap;
 import java.util.List;
 
+import com.zfsoft.xgxt.hdgl.hdblsq.HdblsqshService;
+import org.apache.commons.beanutils.BeanUtils;
 import xgxt.utils.String.StringUtils;
 
 import com.zfsoft.xgxt.base.service.impl.SuperServiceImpl;
@@ -126,7 +128,22 @@ public class HdbljgService extends SuperServiceImpl<HdbljgForm, HdbljgDao> {
 	 */
 	public HdbljgForm getModelForJg(HdbljgForm model) throws Exception{
 		HdbljgForm model2 = getModel(model);
+		if(null==model2){
+			model2 = new HdbljgForm();
+		}
+		if(StringUtils.isNotNull(model.getXh())){ //只有新增补录时条件中才会携带xh
+			model2.setXh(model.getXh());
+		}
 		HashMap<String, String> modelInfo = dao.getModelInfo(model);
+		if(null!=modelInfo){
+			if(StringUtils.isNotNull(model.getLy())){
+				HdblsqshService service = new HdblsqshService();
+				HashMap<String,String> map = service.gethdInfo(model.getHdid());
+				map.remove("fjpath");//不替换原有附件
+				modelInfo.putAll(map);
+			}
+			BeanUtils.copyProperties(model2, StringUtils.formatData(modelInfo));
+		}
 		/*学期名称*/
 		if(StringUtils.isNotNull(modelInfo.get("xqmc"))){
 			model2.setXqmc(modelInfo.get("xqmc"));

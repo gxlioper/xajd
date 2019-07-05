@@ -52,7 +52,8 @@ public class HdblsqshForm extends ActionForm{
 	private String jzlxmc;//讲座类型名称
 	private String[] hdbqs;
 	private String[] nlbqs;
-
+	private String ly;//活动来源（用于补录选择已有活动）
+	private String hdid;//活动来源id（大厅发布，用于补录选择已有活动）
 
 
 	private String hdbq;
@@ -64,6 +65,7 @@ public class HdblsqshForm extends ActionForm{
 	private String xsxxlx;//线上线下类型
 	private String hdkclx;//活动课程类型（考核类多阶段；参与类单阶段）
 	private String hddf;//活动打分
+	private String zyxss;//志愿小时数
 
 
 
@@ -803,5 +805,29 @@ public class HdblsqshForm extends ActionForm{
 	 */
 	public void setJzlxmc(String jzlxmc) {
 		this.jzlxmc = jzlxmc;
+	}
+
+	public String getLy() {
+		return ly;
+	}
+
+	public void setLy(String ly) {
+		this.ly = ly;
+	}
+
+	public String getHdid() {
+		return hdid;
+	}
+
+	public void setHdid(String hdid) {
+		this.hdid = hdid;
+	}
+
+	public String getZyxss() {
+		return zyxss;
+	}
+
+	public void setZyxss(String zyxss) {
+		this.zyxss = zyxss;
 	}
 }

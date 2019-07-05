@@ -116,11 +116,16 @@ public class HdbljgAction extends SuperAction<HdbljgForm, HdbljgService> {
 	@SystemAuth(url = url,rewritable=ReadWrite.WRITEABLE)
 	public ActionForward addHdbljg(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		HdbljgForm model = (HdbljgForm)form;
-		HdbljgService HdbljgService = new HdbljgService();
+		HdbljgService hdbljgService = new HdbljgService();
 		
 		User user = getUser(request);
 		if ("stu".equals(user.getUserType())) {
 			model.setXh(user.getUserName());
+		}
+		HdbljgForm view_model = hdbljgService.getModelForJg(model);
+		//view_model = (HdbljgForm) StringUtils.formatBean(view_model);
+		if(null != view_model){
+			BeanUtils.copyProperties(model, StringUtils.formatData(view_model));
 		}
 		if (!StringUtil.isNull(model.getXh())) {
 			// 加载学生基本信息
@@ -132,6 +137,7 @@ public class HdbljgAction extends SuperAction<HdbljgForm, HdbljgService> {
 		model.setXn(Base.currXn);
 		model.setXq(Base.currXq);
 		String path = "hdgl_hdbljg.do?method=addHdbljg";
+		request.setAttribute("xh",model.getXh());
 		request.setAttribute("path", path);
 		request.setAttribute("jbxxList", jbxxList);
 		HdblsqshService hdblsqshService = new HdblsqshService();
@@ -150,19 +156,19 @@ public class HdbljgAction extends SuperAction<HdbljgForm, HdbljgService> {
 		
 		/*能标签列表*/
 		//List<HashMap<String, String>> activityLabelList = hdblsqshService.getActivityLabelList();
-		List<HashMap<String, String>> activityLabelList = HdbljgService.getHdbqList();
+		List<HashMap<String, String>> activityLabelList = hdbljgService.getHdbqList();
 		request.setAttribute("activityLabelList", activityLabelList);
 		
 		/*课程类型列表*/
-		List<HashMap<String,String>> jzlxList = HdbljgService.getJzlxList();
+		List<HashMap<String,String>> jzlxList = hdbljgService.getJzlxList();
 		request.setAttribute("jzlxList", jzlxList);
 
 		//自选课程列表
-		List<HashMap<String,String>> zxckclxList = HdbljgService.getZxkcDmList();
+		List<HashMap<String,String>> zxckclxList = hdbljgService.getZxkcDmList();
 		request.setAttribute("zxckclxList", zxckclxList);
 
 		/*能力标签*/
-		List<HashMap<String,String>> abilityLabelList = HdbljgService.getAbilityLabelList();
+		List<HashMap<String,String>> abilityLabelList = hdbljgService.getAbilityLabelList();
 		request.setAttribute("abilityLabelList", abilityLabelList);
 		
 		return mapping.findForward("addHdbljg");
@@ -195,7 +201,7 @@ public class HdbljgAction extends SuperAction<HdbljgForm, HdbljgService> {
 			request.setAttribute("jbxx", xsjbxx);
 		}
 		
-		String path = "hdgl_hdbljg.do?method=updateHdbljg";
+		String path = "hdgl_hdbljg.do?method=updateHdbljg&jgid=" + model.getJgid();
 		request.setAttribute("path", path);
 		request.setAttribute("jbxxList", jbxxList);
 		

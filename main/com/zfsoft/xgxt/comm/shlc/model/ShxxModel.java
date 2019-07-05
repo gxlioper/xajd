@@ -63,6 +63,8 @@ public class ShxxModel extends ActionForm {
 	private String zd8;
 	private String zd9;
 	private String zd10;
+	private String zd11;
+	private String zd12;
 
 	public String getZd1() {
 		return zd1;
@@ -272,4 +274,19 @@ public class ShxxModel extends ActionForm {
 		this.zd10 = zd10;
 	}
 
+	public String getZd11() {
+		return zd11;
+	}
+
+	public void setZd11(String zd11) {
+		this.zd11 = zd11;
+	}
+
+	public String getZd12() {
+		return zd12;
+	}
+
+	public void setZd12(String zd12) {
+		this.zd12 = zd12;
+	}
 }

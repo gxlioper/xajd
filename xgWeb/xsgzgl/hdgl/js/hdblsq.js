@@ -20,11 +20,15 @@ function saveHdblsq(type) {
 	var download = jQuery(".MultiFile-label").length;
 	var hdxs = jQuery("#hdxs").val();
 	var jzlx = jQuery("#jzlx").val();
+	var hdlx = jQuery("#hdlx").val();
 
 	var ids = "xh-hdmc-hdsj-hdxs-hdlx-zbf-xsxxlx-jzjb";
     if("讲座" == hdxs){
         ids += "-zjrxm-zjrdw-zjrzc-zjrzw";
     }
+    if("活动"==hdxs &&"4"==hdlx){//志愿服务类活动
+    	ids += "-zyxss";
+	}
 	if(!check(ids)){
 		showAlert("请将带<font color='red'>*</font>的项目填写完整");
 		return false;
@@ -222,6 +226,7 @@ function changeHdxs(){
     if("课程" == hdxs){
         jQuery("#jzlxTr").show();
         jQuery("tr[name='zjrxx_tr']").hide();
+        jQuery("#zysc").hide();
         JzInfoEmpty();
     }else if("讲座" == hdxs){
 
@@ -232,14 +237,31 @@ function changeHdxs(){
         jQuery("#jzlxTr").hide();
         jQuery("#jzlx").val("");
         jQuery("#zxkclx").val("");
+
+        jQuery("#zysc").hide();
     }else{
         jQuery("tr[name='zjrxx_tr']").hide();
         JzInfoEmpty();
         jQuery("#jzlxTr").hide();
         jQuery("#jzlx").val("");
         jQuery("#zxkclx").val("");
+        var hdlx = jQuery("#hdlx").val();
+        if ("活动"==hdxs && "4"==hdlx){
+            jQuery("#zysc").show();
+		}else {
+            jQuery("#zysc").hide();
+		}
 
     }
+}
+function changeHdlx() {
+    var hdxs = jQuery("#hdxs").val();
+    var hdlx = jQuery("#hdlx").val();
+    if("活动"==hdxs && "4"==hdlx){
+    	jQuery("#zysc").show();
+	}else {
+        jQuery("#zysc").hide();
+	}
 }
 function JzInfoEmpty(){
     var tr = jQuery("tr[name='zjrxx_tr']");

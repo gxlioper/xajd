@@ -13,6 +13,7 @@ public class HdqdForm extends HdxxForm {
     private String qtzt;
     private String qdsj;
     private String qtsj;
+    private String zyxss;
 
     public String getId() {
         return id;
@@ -52,5 +53,13 @@ public class HdqdForm extends HdxxForm {
 
     public void setQtsj(String qtsj) {
         this.qtsj = qtsj;
+    }
+
+    public String getZyxss() {
+        return zyxss;
+    }
+
+    public void setZyxss(String zyxss) {
+        this.zyxss = zyxss;
     }
 }

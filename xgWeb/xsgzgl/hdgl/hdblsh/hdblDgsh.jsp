@@ -25,6 +25,13 @@
         }else{
             jQuery("tr[name='zjrxx_tr']").hide();
             jQuery("#jzlxTr").hide();
+
+            var hdlx = jQuery("#hdlx").val();
+            if ("活动"==hdxs && "4"==hdlx){
+                jQuery("#zysc").show();
+            }else {
+                jQuery("#zysc").hide();
+            }
         }
         kcjbChange();
 
@@ -190,7 +197,7 @@
 							<font color="red">*</font><span id="lx_span">活动类型</span>
 						</th>
 						<td>
-							<html:select property="hdlx" styleId="hdlx" style="width:173px">
+							<html:select property="hdlx" styleId="hdlx" style="width:173px" onchange="changeHdlx()">
 								<html:option value="">--请选择--</html:option>
 								<html:options collection="hdlxList" labelProperty="hdlxmc" property="hdlxdm"/>
 							</html:select>
@@ -302,6 +309,14 @@
 						</th>
 						<td colspan="3">
 							<html:text property="hdxf" styleId="hdxf" maxlength="8" onblur="clearNoNum(this);return false;"/>
+						</td>
+					</tr>
+					<tr id="zysc">
+						<th width="15%">
+							志愿时长
+						</th>
+						<td colspan="3">
+							<html:text property="zyxss" styleId="zyxss" maxlength="50"/>
 						</td>
 					</tr>
 				</tbody>

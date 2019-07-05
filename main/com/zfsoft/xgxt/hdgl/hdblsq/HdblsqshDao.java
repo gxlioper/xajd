@@ -72,6 +72,30 @@ public class HdblsqshDao extends SuperDAOImpl<HdblsqshForm> {
 	}
 
 	/**
+	 * 获取当前已有活动
+	 * @param t
+	 * @param user
+	 * @return
+	 * @throws Exception
+	 */
+	public  List<HashMap<String, String>> getHdxxPageList(HdblsqshForm t, User user) throws Exception{
+		//生成高级查询相关条件、条件值
+		String searchTj = SearchService.getSearchTj(t.getSearchModel());
+		String[] inputV = SearchService.getTjInput(t.getSearchModel());
+		StringBuilder sql = new StringBuilder();
+		sql.append(" select * from (");
+		sql.append("select t.*,(select a.hdlxmc from xg_hdgl_hdlxdmb a where t.hdlx = a.hdlxdm) hdlxmc from ( ");
+		sql.append(" select hdid,hdmc,to_char(to_date(hdkssj,'yyyy-MM-dd hh24:mi:ss'),'yyyy-MM-dd') hdsj,hdxs,hdlx,hddd,'大厅发布' ly ,zbf,xsxxlx,hdkclx ");
+		sql.append(" from XG_HDGL_HDXXB ");
+		sql.append(" ) t ");
+		sql.append(" ) ");
+
+		sql.append(searchTj);
+
+		return getPageList(t, sql.toString(), inputV);
+	}
+
+	/**
 	 * @description	： TODO
 	 * @author 		：柳俊（1282）
 	 * @date 		：2018-1-16 下午05:13:07
@@ -121,6 +145,31 @@ public class HdblsqshDao extends SuperDAOImpl<HdblsqshForm> {
 		sql.append("left join xg_hdgl_zjrzcdmb h on a.zjrzc = h.dm ");
 		sql.append(" where a.sqid = ?");
 		return dao.getMapNotOut(sql.toString(), new String[]{model.getSqid()});
+	}
+
+	/**
+	 * 获取活动信息（大厅发布）
+	 * @param hdid
+	 * @return
+	 */
+	public HashMap<String,String> gethdInfo(String hdid){
+		StringBuilder sql = new StringBuilder();
+		sql.append("select a.*,b.hdlxmc, c.hdbq, c.hdbqmc, d.nlbq, d.nlbqmc,  f.jzlxmc , g.mc zxkclxmc,h.mc zjrzcmc ");
+		sql.append("  from xg_hdgl_hdxxb a ");
+		sql.append("left join xg_hdgl_hdlxdmb b on a.hdlx = b.hdlxdm ");
+		sql.append("left join (select t1.jgid, replace(wm_concat(t1.hdbq), ';', ',') hdbq, ");
+		sql.append("  replace(wm_concat(t2.hdbqmc), ';', ',') hdbqmc ");
+		sql.append("  from xg_hdgl_hdbqglb t1 left join xg_hdgl_hdbqdmb t2 on t1.hdbq = t2.hdbqdm ");
+		sql.append("  group by t1.jgid) c on a.hdid = c.jgid ");
+		sql.append("left join (select t3.jgid, replace(wm_concat(t3.nlbq), ';', ',') nlbq, ");
+		sql.append("  replace(wm_concat(t4.nlbqmc), ';', ',') nlbqmc ");
+		sql.append("  from xg_hdgl_nlbqglb t3 left join xg_hdgl_nlbqdmb t4 on t3.nlbq = t4.nlbqdm ");
+		sql.append("  group by jgid) d on a.hdid = d.jgid ");
+		sql.append("left join xg_hdgl_jzlxdmb f on a.jzlx = f.jzlxdm ");
+		sql.append("left join xg_hdgl_zxkclxdmb g on a.zxkclx = g.dm ");
+		sql.append("left join xg_hdgl_zjrzcdmb h on a.zjrzc = h.dm ");
+		sql.append(" where a.hdid = ?");
+		return dao.getMapNotOut(sql.toString(), new String[]{hdid});
 	}
 	
 	/**
