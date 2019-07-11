@@ -62,6 +62,7 @@
     		<forward name="addHdblsq" path="/xsgzgl/hdgl/hdblsq/addHdblsq.jsp"/>
     		<forward name="updateHdblsq" path="/xsgzgl/hdgl/hdblsq/updateHdblsq.jsp"/>
     		<forward name="viewHdblsq" path="/xsgzgl/hdgl/hdblsq/viewHdblsq.jsp"/>
+			<forward name="hdxxList" path="/xsgzgl/hdgl/hdblsq/hdxxList.jsp"/>
 		</action>
 		
 		<!-- 活动补录审核 -->
