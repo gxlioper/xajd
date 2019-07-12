@@ -34,7 +34,7 @@ public class ShsjjljgDao extends SuperDAOImpl<ShsjjljgForm> {
         String[] inputV = SearchService.getTjInput(t.getSearchModel());
         String searchTjByUser = SearchService.getSearchTjByUser(user, "t", "xydm", "bjdm");
         StringBuilder sql = new StringBuilder();
-        sql.append(" select t.*");
+        sql.append(" select * from (select t.*");
         sql.append(" from (select t1.*,t3.xqmc,");
         sql.append(" t6.xm,");
         sql.append(" t6.xydm,");
@@ -52,6 +52,24 @@ public class ShsjjljgDao extends SuperDAOImpl<ShsjjljgForm> {
         sql.append(" left join xg_view_dmk_qx ssx");
         sql.append(" on ssx.qxdm=t1.ddssx");
         sql.append(" ) t");
+        sql.append(" union ");
+        sql.append(" select hdid jgid,xh,xn,xq,hdmc,hddd dd,hdkssj sj,zbf zbdw,'' ddssx,'' fjid,'' sqid,'ek' sjly,'' lrr,hdkssj lrsj,xqmc, ");
+        sql.append(" xm,xydm,xymc,zydm,zymc,bjdm,bjmc,nj,xb,zybj,zybjmc,mz,mzdm,zzmm,zzmmmc,sydm1 sydm,symc1 symc,hddd ddxxdz ");
+        sql.append(" from (select a.zyxss,b.*,c.*,e.xqmc from Xg_Hdgl_Hdqdxxb a ");
+        sql.append(" left join XG_HDGL_HDXXB b  on a.hdid = b.hdid ");
+        sql.append(" left join VIEW_XSJBXX c on a.xh = c.xh ");
+        sql.append(" left join XG_HDGL_HDLXDMB d on b.hdlx = d.hdlxdm ");
+        sql.append("  left join xqdzb e on b.xq=e.xqdm ");
+        sql.append(" where d.hdlxdm = '3' and ( c.zzmm = '01' or c.zzmm = '02'))  ");//社会实践活动类型
+        sql.append(" union ");
+        sql.append(" (select decode(a.sqid,null,a.jgid,a.sqid) jgid,a.xh,a.xn,a.xq,a.hdmc,a.hddd dd,a.hdsj sj,zbf zbdw,'' ddssx,'' fjid, ");
+        sql.append(" '' sqid,'ekbl' sjly,''lrr,a.sqsj lrsj,e.xqmc,b.xm,b.xydm,b.xymc,b.zydm,b.zymc,b.bjdm,b.bjmc,b.nj,b.xb,b.zybj,b.zybjmc,b.mz,b.mzdm, ");
+        sql.append(" b.zzmm,b.zzmmmc,b.sydm1 sydm,b.symc1 symc,a.hddd ddxxdz from XG_HDGL_HDBLJGB a ");
+        sql.append(" left join VIEW_XSJBXX b on a.xh = b.xh ");
+        sql.append(" left join XG_HDGL_HDLXDMB c on a.hdlx = c.hdlxdm ");
+        sql.append("  left join xqdzb e on a.xq=e.xqdm ");
+        sql.append("  where c.hdlxdm = '3' and (b.zzmm = '01' or b.zzmm = '02')) ");
+        sql.append(" ) ");
         sql.append(" where 1=1 ");
         sql.append(searchTjByUser);
         sql.append(searchTj);
@@ -102,5 +120,34 @@ public class ShsjjljgDao extends SuperDAOImpl<ShsjjljgForm> {
         sql.append(" ) t");
         sql.append(" where jgid=? ");
         return dao.getMapNotOut(sql.toString(),new String[]{jgid});
+    }
+
+    /**
+     * 获取二课中社会实践活动信息
+     * @param t
+     * @return
+     */
+    public HashMap<String,String> getEkxx(ShsjjljgForm  t){
+        StringBuilder sql = new StringBuilder();
+        sql.append(" select * from ( ");
+        sql.append(" select hdid jgid,xh,xn,xq,hdmc,hddd dd,hdkssj sj,zbf zbdw,'' ddssx,'' fjid,'' sqid,'ek' sjly,'' lrr,hdkssj lrsj,xqmc, ");
+        sql.append(" xm,xydm,xymc,zydm,zymc,bjdm,bjmc,nj,xb,zybj,zybjmc,mz,mzdm,zzmm,zzmmmc,sydm1 sydm,symc1 symc,hddd ddxxdz ");
+        sql.append(" from (select a.zyxss,b.*,c.*,e.xqmc from Xg_Hdgl_Hdqdxxb a ");
+        sql.append(" left join XG_HDGL_HDXXB b  on a.hdid = b.hdid ");
+        sql.append(" left join VIEW_XSJBXX c on a.xh = c.xh ");
+        sql.append(" left join XG_HDGL_HDLXDMB d on b.hdlx = d.hdlxdm ");
+        sql.append("  left join xqdzb e on b.xq=e.xqdm ");
+        sql.append(" where d.hdlxdm = '3' and ( c.zzmm = '01' or c.zzmm = '02'))  ");//社会实践活动类型
+        sql.append(" union ");
+        sql.append(" (select decode(a.sqid,null,a.jgid,a.sqid) jgid,a.xh,a.xn,a.xq,a.hdmc,a.hddd dd,a.hdsj sj,zbf zbdw,'' ddssx,'' fjid, ");
+        sql.append(" '' sqid,'ekbl' sjly,''lrr,a.sqsj lrsj,e.xqmc,b.xm,b.xydm,b.xymc,b.zydm,b.zymc,b.bjdm,b.bjmc,b.nj,b.xb,b.zybj,b.zybjmc,b.mz,b.mzdm, ");
+        sql.append(" b.zzmm,b.zzmmmc,b.sydm1 sydm,b.symc1 symc,a.hddd ddxxdz from XG_HDGL_HDBLJGB a ");
+        sql.append(" left join VIEW_XSJBXX b on a.xh = b.xh ");
+        sql.append(" left join XG_HDGL_HDLXDMB c on a.hdlx = c.hdlxdm ");
+        sql.append("  left join xqdzb e on a.xq=e.xqdm ");
+        sql.append("  where c.hdlxdm = '3' and (b.zzmm = '01' or b.zzmm = '02')) ");
+        sql.append(" ) where 1=1 and jgid = ? and xh = ?");
+        String[] input = new String[]{t.getJgid(),t.getXh()};
+        return dao.getMapNotOut(sql.toString(),input);
     }
 }

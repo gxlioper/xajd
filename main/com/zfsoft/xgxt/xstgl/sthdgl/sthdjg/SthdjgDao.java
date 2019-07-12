@@ -36,7 +36,7 @@ public class SthdjgDao extends SuperDAOImpl<SthdjgForm> {
 		String[] inputV = SearchService.getTjInput(t.getSearchModel());
 		String searchTjByUser = SearchService.getSearchTjByUser(user, "t", "xydm", "bjdm");
 		StringBuilder sql = new StringBuilder();
-	    sql.append(" select t.*");
+	    sql.append(" select * from (select t.*");
 	    sql.append(" from (select t1.*,");
 	    sql.append(" t6.xm,");
 	    sql.append(" t6.xydm,");
@@ -52,7 +52,23 @@ public class SthdjgDao extends SuperDAOImpl<SthdjgForm> {
 	    sql.append(" on t1.xh = t6.xh");
 	    sql.append(" left join xg_view_dmk_qx ssx");
 	    sql.append(" on ssx.qxdm=t1.fwddssx");
-	    sql.append(" ) t");
+	    sql.append(" ) t  ");
+	    sql.append(" union ");
+	    sql.append(" select hdid,xh,hdmc,hddd fwdd,hdkssj fwsj,zyxss fwsc,zbf zbdw,'' id,'ek' sjly,'' fwddssx,'' fjid,'' lrr,hdkssj lrsj, ");
+	    sql.append(" xm,xydm,xymc,zydm,zymc,bjdm,bjmc,nj,xb,zybj,zybjmc,mz,mzdm,zzmm,zzmmmc,sydm1 sydm,symc1 symc,hddd fwddxxdz ");
+	    sql.append(" from (select a.zyxss,b.*,c.* from Xg_Hdgl_Hdqdxxb a ");
+	    sql.append(" left join XG_HDGL_HDXXB b  on a.hdid = b.hdid ");
+	    sql.append(" left join VIEW_XSJBXX c on a.xh = c.xh ");
+	    sql.append(" left join XG_HDGL_HDLXDMB d on b.hdlx = d.hdlxdm ");
+	    sql.append(" where d.hdlxdm = '4' and ( c.zzmm = '01' or c.zzmm = '02'))  ");//志愿活动类型
+		sql.append(" union ");
+		sql.append(" (select decode(a.sqid,null,a.jgid,a.sqid) hdid,a.xh,a.hdmc,a.hddd fwdd,a.hdsj fwsj,a.zyxss fwsc,zbf zbdw,'' id,'ekbl' sjly, ");
+	    sql.append(" '' fwddssx,'' fjid,''lrr,a.sqsj lrsj,b.xm,b.xydm,b.xymc,b.zydm,b.zymc,b.bjdm,b.bjmc,b.nj,b.xb,b.zybj,b.zybjmc,b.mz,b.mzdm, ");
+	    sql.append(" b.zzmm,b.zzmmmc,b.sydm1 sydm,b.symc1 symc,a.hddd fwddxxdz from XG_HDGL_HDBLJGB a ");
+	    sql.append(" left join VIEW_XSJBXX b on a.xh = b.xh ");
+	    sql.append(" left join XG_HDGL_HDLXDMB c on a.hdlx = c.hdlxdm ");
+	    sql.append("  where c.hdlxdm = '4' and (b.zzmm = '01' or b.zzmm = '02')) ");
+		sql.append(" ) ");
 	    sql.append(" where 1=1 ");
 		sql.append(searchTjByUser);
 		sql.append(searchTj);
@@ -76,7 +92,7 @@ public class SthdjgDao extends SuperDAOImpl<SthdjgForm> {
 	 * @作者：xiaxia[工号：1104]
 	 * @日期：2015-7-28 下午03:29:11
 	 * @修改记录: 修改者名字-修改日期-修改内容
-	 * @param model
+	 * @param id
 	 * @return
 	 * @throws Exception
 	 * boolean 返回类型 
@@ -158,5 +174,30 @@ public class SthdjgDao extends SuperDAOImpl<SthdjgForm> {
 		StringBuffer sql = new StringBuffer();
 		sql.append("delete from xg_sthd_hdjg where xh=? and fwsj=? ");
 		return dao.runUpdate(sql.toString(),new String[]{t.getXh(),t.getFwsj()});
+	}
+
+	/**
+	 * 获取二课中志愿活动信息
+	 * @param t
+	 * @return
+	 */
+	public HashMap<String,String> getEkxx(SthdjgForm  t){
+		StringBuilder sql = new StringBuilder();
+		sql.append(" select * from ( ");
+		sql.append(" select hdid,xh,hdmc,hddd fwdd,hdkssj fwsj,zyxss fwsc,zbf zbdw,'' id,'ek' sjly,'' fwddssx,'' fjid,'' lrr,hdkssj lrsj, ");
+		sql.append(" xm,xydm,xymc,zydm,zymc,bjdm,bjmc,nj,xb,zybj,zybjmc,mz,mzdm,zzmm,zzmmmc,sydm1 sydm,symc1 symc,hddd fwddxxdz ");
+		sql.append(" from (select a.zyxss,b.*,c.* from Xg_Hdgl_Hdqdxxb a ");
+		sql.append(" left join XG_HDGL_HDXXB b  on a.hdid = b.hdid ");
+		sql.append(" left join VIEW_XSJBXX c ");
+		sql.append(" on a.xh = c.xh where c.zzmm = '01' or c.zzmm = '02')  ");
+		sql.append(" union ");
+		sql.append(" (select decode(a.sqid,null,a.jgid,a.sqid) hdid,a.xh,a.hdmc,a.hddd fwdd,a.hdsj fwsj,a.zyxss fwsc,zbf zbdw,'' id,'ekbl' sjly, ");
+		sql.append(" '' fwddssx,'' fjid,''lrr,a.sqsj lrsj,b.xm,b.xydm,b.xymc,b.zydm,b.zymc,b.bjdm,b.bjmc,b.nj,b.xb,b.zybj,b.zybjmc,b.mz,b.mzdm, ");
+		sql.append(" b.zzmm,b.zzmmmc,b.sydm1 sydm,b.symc1 symc,a.hddd fwddxxdz from XG_HDGL_HDBLJGB a ");
+		sql.append(" left join VIEW_XSJBXX b ");
+		sql.append(" on a.xh = b.xh where b.zzmm = '01' or b.zzmm = '02') ");
+		sql.append(" ) where 1=1 and hdid = ? and xh = ?");
+		String[] input = new String[]{t.getHdid(),t.getXh()};
+		return dao.getMapNotOut(sql.toString(),input);
 	}
 }

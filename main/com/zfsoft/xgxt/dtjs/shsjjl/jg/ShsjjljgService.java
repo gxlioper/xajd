@@ -25,4 +25,8 @@ public class ShsjjljgService extends SuperServiceImpl<ShsjjljgForm,ShsjjljgDao> 
     public HashMap<String,String> getInfo(String jgid) {
         return dao.getInfo(jgid);
     }
+
+    public HashMap<String,String> getEkxx(ShsjjljgForm t) {
+        return dao.getEkxx(t);
+    }
 }

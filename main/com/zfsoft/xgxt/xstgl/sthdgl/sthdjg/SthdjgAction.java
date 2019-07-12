@@ -106,12 +106,17 @@ public class SthdjgAction extends SuperAction<SthdjgForm, SthdjgService> {
 	@SystemAuth(url = url)
 	public ActionForward viewSthdjg(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		SthdjgForm myForm = (SthdjgForm) form;
+
 		SthdjgForm model = service.getModel(myForm);
 		if(null!=model){
 			BeanUtils.copyProperties(myForm, model);
 			// 加载学生基本信息
 			XsxxService xsxxService = new XsxxService();
 			HashMap<String, String> xsjbxx = xsxxService.getXsjbxxMore(model.getXh());
+			request.setAttribute("jbxx", xsjbxx);
+		}else {
+			XsxxService xsxxService = new XsxxService();
+			HashMap<String, String> xsjbxx = xsxxService.getXsjbxxMore(myForm.getXh());
 			request.setAttribute("jbxx", xsjbxx);
 		}
 		// 学生基本信息显示配置
@@ -120,7 +125,11 @@ public class SthdjgAction extends SuperAction<SthdjgForm, SthdjgService> {
 		request.setAttribute("jbxxList", jbxxList);
 		//历史登记记录
 		//request.setAttribute("rsArrList", service.getMoreHdjgList(model));
-		request.setAttribute("rs", StringUtils.formatData(model));
+		if("ek".equals(myForm.getSjly())||"ekbl".equals(myForm.getSjly())){//数据来自二课
+			request.setAttribute("rs", service.getEkxx(myForm));
+		}else{
+			request.setAttribute("rs", StringUtils.formatData(model));
+		}
 		return mapping.findForward("viewSthdjg");
 	}
 	/**
