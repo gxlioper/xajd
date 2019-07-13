@@ -2905,6 +2905,17 @@ public class DAO {
 		return getList(sql, new String[] {}, new String[] { "xydm", "xymc","pyszm" });
 	}
 
+	public List<HashMap<String, String>> getSyallList() {
+		String sql = "select sydm,symc,substr(nvl(f_pinyin(symc),symc),0,1) pyszm from XG_XTWH_SYDMB order by pyszm";
+		return getList(sql, new String[] {}, new String[] { "sydm", "symc","pyszm" });
+	}
+
+	//获取所有年级在校生的行政班级
+	public List<HashMap<String,String>> getNjBjForSy(){
+		String sql = "select distinct a.nj,a.bjdm,a.bjmc,b.sydm from view_njxyzybj_fdy a left join XG_XTWH_SYBJGLB b on a.bjdm = b.bjdm order by bjdm";
+		return getList(sql,new String[]{},new String[]{"nj","bjdm","bjmc","sydm"});
+	}
+
 	public String getXxdm() {
 		// 获取学校代码
 //		String sql = "select xxdm from xtszb";
