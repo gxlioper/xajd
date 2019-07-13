@@ -6,13 +6,13 @@ function searchRs() {
 
 function xhLink(cellValue, rowObject) {
     return "<a href='javascript:void(0);' class='name' onclick='view(\""
-        + rowObject["jgid"] + "\");'>" + cellValue
+        + rowObject["jgid"] + "\",\"" + rowObject["sjly"] + "\",\"" + cellValue + "\");'>" + cellValue
         + "</a>";
 }
 //查看
-function view(id) {
+function view(id,sjly,xh) {
     showDialog(jQuery("#gnmkmc").val()+"查看", 800, 550, "shsjjl_jg.do?method=shsjjlJgView&jgid="
-        + id);
+        + id + "&sjly=" + sjly + "&xh=" + xh );
 }
 // 保存
 function save(type) {
@@ -50,6 +50,9 @@ function update() {
         if(rows[0]['sjly']=='1'){
             showAlertDivLayer("审核流程过来的记录不能修改！");
             return false;
+        }else if(rows[0]['sjly']=='ek'||rows[0]['sjly']=='ekbl'){
+            showAlertDivLayer("第二课堂活动的记录不能修改！");
+            return false;
         }
         var url = 'shsjjl_jg.do?method=shsjjlJgUpdate&jgid=' + rows[0]["jgid"]
             + '&xh=' + rows[0]["xh"];
@@ -68,6 +71,9 @@ function del() {
         for(var i=0;i<ids.length;i++){
             if(rows[i]['sjly']=='1'){
                 showAlertDivLayer("审核流程过来的记录不能删除！");
+                return false;
+            }else if(rows[0]['sjly']=='ek'||rows[0]['sjly']=='ekbl'){
+                showAlertDivLayer("第二课堂活动的记录不能修改！");
                 return false;
             }
         }

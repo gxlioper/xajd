@@ -78,4 +78,8 @@ public class SthdjgService extends SuperServiceImpl<SthdjgForm, SthdjgDao>{
 	public boolean delByFwsj(SthdjgForm t) throws Exception {
 		return dao.delByFwsj(t);
 	}
+
+	public HashMap<String,String> getEkxx(SthdjgForm t) {
+		return dao.getEkxx(t);
+	}
 }

@@ -112,15 +112,23 @@ public class ShsjjljgAction extends SuperAction<ShsjjljgForm,ShsjjljgService> {
     public ActionForward shsjjlJgView(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
         ShsjjljgForm myForm = (ShsjjljgForm) form;
         HashMap<String,String> map = service.getInfo(myForm.getJgid());
-        if(null!=map){
+        if(null!=map && map.size()>0){
             BeanUtils.copyProperties(myForm, map);
             // 加载学生基本信息
             XsxxService xsxxService = new XsxxService();
             HashMap<String, String> xsjbxx = xsxxService.getXsjbxxMore(map.get("xh"));
             request.setAttribute("jbxx", xsjbxx);
+        }else {
+            XsxxService xsxxService = new XsxxService();
+            HashMap<String, String> xsjbxx = xsxxService.getXsjbxxMore(myForm.getXh());
+            request.setAttribute("jbxx", xsjbxx);
         }
         request.setAttribute("jbxxList", jbxxList);
-        request.setAttribute("rs", StringUtils.formatData(map));
+        if("ek".equals(myForm.getSjly())||"ekbl".equals(myForm.getSjly())){
+            request.setAttribute("rs", service.getEkxx(myForm));
+        }else{
+            request.setAttribute("rs", StringUtils.formatData(map));
+        }
         return mapping.findForward("shsjjlJgView");
     }
     /**
