@@ -679,11 +679,6 @@ public class DAO {
 		} finally {
 			closeAllStmtAndRs(rsa, stmt, null, null);
 			closeConnection(conn);
-			try {
-				rsa.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 		return arrayList;
 	}
@@ -752,11 +747,6 @@ public class DAO {
 		} finally {
 			closeAllStmtAndRs(rsa, stmt, null, null);
 			closeConnection(conn);
-			try {
-				rsa.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 		return arrayList;
 	}
@@ -1334,13 +1324,13 @@ public class DAO {
 			conn.setAutoCommit(false);
 			stat = conn.createStatement();
 			stat.execute(sql);
+			conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql);
 			conn.rollback();
 			result = false;
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(rs, null, stat, null);
 			closeConnection(conn);
 		}
@@ -1366,20 +1356,20 @@ public class DAO {
 			conn.setAutoCommit(false);
 			stat = conn.createStatement();
 			stat.execute(sql);
+			conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql);
 			conn.rollback();
 			result = false;
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(rs, null, stat, null);
 			closeConnection(conn);
 		}
 		return result;
 	}
 
-	public synchronized boolean runUpdate(String sql, String[] input) throws Exception {
+	public boolean runUpdate(String sql, String[] input) throws Exception {
 
 		// 执行更新语句
 		boolean result = true;
@@ -1394,19 +1384,19 @@ public class DAO {
 				stmt.setString(i + 1, input[i]);
 			}
 			stmt.executeUpdate();
+			conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql,input);
 			conn.rollback();
 			result = false;
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
 		return result;
 	}
-	public  boolean runUpdateNotCommit(String sql, String[] input) throws Exception {
+	public boolean runUpdateNotCommit(String sql, String[] input) throws Exception {
 
 		// 执行更新语句
 		boolean result = true;
@@ -1446,7 +1436,7 @@ public class DAO {
 	 * int 返回类型 
 	 * @throws
 	 */
-	public synchronized int update(String sql, String[] input) throws Exception {
+	public int update(String sql, String[] input) throws Exception {
 
 		// 执行更新语句
 		int num = 0;
@@ -1461,12 +1451,12 @@ public class DAO {
 				stmt.setString(i + 1, input[i]);
 			}
 			num = stmt.executeUpdate();
+			conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql,input);
 			conn.rollback();
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1483,7 +1473,7 @@ public class DAO {
 	 * @return
 	 * @throws Exception
 	 */
-	public synchronized int runDelete(String sql, String[] input) throws Exception {
+	public int runDelete(String sql, String[] input) throws Exception {
 
 		// 执行更新语句
 		Connection conn = null;
@@ -1496,13 +1486,14 @@ public class DAO {
 			for (int i = 0; i < input.length; i++) {
 				stmt.setString(i + 1, input[i]);
 			}
-			return stmt.executeUpdate();
+			int num = stmt.executeUpdate();
+			conn.commit();
+			return num;
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql,input);
 			conn.rollback();
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1540,10 +1531,10 @@ public class DAO {
 		return -1;
 	}
 	
-	public synchronized boolean runUpdate(String sql, 
-			                              String[] input, 
-			                              String tableName, 
-			                              User user) throws Exception {
+	public boolean runUpdate(String sql, 
+                             String[] input, 
+                             String tableName, 
+                             User user) throws Exception {
 
 		// 执行更新语句
 		boolean result = true;
@@ -1558,13 +1549,13 @@ public class DAO {
 				stmt.setString(i + 1, input[i]);
 			}
 			stmt.executeUpdate();
+			conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql,input);
 			conn.rollback();
 			result = false;
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1594,6 +1585,7 @@ public class DAO {
 				}
 			}
 			stmt.executeUpdate();
+			conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql,input);
@@ -1601,7 +1593,6 @@ public class DAO {
 			result = false;
 			throw e;
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1626,6 +1617,7 @@ public class DAO {
 				stmt.setString(i + 1, input[i]);
 			}
 			stmt.executeUpdate();
+			conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql,input);
@@ -1633,7 +1625,6 @@ public class DAO {
 			result = false;
 			throw e;
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1669,13 +1660,13 @@ public class DAO {
 				stmt.setString(i + 1, input[i]);
 			}
 			iResultNum = stmt.executeUpdate();
+			conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql,input);
 			conn.rollback();
 			iResultNum = 0;
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1765,13 +1756,13 @@ public class DAO {
 				stmt.setString(i + 1, temp);
 			}
 			stmt.executeUpdate();
+			conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql,input.toArray(new String[input.size()]));
 			conn.rollback();
 			result = false;
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1797,13 +1788,13 @@ public class DAO {
 				stmt.setString(i + 1, temp);
 			}
 			stmt.executeUpdate();
+			conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql,input.toArray(new String[input.size()]));
 			conn.rollback();
 			result = false;
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1840,10 +1831,10 @@ public class DAO {
 			stmt = conn.prepareStatement(sql);
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				oracle.sql.CLOB clob =null;// (CLOB) rs.getClob("tpmold");
+				CLOB clob =null;// (CLOB) rs.getClob("tpmold");
 				if (rs.getClob("newscont").getClass().getName().startsWith("weblogic")){
 		    		Method method = rs.getClob("newscont").getClass().getMethod("getVendorObj",new Class[]{});
-		    		clob = (oracle.sql.CLOB)method.invoke(rs.getClob("newscont"));
+		    		clob = (CLOB)method.invoke(rs.getClob("newscont"));
 		 	    }else{
 		 	    	clob = (CLOB) rs.getClob("newscont");
 		 	    	clob=(CLOB)rs.getClob("newscont");
@@ -1852,13 +1843,13 @@ public class DAO {
 				outstream.write(sContent);
 				outstream.close();
 			}
+			conn.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql);
 			conn.rollback();
 			throw e;
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(rs, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1890,10 +1881,10 @@ public class DAO {
 			stmt = conn.prepareStatement(sql);
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				oracle.sql.CLOB clob =null;// (CLOB) rs.getClob("tpmold");
+				CLOB clob =null;// (CLOB) rs.getClob("tpmold");
 				if (rs.getClob("newscont").getClass().getName().startsWith("weblogic")){
 		    		Method method = rs.getClob("newscont").getClass().getMethod("getVendorObj",new Class[]{});
-		    		clob = (oracle.sql.CLOB)method.invoke(rs.getClob("newscont"));
+		    		clob = (CLOB)method.invoke(rs.getClob("newscont"));
 		 	    }else{
 		 	    	clob = (CLOB) rs.getClob("newscont");
 		 	    	clob=(CLOB)rs.getClob("newscont");
@@ -1902,12 +1893,12 @@ public class DAO {
 				outstream.write(sContent);
 				outstream.close();
 			}
+			conn.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql);
 			conn.rollback();
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(rs, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1931,11 +1922,11 @@ public class DAO {
 			stmt.setString(3, ly);
 			stmt.setString(4, fbsj);
 			stmt.executeUpdate();
+			conn.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			conn.rollback();
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1960,11 +1951,11 @@ public class DAO {
 			stmt.setString(4, fbr);
 			stmt.setString(5, fbsj);
 			stmt.executeUpdate();
+			conn.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			conn.rollback();
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(null, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -1999,10 +1990,10 @@ public class DAO {
 			stmt = conn.prepareStatement(sql);
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				oracle.sql.CLOB clob =null;// (CLOB) rs.getClob("tpmold");
+				CLOB clob =null;// (CLOB) rs.getClob("tpmold");
 				if (rs.getClob("newscont").getClass().getName().startsWith("weblogic")){
 		    		Method method = rs.getClob("newscont").getClass().getMethod("getVendorObj",new Class[]{});
-		    		clob = (oracle.sql.CLOB)method.invoke(rs.getClob("newscont"));
+		    		clob = (CLOB)method.invoke(rs.getClob("newscont"));
 		 	    }else{
 		 	    	clob = (CLOB) rs.getClob("newscont");
 		 	    	clob=(CLOB)rs.getClob("newscont");
@@ -2011,12 +2002,12 @@ public class DAO {
 				outstream.write(sContent);
 				outstream.close();
 			}
+			conn.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql);
 			conn.rollback();
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(rs, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -2049,10 +2040,10 @@ public class DAO {
 			stmt.setString(1, newsId);
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				oracle.sql.CLOB clob =null;// (CLOB) rs.getClob("tpmold");
+				CLOB clob =null;// (CLOB) rs.getClob("tpmold");
 				if (rs.getClob("newscont").getClass().getName().startsWith("weblogic")){
 		    		Method method = rs.getClob("newscont").getClass().getMethod("getVendorObj",new Class[]{});
-		    		clob = (oracle.sql.CLOB)method.invoke(rs.getClob("newscont"));
+		    		clob = (CLOB)method.invoke(rs.getClob("newscont"));
 		 	    }else{
 		 	    	clob = (CLOB) rs.getClob("newscont");
 		 	    	clob=(CLOB)rs.getClob("newscont");
@@ -2061,12 +2052,12 @@ public class DAO {
 				outstream.write(sContent);
 				outstream.close();
 			}
+			conn.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql);
 			conn.rollback();
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(rs, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -2099,10 +2090,10 @@ public class DAO {
 			stmt.setString(1, newsId);
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				oracle.sql.CLOB clob =null;// (CLOB) rs.getClob("tpmold");
+				CLOB clob =null;// (CLOB) rs.getClob("tpmold");
 				if (rs.getClob("newscont").getClass().getName().startsWith("weblogic")){
 		    		Method method = rs.getClob("newscont").getClass().getMethod("getVendorObj",new Class[]{});
-		    		clob = (oracle.sql.CLOB)method.invoke(rs.getClob("newscont"));
+		    		clob = (CLOB)method.invoke(rs.getClob("newscont"));
 		 	    }else{
 		 	    	clob = (CLOB) rs.getClob("newscont");
 		 	    	clob=(CLOB)rs.getClob("newscont");
@@ -2111,12 +2102,12 @@ public class DAO {
 				outstream.write(sContent);
 				outstream.close();
 			}
+			conn.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql);
 			conn.rollback();
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(rs, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -2154,10 +2145,10 @@ public class DAO {
 			stmt.setString(1, newsId);
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				oracle.sql.CLOB clob =null;// (CLOB) rs.getClob("tpmold");
+				CLOB clob =null;// (CLOB) rs.getClob("tpmold");
 				if (rs.getClob("newscont").getClass().getName().startsWith("weblogic")){
 		    		Method method = rs.getClob("newscont").getClass().getMethod("getVendorObj",new Class[]{});
-		    		clob = (oracle.sql.CLOB)method.invoke(rs.getClob("newscont"));
+		    		clob = (CLOB)method.invoke(rs.getClob("newscont"));
 		 	    }else{
 		 	    	clob = (CLOB) rs.getClob("newscont");
 		 	    	clob=(CLOB)rs.getClob("newscont");
@@ -2166,12 +2157,12 @@ public class DAO {
 				outstream.write(sContent);
 				outstream.close();
 			}
+			conn.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			CustomException.pringCustomExcInfo(sql);
 			conn.rollback();
 		} finally {
-			conn.commit();
 			closeAllStmtAndRs(rs, stmt, null, null);
 			closeConnection(conn);
 		}
@@ -2914,16 +2905,6 @@ public class DAO {
 		return getList(sql, new String[] {}, new String[] { "xydm", "xymc","pyszm" });
 	}
 
-	public List<HashMap<String, String>> getSyallList() {
-		String sql = "select sydm,symc,substr(nvl(f_pinyin(symc),symc),0,1) pyszm from XG_XTWH_SYDMB order by pyszm";
-		return getList(sql, new String[] {}, new String[] { "sydm", "symc","pyszm" });
-	}
-
-	//获取所有年级在校生的行政班级
-	public List<HashMap<String,String>> getNjBjForSy(){
-		String sql = "select distinct a.nj,a.bjdm,a.bjmc,b.sydm from view_njxyzybj_fdy a left join XG_XTWH_SYBJGLB b on a.bjdm = b.bjdm order by bjdm";
-		return getList(sql,new String[]{},new String[]{"nj","bjdm","bjmc","sydm"});
-	}
 	public String getXxdm() {
 		// 获取学校代码
 //		String sql = "select xxdm from xtszb";
@@ -3340,7 +3321,7 @@ public class DAO {
 			while(rs.next()){
 				if (rs.getClob(colName)!=null && rs.getClob(colName).getClass().getName().startsWith("weblogic")){
 		    		Method method = rs.getClob(colName).getClass().getMethod("getVendorObj",new Class[]{});
-		    		clob = (oracle.sql.CLOB)method.invoke(rs.getClob(colName));
+		    		clob = (CLOB)method.invoke(rs.getClob(colName));
 		 	    }else{
 		 	    	clob=(CLOB)rs.getClob(colName);
 		 	    }
@@ -3423,13 +3404,8 @@ public class DAO {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally{
-            try {
-                rs.close();
-                stmt.close();
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+			closeAllStmtAndRs(rs, null, stmt, null);
+			closeConnection(conn);
         }
         return encoder;
     }
@@ -3468,9 +3444,8 @@ public class DAO {
 	     }catch(SQLException e){
 	    	 
 	     } finally {
-	    	 rs.close();
-             stmt.close();
-             conn.close();
+			closeAllStmtAndRs(rs, stmt, null, null);
+			closeConnection(conn);
 	     }
 	     
 	     return null;
@@ -3490,10 +3465,10 @@ public class DAO {
 			stmt = conn.prepareStatement(sql);
 			rs = stmt.executeQuery();
 			if (rs.next()) {
-				oracle.sql.CLOB clob =null;// (CLOB) rs.getClob("tpmold");
+				CLOB clob =null;// (CLOB) rs.getClob("tpmold");
 				if (rs.getClob("newscont").getClass().getName().startsWith("weblogic")){
 		    		Method method = rs.getClob("newscont").getClass().getMethod("getVendorObj",new Class[]{});
-		    		clob = (oracle.sql.CLOB)method.invoke(rs.getClob("newscont"));
+		    		clob = (CLOB)method.invoke(rs.getClob("newscont"));
 		 	    }else{
 		 	    	clob=(CLOB)rs.getClob("newscont");
 		 	    }
@@ -4621,7 +4596,7 @@ public class DAO {
 		} else if (xxdm.equalsIgnoreCase(Globals.XXDM_GZDX)) {// 广州大学
 			String tempSql = "select count(*) num from xszz_com_knsrdb3 where xh=? and xn=? and XXSH in ('困难', '特殊困难','一般困难')";
 			num = this.getOneRs(tempSql, new String[] { xh,xn }, new String("num"));
-		} else if (xxdm.equalsIgnoreCase(Globals.XXDM_WZDX)) {// 温州大学
+		} else if (xxdm.equalsIgnoreCase(Globals.XXDM_WZDX) || xxdm.equalsIgnoreCase("10426")) {// 温州大学
 			String tempSql = "select count(*) num from XG_XSZZ_NEW_KNSJGB where xn = (select dqxn from xtszb where rownum = 1) and xq = (select nvl(rdxq, 'on') from xg_xszz_new_knsjbszb where rownum = 1) and xh=?";
 			num = this.getOneRs(tempSql, new String[] { xh }, new String("num"));
 		} else {
@@ -5298,7 +5273,7 @@ public class DAO {
 			stmt = conn.prepareStatement(sql);
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				oracle.sql.CLOB clob =null;// (CLOB) rs.getClob("tpmold");
+				CLOB clob =null;// (CLOB) rs.getClob("tpmold");
 				
 				System.out.println("sss:"+rs.getClob("newscont").getClass().getName().startsWith("weblogic"));
 				

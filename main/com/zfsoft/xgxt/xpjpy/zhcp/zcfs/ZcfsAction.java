@@ -1761,9 +1761,9 @@ public class ZcfsAction extends SuperAction {
 								HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ZcfsService service = new ZcfsService();
 		if(service.tbXfcj(getUser(request))){
-			response.getWriter().print(MESSAGE_SUCCESS);
+			response.getWriter().print(getJsonMessage(MESSAGE_SUCCESS));
 		}else {
-			response.getWriter().print(MESSAGE_FAIL);
+			response.getWriter().print(getJsonMessage(MESSAGE_FAIL));
 		}
 		return null;
 	}
