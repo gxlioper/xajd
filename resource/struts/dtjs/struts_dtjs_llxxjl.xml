@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="llxxjlCsszForm" type="com.zfsoft.xgxt.dtjs.llxxjl.cssz.CsszForm" />
+		<form-bean name="llxxjlSqForm" type="com.zfsoft.xgxt.dtjs.llxxjl.sq.LlxxjlsqForm" />
+		<form-bean name="llxxjlShForm" type="com.zfsoft.xgxt.dtjs.llxxjl.sh.LlxxjlshForm" />
+		<form-bean name="llxxjlJgForm" type="com.zfsoft.xgxt.dtjs.llxxjl.jg.LlxxjljgForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/dtjs_llxxjl_cssz" forward="/llxxjl_cssz.do?method=cssz" />
+		<action path="/llxxjl_cssz"
+				name="llxxjlCsszForm"
+				parameter="method"
+				scope="request"
+				type="com.zfsoft.xgxt.dtjs.llxxjl.cssz.CsszAction">
+			<forward name="cssz" path="/xsgzgl/dtjs/llxxjl/cssz/llxxjlCssz.jsp" />
+		</action>
+
+		<action path="/dtjs_llxxjl_sq" forward="/llxxjl_sq.do?method=getList" />
+		<action path="/llxxjl_sq"
+				name="llxxjlSqForm"
+				parameter="method"
+				scope="request"
+				type="com.zfsoft.xgxt.dtjs.llxxjl.sq.LlxxjlsqAction">
+			<forward name="llxxjlSqList" path="/xsgzgl/dtjs/llxxjl/sq/llxxjlSqList.jsp" />
+			<forward name="llxxjlSqAdd" path="/xsgzgl/dtjs/llxxjl/sq/llxxjlSqAdd.jsp" />
+			<forward name="llxxjlSqUpdate" path="/xsgzgl/dtjs/llxxjl/sq/llxxjlSqUpdate.jsp" />
+			<forward name="llxxjlSqView" path="/xsgzgl/dtjs/llxxjl/sq/llxxjlSqView.jsp" />
+		</action>
+
+		<action path="/dtjs_llxxjl_sh" forward="/llxxjl_sh.do?method=getList" />
+		<action path="/llxxjl_sh"
+				name="llxxjlShForm"
+				parameter="method"
+				scope="request"
+				type="com.zfsoft.xgxt.dtjs.llxxjl.sh.LlxxjlshAction">
+			<forward name="llxxjlShList" path="/xsgzgl/dtjs/llxxjl/sh/llxxjlShList.jsp" />
+			<forward name="llxxjlDgsh" path="/xsgzgl/dtjs/llxxjl/sh/llxxjlDgsh.jsp" />
+			<forward name="llxxjlPlsh" path="/xsgzgl/dtjs/llxxjl/sh/llxxjlPlsh.jsp" />
+		</action>
+
+		<action path="/dtjs_llxxjl_jg" forward="/llxxjl_jg.do?method=getList" />
+		<action path="/llxxjl_jg"
+				name="llxxjlJgForm"
+				parameter="method"
+				scope="request"
+				type="com.zfsoft.xgxt.dtjs.llxxjl.jg.LlxxjljgAction">
+			<forward name="llxxjlJgList" path="/xsgzgl/dtjs/llxxjl/jg/llxxjlJgList.jsp" />
+			<forward name="llxxjlJgAdd" path="/xsgzgl/dtjs/llxxjl/jg/llxxjlJgAdd.jsp" />
+			<forward name="llxxjlJgUpdate" path="/xsgzgl/dtjs/llxxjl/jg/llxxjlJgUpdate.jsp" />
+			<forward name="llxxjlJgView" path="/xsgzgl/dtjs/llxxjl/jg/llxxjlJgView.jsp" />
+		</action>
+
+	</action-mappings>
+</struts-config>

@@ -68,7 +68,7 @@ public class SthdjgDao extends SuperDAOImpl<SthdjgForm> {
 	    sql.append(" left join VIEW_XSJBXX b on a.xh = b.xh ");
 	    sql.append(" left join XG_HDGL_HDLXDMB c on a.hdlx = c.hdlxdm ");
 	    sql.append("  where c.hdlxdm = '4' and (b.zzmm = '01' or b.zzmm = '02')) ");
-		sql.append(" ) ");
+		sql.append(" ) t ");
 	    sql.append(" where 1=1 ");
 		sql.append(searchTjByUser);
 		sql.append(searchTj);
