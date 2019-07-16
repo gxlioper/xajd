@@ -55,7 +55,7 @@ public class QgzxCxtjDAO extends SuperDAOImpl{
 		QgzxGlyglService qgzxGlyglService = new QgzxGlyglService();
 		//如果不是勤工管理员
 		if(!qgzxGlyglService.sfQggly(user.getUserName())){
-			sql.append(" and (a.yhm ='"+user.getUserName()+"' or a.zgh = '"+user.getUserName()+"') ");
+			sql.append(" and (t.yhm ='"+user.getUserName()+"' or t.zgh = '"+user.getUserName()+"') ");
 		}
 		sql.append(searchTj);
 		return getPageList(model,sql.toString(),inputV);
@@ -189,10 +189,7 @@ public class QgzxCxtjDAO extends SuperDAOImpl{
 		sql.append(" left join XG_XSXX_PYCCDMB c on b.pycc = c.pyccdm ");
 		sql.append(" ) t where 1=1 ");
 		QgzxGlyglService qgzxGlyglService = new QgzxGlyglService();
-		//如果不是勤工管理员
-		if(!qgzxGlyglService.sfQggly(user.getUserName())){
-			sql.append(" and (t.yhm ='"+user.getUserName()+"' or t.zgh = '"+user.getUserName()+"') ");
-		}
+
 		sql.append(searchTj);
 		return getPageList(model,sql.toString(),inputV);
 	}

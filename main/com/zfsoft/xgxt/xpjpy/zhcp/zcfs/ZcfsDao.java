@@ -1091,6 +1091,35 @@ public class ZcfsDao extends SuperDAOImpl<ZcfsModel> {
 		int[] result = dao.runBatch(sql.toString(), params);
 		return dao.checkBatchResult(result);
 	}
+
+	/**
+	 * 测试测试测试（实际生产环境发生锁表问题进行测试）
+	 * @param params
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean batchWhZcfs(List<String[]> params) throws Exception{
+
+		StringBuilder sql = new StringBuilder();
+
+		sql.append("MERGE INTO xg_zhcp_zcfsb t1");
+		sql.append(" USING (select ? xh, ? xn, ? xq, ? xmdm, ? fs , ? lrr , to_char(sysdate, 'YYYY-MM-DD HH24:MI:SS') lrsj from dual) t2");
+		sql.append(" ON (t1.xh=t2.xh and t1.xmdm=t2.xmdm)");
+		sql.append(" WHEN MATCHED THEN");
+		sql.append("   UPDATE");
+		sql.append("     SET xn=t2.xn,xq=t2.xq,fs=t2.fs,lrr=t2.lrr,");
+		sql.append("     lrsj=to_char(sysdate,'YYYY-MM-DD HH24:MI:SS')");
+		sql.append("   WHERE xh=? and xmdm=?");
+		sql.append("WHEN NOT MATCHED THEN");
+		sql.append("  INSERT (xh, xn, xq, xmdm, fs, lrr, lrsj)");
+		sql.append("  VALUES (t2.xh, t2.xn, t2.xq, t2.xmdm, t2.fs, t2.lrr, t2.lrsj)");
+		boolean result = true;
+		for(int i =0;i<params.size();i++){
+			result = dao.runUpdate(sql.toString(),params.get(i));
+		}
+		return result;
+	}
+
 	public boolean updateZcfs(ZcfsModel t) throws Exception{
 			
 			StringBuilder sql = new StringBuilder();

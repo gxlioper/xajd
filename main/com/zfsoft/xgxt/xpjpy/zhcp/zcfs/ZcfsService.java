@@ -2694,7 +2694,7 @@ public class ZcfsService extends
                 hashMap.get("xfcj"),user.getUserName(),hashMap.get("xh"),zcxmId};
                 result.add(param);
             }
-            dao.batchInsertZcfs(result);
+            dao.batchWhZcfs(result);
         } catch (Exception e) {
             throw new SystemException(MessageKey.SYS_SYNC_FAIL);
         }

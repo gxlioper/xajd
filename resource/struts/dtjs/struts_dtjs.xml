@@ -10,6 +10,9 @@
     	<!-- =====================================伟大的骆 begin===================================================== -->	
 		<form-bean name="dtjsGeneralForm" type="xsgzgl.dtjs.general.DtjsGeneralForm" />
 		<!-- =====================================伟大的骆 end===================================================== -->	
+		
+		<!-- 综合查询 -->
+		<form-bean name="rcjyForm" type="com.zfsoft.xgxt.dtjs.zhcx.ZhcxForm"/>
 	</form-beans>
 
 	<action-mappings>
@@ -52,7 +55,15 @@
     			parameter="method">
     			
 		</action>
-		<!-- =====================================伟大的骆 end===================================================== -->	
-		
+		<!-- =====================================伟大的骆 end===================================================== -->
+        <action path="/dtjs_rcjy_zhcx" forward="/dtjs_rcjyZhcx.do?method=rcjyList"/>
+		<action path="/dtjs_rcjyZhcx"
+				scope="request"
+				type="com.zfsoft.xgxt.dtjs.zhcx.ZhcxAction"
+				name="rcjyForm"
+				parameter="method">
+			<forward name="rcjyList" path="/xsgzgl/dtjs/zhcx/rcjyList.jsp"/>
+            <forward name="rcjyView" path="/xsgzgl/dtjs/zhcx/rcjyView.jsp"/>
+		</action>
 	</action-mappings>
 </struts-config>
