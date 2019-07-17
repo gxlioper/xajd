@@ -30,6 +30,7 @@ public class StglForm extends ActionForm{
 	private String filepath;
 	
 	private String[] xhArray;
+	private String[] fzArray;
 	
 	private String splc;
 	private String shzt;
@@ -482,6 +483,12 @@ public class StglForm extends ActionForm{
 	public void setStzt(String stzt) {
 		this.stzt = stzt;
 	}
-	
-	
+
+	public String[] getFzArray() {
+		return fzArray;
+	}
+
+	public void setFzArray(String[] fzArray) {
+		this.fzArray = fzArray;
+	}
 }

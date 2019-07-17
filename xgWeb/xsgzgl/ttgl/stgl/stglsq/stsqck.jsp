@@ -143,7 +143,7 @@
 												<td style='text-align:center'><label name = 'xymc'>${i.xymc}</label></td>
 												<td style='text-align:center'><label name = 'zymc'>${i.zymc}</label></td>
 												<td style='text-align:center'><label name = 'bjmc'>${i.bjmc}</label></td>
-												<td style='text-align:center'><label name = 'fz'>¸ºÔðÈË</label></td>
+												<td style='text-align:center'><label name = 'fz'>${i.fzrfz}</label></td>
 												<td style='text-align:center'><label name = 'sjhm'>${i.sjhm}</label></td>
 											</tr>
 									</logic:iterate>

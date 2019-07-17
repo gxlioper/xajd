@@ -218,7 +218,7 @@ function hideNdzzztTd(e){
 					<thead>
 						<tr class="h">
 							<th colspan="4">
-								<span><font color="red">*</font>学生组织第一负责人</span>
+								<span><font color="red">*</font>学生组织负责人</span>
 								<div class="btn">
 									<button type="button" onclick="addRowDialog('tablebody');return false;" style="float:left">增加</button>
 									<button type="button" onclick="delRow();return false;" style="float:left">删除</button>

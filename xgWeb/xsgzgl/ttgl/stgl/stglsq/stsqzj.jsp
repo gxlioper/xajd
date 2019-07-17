@@ -105,7 +105,15 @@ function addRow(tableId){
 	html += "<td style='text-align:center'><label name = 'zymc'></label></td>";
 	html += "<td style='text-align:center'><label name = 'bjmc'></label></td>";
 	if(tableId == "tablebody1"){
-        html += "<td style='text-align:center'><label name = 'fz'>负责人</label></td>";
+        html += "<td style='text-align:center'>";
+        html += "<select name='fzrfz'>";
+        html += "<option value='第一负责人'>第一负责人</option>";
+        html += "<option value='第二负责人'>第二负责人</option>";
+        html += "<option value='第三负责人'>第三负责人</option>";
+        html += "<option value='第四负责人'>第四负责人</option>";
+        html += "<option value='第五负责人'>第五负责人</option>";
+        html += "</select>";
+        html += "</td>";
     } else {
         html += "<td style='text-align:center'><label name = 'fz'>团支书</label></td>";
     }
@@ -313,7 +321,7 @@ function hideNdzzztTd(e){
 					<thead>
 						<tr class="h">
 							<th colspan="4">
-								<span><font color="red">*</font>学生组织第一负责人</span>
+								<span><font color="red">*</font>学生组织负责人</span>
                                 <div class="btn">
                                     <button type="button" onclick="addRow('tablebody1');return false;" style="float:left">增加</button>
                                     <button type="button" onclick="delRow();return false;" style="float:left">删除</button>
@@ -347,7 +355,15 @@ function hideNdzzztTd(e){
 										<td style='text-align:center'><label name = 'xymc'>${jbxx.xymc }</label></td>
 										<td style='text-align:center'><label name = 'zymc'>${jbxx.zymc }</label></td>
 										<td style='text-align:center'><label name = 'bjmc'>${jbxx.bjmc }</label></td>
-										<td style='text-align:center'><label name = 'fz'>负责人</label></td>
+										<td style='text-align:center'>
+                                            <select name="fzrfz">
+                                                <option value="第一负责人">第一负责人</option>
+                                                <option value="第二负责人">第二负责人</option>
+                                                <option value="第三负责人">第三负责人</option>
+                                                <option value="第四负责人">第四负责人</option>
+                                                <option value="第五负责人">第五负责人</option>
+                                            </select>
+                                        </td>
 										<td style='text-align:center'><label name = 'sjhm'>${jbxx.sjhm }</label></td>
 										</tr>
 									</tbody>

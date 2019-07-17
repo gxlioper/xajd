@@ -71,7 +71,7 @@ public class StcyglDao extends SuperDAOImpl<StcyglForm>{
 
 	public List<HashMap<String, String>> getFzrxx(StcyglForm myForm) {
 		StringBuilder sql = new StringBuilder();
-		sql.append(" select a.xh,b.xm,b.xb,b.bjmc,b.sjhm,b.xymc,b.zymc,d.symc from xg_ttgl_stglfzrb a");
+		sql.append(" select a.xh,b.xm,b.xb,b.bjmc,b.sjhm,b.xymc,b.zymc,d.symc,a.fzrfz from xg_ttgl_stglfzrb a");
 		sql.append(" left join view_xsbfxx b on a.xh = b.xh");
 		sql.append(" left join xg_xtwh_sybjglb c on b.bjdm=c.bjdm");
 		sql.append(" left join xg_xtwh_sydmb d on c.sydm=d.sydm");

@@ -93,10 +93,15 @@ public class StglAction extends SuperAction{
 	public ActionForward addst(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-			StglForm model = (StglForm) form;
-			String[] xhArray = request.getParameterValues("xh");
-			model.setXhArray(xhArray);
+		StglForm model = (StglForm) form;
 		if (SAVE.equalsIgnoreCase(model.getType())) {
+			String[] xhArray = request.getParameterValues("xh");
+			String[] fzArray = request.getParameterValues("fzrfz");
+			if(xhArray.length!=fzArray.length){
+				throw new Exception();
+			}
+			model.setXhArray(xhArray);
+			model.setFzArray(fzArray);
             String[] jflyArray = model.getJflyArray();
             StringBuilder s = new StringBuilder();
             for(int i=0;i<jflyArray.length;i++){
@@ -178,7 +183,12 @@ public class StglAction extends SuperAction{
 		StglForm myForm = service.getModel(model);
 		if (UPDATE.equalsIgnoreCase(model.getType())) {
 			String[] xhArray = request.getParameterValues("xh");
+			String[] fzArray = request.getParameterValues("fzrfz");
+			if(xhArray.length!=fzArray.length){
+				throw new Exception();
+			}
 			model.setXhArray(xhArray);
+			model.setFzArray(fzArray);
             String[] jflyArray = model.getJflyArray();
             StringBuilder s = new StringBuilder();
             for(int i=0;i<jflyArray.length;i++){

@@ -71,7 +71,15 @@
 						html += "<td style='text-align:center'><label name = 'zymc'>"+zymc+"</label></td>";
 						html += "<td style='text-align:center'><label name = 'bjmc'>"+bjmc+"</label></td>";
                     if(${appandTableId eq "tablebody"}){
-                        html += "<td style='text-align:center'><label name = 'fz'>负责人</label></td>";
+						html += "<td style='text-align:center'>";
+						html += "<select name='fzrfz'>";
+						html += "<option value='第一负责人'>第一负责人</option>";
+						html += "<option value='第二负责人'>第二负责人</option>";
+						html += "<option value='第三负责人'>第三负责人</option>";
+						html += "<option value='第四负责人'>第四负责人</option>";
+						html += "<option value='第五负责人'>第五负责人</option>";
+						html += "</select>";
+						html += "</td>";
 					} else {
                         html += "<td style='text-align:center'><label name = 'fz'>团支书</label></td>";
 					}

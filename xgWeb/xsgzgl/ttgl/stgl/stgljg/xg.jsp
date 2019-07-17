@@ -28,8 +28,8 @@ function delRow(){
 }
 
 //老师身份增加学生
-function addRowDialog(){
-    var url = "ttgl_stgl.do?method=selectStu";
+function addRowDialog(appandTableId){
+    var url = "ttgl_stgl.do?method=selectStu&appandTableId="+appandTableId;
     var title = "负责人选择";
 	showDialog(title, 770, 550, url);
 }
@@ -231,9 +231,9 @@ function hideNdzzztTd(){
 					<thead>
 					<tr class="h">
 						<th colspan="4">
-							<span><font color="red">*</font>学生组织第一负责人</span>
+							<span><font color="red">*</font>学生组织负责人</span>
 							<div class="btn">
-								<button type="button" onclick="addRow('tablebody1');return false;" style="float:left">增加</button>
+								<button type="button" onclick="addRowDialog('tablebody');return false;" style="float:left">增加</button>
 								<button type="button" onclick="delRow();return false;" style="float:left">删除</button>
 							</div>
 						</th>
@@ -266,7 +266,52 @@ function hideNdzzztTd(){
 												<td style='text-align:center'><label name = 'xymc'>${i.xymc}</label></td>
 												<td style='text-align:center'><label name = 'zymc'>${i.zymc}</label></td>
 												<td style='text-align:center'><label name = 'bjmc'>${i.bjmc}</label></td>
-												<td style='text-align:center'><label name = 'fz'>负责人</label></td>
+												<td style='text-align:center'>
+													<select name="fzrfz">
+														<logic:equal name="i" property="fzrfz" value="第一负责人">
+															<option value="第一负责人" selected="selected">第一负责人</option>
+															<option value="第二负责人">第二负责人</option>
+															<option value="第三负责人">第三负责人</option>
+															<option value="第四负责人">第四负责人</option>
+															<option value="第五负责人">第五负责人</option>
+														</logic:equal>
+														<logic:equal name="i" property="fzrfz" value="第二负责人">
+															<option value="第一负责人">第一负责人</option>
+															<option value="第二负责人" selected="selected">第二负责人</option>
+															<option value="第三负责人">第三负责人</option>
+															<option value="第四负责人">第四负责人</option>
+															<option value="第五负责人">第五负责人</option>
+														</logic:equal>
+														<logic:equal name="i" property="fzrfz" value="第三负责人">
+															<option value="第一负责人">第一负责人</option>
+															<option value="第二负责人">第二负责人</option>
+															<option value="第三负责人" selected="selected">第三负责人</option>
+															<option value="第四负责人">第四负责人</option>
+															<option value="第五负责人">第五负责人</option>
+														</logic:equal>
+														<logic:equal name="i" property="fzrfz" value="第四负责人">
+															<option value="第一负责人">第一负责人</option>
+															<option value="第二负责人">第二负责人</option>
+															<option value="第三负责人">第三负责人</option>
+															<option value="第四负责人" selected="selected">第四负责人</option>
+															<option value="第五负责人">第五负责人</option>
+														</logic:equal>
+														<logic:equal name="i" property="fzrfz" value="第五负责人">
+															<option value="第一负责人">第一负责人</option>
+															<option value="第二负责人">第二负责人</option>
+															<option value="第三负责人">第三负责人</option>
+															<option value="第四负责人">第四负责人</option>
+															<option value="第五负责人" selected="selected">第五负责人</option>
+														</logic:equal>
+														<logic:equal name="i" property="fzrfz" value="">
+															<option value="第一负责人">第一负责人</option>
+															<option value="第二负责人">第二负责人</option>
+															<option value="第三负责人">第三负责人</option>
+															<option value="第四负责人">第四负责人</option>
+															<option value="第五负责人">第五负责人</option>
+														</logic:equal>
+													</select>
+												</td>
 												<td style='text-align:center'><label name = 'sjhm'>${i.sjhm}</label></td>
 											</tr>
 									</logic:iterate>

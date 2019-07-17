@@ -36,6 +36,7 @@ public class StglsqService extends SuperServiceImpl<StglsqForm, StglsqDao>{
 			model.setShzt(Constants.YW_WTJ);//未提交
 		}
 		String[] xhArray = model.getXhArray();
+		String[] fzArray = model.getFzArray();
 		String[] tzsxh = model.getTzsxh();
 		String splc = dao.getShlcID();// 获取审批流程
 		model.setSplc(splc);
@@ -49,9 +50,9 @@ public class StglsqService extends SuperServiceImpl<StglsqForm, StglsqDao>{
 			List<String[]> zwList = new ArrayList<>();
 			if(xhArray != null && xhArray.length > 0){
 				for (int i = 0; i < xhArray.length; i++) {
-						paraList.add(new String[]{xhArray[i],model.getSqid()});
-						rxxList.add(new String[]{xhArray[i],model.getSqid(),"0","负责人","1"});
-						zwList.add(new String[]{model.getSqid(),"负责人","",Integer.toString(xhArray.length),""});
+						paraList.add(new String[]{xhArray[i],model.getSqid(),fzArray[i]});
+						rxxList.add(new String[]{xhArray[i],model.getSqid(),"0",fzArray[i],"1"});
+						zwList.add(new String[]{model.getSqid(),fzArray[i],"",Integer.toString(xhArray.length),""});
 				}
 				insertResult = dao.saveFzrb(paraList);
 				if(!insertResult){
@@ -70,16 +71,11 @@ public class StglsqService extends SuperServiceImpl<StglsqForm, StglsqDao>{
                 }
 			}
 			if(rxxList.size() > 0){
-                insertResult = dao.saveStcyb(rxxList); //将负责人与团支书保存到成员表中
-                if(!insertResult){
-                    throw new SystemException(MessageKey.SYS_SAVE_FAIL);
-                }else{
-                	insertResult = dao.saveZW(zwList);//将负责人与团支书添加到职务表中
-                	if(!insertResult){
-                		throw new SystemException(MessageKey.SYS_SAVE_FAIL);
-					}
+				insertResult = dao.saveStcyb(rxxList);
+				if(!insertResult){
+					throw new SystemException(MessageKey.SYS_SAVE_FAIL);
 				}
-            }
+			}
 		}
 		
 		if( SAVE.equalsIgnoreCase(model.getType())){
@@ -117,6 +113,7 @@ public class StglsqService extends SuperServiceImpl<StglsqForm, StglsqDao>{
 		}
 
 		String[] xhArray = model.getXhArray();
+		String[] fzArray = model.getFzArray();
         String[] tzsxh = model.getTzsxh();
 		boolean insertResult = super.runUpdate(model);
 		if(insertResult){
@@ -126,8 +123,8 @@ public class StglsqService extends SuperServiceImpl<StglsqForm, StglsqDao>{
 			List<String[]> rxxList = new ArrayList<String[]>();
 			if(xhArray != null && xhArray.length > 0){
 				for (int i = 0; i < xhArray.length; i++) {
-						paraList.add(new String[]{xhArray[i],model.getSqid()});
-						rxxList.add(new String[]{xhArray[i],model.getSqid(),"0","负责人","1"});
+						paraList.add(new String[]{xhArray[i],model.getSqid(),fzArray[i]});
+						rxxList.add(new String[]{xhArray[i],model.getSqid(),"0",fzArray[i],"1"});
 				}
 				insertResult = dao.saveFzrb(paraList);
 				if(!insertResult){

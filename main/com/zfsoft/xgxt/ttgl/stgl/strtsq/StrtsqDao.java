@@ -32,7 +32,7 @@ public class StrtsqDao extends SuperDAOImpl<StrtsqForm>{
 		sql.append(" (select count(1) from XG_TTGL_STCYB where jgid=a.jgid and shzt='1') strs,"); 
 		sql.append(" (select count(1) from XG_TTGL_STCYB where jgid=a.jgid and xh='"+user.getUserName()+"' ) sfcz,"); 
 		sql.append(" (select  case  when (k.shzt ='0'and tnzw is null) then '待审核'  when k.shzt = '2' then '已拒绝' when (k.shzt ='1'and tnzw ='成员') then '成员' "); 
-		sql.append(" when tnzw='负责人' then '负责人' end zt from xg_ttgl_stcyb k   where k.jgid = a.jgid and xh='"+user.getUserName()+"') sqzt"); 
+		sql.append(" when tnzw like '%负责人%' then tnzw end zt from xg_ttgl_stcyb k   where k.jgid = a.jgid and xh='"+user.getUserName()+"') sqzt");
 		sql.append(" from xg_ttgl_stgljgb a left join fdyxxb b on a.stzdls=b.zgh "); 
 		sql.append(" left join zxbz_xxbmdm c on a.ywzddw = c.bmdm where a.stzt <>'2' ) t ");
 		sql.append(" where 1 = 1 "); 
@@ -66,16 +66,17 @@ public class StrtsqDao extends SuperDAOImpl<StrtsqForm>{
 
 	public List<HashMap<String,String>> getFzrxx(StrtsqForm myForm) {
 		StringBuilder sql = new StringBuilder();
-		sql.append(" select a.xh,b.xm,b.xb,b.bjmc,b.sjhm,b.xymc,b.zymc,d.symc from xg_ttgl_stglfzrb a");
+		sql.append(" select a.xh,b.xm,b.xb,b.bjmc,b.sjhm,b.xymc,b.zymc,d.symc,a.fzrfz from xg_ttgl_stglfzrb a");
 		sql.append(" left join view_xsbfxx b on a.xh = b.xh");
 		sql.append(" left join xg_xtwh_sybjglb c on b.bjdm=c.bjdm");
 		sql.append(" left join xg_xtwh_sydmb d on c.sydm=d.sydm where");
-		if ("1".equals(myForm.getSjly())) {
-			sql.append(" a.sqid = ?");
-		}else {
-			sql.append(" a.jgid = ?");
-		}
-		return dao.getListNotOut(sql.toString(),new String[]{myForm.getJgid()});
+//		if ("1".equals(myForm.getSjly())) {
+//			sql.append(" a.sqid = ?");
+//		}else {
+//			sql.append(" a.jgid = ?");
+//		}
+		sql.append(" (a.sqid = ? or a.jgid = ?) ");
+		return dao.getListNotOut(sql.toString(),new String[]{myForm.getJgid(),myForm.getJgid()});
 	}
 
 	public boolean cancelSq(StrtsqForm model) throws Exception {

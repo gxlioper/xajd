@@ -38,6 +38,7 @@ public class StglService extends SuperServiceImpl<StglForm, StglDao>{
 	public boolean saveSt(StglForm model) throws Exception {
 		boolean rs = true;
 		String[] xhArray = model.getXhArray();
+		String[] fzArray = model.getFzArray();
 		model.setStzt("1");//默认结果菜单增加的就是正式的社团
 		if(StringUtils.isNotNull(model.getJgid())){//修改保存
 			rs = dao.delFzrb(model.getJgid());
@@ -67,8 +68,8 @@ public class StglService extends SuperServiceImpl<StglForm, StglDao>{
 		String[] tzsxh = model.getTzsxh();
 		if(xhArray != null && xhArray.length > 0){
 			for (int i = 0; i < xhArray.length; i++) {
-					paraList.add(new String[]{xhArray[i],model.getJgid()});
-					rxxList.add(new String[]{xhArray[i],model.getJgid(),"1","负责人","0"});
+					paraList.add(new String[]{xhArray[i],model.getJgid(),fzArray[i]});
+					rxxList.add(new String[]{xhArray[i],model.getJgid(),"1",fzArray[i],"0"});
 			}
 			rs = dao.saveFzrb(paraList);//增加到负责人表
 			if(!rs){

@@ -404,7 +404,7 @@ public class QgzxJcdmwhDAO extends SuperDAOImpl<QgzxJcdmwhForm> {
     public List<HashMap<String, String>> getBmList() {
         StringBuilder sql = new StringBuilder();
         sql.append("select bmdm xydm,bmmc xymc from ZXBZ_XXBMDM where BMFDM is null and BMLB != '6' ");
-        sql.append(" union select jgid xydm,stqc xymc from xg_ttgl_stgljgb order by xymc");
+        sql.append("  order by xymc");
         return dao.getListNotOut(sql.toString(), new String[]{});
     }
 }

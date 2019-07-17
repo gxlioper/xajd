@@ -119,7 +119,12 @@ public class StglsqAction extends SuperAction{
 			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 			model.setSqsj(df.format(new Date()));
 			String[] xhArray = request.getParameterValues("xh");
+			String[] fzArray = request.getParameterValues("fzrfz");
+			if(xhArray.length!=fzArray.length){
+				throw new Exception();
+			}
 			model.setXhArray(xhArray);
+			model.setFzArray(fzArray);
             String[] jflyArray = model.getJflyArray();
             StringBuilder s = new StringBuilder();
             for(int i=0;i<jflyArray.length;i++){
@@ -219,7 +224,12 @@ public class StglsqAction extends SuperAction{
 			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 			model.setSqsj(df.format(new Date()));
 			String[] xhArray = request.getParameterValues("xh");
+			String[] fzArray = request.getParameterValues("fzrfz");
+			if(xhArray.length!=fzArray.length){
+				throw new Exception();
+			}
 			model.setXhArray(xhArray);
+			model.setFzArray(fzArray);
 			String[] jflyArray = model.getJflyArray();
 			StringBuilder s = new StringBuilder();
 			for(int i=0;i<jflyArray.length;i++){

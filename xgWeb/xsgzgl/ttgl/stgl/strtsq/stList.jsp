@@ -69,7 +69,7 @@ function czLink(cellValue,rowObject){
 	if(sfcz==0){
 		return "<button type='button' onclick='sq(\""+jgid+"\");'>申请入团</button>";
 	}else{
-		if(zt=="负责人" ||zt=="成员"||zt=="已拒绝"){
+		if(zt.indexOf("负责人")>=0 ||zt=="成员"||zt=="已拒绝"){
 			return "<label>无</label>";
 		}else{
 			return "<button type='button' onclick='cx(\""+jgid+"\");'>撤销申请</button>";

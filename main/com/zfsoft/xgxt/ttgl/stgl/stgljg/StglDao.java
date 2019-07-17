@@ -81,7 +81,7 @@ public class StglDao extends SuperDAOImpl<StglForm>{
 
 	public boolean saveFzrb(List<String[]> paraList) throws SQLException {
 		StringBuilder sql = new StringBuilder();
-		sql.append(" insert into xg_ttgl_stglfzrb(xh,jgid) values(?,?)");
+		sql.append(" insert into xg_ttgl_stglfzrb(xh,jgid,fzrfz) values(?,?,?)");
 		return dao.runBatchBoolean(sql.toString(), paraList);
 	}
 
@@ -93,7 +93,7 @@ public class StglDao extends SuperDAOImpl<StglForm>{
 
 	public List<HashMap<String, String>> getFzrxx(StglForm myForm) {
 		StringBuilder sql = new StringBuilder();
-		sql.append(" select a.xh,b.xm,b.xb,b.bjmc,b.sjhm,b.xymc,b.zymc,d.symc from  xg_ttgl_stglfzrb a");
+		sql.append(" select a.xh,b.xm,b.xb,b.bjmc,b.sjhm,b.xymc,b.zymc,d.symc,a.fzrfz from  xg_ttgl_stglfzrb a");
 		sql.append(" left join view_xsbfxx b on a.xh = b.xh");
 		sql.append(" left join xg_xtwh_sybjglb c on b.bjdm=c.bjdm");
 		sql.append(" left join xg_xtwh_sydmb d on c.sydm=d.sydm where ");

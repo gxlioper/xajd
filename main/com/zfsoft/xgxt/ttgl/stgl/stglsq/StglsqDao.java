@@ -129,7 +129,7 @@ public class StglsqDao extends SuperDAOImpl<StglsqForm>{
 
 	public boolean saveFzrb(List<String[]> paraList) throws Exception {
 		StringBuilder sql = new StringBuilder();
-		sql.append(" insert into xg_ttgl_stglfzrb(xh,sqid) values(?,?)");
+		sql.append(" insert into xg_ttgl_stglfzrb(xh,sqid,fzrfz) values(?,?,?)");
 		return dao.runBatchBoolean(sql.toString(), paraList);
 	}
 
@@ -139,18 +139,18 @@ public class StglsqDao extends SuperDAOImpl<StglsqForm>{
         return dao.runBatchBoolean(sql.toString(), tzsList);
     }
 
-    public boolean delZwInfo(String[] ids) throws Exception {
-		StringBuilder sql = new StringBuilder();
-		sql.append("delete from xg_ttgl_stzwglb where sqid in(");
-		for (int i = 0; i < ids.length; i++) {
-			sql.append("?");
-			if(i != ids.length-1){
-				sql.append(",");
-			}
-		}
-		sql.append(")");
-		return dao.runUpdate(sql.toString(),ids);
-	}
+//    public boolean delZwInfo(String[] ids) throws Exception {
+//		StringBuilder sql = new StringBuilder();
+//		sql.append("delete from xg_ttgl_stzwglb where sqid in(");
+//		for (int i = 0; i < ids.length; i++) {
+//			sql.append("?");
+//			if(i != ids.length-1){
+//				sql.append(",");
+//			}
+//		}
+//		sql.append(")");
+//		return dao.runUpdate(sql.toString(),ids);
+//	}
 	public boolean delFzrbInfo(String[] ids) throws Exception {
 		StringBuilder sql = new StringBuilder();
 		sql.append(" delete from xg_ttgl_stglfzrb where sqid in(");
@@ -184,7 +184,7 @@ public class StglsqDao extends SuperDAOImpl<StglsqForm>{
      */
 	public List<HashMap<String, String>> getFzrxx(String sqid) {
 		StringBuilder sql = new StringBuilder();
-		sql.append(" select a.xh,b.xm,b.xb,b.bjmc,b.sjhm,b.xymc,b.zymc,d.symc from  xg_ttgl_stglfzrb a");
+		sql.append(" select a.xh,b.xm,b.xb,b.bjmc,b.sjhm,b.xymc,b.zymc,d.symc,a.fzrfz from  xg_ttgl_stglfzrb a");
 		sql.append(" left join view_xsbfxx b on a.xh = b.xh");
 		sql.append(" left join xg_xtwh_sybjglb c on b.bjdm=c.bjdm");
 		sql.append(" left join xg_xtwh_sydmb d on c.sydm=d.sydm ");
@@ -229,11 +229,11 @@ public class StglsqDao extends SuperDAOImpl<StglsqForm>{
 		return dao.getMapNotOut(sql.toString(),paralist.toArray(new String[]{}));
 	}
 
-	public boolean saveZW(List<String[]> zwList) throws SQLException {
-		StringBuilder sql = new StringBuilder();
-		sql.append(" insert into xg_ttgl_stzwglb(sqid,zwmc,zwms,rssx,sjzw) values(?,?,?,?,?)");
-		return dao.runBatchBoolean(sql.toString(), zwList);
-	}
+//	public boolean saveZW(List<String[]> zwList) throws SQLException {
+//		StringBuilder sql = new StringBuilder();
+//		sql.append(" insert into xg_ttgl_stzwglb(sqid,zwmc,zwms,rssx,sjzw) values(?,?,?,?,?)");
+//		return dao.runBatchBoolean(sql.toString(), zwList);
+//	}
 
 	public boolean saveStcyb(List<String[]> rxxList) throws SQLException {
 		StringBuilder sql = new StringBuilder();

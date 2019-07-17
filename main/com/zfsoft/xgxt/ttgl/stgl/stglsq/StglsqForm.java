@@ -35,6 +35,7 @@ public class StglsqForm extends ActionForm {
 	private String shzt;
 	private String zzshzt;
 	private String[] xhArray;
+	private String[] fzArray;//职责分组（负责人）
     private String strs;//组织人数
     private String[] jflyArray;//学生组织经费来源
     private String jfly;
@@ -527,7 +528,12 @@ public class StglsqForm extends ActionForm {
 	public void setZzly(String zzly) {
 		this.zzly = zzly;
 	}
-	
-	
-	
+
+	public String[] getFzArray() {
+		return fzArray;
+	}
+
+	public void setFzArray(String[] fzArray) {
+		this.fzArray = fzArray;
+	}
 }
