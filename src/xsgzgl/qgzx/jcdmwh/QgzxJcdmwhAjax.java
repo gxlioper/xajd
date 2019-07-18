@@ -249,7 +249,7 @@ public class QgzxJcdmwhAjax extends BasicExtendAction{
 			return null;
 		}
 		request.setAttribute("model",rs);
-		request.setAttribute("xyList", Base.getXyList());
+		request.setAttribute("xyList", service.getBmList());
 		return mapping.findForward("yrdwXg");
 	}
 	public ActionForward yrdwCk(ActionMapping mapping, ActionForm form,

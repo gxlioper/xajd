@@ -266,7 +266,7 @@ public class ZcyhAction extends SuperAction<ZcyhForm, ZcyhService> {
 		String maxYhm = svc.getMaxYhm();
 		Integer yhm = 0;
 		String yearLast = new SimpleDateFormat("yy", Locale.CHINESE).format(Calendar.getInstance().getTime());
-		if(maxYhm.substring(0,2).equals(yearLast)){
+		if(StringUtils.isNotEmpty(maxYhm)&&maxYhm.substring(0,2).equals(yearLast)){
 			yhm = Integer.parseInt(maxYhm)+1;
 		}else {
 			yhm = Integer.parseInt(yearLast+"0001");

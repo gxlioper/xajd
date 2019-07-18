@@ -100,6 +100,7 @@
 	<body >
 
 		<html:form styleId="qgzxJcdmwhForm" action="/qgzx_jcdmwh_ajax" method="post" onsubmit="return false;">
+		<div style='width:100%;overflow-x:hidden;overflow-y:auto;'>
 			<input type="hidden" value="${model.id}" name="id">
 			<table align="center" class="formlist">
 					<thead>
@@ -255,6 +256,11 @@
 						</td>
 					</tr>
 					</tbody>
+			</table>
+		</div>
+				<div style="height:35px"></div>
+				<div>
+				<table width="100%" border="0" class="formlist" style="position: fixed; _position: absolute; bottom: 0;">
 					<tfoot>
 						<tr>
 							<td colspan="4">
@@ -273,6 +279,7 @@
 						</tr>
 					</tfoot>
 				</table>
+				</div>
 		</html:form>
 	</body>
 </html>
