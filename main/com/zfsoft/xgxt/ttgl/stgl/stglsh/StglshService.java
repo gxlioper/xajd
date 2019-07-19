@@ -75,6 +75,10 @@ public class StglshService extends SuperServiceImpl<StglshForm, StglshDao>{
 		return reuslt;
 	}
 
+	public boolean checkisCancel(StglshForm t) throws Exception{
+		return dao.checkisCancel(t);
+	}
+
 	public boolean CancelSh(StglshForm model) {
 		boolean resultsq = false;
 		boolean resultjg = false;

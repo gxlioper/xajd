@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<html:form action="/ttgl_stcygl" method="post" styleId="stcyglForm" onsubmit="return false;">
-			<div style="tab;overflow-x:hidden;overflow-y:auto;margin-bottom:0px;height: 600px" >
+			<div style="tab;overflow-x:hidden;overflow-y:auto;margin-bottom:0px;height: 550px" >
 				<table width="100%" border="0" class="formlist">
 					<thead>
 					<tr>

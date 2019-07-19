@@ -52,14 +52,29 @@
 		}
 		function ryManage() {
 			var rows = jQuery("#dataTable").getSeletRow();
+			var height = jQuery(window).height()-210;
 			if (rows.length != 1) {
 				showAlertDivLayer("请先选择一条记录！");
 			}else {
 				if(rows[0]["stzt"]=="预备期"||rows[0]["stzt"]=="正式"){
 					var url = 'ttgl_stcygl.do?method=ryManage&jgid='+ rows[0]["jgid"];
-					showDialog("社团人员管理", 790,476, url);
+					showDialog("社团人员管理", 790,height, url);
 				}else{
 					showAlertDivLayer("只有预备期和正式社团才能进行人员管理！");
+				}
+			}
+		}
+		function zwManage() {
+			var rows = jQuery("#dataTable").getSeletRow();
+			var height = jQuery(window).height()-210;
+			if (rows.length != 1) {
+				showAlertDivLayer("请先选择一条记录！");
+			}else {
+				if(rows[0]["stzt"]=="预备期"||rows[0]["stzt"]=="正式"){
+					var url = 'ttgl_stcygl.do?method=zwManage&jgid='+ rows[0]["jgid"];
+					showDialog("社团职务管理", 790,height, url);
+				}else{
+					showAlertDivLayer("只有预备期和正式社团才能进行职务管理！");
 				}
 			}
 		}
@@ -98,6 +113,9 @@
 						</li>
 						<li>
 							<a href="javascript:void(0);" onclick="ryManage();return false;" class="btn_xg" >团体人员管理</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" onclick="zwManage();return false;" class="btn_xg" >团体职务管理</a>
 						</li>
 						</logic:equal>
 					</ul>

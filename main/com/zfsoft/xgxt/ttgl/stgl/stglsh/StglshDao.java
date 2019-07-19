@@ -145,4 +145,18 @@ public class StglshDao extends SuperDAOImpl<StglshForm>{
 		return dao.update(sql.toString(),inputV)>0 ? true:false;
 	}
 
+	/**
+	 * 判断要撤销审核的学生组织申请是否被允许撤销
+	 * @param t
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean checkisCancel(StglshForm t) throws Exception {
+		StringBuilder sql = new StringBuilder();
+		sql.append(" select zzshzt from xg_ttgl_stglsqb where sqid = ? ");
+
+		String zzshzt = dao.getOneRs(sql.toString(),new String[]{t.getSqid()},"zzshzt");
+		return zzshzt.equals("0")?false:true;
+	}
+
 }

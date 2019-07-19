@@ -63,5 +63,46 @@ public class StcyglService extends SuperServiceImpl<StcyglForm, StcyglDao>{
 		return result;
 	}
 
+    /**
+     * 删除成员
+     * @param t
+     * @throws Exception
+     */
+	public void delCy(StcyglForm t) throws Exception{
+	    dao.delFromCy(t);
+	    dao.delFromFzr(t);
+	    dao.delFromTzs(t);
+    }
 
+    public boolean updateZw(StcyglForm t) throws Exception{
+		dao.delFromTzs(t);
+		dao.delFromFzr(t);
+		String sjly = dao.getSjly(t);
+		boolean result = true;
+		if("1".equals(sjly)){//通过申请的学生组织
+			if (t.getTnzw().indexOf("负责人")>=0){
+				String[] input = new String[]{t.getXh(),t.getJgid(),"",t.getTnzw()};
+				result = dao.updateFzr(input);
+			}else if(t.getTnzw().equals("团支书")){
+				String[] input = new String[]{t.getXh(),t.getJgid(),""};
+				result = dao.updateTzs(input);
+			}
+		}else {//结果添加的学生组织
+			if (t.getTnzw().indexOf("负责人")>=0){
+				String[] input = new String[]{t.getXh(),"",t.getJgid(),t.getTnzw()};
+				result = dao.updateFzr(input);
+			}else if(t.getTnzw().equals("团支书")){
+				String[] input = new String[]{t.getXh(),"",t.getJgid()};
+				result = dao.updateTzs(input);
+			}
+		}
+		if (result){
+			result = dao.updateCyzw(t);
+		}
+		return result;
+	}
+
+	public HashMap<String,String> getCyxx(StcyglForm t) throws Exception{
+		return dao.getCyxx(t);
+	}
 }

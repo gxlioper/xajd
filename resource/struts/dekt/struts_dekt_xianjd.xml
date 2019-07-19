@@ -196,6 +196,8 @@
    		<forward name="ryManage" path="/xsgzgl/ttgl/stgl/stcygl/ryManage.jsp"></forward>
    		<forward name="stzzsq" path="/xsgzgl/ttgl/stgl/stcygl/stzzsq.jsp"></forward>
    		<forward name="sqxxck" path="/xsgzgl/ttgl/stgl/stcygl/sqxxck.jsp"></forward>
+		<forward name="zwManage" path="/xsgzgl/ttgl/stgl/stcygl/zwManage.jsp"/>
+		<forward name="zwChange" path="/xsgzgl/ttgl/stgl/stcygl/zwChange.jsp"/>
 	</action>
 	<!--组织结构管理-->
 	<action path="/xg_ttgl_stjggl" forward="/ttgl_stjggl.do?method=stjgglList"/>

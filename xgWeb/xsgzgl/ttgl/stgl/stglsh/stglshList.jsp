@@ -114,30 +114,45 @@ function cancelSh(){
 		var zzywid = rows[0]["zzywid"];
 		var shzt = rows[0]["shzt"];
 		showConfirmDivLayer("您确定要撤消对该记录的审核操作吗？",{"okFun":function(){
-			jQuery.post("comm_spl.do?method=cxshnew",{shlc:splc,shid:shid},function(data){
-				// 判断是否最后一级撤销(1:最后一级撤销成功）
-				if("1" == data["cancelFlg"]){
-					if(rows[0]['shlx']==0){
-						jQuery.post("ttgl_stglsh.do?method=cancelSh",{sqid:sqid,shzt:shzt},function(result){
-							showAlertDivLayer(result["message"],{},{"clkFun":function(){
-								jQuery("#dataTable").reloadGrid();
-							}});
+			if(rows[0]["shlx"]==0){
+				jQuery.post("ttgl_stglsh.do?method=checkisCancel",{sqid:sqid,shzt:shzt},function (result) {
+					if(result=="true"){ //存在转正申请
+						showAlertDivLayer("存在转正申请，不允许撤销！");
+						return false;
+					}else {
+						jQuery.post("comm_spl.do?method=cxshnew",{shlc:splc,shid:shid},function(data){
+							// 判断是否最后一级撤销(1:最后一级撤销成功）
+							if("1" == data["cancelFlg"]){
+								jQuery.post("ttgl_stglsh.do?method=cancelSh",{sqid:sqid,shzt:shzt},function(result){
+									showAlertDivLayer(result["message"],{},{"clkFun":function(){
+											jQuery("#dataTable").reloadGrid();
+										}});
+								},'json');
+							}else{
+								showAlertDivLayer(data["message"],{},{"clkFun":function(){
+										jQuery("#dataTable").reloadGrid();
+									}});
+							}
 						},'json');
-					}else{
+					}
+				});
+			}else {
+				jQuery.post("comm_spl.do?method=cxshnew",{shlc:splc,shid:shid},function(data){
+					// 判断是否最后一级撤销(1:最后一级撤销成功）
+					if("1" == data["cancelFlg"]){
 						jQuery.post("ttgl_stglsh.do?method=cancelZzSh",{sqid:sqid,zzywid:zzywid,shzt:shzt},function(result){
 							showAlertDivLayer(result["message"],{},{"clkFun":function(){
+									jQuery("#dataTable").reloadGrid();
+								}});
+						},'json');
+					}else{
+						showAlertDivLayer(data["message"],{},{"clkFun":function(){
 								jQuery("#dataTable").reloadGrid();
 							}});
-						},'json');
-					
 					}
-					
-				}else{
-					showAlertDivLayer(data["message"],{},{"clkFun":function(){
-						jQuery("#dataTable").reloadGrid();
-					}});
-				}
-		},'json');
+				},'json');
+			}
+
 		}});
 	}
 }

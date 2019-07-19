@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.zfsoft.xgxt.ttgl.stgl.stgljg.StglService;
 import net.sf.json.JSONArray;
 
+import net.sf.json.JSONObject;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -212,7 +213,22 @@ public class StglshAction extends SuperAction {
 		String messageKey = isSuccess ? MessageKey.SYS_CANCEL_SUCCESS : MessageKey.SYS_CANCEL_FAIL;
 		response.getWriter().print(getJsonMessageByKey(messageKey));
 		return null;
-		
+	}
+	@SystemAuth(url = url,rewritable=ReadWrite.WRITEABLE)
+	public ActionForward checkisCancel(ActionMapping mapping, ActionForm form,
+								  HttpServletRequest request, HttpServletResponse response)
+			throws Exception{
+		StglshForm model = (StglshForm) form;
+		String sqid = request.getParameter("sqid");
+		String shzt = request.getParameter("shzt");
+		model.setShzt(shzt);
+		model.setSqid(sqid);
+		if (service.checkisCancel(model)){//已申请转正
+			response.getWriter().print("true");
+		}else{
+			response.getWriter().print("false");
+		}
+		return null;
 	}
 	/**
 	 * @description	： 社团转正审核撤销

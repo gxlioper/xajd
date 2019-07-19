@@ -43,7 +43,8 @@
 						   {label:'班级',name:'bjmc', index: 'bjdm',width:'10%'},
 						   {label:'报名时间',name:'sqsj', index: 'sqsj',width:'10%'},
 						   {label:'分组',name:'tnzw', index: 'tnzw',width:'8%'},
-						   {label:'状态',name:'shzt', index: 'shzt',width:'8%'}
+						   {label:'状态',name:'shzt', index: 'shzt',width:'8%',hidden:true},
+						   {label:'操作',name:'shzt', index: 'shzt',width:'8%',formatter:ttLink}
 						],
 						params:{fpzt:"ysh",jgid:'${jgid}'},
 						sortname: "nj,xymc,zymc,bjmc",
@@ -57,13 +58,28 @@
 			gridSetting["params"]=map;
 			jQuery("#dataTable").initGrid(gridSetting);
 		});	
-			function View(guid) {
+		function View(guid) {
 			showDialog("查看申请信息", 790,300, "ttgl_stcygl.do?method=viewsqxx&guid=" + guid);
 		}
 
 		function xhLink(cellValue, rowObject) {
 			return "<a href='javascript:void(0);' class='name' onclick='View(\""+ rowObject["guid"] + "\");'>" + cellValue
 					+ "</a>";
+		}
+		function ttLink(cellValue, rowObject) {
+			return "<button  onclick='tcst(\""+ rowObject["guid"] + "\",\"" + rowObject["xh"] + "\");'>退社</button>";
+		}
+		function tcst(guid,xh) {
+			var jgid = jQuery("#jgid").val();
+			showConfirmDivLayer("确定对该成员进行退社处理吗？",{"okFun":function(){
+					jQuery.post("ttgl_stcygl.do?method=tcst",{guid:guid,xh:xh,jgid:jgid},function(data){
+						var map = getSuperSearch();
+						map["glzt"]="ysh";
+						map["jgid"]='${jgid}';
+						jQuery("#dataTable").reloadGrid(map);
+					},'json');
+				}
+			});
 		}
 		//切换Tab页
 		function qh(obj, shzt) {
@@ -147,12 +163,12 @@ function sh(shzt){
 			<h3 class=datetitle_01>
 				<span>社团人员审核列表&nbsp;&nbsp; </span>
 			</h3>
-			<div class="con_overlfow" style="height: 365px;overflow-y: auto;">
+			<div class="con_overlfow" style="overflow-y: auto;">
 				<table id="dataTable" ></table>
-				<div id="pager"></div>
 			</div>
+			<div id="pager"></div>
 		</div>
-		
+
 		<div style="height:30px;"></div>
 			 <table width="100%" border="0" class="formlist" style="position: fixed; _position: absolute; bottom: 0;">
 				<tfoot>

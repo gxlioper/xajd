@@ -161,4 +161,79 @@ public class StcyglDao extends SuperDAOImpl<StcyglForm>{
 		return dao.getOneRs(sql.toString(), new String[] {jgid}, "zzywid");
 	}
 
+	/**
+	 * 删除成员
+	 * @param t
+	 * @throws Exception
+	 */
+	public void delFromCy(StcyglForm t) throws Exception{
+	    StringBuilder sql = new StringBuilder();
+	    sql.append("delete from xg_ttgl_stcyb where guid = ?");
+	    dao.runDelete(sql.toString(),new String[]{t.getGuid()});
+    }
+
+	/**
+	 * 删除负责人
+	 * @param t
+	 * @throws Exception
+	 */
+    public void delFromFzr(StcyglForm t) throws Exception{
+        StringBuilder sql = new StringBuilder();
+        sql.append("delete from XG_TTGL_STGLFZRB where ( jgid = ? or sqid = ?) and xh = ? ");
+        dao.runDelete(sql.toString(),new String[]{t.getJgid(),t.getJgid(),t.getXh()});
+    }
+
+	/**
+	 * 删除团支书
+	 * @param t
+	 * @throws Exception
+	 */
+    public void delFromTzs(StcyglForm t) throws Exception{
+        StringBuilder sql = new StringBuilder();
+        sql.append("delete from XG_TTGL_STGLTZSB where ( jgid = ? or sqid = ?) and xh = ? ");
+        dao.runDelete(sql.toString(),new String[]{t.getJgid(),t.getJgid(),t.getXh()});
+    }
+
+    public String getSjly(StcyglForm t) throws Exception{
+    	StringBuilder sql = new StringBuilder();
+    	sql.append(" select sjly from XG_TTGL_STGLJGB where jgid = ?");
+    	return dao.getOneRs(sql.toString(),new String[]{t.getJgid()},"sjly");
+	}
+
+    public boolean updateCyzw(StcyglForm t) throws Exception{
+    	StringBuilder sql = new StringBuilder();
+    	sql.append(" update xg_ttgl_stcyb set tnzw = ? where guid = ?");
+    	return dao.runUpdate(sql.toString(),new String[]{t.getTnzw(),t.getGuid()});
+	}
+
+	/**
+	 * 新增负责人
+	 * @param input
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean updateFzr(String[] input) throws Exception{
+    	StringBuilder sql = new StringBuilder();
+    	sql.append(" insert into XG_TTGL_STGLFZRB(xh,sqid,jgid,tjsj,fzrfz) values (?,?,?,to_char(sysdate,'yyyy-MM-dd'),?)  ");
+    	return dao.runUpdate(sql.toString(),input);
+	}
+
+	/**
+	 * 新增团支书
+	 * @param input
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean updateTzs(String[] input) throws Exception{
+		StringBuilder sql = new StringBuilder();
+		sql.append(" insert into XG_TTGL_STGLTZSB(xh,sqid,jgid,tjsj) values (?,?,?,to_char(sysdate,'yyyy-MM-dd'))  ");
+		return dao.runUpdate(sql.toString(),input);
+	}
+
+    public HashMap<String,String> getCyxx(StcyglForm t) throws Exception{
+		StringBuilder sql = new StringBuilder();
+		sql.append("select * from xg_ttgl_stcyb where guid = ? ");
+		return dao.getMapNotOut(sql.toString(),new String[]{t.getGuid()});
+	}
+
 }

@@ -9,7 +9,10 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.zfsoft.utils.StringUtil;
+import com.zfsoft.xgxt.comm.bdpz.service.BdpzService;
 import com.zfsoft.xgxt.ttgl.stgl.stgljg.StglService;
+import com.zfsoft.xgxt.xsxx.xsgl.XsxxService;
 import net.sf.json.JSONArray;
 
 import org.apache.struts.action.ActionForm;
@@ -33,6 +36,15 @@ import com.zfsoft.xgxt.ttgl.stgl.strtsq.StrtsqForm;
 public class StcyglAction extends SuperAction{
 	private static final String url = "xg_ttgl_stcygl.do";
 	StcyglService service = new StcyglService();
+    private static List<HashMap<String, String>> jbxxList = null;
+
+    public static String TTGL = "hdbl";
+
+    static {
+        BdpzService bdpzService = new BdpzService();
+        // 学生基本信息显示配置
+        jbxxList = bdpzService.getJbxxpz(TTGL);
+    }
 	/**
 	 * @description	： 查询
 	 * @author 		： CP（1352）
@@ -222,9 +234,95 @@ public class StcyglAction extends SuperAction{
 		request.setAttribute("path", path);
 		return mapping.findForward("stzzsq");
 	}
-	
-	
-	
-	
-	
+
+	/**
+	 * 退出社团
+	 * @param mapping
+	 * @param form
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
+	@SystemAuth(url = url)
+	public ActionForward tcst(ActionMapping mapping, ActionForm form,
+							  HttpServletRequest request, HttpServletResponse response)
+			throws Exception{
+		StcyglForm model = (StcyglForm) form;
+		service.delCy(model);
+		return null;
+	}
+
+    /**
+     * 职务管理
+     * @param mapping
+     * @param form
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+	public ActionForward zwManage(ActionMapping mapping, ActionForm form,
+							  HttpServletRequest request, HttpServletResponse response)
+			throws Exception{
+		StcyglForm model = (StcyglForm) form;
+		User user = getUser(request);
+		if (QUERY.equalsIgnoreCase(model.getType())) {
+			// 生成高级查询对象
+			CommService comService = new CommService();
+			SearchModel searchModel = comService.getSearchModel(request);
+			model.setSearchModel(searchModel);
+			// 查询
+			List<HashMap<String, String>> resultList = service.getStRyList(model, user);
+			JSONArray dataList = JSONArray.fromObject(resultList);
+			response.getWriter().print(dataList);
+			return null;
+		}
+
+		SearchModel searchModel=new SearchModel();
+		request.setAttribute("searchTj", searchModel);
+		request.setAttribute("jgid",model.getJgid());
+		String path = "ttgl_stcygl.do?method=ryManage";
+		request.setAttribute("path", path);
+		FormModleCommon.commonRequestSet(request);
+		return mapping.findForward("zwManage");
+	}
+
+    /**
+     * 变更职务
+     * @param mapping
+     * @param form
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    public ActionForward zwChange(ActionMapping mapping, ActionForm form,
+                                  HttpServletRequest request, HttpServletResponse response)
+            throws Exception{
+        StcyglForm model = (StcyglForm) form;
+        if (!StringUtil.isNull(model.getXh())) {
+            // 加载学生基本信息
+            XsxxService xsxxService = new XsxxService();
+            HashMap<String, String> xsjbxx = xsxxService.getXsjbxxMore(model.getXh());
+            request.setAttribute("jbxx", xsjbxx);
+        }
+        if(!StringUtil.isNull(model.getGuid())){
+            //获取成员信息
+            HashMap<String,String> data = service.getCyxx(model);
+            request.setAttribute("data",data);
+        }
+        if (SAVE.equalsIgnoreCase(model.getType())) {
+            boolean result = service.updateZw(model);
+            String messageKey = result ? MessageKey.SYS_SAVE_SUCCESS
+                    : MessageKey.SYS_SAVE_FAIL;
+            response.getWriter().print(getJsonMessageByKey(messageKey));
+            return null;
+        }
+        request.setAttribute("jbxxList", jbxxList);
+        request.setAttribute("guid",model.getGuid());
+        request.setAttribute("xh",model.getXh());
+        request.setAttribute("jgid",model.getJgid());
+	    return mapping.findForward("zwChange");
+    }
 }
