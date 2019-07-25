@@ -4,6 +4,7 @@
 <struts-config>
     <form-beans>
         <form-bean name="fdsForm" type="com.zfsoft.xgxt.xyfd.fdswh.FdsForm"/>
+        <form-bean name="fdjsForm" type="com.zfsoft.xgxt.xyfd.fdjswh.FdjsForm"/>
     </form-beans>
     <action-mappings>
         <!--辅导室管理-->
@@ -17,6 +18,18 @@
             <forward name="fdsList" path="/xsgzgl/xyfd/fdswh/fdsList.jsp"/>
             <forward name="addfds" path="/xsgzgl/xyfd/fdswh/addfds.jsp"/>
             <forward name="updatefds" path="/xsgzgl/xyfd/fdswh/updatefds.jsp"/>
+        </action>
+        <!--辅导教师管理-->
+        <action path="/xyfd_xyfd_fdjswh" forward="/xyfd_fdjswh.do?method=fdjsList"/>
+        <action path="/xyfd_fdjswh"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.fdjswh.FdjsAction"
+                name="fdjsForm"
+                parameter="method">
+            <forward name="fdjsList" path="/xsgzgl/xyfd/fdjswh/fdjsList.jsp"/>
+             <forward name="addfdjs" path="/xsgzgl/xyfd/fdjswh/addfdjs.jsp"/>
+            <forward name="updatefdjs" path="/xsgzgl/xyfd/fdjswh/updatefdjs.jsp"/>
+            <forward name="selectTeacher" path="/xsgzgl/xyfd/fdjswh/selectTeacher.jsp"/>
         </action>
     </action-mappings>
 

@@ -960,4 +960,7 @@ public class HdxxService extends SuperServiceImpl<HdxxForm, HdxxDao> {
 
         }
     }
+    public List<HashMap<String,String>> getBmRys(String dthdid){
+        return dao.getBmRys(dthdid);
+    }
 }

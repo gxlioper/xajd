@@ -738,6 +738,7 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 								HttpServletRequest request, HttpServletResponse response)
 			throws Exception{
 		HdxxForm model = (HdxxForm)form;
+        request.setAttribute("hdid",model.getHdid());
 		if (QUERY.equalsIgnoreCase(model.getType())) {
 			JSONObject jobj = new JSONObject();
 			HdEwm hdEwm = new HdEwm();
@@ -755,7 +756,29 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 			response.getWriter().print(jobj);
 			return null;
 		}
-		request.setAttribute("hdid",model.getHdid());
+
 		return mapping.findForward("getBmEwm");
+	}
+
+    /**
+     * 通过大厅活动id获取报名人员
+     * @param mapping
+     * @param form
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+	public ActionForward getBmRyList(ActionMapping mapping, ActionForm form,
+								  HttpServletRequest request, HttpServletResponse response)
+			throws Exception{
+		String dthdid = request.getParameter("dthdid");
+		if(StringUtil.isNull(dthdid)){
+		    return null;
+        }
+		List<HashMap<String,String>> result = service.getBmRys(dthdid);
+        JSONArray dataList = JSONArray.fromObject(result);
+        response.getWriter().print(dataList);
+		return null;
 	}
 }

@@ -25,7 +25,10 @@ function searchRy(cxzt){
 			createHtmlForRy(data);
 	});
 }
-
+function getBmlj(hdid) {
+	var url = "hdgl_hdxx.do?method=getBmEwm&hdid="+hdid;
+	showDialog("报名二维码链接", 360, 200, url);
+}
 //人员列表
 function searchPl(cxzt){
 	if(cxzt == '1'){

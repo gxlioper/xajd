@@ -1100,22 +1100,41 @@ public class ZcfsDao extends SuperDAOImpl<ZcfsModel> {
 	 */
 	public boolean batchWhZcfs(List<String[]> params) throws Exception{
 
-		StringBuilder sql = new StringBuilder();
+//		StringBuilder sql = new StringBuilder();
+//
+//		sql.append("MERGE INTO xg_zhcp_zcfsb t1");
+//		sql.append(" USING (select ? xh, ? xn, ? xq, ? xmdm, ? fs , ? lrr , to_char(sysdate, 'YYYY-MM-DD HH24:MI:SS') lrsj from dual) t2");
+//		sql.append(" ON (t1.xh=t2.xh and t1.xmdm=t2.xmdm)");
+//		sql.append(" WHEN MATCHED THEN");
+//		sql.append("   UPDATE");
+//		sql.append("     SET xn=t2.xn,xq=t2.xq,fs=t2.fs,lrr=t2.lrr,");
+//		sql.append("     lrsj=to_char(sysdate,'YYYY-MM-DD HH24:MI:SS')");
+//		sql.append("   WHERE xh=? and xmdm=?");
+//		sql.append("WHEN NOT MATCHED THEN");
+//		sql.append("  INSERT (xh, xn, xq, xmdm, fs, lrr, lrsj)");
+//		sql.append("  VALUES (t2.xh, t2.xn, t2.xq, t2.xmdm, t2.fs, t2.lrr, t2.lrsj)");
 
-		sql.append("MERGE INTO xg_zhcp_zcfsb t1");
-		sql.append(" USING (select ? xh, ? xn, ? xq, ? xmdm, ? fs , ? lrr , to_char(sysdate, 'YYYY-MM-DD HH24:MI:SS') lrsj from dual) t2");
-		sql.append(" ON (t1.xh=t2.xh and t1.xmdm=t2.xmdm)");
-		sql.append(" WHEN MATCHED THEN");
-		sql.append("   UPDATE");
-		sql.append("     SET xn=t2.xn,xq=t2.xq,fs=t2.fs,lrr=t2.lrr,");
-		sql.append("     lrsj=to_char(sysdate,'YYYY-MM-DD HH24:MI:SS')");
-		sql.append("   WHERE xh=? and xmdm=?");
-		sql.append("WHEN NOT MATCHED THEN");
-		sql.append("  INSERT (xh, xn, xq, xmdm, fs, lrr, lrsj)");
-		sql.append("  VALUES (t2.xh, t2.xn, t2.xq, t2.xmdm, t2.fs, t2.lrr, t2.lrsj)");
+		StringBuilder sqlSel = new StringBuilder();
+		sqlSel.append(" select 1 f from xg_zhcp_zcfsb where xh = ? and xmdm = ?");
+
+		StringBuilder sqlUpdate = new StringBuilder();
+		sqlUpdate.append(" update xg_zhcp_zcfsb set xn=?,xq=?,fs=?,lrr=?,lrsj=to_char(sysdate,'YYYY-MM-DD HH24:MI:SS') where xh = ? and xmdm = ?");
+
+		StringBuilder sqlInsert = new StringBuilder();
+		sqlInsert.append(" insert into xg_zhcp_zcfsb (xh, xn, xq, xmdm, fs, lrr, lrsj) values (?,?,?,?,?,?,to_char(sysdate,'YYYY-MM-DD HH24:MI:SS'))");
 		boolean result = true;
 		for(int i =0;i<params.size();i++){
-			result = dao.runUpdate(sql.toString(),params.get(i));
+			String[] param = params.get(i);
+			String[] in = new String[]{param[0],param[3]};
+			String[] inUpdate = new String[]{param[1],param[2],param[4],param[5],param[0],param[3]};
+			String[] inInsert = new String[]{param[0],param[1],param[2],param[3],param[4],param[5]};
+			String f = dao.getOneRs(sqlSel.toString(),in,"f");
+			if(!StringUtil.isNull(f)){
+				result = dao.runUpdate(sqlUpdate.toString(),inUpdate);
+			}else {
+				result = dao.runUpdate(sqlInsert.toString(),inInsert);
+			}
+//			result = dao.runUpdate(sql.toString(),params.get(i));
 		}
 		return result;
 	}

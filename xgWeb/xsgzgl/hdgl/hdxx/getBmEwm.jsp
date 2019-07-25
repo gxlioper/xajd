@@ -22,29 +22,30 @@
 		<script type="text/javascript" src="js/jquery/plugins/upload/ajaxfileupload.js"></script>
 		<script type="text/javascript" src="xsgzgl/comm/fileUpload/jmf.js"></script>
 		<script type="text/javascript" src="xsgzgl/comm/fileUpload/f.js"></script>
-	</head>
-
-	<body>
 		<script type="text/javascript">
 			jQuery(function(){
-			    debugger;
 				showEwm();
 			})
 			function showEwm(){
 				var hdid = jQuery("#hdid").val();
-                var url = "hdgl_hdxx.do?method=getBmEwm&type=query&hdid="+hdid;
-                ajaxSubFormWithFun("hdxxForm", url, function(data) {
-                    jQuery("#ewm").attr('src',data.base64_png);
-                    jQuery("#bmlj").text(data.bmlj);
-                });
-            }
+
+				var url = "hdgl_hdxx.do?method=getBmEwm&type=query&hdid="+hdid;
+				ajaxSubFormWithFun("hdxxForm", url, function(data) {
+					jQuery("#ewm").attr('src',data.base64_png);
+					jQuery("#bmlj").text(data.bmlj);
+				});
+			};
 		</script>
-		<html:form action="/hdgl_hdxx" method="post" styleId="hdxxForm" onsubmit="return false;">
+	</head>
+	<body>
+	<html:form action="/hdgl_hdxx" method="post" styleId="hdxxForm" onsubmit="return false;">
 			<html:hidden property="hdid" styleId="hdid"/>
 		<div class="apply-management-page m-t20" style="text-align: center">
 			<img src="" alt="" id="ewm"/>
 		</div>
-			<span id="bmlj"></span>
+		<span id="bmlj">123</span>
+
+
 	</html:form>
 	</body>
 </html>
