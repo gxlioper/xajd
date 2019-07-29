@@ -20,13 +20,13 @@ public class FdjsForm extends ActionForm {
     private String dzyx;//E-mail
     private String fdkm;//辅导科目
     private String fds;//辅导室
-    private String Mon;
-    private String Tues;
-    private String Wed;
-    private String Thur;
-    private String Fri;
-    private String Sat;
-    private String Sun;
+    private String mon;
+    private String tues;
+    private String wed;
+    private String thur;
+    private String fri;
+    private String sat;
+    private String sun;
 
     public String getDjh() {
         return djh;
@@ -93,59 +93,59 @@ public class FdjsForm extends ActionForm {
     }
 
     public String getMon() {
-        return Mon;
+        return mon;
     }
 
     public void setMon(String mon) {
-        Mon = mon;
+        this.mon = mon;
     }
 
     public String getTues() {
-        return Tues;
+        return tues;
     }
 
     public void setTues(String tues) {
-        Tues = tues;
+        this.tues = tues;
     }
 
     public String getWed() {
-        return Wed;
+        return wed;
     }
 
     public void setWed(String wed) {
-        Wed = wed;
+        this.wed = wed;
     }
 
     public String getThur() {
-        return Thur;
+        return thur;
     }
 
     public void setThur(String thur) {
-        Thur = thur;
+        this.thur = thur;
     }
 
     public String getFri() {
-        return Fri;
+        return fri;
     }
 
     public void setFri(String fri) {
-        Fri = fri;
+        this.fri = fri;
     }
 
     public String getSat() {
-        return Sat;
+        return sat;
     }
 
     public void setSat(String sat) {
-        Sat = sat;
+        this.sat = sat;
     }
 
     public String getSun() {
-        return Sun;
+        return sun;
     }
 
     public void setSun(String sun) {
-        Sun = sun;
+        this.sun = sun;
     }
 
     public String getType() {

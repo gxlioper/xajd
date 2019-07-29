@@ -29,7 +29,10 @@ public class FdjsDao extends SuperDAOImpl<FdjsForm> {
         String searchTj = SearchService.getSearchTj(t.getSearchModel());
         String[] inputV = SearchService.getTjInput(t.getSearchModel());
         StringBuilder sql = new StringBuilder();
-        sql.append("select * from xg_xyfd_fdjsxxb where 1=1 ");
+        sql.append(" select * from (");
+        sql.append("select a.djh,a.kcmc,a.xkzy,a.lxdh,a.dzyx,a.fdkm,a.fds,b.zgh,b.xm,b.xb,b.kzzd13 zc,c.fdsmc,d.bmmc from XG_XYFD_FDJSXXB a ");
+        sql.append(" left join fdyxxb b on a.zgh = b.zgh left join XG_XYFD_FDSXXB c on a.fds = c.id left join ZXBZ_XXBMDM d  ");
+        sql.append(" on b.bmdm = d.bmdm ) where 1=1 ");
         sql.append(searchTj);
         return getPageList(t,sql.toString(),inputV);
     }
@@ -42,9 +45,10 @@ public class FdjsDao extends SuperDAOImpl<FdjsForm> {
      */
     public boolean saveFdjs(FdjsForm t) throws Exception{
         StringBuilder sql = new StringBuilder();
-        sql.append(" insert into xg_xyfd_fdjsxxb(fdsmc,fdsdd,syksrq,syjsrq,sykssj,syjssj,yxzt,qkms) ");
-        sql.append(" values(?,?,?,?,?,?,?,? ) ");
-        String[] input = new String[]{};
+        sql.append(" insert into xg_xyfd_fdjsxxb(djh,zgh,kcmc,xkzy,lxdh,dzyx,fdkm,fds,mon,tues,wed,thur,fri,sat,sun) ");
+        sql.append(" values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,? ) ");
+        String[] input = new String[]{t.getDjh(),t.getZgh(),t.getKcmc(),t.getXkzy(),t.getLxdh(),t.getDzyx(),t.getFdkm(),t.getFds(),t.getMon(),
+        t.getTues(),t.getWed(),t.getThur(),t.getFri(),t.getSat(),t.getSun()};
         return dao.runUpdate(sql.toString(),input);
     }
 
@@ -54,11 +58,12 @@ public class FdjsDao extends SuperDAOImpl<FdjsForm> {
      * @return
      * @throws Exception
      */
-    public boolean updateFds(FdjsForm t) throws Exception{
+    public boolean updateFdjs(FdjsForm t) throws Exception{
         StringBuilder sql = new StringBuilder();
-        sql.append("update xg_xyfd_fdsxxb set fdsmc = ? ,fdsdd = ? ,syksrq = ? ,syjsrq = ? ,sykssj = ?,syjssj = ?,yxzt = ?,qkms = ? ");
-        sql.append(" where id = ? ");
-        String[] in = new String[]{};
+        sql.append("update xg_xyfd_fdjsxxb set kcmc = ?,xkzy = ?,lxdh = ?,dzyx = ?,fdkm = ?, fds = ?,mon = ?,tues = ?,wed = ?,thur = ?, ");
+        sql.append("fri = ?,sat = ?,sun = ? where djh = ? ");
+        String[] in = new String[]{t.getKcmc(),t.getXkzy(),t.getLxdh(),t.getDzyx(),t.getFdkm(),t.getFds(),t.getMon(),t.getTues(),
+                t.getWed(),t.getThur(),t.getFri(),t.getSat(),t.getSun(),t.getDjh()};
         return dao.runUpdate(sql.toString(),in);
     }
 
@@ -68,11 +73,17 @@ public class FdjsDao extends SuperDAOImpl<FdjsForm> {
      * @return
      * @throws Exception
      */
-    public HashMap<String,String> getFds(FdjsForm t) throws Exception{
+    public HashMap<String,String> getFdjs(FdjsForm t) throws Exception{
         StringBuilder sql = new StringBuilder();
-        sql.append(" select * from xg_xyfd_fdsxxb where id = ?");
-        String[] input = new String[]{};
+        sql.append(" select * from xg_xyfd_fdjsxxb where djh = ?");
+        String[] input = new String[]{t.getDjh()};
         return dao.getMapNotOut(sql.toString(),input);
+    }
+
+    public String getDjh() throws Exception{
+        StringBuilder sql = new StringBuilder();
+        sql.append(" select max(djh) djh from xg_xyfd_fdjsxxb ");
+        return dao.getOneRs(sql.toString(),new String[]{},"djh");
     }
 
     public boolean isCanDel(String id){
@@ -100,6 +111,18 @@ public class FdjsDao extends SuperDAOImpl<FdjsForm> {
         sql.append(" ) where 1=1 ");
         sql.append(searchTj);
         return getPageList(t, sql.toString(), inputV);
+    }
+
+    /**查询教师信息***/
+    public HashMap<String, String> getTea(FdjsForm t){
+
+        StringBuilder sql = new StringBuilder();
+        sql.append("select * from (");
+        sql.append("select t.zgh,t.xm,t.lxdh,t.bmdm xydm,t.bgdd,t.bgdh,t.dzyx,t.KZZD13 zc, ");
+        sql.append(" case when t.xb = '1' then '男' when t.xb='2' then '女' else t.xb end xb,t1.bmmc ");
+        sql.append(" from fdyxxb t left join ZXBZ_XXBMDM t1 on t.bmdm = t1.bmdm ");
+        sql.append(" ) where 1=1 and zgh = ? ");
+        return dao.getMapNotOut(sql.toString(), new String[]{t.getZgh()});
     }
 
     /**

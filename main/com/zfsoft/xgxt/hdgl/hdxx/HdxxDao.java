@@ -2117,10 +2117,10 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 	public List<HashMap<String,String>> getBmRys(String dthdid){
 		StringBuilder sql = new StringBuilder();
 		sql.append("select * from (");
-		sql.append("select a.hdid,a.xh,b.dthdid  from xg_hdgl_hdryb a left join xg_hdgl_hdxxb b on a.hdid = b.hdid where a.shzt='1' and a.hdpp='1' ");
+		sql.append("select a.hdid,a.xh from xg_hdgl_hdryb a left join xg_hdgl_hdxxb b on a.hdid = b.hdid where a.shzt='1' and a.hdpp='1' ");
 		sql.append(" union ");
-		sql.append(" select a.hdid,a.xh,b.dthdid  from xg_hdgl_zdhdryb a left join xg_hdgl_hdxxb b on a.hdid = b.hdid where a.shzt='1' and a.hdpp='1' ");
-		sql.append(" ) where 1=1 and dthdid= ? ");
+		sql.append(" select a.hdid,a.xh  from xg_hdgl_zdhdryb a left join xg_hdgl_hdxxb b on a.hdid = b.hdid where a.shzt='1' and a.hdpp='1' ");
+		sql.append(" ) where 1=1 and hdid= ? ");
 		return dao.getListNotOut(sql.toString(),new String[]{dthdid});
 	}
 }

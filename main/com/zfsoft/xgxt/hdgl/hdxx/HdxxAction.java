@@ -772,11 +772,11 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 	public ActionForward getBmRyList(ActionMapping mapping, ActionForm form,
 								  HttpServletRequest request, HttpServletResponse response)
 			throws Exception{
-		String dthdid = request.getParameter("dthdid");
-		if(StringUtil.isNull(dthdid)){
+		String hdid = request.getParameter("hdid");
+		if(StringUtil.isNull(hdid)){
 		    return null;
         }
-		List<HashMap<String,String>> result = service.getBmRys(dthdid);
+		List<HashMap<String,String>> result = service.getBmRys(hdid);
         JSONArray dataList = JSONArray.fromObject(result);
         response.getWriter().print(dataList);
 		return null;

@@ -30,6 +30,7 @@
              <forward name="addfdjs" path="/xsgzgl/xyfd/fdjswh/addfdjs.jsp"/>
             <forward name="updatefdjs" path="/xsgzgl/xyfd/fdjswh/updatefdjs.jsp"/>
             <forward name="selectTeacher" path="/xsgzgl/xyfd/fdjswh/selectTeacher.jsp"/>
+            <forward name="selectFds" path="/xsgzgl/xyfd/fdjswh/selectFds.jsp"/>
         </action>
     </action-mappings>
 

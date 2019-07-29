@@ -6,9 +6,12 @@ import com.zfsoft.xgxt.base.exception.SystemException;
 import com.zfsoft.xgxt.base.message.MessageKey;
 import com.zfsoft.xgxt.base.message.MessageUtil;
 import com.zfsoft.xgxt.szdw.fdyxx.FdyxxService;
+import com.zfsoft.xgxt.xyfd.fdswh.FdsForm;
+import com.zfsoft.xgxt.xyfd.fdswh.FdsService;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -75,6 +78,13 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
             request.setAttribute("jsxx",jsxx);
         }
         if (SAVE.equalsIgnoreCase(model.getType())){
+            model.setMon(StringUtils.join(request.getParameterValues("mond"),","));
+            model.setTues(StringUtils.join(request.getParameterValues("tuesd"),","));
+            model.setWed(StringUtils.join(request.getParameterValues("wedd"),","));
+            model.setThur(StringUtils.join(request.getParameterValues("thurd"),","));
+            model.setFri(StringUtils.join(request.getParameterValues("frid"),","));
+            model.setSat(StringUtils.join(request.getParameterValues("satd"),","));
+            model.setSun(StringUtils.join(request.getParameterValues("sund"),","));
             boolean flag = fdjsService.saveFds(model);
             String key = flag ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
             response.getWriter().print(getJsonMessageByKey(key));
@@ -95,15 +105,31 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
     public ActionForward updatefdjs(ActionMapping mapping, ActionForm form,
                                 HttpServletRequest request, HttpServletResponse response) throws Exception{
         FdjsForm model = (FdjsForm)form;
-        HashMap<String,String> fdsxx = fdjsService.getFds(model);
-        request.setAttribute("fdsxx",fdsxx);
         if (UPDATE.equalsIgnoreCase(model.getType())){
-            boolean flag = fdjsService.updateFds(model);
+            model.setMon(StringUtils.join(request.getParameterValues("mond"),","));
+            model.setTues(StringUtils.join(request.getParameterValues("tuesd"),","));
+            model.setWed(StringUtils.join(request.getParameterValues("wedd"),","));
+            model.setThur(StringUtils.join(request.getParameterValues("thurd"),","));
+            model.setFri(StringUtils.join(request.getParameterValues("frid"),","));
+            model.setSat(StringUtils.join(request.getParameterValues("satd"),","));
+            model.setSun(StringUtils.join(request.getParameterValues("sund"),","));
+            boolean flag = fdjsService.updateFdjs(model);
             String key = flag ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
             response.getWriter().print(getJsonMessageByKey(key));
             return null;
         }
-        BeanUtils.copyProperties(model,fdsxx);
+        HashMap<String,String> fdjsxx = fdjsService.getFdjs(model);
+        request.setAttribute("fdjsxx",fdjsxx);//辅导教师信息
+        BeanUtils.copyProperties(model,fdjsxx);
+        if(!StringUtil.isNull(model.getZgh())){
+            HashMap<String,String> jsxx =  fdjsService.getTea(model);
+            request.setAttribute("jsxx",jsxx);//教师信息
+        }
+        FdsService fdsService = new FdsService();
+        FdsForm fdsForm = new FdsForm();
+        fdsForm.setId(model.getFds());
+        HashMap<String,String> fdsxx = fdsService.getFds(fdsForm);
+        request.setAttribute("fdsxx",fdsxx);//辅导室信息
         return mapping.findForward("updatefdjs");
     }
 
@@ -138,7 +164,7 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
     }
 
     public ActionForward selectTeacher(ActionMapping mapping, ActionForm form,
-                                       HttpServletRequest request, HttpServletResponse response) throws Exception {
+                                        HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         String type = request.getParameter("type");
         if(QUERY.equals(type)){
@@ -155,5 +181,24 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
         }
         request.setAttribute("path","qgzx_jcdmwh_ajax.do?method=selectTeacher");
         return mapping.findForward("selectTeacher");
+    }
+    public ActionForward selectFds(ActionMapping mapping, ActionForm form,
+                                       HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        String type = request.getParameter("type");
+        if(QUERY.equals(type)){
+            FdjsForm model = (FdjsForm) form;
+            //生成高级查询对象
+            CommService comService = new CommService();
+            SearchModel searchModel = comService.getSearchModel(request);
+            model.setSearchModel(searchModel);
+            FdjsService service = new FdjsService();
+            List<HashMap<String,String>> resultList = service.getKxFds(model);
+            JSONArray dataList = JSONArray.fromObject(resultList);
+            response.getWriter().print(dataList);
+            return null;
+        }
+        request.setAttribute("path","xyfd_xyfd_fdswh.do");
+        return mapping.findForward("selectFds");
     }
 }

@@ -15,28 +15,24 @@
                 pager:"pager",
                 url:"xyfd_fdjswh.do?method=fdjsList&type=query",
                 colList:[
-                    {label:'登记号',name:'DJH', index: 'DJH',key:true },
-                    {label:'职工号',name:'ZGH', index: 'ZGH',width:'1%',hidden:true },
+                    {label:'登记号',name:'djh', index: 'djh',width:"10%",key:true,formatter:jsLink},
+                    {label:'职工号',name:'zgh', index: 'zgh',width:'1%',hidden:true },
                     {label:'姓名',name:'xm', index: 'xm',width:'10%'},
-                    {label:'性别',name:'xb', index: 'xb',width:'5%'},
-                    {label:'使用日期',name:'syksrq', index: 'syksrq',width:'10%',formatter:function (cell,rowObject) {
-                        return rowObject["syksrq"] + "-" + rowObject["syjsrq"];
-                    }},
-                    {label:'使用结束日期',name:'syjsrq', index: 'syjsrq',width:'1%',hidden:true},
-                    {label:'使用时间',name:'sykssj', index: 'sykssj',width:'10%',formatter:function(cell,rowObject){
-                        return rowObject["sykssj"] + "-" + rowObject["syjssj"];
-                    }},
-                    {label:'使用结束时间',name:'syjssj', index: 'syjssj',width:'1%',hidden:true},
-                    {label:'情况描述',name:'qkms', index: 'qkms',width:'1%',hidden:true},
-                    {label:'运行情况',name:'yxzt', index: 'yxzt',width:'10%',formatter:function(cell,rowObject){
-                        if(rowObject["yxzt"]=="1"){
-                            return "正常运行";
-                        }else if(rowObject["yxzt"]=="2"){
-                            return "停止运行";
-                        }else {
-                            return rowObject["qkms"];
-                        }
-                    }}
+                    {label:'性别',name:'xb', index: 'xb',width:'5%',formatter:function (cell,rowObject) {
+                            if(rowObject["xb"]=="1"){
+                                return "男";
+                            }else if(rowObject["xb"]=="2"){
+                                return "女";
+                            }else {
+                                return rowObject["xb"];
+                            }
+                        }},
+                    {label:'职务/职称',name:'zc', index: 'zc',width:'10%'},
+                    {label:'所在单位',name:'bmmc', index: 'bmmc',width:'10%'},
+                    {label:'任课名称',name:'kcmc', index: 'kcmc',width:'10%'},
+                    {label:'学科/专业',name:'xkzy', index: 'xkzy',width:'10%'},
+                    {label:'辅导科目',name:'fdkm', index: 'fdkm',width:'10%'},
+                    {label:'辅导室',name:'fdsmc', index: 'fdsmc',width:'10%'}
                 ]
             }
             gridSetting["params"]=getSuperSearch();
@@ -49,7 +45,7 @@
         }
 
         function add(){
-            showDialog("新增辅导室",900,500,"xyfd_fdjswh.do?method=addfdjs");
+            showDialog("新增辅导室",900,550,"xyfd_fdjswh.do?method=addfdjs");
         }
         function update(){
             var rows = jQuery("#dataTable").getSeletRow();
@@ -57,10 +53,18 @@
                 showAlertDivLayer("请选择一条您要修改的记录");
                 return false;
             }
-
-            showDialog("修改活动学生",700,350,"xyfd_fdswh.do?method=updatefds&id="+rows[0].id );
+            showDialog("修改活动学生",900,550,"xyfd_fdjswh.do?method=updatefdjs&djh="+rows[0]["djh"] );
 
         }
+
+        function jsLink(cellValue,rowObject) {
+            var djh = rowObject["djh"];
+            return "<a href='javascript:void(0);' onclick=\"fdjsShow('"+djh+"')\" class='name'>"+cellValue+"</a>";
+        }
+        function fdjsShow(djh) {
+
+        }
+
         function deleteFds(){
             var ids = jQuery("#dataTable").getSeletIds();
             if (ids.length == 0) {
