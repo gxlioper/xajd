@@ -35,7 +35,7 @@ public class FdjsService extends SuperServiceImpl<FdjsForm, FdjsDao> {
         return dao.getTea(t);
     }
 
-    public String[] deleteFds(String[] ids) throws Exception {
+    public String[] deleteFdjs(String[] ids) throws Exception {
         List<String> delId=new ArrayList<String>();//可删除的id集合
         StringBuffer noDel = new StringBuffer();
         boolean isHaveNoId = false;
@@ -43,11 +43,10 @@ public class FdjsService extends SuperServiceImpl<FdjsForm, FdjsDao> {
             return null;
         }
         for(String str:ids){
-            if(dao.isCanDel(str)){
+            if(true){
                 delId.add(str);//记录删除id
             }else{
-                HashMap<String, String> hm=dao.getFds(str);
-                noDel.append(hm.get("fdsmc"));
+                noDel.append(str);
                 noDel.append(",</br>");
                 isHaveNoId=true;
             }

@@ -16,7 +16,7 @@
                 url:"xyfd_fdjswh.do?method=fdjsList&type=query",
                 colList:[
                     {label:'登记号',name:'djh', index: 'djh',width:"10%",key:true,formatter:jsLink},
-                    {label:'职工号',name:'zgh', index: 'zgh',width:'1%',hidden:true },
+                    {label:'职工号',name:'zgh', index: 'zgh',width:'10%' },
                     {label:'姓名',name:'xm', index: 'xm',width:'10%'},
                     {label:'性别',name:'xb', index: 'xb',width:'5%',formatter:function (cell,rowObject) {
                             if(rowObject["xb"]=="1"){
@@ -45,7 +45,7 @@
         }
 
         function add(){
-            showDialog("新增辅导室",900,550,"xyfd_fdjswh.do?method=addfdjs");
+            showDialog("新增辅导教师",900,550,"xyfd_fdjswh.do?method=addfdjs");
         }
         function update(){
             var rows = jQuery("#dataTable").getSeletRow();
@@ -53,7 +53,7 @@
                 showAlertDivLayer("请选择一条您要修改的记录");
                 return false;
             }
-            showDialog("修改活动学生",900,550,"xyfd_fdjswh.do?method=updatefdjs&djh="+rows[0]["djh"] );
+            showDialog("修改辅导教师",900,550,"xyfd_fdjswh.do?method=updatefdjs&djh="+rows[0]["djh"] );
 
         }
 
@@ -62,10 +62,10 @@
             return "<a href='javascript:void(0);' onclick=\"fdjsShow('"+djh+"')\" class='name'>"+cellValue+"</a>";
         }
         function fdjsShow(djh) {
-
+            showDialog("查看辅导教师",800,550,"xyfd_fdjswh.do?method=fdjsView&djh="+djh );
         }
 
-        function deleteFds(){
+        function deleteFdjs(){
             var ids = jQuery("#dataTable").getSeletIds();
             if (ids.length == 0) {
                 showAlertDivLayer("请选择您要删除的记录！");
@@ -73,7 +73,7 @@
                 var rows = jQuery("#dataTable").getSeletRow();
                 showConfirmDivLayer("您确定要删除选择的记录吗？", {
                     "okFun" : function() {
-                        jQuery.post("xyfd_fdswh.do?method=deleteFds", {
+                        jQuery.post("xyfd_fdjswh.do?method=deleteFdjs", {
                             values : ids.toString()
                         }, function(data) {
                             var mes="成功删除了<font color='green'>&nbsp;"+data["num"]+"&nbsp;</font>条数据";
@@ -105,7 +105,7 @@
             <ul>
                 <li><a href="#" class="btn_zj" onclick="add();return false;">增加</a></li>
                 <li><a href="#" class="btn_xg" onclick="update();return false;">修改</a></li>
-                <li><a href="#" class="btn_sc" onclick="deleteFds();return false;">删除</a></li>
+                <li><a href="#" class="btn_sc" onclick="deleteFdjs();return false;">删除</a></li>
                 <%--<li><a href="#" class="btn_dr" onclick="importConfig();return false;">导入</a></li>--%>
                 <%--<li><a href="#" class="btn_dc" onclick="exportConfig();return false;">导出</a></li>--%>
                     <%--<li><a href="#" class="btn_dc" onclick="return false;">推送报名数据</a></li>--%>

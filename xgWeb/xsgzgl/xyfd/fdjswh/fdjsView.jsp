@@ -64,34 +64,11 @@
                     jQuery("input:checkbox[name='sund'][value='"+sund[i]+"']").prop("checked","checked");
                 }
             }
+             jQuery.each(jQuery("input:checkbox"),function (element,index) {
+                 jQuery(this).attr("disabled","disabled");
+             })
 
         })
-        function saveFdjs(){
-            var checkId = 'kcmc-xkzy-fdkm-fdsmc';
-            if(!checkNotNull(checkId)){
-                showAlertDivLayer("请将必填项填写完整！");
-                return false;
-            }
-            save();
-        }
-        function save(){
-            var djh = '${fdjsxx.djh}';
-            var url = "xyfd_fdjswh.do?method=updatefdjs&type=update";
-            ajaxSubFormWithFun("demoForm",url,function(data){
-                showAlertDivLayer(data["message"],{},{"clkFun":function(){
-                        if (parent.window){
-                            refershParent();
-                        }
-                        iFClose();
-                    }});
-            });
-        }
-        function selectJs() {
-            showDialog("教师列表",700,500,"xyfd_fdjswh.do?method=selectTeacher");
-        }
-        function selectFds() {
-            showDialog("辅导室列表",700,500,"xyfd_fdjswh.do?method=selectFds");
-        }
 
     </script>
 </head>
@@ -108,7 +85,7 @@
             </thead>
             <tbody>
             <tr>
-                <th width="10%"><span class="red">*</span>姓名</th>
+                <th width="10%">姓名</th>
                 <td width="20%">
                     <input id="djh" name="djh" value="${fdjsxx.djh}" style="display: none" />
                     <input id="zgh" name="zgh" value="${jsxx.zgh}" style="display: none"/>
@@ -133,35 +110,33 @@
                 <td id="bmmc">
                     ${jsxx.bmmc}
                 </td>
-                <th><span class="red">*</span>任课名称</th>
+                <th>任课名称</th>
                 <td>
-                    <html:text name="fdjsxx" property="kcmc" styleId="kcmc"/>
+                    ${fdjsxx.kcmc}
                 </td>
-                <th><span class="red">*</span>学科/专业</th>
+                <th>学科/专业</th>
                 <td>
-                    <html:text name="fdjsxx" property="xkzy" styleId="xkzy"/>
+                    ${fdjsxx.xkzy}
                 </td>
             </tr>
             <tr>
                 <th>联系电话</th>
                 <td colspan="3">
-                    <html:text name="fdjsxx" property="lxdh" styleId="lxdh"/>
+                    ${fdjsxx.lxdh}
                 </td>
                 <th>E-mail</th>
                 <td colspan="2">
-                    <html:text name="fdjsxx" property="dzyx" styleId="dzyx"/>
+                    ${fdjsxx.dzyx}
                 </td>
             </tr>
             <tr>
-                <th><span class="red">*</span>辅导科目</th>
+                <th>辅导科目</th>
                 <td colspan="3">
-                    <html:text name="fdjsxx" property="fdkm" styleId="fdkm"/>
+                    ${fdjsxx.fdkm}
                 </td>
-                <th><span class="red">*</span>辅导室</th>
+                <th>辅导室</th>
                 <td colspan="2">
-                    <input id="fds" name="fds" value="${fdsxx.id}" style="display: none"/>
-                    <input id="fdsmc" name="fdsmc" value="${fdsxx.fdsmc}" readonly="readonly"/>
-                    <button class="btn_01" type="button" onclick="selectFds();">选择</button>
+                    ${fdsxx.fdsmc}
                 </td>
             </tr>
             <tr>
@@ -236,11 +211,7 @@
             <tfoot>
             <tr>
                 <td colspan="4" >
-                    <div class="bz">"<span class="red">*</span>"为必填项</div>
                     <div class="btn">
-                        <button type="button" type="button" onclick="saveFdjs();return false;" >
-                            保存
-                        </button>
                         <button type="button" name="关 闭" onclick="iFClose();">
                             关 闭
                         </button>

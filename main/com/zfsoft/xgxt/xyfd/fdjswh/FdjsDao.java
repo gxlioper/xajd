@@ -14,7 +14,7 @@ public class FdjsDao extends SuperDAOImpl<FdjsForm> {
     @Override
     protected void setTableInfo() {
         super.setClass(FdjsForm.class);
-        super.setKey("id");
+        super.setKey("djh");
         super.setTableName("xg_xyfd_fdjsxxb");
     }
 
@@ -30,7 +30,8 @@ public class FdjsDao extends SuperDAOImpl<FdjsForm> {
         String[] inputV = SearchService.getTjInput(t.getSearchModel());
         StringBuilder sql = new StringBuilder();
         sql.append(" select * from (");
-        sql.append("select a.djh,a.kcmc,a.xkzy,a.lxdh,a.dzyx,a.fdkm,a.fds,b.zgh,b.xm,b.xb,b.kzzd13 zc,c.fdsmc,d.bmmc from XG_XYFD_FDJSXXB a ");
+        sql.append("select a.djh,a.kcmc,a.xkzy,a.lxdh,a.dzyx,a.fdkm,a.fds,b.zgh,b.xm,case when b.xb='1' then '男'  when b.xb = '2' then '女' ");
+        sql.append(" else b.xb end xb,b.kzzd13 zc,c.fdsmc,d.bmdm,d.bmmc from XG_XYFD_FDJSXXB a  ");
         sql.append(" left join fdyxxb b on a.zgh = b.zgh left join XG_XYFD_FDSXXB c on a.fds = c.id left join ZXBZ_XXBMDM d  ");
         sql.append(" on b.bmdm = d.bmdm ) where 1=1 ");
         sql.append(searchTj);
@@ -86,18 +87,7 @@ public class FdjsDao extends SuperDAOImpl<FdjsForm> {
         return dao.getOneRs(sql.toString(),new String[]{},"djh");
     }
 
-    public boolean isCanDel(String id){
-        StringBuffer sb=new StringBuffer();
-        sb.append("select yxzt from xg_xyfd_fdsxxb where id=? ");
-        String yxzt=dao.getOneRs(sb.toString(), new String[] {id}, "yxzt");
-        return yxzt.equals("1")?false:true;
-    }
-    public HashMap<String,String> getFds(String id) throws Exception{
-        StringBuilder sql = new StringBuilder();
-        sql.append(" select * from xg_xyfd_fdsxxb where id = ?");
-        String[] input = new String[]{id};
-        return dao.getMapNotOut(sql.toString(),input);
-    }
+
     public List<HashMap<String, String>> getAllTeacher(FdjsForm t) throws Exception {
         //生成高级查询相关条件、条件值
         String searchTj = SearchService.getSearchTj(t.getSearchModel());

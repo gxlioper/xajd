@@ -57,7 +57,7 @@
                 return false;
             }
 
-            showDialog("修改活动学生",700,350,"xyfd_fdswh.do?method=updatefds&id="+rows[0].id );
+            showDialog("修改辅导室",700,350,"xyfd_fdswh.do?method=updatefds&id="+rows[0].id );
 
         }
         function deleteFds(){

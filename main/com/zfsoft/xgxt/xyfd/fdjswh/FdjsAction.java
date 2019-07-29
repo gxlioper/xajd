@@ -61,7 +61,7 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
     }
 
     /**
-     * 新增辅导室
+     * 新增辅导教师
      * @param mapping
      * @param form
      * @param request
@@ -94,7 +94,7 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
     }
 
     /**
-     * 修改辅导室
+     * 修改辅导教师
      * @param mapping
      * @param form
      * @param request
@@ -134,7 +134,7 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
     }
 
     /**
-     * 删除辅导室
+     * 删除辅导教师
      * @param mapping
      * @param form
      * @param request
@@ -146,7 +146,7 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
                                    HttpServletRequest request, HttpServletResponse response) throws Exception{
         String values = request.getParameter("values");
         if (!StringUtil.isNull(values)){
-            String[] mess = fdjsService.deleteFds(values.split(","));
+            String[] mess = fdjsService.deleteFdjs(values.split(","));
             if(null==mess||mess.length!=2){
                 String message= MessageUtil.getText(MessageKey.SYS_DEL_FAIL);
                 response.getWriter().print(getJsonMessage(message));
@@ -163,6 +163,15 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
         return null;
     }
 
+    /**
+     * 选择教师
+     * @param mapping
+     * @param form
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
     public ActionForward selectTeacher(ActionMapping mapping, ActionForm form,
                                         HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -182,6 +191,16 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
         request.setAttribute("path","qgzx_jcdmwh_ajax.do?method=selectTeacher");
         return mapping.findForward("selectTeacher");
     }
+
+    /**
+     * 选择辅导室
+     * @param mapping
+     * @param form
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
     public ActionForward selectFds(ActionMapping mapping, ActionForm form,
                                        HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -200,5 +219,32 @@ public class FdjsAction extends SuperAction<FdjsForm, FdjsService> {
         }
         request.setAttribute("path","xyfd_xyfd_fdswh.do");
         return mapping.findForward("selectFds");
+    }
+
+    /**
+     * 修改辅导教师
+     * @param mapping
+     * @param form
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    public ActionForward fdjsView(ActionMapping mapping, ActionForm form,
+                                    HttpServletRequest request, HttpServletResponse response) throws Exception{
+        FdjsForm model = (FdjsForm)form;
+        HashMap<String,String> fdjsxx = fdjsService.getFdjs(model);
+        request.setAttribute("fdjsxx",fdjsxx);//辅导教师信息
+        BeanUtils.copyProperties(model,fdjsxx);
+        if(!StringUtil.isNull(model.getZgh())){
+            HashMap<String,String> jsxx =  fdjsService.getTea(model);
+            request.setAttribute("jsxx",jsxx);//教师信息
+        }
+        FdsService fdsService = new FdsService();
+        FdsForm fdsForm = new FdsForm();
+        fdsForm.setId(model.getFds());
+        HashMap<String,String> fdsxx = fdsService.getFds(fdsForm);
+        request.setAttribute("fdsxx",fdsxx);//辅导室信息
+        return mapping.findForward("fdjsView");
     }
 }
