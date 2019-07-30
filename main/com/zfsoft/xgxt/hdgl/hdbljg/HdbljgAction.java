@@ -4,19 +4,26 @@
 package com.zfsoft.xgxt.hdgl.hdbljg;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.URLEncoder;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.zfsoft.xgxt.comm.zdydr.service.ZdydrService;
+import com.zfsoft.xgxt.dekt.xfsq.DektxfsqForm;
 import net.sf.json.JSONArray;
 
+import net.sf.json.JSONObject;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import org.apache.struts.upload.FormFile;
 import xgxt.action.Base;
 import xgxt.comm.CommService;
 import xgxt.comm.search.SearchModel;
@@ -53,6 +60,7 @@ import com.zfsoft.xgxt.xsxx.xsgl.XsxxService;
  */
 
 public class HdbljgAction extends SuperAction<HdbljgForm, HdbljgService> {
+	private ZdydrService zdydrService = new ZdydrService();
 	private static final String url = "hdgl_hdbl_hdbljg.do";
 	//学生基本信息配置
 	private static List<HashMap<String, String>> jbxxList = null;
@@ -353,6 +361,74 @@ public class HdbljgAction extends SuperAction<HdbljgForm, HdbljgService> {
 		exportModel.setDcclbh(request.getParameter("dcclbh"));// 设置当前导出功能编号
 		File file = exportService.getExportFile(exportModel);// 生成导出文件
 		FileUtil.outputExcel(response, file);
+		return null;
+	}
+	public ActionForward hdbljgImport(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception{
+		//获取导入模块代码
+		String drmkdm = request.getParameter("drmkdm");
+		//查询模版信息
+		HashMap<String,String> drmbxx = zdydrService.getDrmbxx(drmkdm);
+		//查询导入规则信息
+		List<HashMap<String,String>>  drgzxxList =  zdydrService.getDrgzxxList(drmkdm);
+
+		request.setAttribute("drmbxx", drmbxx);
+		request.setAttribute("drgzxxList", drgzxxList);
+		return mapping.findForward("hdbljgImport");
+	}
+
+	/**
+	 *  个性化导入模版下载.
+	 *
+	 * @author <a href="www.gavinshow.com">GavinShow[1426]</a>
+	 * @date 2017-10-09 14:32
+	 * @param mapping
+	 * @param form
+	 * @param request
+	 * @param response
+	 * @return org.apache.struts.action.ActionForward
+	 * @throw
+	 */
+	public ActionForward downloadTemplate(ActionMapping mapping, ActionForm form,
+										  HttpServletRequest request, HttpServletResponse response) throws Exception{
+		HdbljgService service = new HdbljgService();
+		//获取导入模块代码
+		String drmkdm = request.getParameter("drmkdm");
+
+		//响应头设置
+		response.setHeader("Content-disposition", "attachment;filename="+ URLEncoder.encode(drmkdm+".xls","UTF-8"));
+		service.createWwb(response.getOutputStream(),drmkdm);
+		return null;
+	}
+
+	/**
+	 *  保存导入.
+	 *
+	 * @author <a href="www.gavinshow.com">GavinShow[1426]</a>
+	 * @date 2017-10-10 20:13
+	 * @param mapping
+	 * @param form
+	 * @param request
+	 * @param response
+	 * @return org.apache.struts.action.ActionForward
+	 * @throw
+	 */
+	public ActionForward saveImport(ActionMapping mapping, ActionForm form,
+									HttpServletRequest request, HttpServletResponse response) throws IOException, Exception {
+
+		HdbljgService service = new HdbljgService();
+		//获取导入模块代码
+		String drmkdm = request.getParameter("drmkdm");
+
+		//得到FormFile对象，读取上传的Excel文件
+		HdbljgForm hdbljgForm = (HdbljgForm)form;
+		FormFile formFile = hdbljgForm.getImportFile();
+
+		//返回保存结果：模版有误、导入成功信息、导入失败信息
+		String path = servlet.getServletContext().getRealPath("/temp/importTemp/");
+		HashMap<String,Object> resultMap = service.saveImport(formFile.getInputStream(),path,drmkdm);
+
+		JSONObject resultJson = JSONObject.fromObject(resultMap);
+		response.getWriter().print(resultJson);
 		return null;
 	}
 }

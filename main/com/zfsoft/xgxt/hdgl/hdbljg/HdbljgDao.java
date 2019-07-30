@@ -125,8 +125,8 @@ public class HdbljgDao extends SuperDAOImpl<HdbljgForm> {
 	 * @作者： MengWei[工号：1186]
 	 * @日期： 2018-6-6 下午04:12:51
 	 * @修改记录: 修改者名字-修改日期-修改内容
-	 * @param hdid
-	 * @param hdbqs
+	 * @param jgid
+	 * @param nlbqs
 	 * @return
 	 * @throws SQLException
 	 * boolean 返回类型 
@@ -297,5 +297,5 @@ public class HdbljgDao extends SuperDAOImpl<HdbljgForm> {
 		sql.append("select * from xg_hdgl_nlbqdmb");
 		return dao.getListNotOut(sql.toString(), new String[]{});
 	}
-	
+
 }

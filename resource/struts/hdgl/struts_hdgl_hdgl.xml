@@ -85,6 +85,7 @@
     		<forward name="addHdbljg" path="/xsgzgl/hdgl/hdbljg/addHdbljg.jsp"/>
     		<forward name="updateHdbljg" path="/xsgzgl/hdgl/hdbljg/updateHdbljg.jsp"/>
     		<forward name="viewHdbljg" path="/xsgzgl/hdgl/hdbljg/viewHdbljg.jsp"/>
+			<forward name="hdbljgImport" path="/xsgzgl/hdgl/hdbljg/hdbljgImport.jsp"/>
 		</action>
 		
 		<!-- 活动信息 -->

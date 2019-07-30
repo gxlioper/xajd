@@ -325,6 +325,22 @@ public class ZdydrService extends SuperServiceImpl<ZdydrModel,ZdydrDao> {
                             excelData.put(drl, data);
                         }
                     }
+                    if(lsjgsh.startsWith("select")){
+                        //将数据根据sql校验，用于使用中间表关联的数据
+                        String sql = lsjgsh.substring(lsjgsh.indexOf(":")+1);
+                        String[] sel = cellContents.split(",");
+                        for(int i=0;i<sel.length;i++){
+                            String data = dao.changeCellData(sql,sel[i],drl);
+                            if(StringUtil.isNull(data)){
+                                resultMap.put("result", false);
+                                rowResult = false;
+                                rowError.append("["+drlmc+"]"+gshxx+"； ");
+                                continue;
+                            }else{
+                                excelData.put(drl, cellContents);
+                            }
+                        }
+                    }
 
                     //验证单个字段是否唯一
                    /* if("1".equals(sfwy)){

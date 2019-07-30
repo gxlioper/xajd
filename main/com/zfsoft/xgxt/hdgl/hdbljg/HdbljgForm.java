@@ -7,6 +7,7 @@ import org.apache.struts.action.ActionForm;
 
 import com.zfsoft.xgxt.comm.export.model.ExportModel;
 
+import org.apache.struts.upload.FormFile;
 import xgxt.comm.search.SearchModel;
 import xgxt.utils.Pages;
 
@@ -72,6 +73,7 @@ public class HdbljgForm extends ActionForm {
 	private String jzjb;//讲座级别
 	private String ly;//活动来源（用于补录选择已有活动）
 	private String hdid;//活动来源id（大厅发布，用于补录选择已有活动）
+	private FormFile importFile; //个性化导入文件
 
 	public String getJzjb() {
 		return jzjb;
@@ -755,5 +757,13 @@ public class HdbljgForm extends ActionForm {
 
 	public void setZyxss(String zyxss) {
 		this.zyxss = zyxss;
+	}
+
+	public FormFile getImportFile() {
+		return importFile;
+	}
+
+	public void setImportFile(FormFile importFile) {
+		this.importFile = importFile;
 	}
 }

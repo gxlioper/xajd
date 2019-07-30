@@ -239,3 +239,14 @@ function dr() {
 	return false;
 
 }
+//个性化导入
+function hdbljgImport(){
+    var drmkdm = 'IMPORT_XAJT_HDJG';
+    var url = "hdgl_hdbljg.do?method=hdbljgImport" + "&drmkdm=" + drmkdm;
+    showDialog('导入',720,580,url,{close:function(){
+        if (jQuery("#search_go")){
+            jQuery("#search_go").click();
+        }
+    }});
+    return false;
+}
