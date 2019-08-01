@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    <!--  学费减免（西安交大） -->
+    <form-beans>
+        <!--审核开关控制参数设置-->
+        <form-bean name="xfjmCsszForm" type="com.zfsoft.xgxt.szdw.xgsz.CsszModel" />
+        <!---学费减免-->
+        <form-bean name="xfjmForm" type="com.zfsoft.xgxt.xszz.xfjm.XfjmForm"/>
+    </form-beans>
+
+    <action-mappings>
+        <!-- 审核参数设置 -->
+        <action path="/xszz_new_xfjm_cssz" 	forward="/xszz_xfjm_cssz.do?method=cssz"/>
+        <action path="/xszz_xfjm_cssz"
+                name="xfjmCsszForm"
+                type="com.zfsoft.xgxt.xszz.xfjm.XfjmCsszAction"
+                scope="request"
+                parameter="method">
+            <forward name="cssz" path="/xsgzgl/xszz/xfjm/cssz/cssz.jsp"></forward>
+        </action>
+        <!--学费减免-->
+        <action path="/xszz_new_xfjmsq" forward="/xszz_new_xfjm.do?method=getPageList"/><!--学费减免申请-->
+        <action path="/xszz_new_xfjmsh" forward="/xszz_new_xfjm.do?method=getShPageList"/><!--学费减免审核-->
+        <action path="/xszz_new_xfjmjg" forward="/xszz_new_xfjm.do?method=getJgPageList"/><!--学费减免结果-->
+        <action path="/xszz_new_xfjm"
+                name="xfjmForm"
+                type="com.zfsoft.xgxt.xszz.xfjm.XfjmAction"
+                scope="request"
+                parameter="method">
+            <forward name="sqList" path="/xsgzgl/xszz/xfjm/xfjmsqList.jsp"/><!--学费减免申请列表-->
+            <forward name="shList" path="/xsgzgl/xszz/xfjm/xfjmshList.jsp"/><!--学费减免审核列表-->
+            <forward name="jgList" path="/xsgzgl/xszz/xfjm/xfjmjgList.jsp"/><!--学费减免结果列表-->
+            <forward name="xfjmsq" path="/xsgzgl/xszz/xfjm/xfjmsqEdit.jsp"/><!--学费减免信息查看编辑-->
+            <forward name="shEdit" path="/xsgzgl/xszz/xfjm/xfjmshEdit.jsp"/><!--学费减免信息审核-->
+            <forward name="xfjmjgAdd" path="/xsgzgl/xszz/xfjm/xfjmjgEdit.jsp"/><!--学费减免结果添加-->
+            <forward name="importXfjmjg" path="/xsgzgl/xszz/xfjm/xfjmjgImport.jsp"/><!--学费减免结果导入-->
+        </action>
+    </action-mappings>
+</struts-config>

@@ -334,6 +334,56 @@ public class DateTranCnDate {
 		cal.setTime(date);
 		return cal.get(Calendar.DAY_OF_WEEK);
 	}
+
+    /**
+     * 将时间戳 转换为日期 yyyy-MM-dd HH:mm:ss
+     * @param timeStamp 13位时间戳
+     * @return  字符串 yyyy-MM-dd HH:mm:ss
+     */
+    public static String timeStampToDate(long timeStamp) {
+        Date date = new Date(timeStamp);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateStr = simpleDateFormat.format(date);
+        return dateStr;
+    }
+    /**
+     * 将时间戳 转换为日期
+     * @param timeStamp 指定时间戳
+     * @return 字符串 yyyy-MM-dd HH:mm
+     */
+    public static String timeToDate_mm(long timeStamp) {
+        Date date = new Date(timeStamp);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        String dateStr = simpleDateFormat.format(date);
+        return dateStr;
+    }
+
+    /**
+     * 将yyyy-MM-dd HH:mm格式时间字符串转换为13位时间戳
+     * @param dateTime yyyy-MM-dd HH:mm
+     * @return long 13位时间戳
+     */
+    public static long date_mmToTimeStamp(String dateTime)  {
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+            Date date = simpleDateFormat.parse(dateTime);
+            return date.getTime();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public static long dateToTimeStamp(String dateTime)  {
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Date date = simpleDateFormat.parse(dateTime);
+            return date.getTime();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return 0;
+    }
 	
 	public static void main(String[] args) throws ParseException {
 //		String year =fomartDateToCn("20130809",FomartDateType.day);
