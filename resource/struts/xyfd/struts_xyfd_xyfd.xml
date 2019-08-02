@@ -3,10 +3,23 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="csszForm" type="com.zfsoft.xgxt.xyfd.cssz.CsszForm"/>
         <form-bean name="fdsForm" type="com.zfsoft.xgxt.xyfd.fdswh.FdsForm"/>
         <form-bean name="fdjsForm" type="com.zfsoft.xgxt.xyfd.fdjswh.FdjsForm"/>
+        <form-bean name="pbsqForm" type="com.zfsoft.xgxt.xyfd.pbwh.pbsq.PbsqForm"/>
+        <form-bean name="pbshForm" type="com.zfsoft.xgxt.xyfd.pbwh.pbsh.PbshForm"/>
+        <form-bean name="pbjgForm" type="com.zfsoft.xgxt.xyfd.pbwh.pbjg.PbjgForm"/>
     </form-beans>
     <action-mappings>
+        <!--参数设置-->
+        <action path="/xyfd_xyfd_cssz" forward="/xyfd_cssz.do?method=cssz"/>
+        <action path="/xyfd_cssz"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.cssz.CsszAction"
+                name="csszForm"
+                parameter="method">
+            <forward name="cssz" path="/xsgzgl/xyfd/cssz/cssz.jsp"/>
+        </action>
         <!--辅导室管理-->
         <action path="/xyfd_xyfd_fdswh" forward="/xyfd_fdswh.do?method=fdsList"/>
 
@@ -33,6 +46,42 @@
             <forward name="selectFds" path="/xsgzgl/xyfd/fdjswh/selectFds.jsp"/>
             <forward name="fdjsView" path="/xsgzgl/xyfd/fdjswh/fdjsView.jsp"/>
         </action>
+        <!--朋辈志愿者管理-->
+        <action path="/xyfd_xyfd_pbsq" forward="/xyfd_pbsq.do?method=pbsqList"/>
+        <action path="/xyfd_pbsq"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.pbwh.pbsq.PbsqAction"
+                name="pbsqForm"
+                parameter="method">
+            <forward name="pbsqList" path="/xsgzgl/xyfd/pbwh/pbsq/pbsqList.jsp"/>
+            <forward name="pbsqAdd" path="/xsgzgl/xyfd/pbwh/pbsq/addPbsq.jsp"/>
+            <forward name="pbsqUpdate" path="/xsgzgl/xyfd/pbwh/pbsq/updatePbsq.jsp"/>
+            <forward name="pbsqView" path="/xsgzgl/xyfd/pbwh/pbsq/viewPbsq.jsp"/>
+        </action>
+        <!--朋辈志愿者审核管理-->
+        <action path="/xyfd_xyfd_pbsh" forward="/xyfd_pbsh.do?method=pbshList"/>
+        <action path="/xyfd_pbsh"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.pbwh.pbsh.PbshAction"
+                name="pbshForm"
+                parameter="method">
+            <forward name="pbshList" path="/xsgzgl/xyfd/pbwh/pbsh/pbshList.jsp"/>
+            <forward name="pbDgsh" path="/xsgzgl/xyfd/pbwh/pbsh/pbDgsh.jsp"/>
+            <forward name="pbPlsh" path="/xsgzgl/xyfd/pbwh/pbsh/pbPlsh.jsp"/>
+        </action>
+        <!--朋辈志愿者结果管理-->
+        <action path="/xyfd_xyfd_pbjg" forward="/xyfd_pbjg.do?method=pbjgList"/>
+        <action path="/xyfd_pbjg"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.pbwh.pbjg.PbjgAction"
+                name="pbjgForm"
+                parameter="method">
+            <forward name="pbjgList" path="/xsgzgl/xyfd/pbwh/pbjg/pbjgList.jsp"/>
+            <forward name="addPbjg" path="/xsgzgl/xyfd/pbwh/pbjg/addPbjg.jsp"/>
+            <forward name="updatePbjg" path="/xsgzgl/xyfd/pbwh/pbjg/updatePbjg.jsp"/>
+            <forward name="viewPbjg" path="/xsgzgl/xyfd/pbwh/pbjg/viewPbjg.jsp"/>
+        </action>
+
     </action-mappings>
 
 </struts-config>

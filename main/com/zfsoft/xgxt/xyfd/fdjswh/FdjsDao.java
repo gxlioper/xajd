@@ -129,6 +129,8 @@ public class FdjsDao extends SuperDAOImpl<FdjsForm> {
         StringBuilder sql = new StringBuilder();
         sql.append("select * from (");
         sql.append(" select a.* from xg_xyfd_fdsxxb a where not exists(select 1 from xg_xyfd_fdjsxxb b  where a.id = b.fds) and a.yxzt='1' ");
+        sql.append(" and not exists(select 1 from xg_xyfd_pbsqb c  where a.id = c.fds) ");
+        sql.append(" and not exists(select 1 from xg_xyfd_pbjgb d  where a.id = d.fds) ");
         sql.append(" ) where 1=1 ");
         sql.append(searchTj);
         return getPageList(t, sql.toString(), inputV);

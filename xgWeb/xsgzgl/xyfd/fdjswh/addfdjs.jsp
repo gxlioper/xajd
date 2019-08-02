@@ -14,16 +14,7 @@
     <script type="text/javascript" src="xsgzgl/comm/fileUpload/jmf.js"></script>
     <script type="text/javascript" src="xsgzgl/comm/fileUpload/f.js"></script>
     <script type="text/javascript">
-        jQuery(function(){
-            jQuery('input[name="yxzt"]').click(function () {
-                jQuery("#qkmstr").empty();
-                var yxzt = jQuery('input[name="yxzt"]:checked').val();
-                if(yxzt=="3"){
-                    jQuery("#qkmstr").append("<th><span class='red'>*</span>ַי¿צֳטÊצ</th>");
-                    jQuery("#qkmstr").append("<td colspan='3'><textarea name='qkms' id='qkms' style='width: 500px;height: 100px;'></textarea></td>");
-                }
-            })
-        })
+
         function saveFdjs(){
             var checkId = 'xm-kcmc-xkzy-fdkm-fdsmc';
             if(!checkNotNull(checkId)){

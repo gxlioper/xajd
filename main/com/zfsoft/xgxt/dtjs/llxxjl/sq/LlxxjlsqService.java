@@ -37,7 +37,7 @@ public class LlxxjlsqService extends SuperServiceImpl<LlxxjlsqForm, LlxxjlsqDao>
                 result = shlc.runSubmit(sqid, splc, sqid, "dtjs_llxxjl_sh.do", "dtjs_llxxjl_sq.do");
             }
         }
-        return true;
+        return result;
     }
 
     public boolean saveUpdate( LlxxjlsqForm model) throws Exception {
