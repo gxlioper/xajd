@@ -176,11 +176,25 @@ public class FdkcjgAction extends SuperAction<FdkcjgForm, FdkcjgService> {
      */
     @SystemAuth(url = url)
     public ActionForward viewFdkcjg(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
-        FdkcjgForm model = (FdkcjgForm)form;
+        FdkcjgForm model = (FdkcjgForm) form;
         model = service.getModel(model);
-        FdkcsqForm pbsqForm = new FdkcsqForm();
-
-        request.setAttribute("rs", StringUtils.formatData(model));
+        request.setAttribute("model",model);//辅导课程信息
+        FdkcsqForm fdkcsqForm = new FdkcsqForm();
+        BeanUtils.copyProperties(fdkcsqForm,model);
+        StringBuilder fdjs = new StringBuilder();
+        if(!StringUtil.isNull(fdkcsqForm.getFdjs())&&fdkcsqForm.getFdjs().startsWith("JS")){//教师登记号
+            String xm = fdkcsqService.getFdjs(fdkcsqForm);
+            fdjs.append(fdkcsqForm.getFdjs() + "：" + xm);
+        }else if(!StringUtil.isNull(fdkcsqForm.getFdjs())&&fdkcsqForm.getFdjs().startsWith("PB")){//朋辈志愿者登记号
+            String xm = fdkcsqService.getFdjs(fdkcsqForm);
+            fdjs.append(fdkcsqForm.getFdjs() + "：" + xm);
+        }else {
+            throw new Exception("登记号不存在");
+        }
+        request.setAttribute("fdjsxm",fdjs.toString());
+        User user = getUser(request);
+        boolean isAdmin = fdkcsqService.isAdmin(user);
+        request.setAttribute("isAdmin",isAdmin);
         return mapping.findForward("viewFdkcjg");
     }
     /**

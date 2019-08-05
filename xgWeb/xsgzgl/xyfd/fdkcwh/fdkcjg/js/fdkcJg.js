@@ -11,7 +11,7 @@ function xhLink(cellValue, rowObject) {
 }
 //查看
 function view(jgid) {
-    showDialog("朋辈志愿者结果查看", 800, 550, "xyfd_pbjg.do?method=viewPbjg&jgid="+jgid);
+    showDialog("辅导课程结果查看", 800, 550, "xyfd_fdkcjg.do?method=viewFdkcjg&jgid="+jgid);
 }
 
 //增加
