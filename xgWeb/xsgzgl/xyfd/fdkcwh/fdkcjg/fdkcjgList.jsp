@@ -7,7 +7,7 @@
 		<%@ include file="/syscommon/head.ini"%>
 		<script type="text/javascript" src="js/jquery/plugins/dataGrid/dataGrid.js"></script>
 		<script type="text/javascript" src="js/calendar/calendar.js"></script>
-		<script type="text/javascript" src="xsgzgl/xyfd/pbwh/pbjg/js/pbJg.js"></script>
+		<script type="text/javascript" src="xsgzgl/xyfd/fdkcwh/fdkcjg/js/fdkcJg.js"></script>
 		<script type="text/javascript" src="js/jquery/plugins/upload/ajaxfileupload.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath() %>/xsgzgl/comm/exportNew/import.js"></script>
 
@@ -16,20 +16,16 @@
 			var gridSetting = {
 				caption : "活动结果列表",
 				pager : "pager",
-				url : "xyfd_pbjg.do?method=pbjgList&type=query",
+				url : "xyfd_fdkcjg.do?method=fdkcjgList&type=query",
 				colList : [
 					{ label : 'jgid', name : 'jgid', index : 'jgid',key : true,hidden : true },
-                    { label : '登记号', name : 'djh', index : 'djh', width : '8%',formatter:xhLink  },
-					{ label : '学号', name : 'xh', index : 'xh', width : '10%'},
-					{ label : '姓名', name : 'xm', index : 'xm', width : '10%' },
-					{ label : '辅导科目', name : 'fdkm', index : 'fdkm', width : '10%' },
-					{ label : '辅导室', name : 'fdsmc', index : 'fdsmc', width : '10%' },
-					{ label : '辅导室地点', name : 'fdsdd', index : 'fdsdd', width : '15%' },
-					{ label : '使用日期',name:'syksrq', index: 'syksrq',width:'7%',formatter:function (cell,rowObject) {
-                        return rowObject["syksrq"] + "-" + rowObject["syjsrq"];
-                    }},
-                    { label : '使用结束日期',name:'syjsrq', index: 'syjsrq',width:'1%',hidden:true},
-                    { label : '联系电话', name : 'lxdh', index : 'lxdh', width : '10%' },
+                    { label : '登记号', name : 'fdjs', index : 'fdjs', width : '8%',formatter:xhLink  },
+					{ label : '用户名', name : 'yhm', index : 'yhm', width : '10%',hidden:true},
+                    { label : '辅导教师', name : 'xm', index : 'xm', width : '10%' },
+                    { label : '课程名称', name : 'kcmc', index : 'kcmc', width : '15%' },
+                    { label : '开课单位', name : 'kkdw', index : 'kkdw', width : '15%' },
+                    { label : '辅导室', name : 'fdsmc', index : 'fdsmc', width : '15%' },
+                    { label : '辅导室地点', name : 'fdsdd', index : 'fdsdd', width : '15%' },
                     { label : '数据来源', name : 'sjly', index : 'sjly', hidden : true},
                     { label : 'lrsj', name : 'lrsj', index : 'lrsj', hidden : true}
 				],

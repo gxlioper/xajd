@@ -39,11 +39,17 @@ public class CsszService extends SuperServiceImpl<CsszForm, CsszDao> {
 	 * @throws SQLException
 	 */
 	public boolean insert(CsszForm t) throws SQLException{
-		String dsSplc = t.getPb();
+		String pbSplc = t.getPb();
+		String kcSplc = t.getKc();
+
 		List<String[]> paramList = new ArrayList<String[]>();
-		if(StringUtils.isNotNull(dsSplc)){
-			t.setPbs(new String[]{"pb",dsSplc});
+		if(StringUtils.isNotNull(pbSplc)){
+			t.setPbs(new String[]{"pb",pbSplc});
 			paramList.add(t.getPbs());
+		}
+		if(StringUtils.isNotNull(kcSplc)){
+			t.setKcs(new String[]{"kc",kcSplc});
+			paramList.add(t.getKcs());
 		}
 		t.setParamList(paramList);
 		return dao.insert(t);
@@ -77,6 +83,8 @@ public class CsszService extends SuperServiceImpl<CsszForm, CsszDao> {
 				String splc = map.get("splc");
 				if(lx.equals("pb")){
 					csszForm.setPb(splc);
+				}else if(lx.equals("kc")){
+					csszForm.setKc(splc);
 				}
 			}
 		}

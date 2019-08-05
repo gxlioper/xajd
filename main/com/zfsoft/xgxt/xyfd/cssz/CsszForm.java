@@ -23,10 +23,12 @@ public class CsszForm extends ActionForm{
 	private String splc;
 	
 	private String[] pbs;
+	private String[] kcs;
 	
 	private List<String[]> paramList;
 	
 	private String pb;//Åó±²Ö¾Ô¸Õß
+	private String kc;
 	/**
 	 * @description	£º TODO
 	 * @author 		£º Áø¿¡£¨1282£©
@@ -116,7 +118,20 @@ public class CsszForm extends ActionForm{
 	public void setParamList(List<String[]> paramList) {
 		this.paramList = paramList;
 	}
-	
-	
-	
+
+	public String[] getKcs() {
+		return kcs;
+	}
+
+	public void setKcs(String[] kcs) {
+		this.kcs = kcs;
+	}
+
+	public String getKc() {
+		return kc;
+	}
+
+	public void setKc(String kc) {
+		this.kc = kc;
+	}
 }
