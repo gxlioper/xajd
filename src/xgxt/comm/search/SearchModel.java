@@ -227,6 +227,7 @@ public class SearchModel {
 	private String[] search_tj_jxkqlx= null;//军训考勤类型
 	private String[] search_tj_jxkqlb= null;//军训考勤类别
 	// ===================通用条件 end======================
+	private String[] search_tj_djh= null;//西安交大学业辅导-登记号
 	private String[] search_tj_xmjb= null;//项目级别
 	private String[] search_tj_sskm= null;//所属科目
 	
@@ -629,6 +630,14 @@ public class SearchModel {
 
 	public void setSearch_tj_drhd(String[] search_tj_drhd) {
 		this.search_tj_drhd = search_tj_drhd;
+	}
+
+	public String[] getSearch_tj_djh() {
+		return search_tj_djh;
+	}
+
+	public void setSearch_tj_djh(String[] search_tj_djh) {
+		this.search_tj_djh = search_tj_djh;
 	}
 
 	/**
