@@ -1,10 +1,6 @@
-package com.zfsoft.xgxt.xyfd.pbwh.pbjg;
+package com.zfsoft.xgxt.xyfd.fdkcwh.fdkcjg;
 
 import com.zfsoft.xgxt.base.service.impl.SuperServiceImpl;
-import com.zfsoft.xgxt.dtjs.llxxjl.jg.LlxxjljgDao;
-import com.zfsoft.xgxt.dtjs.llxxjl.jg.LlxxjljgForm;
-
-import java.util.HashMap;
 
 /**
  * @类功能描述:
@@ -13,7 +9,7 @@ import java.util.HashMap;
  * @版本： V1.0
  * @修改记录: 类修改者-修改日期-修改说明
  */
-public class PbjgService extends SuperServiceImpl<PbjgForm, PbjgDao> {
+public class FdkcjgService extends SuperServiceImpl<FdkcjgForm, FdkcjgDao> {
 
 
     public String getDjh() throws Exception{
@@ -21,9 +17,6 @@ public class PbjgService extends SuperServiceImpl<PbjgForm, PbjgDao> {
     }
     public boolean delPbjgBySqId(String id)throws Exception{
         return dao.delPbjgBySqId(id);
-    }
-    public HashMap<String,String> getPbjs(PbjgForm t) throws Exception{
-        return dao.getPbjs(t);
     }
 
 }

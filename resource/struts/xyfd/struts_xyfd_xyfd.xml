@@ -9,6 +9,9 @@
         <form-bean name="pbsqForm" type="com.zfsoft.xgxt.xyfd.pbwh.pbsq.PbsqForm"/>
         <form-bean name="pbshForm" type="com.zfsoft.xgxt.xyfd.pbwh.pbsh.PbshForm"/>
         <form-bean name="pbjgForm" type="com.zfsoft.xgxt.xyfd.pbwh.pbjg.PbjgForm"/>
+        <form-bean name="fdkcsqForm" type="com.zfsoft.xgxt.xyfd.fdkcwh.fdkcsq.FdkcsqForm"/>
+        <form-bean name="fdkcshForm" type="com.zfsoft.xgxt.xyfd.fdkcwh.fdkcsh.FdkcshForm"/>
+        <form-bean name="fdkcjgForm" type="com.zfsoft.xgxt.xyfd.fdkcwh.fdkcjg.FdkcjgForm"/>
     </form-beans>
     <action-mappings>
         <!--参数设置-->
@@ -81,7 +84,42 @@
             <forward name="updatePbjg" path="/xsgzgl/xyfd/pbwh/pbjg/updatePbjg.jsp"/>
             <forward name="viewPbjg" path="/xsgzgl/xyfd/pbwh/pbjg/viewPbjg.jsp"/>
         </action>
-
+        <!--辅导课程申请管理-->
+        <action path="/xyfd_xyfd_fdkcsq" forward="/xyfd_fdkcsq.do?method=fdkcsqList"/>
+        <action path="/xyfd_fdkcsq"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.fdkcwh.fdkcsq.FdkcsqAction"
+                name="fdkcsqForm"
+                parameter="method">
+            <forward name="fdkcsqList" path="/xsgzgl/xyfd/fdkcwh/fdkcsq/fdkcsqList.jsp"/>
+            <forward name="fdkcsqAdd" path="/xsgzgl/xyfd/fdkcwh/fdkcsq/addFdkcsq.jsp"/>
+            <forward name="fdkcsqUpdate" path="/xsgzgl/xyfd/fdkcwh/fdkcsq/updateFdkcsq.jsp"/>
+            <forward name="fdkcsqView" path="/xsgzgl/xyfd/fdkcwh/fdkcsq/viewFdkcsq.jsp"/>
+            <forward name="selectPb" path="/xsgzgl/xyfd/fdkcwh/fdkcsq/selectPb.jsp"/>
+            <forward name="selectFdjs" path="/xsgzgl/xyfd/fdkcwh/fdkcsq/selectFdjs.jsp"/>
+        </action>
+        <!--辅导课程审核管理-->
+        <action path="/xyfd_xyfd_fdkcsh" forward="/xyfd_fdkcsh.do?method=fdkcshList"/>
+        <action path="/xyfd_fdkcsh"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.fdkcwh.fdkcsh.FdkcshAction"
+                name="fdkcshForm"
+                parameter="method">
+            <forward name="fdkcshList" path="/xsgzgl/xyfd/fdkcwh/fdkcsh/fdkcshList.jsp"/>
+            <forward name="fdkcDgsh" path="/xsgzgl/xyfd/fdkcwh/fdkcsh/fdkcDgsh.jsp"/>
+            <forward name="fdkcPlsh" path="/xsgzgl/xyfd/fdkcwh/fdkcsh/fdkcPlsh.jsp"/>
+        </action>
+        <action path="/xyfd_xyfd_fdkcjg" forward="/xyfd_fdkcjg.do?method=fdkcjgList"/>
+        <action path="/xyfd_fdkcjg"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.fdkcwh.fdkcjg.FdkcjgAction"
+                name="fdkcjgForm"
+                parameter="method">
+            <forward name="fdkcjgList" path="/xsgzgl/xyfd/fdkcwh/fdkcjg/fdkcjgList.jsp"/>
+            <forward name="addFdkcjg" path="/xsgzgl/xyfd/fdkcwh/fdkcjg/addFdkcjg.jsp"/>
+            <forward name="updateFdkcjg" path="/xsgzgl/xyfd/fdkcwh/fdkcjg/updateFdkcjg.jsp"/>
+            <forward name="viewFdkcjg" path="/xsgzgl/xyfd/fdkcwh/fdkcjg/viewFdkcjg.jsp"/>
+        </action>
     </action-mappings>
 
 </struts-config>

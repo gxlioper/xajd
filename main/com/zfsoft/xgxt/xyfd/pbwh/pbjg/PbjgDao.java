@@ -65,4 +65,11 @@ public class PbjgDao extends SuperDAOImpl<PbjgForm> {
         sql.append(" select max(djh) djh from xg_xyfd_pbjgb where djh like 'PB%' ");
         return dao.getOneRs(sql.toString(),new String[]{},"djh");
     }
+
+    public HashMap<String,String> getPbjs(PbjgForm t) throws Exception{
+        StringBuilder sql = new StringBuilder();
+        sql.append(" select * from xg_xyfd_pbjgb where djh = ?");
+        String[] input = new String[]{t.getDjh()};
+        return dao.getMapNotOut(sql.toString(),input);
+    }
 }

@@ -64,6 +64,18 @@
 								</html:select>
 							</td>
 						</tr>
+						<tr>
+							<th width="35%">
+								<font color="red">*</font>辅导课程审核流程
+							</th>
+							<td width="60%">
+								<html:select property="kc" styleId="kc">
+									<option value=""></option>
+									<html:options collection="shlcList" property="splc"
+												  labelProperty="lcxx" />
+								</html:select>
+							</td>
+						</tr>
 					</tbody>
 					<tfoot>
 						<tr>
