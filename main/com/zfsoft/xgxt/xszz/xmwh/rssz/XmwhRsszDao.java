@@ -66,14 +66,14 @@ public class XmwhRsszDao extends SuperDAOImpl<XmwhRsszForm> {
 		if (rskzfw != null) {
 			if (rskzfw.equals(Constants.RSKZFW_BJ)) {// 班级
 				sql.append(" FROM (SELECT DISTINCT A.*,B.XYMC,B.ZYMC,B.BJMC ");
-				sql.append(" FROM (SELECT XYDM,NJ,ZYDM,BJDM,COUNT(*) ZRS ");
+				sql.append(" FROM (SELECT XYDM,NJ,ZYDM,ZYBJ,COUNT(*) ZRS ");
 				sql.append(" FROM "+cxb+" ");
 				sql
-						.append(" GROUP BY XYDM,NJ,ZYDM,BJDM  HAVING XYDM IS NOT NULL AND NJ IS NOT NULL AND ZYDM IS NOT NULL AND BJDM IS NOT NULL) A ");
+						.append(" GROUP BY XYDM,NJ,ZYDM,ZYBJ  HAVING XYDM IS NOT NULL AND NJ IS NOT NULL AND ZYDM IS NOT NULL AND ZYBJ IS NOT NULL) A ");
 				sql
-						.append(" LEFT JOIN VIEW_NJXYZYBJ_ALL B ON A.BJDM=B.BJDM) M  ");
+						.append(" LEFT JOIN VIEW_NJXYZYBJ_ALL B ON A.ZYBJ=B.BJDM) M  ");
 				sql
-						.append(" LEFT JOIN XG_XSZZ_NEW_ZZXMRSSZB N ON M.BJDM=N.BMDM  AND M.NJ=N.NJ");
+						.append(" LEFT JOIN XG_XSZZ_NEW_ZZXMRSSZB N ON M.ZYBJ=N.BMDM  AND M.NJ=N.NJ");
 			} else if (rskzfw.equals(Constants.RSKZFW_NJXY)) {// 年级+学院
 				sql
 						.append("  FROM (SELECT DISTINCT A.*,B.XYMC FROM (SELECT XYDM,NJ,COUNT(*) ZRS FROM "+cxb+"  GROUP BY XYDM,NJ  HAVING XYDM IS NOT NULL AND NJ IS NOT NULL) A ");

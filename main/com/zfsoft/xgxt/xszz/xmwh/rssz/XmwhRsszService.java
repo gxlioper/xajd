@@ -59,7 +59,7 @@ public class XmwhRsszService extends
 			List<HashMap<String, String>> allList = null;
 			if (rskzfw != null) {
 				if (rskzfw.equals(Constants.RSKZFW_BJ)) {// 班级
-					bmdmFlag = "bjdm";
+					bmdmFlag = "zybj";
 				} else if (rskzfw.equals(Constants.RSKZFW_NJXY)) {// 年级+学院
 					bmdmFlag = "xydm";
 				} else if (rskzfw.equals(Constants.RSKZFW_NJZY)) {// 年级 + 专业
