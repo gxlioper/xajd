@@ -68,7 +68,7 @@ function dr() {
     return false;
 
 }
-var DCCLBH = "xyfd_xyfd_pbjg.do";//dcclbh,导出功能编号
+var DCCLBH = "xyfd_xyfd_fdkcjg.do";//dcclbh,导出功能编号
 
 //自定义导出 功能
 function exportConfig() {
@@ -79,7 +79,7 @@ function exportConfig() {
 //导出方法
 function exportData() {
     setSearchTj();//设置高级查询条件
-    var url = "xyfd_pbjg.do?method=exportData&dcclbh=" + DCCLBH;//dcclbh,导出功能编号
+    var url = "xyfd_fdkcjg.do?method=export&dcclbh=" + DCCLBH;//dcclbh,导出功能编号
     url = addSuperSearchParams(url);//设置高级查询参数
     jQuery("form").eq(0).attr("action", url);
     jQuery("form").eq(0).submit();

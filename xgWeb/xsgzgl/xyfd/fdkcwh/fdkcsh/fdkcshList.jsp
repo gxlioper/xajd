@@ -97,6 +97,9 @@
 						<li><a href="javascript:void(0);" onclick="splcInfo();return false;" 
 							   title="选中一条记录，点击该按钮可以查看审核流程。"
 							   class="btn_cs">流程跟踪</a></li>
+						<li>
+							<a href="javascript:void(0);" onclick="exportConfig();return false;" class="btn_sr">导出</a>
+						</li>
 					</ul>
 				</div>
 				<!-- 过滤条件 -->	

@@ -72,8 +72,8 @@
 								   class="btn_cs">流程跟踪</a>
 						</li>	
 										
-<%--							<li><a href="#" class="btn_dc" onclick="exportConfig();return false;">导出</a></li>--%>
-<%--							<li><a href="javascript:void(0);" onclick="printzzdsqb('xgygl_zdsq.do?method=printzzdsqb');return false;" class="btn_down">下载登记表</a></li>	--%>
+							<li><a href="#" class="btn_dc" onclick="exportConfig();return false;">导出</a></li>
+							<!--<li><a href="javascript:void(0);" onclick="printzzdsqb('xgygl_zdsq.do?method=printzzdsqb');return false;" class="btn_down">下载登记表</a></li>	-->
 						
 					</ul>
 				</div>

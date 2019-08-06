@@ -6,6 +6,10 @@ import com.zfsoft.xgxt.base.exception.SystemException;
 import com.zfsoft.xgxt.base.message.MessageKey;
 import com.zfsoft.xgxt.base.message.MessageUtil;
 import com.zfsoft.xgxt.base.util.Constants;
+import com.zfsoft.xgxt.base.util.FileUtil;
+import com.zfsoft.xgxt.comm.export.model.ExportModel;
+import com.zfsoft.xgxt.comm.export.service.IExportService;
+import com.zfsoft.xgxt.comm.export.service.impl.ExportExcelImpl;
 import com.zfsoft.xgxt.comm.shlc.dao.ShlcDao;
 import com.zfsoft.xgxt.xyfd.fdjswh.FdjsForm;
 import com.zfsoft.xgxt.xyfd.fdjswh.FdjsService;
@@ -28,6 +32,7 @@ import xgxt.utils.GetTime;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 
@@ -364,6 +369,30 @@ public class FdkcsqAction extends SuperAction<FdkcsqForm,FdkcsqService> {
             response.getWriter().print(data);
         }
 
+        return null;
+    }
+
+    public ActionForward export(ActionMapping mapping, ActionForm form,
+                                HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+        FdkcsqForm myForm=(FdkcsqForm)form;
+
+        //生成高级查询对象
+        CommService comService = new CommService();
+        SearchModel searchModel = comService.getSearchModel(request);
+        myForm.setSearchModel(searchModel);
+
+        User user = getUser(request);
+        List<HashMap<String,String>> resultList = getService().getAllList(myForm,user);
+
+        //导出功能代码
+        IExportService exportService = new ExportExcelImpl();
+        ExportModel exportModel = myForm.getExportModel();
+        exportModel.setZgh(user.getUserName());//当前操作员
+        exportModel.setDataList(resultList);//设置数据
+        exportModel.setDcclbh(request.getParameter("dcclbh"));//设置当前导出功能编号
+        File file = exportService.getExportFile(exportModel);//生成导出文件
+        FileUtil.outputExcel(response, file);
         return null;
     }
 }

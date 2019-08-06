@@ -107,7 +107,6 @@ public class FdkcjgAction extends SuperAction<FdkcjgForm, FdkcjgService> {
         model.setSat(org.apache.commons.lang.StringUtils.join(request.getParameterValues("satd"),","));
         model.setSun(org.apache.commons.lang.StringUtils.join(request.getParameterValues("sund"),","));
         if("add".equals(model.getType())){
-
             model.setLrr(user.getUserName());
             model.setLrsj(GetTime.getTimeByFormat("yyyy-MM-dd hh24:mm:ss"));
             model.setSjly("0");
@@ -198,27 +197,29 @@ public class FdkcjgAction extends SuperAction<FdkcjgForm, FdkcjgService> {
         return mapping.findForward("viewFdkcjg");
     }
     /**
-     * 朋辈志愿者结果导出
+     * 结果导出
      */
     @SystemAuth(url = url,rewritable= SystemAuth.ReadWrite.WRITEABLE)
-    public ActionForward exportData(ActionMapping mapping, ActionForm form,
-                                    HttpServletRequest request, HttpServletResponse response)
+    public ActionForward export(ActionMapping mapping, ActionForm form,
+                                HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-        FdkcjgForm model = (FdkcjgForm) form;
-        // 生成高级查询对象
+        FdkcjgForm myForm=(FdkcjgForm)form;
+
+        //生成高级查询对象
         CommService comService = new CommService();
         SearchModel searchModel = comService.getSearchModel(request);
-        model.setSearchModel(searchModel);
+        myForm.setSearchModel(searchModel);
+
         User user = getUser(request);
-        // 查询
-        List<HashMap<String, String>> resultList = service.getAllList(model,user);// 查询出所有记录，不分页
-        // 导出功能代码
+        List<HashMap<String,String>> resultList = getService().getAllList(myForm,user);
+
+        //导出功能代码
         IExportService exportService = new ExportExcelImpl();
-        ExportModel exportModel = model.getExportModel();
-        exportModel.setZgh(user.getUserName());// 当前操作员
-        exportModel.setDataList(resultList);// 设置数据
-        exportModel.setDcclbh(request.getParameter("dcclbh"));// 设置当前导出功能编号
-        File file = exportService.getExportFile(exportModel);// 生成导出文件
+        ExportModel exportModel = myForm.getExportModel();
+        exportModel.setZgh(user.getUserName());//当前操作员
+        exportModel.setDataList(resultList);//设置数据
+        exportModel.setDcclbh(request.getParameter("dcclbh"));//设置当前导出功能编号
+        File file = exportService.getExportFile(exportModel);//生成导出文件
         FileUtil.outputExcel(response, file);
         return null;
     }

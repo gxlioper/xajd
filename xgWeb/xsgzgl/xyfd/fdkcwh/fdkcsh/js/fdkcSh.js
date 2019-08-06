@@ -148,7 +148,7 @@ function saveSh(){
     });
 }
 
-var DCCLBH = "xyfd_xyfd_pbsh.do";//dcclbh,导出功能编号
+var DCCLBH = "xyfd_xyfd_fdkcsq.do";//dcclbh,导出功能编号
 
 //自定义导出 功能
 function exportConfig() {
@@ -160,7 +160,7 @@ function exportConfig() {
 function hdshExportData() {
     setSearchTj();//设置高级查询条件
     var shzt = jQuery("#shzt").val();
-    var url = "xyfd_pbsh.do?method=exportData&shzt="+shzt+"&dcclbh=" + DCCLBH;//dcclbh,导出功能编号
+    var url = "xyfd_fdkcsh.do?method=export&shzt="+shzt+"&dcclbh=" + DCCLBH;//dcclbh,导出功能编号
     url = addSuperSearchParams(url);//设置高级查询参数
     jQuery("form").eq(0).attr("action", url);
     jQuery("form").eq(0).submit();

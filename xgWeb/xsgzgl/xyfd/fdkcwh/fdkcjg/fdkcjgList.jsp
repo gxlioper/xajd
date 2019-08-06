@@ -65,9 +65,9 @@
 						<%--<li>--%>
 							<%--<a href="javascript:void(0);" onclick="dr();return false;" class="btn_shuc">导入</a>--%>
 						<%--</li>--%>
-						<%--<li>--%>
-							<%--<a href="javascript:void(0);" onclick="exportConfig();return false;" class="btn_sr">导出</a>--%>
-						<%--</li>--%>
+						<li>
+							<a href="javascript:void(0);" onclick="exportConfig();return false;" class="btn_sr">导出</a>
+						</li>
 						</logic:equal>
 					</ul>
 				</div>

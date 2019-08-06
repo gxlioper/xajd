@@ -3,6 +3,10 @@ package com.zfsoft.xgxt.xyfd.fdkcwh.fdkcsh;
 import com.zfsoft.xgxt.base.action.SuperAction;
 import com.zfsoft.xgxt.base.auth.SystemAuth;
 import com.zfsoft.xgxt.base.message.MessageKey;
+import com.zfsoft.xgxt.base.util.FileUtil;
+import com.zfsoft.xgxt.comm.export.model.ExportModel;
+import com.zfsoft.xgxt.comm.export.service.IExportService;
+import com.zfsoft.xgxt.comm.export.service.impl.ExportExcelImpl;
 import com.zfsoft.xgxt.xyfd.fdkcwh.fdkcsq.FdkcsqForm;
 import com.zfsoft.xgxt.xyfd.fdkcwh.fdkcsq.FdkcsqService;
 import com.zfsoft.xgxt.xyfd.fdswh.FdsForm;
@@ -21,6 +25,7 @@ import xgxt.utils.String.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 
@@ -110,6 +115,30 @@ public class FdkcshAction extends SuperAction<FdkcshForm,FdkcshService> {
         boolean isSuccess = service.cancel(model);
         String messageKey = isSuccess ? MessageKey.SYS_CANCEL_SUCCESS : MessageKey.SYS_CANCEL_FAIL;
         response.getWriter().print(getJsonMessageByKey(messageKey));
+        return null;
+    }
+
+    public ActionForward export(ActionMapping mapping, ActionForm form,
+                                HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+        FdkcshForm myForm=(FdkcshForm)form;
+
+        //生成高级查询对象
+        CommService comService = new CommService();
+        SearchModel searchModel = comService.getSearchModel(request);
+        myForm.setSearchModel(searchModel);
+
+        User user = getUser(request);
+        List<HashMap<String,String>> resultList = getService().getAllList(myForm,user);
+
+        //导出功能代码
+        IExportService exportService = new ExportExcelImpl();
+        ExportModel exportModel = myForm.getExportModel();
+        exportModel.setZgh(user.getUserName());//当前操作员
+        exportModel.setDataList(resultList);//设置数据
+        exportModel.setDcclbh(request.getParameter("dcclbh"));//设置当前导出功能编号
+        File file = exportService.getExportFile(exportModel);//生成导出文件
+        FileUtil.outputExcel(response, file);
         return null;
     }
 }
