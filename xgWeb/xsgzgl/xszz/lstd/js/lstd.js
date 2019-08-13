@@ -231,10 +231,14 @@ function Lcinfo(){
 function print() {
     var t = jQuery("#dataTable");
     var ids = t.getSeletIds();
-    if (ids.length == 0) {
-        showAlertDivLayer('请至少选定一条记录!');
+    var rows = jQuery("#dataTable").getSeletRow();
+    if (ids.length != 1) {
+        showAlertDivLayer('请选定一条记录!');
         return false;
     }
-
-    window.open("xszz_lstd.do?method=print&sqid=" + ids);
+    var url = "xszz_lstd.do?method=print&jgid=" + rows[0]['jgid'];
+    if(rows[0]['sqid']!=null&&rows[0]['sqid']!=''){
+        url += "&sqid=" + rows[0]['sqid'];
+    }
+    window.open(url);
 }

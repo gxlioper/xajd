@@ -66,6 +66,7 @@ public class LstdAction extends BasicAction {
             boolean flag = service.saveJcsz(model);
             String msg = flag ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
             response.getWriter().print(getJsonMessageByKey(msg));
+            return null;
         }
         Map map = service.getJcsz();
         request.setAttribute("model",map);
@@ -368,25 +369,30 @@ public class LstdAction extends BasicAction {
         LstdForm model = (LstdForm) form;
         List<PrintModel> printModels = new ArrayList<PrintModel>();
         PrintModel printModel;
-        LstdForm result;
+        LstdForm result = new LstdForm();
         HashMap<String,String> xsjbxx;
         List<HashMap<String,String>> jtcyList;
         List<HashMap<String,String>> shyjlist;
-        String[] ids = model.getSqid().split(",");
-        for(String sqid : ids) {
-            printModel = new PrintModel();
-            result = service.getModel(sqid);
-            shyjlist = shlc.getShyjListByYwid(sqid);
+        String jgid = request.getParameter("jgid");
+        printModel = new PrintModel();
+        if(!StringUtil.isNull(model.getSqid())){
+            result = service.getModel(model.getSqid());
+            shyjlist = shlc.getShyjListByYwid(model.getSqid());
             result.setSyshyj(shyjlist.get(0).get("shyj"));
             result.setXxshyj(shyjlist.get(1).get("shyj"));
-            xsjbxx = xsxxService.getXsjbxxMore(result.getXh());
-            jtcyList = jtqkdcService.getJtcyList(result.getXh());
-            printModel.setLstdForm(result);
-            printModel.setXsjbxx(xsjbxx);
-            printModel.setJtcyList(jtcyList);
-            printModel.setSize(String.valueOf(jtcyList.size()+1));
-            printModels.add(printModel);
+        }else {
+            LstdjgService lstdjgService = new LstdjgService();
+            LstdjgForm lstdjgForm = new LstdjgForm();
+            lstdjgForm = lstdjgService.getModel(jgid);
+            BeanUtils.copyProperties(result,lstdjgForm);
         }
+        xsjbxx = xsxxService.getXsjbxxMore(result.getXh());
+        jtcyList = jtqkdcService.getJtcyList(result.getXh());
+        printModel.setLstdForm(result);
+        printModel.setXsjbxx(xsjbxx);
+        printModel.setJtcyList(jtcyList);
+        printModel.setSize(String.valueOf(jtcyList.size()+1));
+        printModels.add(printModel);
         request.setAttribute("printModels",printModels);
         return mapping.findForward("print");
     }

@@ -123,6 +123,8 @@ public class LstdDao extends SuperDAOImpl<LstdForm>{
     }
 
     public List<HashMap<String, String>> getJgPageList(LstdForm lstdForm, User user) throws Exception {
+        String searchTj = SearchService.getSearchTj(lstdForm.getSearchModel());
+        String[] inputV = SearchService.getTjInput(lstdForm.getSearchModel());
         StringBuilder sql = new StringBuilder();
         sql.append("select t.* from (");
         sql.append(" select t.*,t1.xm,t2.bjdm,t2.bjmc,t2.nj,t3.xydm,t3.xymc,t3.bjdm zybj,t3.bjmc zybjmc,t3.zydm,t3.zymc ");
@@ -136,7 +138,8 @@ public class LstdDao extends SuperDAOImpl<LstdForm>{
         sql.append(" left join XG_XTWH_SYBJGLB t4 on t4.bjdm = t2.bjdm ");
         sql.append(" left join XG_XTWH_SYDMB t5 on t5.sydm = t4.sydm ");
         sql.append(" ) t where 1=1 ");
-        return getPageList(lstdForm,sql.toString(),new String[]{});
+        sql.append(searchTj);
+        return getPageList(lstdForm,sql.toString(),inputV);
     }
 
     public boolean delJcsz() throws Exception {

@@ -14,6 +14,7 @@
                 url:"xszz_lstd.do?method=lstdjgList&type=query",
                 colList:[
                     {label:'key',name:'jgid', index: 'jgid',key:true ,hidden:true},
+                    {label:'sqid',name:'sqid', index: 'sqid',hidden:true},
                     {label:'学号',name:'xh', index: 'xh',width:'13%'},
                     {label:'学年',name:'xn', index: 'xn',width:'8%'},
                     {label:'姓名',name:'xm', index: 'xm',width:'8%'},
