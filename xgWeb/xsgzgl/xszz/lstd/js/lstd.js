@@ -32,19 +32,25 @@ function selectChange(target){
     if(target.value == '01'){
         jQuery("#dkjeTh").removeAttr("style");
         jQuery("#dkjeTd").removeAttr("style");
-        jQuery("#sqhjje").attr("disabled","disabled");
+        jQuery("#sqhjje").attr("readonly","readonly");
         jQuery("#sqhjje").val("");
+        jQuery("#sqhjje").val(jQuery("#dkje").val());
     } else if(target.value == '02'){
         jQuery("#dkjeTh").attr("style","display:none");
         jQuery("#dkjeTd").attr("style","display:none");
         jQuery("#dkje").val("");
-        jQuery("#sqhjje").attr("disabled","disabled");
+        jQuery("#sqhjje").val("8000");
+        jQuery("#sqhjje").attr("readonly","readonly");
     } else {
         jQuery("#dkjeTh").attr("style","display:none");
         jQuery("#dkjeTd").attr("style","display:none");
         jQuery("#dkje").val("");
-        jQuery("#sqhjje").removeAttr("disabled");
+        jQuery("#sqhjje").removeAttr("readonly");
     }
+}
+function jshjje() {
+    var dkje = jQuery("#dkje").val();
+    jQuery("#sqhjje").val(dkje);
 }
 function selectTab(obj,shzt){
     jQuery("#shzt").val(shzt);

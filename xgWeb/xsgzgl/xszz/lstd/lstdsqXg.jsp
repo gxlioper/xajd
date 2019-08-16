@@ -84,7 +84,7 @@
                 </td>
                 <th id="dkjeTh">ษ๊ว๋ด๛ฟ๎ฝ๐ถ๎(ิช)</th>
                 <td id="dkjeTd">
-                    <html:text property="dkje" styleId="dkje" onblur="checkMoneyForKeyup(this);"/>
+                    <html:text property="dkje" styleId="dkje" onblur="checkMoneyForKeyup(this);jshjje();"/>
                 </td>
             </tr>
             <tr>

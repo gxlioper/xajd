@@ -156,7 +156,7 @@
             </tr>
             <tr>
                 <td colspan="2">ª∫ΩªΩÿ÷π ±º‰</td>
-                <td colspan="6"></td>
+                <td colspan="6">${l.lstdForm.hjjzrq}</td>
             </tr>
             <tr>
                 <td colspan="8">

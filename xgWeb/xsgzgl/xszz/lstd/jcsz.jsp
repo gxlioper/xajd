@@ -71,6 +71,14 @@
 							</select>
 						</td>
 					</tr>
+					<tr>
+						<th><span class="red">*</span>»º½»½ØÖ¹ÈÕÆÚ</th>
+						<td>
+							<input  name="hjjzrq" id="hjjzrq" size="10" value="${model.hjjzrq}"
+									onclick="return showCalendar('hjjzrq','yyyy-MM-dd');"
+									readonly="readonly">
+						</td>
+					</tr>
 				</tbody>
 			</table>
 

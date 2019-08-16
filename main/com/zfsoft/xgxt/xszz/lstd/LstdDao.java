@@ -148,8 +148,8 @@ public class LstdDao extends SuperDAOImpl<LstdForm>{
     }
 
     public boolean insertJcsz(LstdForm lstdForm) throws Exception {
-        String sql = "insert into XG_XSZZ_LSTDJCSZB(sqkssj,sqjssj,splc) values(?,?,?)";
-        return dao.runUpdate(sql,new String[]{lstdForm.getSqkssj(),lstdForm.getSqjssj(),lstdForm.getSplc()});
+        String sql = "insert into XG_XSZZ_LSTDJCSZB(sqkssj,sqjssj,splc,hjjzrq) values(?,?,?,?)";
+        return dao.runUpdate(sql,new String[]{lstdForm.getSqkssj(),lstdForm.getSqjssj(),lstdForm.getSplc(),lstdForm.getHjjzrq()});
     }
 
     public Map<String,String> getJcsz(){

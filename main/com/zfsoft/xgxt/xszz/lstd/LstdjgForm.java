@@ -20,6 +20,7 @@ public class LstdjgForm extends BaseForm {
     private String sjly;//数据来源
     private String sqid;//审批流程业务id
     private String filepath;//附件
+    private String hjjzrq; //缓交截止日期
 
     public String getJgid() {
         return jgid;
@@ -109,5 +110,13 @@ public class LstdjgForm extends BaseForm {
 
     public void setFilepath(String filepath) {
         this.filepath = filepath;
+    }
+
+    public String getHjjzrq() {
+        return hjjzrq;
+    }
+
+    public void setHjjzrq(String hjjzrq) {
+        this.hjjzrq = hjjzrq;
     }
 }

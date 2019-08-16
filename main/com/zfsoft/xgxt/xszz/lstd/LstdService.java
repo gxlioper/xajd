@@ -81,6 +81,17 @@ public class LstdService extends SuperServiceImpl<LstdForm,LstdDao> {
         }else{
             model.setShzt(Constants.YW_WTJ);
         }
+        Map<String,String> map = getJcsz();
+        if (!Constants.YW_YTH.equalsIgnoreCase(model.getShzt())&&"submit".equalsIgnoreCase(model.getType())&&map != null && !StringUtil.isNull(map.get("splc"))) {
+            // 设置审批流程到申请记录上
+            model.setShlc(map.get("splc"));
+        }
+
+        //新增和修改都用这个方法,若审核流程为空，这里重新分配
+        if(StringUtil.isNull(model.getShlc())){
+
+            model.setShlc(map.get("splc"));
+        }
         boolean result = dao.runUpdate(model);
         if("submit".equals(model.getType()) && result){
             result = shlc.runSubmit(model.getSqid(), model.getShlc(), model.getXh(), "xszz_lstdsh.do", "xszz_lstdsq.do");

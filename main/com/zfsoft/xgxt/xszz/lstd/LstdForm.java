@@ -53,6 +53,7 @@ public class LstdForm extends BaseForm {
     private String sqkssj;
     private String sqjssj;
     private String splc;
+    private String hjjzrq; //缓交截止日期
     //基础设置参数
 
     public String getSplc() {
@@ -329,5 +330,13 @@ public class LstdForm extends BaseForm {
 
     public void setShzt(String shzt) {
         this.shzt = shzt;
+    }
+
+    public String getHjjzrq() {
+        return hjjzrq;
+    }
+
+    public void setHjjzrq(String hjjzrq) {
+        this.hjjzrq = hjjzrq;
     }
 }

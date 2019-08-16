@@ -31,6 +31,7 @@ import xgxt.action.Base;
 import xgxt.comm.CommService;
 import xgxt.comm.search.SearchModel;
 import xgxt.form.User;
+import xgxt.utils.Pages;
 import xgxt.utils.String.StringUtils;
 import xgxt.xtwh.comm.splc.XtwhShlcService;
 
@@ -110,8 +111,16 @@ public class LstdAction extends BasicAction {
         LstdForm model = (LstdForm) form;
         User user = getUser(request);
         model.setXh(user.getUserName());
+        Map jcszmap = service.getJcsz(); //基础设置信息
         if (SAVE.equalsIgnoreCase(model.getType()) || SUBMIT.equalsIgnoreCase(model.getType())){
             if(!service.isExist(model)){
+                if(model.getHjfs().equals("01")){//生源地助学贷款
+                    model.setSqhjje(model.getDkje());
+                }
+                if(model.getHjfs().equals("02")){//校园地助学贷款
+                    model.setSqhjje("8000");
+                }
+                model.setHjjzrq((String)jcszmap.get("hjjzrq"));
                 boolean flag = service.saveLstdSq(model);
                 if(flag){
                     response.getWriter().print(getJsonMessageByKey(MessageKey.SYS_SAVE_SUCCESS));
@@ -127,8 +136,8 @@ public class LstdAction extends BasicAction {
 
             return null;
         }
-        Map map = service.getJcsz();
-        request.setAttribute("jssj",map.get("sqjssj"));
+
+        request.setAttribute("hjjzrq",jcszmap.get("hjjzrq"));
 
         return mapping.findForward("lstdsqZj");
     }
@@ -149,7 +158,15 @@ public class LstdAction extends BasicAction {
 
         LstdForm model = (LstdForm) form;
         LstdForm result = service.getModel(model.getSqid());
+        Map map = service.getJcsz();
         if (SAVE.equalsIgnoreCase(model.getType()) || SUBMIT.equalsIgnoreCase(model.getType())){
+            if(model.getHjfs().equals("01")){//生源地助学贷款
+                model.setSqhjje(model.getDkje());
+            }
+            if(model.getHjfs().equals("02")){//校园地助学贷款
+                model.setSqhjje("8000");
+            }
+            model.setHjjzrq((String)map.get("hjjzrq"));
             boolean flag = service.updateLstdsq(model);
             if(flag){
                 response.getWriter().print(getJsonMessageByKey(MessageKey.SYS_SAVE_SUCCESS));
@@ -158,8 +175,7 @@ public class LstdAction extends BasicAction {
             }
             return null;
         }
-        Map map = service.getJcsz();
-        request.setAttribute("jssj",map.get("sqjssj"));
+        request.setAttribute("jssj",map.get("hjjzrq"));
         request.setAttribute("hjfs",result.getHjfs());
         BeanUtils.copyProperties(model, StringUtils.formatData(result));
         return mapping.findForward("lstdsqXg");
@@ -394,6 +410,7 @@ public class LstdAction extends BasicAction {
         printModel.setSize(String.valueOf(jtcyList.size()+1));
         printModels.add(printModel);
         request.setAttribute("printModels",printModels);
+        request.setAttribute("lstdForm",result);
         return mapping.findForward("print");
     }
 
@@ -426,6 +443,14 @@ public class LstdAction extends BasicAction {
 
         LstdForm model = (LstdForm) form;
         if (SAVE.equalsIgnoreCase(model.getType())){
+            if(model.getHjfs().equals("01")){//生源地助学贷款
+                model.setSqhjje(model.getDkje());
+            }
+            if(model.getHjfs().equals("02")){//校园地助学贷款
+                model.setSqhjje("8000");
+            }
+            Map map = service.getJcsz();
+            model.setHjjzrq((String)map.get("hjjzrq"));
             boolean flag = service.saveLstdJg(model);
             if(flag){
                 response.getWriter().print(getJsonMessageByKey(MessageKey.SYS_SAVE_SUCCESS));
@@ -477,7 +502,10 @@ public class LstdAction extends BasicAction {
 
         User user = getUser(request);
         List<HashMap<String, String>> resultList = null;
-        model.getPages().setMaxPage(Integer.MAX_VALUE);
+//        model.getPages().setMaxPage(Integer.MAX_VALUE);
+        Pages pages = model.getPages();
+        pages.setPageSize(Integer.MAX_VALUE);
+        model.setPages(pages);
         resultList = service.getJgList(model,user);// 查询出所有记录，不分页
 
         // 导出功能代码

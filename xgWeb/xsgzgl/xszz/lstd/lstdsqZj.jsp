@@ -52,6 +52,8 @@
                 });
             });
         }
+
+
     </script>
 </head>
 <body>
@@ -81,7 +83,7 @@
                     </td>
                     <th id="dkjeTh">申请贷款金额(元)</th>
                     <td id="dkjeTd">
-                        <input name="dkje" onblur="checkMoneyForKeyup(this);"/>
+                        <input id="dkje" name="dkje" onblur="checkMoneyForKeyup(this);jshjje();"/>
                     </td>
                 </tr>
                 <tr>
@@ -99,7 +101,7 @@
                 <tr>
                     <th>缓交截止时间</th>
                     <td colspan="3">
-                        ${jssj}
+                        ${hjjzrq}
                     </td>
                 </tr>
                 <tr>

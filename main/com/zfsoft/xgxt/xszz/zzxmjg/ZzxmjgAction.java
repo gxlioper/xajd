@@ -43,6 +43,7 @@ import xgxt.comm.search.SearchModel;
 import xgxt.form.User;
 import xgxt.utils.FormModleCommon;
 import xgxt.utils.GetTime;
+import xgxt.utils.Pages;
 import xgxt.utils.String.StringUtils;
 import xgxt.utils.date.DateUtils;
 import xsgzgl.wjcf.general.cfsbgl.WjcfCfsbService;
@@ -635,6 +636,10 @@ public class ZzxmjgAction extends SuperAction {
 		CommService comService = new CommService();
 		SearchModel searchModel = comService.getSearchModel(request);
 		model.setSearchModel(searchModel);
+
+		Pages pages = model.getPages();
+		pages.setPageSize(Integer.MAX_VALUE);
+		model.setPages(pages);
 
 		User user = getUser(request);
 		// ≤È—Ø
