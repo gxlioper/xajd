@@ -8,7 +8,7 @@
 				if (!jQuery.isEmptyObject(data[i])){
 					var liHtml = "<li style='width: 20%;' title='" + data[i]["hdmc"] + "'><div style='width: 100%;'><a href='hdgl_hdxx.do?method=ckHdxx&hdid=" + data[i]["hdid"] + "'>";
 					liHtml += "<img src='" + data[i]["hb"] + "' style='width:97px;height:127px;'/>";
-					liHtml += "<p class='text-center'>" + data[i]["hdmc"] + "</p>";
+					liHtml += "<p class='text-center'>" + data[i]["hdmc"] + "¡¾" + data[i]["hdztmc"] + "¡¿</p>";
 					liHtml += "</a></div></li>";
 					
 					jQuery("#zxhdxxList").append(liHtml);
@@ -24,7 +24,7 @@
 			<a href="hdgl_hdgl_hdxx.do" class="pull-right" title="¸ü¶à">more>></a>
 		</div>
 		<div class="panel-body">
-			<ul class="info-search" id="zxhdxxList" style="height: 235px; overflow: hidden;">
+			<ul class="info-search" id="zxhdxxList" style="height: 265px; overflow: hidden;">
 			</ul>
 		</div>
 	</div>

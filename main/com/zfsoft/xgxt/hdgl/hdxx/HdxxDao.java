@@ -69,7 +69,7 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 			sql.append(",row_number() over(partition by t.hdbmzt order by t.hdkssj desc) rn ");
 		}
 		sql.append(" from (");
-		sql.append(" select t1.*,t2.num ybmrs,t4.hdlxmc, xx.hdbq, xx.hdbqmc ,");
+		sql.append(" select t1.*,t2.num ybmrs,t4.hdlxmc, xx.hdbq, xx.hdbqmc ,xxx.nlbq,xxx.nlbqmc,");
 		if(pxfs.equals("wcj")){
 			sql.append("t5.jdmc,t5.jdid,t5.jdsx,t5.jdlx,t8.jdsx xsjdsx,t8.jdid xsjdid,t8.jdmc xsjdmc,t8.shzt,");
 			//sql.append("t9.dwzw,(case when t9.dwzw is not null then '1' else '0' end) sfzd,");
@@ -97,6 +97,11 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 		sql.append("  replace(wm_concat(t2.hdbqmc), ';', ',') hdbqmc ");
 		sql.append("  from xg_hdgl_hdbqglb t1 left join xg_hdgl_hdbqdmb t2 on t1.hdbq = t2.hdbqdm ");
 		sql.append("  group by t1.jgid) xx on t1.hdid = xx.jgid ");
+
+		sql.append(" left join (select t1.jgid, replace(wm_concat(t1.nlbq), ';', ',') nlbq, ");
+		sql.append("  replace(wm_concat(t2.nlbqmc), ';', ',') nlbqmc ");
+		sql.append("  from xg_hdgl_nlbqglb t1 left join xg_hdgl_nlbqdmb t2 on t1.nlbq = t2.nlbqdm ");
+		sql.append("  group by t1.jgid) xxx on t1.hdid = xxx.jgid ");
 
 		sql.append(" left join (select hdid,count(1) num from xg_hdgl_hdryb group by hdid) t2 on t1.hdid = t2.hdid");
 		sql.append(" left join xg_hdgl_hdlxdmb t4 on t1.hdlx = t4.hdlxdm");
@@ -217,15 +222,16 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 	 */
 	public List<HashMap<String,String>> zxHdxxList(HdxxForm t,User user) throws Exception{
 		StringBuilder sql = new StringBuilder();
+		sql.append(" select  t.*,case when (to_char(sysdate, 'yyyy-MM-dd hh24:mm:ss')>t.hdkssj) then '已开始' ");
+		sql.append(" when (to_char(sysdate, 'yyyy-MM-dd hh24:mm:ss')>t.hdjssj) then '已结束' ");
+		sql.append(" else '未开始' end hdztmc  from ( ");
 		sql.append(" select * from ( ");
 		sql.append(" select a.* from Xg_Hdgl_Hdxxb a where a.bmdx = '本校公开报名' union ");
 		sql.append(" select a.* from Xg_Hdgl_Hdxxb a where a.bmdx = '特定学院报名' and a.bmtddx = ? union ");
 		sql.append(" select a.* from Xg_Hdgl_Hdxxb a where a.bmdx = '特定书院报名' and a.bmtddx = ? ");
-		sql.append(" ) a where a.hdzt = '1' and a.hdkssj>to_char(sysdate,'yyyy-MM-dd hh24:mm:ss') ");
-		sql.append(" and not exists ( ");
-		sql.append(" select * from (select hdid,xh from Xg_Hdgl_Hdryb union ");
-		sql.append(" select hdid,xh from Xg_Hdgl_zdHdryb ");
-		sql.append(" ) b where b.xh = ? and a.hdid = b.hdid) ");
+		sql.append(" ) a where a.hdzt = '1' and a.hdjssj>to_char(sysdate,'yyyy-MM-dd hh24:mm:ss') ");
+		sql.append(" union select * from Xg_Hdgl_Hdxxb where bmsf='0' ");
+		sql.append(" and hdjssj>to_char(sysdate, 'yyyy-MM-dd hh24:mm:ss')  ) t");
 		sql.append(" order by a.fbsj desc ");
 		String[] input = new String[]{user.getUserDep(),user.getUserSyDep(),user.getUserName()};
 		return getPageList(t,sql.toString(),input);
@@ -246,14 +252,20 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 		//String[] jt_user = null;
 		//String userName = user.getUserName();
 		sql.append(" select t.* from (");
-		sql.append(" select t1.*,t2.num ybmrs,t4.hdlxmc, c.hdbq, c.hdbqmc ");
+		sql.append(" select t1.*,t2.num ybmrs,t4.hdlxmc, c.hdbq, c.hdbqmc ,d.nlbq,d.nlbqmc ");
 		sql.append(" from xg_hdgl_hdxxb t1 ");
 		sql.append(" left join (select hdid,count(1) num from xg_hdgl_hdryb group by hdid) t2 on t1.hdid = t2.hdid ");
 		sql.append(" left join xg_hdgl_hdlxdmb t4 on t1.hdlx = t4.hdlxdm ");
+
 		sql.append(" left join (select a.jgid, replace(wm_concat(a.hdbq), ';', ',') hdbq, ");
 		sql.append("  replace(wm_concat(b.hdbqmc), ';', ',') hdbqmc ");
 		sql.append("  from xg_hdgl_hdbqglb a left join xg_hdgl_hdbqdmb b on a.hdbq = b.hdbqdm ");
 		sql.append("  group by a.jgid) c on t1.hdid = c.jgid ");
+
+		sql.append(" left join (select a.jgid, replace(wm_concat(a.nlbq), ';', ',') nlbq, ");
+		sql.append("  replace(wm_concat(b.nlbqmc), ';', ',') nlbqmc ");
+		sql.append("  from xg_hdgl_nlbqglb a left join xg_hdgl_nlbqdmb b on a.nlbq = b.nlbqdm ");
+		sql.append("  group by a.jgid) d on t1.hdid = d.jgid ");
 
 		sql.append(" where 1 = 1");
         if(StringUtils.isNotNull(t.getHdlx())){
@@ -2117,9 +2129,9 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 	public List<HashMap<String,String>> getBmRys(String dthdid){
 		StringBuilder sql = new StringBuilder();
 		sql.append("select * from (");
-		sql.append("select a.hdid,a.xh from xg_hdgl_hdryb a left join xg_hdgl_hdxxb b on a.hdid = b.hdid where a.shzt='1' and a.hdpp='1' ");
+		sql.append("select a.hdid,a.xh,a.bmsj from xg_hdgl_hdryb a left join xg_hdgl_hdxxb b on a.hdid = b.hdid where a.shzt='1' and a.hdpp='1' ");
 		sql.append(" union ");
-		sql.append(" select a.hdid,a.xh  from xg_hdgl_zdhdryb a left join xg_hdgl_hdxxb b on a.hdid = b.hdid where a.shzt='1' and a.hdpp='1' ");
+		sql.append(" select a.hdid,a.xh,a.bmsj  from xg_hdgl_zdhdryb a left join xg_hdgl_hdxxb b on a.hdid = b.hdid where a.shzt='1' and a.hdpp='1' ");
 		sql.append(" ) where 1=1 and hdid= ? ");
 		return dao.getListNotOut(sql.toString(),new String[]{dthdid});
 	}

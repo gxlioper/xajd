@@ -12,11 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.JsonArray;
 import com.zfsoft.ms.mail.util.BooleanUtils;
 import com.zfsoft.xgxt.comm.bdpz.service.BdpzService;
+import com.zfsoft.xgxt.hdgl.bmdwh.BmdService;
 import com.zfsoft.xgxt.hdgl.hdxq.HdEwm;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
@@ -772,12 +774,44 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 	public ActionForward getBmRyList(ActionMapping mapping, ActionForm form,
 								  HttpServletRequest request, HttpServletResponse response)
 			throws Exception{
+		HashMap<String,Object> dataMap = new HashMap<>();
+		String ip = request.getParameter("ip");
+		String password = request.getParameter("password");
+		BmdService bmdService = new BmdService();
+		HashMap<String,String> bmdxx = bmdService.getBmdxx(ip);
+		if(bmdxx.size()<=0){
+			dataMap.put("code","500");
+			dataMap.put("message","不在白名单中！");
+			JSONArray dataList = JSONArray.fromObject(dataMap);
+			response.getWriter().print(dataList);
+			return null;
+		}
+		String md5 = password + ip;
+		for(int i=0;i<3;i++){
+			md5 = DigestUtils.md5Hex(md5) + ip;
+		}
+		if(!md5.equals(bmdxx.get("password"))){
+			dataMap.put("code","500");
+			dataMap.put("message","密码错误！");
+			JSONArray dataList = JSONArray.fromObject(dataMap);
+			response.getWriter().print(dataList);
+			return null;
+		}
 		String hdid = request.getParameter("hdid");
 		if(StringUtil.isNull(hdid)){
+			dataMap.put("code","500");
+			dataMap.put("message","hdid为空！");
+			JSONArray dataList = JSONArray.fromObject(dataMap);
+			response.getWriter().print(dataList);
 		    return null;
         }
 		List<HashMap<String,String>> result = service.getBmRys(hdid);
-        JSONArray dataList = JSONArray.fromObject(result);
+		dataMap.put("code","200");
+		if(result.size()<=0){
+			dataMap.put("message","该活动无有效报名人员");
+		}
+		dataMap.put("result",result);
+        JSONArray dataList = JSONArray.fromObject(dataMap);
         response.getWriter().print(dataList);
 		return null;
 	}

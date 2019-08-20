@@ -146,6 +146,18 @@
 		                                <h4>
 		                                	 ${data.hdmc}
 		                                </h4>
+										<div class="form-group">
+											<label>活动标签：</label>
+											<span class="time">
+		                                    	${data.hdbqmc}
+		                                    </span>
+										</div>
+										<div class="form-group">
+											<label>能力标签：</label>
+											<span class="time">
+													${data.nlbqmc}
+											</span>
+										</div>
 		                                <div class="form-group">
 		                                    <label>时间：</label>
 		                                    <span class="time">
@@ -158,12 +170,30 @@
 		                                    	${data.hddd}
 		                                    </span>
 		                                </div>
+										<div class="form-group">
+											<label>主办方：</label>
+											<span class="address">
+													${data.zbf}
+											</span>
+										</div>
+										<div class="form-group">
+											<label>活动性质：</label>
+											<span class="address">
+													${data.hdxs}
+											</span>
+										</div>
 		                                <div class="form-group">
 		                                    <label>类型：</label>
 		                                    <span class="address">
 		                                    	${data.hdlxmc}
 		                                    </span>
 		                                </div>
+										<div class="form-group">
+											<label>活动级别：</label>
+											<span class="address">
+													${data.jzjb}
+											</span>
+										</div>
 		                                <div class="form-group">
 		                                    <label>发布时间：</label>
 		                                    <span class="address">

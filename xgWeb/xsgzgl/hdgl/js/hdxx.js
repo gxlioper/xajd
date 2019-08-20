@@ -146,6 +146,12 @@ function createHtmlForZxsx(obj) {
 					        content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
 					    }
 					}
+                    if(o['nlbqmc'] != "" && o['nlbqmc'] != null){
+                        var arr = o['nlbqmc'].split(",");
+                        for(var x=0;x<arr.length;x++){
+                            content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
+                        }
+                    }
 					content+='</div>';
 					
 					content+='<div class="detail">';
@@ -196,6 +202,12 @@ function createHtmlForZxsx(obj) {
 					        content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
 					    }
 					}
+                    if(o['nlbqmc'] != "" && o['nlbqmc'] != null){
+                        var arr = o['nlbqmc'].split(",");
+                        for(var x=0;x<arr.length;x++){
+                            content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
+                        }
+                    }
 					content+='</div>';
 					
 					content+='<div class="detail">';
@@ -245,6 +257,12 @@ function createHtmlForZxsx(obj) {
 				        content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
 				    }
 				}
+                if(o['nlbqmc'] != "" && o['nlbqmc'] != null){
+                    var arr = o['nlbqmc'].split(",");
+                    for(var x=0;x<arr.length;x++){
+                        content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
+                    }
+                }
 				content+='</div>';
 				
 				content+='<div class="detail">';
@@ -335,6 +353,12 @@ function createHtmlForWcj(obj) {
             content+='<div class="tag"  style="display: inline"><span>'+o['hdlxmc']+'</span></div>';
             if(o['hdbqmc'] != "" && o['hdbqmc'] != null){
                 var arr = o['hdbqmc'].split(",");
+                for(var x=0;x<arr.length;x++){
+                    content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
+                }
+            }
+            if(o['nlbqmc'] != "" && o['nlbqmc'] != null){
+                var arr = o['nlbqmc'].split(",");
                 for(var x=0;x<arr.length;x++){
                     content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
                 }

@@ -573,7 +573,7 @@
 				index.do,chkLogin.do,getPublicKey.do,chkLogout.do,
 				xhsfLogin.do,mmzhgl_mmzh.do,analyse.do,hnsfSSOLogin.do,
 				zfxg_casLogin.do,hljKjxySSOLogin.do,xsDaxxCx.do,queryXsDaxx.do,zfssologin.do,tyrzLogin.do,
-				thauthallSSOLogin.do
+				thauthallSSOLogin.do,hdgl_bmry.do
 			</param-value>
 		</init-param>
 	</filter>
@@ -1132,6 +1132,8 @@
 				/WEB-INF/classes/struts/dtjs/struts_dtjs_llxxjl.xml,
 
 				/WEB-INF/classes/struts/xyfd/struts_xyfd_xyfd.xml,
+				/WEB-INF/classes/struts/xyfd/struts_xyfd_jzpp.xml,
+				/WEB-INF/classes/struts/xyfd/struts_xyfd_jzfd.xml,
                 /WEB-INF/classes/struts/xszz/struts_xszz_new_xfjm.xml
         </param-value>
 		</init-param>

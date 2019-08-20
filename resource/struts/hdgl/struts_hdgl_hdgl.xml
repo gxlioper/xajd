@@ -13,6 +13,7 @@
 		<form-bean name="tjForm" type="com.zfsoft.xgxt.hdgl.hdgltjcx.TjForm"/>
 		<form-bean name="hdqdForm" type="com.zfsoft.xgxt.hdgl.hdqd.HdqdForm"/>
 		<form-bean name="zjcyCkForm" type="com.zfsoft.xgxt.hdgl.zjcyck.ZjcyCkForm"/>
+		<form-bean name="bmdForm" type="com.zfsoft.xgxt.hdgl.bmdwh.BmdForm"/>
 	</form-beans>
 
 	<action-mappings>
@@ -206,6 +207,24 @@
 				name="zjcyCkForm"
 				parameter="method">
 			<forward name="zjcyList" path="/xsgzgl/hdgl/zjcyck/zjcyList.jsp"/>
+		</action>
+		<!--活动签到人员接口专用(不用校验登录)-->
+		<action path="/hdgl_bmry"
+				scope="request"
+				type="com.zfsoft.xgxt.hdgl.hdxx.HdxxAction"
+				name="hdxxForm"
+				parameter="method">
+		</action>
+		<!--可以获取报名人员表单的权限白名单维护-->
+		<action path="/hdgl_hdgl_bmdwh" forward="/hdgl_bmdwh.do?method=bmdList"/>
+		<action path="/hdgl_bmdwh"
+				scope="request"
+				type="com.zfsoft.xgxt.hdgl.bmdwh.BmdAction"
+				name="bmdForm"
+				parameter="method">
+			<forward name="bmdList" path="/xsgzgl/hdgl/bmdwh/bmdList.jsp"/>
+			<forward name="addBmd" path="/xsgzgl/hdgl/bmdwh/addBmd.jsp"/>
+			<forward name="updateBmd" path="/xsgzgl/hdgl/bmdwh/updateBmd.jsp"/>
 		</action>
 	</action-mappings>
 </struts-config>
