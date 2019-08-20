@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="fdyyForm" type="com.zfsoft.xgxt.xyfd.wfcyywh.FdyyForm"/>
+
+    </form-beans>
+    <!--基准匹配-->
+    <action-mappings>
+        <!--辅导预约-学生-->
+        <action path="/xyfd_xyfd_fdyy_stu" forward="/xyfd_fdyy.do?method=fdyyListStu"/>
+        <!--辅导预约-教师/朋辈-->
+        <action path="/xyfd_xyfd_fdyy_js" forward="/xyfd_fdyy.do?method=fdyyListTea"/>
+        <action path="/xyfd_fdyy"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.wfcyywh.WfcyyAction"
+                name="fdyyForm"
+                parameter="method">
+            <forward name="fdyyListStu" path="/xsgzgl/xyfd/jzppwh/fdyywh/yykcListStu.jsp"/>
+            <forward name="fdyyListTea" path="/xsgzgl/xyfd/jzppwh/fdyywh/yykcListForTea.jsp"/>
+        </action>
+        <!--我发出的预约-->
+        <action path="/xyfd_xyfd_fqyy" forward="/xyfd_fqyy.do?method=fcyyList"/>
+        <action path="/xyfd_fqyy"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.wfcyywh.WfcyyAction"
+                name="fdyyForm"
+                parameter="method">
+            <forward name="fcyyList" path="/xsgzgl/xyfd/jzppwh/fdyywh/fcyyList.jsp"/>
+            <forward name="addYy" path="/xsgzgl/xyfd/jzppwh/fdyywh/addYy.jsp"/>
+            <forward name="updateYy" path="/xsgzgl/xyfd/jzppwh/fdyywh/updateYy.jsp"/>
+            <forward name="viewYy" path="/xsgzgl/xyfd/jzppwh/fdyywh/viewYy.jsp"/>
+            <forward name="selectFdkc" path="/xsgzgl/xyfd/jzppwh/fdyywh/selectFdkc.jsp"/>
+            <forward name="qxYy" path="/xsgzgl/xyfd/jzppwh/fdyywh/qxYy.jsp"/>
+            <forward name="pjkc" path="/xsgzgl/xyfd/jzppwh/fdyywh/pjkc.jsp"/>
+        </action>
+        <!--收到预约-->
+        <action path="/xyfd_xyfd_sdyy" forward="/xyfd_sdyy.do?method=sdyyList"/>
+        <action path="/xyfd_sdyy"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.wsdyywh.WsdyyAction"
+                name="fdyyForm"
+                parameter="method">
+            <forward name="sdyyList" path="/xsgzgl/xyfd/jzppwh/fdyywh/sdyyList.jsp"/>
+        </action>
+    </action-mappings>
+
+</struts-config>

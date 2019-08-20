@@ -72,4 +72,16 @@ public class PbjgDao extends SuperDAOImpl<PbjgForm> {
         String[] input = new String[]{t.getDjh()};
         return dao.getMapNotOut(sql.toString(),input);
     }
+
+    public HashMap<String,String> getPb(PbjgForm t) throws Exception{
+        StringBuilder sql = new StringBuilder();
+        sql.append(" select * from (");
+        sql.append(" select a.*, b.xm,case when b.xb='1' then 'ÄÐ' when b.xb = '2' then 'Å®' ");
+        sql.append(" else b.xb end xb from xg_xyfd_pbjgb a  ");
+        sql.append(" left join (select a.*, c.bjmc zybjmc, b.sydm, b.symc,c.xymc from XSXXB a ");
+        sql.append(" left join view_njsybj b on a.bjdm = b.bjdm left join view_njxyzybj_all c ");
+        sql.append(" on a.zybj = c.bjdm) b on a.xh = b.xh  ");
+        sql.append(" )  where xh = ?");
+        return dao.getMapNotOut(sql.toString(),new String[]{t.getXh()});
+    }
 }

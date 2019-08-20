@@ -1427,4 +1427,41 @@ public class XsxxAction extends SuperAction {
 
 
 	}
+
+	/**
+	 * 显示学生列表-用于辅导预约
+	 * @param mapping
+	 * @param form
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
+	public ActionForward showStudentsForFdyy(ActionMapping mapping, ActionForm form,
+									  HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+
+		XsxxForm model = (XsxxForm) form;
+		XsxxService service = new XsxxService();
+		if (QUERY.equals(model.getType())) {
+			// 生成高级查询对象
+			CommService comService = new CommService();
+			SearchModel searchModel = comService.getSearchModel(request);
+			model.setSearchModel(searchModel);
+			User user = new User();
+			// 查询
+			List<HashMap<String, String>> resultList = service.getPageList(model, user);
+			JSONArray dataList = JSONArray.fromObject(resultList);
+			response.getWriter().print(dataList);
+			return null;
+		}
+		String gotoPath = request.getParameter("goto");
+		String path = "xsxx_xsgl.do?method=showStudents";
+		request.setAttribute("path", path);
+		request.setAttribute("gotoPath", gotoPath);
+
+		return mapping.findForward("showStudentsForFdyy");
+
+
+	}
 }

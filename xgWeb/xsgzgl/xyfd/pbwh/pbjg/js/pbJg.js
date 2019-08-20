@@ -6,12 +6,12 @@ function searchRs() {
 
 function xhLink(cellValue, rowObject) {
     return "<a href='javascript:void(0);' class='name' onclick='view(\""
-        + rowObject["jgid"] + "\");'>" + cellValue
+        + rowObject["djh"] + "\");'>" + cellValue
         + "</a>";
 }
 //查看
-function view(jgid) {
-    showDialog("朋辈志愿者结果查看", 800, 550, "xyfd_pbjg.do?method=viewPbjg&jgid="+jgid);
+function view(djh) {
+    showDialog("朋辈志愿者结果查看", 800, 550, "xyfd_pbjg.do?method=viewPbjg&djh="+djh);
 }
 
 //增加

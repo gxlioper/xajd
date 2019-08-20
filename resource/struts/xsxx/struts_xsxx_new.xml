@@ -61,6 +61,7 @@
                      path="/xsgzgl/gygl/zsxxgl/showStudents.jsp"></forward><!-- 西安科技大学勤工助学申请岗位个性化 -->
             <forward name="showStudentsForTgb" path="/xsgzgl/twgl/tgb/showStudentsForTgb.jsp"></forward>
             <forward name="selectDy" path="/xsgzgl/hdgl/hdxx/selectDy.jsp"></forward>
+            <forward name="showStudentsForFdyy" path="/xsgzgl/xyfd/jzppwh/fdyywh/showStudentsForFdyy.jsp"/>
 
 
         </action>

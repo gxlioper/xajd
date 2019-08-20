@@ -113,7 +113,8 @@ public class PbjgAction extends SuperAction<PbjgForm, PbjgService> {
     @SystemAuth(url = url)
     public ActionForward viewPbjg(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
         PbjgForm model = (PbjgForm)form;
-        model = service.getModel(model);
+        HashMap<String,String> pbjsxx = service.getPbjs(model);
+        BeanUtils.copyProperties(model,pbjsxx);
         PbsqForm pbsqForm = new PbsqForm();
         if(!StringUtil.isNull(model.getXh())) {
             pbsqForm.setXh(model.getXh());

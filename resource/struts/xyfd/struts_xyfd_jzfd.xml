@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="fdyyForm" type="com.zfsoft.xgxt.xyfd.wfcyywh.FdyyForm"/>
+        <form-bean name="xyzyzxForm" type="com.zfsoft.xgxt.xyfd.xyzyzxwh.XyzyzxForm"/>
+        <form-bean name="mydForm" type="com.zfsoft.xgxt.xyfd.pjwh.MydForm"/>
+    </form-beans>
+    <!--精准辅导-->
+    <action-mappings>
+        <!--辅导记录维护-->
+        <action path="/xyfd_xyfd_fdjl" forward="/xyfd_fdjl.do?method=fdjlList"/>
+        <action path="/xyfd_fdjl"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.fdjlwh.FdjlAction"
+                name="fdyyForm"
+                parameter="method">
+            <forward name="fdjlList" path="/xsgzgl/xyfd/jzfdwh/fdjlwh/fdjlList.jsp"/>
+            <forward name="addFdjl" path="/xsgzgl/xyfd/jzfdwh/fdjlwh/addFdjl.jsp"/>
+            <forward name="viewFdjl" path="/xsgzgl/xyfd/jzfdwh/fdjlwh/viewFdjl.jsp"/>
+        </action>
+        <!--学业与专业咨询维护-->
+        <action path="/xyfd_xyfd_xyzyzxjl" forward="/xyfd_xyzyzxjl.do?method=xyzyzxList"/>
+        <action path="/xyfd_xyzyzxjl"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.xyzyzxwh.XyzyzxAction"
+                name="xyzyzxForm"
+                parameter="method">
+            <forward name="xyzyzxList" path="/xsgzgl/xyfd/jzfdwh/xyzyzxwh/xyzyzxList.jsp"/>
+            <forward name="addZxjl" path="/xsgzgl/xyfd/jzfdwh/xyzyzxwh/addZxjl.jsp"/>
+            <forward name="updateZxjl" path="/xsgzgl/xyfd/jzfdwh/xyzyzxwh/updateZxjl.jsp"/>
+            <forward name="viewZxjl" path="/xsgzgl/xyfd/jzfdwh/xyzyzxwh/viewZxjl.jsp"/>
+            <forward name="selectFdjs" path="/xsgzgl/xyfd/jzfdwh/xyzyzxwh/selectFdjs.jsp"/>
+        </action>
+        <!--满意度评价维护-->
+        <action path="/xyfd_xyfd_mydpj" forward="/xyfd_mydpj.do?method=mydpjList"/>
+        <action path="/xyfd_mydpj"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.pjwh.MydAction"
+                name="mydForm"
+                parameter="method">
+            <forward name="mydpjList" path="/xsgzgl/xyfd/jzfdwh/pjwh/mydpjList.jsp"/>
+            <forward name="txpj" path="/xsgzgl/xyfd/jzfdwh/pjwh/txpj.jsp"/>
+            <forward name="viewPj" path="/xsgzgl/xyfd/jzfdwh/pjwh/viewPj.jsp"/>
+        </action>
+    </action-mappings>
+
+</struts-config>
