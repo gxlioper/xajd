@@ -65,7 +65,7 @@ public class QgzxCjffsqDAO extends SuperDAOImpl<QgzxCjffsqForm> {
 		QgzxGlyglService qgzxGlyglService = new QgzxGlyglService();
 		//如果不是勤工管理员
 		if(!qgzxGlyglService.sfQggly(user.getUserName())){
-			searchTjQx+=" and yrdwdm = '"+user.getUserDep()+"' ";
+			searchTjQx+=" and zgh = '"+user.getUserName()+"' ";
 		}
 		StringBuilder sql = new StringBuilder();
 		sql.append("select a.*, rownum r from (select a.xn || '!!@@!!' || a.yrdwdm || '!!@@!!' || a.ffny || '!!@@!!' || nvl(a.xq,'none') pkValue," +
@@ -82,7 +82,7 @@ public class QgzxCjffsqDAO extends SuperDAOImpl<QgzxCjffsqForm> {
 				" (select sum(jfhbje) from (select a.yf, a.je,a.jfhbje,a.zcje, b.xn, b.yrdwdm from xg_qgzx_jcffsqb a  left join xg_qgzx_gwxxb b on a.gwdm = b.gwdm) e " +
 				" where a.xn = e.xn and a.yrdwdm = e.yrdwdm and a.ffny = e.yf) jfhbje," +
 				" (select sum(zcje) from (select a.yf, a.je,a.jfhbje,a.zcje, b.xn, b.yrdwdm from xg_qgzx_jcffsqb a  left join xg_qgzx_gwxxb b on a.gwdm = b.gwdm) e " +
-				" where a.xn = e.xn and a.yrdwdm = e.yrdwdm and a.ffny = e.yf) zcje " +
+				" where a.xn = e.xn and a.yrdwdm = e.yrdwdm and a.ffny = e.yf) zcje,(select t.zgh from xg_qgzx_yrdwdmb t where t.xydm = a.yrdwdm ) zgh " +
 				" from xg_qgzx_gwffztsqb a " +
 				" left join xqdzb xq on a.xq = xq.xqdm " +
 				"order by a.xn, a.tjzt, a.yrdwdm, a.ffny desc) a where 1 = 1");
@@ -152,15 +152,15 @@ public class QgzxCjffsqDAO extends SuperDAOImpl<QgzxCjffsqForm> {
 	}
 	
 	/**
-	 * 获得用户所在部门
+	 * 获得用户所负责用人单位
 	 * @param myForm
 	 * @return
 	 */
 	public List<HashMap<String, String>> getYrbmOfUser(User user) {
 		String sql = " select distinct t1.bmdm,t1.bmmc from xg_qgzx_yrdwdmb t ";
 			sql+=" left join ZXBZ_XXBMDM t1 on t.xydm = t1.bmdm ";
-			sql+=" where t.xydm=?";
-		return dao.getList(sql, new String[]{user.getUserDep()}, new String[]{"bmdm","bmmc"});
+			sql+=" where t.zgh=?";
+		return dao.getList(sql, new String[]{user.getUserName()}, new String[]{"bmdm","bmmc"});
 	}
 	
 	/**

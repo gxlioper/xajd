@@ -63,7 +63,7 @@ public class QgzxCjffjgDAO extends SuperDAOImpl<QgzxCjffjgForm> {
 		QgzxGlyglService qgzxGlyglService = new QgzxGlyglService();
 		//如果不是勤工管理员
 		if(!qgzxGlyglService.sfQggly(user.getUserName())){
-			searchTjQx+=" and yrdwdm = '"+user.getUserDep()+"' ";
+			searchTjQx+=" and zgh = '"+user.getUserName()+"' ";
 		}		
 		StringBuilder sql = new StringBuilder();
 		sql.append("select a.*, rownum r from (select decode(a.sjly,'1','流程') sjly,a.xn || '!!@@!!' || a.yrdwdm || '!!@@!!' || a.ffny || '!!@@!!' || nvl(a.xq,'none') pkValue," +
@@ -79,7 +79,7 @@ public class QgzxCjffjgDAO extends SuperDAOImpl<QgzxCjffjgForm> {
 				" (select sum(jfhbje) from (select a.yf, a.je,a.jfhbje,a.zcje, b.xn, b.yrdwdm from xg_qgzx_jcffb a  left join xg_qgzx_gwxxb b on a.gwdm = b.gwdm) e " +
 				" where a.xn = e.xn and a.yrdwdm = e.yrdwdm and a.ffny = e.yf) jfhbje," +
 				" (select sum(zcje) from (select a.yf, a.je,a.jfhbje,a.zcje, b.xn, b.yrdwdm from xg_qgzx_jcffb a  left join xg_qgzx_gwxxb b on a.gwdm = b.gwdm) e " +
-				" where a.xn = e.xn and a.yrdwdm = e.yrdwdm and a.ffny = e.yf) zcje " +
+				" where a.xn = e.xn and a.yrdwdm = e.yrdwdm and a.ffny = e.yf) zcje,(select t.zgh from xg_qgzx_yrdwdmb t where t.xydm = a.yrdwdm ) zgh " +
 				" from xg_qgzx_gwffztb a " +
 				" left join xqdzb xq on a.xq = xq.xqdm " +
 				"order by a.xn, a.tjzt, a.yrdwdm, a.ffny desc) a where 1 = 1");
@@ -539,9 +539,9 @@ public class QgzxCjffjgDAO extends SuperDAOImpl<QgzxCjffjgForm> {
 	public List<HashMap<String, String>> getCjmxList(QgzxCjffjgForm model) {
 		StringBuilder sql=new StringBuilder();
 		sql.append("select rownum r,a.*,b.xm,b.yhkh from (select a.*,z.xm cjffrXm,(select gwmc from xg_qgzx_gwxxb b ");
-		sql.append("where a.gwdm = b.gwdm)gwmc,(select t1.gwxzmc from xg_qgzx_gwxzdmb t1,xg_qgzx_gwxxb t2 where t1.gwxzdm=t2.gwxzdm ");
+		sql.append("where a.gwdm = b.gwdm)gwmc,(select t1.gwxzmc from xg_qgzx_gwxzdmb t1,xg_qgzx_gwxxb t2 where t1.gwxzdm=t2.gwlb ");
 		sql.append("and t2.gwdm=a.gwdm) gwxzmc from xg_qgzx_jcffb a left join yhb z on z.yhm = a.cjffr where exists ");
-		sql.append("(select 1 from xg_qgzx_gwxxb b where  a.gwdm = b.gwdm and xn = ? and yrdwdm = ?) and yf = ? and (xq is null or xq = '' or xq =?) ");
+		sql.append("(select 1 from xg_qgzx_gwxxb b left join xg_qgzx_yrdwdmb c on b.yrdwid = c.id where  a.gwdm = b.gwdm and xn = ? and c.xydm = ?) and yf = ? and (xq is null or xq = '' or xq =?) ");
 		sql.append("order by xh,gwdm) a left join (select a.xh, a.xm, a.xb, b.nj, b.xydm, b.zydm, a.bjdm, a.yhkh from xsxxb a ");
 		sql.append("left join view_njxyzybj_all b on a.bjdm=b.bjdm) b on a.xh = b.xh where 1=1 ");
 		String[] inputValue = model.getPkValue().split("!!@@!!");
