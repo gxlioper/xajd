@@ -337,4 +337,8 @@ public class JjxqService extends SuperServiceImpl<JjxqForm, JjxqDao> {
 		String count = dao.getJjgsjlCount(jjbh,jjny);
 		return Integer.parseInt(count) > 0;
 	}
+
+	public boolean hasDtj(User user) throws Exception{
+		return dao.hasDtj(user);
+	}
 }

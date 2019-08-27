@@ -183,10 +183,11 @@
         if (jQuery("#sqly").val() == ""){
             showAlert("请将必填项填写完整！");
             return false;
-        }else if (jQuery("#sqly").val().length < 50){
-            showAlert("申请理由少于50字！");
-            return false;
-		}
+        }
+//        else if (jQuery("#sqly").val().length < 50){
+//            showAlert("申请理由少于50字！");
+//            return false;
+//		}
         var url = "jjgl_jjxq.do?method=saveJsjj";
         ajaxSubFormWithFun("jjxqForm",url,function(data){
             if(data["message"]=="提交成功！"){

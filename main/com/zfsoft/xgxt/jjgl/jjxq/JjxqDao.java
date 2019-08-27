@@ -410,4 +410,18 @@ public class JjxqDao extends SuperDAOImpl<JjxqForm> {
 		String sql = "SELECT count(1) count FROM XSGGFW_JJFW_JJGSWHB WHERE JJBH = ? AND JJNY = ?";
 		return dao.getOneRs(sql,new String [] {jjbh,jjny},"count");
 	}
+
+	/**
+	 * 是否有未提交协议的家教工作
+	 * @param user
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean hasDtj(User user) throws Exception{
+		StringBuilder sql = new StringBuilder();
+		sql.append(" select count(*) f from XSGGFW_JJFW_XSJJXQSQB t,XSGGFW_JJFW_JZJJXQSQB t1 where t.xqid = t1.xqid ");
+		sql.append(" and t.shzt = '1'and t.xh = ? and t1.jjzt <> '3' ");
+		String f = dao.getOneRs(sql.toString(),new String[]{user.getUserName()},"f");
+		return Integer.parseInt(f)>0?false:true;
+	}
 }

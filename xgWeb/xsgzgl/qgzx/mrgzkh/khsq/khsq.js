@@ -19,10 +19,10 @@ function saveKhsq(type) {
 		showAlert("工时不能为零！");
 		return false;
 	}
-	if(parseInt(jQuery("#gs").val())  > 8){
-        showAlert("每天工作时长<=8小时！");
-        return false;
-	}
+	// if(parseInt(jQuery("#gs").val())  > 8){
+     //    showAlert("每天工作时长<=8小时！");
+     //    return false;
+	// }
 	if(checkZdz()){
 	var url = "mrgzkhKhsq.do?method=saveKhsq&type=" + type;
 	ajaxSubFormWithFun("GzkhKhsqForm", url, function(data) {

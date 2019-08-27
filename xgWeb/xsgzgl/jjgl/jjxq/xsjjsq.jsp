@@ -33,12 +33,12 @@
                     登记人
                 </th>
                 <td width="32%">
-                        ${xqwhMap.jzxm}
+                        ${xqwhMap.djr}
                 </td>
                 <th width="18%">
                     家长姓名
                 </th>
-                <td width="32%" style="display: none">
+                <td width="32%" >
                         ${xqwhMap.jzxm}
                 </td>
             </tr>

@@ -228,8 +228,11 @@ public class JjxqAction extends SuperAction<JjxqForm, JjxqService> {
 		
 		JjxqForm jjxqForm = (JjxqForm) form;
 		User user = getUser(request);
-
 		JjxqService jjxqService = getService();
+		if(!jjxqService.hasDtj(user)){
+			response.getWriter().print(getJsonMessage("你有未提交协议的家教工作！"));
+			return null;
+		}
 		//保存前需验证改家教是否已经被申请 根据xqid和jjcz
 		boolean isJjczExist = jjxqService.isJjczExist(jjxqForm);
 		if (isJjczExist) {
