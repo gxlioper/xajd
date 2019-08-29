@@ -7,6 +7,7 @@ package xsgzgl.qgzx.mrgzkh.khsh;
 import java.util.HashMap;
 import java.util.List;
 
+import common.newp.StringUtil;
 import xgxt.comm.search.SearchService;
 import xgxt.form.User;
 
@@ -38,8 +39,8 @@ public class GzkhKhshDao extends SuperDAOImpl<GzkhKhshForm>{
 		String searchTj = SearchService.getSearchTj(t.getSearchModel());
 		String[] inputV = SearchService.getTjInput(t.getSearchModel());
 		String searchTjByUser = SearchService.getSearchTjByUser(user, "t", "xydm", "bjdm");
-		String shgwzByUser = SearchService.getShgwzByUser(user, "t", "xydm", "bjdm");
-		String qxfw = SearchService.getQxfw(user, "t.gwid", "t.qxfw", "t.yrdw",searchTjByUser);
+//		String shgwzByUser = SearchService.getShgwzByUser(user, "t", "xydm", "bjdm");
+//		String qxfw = SearchService.getQxfw(user, "t.gwid", "t.qxfw", "t.yrdw",searchTjByUser);
 		StringBuffer sql = new StringBuffer();
 		sql.append("select t.* from (");
 		sql.append("select t1.sqid,t1.qxfw,t1.yxgs,t1.xh,t1.xn,t1.sqsj,t1.yrdw,t1.gwdm,t1.gs,t1.gzrq,t1.gzkssj,t1.gzjssj,t1.gzdd,t1.gznr,t1.splc,t1.bz,t4.shzt,t2.xm,t2.xydm,t2.xymc,t2.zydm,t2.zymc,t2.bjdm,t2.bjmc,t2.zybj,t2.zybjmc,t2.nj,t3.gwmc,");
@@ -62,10 +63,33 @@ public class GzkhKhshDao extends SuperDAOImpl<GzkhKhshForm>{
 		sql.append(" ) t where 1=1 ");
 		sql.append(" and  rn = 1 ");
 		sql.append(searchTj);
-		sql.append(qxfw);
-		sql.append(shgwzByUser);
+
+		if(!isAdmin(user)){
+			sql.append(" and t.yrdw in ( select xydm from XG_QGZX_YRDWDMB where zgh = '" + user.getUserName() + "')");
+		}
+//		sql.append(qxfw);
+//		sql.append(shgwzByUser);
 		return getPageList(t, sql.toString(), inputV);
 		
+	}
+
+	public boolean isAdmin(User user) throws Exception{
+		StringBuilder sql = new StringBuilder();
+		sql.append("select zdm from yhb where yhm = ? ");
+		String qxdmStr = dao.getOneRs(sql.toString(),new String[]{user.getUserName()},"zdm");
+		if(StringUtil.isNull(qxdmStr)){
+			return false;
+		}
+		String[] qxdms = qxdmStr.split(",");
+		for(int i=0;i<qxdms.length;i++){
+			sql = new StringBuilder();
+			sql.append("select zmc from yhzb where zdm = ? ");
+			String zmc = dao.getOneRs(sql.toString(),new String[]{qxdms[i]},"zmc");
+			if(zmc.equals("超级管理员")){
+				return true;
+			}
+		}
+		return false;
 	}
 	/**
 	 * 

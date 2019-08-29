@@ -35,7 +35,7 @@ public class GzkhKhjgDao extends SuperDAOImpl<GzkhKhjgForm> {
 		sql.append(" left join ZXBZ_XXBMDM t6 on t4.xydm = t6.bmdm");
 		sql.append(" left join FDYXXB t5 on t1.czyh=t5.zgh left join xsxxb t6 on t1.czyh = t6.xh ");
 		sql.append(") t where 1=1 ");
-		sql.append(searchTjByUser);
+		sql.append( " and (exists ( select 1 from XG_QGZX_YRDWDMB a where a.zgh = '" + user.getUserName() + "' and t.yrdw = a.xydm) or (1=1 "+searchTjByUser+"))");
 		sql.append(searchTj);
 		return getPageList(t, sql.toString(), inputV);
 	}
@@ -112,7 +112,7 @@ public class GzkhKhjgDao extends SuperDAOImpl<GzkhKhjgForm> {
 	 * @作者：xiaxia[工号：1104]
 	 * @日期：2015-1-8 下午03:29:11
 	 * @修改记录: 修改者名字-修改日期-修改内容
-	 * @param model
+	 * @param id
 	 * @return
 	 * @throws Exception
 	 * boolean 返回类型 

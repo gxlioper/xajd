@@ -6,6 +6,7 @@
         <form-bean name="fdyyForm" type="com.zfsoft.xgxt.xyfd.wfcyywh.FdyyForm"/>
         <form-bean name="xyzyzxForm" type="com.zfsoft.xgxt.xyfd.xyzyzxwh.XyzyzxForm"/>
         <form-bean name="mydForm" type="com.zfsoft.xgxt.xyfd.pjwh.MydForm"/>
+        <form-bean name="jltjForm" type="com.zfsoft.xgxt.xyfd.jljgtj.JltjForm"/>
     </form-beans>
     <!--精准辅导-->
     <action-mappings>
@@ -43,6 +44,17 @@
             <forward name="mydpjList" path="/xsgzgl/xyfd/jzfdwh/pjwh/mydpjList.jsp"/>
             <forward name="txpj" path="/xsgzgl/xyfd/jzfdwh/pjwh/txpj.jsp"/>
             <forward name="viewPj" path="/xsgzgl/xyfd/jzfdwh/pjwh/viewPj.jsp"/>
+        </action>
+        <!--记录结果统计-->
+        <action path="/xyfd_xyfd_jljgtj" forward="/xyfd_jljgtj.do?method=jljgtjList"/>
+        <action path="/xyfd_jljgtj"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.jljgtj.JltjAction"
+                name="jltjForm"
+                parameter="method">
+            <forward name="jljgtjList" path="/xsgzgl/xyfd/jzfdwh/jljgtj/jijgtjList.jsp"/>
+            <forward name="viewFdkc" path="/xsgzgl/xyfd/jzfdwh/jljgtj/viewFdkc.jsp"/>
+            <forward name="viewXyzy" path="/xsgzgl/xyfd/jzfdwh/jljgtj/viewXyzy.jsp"/>
         </action>
     </action-mappings>
 
