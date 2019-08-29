@@ -217,14 +217,21 @@
 					<th>ԤԼ��</th>
 					<th>ԤԼ״̬</th>
 				</tr>
-				<logic:iterate id="yyxx" name="lsyyList" indexId="i">
-				<tr>
-					<td>${yyxx.yyh}</td>
-					<td>${yyxx.fdsj}</td>
-					<td>${yyxx.yyr}</td>
-					<td>${yyxx.shztmc}</td>
-				</tr>
-				</logic:iterate>
+				<%
+					List<HashMap<String,String>> lsyyList = (List<HashMap<String, String>>) request.getAttribute("lsyyList");
+					if(lsyyList!=null){
+						for(HashMap<String,String> yyxx:lsyyList){
+							%>
+								<tr>
+									<td><%=yyxx.get("yyh")%></td>
+									<td><%=yyxx.get("fdsj")%></td>
+									<td><%=yyxx.get("yyr")%></td>
+									<td><%=yyxx.get("shztmc")%></td>
+								</tr>
+							<%
+						}
+					}
+				%>
 			</tbody>
 		</table>
 	</div>

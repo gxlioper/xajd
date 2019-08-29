@@ -70,6 +70,15 @@ public class WsdyyAction extends SuperAction<FdyyForm,FdyyService> {
         return mapping.findForward("sdyyList");
     }
 
+    /**
+     * 确认预约
+     * @param mapping
+     * @param form
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
     public ActionForward submitYy(ActionMapping mapping, ActionForm form,
                                 HttpServletRequest request, HttpServletResponse response)
             throws Exception {
@@ -78,6 +87,10 @@ public class WsdyyAction extends SuperAction<FdyyForm,FdyyService> {
         model.setYyid(values);
         FdyyForm fdyyForm = service.getModel(model);
         String zt = fdyyForm.getZt();
+        if(!StringUtil.isNull(zt)&&(zt.equals("0")||zt.equals("3"))){
+            response.getWriter().print(getJsonMessage("该辅导预约已取消！"));
+            return null;
+        }
         if(!StringUtil.isNull(zt)&&(zt.equals("4")||zt.equals("6"))){
             response.getWriter().print(getJsonMessage("该辅导预约已完成，请勿重复确认！"));
             return null;

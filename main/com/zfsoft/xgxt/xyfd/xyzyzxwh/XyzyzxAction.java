@@ -22,6 +22,7 @@ import net.sf.json.JSONObject;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import xgxt.action.Base;
 import xgxt.comm.CommService;
 import xgxt.comm.search.SearchModel;
 import xgxt.form.User;
@@ -100,6 +101,8 @@ public class XyzyzxAction extends SuperAction<XyzyzxForm,XyzyzxService> {
         XyzyzxForm model = (XyzyzxForm)form;
         User user = getUser(request);
         if(SAVE.equalsIgnoreCase(model.getType())){
+            model.setXn(Base.currXn);
+            model.setXq(Base.currXq);
             model.setLrr(user.getUserName());
             model.setLrsj(GetTime.getTimeByFormat("yyyy-MM-dd hh24:mm:ss"));
             boolean result = service.runInsert(model);

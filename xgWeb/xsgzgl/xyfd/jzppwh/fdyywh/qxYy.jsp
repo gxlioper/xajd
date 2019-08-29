@@ -37,13 +37,22 @@
         <table width="100%" border="0" class="formlist">
             <thead>
                 <tr>
-                    <th colspan="1"><span>取消原因</span></th>
+                    <th colspan="2"><span>取消原因</span></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        <textarea name='qxyy' id='qxyy' style='width: 100%;height: 300px;resize:none;'></textarea>
+                    <th colspan="1" style="width: 20%;text-align: center;" ><span class="red">*</span>取消原因</th>
+                    <td colspan="1">
+                        <html:select property="qxyy" styleId="qxyy">
+                            <html:options collection="qxyyList" property="qxyydm"
+                                          labelProperty="qxyymc" />
+                        </html:select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <textarea name='qtqk' id='qtqk' style='width: 100%;height: 300px;resize:none;'></textarea>
                     </td>
                 </tr>
             </tbody>

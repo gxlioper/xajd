@@ -135,8 +135,8 @@ function submitBusi() {
             return false;
         }
     }
-    if (rows[0]["zt"] != "0" && rows[0]["zt"] != "3") {
-        showAlertDivLayer("请选择未提交或者已退回的预约！");
+    if (rows[0]["zt"] != "0") {
+        showAlertDivLayer("请选择未提交的预约！");
         return false;
     }
     showConfirmDivLayer("您确定要提交选择的预约吗？", {
@@ -186,8 +186,14 @@ function cancel() {
                     jQuery.post("xyfd_fqyy.do?method=cancel&t=" + new Date().getTime(), {
                         values: ids.toString()
                     }, function (data) {
-                        showAlertDivLayer(data["message"]);
-                        jQuery("#dataTable").reloadGrid();
+                        if(data["message"]=='1'){
+                            var height = jQuery(window).height();
+                            var url = 'xyfd_fqyy.do?method=qxYy&yyid=' + rows[0]["yyid"];
+                            showDialog('取消预约原因', 600, height-250, url);
+                        }else {
+                            showAlertDivLayer(data["message"]);
+                            jQuery("#dataTable").reloadGrid();
+                        }
                     }, 'json');
                 }
             });
@@ -208,7 +214,7 @@ function pjkc() {
         showAlertDivLayer("请选择一条您要评价的预约！");
         return false;
     }
-    if(rows[0]['zt']!='4'){
+    if(rows[0]['zt']!='4'&&rows[0]['zt']!='6'){
         showAlertDivLayer("该辅导未完成，无法评价！");
         return false;
     }

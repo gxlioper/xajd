@@ -23,7 +23,11 @@ public class FdyyForm extends ActionForm {
     private String fqr;//预约发起人
     private String fqsj;//预约发起时间
 
+    private String xn;
+    private String xq;
+
     private String qxyy; //取消预约原因
+    private String qtqk; //其它取消原因
 
     private String yyzt;
 
@@ -34,6 +38,7 @@ public class FdyyForm extends ActionForm {
     private String sfjj; //是否解决
     private String xxpj; //详细评价
 
+    private String cxmb; //查询目标
 
     public Pages getPages() {
         return pages;
@@ -139,12 +144,36 @@ public class FdyyForm extends ActionForm {
         this.fqsj = fqsj;
     }
 
+    public String getXn() {
+        return xn;
+    }
+
+    public void setXn(String xn) {
+        this.xn = xn;
+    }
+
+    public String getXq() {
+        return xq;
+    }
+
+    public void setXq(String xq) {
+        this.xq = xq;
+    }
+
     public String getQxyy() {
         return qxyy;
     }
 
     public void setQxyy(String qxyy) {
         this.qxyy = qxyy;
+    }
+
+    public String getQtqk() {
+        return qtqk;
+    }
+
+    public void setQtqk(String qtqk) {
+        this.qtqk = qtqk;
     }
 
     public String getYyzt() {
@@ -193,5 +222,13 @@ public class FdyyForm extends ActionForm {
 
     public void setXxpj(String xxpj) {
         this.xxpj = xxpj;
+    }
+
+    public String getCxmb() {
+        return cxmb;
+    }
+
+    public void setCxmb(String cxmb) {
+        this.cxmb = cxmb;
     }
 }

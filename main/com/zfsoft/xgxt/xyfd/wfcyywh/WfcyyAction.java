@@ -11,6 +11,7 @@ import com.zfsoft.xgxt.xsxx.xsgl.XsxxService;
 import com.zfsoft.xgxt.xyfd.fdkcwh.fdkcjg.FdkcjgService;
 import common.newp.StringUtil;
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -24,6 +25,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by llf on 2019/8/6.
@@ -288,6 +290,10 @@ public class WfcyyAction extends SuperAction<FdyyForm,FdyyService> {
         model.setYyid(values);
         FdyyForm fdyyForm = service.getModel(model);
         String zt = fdyyForm.getZt();
+        if(!StringUtil.isNull(zt)&&zt.equals("1")){
+            response.getWriter().print(getJsonMessage("1"));
+            return null;
+        }
         if(!StringUtil.isNull(zt)&&zt.equals("4")){
             response.getWriter().print(getJsonMessage("该辅导预约已完成，无法取消"));
             return null;
@@ -314,15 +320,14 @@ public class WfcyyAction extends SuperAction<FdyyForm,FdyyService> {
         FdyyForm model = (FdyyForm) form;
         if (SAVE.equalsIgnoreCase(model.getType())) {
             User user = getUser(request);
-            boolean result = service.cancel(model);
-            if(result){
-                result = service.qxYy(model,user);
-            }
+            boolean result = service.qxYy(model,user);
             String messageKey = result ? MessageKey.SYS_CANCEL_SUCCESS
                     : MessageKey.SYS_CANCEL_FAIL;
             response.getWriter().print(getJsonMessageByKey(messageKey));
             return null;
         }
+        List<HashMap<String,String>> qxyyList = service.getQxyyList();//取消原因
+        request.setAttribute("qxyyList",qxyyList);
         request.setAttribute("yyid",model.getYyid());
         return mapping.findForward("qxYy");
     }

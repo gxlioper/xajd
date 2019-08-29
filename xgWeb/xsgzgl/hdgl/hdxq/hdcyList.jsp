@@ -48,8 +48,8 @@
 						<logic:equal name="data" property="bmlx" value="1">
 							<logic:equal name="data" property="bmsfsh" value="1">
 							<button type="button" class="btn btn-primary cancel-btn" onclick="sh();return false;">审核</button>
-							<button type="button" class="btn btn-primary green-bg-btn" onclick="getPpView();return false;">派票</button>
 							</logic:equal>
+							<button type="button" class="btn btn-primary green-bg-btn" onclick="getPpView();return false;">派票</button>
 						</logic:equal>
 							<button type="button" class="btn btn-primary green-bg-btn" onclick="exportCy();return false;">导出人员</button>
 						</div>

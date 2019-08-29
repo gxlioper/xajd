@@ -46,6 +46,14 @@
                     showAlertDivLayer("请选择一条您要确认的预约！");
                     return false;
                 }
+                if(rows[0]['zt']=='3'||rows[0]['zt']=='0'){
+                    showAlertDivLayer("该辅导预约已取消！");
+                    return false;
+				}
+                if(rows[0]['zt']=='1'){
+                    showAlertDivLayer("该辅导预约已确认！");
+                    return false;
+                }
                 if(rows[0]['zt']=='4'||rows[0]['zt']=='6'){
                     showAlertDivLayer("该辅导预约已完成，请勿重复确认！");
                     return false;
@@ -69,20 +77,13 @@
                     showAlertDivLayer("请选择一条您要取消的预约！");
                     return false;
                 }
-                if(rows[0]['zt']=='4'||rows[0]['zt']=='6'){//已辅导
-                    showAlertDivLayer("该预约已完成辅导！");
+                if (rows[0]['zt'] != '5'&&rows[0]['zt'] != '1') {
+                    showAlertDivLayer("只有预约中或已预约的记录才能被取消！");
                     return false;
-				}
-                showConfirmDivLayer("您确定要取消选择的预约吗？", {
-                    "okFun" : function() {
-                        jQuery.post("xyfd_sdyy.do?method=cancelYy", {
-                            values : ids.toString()
-                        }, function(data) {
-                            showAlertDivLayer(data["message"]);
-                            jQuery("#dataTable").reloadGrid();
-                        }, 'json');
-                    }
-                });
+                }
+                var height = jQuery(window).height();
+                var url = 'xyfd_fqyy.do?method=qxYy&yyid=' + rows[0]["yyid"];
+                showDialog('取消预约原因', 600, height-250, url);
             }
 
             function add(yysf) {
@@ -115,9 +116,9 @@
 								<li>
 									<a href="javascript:void(0);" onclick="submitYy();return false;" class="btn_sr">确认预约</a>
 								</li>
-								<li>
-									<a href="javascript:void(0);" onclick="cancelYy();return false;" class="btn_shuc">取消预约</a>
-								</li>
+								<%--<li>--%>
+									<%--<a href="javascript:void(0);" onclick="cancelYy();return false;" class="btn_shuc">取消预约</a>--%>
+								<%--</li>--%>
 								<li>
 									<a href="javascript:void(0);" onclick="add('tea');return false;"  class="btn_zj" >预约下次辅导</a>
 								</li>

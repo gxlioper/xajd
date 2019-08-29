@@ -69,7 +69,7 @@ public class FdjsDao extends SuperDAOImpl<FdjsForm> {
     }
 
     /**
-     * 查找辅导室
+     * 查找辅导教师
      * @param t
      * @return
      * @throws Exception

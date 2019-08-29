@@ -28,6 +28,9 @@ public class XyzyzxForm extends ActionForm {
     private String lrr;
     private String lrsj;
 
+    private String xn;
+    private String xq;
+
 
 
     public Pages getPages() {
@@ -164,5 +167,21 @@ public class XyzyzxForm extends ActionForm {
 
     public void setLrsj(String lrsj) {
         this.lrsj = lrsj;
+    }
+
+    public String getXn() {
+        return xn;
+    }
+
+    public void setXn(String xn) {
+        this.xn = xn;
+    }
+
+    public String getXq() {
+        return xq;
+    }
+
+    public void setXq(String xq) {
+        this.xq = xq;
     }
 }

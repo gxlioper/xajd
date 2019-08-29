@@ -44,6 +44,17 @@
                 parameter="method">
             <forward name="sdyyList" path="/xsgzgl/xyfd/jzppwh/fdyywh/sdyyList.jsp"/>
         </action>
+        <!--预约结果统计-->
+        <action path="/xyfd_xyfd_yytj" forward="/xyfd_yytj.do?method=yytjList"/>
+        <action path="/xyfd_yytj"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.yytj.YytjAction"
+                name="fdyyForm"
+                parameter="method">
+            <forward name="yytjList" path="/xsgzgl/xyfd/jzppwh/yytj/yytjList.jsp"/>
+            <forward name="grxxpj" path="/xsgzgl/xyfd/jzppwh/yytj/grxxpj.jsp"/>
+            <forward name="grqvqk" path="/xsgzgl/xyfd/jzppwh/yytj/grqvqk.jsp"/>
+        </action>
     </action-mappings>
 
 </struts-config>

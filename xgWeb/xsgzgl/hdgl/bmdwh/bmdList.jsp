@@ -20,12 +20,12 @@
                     {label:'描述',name:'ms', index: 'ms',width:'10%'}
                 ]
             }
-            gridSetting["params"]=getSuperSearch();
+//            gridSetting["params"]=getSuperSearch();
             jQuery("#dataTable").initGrid(gridSetting);
         });
 
         function searchRs(){
-            var map = getSuperSearch();
+//            var map = getSuperSearch();
             jQuery("#dataTable").reloadGrid(map);
         }
 
@@ -72,18 +72,17 @@
     <%@ include file="/comm/hiddenValue.jsp"%>
     <div class="toolbox">
         <!-- 按钮 -->
-        <div class="buttonbox">
+        <div class="buttonbox" style="text-align: center">
             <ul>
-                <li><a href="#" class="btn_zj" onclick="add();return false;">增加</a></li>
-                <li><a href="#" class="btn_xg" onclick="update();return false;">重置密码</a></li>
-                <li><a href="#" class="btn_sc" onclick="delBmd();return false;">删除</a></li>
-                <%--<li><a href="#" class="btn_dr" onclick="importConfig();return false;">导入</a></li>--%>
-                <%--<li><a href="#" class="btn_dc" onclick="exportConfig();return false;">导出</a></li>--%>
-                    <%--<li><a href="#" class="btn_dc" onclick="return false;">推送报名数据</a></li>--%>
+                <logic:equal name="writeAble"  value="yes">
+                    <li><a href="#" class="btn_zj" onclick="add();return false;">增加</a></li>
+                    <li><a href="#" class="btn_xg" onclick="update();return false;">重置密码</a></li>
+                    <li><a href="#" class="btn_sc" onclick="delBmd();return false;">删除</a></li>
+                </logic:equal>
             </ul>
         </div>
         <!-- 过滤条件 -->
-        <%@ include file="/comm/search/superSearchArea.jsp"%>
+        <%--<%@ include file="/comm/search/superSearchArea.jsp"%>--%>
         <!-- 过滤条件 end-->
     </div>
 </html:form>

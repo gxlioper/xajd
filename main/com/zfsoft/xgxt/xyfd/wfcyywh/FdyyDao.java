@@ -33,7 +33,7 @@ public class FdyyDao extends SuperDAOImpl<FdyyForm> {
         String[] inputV = SearchService.getTjInput(t.getSearchModel());
         StringBuilder sql = new StringBuilder();
         sql.append("select * from (");
-        sql.append("select a.*,b.xm,decode(a.zt,'0','未提交','1','待辅导','5','预约中','3','已退回','4','已辅导','6','已评价',a.zt) shztmc from (");
+        sql.append("select a.*,b.xm,decode(a.zt,'0','未提交','1','待辅导','5','预约中','3','已取消','4','已辅导','6','已评价',a.zt) shztmc from (");
         sql.append(" select a.*,b.*,d.xm fdjsxm,d.zgh yhm,e.* from xg_xyfd_wdyy a left join xg_xyfd_fdkcjgb b on a.fdkc = b.jgid  ");
         sql.append(" left join xg_xyfd_fdjsxxb c on b.fdjs = c.djh left join fdyxxb d on c.zgh = d.zgh ");
         sql.append(" left join xg_xyfd_fdsxxb e on c.fds = e.id where b.fdjs like 'JS%' union  ");
@@ -44,10 +44,9 @@ public class FdyyDao extends SuperDAOImpl<FdyyForm> {
         sql.append(") a left join (select a.*, c.bjmc zybjmc, b.sydm, b.symc,c.xymc from XSXXB a left join view_njsybj b ");
         sql.append(" on a.bjdm = b.bjdm left join view_njxyzybj_all c on a.zybj = c.bjdm) b on a.xh = b.xh ");
         sql.append(") where 1=1 ");
-        boolean isJsOrPb = true;
+
         if(user.getUserType().equals("stu")){
-            isJsOrPb = isPb(user);
-            if (isJsOrPb){
+            if (isPb(user)){
                 sql.append(" and yhm = '" + user.getUserName() + "' ");
             }else {
                 sql.append(" and xh = '" + user.getUserName() + "'");
@@ -133,8 +132,12 @@ public class FdyyDao extends SuperDAOImpl<FdyyForm> {
      */
     public boolean qxYy(FdyyForm t, User user) throws Exception{
         StringBuilder sql = new StringBuilder();
-        sql.append(" insert into xg_xyfd_yyqxjlb values (?,?,?,?) ");
-        String[] input = new String[]{t.getYyid(),t.getQxyy(), user.getUserName(), GetTime.getTimeByFormat("yyyy-MM-dd hh24:mm:ss")};
+        sql.append(" merge into XG_XYFD_YYQXJLB a using ");
+        sql.append(" (select ? yyid from dual) b on (a.yyid = b.yyid) ");
+        sql.append(" when matched then update set a.qxyy=?,qxr=?,qxsj=?,qtqk=? ");
+        sql.append(" when not matched then insert values (?,?,?,?,?) ");
+        String[] input = new String[]{t.getYyid(),t.getQxyy(), user.getUserName(), GetTime.getTimeByFormat("yyyy-MM-dd hh24:mm:ss"),t.getQtqk(),
+                t.getYyid(),t.getQxyy(), user.getUserName(), GetTime.getTimeByFormat("yyyy-MM-dd hh24:mm:ss"),t.getQtqk()};
         return dao.runUpdate(sql.toString(),input);
     }
 
@@ -184,7 +187,7 @@ public class FdyyDao extends SuperDAOImpl<FdyyForm> {
     public List<HashMap<String, String>> getMyYyList(FdyyForm t) throws Exception {
         StringBuilder sql = new StringBuilder();
         sql.append("select * from (");
-        sql.append("select a.*,b.xm,decode(a.zt,'0','未提交','1','待辅导','5','预约中','3','已退回','4','已辅导','6','已评价',a.zt) shztmc from (");
+        sql.append("select a.*,b.xm,decode(a.zt,'0','未提交','1','待辅导','5','预约中','3','已取消','4','已辅导','6','已评价',a.zt) shztmc from (");
         sql.append(" select a.*,b.* from xg_xyfd_wdyy a left join xg_xyfd_fdkcjgb b on a.fdkc = b.jgid  ");
         sql.append(" left join xg_xyfd_fdjsxxb c on b.fdjs = c.djh where b.fdjs like 'JS%' union  ");
         sql.append(" select a.*,b.* from xg_xyfd_wdyy a left join xg_xyfd_fdkcjgb b on a.fdkc = b.jgid ");
@@ -206,7 +209,7 @@ public class FdyyDao extends SuperDAOImpl<FdyyForm> {
     public HashMap<String,String> getFdyyByYyh(FdyyForm t) throws Exception{
         StringBuilder sql = new StringBuilder();
         sql.append("select * from (");
-        sql.append("select a.*,b.xm,b.lxdh,decode(a.zt,'0','未提交','1','待辅导','5','预约中','3','已退回','4','已辅导','6','已评价',a.zt) shztmc from (");
+        sql.append("select a.*,b.xm,b.lxdh,decode(a.zt,'0','未提交','1','待辅导','5','预约中','3','已取消','4','已辅导','6','已评价',a.zt) shztmc from (");
         sql.append(" select a.*,b.*,d.xm fdjsxm,d.zgh yhm,'教师' fdjslb,e.* from xg_xyfd_wdyy a left join xg_xyfd_fdkcjgb b on a.fdkc = b.jgid  ");
         sql.append(" left join xg_xyfd_fdjsxxb c on b.fdjs = c.djh left join fdyxxb d on c.zgh = d.zgh ");
         sql.append(" left join xg_xyfd_fdsxxb e on c.fds = e.id where b.fdjs like 'JS%' union  ");
@@ -253,7 +256,7 @@ public class FdyyDao extends SuperDAOImpl<FdyyForm> {
     public HashMap<String,String> getFdyy(FdyyForm t) throws Exception{
         StringBuilder sql = new StringBuilder();
         sql.append("select * from (");
-        sql.append("select a.*,b.xm,b.lxdh,decode(a.zt,'0','未提交','1','待辅导','5','预约中','3','已退回','4','已辅导','6','已评价',a.zt) shztmc from (");
+        sql.append("select a.*,b.xm,b.lxdh,decode(a.zt,'0','未提交','1','待辅导','5','预约中','3','已取消','4','已辅导','6','已评价',a.zt) shztmc from (");
         sql.append(" select a.*,b.*,d.xm fdjsxm,d.zgh yhm,'教师' fdjslb,e.* from xg_xyfd_wdyy a left join xg_xyfd_fdkcjgb b on a.fdkc = b.jgid  ");
         sql.append(" left join xg_xyfd_fdjsxxb c on b.fdjs = c.djh left join fdyxxb d on c.zgh = d.zgh ");
         sql.append(" left join xg_xyfd_fdsxxb e on c.fds = e.id where b.fdjs like 'JS%' union  ");
@@ -287,13 +290,30 @@ public class FdyyDao extends SuperDAOImpl<FdyyForm> {
      */
     public boolean saveKcpj(FdyyForm t,User user) throws Exception{
         StringBuilder sql = new StringBuilder();
-        sql.append("insert into xg_xyfd_yypjjlb(jlbh,pf,sfjj,xxpj,pjr,pjsj) values(?,?,?,?,?,?)");
-        String[] input = new String[]{t.getYyh(),t.getPf(),t.getSfjj(),t.getXxpj(),user.getUserName(),GetTime.getTimeByFormat("yyyy-MM-dd hh24:mm:ss")};
+        sql.append("insert into xg_xyfd_yypjjlb(jlbh,pf,sfjj,xxpj,pjr,pjsj,lx) values(?,?,?,?,?,?,?)");
+        String[] input = new String[]{t.getYyh(),t.getPf(),t.getSfjj(),t.getXxpj(),user.getUserName(),GetTime.getTimeByFormat("yyyy-MM-dd hh24:mm:ss"),"fd"};
         return dao.runUpdate(sql.toString(),input);
     }
     public boolean updateKcpj(FdyyForm t,User user) throws Exception{
         StringBuilder sql = new StringBuilder();
         sql.append("update xg_xyfd_yypjjlb set pf = ?,sfjj = ?,xxpj = ? where pjid = ?");
         return dao.runUpdate(sql.toString(),new String[]{t.getPf(),t.getSfjj(),t.getXxpj(),t.getPjid()});
+    }
+
+    public boolean updateFdjl(String jlbh) throws Exception{
+        StringBuilder sql = new StringBuilder();
+        sql.append(" update xg_xyfd_wdyy set zt = '6' where yyh = ? ");
+        return dao.runUpdate(sql.toString(),new String[]{jlbh});
+    }
+
+    /**
+     * 查出所有预约取消原因代码名称
+     * @return
+     * @throws Exception
+     */
+    public List<HashMap<String,String>> getQxyyList() throws Exception{
+        StringBuilder sql = new StringBuilder();
+        sql.append(" select * from xg_xyfd_yyqxyydmb ");
+        return dao.getListNotOut(sql.toString(),new String[]{});
     }
 }
