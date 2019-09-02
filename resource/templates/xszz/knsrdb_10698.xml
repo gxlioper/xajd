@@ -3108,44 +3108,44 @@
 </w:rPr>
 <w:t>：</w:t>
 </w:r>
-    <!--<w:r wsp:rsidRPr="00C3164F">-->
-        <!--<w:rPr>-->
-            <!--<w:b/>-->
-        <!--</w:rPr>-->
-        <!--<w:t><#if jtqk.ylzd14 == '1'>■<#else>□</#if></w:t>-->
-<!--</w:r>-->
-    <!--<w:r>-->
-        <!--<w:rPr>-->
-            <!--<w:b/>-->
-        <!--</w:rPr>-->
-        <!--<w:t> </w:t>-->
-    <!--</w:r>-->
-    <!--<w:r wsp:rsidRPr="00C3164F">-->
-        <!--<w:rPr>-->
-            <!--<wx:font wx:val="宋体"/>-->
-            <!--<w:b/>-->
-        <!--</w:rPr>-->
-        <!--<w:t>是</w:t>-->
-    <!--</w:r>-->
-    <!--<w:r wsp:rsidRPr="00C3164F">-->
-        <!--<w:rPr>-->
-            <!--<w:b/>-->
-        <!--</w:rPr>-->
-        <!--<w:t> <#if jtqk.ylzd14 == '0'>■<#else>□</#if></w:t>-->
-<!--</w:r>-->
-<!--<w:r>-->
-    <!--<w:rPr>-->
-        <!--<w:b/>-->
-    <!--</w:rPr>-->
-    <!--<w:t> </w:t>-->
-<!--</w:r>-->
-<!--<w:r wsp:rsidRPr="00C3164F">-->
-    <!--<w:rPr>-->
-        <!--<wx:font wx:val="宋体"/>-->
-        <!--<w:b/>-->
-    <!--</w:rPr>-->
-    <!--<w:t>否</w:t>-->
-<!--</w:r>-->
+    <w:r wsp:rsidRPr="00C3164F">
+        <w:rPr>
+            <w:b/>
+        </w:rPr>
+        <w:t><#if jtqk.ylzd14 == '1'>■<#else>□</#if></w:t>
+</w:r>
+    <w:r>
+        <w:rPr>
+            <w:b/>
+        </w:rPr>
+        <w:t> </w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+        <w:rPr>
+            <wx:font wx:val="宋体"/>
+            <w:b/>
+        </w:rPr>
+        <w:t>是</w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+        <w:rPr>
+            <w:b/>
+        </w:rPr>
+        <w:t> <#if jtqk.ylzd14 == '0'>■<#else>□</#if></w:t>
+</w:r>
+<w:r>
+    <w:rPr>
+        <w:b/>
+    </w:rPr>
+    <w:t> </w:t>
+</w:r>
+<w:r wsp:rsidRPr="00C3164F">
+    <w:rPr>
+        <wx:font wx:val="宋体"/>
+        <w:b/>
+    </w:rPr>
+    <w:t>否</w:t>
+</w:r>
 </w:p>
 <w:p wsp:rsidR="003653AB" wsp:rsidRPr="00223DE9" wsp:rsidRDefault="002B2294" wsp:rsidP="00D021E4">
 <w:pPr>
