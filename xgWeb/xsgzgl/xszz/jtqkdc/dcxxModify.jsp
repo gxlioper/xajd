@@ -66,6 +66,14 @@
 				} else {
 					jQuery("#buttonClose").hide();
 				}
+
+				jQuery("#jtqk_ylzd15").blur(function () {
+					var zsr = 0;
+					jQuery("input[name='jtcy.cynsr']").each(function (i,e) {
+                        zsr = Number(zsr)+ Number(jQuery(this).val());
+                    })
+					jQuery("#jtqk_ylzd15").val(zsr);
+                })
 			});
 
 

@@ -31,7 +31,11 @@
             return true;
         }
         function saveForm(type){
-            var checkId ="sqly";
+            var checkId ="sqly-sqhjje";
+            var hjfs = jQuery("#hjfs").val();
+            if(hjfs=='01'){
+                checkId +="-dkje";
+            }
             if(!check(checkId)){
                 return showAlert("请将带<font color='red'>*</font>的项目填写完整！");
             }
@@ -81,7 +85,7 @@
                             <option value="06"> 其他————</option>
                         </select>
                     </td>
-                    <th id="dkjeTh">申请贷款金额(元)</th>
+                    <th id="dkjeTh"><span class="red">*</span>申请贷款金额(元)</th>
                     <td id="dkjeTd">
                         <input id="dkje" name="dkje" onblur="checkMoneyForKeyup(this);jshjje();"/>
                     </td>
@@ -93,7 +97,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>申请缓交金额</th>
+                    <th><span class="red">*</span>申请缓交金额</th>
                     <td colspan="3">
                         <input name="sqhjje" id="sqhjje" onblur="checkMoneyForKeyup(this);"/>&nbsp;学费+住宿≤8000元（超过8000元必须在报到交费处缴纳差额部分方可办理报到手续）
                     </td>

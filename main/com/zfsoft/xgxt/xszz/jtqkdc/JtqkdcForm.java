@@ -79,9 +79,9 @@ public class JtqkdcForm extends ActionForm {
 	private String ylzd10 ;//预留字段10 
 	private String ylzd11 ;//预留字段11
 	private String ylzd12 ;//预留字段12
-	private String ylzd13 ;//预留字段13
-	private String ylzd14 ;//预留字段14
-	private String ylzd15 ;//预留字段15
+	private String ylzd13 ;//预留字段13  家庭每月提供的生活费
+	private String ylzd14 ;//预留字段14  家庭按时足额缴纳学费、住宿费是否有困难
+	private String ylzd15 ;//预留字段15  家庭提供的每月生活费
 	private String ylzd16 ;//预留字段16
 	private String ylzd17 ;//预留字段17
 	private String ylzd18 ;//预留字段18

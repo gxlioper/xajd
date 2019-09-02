@@ -140,6 +140,10 @@ public class KnsrdService extends SuperServiceImpl<KnsrdForm, KnsrdDao>
 		}
 		data.put("jtqk", jtqkmodel);// 家庭情况
 		HashMap<String, String> knsqMap=getKnsqInfo(model.getGuid());
+		String sqsj = knsqMap.get("sqsj");
+		if(!StringUtil.isNull(sqsj)){
+			knsqMap.put("sqsj",sqsj.substring(0,10));
+		}
 		data.put("knsqInfo", knsqMap);
 		data.put("jtqkInfo", jtqkInfo);//上海海洋大学个性化查询
 		
@@ -187,6 +191,14 @@ public class KnsrdService extends SuperServiceImpl<KnsrdForm, KnsrdDao>
 			//家庭成员列表空行
 			int blankSize = (4 - cyList.size()) < 0 ? 0 : (4 - cyList.size());
 			data.put("blankList", jtqkService.getBlankList(blankSize));
+			//总计年收入
+			if(StringUtil.isNull(jtqkmodel.getYlzd15())){
+				Integer znsr = 0;
+				for(int i=0;i<cyList.size();i++){
+					znsr = znsr + Integer.parseInt(cyList.get(i).get("cynsr"));
+				}
+				jtqkmodel.setYlzd15(znsr+"");
+			}
 		}
 		
 		// ============为困难生档次编号（A,B...），并把选中的档次保存到knsdczmbhstr begin============
