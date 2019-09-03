@@ -358,7 +358,7 @@ function createHtml(obj) {
 			//content+='<img src="'+o['fjpath']+'" class="img-responsive"></div>';
 			//content+='<img src="'+ (o['fjpath'] == null ? 'default_dekt.jpg' : o['fjpath'])+ '" style="width:170px;height:130px"></div>';
 			content+='<div class="col-md-8">';
-			content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;"/></div>';
+			content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;z-index: 1;"/></div>';
 			content+='<div class="content">';
 			content+='<p class="title">';
 			content+=o['hdmc']+'活动等你加入';
@@ -395,6 +395,7 @@ function createHtml(obj) {
 			content+='</div>';
 		}
 		jQuery(listTbody).append(content);
+        jQuery('.pic img').zoomify();//图片放大
 	}	
 }
 

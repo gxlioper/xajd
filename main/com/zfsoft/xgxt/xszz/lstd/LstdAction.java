@@ -254,7 +254,7 @@ public class LstdAction extends BasicAction {
 
         User user = getUser(request);
         List<HashMap<String, String>> resultList = null;
-        model.getPages().setMaxPage(Integer.MAX_VALUE);
+        model.getPages().setPageSize(Integer.MAX_VALUE);
         resultList = service.getShList(model,user);// 查询出所有记录，不分页
 
         // 导出功能代码

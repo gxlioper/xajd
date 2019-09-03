@@ -38,6 +38,7 @@
 		
 		<script type="text/javascript" src="js/jquery/jquery.form.js"></script>
 		<script type="text/javascript" src="xsgzgl/hdgl/js/hdxx.js"></script>
+		<script type="text/javascript" src="xsgzgl/hdgl/js/dist/zoomify.js"></script>
 		<script type="text/javascript">
 			//≥ı ºªØ
 			jQuery(document).ready(function(){ 

@@ -147,6 +147,10 @@ function save(url){
 		showAlert("请将带<font color='red'>*</font>的项目填写完整!");
 		return false;
 	 }
+	 if(jQuery("input[name='jflyArray']:checked").length<=0){
+         showAlert("请将带<font color='red'>*</font>的项目填写完整!");
+         return false;
+     }
 	 if(!fzrIsNull()){
 		showAlert("请将负责人信息填写完整！");
 		return false;
@@ -273,7 +277,7 @@ function hideNdzzztTd(e){
                             </td>
                         </tr>
                         <tr>
-                            <th>学生组织经费来源</th>
+                            <th><font color="red">*</font>学生组织经费来源</th>
                             <td colspan="3">
                                 <logic:iterate id="item" collection="${xszzjflyList}">
                                     <html:checkbox property="jflyArray" value="${item.dm}">${item.mc}</html:checkbox>

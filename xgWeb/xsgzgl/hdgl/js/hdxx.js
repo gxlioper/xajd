@@ -16,7 +16,7 @@ function searchRs(cxzt,pxfs){
 			jQuery("#zjjb").parent().attr('class','boder-right active');
 			jQuery("#wcj").parent().attr('class','boder-right');
 			jQuery("#ymmc").val('zjjb');
-			createHtmlForZxsx(data);
+			createHtmlForZjjb(data);
 		}else{
 			jQuery("#zxsx").parent().attr('class','boder-right active');
 			jQuery("#zjjb").parent().attr('class','boder-right');
@@ -132,7 +132,7 @@ function createHtmlForZxsx(obj) {
 					//content+='<img src="'+o['fjpath']+'" class="img-responsive"></div>';
 					//content+='<img src="'+ (o['fjpath'] == null ? 'default_dekt.jpg' : o['fjpath'])+ '" style="width:170px;height:130px"></div>';
 					content+='<div class="col-md-8">';
-					content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;"/></div>';
+					content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;z-index: 1"  /></div>';
 					content+='<div class="content">';
 					content+='<p class="title">';
 					content+=o['hdmc']+'活动等你加入';
@@ -188,7 +188,7 @@ function createHtmlForZxsx(obj) {
 					//content+='<img src="'+o['fjpath']+'" class="img-responsive"></div>';
 					//content+='<img src="'+ (o['fjpath'] == null ? 'default_dekt.jpg' : o['fjpath'])+ '" style="width:170px;height:130px"></div>';
 					content+='<div class="col-md-8">';
-					content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;"/></div>';
+					content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;z-index: 1" /></div>';
 					content+='<div class="content">';
 					content+='<p class="title">';
 					content+=o['hdmc']+'活动等你加入';
@@ -243,7 +243,7 @@ function createHtmlForZxsx(obj) {
 				//content+='<img src="'+o['fjpath']+'" class="img-responsive"></div>';
 				//content+='<img src="'+ (o['fjpath'] == null ? 'default_dekt.jpg' : o['fjpath'])+ '" style="width:170px;height:130px"></div>';
 				content+='<div class="col-md-8">';
-				content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;"/></div>';
+				content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;z-index: 1" /></div>';
 				content+='<div class="content">';
 				content+='<p class="title">';
 				content+=o['hdmc']+'活动等你加入';
@@ -296,7 +296,223 @@ function createHtmlForZxsx(obj) {
 			
 		}
 		jQuery(listTbody).append(content);
+        jQuery('.pic img').zoomify();//图片放大
 	}	
+}
+
+//创建最近举办
+function createHtmlForZjjb(obj) {
+    var listTbody = jQuery("#activity-list");
+    jQuery(listTbody).empty();
+    if(obj.length < 1){
+        jQuery(listTbody).html("<div><p align='center'>未找到任何记录！</p></div>");
+        jQuery("#total").text(0);
+        jQuery("#pageno").val(0);
+        jQuery("#pageCount").text(0);
+        jQuery("#next").attr("href","javascript:void(0)");
+        jQuery("#last").attr("href","javascript:void(0)");
+        jQuery("#pre").attr("href","javascript:void(0)");
+        jQuery("#first").attr("href","javascript:void(0)");
+    }else{
+        var content = "";
+        for ( var i = 0; i < obj.length; i++) {
+            if(i == obj.length -1){
+                var total = obj[i]["total"];
+                jQuery("#total").empty();
+                jQuery("#total").text(total);
+                jQuery("#pageno").val((obj[0]["rowindex"]-1)/jQuery("#pagesize").val()+1);//第几页
+                var temp = total/jQuery("#pagesize").val();
+                var pageCont;
+                if (total%jQuery("#pagesize").val() == 0 && temp != 0){
+                    pageCont = temp;
+                } else {
+                    pageCont = temp == 0 ? temp : parseInt(temp)+1;
+                }
+                jQuery("#pageCount").empty();
+                jQuery("#pageCount").text(pageCont);
+                if(jQuery("#pageno").val() == pageCont){
+                    jQuery("#next").attr("href","javascript:void(0)");
+                    jQuery("#last").attr("href","javascript:void(0)");
+                }else{
+                    jQuery("#next").attr("href","javascript:submitNextPage()");
+                    jQuery("#last").attr("href","javascript:submitLastPage()");
+                }
+            }
+            var o = obj[i];
+            var xy = jQuery("#xy").val();
+            var sy = jQuery("#sy").val();
+            if(o["bmdx"]=="特定学院报名"||o["bmdx"]=="特定学院报名"){
+                if(jQuery("#xy").val()==o["bmtddx"]){
+                    content+='<div class="active-item row">';
+                    //content+='<img src="'+o['fjpath']+'" class="img-responsive"></div>';
+                    //content+='<img src="'+ (o['fjpath'] == null ? 'default_dekt.jpg' : o['fjpath'])+ '" style="width:170px;height:130px"></div>';
+                    content+='<div class="col-md-8">';
+                    content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;z-index: 1"  /></div>';
+                    content+='<div class="content">';
+                    content+='<p class="title">';
+                    content+=o['hdmc']+'活动等你加入';
+                    content+='</p>';
+
+                    content+='<div>';
+                    content+='<div class="tag"  style="display: inline"><span>'+o['hdlxmc']+'</span></div>';
+                    if(o['hdbqmc'] != "" && o['hdbqmc'] != null){
+                        var arr = o['hdbqmc'].split(",");
+                        for(var x=0;x<arr.length;x++){
+                            content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
+                        }
+                    }
+                    if(o['nlbqmc'] != "" && o['nlbqmc'] != null){
+                        var arr = o['nlbqmc'].split(",");
+                        for(var x=0;x<arr.length;x++){
+                            content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
+                        }
+                    }
+                    content+='</div>';
+
+                    content+='<div class="detail">';
+                    content+='<div>活动时间:'+o['hdkssj']+'~'+o['hdjssj']+'</div>';
+                    if(o['bmkssj'] == null || o['bmjssj'] == null){
+                        content+='<div>报名开始时间:</div>';
+                    }else{
+                        content+='<div>报名开始时间:'+o['bmkssj']+'至'+o['bmjssj']+'</div>';
+                    }
+                    content+='<div>活动地点:'+o['hddd']+'</div>';
+                    content+='</div>';
+                    content+='</div>';
+                    content+='</div>';
+                    content+='<div class="col-md-4">';
+                    if(o['bmsf']=='0'){
+                        content+='<button type="button" class="btn btn-primary grey-bg-btn" disabled="disabled" >无需报名</button>';
+                    }else{
+                        if(o['bmztmc'] == 'bm'){
+                            content+='<button type="button" class="btn btn-primary"  onclick="bm(\''+o['hdid']+'\');">报名</button>';
+                            content+='<button type="button" class="btn btn-primary"  onclick="getBmlj(\''+o['hdid']+'\');">生成报名链接</button>';
+                        }else if(o['bmztmc'] == 'wks'){
+                            content+='<button type="button" class="btn btn-primary grey-bg-btn" disabled="disabled" style="width:100px">报名未开始</button>';
+                        }else if(o['bmztmc'] == 'yjs'){
+                            content+='<button type="button" class="btn btn-primary grey-bg-btn" disabled="disabled" style="width:100px">报名已结束</button>';
+                        }
+                    }
+                    content+='<button type="button" class="btn btn-primary"  onclick="ckHdxx(\''+o['hdid']+'\');">活动详情</button>';
+                    content+='</div>';
+                    content+='</div>';
+                }
+            }else if(o["bmdx"]=="特定书院报名"||o["bmdx"]=="特定书院报名"){
+                if(jQuery("#sy").val()==o["bmtddx"]){
+                    content+='<div class="active-item row">';
+                    //content+='<img src="'+o['fjpath']+'" class="img-responsive"></div>';
+                    //content+='<img src="'+ (o['fjpath'] == null ? 'default_dekt.jpg' : o['fjpath'])+ '" style="width:170px;height:130px"></div>';
+                    content+='<div class="col-md-8">';
+                    content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;z-index: 1" /></div>';
+                    content+='<div class="content">';
+                    content+='<p class="title">';
+                    content+=o['hdmc']+'活动等你加入';
+                    content+='</p>';
+
+                    content+='<div>';
+                    content+='<div class="tag"  style="display: inline"><span>'+o['hdlxmc']+'</span></div>';
+                    if(o['hdbqmc'] != "" && o['hdbqmc'] != null){
+                        var arr = o['hdbqmc'].split(",");
+                        for(var x=0;x<arr.length;x++){
+                            content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
+                        }
+                    }
+                    if(o['nlbqmc'] != "" && o['nlbqmc'] != null){
+                        var arr = o['nlbqmc'].split(",");
+                        for(var x=0;x<arr.length;x++){
+                            content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
+                        }
+                    }
+                    content+='</div>';
+
+                    content+='<div class="detail">';
+                    content+='<div>活动时间:'+o['hdkssj']+'~'+o['hdjssj']+'</div>';
+                    if(o['bmkssj'] == null || o['bmjssj'] == null){
+                        content+='<div>报名开始时间:</div>';
+                    }else{
+                        content+='<div>报名开始时间:'+o['bmkssj']+'至'+o['bmjssj']+'</div>';
+                    }
+                    content+='<div>活动地点:'+o['hddd']+'</div>';
+                    content+='</div>';
+                    content+='</div>';
+                    content+='</div>';
+                    content+='<div class="col-md-4">';
+                    if(o['bmsf']=='0'){
+                        content+='<button type="button" class="btn btn-primary grey-bg-btn" disabled="disabled" >无需报名</button>';
+                    }else{
+                        if(o['bmztmc'] == 'bm'){
+                            content+='<button type="button" class="btn btn-primary"  onclick="bm(\''+o['hdid']+'\');">报名</button>';
+                            content+='<button type="button" class="btn btn-primary"  onclick="getBmlj(\''+o['hdid']+'\');">生成报名链接</button>';
+                        }else if(o['bmztmc'] == 'wks'){
+                            content+='<button type="button" class="btn btn-primary grey-bg-btn" disabled="disabled" style="width:100px">报名未开始</button>';
+                        }else if(o['bmztmc'] == 'yjs'){
+                            content+='<button type="button" class="btn btn-primary grey-bg-btn" disabled="disabled" style="width:100px">报名已结束</button>';
+                        }
+                    }
+                    content+='<button type="button" class="btn btn-primary"  onclick="ckHdxx(\''+o['hdid']+'\');">活动详情</button>';
+                    content+='</div>';
+                    content+='</div>';
+                }
+            }else{
+                content+='<div class="active-item row">';
+                //content+='<img src="'+o['fjpath']+'" class="img-responsive"></div>';
+                //content+='<img src="'+ (o['fjpath'] == null ? 'default_dekt.jpg' : o['fjpath'])+ '" style="width:170px;height:130px"></div>';
+                content+='<div class="col-md-8">';
+                content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;z-index: 1" /></div>';
+                content+='<div class="content">';
+                content+='<p class="title">';
+                content+=o['hdmc']+'活动等你加入';
+                content+='</p>';
+
+                content+='<div>';
+                content+='<div class="tag"  style="display: inline"><span>'+o['hdlxmc']+'</span></div>';
+                if(o['hdbqmc'] != "" && o['hdbqmc'] != null){
+                    var arr = o['hdbqmc'].split(",");
+                    for(var x=0;x<arr.length;x++){
+                        content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
+                    }
+                }
+                if(o['nlbqmc'] != "" && o['nlbqmc'] != null){
+                    var arr = o['nlbqmc'].split(",");
+                    for(var x=0;x<arr.length;x++){
+                        content+='<div class="tag" style="display: inline;margin-left: 2px;"><span>'+arr[x]+'</span></div>';
+                    }
+                }
+                content+='</div>';
+
+                content+='<div class="detail">';
+                content+='<div>活动时间:'+o['hdkssj']+'~'+o['hdjssj']+'</div>';
+                if(o['bmkssj'] == null || o['bmjssj'] == null){
+                    content+='<div>报名开始时间:</div>';
+                }else{
+                    content+='<div>报名开始时间:'+o['bmkssj']+'至'+o['bmjssj']+'</div>';
+                }
+                content+='<div>活动地点:'+o['hddd']+'</div>';
+                content+='</div>';
+                content+='</div>';
+                content+='</div>';
+                content+='<div class="col-md-4">';
+                if(o['bmsf']=='0'){
+                    content+='<button type="button" class="btn btn-primary grey-bg-btn" disabled="disabled" >无需报名</button>';
+                }else{
+                    if(o['bmztmc'] == 'bm'){
+                        content+='<button type="button" class="btn btn-primary"  onclick="bm(\''+o['hdid']+'\');">报名</button>';
+                        content+='<button type="button" class="btn btn-primary"  onclick="getBmlj(\''+o['hdid']+'\');">生成报名链接</button>';
+                    }else if(o['bmztmc'] == 'wks'){
+                        content+='<button type="button" class="btn btn-primary grey-bg-btn" disabled="disabled" style="width:100px">报名未开始</button>';
+                    }else if(o['bmztmc'] == 'yjs'){
+                        content+='<button type="button" class="btn btn-primary grey-bg-btn" disabled="disabled" style="width:100px">报名已结束</button>';
+                    }
+                }
+                content+='<button type="button" class="btn btn-primary"  onclick="ckHdxx(\''+o['hdid']+'\');">活动详情</button>';
+                content+='</div>';
+                content+='</div>';
+            }
+
+        }
+        jQuery(listTbody).append(content);
+        jQuery('.pic img').zoomify();//图片放大
+    }
 }
 
 //创建我参加div
@@ -343,7 +559,7 @@ function createHtmlForWcj(obj) {
 			//content+='<img src="'+o['fjpath']+'" class="img-responsive"></div>';
 			//content+='<img src="'+ (o['fjpath'] == null ? 'default_dekt.jpg' : o['fjpath'])+ '" style="width:170px;height:130px"></div>';
 			content+='<div class="col-md-8">';
-			content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;"/></div>';
+			content+='<div class="pic"><img src="'+o['hb']+'" style="width:97px;height:127px;z-index: 1" /></div>';
 			content+='<div class="content">';
 			content+='<p class="title">';
 			content+=o['hdmc']+'活动等你加入';
@@ -511,6 +727,7 @@ function createHtmlForWcj(obj) {
 			content+='</div>';
 		}
 		jQuery(listTbody).append(content);
+        jQuery('.pic img').zoomify();//图片放大
 	}	
 }
 function cxbm(hdid) {
