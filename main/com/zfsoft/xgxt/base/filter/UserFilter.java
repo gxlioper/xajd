@@ -14,11 +14,13 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.zfsoft.utils.StringUtil;
+import xgxt.utils.String.StringUtils;
 
 
 public class UserFilter implements Filter {
@@ -50,9 +52,18 @@ public class UserFilter implements Filter {
 		String userName = (String)session.getAttribute("userName");
 		String[] urlArr = url.split("/");
 		String tPath = urlArr[urlArr.length-1];
-		String path = tPath.split(";")[0];       
+		String path = tPath.split(";")[0];
 		if (StringUtil.isNull(userName) && !excludedUrls.contains(path)){
 //			response.sendRedirect(request.getContextPath()+loginUrl);
+			String jqueryStr = request.getQueryString();
+			String method = request.getParameter("method");
+			if(StringUtils.isNotNull(method)&&method.equals("getHdxx")){
+				//活动报名专用,统一身份认证登录会将session清除
+				Cookie userCookie=new Cookie(session.getId(),url+"?"+jqueryStr);
+				userCookie.setMaxAge(3*60);   //存活期为一个月 30*24*60*60
+				userCookie.setPath(request.getContextPath());
+				response.addCookie(userCookie);
+			}
 			request.getRequestDispatcher(loginUrl).forward(request, response);
 		}else if(path.equals("wechat.do")){
 			System.out.println("url:"+url);

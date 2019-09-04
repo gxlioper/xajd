@@ -339,15 +339,15 @@ public class KnsrdDao extends SuperDAOImpl<KnsrdForm> {
 			sql.append(" left join view_xg_fdyxx fdy on x.bjdm = fdy.bjdm ");
 		}
 		if (YSH.equalsIgnoreCase(t.getShzt())){
-			sql.append(" where b.gwid in (select spgw from xg_xtwh_spgwyh where spyh='"+user.getUserName()+"' )");
-			sql.append("  and b.shzt not in ('0','4')");
+			sql.append(" where exists ( select 1 from xg_xtwh_spgwyh a where spyh = '"+user.getUserName()+"' and b.gwid = a.spgw ) ");
+			sql.append("  and (b.shzt <> '0' and b.shzt <>'4')");
 			sql.append(" ) t1 where 1=1 and rn=1");
 		}
 		
 		if (DSH.equalsIgnoreCase(t.getShzt())){
 			sql.append(" ) t1 where 1=1 and rn=1");
-			sql.append(" and xtgwid in (select spgw from xg_xtwh_spgwyh where spyh='"+user.getUserName()+"' )");
-			sql.append(" and shzt in ('0','4') ");
+			sql.append(" and exists ( select 1 from xg_xtwh_spgwyh a where a.spyh = '"+ user.getUserName() +"' and t1.xtgwid = a.spgw ) ");
+			sql.append(" and (shzt = '0' or shzt = '4') ");
 		}
 		
 		sql.append(searchTjByUser);
@@ -795,9 +795,7 @@ public class KnsrdDao extends SuperDAOImpl<KnsrdForm> {
 	 * @作者：陈敏杰
 	 * @日期：2013-12-10 下午02:20:36
 	 * @修改记录: 修改者名字-修改日期-修改内容
-	 * @param rskzfw
-	 * @param xn
-	 * @param xq
+	 * @param
 	 * @return
 	 * List<HashMap<String,String>> 返回类型 
 	 * @throws 

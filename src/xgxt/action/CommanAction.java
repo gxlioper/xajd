@@ -726,8 +726,23 @@ public class CommanAction extends Action {
 
 		if ("new".equalsIgnoreCase(edition)) {
 			if ("student".equalsIgnoreCase(userType)) {
-
+				String url = "";
+				Cookie[] cookies = request.getCookies();
+				for(Cookie cookie : cookies){
+					if(cookie.getName().equals(session.getId())){
+						url = cookie.getValue();
+						cookie.setValue(null);
+						cookie.setMaxAge(0);//生存时间为0
+						cookie.setPath(request.getContextPath());  // 相同路径
+						response.addCookie(cookie);
+						break;
+					}
+				}
 				if ("no".equalsIgnoreCase(dljc)) {
+					if(StringUtils.isNotNull(url)){
+						response.sendRedirect(url);
+						return null;
+					}
 					return mapping.findForward("stuLogin");
 				} else {
 					return new ActionForward("/xsxx_xsdl.do", false);
