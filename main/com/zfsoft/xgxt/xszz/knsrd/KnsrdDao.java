@@ -70,9 +70,7 @@ public class KnsrdDao extends SuperDAOImpl<KnsrdForm> {
 		} else if("10346".equals(Base.xxdm)){
 			sql.append(" select * from view_new_dc_xszz_knsrdsq_10346 t1 where 1=1 ");
 		}else {
-			sql.append(" select t1.*,t3.sydm,t3.symc from VIEW_NEW_DC_XSZZ_KNSRDSQ t1 ");
-			sql.append(" left join XG_XTWH_SYBJGLB t2 on t2.bjdm=t1.bjdm ");
-			sql.append(" left join XG_XTWH_SYDMB t3 on t3.sydm = t2.sydm ");
+			sql.append(" select t1.* from VIEW_NEW_DC_XSZZ_KNSRDSQ t1 ");
 			sql.append(" where 1=1 ");
 		}
 		sql.append(searchTjByUser);
@@ -307,8 +305,8 @@ public class KnsrdDao extends SuperDAOImpl<KnsrdForm> {
 		if("10026".equals(Base.xxdm)) {
 			sql.append(" a.ylzd5, ");
 		}
-		sql.append(" decode(x.xb,'1','ÄÐ','2','Å®',x.xb) as xb, x.xm,m.xydm,m.zydm,m.bjdm,m1.bjdm zybj,b.zd3 as dcmc,");
-		sql.append(" m.xymc,m.zymc,m.bjmc,m1.bjmc zybjmc,b.shzt,b.shsj,b.gwid as xtgwid,b.zd2 as rddc,b.guid as shid,");
+		sql.append(" decode(x.xb,'1','ÄÐ','2','Å®',x.xb) as xb, x.xm,m1.xydm,m1.zydm,m.sydm,m.bjdm,m1.bjdm zybj,b.zd3 as dcmc,");
+		sql.append(" m1.xymc,m1.zymc,m.symc,m.bjmc,m1.bjmc zybjmc,b.shzt,b.shsj,b.gwid as xtgwid,b.zd2 as rddc,b.guid as shid,");
 		sql.append(" lead(b.zd6, 1, null) over(partition by b.ywid order by b.ywid,b.shsj desc) as wczzje,");
 		sql.append(" lead(b.zd3, 1, null) over(partition by b.ywid order by b.ywid,b.shsj desc) as sjdcmc, ");
 		sql.append(" lead(b.zd2, 1, null) over(partition by b.ywid order by b.ywid,b.shsj desc) as sjdc,");
@@ -324,8 +322,8 @@ public class KnsrdDao extends SuperDAOImpl<KnsrdForm> {
 		if("13627".equals(Base.xxdm)){
 			sql.append(",fdy.xm fdyxm ");
 		}
-		sql.append(" from xg_xszz_new_knssqb a left join xsxxb x on a.xh=x.xh left join view_njxyzybj_all m on x.bjdm = m.bjdm ");
-		sql.append(" left join view_njxyzybj_all m1 on x.zybj = m.bjdm ");
+		sql.append(" from xg_xszz_new_knssqb a left join xsxxb x on a.xh=x.xh left join view_njsybj m on x.bjdm = m.bjdm ");
+		sql.append(" left join view_njxyzybj_all m1 on x.zybj = m1.bjdm ");
 		sql.append(" left join xg_xtwh_shztb b on a.guid = b.ywid ");
 		sql.append(" left join xg_xtwh_spgw c on b.gwid = c.id ");
 		sql.append(" left join xqdzb d on a.xq = d.xqdm  ");
