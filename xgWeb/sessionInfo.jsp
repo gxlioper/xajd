@@ -44,26 +44,24 @@ function timeDown(){
 			</p>
 			<p align="center">
 			<logic:notEqual name="sessionForward" value="2">
-				
-				<font size="5"><b>登录时间过长，<span id="span_time">10</span>秒后将
-				<a href="#" onclick="nextDo()" style="text-decoration:underline;">返回</a>
-				登录页面，请重新登录！</b></font>
+				<font size="5"><b>请先<a href="#" onclick="nextDo()" style="text-decoration:underline;" >登录</a>再操作，
+					<span id="span_time">10</span>秒后将返回登录页面！</b></font>
 				<input type="hidden" id="time" value="10"/>
 			</logic:notEqual>
 			<logic:equal name="sessionForward" value="2">
 				<div align="center">
 				<font size="5"><b>登录时间过长，请选择返回的地址！</b></font><br>
 				<font size="5"><b>如不做选择</b></font>
-				<input type="text" name="secs" id="secs" value="10" 
+				<input type="text" name="secs" id="secs" value="10"
 					style="text-align:left;ime-mode:disabled;width:20px;border:0;"/>
-				<font size="5"><b>秒后将返回学工登录页面，重新登录！</b></font>			
+				<font size="5"><b>秒后将返回学工登录页面，重新登录！</b></font>
 				<script language="javascript">
 				var secs = $("secs").value;
 				var wait = secs * 1000;
 				for(i = 1; i <= secs; i++) {
 					window.setTimeout("setSecond(" + i + ")", i * 1000);
 				}
-				
+
 				function setSecond(second,value){
 					printnr = (wait / 1000) - second;
 					$("secs").value=printnr;

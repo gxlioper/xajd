@@ -49,9 +49,9 @@
 
         // 导出方法
         function yrdwwhExportData() {
-            //setSearchTj();//设置高级查询条件
+            setSearchTj();//设置高级查询条件
             var url = "qgzx_cxtj.do?method=xsgzCxExportData&dcclbh=qgzx_cxtj_xsgzCx";//dcclbh,导出功能编号
-            //url = addSuperSearchParams(url);//设置高级查询参数
+            url = addSuperSearchParams(url);//设置高级查询参数
             jQuery("form").eq(0).attr("action", url);
             jQuery("form").eq(0).submit();
         }
