@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <form-beans>
+        <form-bean name="aljlForm" type="com.zfsoft.xgxt.xyfd.aljlwh.AljlForm"/>
+    </form-beans>
+    <action-mappings>
+        <action path="/xyfd_xyfd_gzaljl" forward="/xyfd_gzaljl.do?method=gzalList"/>
+        <action path="/xyfd_gzaljl"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.aljlwh.AljlAction"
+                name="aljlForm"
+                parameter="method">
+            <forward name="gzalList" path="/xsgzgl/xyfd/jzgzwh/gzalwh/gzalList.jsp"/>
+            <forward name="addGzal" path="/xsgzgl/xyfd/jzgzwh/gzalwh/addGzal.jsp"/>
+            <forward name="addGzjl" path="/xsgzgl/xyfd/jzgzwh/gzalwh/addGzjl.jsp"/>
+            <forward name="cd" path="/xsgzgl/xyfd/jzgzwh/gzalwh/cd.jsp"/>
+            <forward name="xgjb" path="/xsgzgl/xyfd/jzgzwh/gzalwh/xgjb.jsp"/>
+            <forward name="viewGzal" path="/xsgzgl/xyfd/jzgzwh/gzalwh/viewGzal.jsp"/>
+            <forward name="alzj" path="/xsgzgl/xyfd/xyyj/zjyj/alzj.jsp"/>
+            <forward name="toUpdateGzal" path="/xsgzgl/xyfd/jzgzwh/gzalwh/updateGzal.jsp"/>
+
+        </action>
+    </action-mappings>
+</struts-config>

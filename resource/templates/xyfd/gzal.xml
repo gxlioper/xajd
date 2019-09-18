@@ -1,0 +1,3622 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?mso-application progid="Word.Document"?>
+<w:wordDocument xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wsp="http://schemas.microsoft.com/office/word/2003/wordml/sp2" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
+<w:ignoreSubtree w:val="http://schemas.microsoft.com/office/word/2003/wordml/sp2"/>
+<o:DocumentProperties>
+<o:Author>微软用户</o:Author>
+<o:LastAuthor>微软用户</o:LastAuthor>
+<o:Revision>2</o:Revision>
+<o:TotalTime>1</o:TotalTime>
+<o:Created>2019-09-09T06:34:00Z</o:Created>
+<o:LastSaved>2019-09-09T06:34:00Z</o:LastSaved>
+<o:Pages>2</o:Pages>
+<o:Words>142</o:Words>
+<o:Characters>814</o:Characters>
+<o:Company>微软中国</o:Company>
+<o:Lines>6</o:Lines>
+<o:Paragraphs>1</o:Paragraphs>
+<o:CharactersWithSpaces>955</o:CharactersWithSpaces>
+<o:Version>14</o:Version>
+</o:DocumentProperties>
+<w:fonts>
+<w:defaultFonts w:ascii="Calibri" w:fareast="宋体" w:h-ansi="Calibri" w:cs="Times New Roman"/>
+<w:font w:name="Times New Roman">
+<w:panose-1 w:val="02020603050405020304"/>
+<w:charset w:val="00"/>
+<w:family w:val="Roman"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="E0002AFF" w:usb-1="C0007841" w:usb-2="00000009" w:usb-3="00000000" w:csb-0="000001FF" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="宋体">
+<w:altName w:val="SimSun"/>
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="288F0000" w:usb-2="00000016" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="Cambria Math">
+<w:panose-1 w:val="02040503050406030204"/>
+<w:charset w:val="00"/>
+<w:family w:val="Roman"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="E00002FF" w:usb-1="420024FF" w:usb-2="00000000" w:usb-3="00000000" w:csb-0="0000019F" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="Calibri">
+<w:panose-1 w:val="020F0502020204030204"/>
+<w:charset w:val="00"/>
+<w:family w:val="Swiss"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="E00002FF" w:usb-1="4000ACFF" w:usb-2="00000001" w:usb-3="00000000" w:csb-0="0000019F" w:csb-1="00000000"/>
+</w:font>
+<w:font w:name="@宋体">
+<w:panose-1 w:val="02010600030101010101"/>
+<w:charset w:val="86"/>
+<w:family w:val="auto"/>
+<w:pitch w:val="variable"/>
+<w:sig w:usb-0="00000003" w:usb-1="288F0000" w:usb-2="00000016" w:usb-3="00000000" w:csb-0="00040001" w:csb-1="00000000"/>
+</w:font>
+</w:fonts>
+<w:styles>
+<w:versionOfBuiltInStylenames w:val="7"/>
+<w:latentStyles w:defLockedState="off" w:latentStyleCount="267">
+<w:lsdException w:name="Normal"/>
+<w:lsdException w:name="heading 1"/>
+<w:lsdException w:name="heading 2"/>
+<w:lsdException w:name="heading 3"/>
+<w:lsdException w:name="heading 4"/>
+<w:lsdException w:name="heading 5"/>
+<w:lsdException w:name="heading 6"/>
+<w:lsdException w:name="heading 7"/>
+<w:lsdException w:name="heading 8"/>
+<w:lsdException w:name="heading 9"/>
+<w:lsdException w:name="toc 1"/>
+<w:lsdException w:name="toc 2"/>
+<w:lsdException w:name="toc 3"/>
+<w:lsdException w:name="toc 4"/>
+<w:lsdException w:name="toc 5"/>
+<w:lsdException w:name="toc 6"/>
+<w:lsdException w:name="toc 7"/>
+<w:lsdException w:name="toc 8"/>
+<w:lsdException w:name="toc 9"/>
+<w:lsdException w:name="caption"/>
+<w:lsdException w:name="Title"/>
+<w:lsdException w:name="Default Paragraph Font"/>
+<w:lsdException w:name="Subtitle"/>
+<w:lsdException w:name="Strong"/>
+<w:lsdException w:name="Emphasis"/>
+<w:lsdException w:name="Table Grid"/>
+<w:lsdException w:name="Placeholder Text"/>
+<w:lsdException w:name="No Spacing"/>
+<w:lsdException w:name="Light Shading"/>
+<w:lsdException w:name="Light List"/>
+<w:lsdException w:name="Light Grid"/>
+<w:lsdException w:name="Medium Shading 1"/>
+<w:lsdException w:name="Medium Shading 2"/>
+<w:lsdException w:name="Medium List 1"/>
+<w:lsdException w:name="Medium List 2"/>
+<w:lsdException w:name="Medium Grid 1"/>
+<w:lsdException w:name="Medium Grid 2"/>
+<w:lsdException w:name="Medium Grid 3"/>
+<w:lsdException w:name="Dark List"/>
+<w:lsdException w:name="Colorful Shading"/>
+<w:lsdException w:name="Colorful List"/>
+<w:lsdException w:name="Colorful Grid"/>
+<w:lsdException w:name="Light Shading Accent 1"/>
+<w:lsdException w:name="Light List Accent 1"/>
+<w:lsdException w:name="Light Grid Accent 1"/>
+<w:lsdException w:name="Medium Shading 1 Accent 1"/>
+<w:lsdException w:name="Medium Shading 2 Accent 1"/>
+<w:lsdException w:name="Medium List 1 Accent 1"/>
+<w:lsdException w:name="Revision"/>
+<w:lsdException w:name="List Paragraph"/>
+<w:lsdException w:name="Quote"/>
+<w:lsdException w:name="Intense Quote"/>
+<w:lsdException w:name="Medium List 2 Accent 1"/>
+<w:lsdException w:name="Medium Grid 1 Accent 1"/>
+<w:lsdException w:name="Medium Grid 2 Accent 1"/>
+<w:lsdException w:name="Medium Grid 3 Accent 1"/>
+<w:lsdException w:name="Dark List Accent 1"/>
+<w:lsdException w:name="Colorful Shading Accent 1"/>
+<w:lsdException w:name="Colorful List Accent 1"/>
+<w:lsdException w:name="Colorful Grid Accent 1"/>
+<w:lsdException w:name="Light Shading Accent 2"/>
+<w:lsdException w:name="Light List Accent 2"/>
+<w:lsdException w:name="Light Grid Accent 2"/>
+<w:lsdException w:name="Medium Shading 1 Accent 2"/>
+<w:lsdException w:name="Medium Shading 2 Accent 2"/>
+<w:lsdException w:name="Medium List 1 Accent 2"/>
+<w:lsdException w:name="Medium List 2 Accent 2"/>
+<w:lsdException w:name="Medium Grid 1 Accent 2"/>
+<w:lsdException w:name="Medium Grid 2 Accent 2"/>
+<w:lsdException w:name="Medium Grid 3 Accent 2"/>
+<w:lsdException w:name="Dark List Accent 2"/>
+<w:lsdException w:name="Colorful Shading Accent 2"/>
+<w:lsdException w:name="Colorful List Accent 2"/>
+<w:lsdException w:name="Colorful Grid Accent 2"/>
+<w:lsdException w:name="Light Shading Accent 3"/>
+<w:lsdException w:name="Light List Accent 3"/>
+<w:lsdException w:name="Light Grid Accent 3"/>
+<w:lsdException w:name="Medium Shading 1 Accent 3"/>
+<w:lsdException w:name="Medium Shading 2 Accent 3"/>
+<w:lsdException w:name="Medium List 1 Accent 3"/>
+<w:lsdException w:name="Medium List 2 Accent 3"/>
+<w:lsdException w:name="Medium Grid 1 Accent 3"/>
+<w:lsdException w:name="Medium Grid 2 Accent 3"/>
+<w:lsdException w:name="Medium Grid 3 Accent 3"/>
+<w:lsdException w:name="Dark List Accent 3"/>
+<w:lsdException w:name="Colorful Shading Accent 3"/>
+<w:lsdException w:name="Colorful List Accent 3"/>
+<w:lsdException w:name="Colorful Grid Accent 3"/>
+<w:lsdException w:name="Light Shading Accent 4"/>
+<w:lsdException w:name="Light List Accent 4"/>
+<w:lsdException w:name="Light Grid Accent 4"/>
+<w:lsdException w:name="Medium Shading 1 Accent 4"/>
+<w:lsdException w:name="Medium Shading 2 Accent 4"/>
+<w:lsdException w:name="Medium List 1 Accent 4"/>
+<w:lsdException w:name="Medium List 2 Accent 4"/>
+<w:lsdException w:name="Medium Grid 1 Accent 4"/>
+<w:lsdException w:name="Medium Grid 2 Accent 4"/>
+<w:lsdException w:name="Medium Grid 3 Accent 4"/>
+<w:lsdException w:name="Dark List Accent 4"/>
+<w:lsdException w:name="Colorful Shading Accent 4"/>
+<w:lsdException w:name="Colorful List Accent 4"/>
+<w:lsdException w:name="Colorful Grid Accent 4"/>
+<w:lsdException w:name="Light Shading Accent 5"/>
+<w:lsdException w:name="Light List Accent 5"/>
+<w:lsdException w:name="Light Grid Accent 5"/>
+<w:lsdException w:name="Medium Shading 1 Accent 5"/>
+<w:lsdException w:name="Medium Shading 2 Accent 5"/>
+<w:lsdException w:name="Medium List 1 Accent 5"/>
+<w:lsdException w:name="Medium List 2 Accent 5"/>
+<w:lsdException w:name="Medium Grid 1 Accent 5"/>
+<w:lsdException w:name="Medium Grid 2 Accent 5"/>
+<w:lsdException w:name="Medium Grid 3 Accent 5"/>
+<w:lsdException w:name="Dark List Accent 5"/>
+<w:lsdException w:name="Colorful Shading Accent 5"/>
+<w:lsdException w:name="Colorful List Accent 5"/>
+<w:lsdException w:name="Colorful Grid Accent 5"/>
+<w:lsdException w:name="Light Shading Accent 6"/>
+<w:lsdException w:name="Light List Accent 6"/>
+<w:lsdException w:name="Light Grid Accent 6"/>
+<w:lsdException w:name="Medium Shading 1 Accent 6"/>
+<w:lsdException w:name="Medium Shading 2 Accent 6"/>
+<w:lsdException w:name="Medium List 1 Accent 6"/>
+<w:lsdException w:name="Medium List 2 Accent 6"/>
+<w:lsdException w:name="Medium Grid 1 Accent 6"/>
+<w:lsdException w:name="Medium Grid 2 Accent 6"/>
+<w:lsdException w:name="Medium Grid 3 Accent 6"/>
+<w:lsdException w:name="Dark List Accent 6"/>
+<w:lsdException w:name="Colorful Shading Accent 6"/>
+<w:lsdException w:name="Colorful List Accent 6"/>
+<w:lsdException w:name="Colorful Grid Accent 6"/>
+<w:lsdException w:name="Subtle Emphasis"/>
+<w:lsdException w:name="Intense Emphasis"/>
+<w:lsdException w:name="Subtle Reference"/>
+<w:lsdException w:name="Intense Reference"/>
+<w:lsdException w:name="Book Title"/>
+<w:lsdException w:name="Bibliography"/>
+<w:lsdException w:name="TOC Heading"/>
+</w:latentStyles>
+<w:style w:type="paragraph" w:default="on" w:styleId="a">
+<w:name w:val="Normal"/>
+<wx:uiName wx:val="正文"/>
+<w:pPr>
+<w:widowControl w:val="off"/>
+<w:jc w:val="both"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Calibri"/>
+<w:kern w:val="2"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="22"/>
+<w:lang w:val="EN-US" w:fareast="ZH-CN" w:bidi="AR-SA"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:default="on" w:styleId="a0">
+<w:name w:val="Default Paragraph Font"/>
+<wx:uiName wx:val="默认段落字体"/>
+</w:style>
+<w:style w:type="table" w:default="on" w:styleId="a1">
+<w:name w:val="Normal Table"/>
+<wx:uiName wx:val="普通表格"/>
+<w:rPr>
+<wx:font wx:val="Calibri"/>
+<w:lang w:val="EN-US" w:fareast="ZH-CN" w:bidi="AR-SA"/>
+</w:rPr>
+<w:tblPr>
+<w:tblInd w:w="0" w:type="dxa"/>
+<w:tblCellMar>
+<w:top w:w="0" w:type="dxa"/>
+<w:left w:w="108" w:type="dxa"/>
+<w:bottom w:w="0" w:type="dxa"/>
+<w:right w:w="108" w:type="dxa"/>
+</w:tblCellMar>
+</w:tblPr>
+</w:style>
+<w:style w:type="list" w:default="on" w:styleId="a2">
+<w:name w:val="No List"/>
+<wx:uiName wx:val="无列表"/>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a3">
+<w:name w:val="Balloon Text"/>
+<wx:uiName wx:val="批注框文本"/>
+<w:basedOn w:val="a"/>
+<w:link w:val="Char"/>
+<w:rsid w:val="002C1CFA"/>
+<w:rPr>
+<wx:font wx:val="Calibri"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="Char">
+<w:name w:val="批注框文本 Char"/>
+<w:link w:val="a3"/>
+<w:rsid w:val="002C1CFA"/>
+<w:rPr>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a4">
+<w:name w:val="header"/>
+<wx:uiName wx:val="页眉"/>
+<w:basedOn w:val="a"/>
+<w:link w:val="Char0"/>
+<w:rsid w:val="00063BDF"/>
+<w:pPr>
+<w:pBdr>
+<w:bottom w:val="single" w:sz="6" wx:bdrwidth="15" w:space="1" w:color="auto"/>
+</w:pBdr>
+<w:tabs>
+<w:tab w:val="center" w:pos="4153"/>
+<w:tab w:val="right" w:pos="8306"/>
+</w:tabs>
+<w:snapToGrid w:val="off"/>
+<w:jc w:val="center"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Calibri"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="Char0">
+<w:name w:val="页眉 Char"/>
+<w:link w:val="a4"/>
+<w:rsid w:val="00063BDF"/>
+<w:rPr>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a5">
+<w:name w:val="footer"/>
+<wx:uiName wx:val="页脚"/>
+<w:basedOn w:val="a"/>
+<w:link w:val="Char1"/>
+<w:rsid w:val="00063BDF"/>
+<w:pPr>
+<w:tabs>
+<w:tab w:val="center" w:pos="4153"/>
+<w:tab w:val="right" w:pos="8306"/>
+</w:tabs>
+<w:snapToGrid w:val="off"/>
+<w:jc w:val="left"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Calibri"/>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="character" w:styleId="Char1">
+<w:name w:val="页脚 Char"/>
+<w:link w:val="a5"/>
+<w:rsid w:val="00063BDF"/>
+<w:rPr>
+<w:sz w:val="18"/>
+<w:sz-cs w:val="18"/>
+</w:rPr>
+</w:style>
+<w:style w:type="table" w:styleId="a6">
+<w:name w:val="Table Grid"/>
+<wx:uiName wx:val="网格型"/>
+<w:basedOn w:val="a1"/>
+<w:rsid w:val="00063BDF"/>
+<w:rPr>
+<wx:font wx:val="Calibri"/>
+</w:rPr>
+<w:tblPr>
+<w:tblBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideH w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideV w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tblBorders>
+</w:tblPr>
+</w:style>
+<w:style w:type="paragraph" w:styleId="a7">
+<w:name w:val="No Spacing"/>
+<wx:uiName wx:val="无间隔"/>
+<w:rsid w:val="00063BDF"/>
+<w:pPr>
+<w:widowControl w:val="off"/>
+<w:jc w:val="both"/>
+</w:pPr>
+<w:rPr>
+<wx:font wx:val="Calibri"/>
+<w:kern w:val="2"/>
+<w:sz w:val="21"/>
+<w:sz-cs w:val="22"/>
+<w:lang w:val="EN-US" w:fareast="ZH-CN" w:bidi="AR-SA"/>
+</w:rPr>
+</w:style>
+</w:styles>
+<w:shapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="2049"/>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1"/>
+</o:shapelayout>
+</w:shapeDefaults>
+<w:docPr>
+<w:view w:val="print"/>
+<w:zoom w:percent="100"/>
+<w:doNotEmbedSystemFonts/>
+<w:bordersDontSurroundHeader/>
+<w:bordersDontSurroundFooter/>
+<w:proofState w:spelling="clean" w:grammar="clean"/>
+<w:defaultTabStop w:val="420"/>
+<w:drawingGridVerticalSpacing w:val="156"/>
+<w:displayHorizontalDrawingGridEvery w:val="0"/>
+<w:displayVerticalDrawingGridEvery w:val="2"/>
+<w:punctuationKerning/>
+<w:characterSpacingControl w:val="CompressPunctuation"/>
+<w:optimizeForBrowser/>
+<w:allowPNG/>
+<w:validateAgainstSchema/>
+<w:saveInvalidXML w:val="off"/>
+<w:ignoreMixedContent w:val="off"/>
+<w:alwaysShowPlaceholderText w:val="off"/>
+<w:hdrShapeDefaults>
+<o:shapedefaults v:ext="edit" spidmax="2049"/>
+</w:hdrShapeDefaults>
+<w:footnotePr>
+<w:footnote w:type="separator">
+<w:p wsp:rsidR="00587899" wsp:rsidRDefault="00587899" wsp:rsidP="00063BDF">
+<w:r>
+<w:separator/>
+</w:r>
+</w:p>
+</w:footnote>
+<w:footnote w:type="continuation-separator">
+<w:p wsp:rsidR="00587899" wsp:rsidRDefault="00587899" wsp:rsidP="00063BDF">
+<w:r>
+<w:continuationSeparator/>
+</w:r>
+</w:p>
+</w:footnote>
+</w:footnotePr>
+<w:endnotePr>
+<w:endnote w:type="separator">
+<w:p wsp:rsidR="00587899" wsp:rsidRDefault="00587899" wsp:rsidP="00063BDF">
+<w:r>
+<w:separator/>
+</w:r>
+</w:p>
+</w:endnote>
+<w:endnote w:type="continuation-separator">
+<w:p wsp:rsidR="00587899" wsp:rsidRDefault="00587899" wsp:rsidP="00063BDF">
+<w:r>
+<w:continuationSeparator/>
+</w:r>
+</w:p>
+</w:endnote>
+</w:endnotePr>
+<w:compat>
+<w:spaceForUL/>
+<w:balanceSingleByteDoubleByteWidth/>
+<w:doNotLeaveBackslashAlone/>
+<w:ulTrailSpace/>
+<w:doNotExpandShiftReturn/>
+<w:adjustLineHeightInTable/>
+<w:breakWrappedTables/>
+<w:snapToGridInCell/>
+<w:wrapTextWithPunct/>
+<w:useAsianBreakRules/>
+<w:dontGrowAutofit/>
+<w:useFELayout/>
+</w:compat>
+<wsp:rsids>
+<wsp:rsidRoot wsp:val="002C1CFA"/>
+<wsp:rsid wsp:val="000175F9"/>
+<wsp:rsid wsp:val="0003314B"/>
+<wsp:rsid wsp:val="00062D2C"/>
+<wsp:rsid wsp:val="00063BDF"/>
+<wsp:rsid wsp:val="000C6E58"/>
+<wsp:rsid wsp:val="001F2FDE"/>
+<wsp:rsid wsp:val="001F4AA7"/>
+<wsp:rsid wsp:val="002C1CFA"/>
+<wsp:rsid wsp:val="002F1DAA"/>
+<wsp:rsid wsp:val="004059F0"/>
+<wsp:rsid wsp:val="004456D2"/>
+<wsp:rsid wsp:val="00587899"/>
+<wsp:rsid wsp:val="00740F16"/>
+<wsp:rsid wsp:val="008E298E"/>
+<wsp:rsid wsp:val="008F3232"/>
+<wsp:rsid wsp:val="00962337"/>
+<wsp:rsid wsp:val="00C14F4C"/>
+<wsp:rsid wsp:val="00DF1824"/>
+</wsp:rsids>
+</w:docPr>
+<w:body>
+<wx:sect>
+<w:tbl>
+<w:tblPr>
+<w:tblW w:w="9498" w:type="dxa"/>
+<w:tblInd w:w="-318" w:type="dxa"/>
+<w:tblBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideH w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideV w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tblBorders>
+<w:tblLook w:val="04A0"/>
+</w:tblPr>
+<w:tblGrid>
+<w:gridCol w:w="1702"/>
+<w:gridCol w:w="7796"/>
+</w:tblGrid>
+<w:tr wsp:rsidR="00063BDF" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="705"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1702" w:type="dxa"/>
+<w:tcBorders>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="00063BDF" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00063BDF" wsp:rsidP="00063BDF">
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>涉及隐私，此件</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00063BDF" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00063BDF" wsp:rsidP="00063BDF">
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>保密，妥善保存</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="7796" w:type="dxa"/>
+<w:tcBorders>
+<w:top w:val="nil"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="nil"/>
+<w:right w:val="nil"/>
+</w:tcBorders>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="00063BDF" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00063BDF" wsp:rsidP="008E298E">
+<w:pPr>
+<w:jc w:val="right"/>
+</w:pPr>
+</w:p>
+<w:p wsp:rsidR="00063BDF" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00063BDF" wsp:rsidP="008E298E">
+<w:pPr>
+<w:wordWrap w:val="off"/>
+<w:jc w:val="right"/>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>        </w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>建档号：</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${alxx.jdh!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+</w:tbl>
+<w:p wsp:rsidR="008F3232" wsp:rsidRDefault="00063BDF" wsp:rsidP="00063BDF">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="32"/>
+<w:sz-cs w:val="32"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="00063BDF">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="32"/>
+<w:sz-cs w:val="32"/>
+</w:rPr>
+<w:t>西安交通大学学生学业记录表（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="00063BDF">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz w:val="32"/>
+<w:sz-cs w:val="32"/>
+</w:rPr>
+<w:t>F3</w:t>
+</w:r>
+<w:r wsp:rsidRPr="00063BDF">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz w:val="32"/>
+<w:sz-cs w:val="32"/>
+</w:rPr>
+<w:t>）</w:t>
+</w:r>
+</w:p>
+<w:tbl>
+<w:tblPr>
+<w:tblW w:w="9457" w:type="dxa"/>
+<w:tblInd w:w="-318" w:type="dxa"/>
+<w:tblBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideH w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:insideV w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tblBorders>
+<w:tblLayout w:type="Fixed"/>
+<w:tblLook w:val="04A0"/>
+</w:tblPr>
+<w:tblGrid>
+<w:gridCol w:w="1135"/>
+<w:gridCol w:w="851"/>
+<w:gridCol w:w="378"/>
+<w:gridCol w:w="47"/>
+<w:gridCol w:w="425"/>
+<w:gridCol w:w="682"/>
+<w:gridCol w:w="452"/>
+<w:gridCol w:w="284"/>
+<w:gridCol w:w="425"/>
+<w:gridCol w:w="49"/>
+<w:gridCol w:w="234"/>
+<w:gridCol w:w="142"/>
+<w:gridCol w:w="567"/>
+<w:gridCol w:w="284"/>
+<w:gridCol w:w="141"/>
+<w:gridCol w:w="142"/>
+<w:gridCol w:w="332"/>
+<w:gridCol w:w="93"/>
+<w:gridCol w:w="429"/>
+<w:gridCol w:w="330"/>
+<w:gridCol w:w="92"/>
+<w:gridCol w:w="709"/>
+<w:gridCol w:w="214"/>
+<w:gridCol w:w="1020"/>
+</w:tblGrid>
+<w:tr wsp:rsidR="001F4AA7" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="300"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2836" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:tcBorders>
+<w:right w:val="nil"/>
+</w:tcBorders>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="001F4AA7" wsp:rsidRPr="008E298E" wsp:rsidRDefault="001F4AA7" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>建档日期：</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${alxx.jdrq!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3734" w:type="dxa"/>
+<w:gridSpan w:val="12"/>
+<w:tcBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:left w:val="nil"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+<w:right w:val="nil"/>
+</w:tcBorders>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="001F4AA7" wsp:rsidRPr="008E298E" wsp:rsidRDefault="001F4AA7" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>建档原因：</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${alxx.jdyy!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2887" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:tcBorders>
+<w:left w:val="nil"/>
+</w:tcBorders>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="001F4AA7" wsp:rsidRPr="008E298E" wsp:rsidRDefault="001F4AA7" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>特别标注：</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${alxx.tbbz!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="453"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1135" w:type="dxa"/>
+<w:vmerge w:val="restart"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>学生基本</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>信息</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="851" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>姓名</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1532" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${xm!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="736" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>性别</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="850" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${xbmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1134" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>所在学院</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1184" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${xymc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1015" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>班级</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1020" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${zybjmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1135" w:type="dxa"/>
+<w:vmerge/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="851" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>宿舍</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1532" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${ss!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="736" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>手机</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1417" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${sjhm!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="992" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>家庭地址</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2794" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${jtdz!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+    <#list bjgkclist as bjgkc>
+<w:tr wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1135" w:type="dxa"/>
+<w:vmerge/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1276" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>不及格课程</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1559" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${bjgkc.kcmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="992" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:tcBorders>
+<w:tr2bl w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>分数</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>   </w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>学分</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="993" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:tcBorders>
+<w:tr2bl w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="auto"/>
+</w:tcBorders>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="000C6E58">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${bjgkc.cj!}</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="000C6E58">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>    ${bjgkc.xf!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="708" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>重修补考</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="851" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${bjgkc.cxckmc!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="709" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>考试时间</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1234" w:type="dxa"/>
+<w:gridSpan w:val="2"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="000C6E58" wsp:rsidRPr="008E298E" wsp:rsidRDefault="000C6E58" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${bjgkc.ksrq!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+    </#list>
+<w:tr wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1135" w:type="dxa"/>
+<w:vmerge w:val="restart"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>联系人</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>基本情况</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="851" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>辅导员</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1532" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+     <#list fdyxx as fdy>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${fdy.xm!}</w:t>
+</w:r>
+</w:p>
+    </#list>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1161" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>所在部门</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1417" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+    <#list fdyxx as fdy>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t> ${fdy.bmmc!}</w:t>
+</w:r>
+</w:p>
+    </#list>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="567" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>联系电话</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2794" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+    <#list fdyxx as fdy>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${fdy.lxdh!}</w:t>
+</w:r>
+</w:p>
+    </#list>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1135" w:type="dxa"/>
+<w:vmerge/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="851" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>班主任</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1532" w:type="dxa"/>
+<w:gridSpan w:val="4"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+    <#list bzrxx as bzr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${bzr.xm!}</w:t>
+</w:r>
+</w:p>
+</#list>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1161" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>所在部门</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1417" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<#list bzrxx as bzr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${bzr.bmmc!}</w:t>
+</w:r>
+</w:p>
+</#list>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="567" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>联系电话</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2794" w:type="dxa"/>
+<w:gridSpan w:val="6"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<#list bzrxx as bzr>
+<w:p wsp:rsidR="004059F0" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004059F0" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${bzr.lxdh!}</w:t>
+</w:r>
+</w:p>
+</#list>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1135" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>顺序</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3544" w:type="dxa"/>
+<w:gridSpan w:val="8"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>内容参考</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4778" w:type="dxa"/>
+<w:gridSpan w:val="15"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>问题记录</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1135" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>不</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>及</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>格</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>课</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>程</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>分</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>析</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3544" w:type="dxa"/>
+<w:gridSpan w:val="8"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${alxx.xn!}</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>学期</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+</w:rPr>
+<w:t>${alxx.xq!}</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>学年</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00C14F4C" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>1</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）本学期所开设课程的门数；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>2</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）本学期总学分数；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>3</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）不及格课程学分综合、在总学分中所占比例；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>4</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）不及格课程类型和性质；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>5</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）是否为最高、最低学分课程；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>6</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）不及格课程之间的相关性；</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4778" w:type="dxa"/>
+<w:gridSpan w:val="15"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${alxx.bjgkcfx!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1135" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>不</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>及</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>格</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>原</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>因</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>分</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>析</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3544" w:type="dxa"/>
+<w:gridSpan w:val="8"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>1</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）学习态度是否端正；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>2</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）对学习是否有兴趣；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>3</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）学习时间安排是否合理；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>4</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）学习任务是否过重；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>5</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）课余时间是否利用充分；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>6</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）社会兼职是否过多；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>7</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）学习方法是否不当；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>8</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）对教师的授课方法是否认同；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>9</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）基础课程的学习是否连贯；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>10</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）是否沉湎于网络；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>11</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）是否因感情原因；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>12</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）是否有过奖惩记录；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>13</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）是否因积欠的不及格课程过重；</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4778" w:type="dxa"/>
+<w:gridSpan w:val="15"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00C14F4C" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${alxx.bjgyyfx!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1135" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>改</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>进</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:proofErr w:type="gramStart"/>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>措</w:t>
+</w:r>
+<w:proofErr w:type="gramEnd"/>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>施</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3544" w:type="dxa"/>
+<w:gridSpan w:val="8"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>1</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）学生自己准备如何补救和改进；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>2</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）学习方法、努力程度、时间保</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>证；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>3</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）是否减少不必要的活动；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>4</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）是否准备结成互助小组；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>5</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）是否正被重修、合适重修；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>6</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）是否准备制定完备的学习计划；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>7</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）补救和改进的具体建议与措施；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>8</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）是否告知学号是呢</w:t>
+</w:r>
+<w:proofErr w:type="gramStart"/>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>个</w:t>
+</w:r>
+<w:proofErr w:type="gramEnd"/>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>家长；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>9</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）对（有可能）退学警告、退学的认识和态度；</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4778" w:type="dxa"/>
+<w:gridSpan w:val="15"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${alxx.gjcs!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1135" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>其</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>他</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>原</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>因</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>分</w:t>
+</w:r>
+</w:p>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>析</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="3544" w:type="dxa"/>
+<w:gridSpan w:val="8"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00DF1824" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>1</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）有没有学习之外的困难；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>2</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）困难产生的原因；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>3</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）心里因素；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>4</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）性格及人际交往情况；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>5</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）经济因素（学费、生活费是否有来源，是否申请贷款）；</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:br/>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>（</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:t>6</w:t>
+</w:r>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<wx:font wx:val="宋体"/>
+</w:rPr>
+<w:t>）家庭背景（父母职业及家庭收入）；</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="4778" w:type="dxa"/>
+<w:gridSpan w:val="15"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="00DF1824" wsp:rsidRPr="008E298E" wsp:rsidRDefault="0003314B" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${alxx.qtyyfx!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004456D2" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="9457" w:type="dxa"/>
+<w:gridSpan w:val="24"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004456D2" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004456D2" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>工作记录</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004456D2" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+    <w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+    <w:tcPr>
+        <w:tcW w:w="9457" w:type="dxa"/>
+        <w:gridSpan w:val="24"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vAlign w:val="center"/>
+    </w:tcPr>
+    <#list gzjlList as gzjl>
+    <w:p wsp:rsidR="004456D2" wsp:rsidRPr="00A541D4" wsp:rsidRDefault="00A541D4" wsp:rsidP="00A541D4">
+        <w:pPr>
+            <w:pStyle w:val="a7"/>
+            <w:jc w:val="left"/>
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+        </w:pPr>
+        <w:r>
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <wx:font wx:val="宋体"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>（</w:t>
+        </w:r>
+        <w:r>
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>${gzjl_index+1!}</w:t>
+        </w:r>
+        <w:r>
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <wx:font wx:val="宋体"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>）</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00A541D4">
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>${gzjl.ye!}</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00A541D4">
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <wx:font wx:val="宋体"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>年</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00A541D4">
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>${gzjl.mon!}</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00A541D4">
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <wx:font wx:val="宋体"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>月</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00A541D4">
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>${gzjl.da!}</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00A541D4">
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <wx:font wx:val="宋体"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>日，在</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00A541D4">
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>__</w:t>
+        </w:r>
+        <w:r wsp:rsidR="0034436A" wsp:rsidRPr="0034436A">
+            <w:rPr>
+                <w:u w:val="single"/>
+            </w:rPr>
+            <w:t>${gzjl.gzdd!}</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00A541D4">
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <wx:font wx:val="宋体"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>与</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00A541D4">
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>__</w:t>
+        </w:r>
+        <w:r wsp:rsidR="0034436A" wsp:rsidRPr="0034436A">
+            <w:rPr>
+                <w:u w:val="single"/>
+            </w:rPr>
+            <w:t>${gzjl.bfjsxm!}（${gzjl.zgh!}）</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00A541D4">
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <wx:font wx:val="宋体"/>
+                <w:sz w:val="18"/>
+                <w:sz-cs w:val="18"/>
+            </w:rPr>
+            <w:t>了解情况</w:t>
+        </w:r>
+    </w:p>
+    <w:p wsp:rsidR="00A541D4" wsp:rsidRDefault="00A541D4" wsp:rsidP="00A541D4">
+        <w:pPr>
+            <w:pStyle w:val="a7"/>
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <w:sz-cs w:val="21"/>
+            </w:rPr>
+        </w:pPr>
+        <w:r>
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <wx:font wx:val="宋体"/>
+                <w:sz-cs w:val="21"/>
+            </w:rPr>
+            <w:t>已做工作：</w:t>
+        </w:r>
+        <w:r>
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <w:sz-cs w:val="21"/>
+            </w:rPr>
+            <w:t>${gzjl.yzgz!}</w:t>
+        </w:r>
+    </w:p>
+    <w:p wsp:rsidR="00A541D4" wsp:rsidRPr="008E298E" wsp:rsidRDefault="00A541D4" wsp:rsidP="00A541D4">
+        <w:pPr>
+            <w:pStyle w:val="a7"/>
+            <w:rPr>
+                <w:sz-cs w:val="21"/>
+            </w:rPr>
+        </w:pPr>
+        <w:r>
+            <w:rPr>
+                <w:rFonts w:hint="fareast"/>
+                <wx:font wx:val="宋体"/>
+                <w:sz-cs w:val="21"/>
+            </w:rPr>
+            <w:t>下一步建议：</w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00C3164F">
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+            <w:t><#if gzjl.xybjy == '01'>■<#else>□</#if></w:t>
+        </w:r>
+        <w:r>
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+            <w:t> </w:t>
+        </w:r>
+        <w:r wsp:rsidRPr="00C3164F">
+            <w:rPr>
+                <wx:font wx:val="宋体"/>
+                <w:b/>
+            </w:rPr>
+            <w:t>1对1朋辈     </w:t>
+        </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+        <w:rPr>
+            <w:b/>
+        </w:rPr>
+        <w:t><#if gzjl.xybjy == '02'>■<#else>□</#if></w:t>
+    </w:r>
+    <w:r>
+        <w:rPr>
+            <w:b/>
+        </w:rPr>
+        <w:t> </w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+        <w:rPr>
+            <wx:font wx:val="宋体"/>
+            <w:b/>
+        </w:rPr>
+        <w:t>勤工助学     </w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+        <w:rPr>
+            <w:b/>
+        </w:rPr>
+        <w:t><#if gzjl.xybjy == '03'>■<#else>□</#if></w:t>
+    </w:r>
+    <w:r>
+    <w:rPr>
+        <w:b/>
+    </w:rPr>
+    <w:t> </w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+    <w:rPr>
+        <wx:font wx:val="宋体"/>
+        <w:b/>
+    </w:rPr>
+    <w:t>课外活动     </w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+    <w:rPr>
+        <w:b/>
+    </w:rPr>
+    <w:t><#if gzjl.xybjy == '04'>■<#else>□</#if></w:t>
+            </w:r>
+    <w:r>
+    <w:rPr>
+        <w:b/>
+    </w:rPr>
+    <w:t> </w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+    <w:rPr>
+        <wx:font wx:val="宋体"/>
+        <w:b/>
+    </w:rPr>
+    <w:t>教师帮扶     </w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+    <w:rPr>
+        <w:b/>
+    </w:rPr>
+    <w:t><#if gzjl.xybjy == '05'>■<#else>□</#if></w:t>
+            </w:r>
+    <w:r>
+    <w:rPr>
+        <w:b/>
+    </w:rPr>
+    <w:t> </w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+    <w:rPr>
+        <wx:font wx:val="宋体"/>
+        <w:b/>
+    </w:rPr>
+    <w:t>继续观察     </w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+    <w:rPr>
+        <w:b/>
+    </w:rPr>
+    <w:t><#if gzjl.xybjy == '06'>■<#else>□</#if></w:t>
+            </w:r>
+    <w:r>
+    <w:rPr>
+        <w:b/>
+    </w:rPr>
+    <w:t> </w:t>
+    </w:r>
+    <w:r wsp:rsidRPr="00C3164F">
+    <w:rPr>
+        <wx:font wx:val="宋体"/>
+        <w:b/>
+    </w:rPr>
+    <w:t>其他：${gzjl.jtcs!}</w:t>
+    </w:r>
+    </w:p>
+</#list>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004456D2" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2364" w:type="dxa"/>
+<w:gridSpan w:val="3"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004456D2" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004456D2" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:proofErr w:type="gramStart"/>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>撤档时间</w:t>
+</w:r>
+<w:proofErr w:type="gramEnd"/>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2364" w:type="dxa"/>
+<w:gridSpan w:val="7"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004456D2" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004456D2" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${alxx.cdsj!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2364" w:type="dxa"/>
+<w:gridSpan w:val="9"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004456D2" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004456D2" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:proofErr w:type="gramStart"/>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>撤档原因</w:t>
+</w:r>
+<w:proofErr w:type="gramEnd"/>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="2365" w:type="dxa"/>
+<w:gridSpan w:val="5"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004456D2" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004456D2" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>${alxx.cdyy!}</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+<w:tr wsp:rsidR="004456D2" wsp:rsidRPr="008E298E" wsp:rsidTr="008E298E">
+<w:trPr>
+<w:trHeight w:val="417"/>
+</w:trPr>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="9457" w:type="dxa"/>
+<w:gridSpan w:val="24"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+<w:vAlign w:val="center"/>
+</w:tcPr>
+<w:p wsp:rsidR="004456D2" wsp:rsidRPr="008E298E" wsp:rsidRDefault="004456D2" wsp:rsidP="008E298E">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="left"/>
+<w:rPr>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r wsp:rsidRPr="008E298E">
+<w:rPr>
+<w:rFonts w:hint="fareast"/>
+<wx:font wx:val="宋体"/>
+<w:sz-cs w:val="21"/>
+</w:rPr>
+<w:t>其他：</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+</w:tbl>
+<w:p wsp:rsidR="00063BDF" wsp:rsidRPr="00063BDF" wsp:rsidRDefault="00063BDF" wsp:rsidP="00063BDF">
+<w:pPr>
+<w:pStyle w:val="a7"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:sz w:val="32"/>
+<w:sz-cs w:val="32"/>
+</w:rPr>
+</w:pPr>
+</w:p>
+<w:sectPr wsp:rsidR="00063BDF" wsp:rsidRPr="00063BDF">
+<w:pgSz w:w="11906" w:h="16838"/>
+<w:pgMar w:top="1440" w:right="1800" w:bottom="1440" w:left="1800" w:header="851" w:footer="992" w:gutter="0"/>
+<w:cols w:space="425"/>
+<w:docGrid w:type="lines" w:line-pitch="312"/>
+</w:sectPr>
+</wx:sect>
+</w:body>
+</w:wordDocument>
