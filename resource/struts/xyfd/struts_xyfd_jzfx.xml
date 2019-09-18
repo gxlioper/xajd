@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <form-beans>
+        <form-bean name="xyyjForm" type="com.zfsoft.xgxt.xyfd.xyyj.XyyjForm"/>
+        <form-bean name="zjyjForm" type="com.zfsoft.xgxt.xyfd.zjyj.ZjyjForm"/>
+        <form-bean name="yjgyForm" type="com.zfsoft.xgxt.xyfd.yjgywh.YjgyForm"/>
+    </form-beans>
+    <action-mappings>
+        <!--学业预警-->
+        <action path="/xyfd_xyfd_xyyj" forward="/xyfd_xyyj.do?method=getXyyjList"/>
+        <action path="/xyfd_xyyj"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.xyyj.XyyjAction"
+                name="xyyjForm"
+                parameter="method">
+            <forward name="getXyyjList" path="/xsgzgl/xyfd/xyyj/xyyj/getXyyjList.jsp"/>
+            <forward name="xscjList" path="/xsgzgl/xyfd/xyyj/xyyj/xscjList.jsp"/>
+            <forward name="xscjfx" path="/xsgzgl/xyfd/xyyj/xyyj/xscjfx.jsp"/>
+            <forward name="kccjfx" path="/xsgzgl/xyfd/xyyj/xyyj/kccjfx.jsp"/>
+            <forward name="zycjfx" path="/xsgzgl/xyfd/xyyj/xyyj/zycjfx.jsp"/>
+        </action>
+
+        <!--转介预警-->
+        <action path="/xyfd_xyfd_zjyj" forward="/xyfd_zjyj.do?method=getZjyjList"/>
+        <action path="/xyfd_zjyj"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.zjyj.ZjyjAction"
+                name="zjyjForm"
+                parameter="method">
+            <forward name="getZjyjList" path="/xsgzgl/xyfd/xyyj/zjyj/getZjyjList.jsp"/>
+        </action>
+
+        <!--预警干预-->
+        <action path="/xyfd_xyfd_yjgy" forward="/xyfd_yjgy.do?method=yjgyList"/>
+        <action path="/xyfd_yjgy"
+                scope="request"
+                type="com.zfsoft.xgxt.xyfd.yjgywh.YjgyAction"
+                name="yjgyForm"
+                parameter="method">
+            <forward name="yjgyList" path="/xsgzgl/xyfd/xyyj/yjgy/getYjgyList.jsp"/>
+            <forward name="yjzj" path="/xsgzgl/xyfd/xyyj/yjgy/yjzj.jsp"/>
+            <forward name="selectJs" path="/xsgzgl/xyfd/xyyj/yjgy/selectJs.jsp"/>
+        </action>
+
+    </action-mappings>
+</struts-config>
