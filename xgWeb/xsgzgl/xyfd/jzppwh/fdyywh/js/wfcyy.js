@@ -180,28 +180,29 @@ function cancel() {
                 return false;
             }
         }
-        if(rows[0]['zt']=='5') {
-            showConfirmDivLayer("您确定要取消选择的预约吗？", {
-                "okFun": function () {
+        showConfirmDivLayer("您预约的（" + rows[0]['fdsj'] + "）在（" + rows[0]['fdsdd'] + "）由（" + rows[0]['fdjsxm'] + "）进行的（" + rows[0]['kcmc'] + "），是否确定取消？", {
+            "okFun": function () {
+                if(rows[0]['zt']=='5') {
                     jQuery.post("xyfd_fqyy.do?method=cancel&t=" + new Date().getTime(), {
                         values: ids.toString()
                     }, function (data) {
                         if(data["message"]=='1'){
                             var height = jQuery(window).height();
                             var url = 'xyfd_fqyy.do?method=qxYy&yyid=' + rows[0]["yyid"];
-                            showDialog('取消预约原因', 600, height-250, url);
+                            showDialog('取消预约原因', 600, height-450, url);
                         }else {
                             showAlertDivLayer(data["message"]);
                             jQuery("#dataTable").reloadGrid();
                         }
                     }, 'json');
+                }else if(rows[0]['zt'] == '1'){
+                    var height = jQuery(window).height();
+                    var url = 'xyfd_fqyy.do?method=qxYy&yyid=' + rows[0]["yyid"];
+                    showDialog('取消预约原因', 600, height-450, url);
                 }
-            });
-        }else if(rows[0]['zt'] == '1'){
-            var height = jQuery(window).height();
-            var url = 'xyfd_fqyy.do?method=qxYy&yyid=' + rows[0]["yyid"];
-            showDialog('取消预约原因', 600, height-250, url);
-        }
+            }
+        });
+
     }
 
 }

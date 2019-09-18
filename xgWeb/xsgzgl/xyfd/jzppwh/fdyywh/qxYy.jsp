@@ -27,6 +27,15 @@
                 }});
             });
         }
+
+        function changeyy() {
+            var qxyy = jQuery("#qxyy").val();
+            if(qxyy=='5'){
+                jQuery("#qtqk_tj").show();
+            }else {
+                jQuery("#qtqk_tj").hide();
+            }
+        }
     </script>
 </head>
 
@@ -44,15 +53,15 @@
                 <tr>
                     <th colspan="1" style="width: 20%;text-align: center;" ><span class="red">*</span>取消原因</th>
                     <td colspan="1">
-                        <html:select property="qxyy" styleId="qxyy">
+                        <html:select property="qxyy" styleId="qxyy" onchange="changeyy()">
                             <html:options collection="qxyyList" property="qxyydm"
                                           labelProperty="qxyymc" />
                         </html:select>
                     </td>
                 </tr>
-                <tr>
+                <tr id="qtqk_tj" style="display: none">
                     <td colspan="2">
-                        <textarea name='qtqk' id='qtqk' style='width: 100%;height: 300px;resize:none;'></textarea>
+                        <textarea name='qtqk' id='qtqk' style='width: 100%;height: 200px;resize:none;'></textarea>
                     </td>
                 </tr>
             </tbody>
