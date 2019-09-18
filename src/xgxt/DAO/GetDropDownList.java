@@ -7,9 +7,7 @@ package xgxt.DAO;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import com.zfsoft.basic.BasicDAO;
 import com.zfsoft.database.imp.DatabaseTableManipulateImpl;
@@ -409,7 +407,16 @@ public class GetDropDownList {
 		}
 		sql.append(" left join XG_XTWH_SYBJGLB b on a.bjdm = b.bjdm ");
 		sql.append(" where a.xydm like ? and a.zydm");
-		sql.append(" like ? and a.nj like ? and b.sydm like ? ");
+		sql.append(" like ? and a.nj like ? ");
+		if("fdy".equalsIgnoreCase(fplx)){ //此处用于辅导员编班
+			sql.append(" and b.sydm like ? ");
+		}else{ //此处用于班主任编班，去除书院限制！！！！！！！！！
+			List<String> arr = new ArrayList<>();
+			Collections.addAll(arr,setpara);
+			arr.remove(3);
+			setpara =(String[]) arr.toArray(new String[arr.size()]);
+
+		}
 		sql.append(" and exists(select 1 from   (  ");
 		sql.append(" select a.bjdm,case when b.bjdm is null then '未分配' else '已分配' end fpqk  ");
 		sql.append(" from bks_bjdm a  ");

@@ -12,6 +12,7 @@
     <script type="text/javascript" src="js/jquery/plugins/dataGrid/dataGrid.js"></script>
     <script type="text/javascript" src="xsgzgl/qgzx/xsgw/js/xsgwsh.js"></script>
     <script type="text/javascript" src="js/calendar/calendar.js"></script>
+    <script type="text/javascript" src="xsgzgl/comm/exportNew/import.js"></script>
     <script type="text/javascript">
         jQuery(function(){
             var gridSetting = {
@@ -103,6 +104,11 @@
             jQuery("form").eq(0).attr("action", url);
             jQuery("form").eq(0).submit();
         }
+        //导入方法
+        function importConfig() {
+            toImportDataNew("IMPORT_QGZX_ZGXS");
+            return false;
+        }
     </script>
 </head>
 
@@ -127,6 +133,9 @@
                     </li>
                     <li>
                         <a href="javascript:void(0);" onclick="add();return false;" class="btn_zj">增加在岗学生</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" onclick="importConfig();return false;" class="btn_dr">导入在岗学生</a>
                     </li>
                 </logic:equal>
                 <li>

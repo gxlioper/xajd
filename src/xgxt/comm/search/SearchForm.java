@@ -1241,6 +1241,7 @@ public class SearchForm extends CommForm {
     private List<HashMap<String, String>> sfdbTjList;
     private List<HashMap<String, String>> kcxzTjList;
     private List<HashMap<String, String>> fsbjTjList;
+    private List<HashMap<String, String>> yjyyTjList;
 
     public List<HashMap<String, String>> getFsbjTjList() {
         return fsbjTjList;
@@ -7687,6 +7688,17 @@ public class SearchForm extends CommForm {
         String[] dm = {"»î¶¯", "½²×ù"};
         String[] mc = {"»î¶¯", "½²×ù"};
         this.hdxsTjList = dao.arrayToList(dm, mc);
+    }
+
+    public List<HashMap<String, String>> getYjyyTjList() {
+        return yjyyTjList;
+    }
+
+    public void setYjyyTjList() {
+        DAO dao = DAO.getInstance();
+        String[] dm = {"Ñ§ÒµÔ¤¾¯","×´Ì¬Òì³£Ô¤¾¯","×ª½éÔ¤¾¯"};
+        String[] mc = {"Ñ§ÒµÔ¤¾¯","×´Ì¬Òì³£Ô¤¾¯","×ª½éÔ¤¾¯"};
+        this.yjyyTjList = dao.arrayToList(dm,mc);
     }
 
     /**

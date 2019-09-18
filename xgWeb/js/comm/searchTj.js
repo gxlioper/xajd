@@ -55,7 +55,7 @@ var jytj = ["xb","nj","xn","xq","nd","pycc","xz","xj","sfzx","sfyby",
 			"qjtslx","qjksjc","qjjsjc","kcmc","lb","jclb","gw","czr","knssqxz","hdpl","zjz","tnzt","sdzt","xmmkdm","jfxmdm","yyzc",
 			"csms","rdzt","bzrcpdj","xscpdj","qgrq","qgmx","ysjxjxmlx","jxjb","jxlbnew", "yxzt1","jxsqzd",
 			"lydq","xqah","drzw","sfqz","jxdmx","fkzt","sfhg","jd","gwlb","xiaoq","zjlysdzt","zzmmnew","sfsn","szdzb","zjlyshsdzt","sfxyyt","sfyyt","czlx","js","jjlx","tjztwpqs","jtgj","xmlb","xmdl",
-			"fwjg","xslb","knlx","fwlx","sfbm","lxnew","bxxz","clzb","sfgz","pcjg","sfsxzt","lnjdhk","bxxs","zjxy","ybqk","gfqkfl","sfgcj","kslb","hdxs","hdzl","sy","cqxxxjzt","hdjxzt","stzt","scly",
+			"fwjg","xslb","knlx","fwlx","sfbm","lxnew","bxxz","clzb","sfgz","pcjg","sfsxzt","lnjdhk","bxxs","zjxy","ybqk","gfqkfl","sfgcj","kslb","hdxs","yjyy","hdzl","sy","cqxxxjzt","hdjxzt","stzt","scly",
 			"smnj","smlx","dxq","sjd","jssf","wtjjcd","zcfs","dazcxx","bxlx","drhd","hdlx10699","sfdsh","bmlx","bjsblx","grsblx","sfdb","newstype","zt","zwlx","shztHb","shztZj",
 			"xxqk","qj","zsqk","zsqj","qskqlb","stxj","dwlb","gzxz","gwlx","xsgbzw","jldj","pm","sfkhtg","jb","thlx","sfzdgz",
 			"jfxz","bz","jszgzt","sfzg","sfzb","sblx","kcxz","fsbj","jjlxdm","sfgk","sfxn","sfgmbx","kclbdm","cz"];

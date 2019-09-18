@@ -355,6 +355,8 @@ public class SearchModel {
 	private String[] search_tj_sfgcj;
 	//西安交通大学
 	private String[] search_tj_hdxs;
+
+	private String[] search_tj_yjyy;
 	
 	private String[] search_tj_hdzl;
 
@@ -5719,6 +5721,14 @@ public class SearchModel {
 
 	public void setSearch_tj_hdxs(String[] searchTjHdxs) {
 		search_tj_hdxs = searchTjHdxs;
+	}
+
+	public String[] getSearch_tj_yjyy() {
+		return search_tj_yjyy;
+	}
+
+	public void setSearch_tj_yjyy(String[] searchTjYjyy) {
+		this.search_tj_yjyy = searchTjYjyy;
 	}
 
 	/**
