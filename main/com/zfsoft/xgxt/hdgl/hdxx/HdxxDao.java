@@ -232,8 +232,8 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 		sql.append(" ) a where a.hdzt = '1' and a.hdjssj>to_char(sysdate,'yyyy-MM-dd hh24:mm:ss') ");
 		sql.append(" union select * from Xg_Hdgl_Hdxxb where bmsf='0' ");
 		sql.append(" and hdjssj>to_char(sysdate, 'yyyy-MM-dd hh24:mm:ss')  ) t");
-		sql.append(" order by a.fbsj desc ");
-		String[] input = new String[]{user.getUserDep(),user.getUserSyDep(),user.getUserName()};
+		sql.append(" order by t.fbsj desc ");
+		String[] input = new String[]{user.getUserDep(),user.getUserSyDep()};
 		return getPageList(t,sql.toString(),input);
 	}
 	

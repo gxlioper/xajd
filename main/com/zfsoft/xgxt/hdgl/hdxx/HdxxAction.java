@@ -129,6 +129,11 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 	public ActionForward getHdxx(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		HdxxForm model = (HdxxForm) form;
 		User user = getUser(request);
+		if(!user.getUserType().equals("stu")){
+			request.setAttribute("errMsg","您无法访问该活动报名界面");
+			request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+			return null;
+		}
 		HashMap<String,String> data = service.getHdxx(model);
 		request.setAttribute("data", data);
 		return mapping.findForward("hdrybm");
@@ -749,7 +754,7 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 			url.append("://" + request.getServerName());
 			url.append(":" + request.getServerPort());
 			url.append(request.getContextPath());
-			url.append("/hdgl_hdxx.do?method=getHdxx&hdid=");
+			url.append("/hdgl_hdbm.do?method=getHdxx&hdid=");
 			url.append( model.getHdid());
 			String code = hdEwm.getEwm(url.toString());
 			code = "data:image/png;base64,"+code;

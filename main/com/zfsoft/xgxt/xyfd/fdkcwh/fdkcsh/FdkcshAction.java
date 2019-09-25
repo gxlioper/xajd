@@ -83,7 +83,9 @@ public class FdkcshAction extends SuperAction<FdkcshForm,FdkcshService> {
             String xm = fdkcsqService.getFdjs(fdkcsqForm);
             fdjs.append(fdkcsqForm.getFdjs() + "：" + xm);
         }else {
-            throw new Exception("登记号不存在");
+            request.setAttribute("errMsg","登记号不存在");
+            request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+            return null;
         }
         request.setAttribute("fdjsxm",fdjs.toString());
         HashMap<String,String> fdjsxx = fdkcsqService.getFdjsxx(fdkcsqForm);//辅导教师（朋辈志愿者）信息

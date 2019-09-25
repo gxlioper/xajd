@@ -88,11 +88,11 @@
 			                            <span>0</span>条
 			                        </div>
 									<label class="m-l-25"> </label>
-									<div class="sc_num">
-										<a href="javascript:;" id="showEwm" onclick="showDialog('签到二维码', 150, 150, 'hdgl_hdxq.do?method=getEwm&hdid=${data.hdid}');return false;">
-											签到二维码
-										</a>
-									</div>
+									<%--<div class="sc_num">--%>
+										<%--<a href="javascript:;" id="showEwm" onclick="showDialog('签到二维码', 150, 150, 'hdgl_hdxq.do?method=getEwm&hdid=${data.hdid}');return false;">--%>
+											<%--签到二维码--%>
+										<%--</a>--%>
+									<%--</div>--%>
                   			 </div>
                   			 <div class="button-groups m-15-0 col-sm-5 text-right p-r-0">
 								 <button class="btn btn-primary" onclick="bmlj();return false;">
