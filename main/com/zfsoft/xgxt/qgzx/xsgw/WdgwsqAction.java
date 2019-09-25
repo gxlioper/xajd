@@ -428,9 +428,9 @@ public class WdgwsqAction extends SuperAction {
 		} else if ("submit".equalsIgnoreCase(model.getType())) {
 			String result = service.saveSq(model, "submit");
 			
-			/*String[] mxrq = request.getParameterValues("mxrq");
+			String[] mxrq = request.getParameterValues("mxrq");
 			List<String[]> mxxmList = new ArrayList<String[]>();
-			
+
 			if (mxrq != null && mxrq.length > 0){
 				for (int i = 0 ; i < mxrq.length ; i++){
 					String[] mxxm = request.getParameterValues("mxxm"+i);
@@ -439,7 +439,7 @@ public class WdgwsqAction extends SuperAction {
 			}
 			if(null!=mxrq&&mxrq.length!=0){
 				service.saveQgmx(model, mxrq, mxxmList);
-			}*/
+			}
 			String messageKey = MessageKey.SYS_SELECT_SHLC_FAIL.equals(result) ? MessageKey.SYS_SELECT_SHLC_FAIL
 					: "true".equals(result) ? MessageKey.SYS_SUBMIT_SUCCESS
 							: MessageKey.SYS_SUBMIT_FAIL;

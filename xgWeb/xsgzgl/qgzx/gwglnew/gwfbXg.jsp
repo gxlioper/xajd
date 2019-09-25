@@ -42,6 +42,25 @@
                 }
             });
         }
+
+        function checkGz() {
+            var gzsx = '${gsgz.cjsx}';
+            var gwcjsx = jQuery("#gwcjsx").val();
+            if(gwcjsx>gzsx||gwcjsx==''){
+                var gwcjsx = jQuery("#gwcjsx").val(gzsx);
+                jQuery("#gwcjsx").focus();
+                return false;
+            }
+        }
+        function checkGs() {
+            var gssx = '${gsgz.gzscsx}';
+            var gzscsx = jQuery("#gssx").val();
+            if(gzscsx>gssx||gzscsx==''){
+                var gzscsx = jQuery("#gssx").val(gssx);
+                jQuery("#gssx").focus();
+                return false;
+            }
+        }
         //岗位类别改变
        /* function gwlbChange(target){
             var v = jQuery(target).val();
@@ -141,7 +160,7 @@
                 工资上限/月
             </th>
             <td>
-                <input type="text" name="gwcjsx" id="gwcjsx" value="${gsgz.cjsx}"  maxlength="7">
+                <input type="text" name="gwcjsx" id="gwcjsx" value="${model.gwcjsx}" onblur="checkGz()"  maxlength="7" placeholder="不得大于工资上限（${gsgz.cjsx}）">
             </td>
         </tr>
         <tr>
@@ -149,7 +168,7 @@
                 工时上限/月
             </th>
             <td colspan="3">
-                <input type="text" name="gssx" id="gssx" value="${gsgz.gzscsx}" maxlength="4">&nbsp;&nbsp;
+                <input type="text" name="gssx" id="gssx" value="${model.gssx}" onblur="checkGs()" maxlength="4" placeholder="不得大于工时上限（${gsgz.gzscsx}）">&nbsp;&nbsp;
                 <span id="label"></span>
             </td>
         </tr>

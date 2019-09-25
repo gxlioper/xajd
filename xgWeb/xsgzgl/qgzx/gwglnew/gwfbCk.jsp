@@ -85,7 +85,7 @@
                 岗位薪酬上限
             </th>
             <td>
-                ${gsgz.cjsx}元
+                ${model.gwcjsx}元
             </td>
         </tr>
         <tr>
@@ -93,7 +93,7 @@
                 工时上限
             </th>
             <td colspan="3">
-                ${gsgz.gzscsx}小时
+                ${model.gssx}小时
                 <span id="label"></span>
             </td>
         </tr>
