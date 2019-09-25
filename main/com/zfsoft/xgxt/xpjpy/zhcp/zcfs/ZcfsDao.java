@@ -1305,9 +1305,9 @@ public class ZcfsDao extends SuperDAOImpl<ZcfsModel> {
 		
 		StringBuilder sql = new StringBuilder();
 		if("11483".equals(Base.xxdm)){
-			sql.append(" select * from (select r11.dddm,r12.ddmc,t1.*,t22.mz,t3.nj,t3.xymc,t3.xydm,t3.zydm,t3.zymc,t3.bjmc,t4.cpzdm,t4.cpzmc,");
+			sql.append(" select * from (select r11.dddm,r12.ddmc,t1.*,t22.mz,t3.nj,t3.xymc,t3.xydm,t3.zydm,t3.zymc,t3.bjmc zybjmc,t11.bjmc,t4.cpzdm,t4.cpzmc,");
 		}else{
-			sql.append(" select * from (select t1.*,t22.mz,t3.nj,t3.xymc,t3.xydm,t3.zydm,t3.zymc,t3.bjmc,t4.cpzdm,t4.cpzmc,t10.bjmc zybjmc,t11.sydm sy, ");
+			sql.append(" select * from (select t1.*,t22.mz,t3.nj,t3.xymc,t3.xydm,t3.zydm,t3.zymc,t3.bjmc zybjmc,t4.cpzdm,t4.cpzmc,t11.bjmc ,t11.sydm sy, ");
 		}
 		sql.append("  case when t5.xh is null then '·ñ' else 'ÊÇ' end sfwtgg");
 		for (int i = 0 , j = zcxmList.size() ; i < j ; i++){
@@ -1345,8 +1345,8 @@ public class ZcfsDao extends SuperDAOImpl<ZcfsModel> {
 		sql.append(" t.xh,t.xn,t.xq from (select a.*,b.xmmc from xg_zhcp_zcfsb a left join xg_zhcp_zcxmb b on a.xmdm = b.xmdm ) ");
 		sql.append(" t ) group by xh,xn,xq ) t2 on t1.xh=t2.xh and t1.xn=t2.xn and t1.xq=t2.xq");
 		sql.append(" left join xsxxb t22 on t1.xh = t22.xh");
-		sql.append(" left join view_njxyzybj_all t3 on t1.bjdm=t3.bjdm");
-		sql.append(" left join view_njxyzybj_all t10 on t1.zybj=t10.bjdm");
+		sql.append(" left join view_njxyzybj_all t3 on t1.zybj=t3.bjdm");
+		//sql.append(" left join view_njxyzybj_all t10 on t1.zybj=t10.bjdm");
 		sql.append(" left join VIEW_NJSYBJ t11 on t1.BJDM=t11.BJDM ");
 
 		sql.append(" left join (select a.xn, a.xq, a.bjdm, a.cpzdm, b.cpzmc");

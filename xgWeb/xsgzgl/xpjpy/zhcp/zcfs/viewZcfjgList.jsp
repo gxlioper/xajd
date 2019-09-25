@@ -23,8 +23,8 @@
 					url:"xpj_zcfs.do?method=viewZcfjgList&doType=query",
 					params:getSuperSearch(),
 					multiselect:false,
-					sortname: "fs0",
-				 	sortorder: "desc"
+//					sortname: "fs0",  //会扰乱排序号的结果
+//				 	sortorder: "desc"
 				};
 
 				if(xxdm == "13108" && pmfs == "bjpm"){
