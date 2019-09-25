@@ -18,6 +18,7 @@ import org.apache.struts.action.ActionMapping;
 import xgxt.comm.CommService;
 import xgxt.comm.search.SearchModel;
 import xgxt.form.User;
+import xgxt.utils.FormModleCommon;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -54,30 +55,78 @@ public class YytjAction extends SuperAction<FdyyForm,YytjService> {
             response.getWriter().print(dataList);
             return null;
         }
-        boolean canWrite = false; //是否可写
-        if(user.getUserType().equals("stu")){
-            if (fdyyService.isPb(user)){//朋辈志愿者
-                canWrite = true;
-            }
-        }else {
-            if(!fdkcsqService.isAdmin(user)){ //不是管理员也不是辅导中心人员
-                if("fdy".equalsIgnoreCase(user.getUserStatus())){ //是辅导员
-                    canWrite = true;
-                }else {
-                    if(fdyyService.isJs(user)){ //是登记的辅导教师
-                        canWrite = true;
-                    }
-                }
-            }else {
-                canWrite = true;
-            }
-        }
-        request.setAttribute("canWrite",canWrite);
+//        boolean canWrite = false; //是否可写
+//        if(user.getUserType().equals("stu")){
+//            if (fdyyService.isPb(user)){//朋辈志愿者
+//                canWrite = true;
+//            }
+//        }else {
+//            if(!fdkcsqService.isAdmin(user)){ //不是管理员也不是辅导中心人员
+//                if("fdy".equalsIgnoreCase(user.getUserStatus())){ //是辅导员
+//                    canWrite = true;
+//                }else {
+//                    if(fdyyService.isJs(user)){ //是登记的辅导教师
+//                        canWrite = true;
+//                    }
+//                }
+//            }else {
+//                canWrite = true;
+//            }
+//        }
+//        request.setAttribute("canWrite",canWrite);
 
         String path = "xyfd_xyfd_yytj.do";
         request.setAttribute("path", path);
 //        FormModleCommon.commonRequestSet(request);
         return mapping.findForward("yytjList");
+    }
+
+    @SystemAuth(url = url)
+    public ActionForward pjtj(ActionMapping mapping, ActionForm form,
+                                  HttpServletRequest request, HttpServletResponse response) throws Exception{
+        FdyyForm model = (FdyyForm)form;
+        User user = getUser(request);
+        if(QUERY.equalsIgnoreCase(model.getType())){
+            // 生成高级查询对象
+            CommService comService = new CommService();
+            SearchModel searchModel = comService.getSearchModel(request);
+            model.setSearchModel(searchModel);
+            // 查询
+            List<HashMap<String, String>> resultList = service.getYytjList(model,user);
+
+            JSONArray dataList = JSONArray.fromObject(resultList);
+            response.getWriter().print(dataList);
+            return null;
+        }
+
+        String path = "xyfd_yytj.do?method=pitj";
+        request.setAttribute("path", path);
+        FormModleCommon.commonRequestSet(request);
+        return mapping.findForward("pjtj");
+    }
+
+    @SystemAuth(url = url)
+    public ActionForward qxtj(ActionMapping mapping, ActionForm form,
+                                  HttpServletRequest request, HttpServletResponse response) throws Exception{
+        FdyyForm model = (FdyyForm)form;
+        User user = getUser(request);
+        if(QUERY.equalsIgnoreCase(model.getType())){
+            // 生成高级查询对象
+            CommService comService = new CommService();
+            SearchModel searchModel = comService.getSearchModel(request);
+            model.setSearchModel(searchModel);
+            // 查询
+            List<HashMap<String, String>> resultList = service.getYytjList(model,user);
+
+            JSONArray dataList = JSONArray.fromObject(resultList);
+            response.getWriter().print(dataList);
+            return null;
+        }
+
+        String path = "xyfd_yytj.do?method=qxtj";
+        request.setAttribute("path", path);
+//        FormModleCommon.commonRequestSet(request);
+        return mapping.findForward("qxtj");
     }
 
     /**
@@ -95,7 +144,9 @@ public class YytjAction extends SuperAction<FdyyForm,YytjService> {
         FdyyForm model = (FdyyForm) form;
         String djh = request.getParameter("djh");
         if(StringUtil.isNull(djh)){
-            throw new Exception("登记号为空！");
+            request.setAttribute("errMsg","登记号不能为空");
+            request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+            return null;
         }
         HashMap<String,String> pjtjxx = service.getPjtj(djh); //辅导教师评价统计信息
         request.setAttribute("pjtjxx",pjtjxx);
@@ -154,7 +205,9 @@ public class YytjAction extends SuperAction<FdyyForm,YytjService> {
         FdyyForm model = (FdyyForm) form;
         String djh = request.getParameter("djh");
         if(StringUtil.isNull(djh)){
-            throw new Exception("登记号为空！");
+            request.setAttribute("errMsg","登记号不能为空");
+            request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+            return null;
         }
         HashMap<String,String> qxtj = service.getJsqxxx(djh); //预约取消合计
         request.setAttribute("qxtj",qxtj);

@@ -96,7 +96,6 @@
     			name="hdxxForm"
     			parameter="method">	
     		<forward name="hdxxList" path="/xsgzgl/hdgl/hdxx/hdxxList.jsp"/>
-    		<forward name="hdrybm" path="/xsgzgl/hdgl/hdxx/hdrybm.jsp"/>
     		<forward name="jdtx" path="/xsgzgl/hdgl/hdxx/jdtx.jsp"/> 
     		<forward name="showDw" path="/xsgzgl/hdgl/hdxx/showDw.jsp"/>
     		<forward name="hdpl" path="/xsgzgl/hdgl/hdxx/hdpl.jsp"/>
@@ -225,6 +224,14 @@
 			<forward name="bmdList" path="/xsgzgl/hdgl/bmdwh/bmdList.jsp"/>
 			<forward name="addBmd" path="/xsgzgl/hdgl/bmdwh/addBmd.jsp"/>
 			<forward name="updateBmd" path="/xsgzgl/hdgl/bmdwh/updateBmd.jsp"/>
+		</action>
+
+		<action path="/hdgl_hdbm"
+				scope="request"
+				type="com.zfsoft.xgxt.hdgl.hdxx.HdxxAction"
+				name="hdxxForm"
+				parameter="method">
+			<forward name="hdrybm" path="/xsgzgl/hdgl/hdxx/hdrybm.jsp"/>
 		</action>
 	</action-mappings>
 </struts-config>

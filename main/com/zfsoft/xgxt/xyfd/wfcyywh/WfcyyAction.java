@@ -389,7 +389,7 @@ public class WfcyyAction extends SuperAction<FdyyForm,FdyyService> {
             response.getWriter().print(dataList);
             return null;
         }
-        String path = "xyfd_xyfd_fqyy.do";
+        String path = "xyfd_xyfd_fdyy_stu.do";
         request.setAttribute("path", path);
         FormModleCommon.commonRequestSet(request);
         return mapping.findForward("fdyyListStu");
@@ -428,7 +428,7 @@ public class WfcyyAction extends SuperAction<FdyyForm,FdyyService> {
         }
         request.setAttribute("isJsOrPb",isJsOrPb);
 
-        String path = "xyfd_xyfd_fqyy.do";
+        String path = "xyfd_xyfd_fdyy_js.do";
         request.setAttribute("path", path);
         FormModleCommon.commonRequestSet(request);
         return mapping.findForward("fdyyListTea");

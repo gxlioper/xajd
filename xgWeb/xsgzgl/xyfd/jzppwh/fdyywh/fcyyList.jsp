@@ -85,7 +85,7 @@
 					</ul>
 				</div>
 				<!-- 过滤条件 -->	
-				<%@ include file="/xsgzgl/xyfd/jzppwh/fdyywh/superSearchAreaforFdyy.jsp"%>
+				<%@ include file="/comm/search/superSearchAreaStu.jsp"%>
 				<!-- 过滤条件 end-->
 			</div>
 		</html:form>

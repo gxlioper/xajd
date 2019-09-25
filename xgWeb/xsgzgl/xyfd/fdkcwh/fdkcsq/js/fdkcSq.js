@@ -11,23 +11,19 @@ function xhLink(cellValue, rowObject) {
         + "</a>";
 }
 function view(sqid) {
-    var height = jQuery(window).height();
-    showDialog("朋辈志愿者申请查看", 600, height-250, "xyfd_fdkcsq.do?method=fdkcsqView&sqid="+sqid+"&t="+new Date().getTime());
+    showDialog("朋辈志愿者申请查看", 600, 550, "xyfd_fdkcsq.do?method=fdkcsqView&sqid="+sqid+"&t="+new Date().getTime());
 }
 
 function add() {
-    var height = jQuery(window).height();
     var url = "xyfd_fdkcsq.do?method=fdkcsqAdd";
-    showDialog("辅导课程申请", 600, height-250, url);
+    showDialog("辅导课程申请", 800, 550, url);
 }
 function update() {
     var sqkg = jQuery("#sqkg").val();
     var rows = jQuery("#dataTable").getSeletRow();
-    var height = jQuery(window).height();
     if (rows.length != 1) {
         showAlertDivLayer("请选择一条您要修改的记录！");
     } else {
-
         var shzt = rows[0]["shzt"];
         if ("0" != shzt&&"3" != shzt) {
             showAlertDivLayer("只有未提交和已退回的记录才能修改！");
@@ -36,7 +32,7 @@ function update() {
 
         var url = 'xyfd_fdkcsq.do?method=fdkcsqUpdate&sqid=' + rows[0]["sqid"];
         var title = "朋辈志愿者申请修改";
-        showDialog(title, 600, height-250, url);
+        showDialog(title, 600, 550, url);
     }
 
 }

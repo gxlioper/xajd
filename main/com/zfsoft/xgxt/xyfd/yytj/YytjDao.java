@@ -50,11 +50,11 @@ public class YytjDao extends SuperDAOImpl<FdyyForm> {
 
         sql.append(" ) t where 1=1 ");
         if(user.getUserType().equals("stu")){
+            sql.append(" and ( t.xh = '" + user.getUserName() + "' ");
             if (fdyyDao.isPb(user)){
-                sql.append(" and t.zgh = '" + user.getUserName() + "' ");
-            }else {
-                sql.append(" and t.xh = '" + user.getUserName() + "' ");
+                sql.append(" or t.zgh = '" + user.getUserName() + "' ");
             }
+            sql.append(") ");
         }else {
             if(!fdkcsqDao.isAdmin(user)){ //不是管理员也不是辅导中心人员
                 if("fdy".equalsIgnoreCase(user.getUserStatus())){ //是辅导员

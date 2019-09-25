@@ -9,29 +9,26 @@
 	<script type="text/javascript" src="js/calendar/calendar.js"></script>
 	<script type="text/javascript" src="xsgzgl/xyfd/jzppwh/yytj/js/yytj.js"></script>
 	<script type="text/javascript">
+
         var gridSetting = {
-            caption : "预约记录列表",
+            caption : "辅导教师评价列表",
             pager : "pager",
             url : "xyfd_yytj.do?method=yytjList&type=query",
             colList : [
-                { label : 'yyid', name : 'yyid', index : 'yyid',key : true,hidden : true },
-                { label : '预约号', name : 'yyh', index : 'yyh',width:'12%'},
-                { label : '预约学生', name : 'xh', index : 'xh',hidden:true},
-                { label : '预约学生', name : 'xm', index : 'xm',width:'10%'},
-                { label : '预约人', name : 'yyr', index : 'yyr',width:'10%'},
-                { label : '辅导时间', name : 'fdsj', index : 'fdsj',width:'10%'},
-                { label : '课程名称', name : 'kcmc', index : 'kcmc', width : '10%' },
-                { label : '辅导教师', name : 'fdjsxm', index : 'fdjsxm', width : '10%' },
-                { label : '辅导地点', name : 'fddd', index : 'fddd', width : '15%' },
-                { label : '审核状态', name : 'shztmc', index : 'shztmc', width : '10%' },
-                { label : '审核状态', name : 'zt', index : 'zt', hidden : true}
+                { label : 'djh', name : 'djh', index : 'djh',key : true,hidden : true },
+                { label : '登记号', name : 'djh', index : 'djh',width:'12%'},
+                { label : '职工号', name : 'zgh', index : 'zgh',width:'12%'},
+                { label : '辅导人员姓名', name : 'xm', index : 'xm',width:'12%'},
+                { label : '辅导人员类型', name : 'fdjslx', index : 'fdjslx',width:'10%'},
+                { label : '平均评分', name : 'pjpf', index : 'pjpf',width:'10%'},
+                { label : '累计辅导人次', name : 'ljrc', index : 'ljrc',width:'10%'}
             ],
             radioselect:false
         }
 
         jQuery(function(){
             var map = getSuperSearch();
-            map["cxmb"]="yyjl";
+            map["cxmb"]="jspj";
             gridSetting["params"] = map;
             jQuery("#dataTable").initGrid(gridSetting);
         });
@@ -48,19 +45,27 @@
 	</p>
 </div>
 <html:form action="/xyfd_yytj">
-	<input type="hidden" id="cxmb" value="yyjl"/>
+	<input type="hidden" id="cxmb" value="jspj"/>
 	<%@ include file="/comm/hiddenValue.jsp"%>
 	<div class="toolbox">
+
 		<!-- 按钮 -->
 		<div class="buttonbox">
 			<ul>
+
+				<li id="li_pjtj" >
+					<a href="javascript:void(0);" onclick="grxxpj();return false;"
+					   title="选中您要查看的辅导记录，点击该按钮可以打开查看页面。"
+					   class="btn_ck">查看辅导记录</a>
+				</li>
+
 				<li>
 					<a href="javascript:void(0);" onclick="ckfd();return false;" class="btn_dc">导出</a>
 				</li>
 			</ul>
 		</div>
 		<!-- 过滤条件 -->
-		<%@ include file="/xsgzgl/xyfd/jzppwh/fdyywh/superSearchAreaforFdyy.jsp"%>
+		<%@ include file="/comm/search/superSearchArea.jsp"%>
 		<!-- 过滤条件 end-->
 
 	</div>

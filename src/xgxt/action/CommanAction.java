@@ -1878,6 +1878,22 @@ public class CommanAction extends Action {
 		session.setAttribute("edition", edition);
 		if ("new".equalsIgnoreCase(edition)) {
 			if ("stu".equalsIgnoreCase(userType)) {
+				String url = "";
+				Cookie[] cookies = request.getCookies();
+				for(Cookie cookie : cookies){
+					if(cookie.getName().equals(session.getId())){
+						url = cookie.getValue();
+						cookie.setValue(null);
+						cookie.setMaxAge(0);//生存时间为0
+						cookie.setPath(request.getContextPath());  // 相同路径
+						response.addCookie(cookie);
+						break;
+					}
+				}
+				if(StringUtils.isNotNull(url)){
+					response.sendRedirect(url);
+					return null;
+				}
 				return mapping.findForward("stuLogin");
 			} else {
 				// return mapping.findForward("success");
@@ -1985,8 +2001,24 @@ public class CommanAction extends Action {
 		// }
 		if ("new".equalsIgnoreCase(edition)) {
 			if ("student".equalsIgnoreCase(userType)) {
+				String tourl = "";
+				Cookie[] cookies = request.getCookies();
+				for(Cookie cookie : cookies){
+					if(cookie.getName().equals(session.getId())){
+						tourl = cookie.getValue();
+						cookie.setValue(null);
+						cookie.setMaxAge(0);//生存时间为0
+						cookie.setPath(request.getContextPath());  // 相同路径
+						response.addCookie(cookie);
+						break;
+					}
+				}
 				String dljc = XMLReader.getFlowControl("xsxx", "dljc");
 				if ("no".equalsIgnoreCase(dljc)) {
+					if(StringUtils.isNotNull(tourl)){
+						response.sendRedirect(tourl);
+						return null;
+					}
 					return mapping.findForward("stuLogin");
 				} else {
 					return new ActionForward("/xsxx_xsdl.do", false);

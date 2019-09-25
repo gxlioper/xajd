@@ -52,6 +52,8 @@
                 name="fdyyForm"
                 parameter="method">
             <forward name="yytjList" path="/xsgzgl/xyfd/jzppwh/yytj/yytjList.jsp"/>
+            <forward name="pjtj" path="/xsgzgl/xyfd/jzppwh/yytj/pjtj.jsp"/>
+            <forward name="qxtj" path="/xsgzgl/xyfd/jzppwh/yytj/qxtj.jsp"/>
             <forward name="grxxpj" path="/xsgzgl/xyfd/jzppwh/yytj/grxxpj.jsp"/>
             <forward name="grqvqk" path="/xsgzgl/xyfd/jzppwh/yytj/grqvqk.jsp"/>
         </action>

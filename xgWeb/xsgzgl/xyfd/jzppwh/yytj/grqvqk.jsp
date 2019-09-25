@@ -64,7 +64,7 @@
             </logic:iterate>
             <tr>
                 <td colspan="4">
-                    <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+                    <div id="container" style="width: 70%; height: 400px; margin: 0 auto"></div>
                 </td>
             </tr>
             </tbody>
@@ -96,7 +96,7 @@
             text: '取消原因统计'
         };
         var xAxis = {
-            categories: ['1','2','3','4','5'],
+            categories: ['信息填错，重新预约','临时有事不能前往','不想参加辅导','教师因故调整或取消预约','其它'],
             crosshair: true
         };
         var yAxis = {
