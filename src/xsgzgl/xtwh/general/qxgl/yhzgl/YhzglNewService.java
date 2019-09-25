@@ -266,9 +266,13 @@ public class YhzglNewService extends BasicService{
 					JSONObject jobj = yhzgnqxArray.getJSONObject(i);
 					String gnmkdm = jobj.getString("gnmkdm");
 					String dxq = jobj.getString("dxq").equals("null") ? null : jobj.getString("dxq");
-					paramList.add(new String []{zdm,gnmkdm,dxq});
+//					paramList.add(new String []{zdm,gnmkdm,dxq});
+					result = me.runUpdate(insertSql,new String[]{zdm,gnmkdm,dxq});
+					if(!result){
+						break;
+					}
 				}
-				result = me.runBatchBoolean(insertSql,paramList);
+//				result = me.runBatchBoolean(insertSql,paramList);
 			}
 		}
 
