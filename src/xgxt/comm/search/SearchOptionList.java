@@ -1187,7 +1187,7 @@ public class SearchOptionList extends SearchService{
 								html.append("id=\"zybj_hidv_qt_" + bjdm + "\" ");
 							}
 							html.append("onclick=\"");
-							html.append("clickBjQt('" + py + "');");
+							html.append("clickZyBjQt('" + py + "');");
 							html.append("return false;\" ");
 							html.append("> ");
 							html.append("更多");
@@ -2195,7 +2195,7 @@ public class SearchOptionList extends SearchService{
 								html.append(bjdm);
 								html.append("\"");
 								html.append("onclick=\"clickBj(this);");
-								html.append("creatClickedTj('bj','班级','"+bjdm+"','"+bjmc+"',this);return false;\">");
+								html.append("creatClickedTj('zybj','班级','"+bjdm+"','"+bjmc+"',this);return false;\">");
 								html.append(bjmc);
 								html.append("</a>");
 								
@@ -2206,7 +2206,7 @@ public class SearchOptionList extends SearchService{
 							// 其他
 							if (qt_num == 3) {
 
-								html.append("<a href=\"#\" class=\"moreValue_click\" onclick=\"clickBjQt(\'");
+								html.append("<a href=\"#\" class=\"moreValue_click\" onclick=\"clickZyBjQt(\'");
 								html.append(bjpy);
 								html.append("\')\"");
 								html.append("id=\"");
@@ -2241,7 +2241,7 @@ public class SearchOptionList extends SearchService{
 								html.append(bjdm);
 								html.append("\" style=\"display:none;\"");
 								html.append("onclick=\"clickBj(this);");
-								html.append("creatClickedTj('bj','班级','"+bjdm+"','"+bjmc+"',this);return false;\">");
+								html.append("creatClickedTj('zybj','班级','"+bjdm+"','"+bjmc+"',this);return false;\">");
 								html.append(bjmc);
 								html.append("</a>");
 								
@@ -2252,7 +2252,7 @@ public class SearchOptionList extends SearchService{
 							// 其他
 							if (qt_num == 3) {
 
-								html.append("<a href=\"#\" class=\"moreValue_click\" style=\"display:none\" onclick=\"clickBjQt(\'");
+								html.append("<a href=\"#\" class=\"moreValue_click\" style=\"display:none\" onclick=\"clickZyBjQt(\'");
 								html.append(bjpy);
 								html.append("\')\"");
 								html.append("id=\"");

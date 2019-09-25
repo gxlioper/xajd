@@ -55,7 +55,7 @@ var jytj = ["xb","nj","xn","xq","nd","pycc","xz","xj","sfzx","sfyby",
 			"qjtslx","qjksjc","qjjsjc","kcmc","lb","jclb","gw","czr","knssqxz","hdpl","zjz","tnzt","sdzt","xmmkdm","jfxmdm","yyzc",
 			"csms","rdzt","bzrcpdj","xscpdj","qgrq","qgmx","ysjxjxmlx","jxjb","jxlbnew", "yxzt1","jxsqzd",
 			"lydq","xqah","drzw","sfqz","jxdmx","fkzt","sfhg","jd","gwlb","xiaoq","zjlysdzt","zzmmnew","sfsn","szdzb","zjlyshsdzt","sfxyyt","sfyyt","czlx","js","jjlx","tjztwpqs","jtgj","xmlb","xmdl",
-			"fwjg","xslb","knlx","fwlx","sfbm","lxnew","bxxz","clzb","sfgz","pcjg","sfsxzt","lnjdhk","bxxs","zjxy","ybqk","gfqkfl","sfgcj","kslb","hdxs","yjyy","hdzl","sy","cqxxxjzt","hdjxzt","stzt","scly",
+			"fwjg","xslb","knlx","fwlx","sfbm","lxnew","bxxz","clzb","sfgz","pcjg","sfsxzt","lnjdhk","bxxs","zjxy","ybqk","gfqkfl","sfgcj","kslb","hdxs","yjyy","fdjslx","alzt","aljb","hdzl","sy","cqxxxjzt","hdjxzt","stzt","scly",
 			"smnj","smlx","dxq","sjd","jssf","wtjjcd","zcfs","dazcxx","bxlx","drhd","hdlx10699","sfdsh","bmlx","bjsblx","grsblx","sfdb","newstype","zt","zwlx","shztHb","shztZj",
 			"xxqk","qj","zsqk","zsqj","qskqlb","stxj","dwlb","gzxz","gwlx","xsgbzw","jldj","pm","sfkhtg","jb","thlx","sfzdgz",
 			"jfxz","bz","jszgzt","sfzg","sfzb","sblx","kcxz","fsbj","jjlxdm","sfgk","sfxn","sfgmbx","kclbdm","cz"];
@@ -1616,6 +1616,119 @@ function clickBjQt(bjpy){
 		divHtml+="</table></div></div>";
 		
 	createOtherDiv("班级选择",divHtml,divid,"600","380");
+}
+
+//点击专业班级其他
+function clickZyBjQt(bjpy){
+    var divid = "div_zybj_"+bjpy;
+    var qtid = "div_qt_zybj_"+bjpy;
+    var hiid = "hi_"+bjpy;
+    var sfzxs="";
+    var nj_click = getClickNj();//以选中年级
+    var xy_click = getClickXy();//以选中学院
+    var zy_click = getClickZy();//以选中专业
+
+    var userStatus = $("userStatus").value;
+    var userName = $("userName").value;
+    var userDep = $("userDep").value;
+    var searchPath = jQuery("#searchPath").val();
+    if(searchPath=="xsxx_xsxxgl_cxfzxs.do"){
+        sfzxs="0";
+    }
+    if(searchPath=="xsxx_xsxxgl_cxzxs.do"){
+        sfzxs="1";
+    }
+    var divHtml ="<div class='search_advanced'><div class='prop-item'  style='border:none !important'>";
+    divHtml+="<table width='80%' border='0' class='formlist open01'>";
+    divHtml+="<tbody><tr><td colspan='4'>";
+    divHtml+="<font color='orange' size='3'>"+bjpy+"字打头班级</font>";
+    divHtml+="</td></tr>";
+
+    divHtml+="<tr><td colspan='4'>";
+    divHtml+="<div style=\"height:260px;overflow-x:hidden;overflow-y:auto;\"><table style=\"width:100%\">";
+
+    //构造的tr数量
+    var tr_num = "6";
+
+    dwr.engine.setAsync(false);
+
+    searchUtil.getBjInfoByTj(bjpy,nj_click,xy_click,zy_click,userStatus,userName,userDep,sfzxs,function(data){
+
+        if(data !=null && data.length >0){
+
+            var size = data.length;
+
+            //数据量过大，以实际数据为准
+            if((size/2) > tr_num){
+                tr_num = parseInt(size/2);
+
+                //最后一行非满格的数量
+                var sy_num = parseInt(size%2);
+                if(sy_num != "0"){
+                    tr_num =parseInt(tr_num)+1;
+                }
+            }
+
+            var n = size;
+
+            for(var i=0;i<tr_num;i++){
+
+                divHtml+="<tr style=\"width:100%;height:30px;\">";
+
+                for(var j=0;j<2;j++){
+
+                    if(n <= size && n >= 0){
+
+                        n--;
+
+                        if(n!=-1){
+
+                            var bjid = "a_zybj_"+data[n].bjdm;
+                            var xsid = "zybj_mc_xs_"+data[n].bjdm;
+                            var ycid = "zybj_mc_yc_"+data[n].bjdm;
+
+                            divHtml+="<td style=\"width:50%;\">";
+                            if(!$(xsid) && !$(ycid)){
+
+                                var bjmc = data[n].bjmc;
+
+                                if(bjmc.length > 20){
+                                    bjmc = bjmc.substring(0,20)+"...";
+                                }
+                                divHtml+="<li><a href='#' class='bg_none' name='a_zybj_mc'id=\""+ycid+"\" style=\"white-space: nowrap;\"";
+                                divHtml+="title=\""+data[n].bjmc+"\"";
+                                divHtml+="onclick=\"clickBj(this);";
+                                divHtml+="creatClickedTj('zybj','班级','"+data[n].bjdm+"','"+data[n].bjmc+"',this);return false;\"";
+                                divHtml+=">"+bjmc+"</a></li>";
+                            }else{
+                                divHtml+="&nbsp;";
+                            }
+                            divHtml+="</td>";
+
+                        }else{
+                            divHtml+="<td style=\"width:50%;\">&nbsp;</td>";
+                        }
+                    }else{
+                        divHtml+="<td style=\"width:50%;\">&nbsp;</td>";
+                    }
+                }
+
+                divHtml+="</tr>";
+            }
+        }
+    });
+
+    dwr.engine.setAsync(true);
+
+    divHtml+="</table></div>";
+    divHtml+="</td></tr>";
+    divHtml+="</tbody>";
+    divHtml+="<tfoot><tr><td colspan='4'><div class='btn'>";
+    divHtml+="<button onclick=\"hiddenZyDiv('"+divid+"');return false;\" id='buttonSave'>确定</button>";
+    divHtml+="</div></td></tr></tfoot>";
+    divHtml+="</table></div></div>";
+
+    createOtherDiv("班级选择",divHtml,divid,"600","380");
 }
 
 /** ===============================点击事件 end===============================*/

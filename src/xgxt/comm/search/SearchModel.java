@@ -357,6 +357,12 @@ public class SearchModel {
 	private String[] search_tj_hdxs;
 
 	private String[] search_tj_yjyy;
+
+	private String[] search_tj_fdjslx;
+
+	private String[] search_tj_alzt;
+
+	private String[] search_tj_aljb;
 	
 	private String[] search_tj_hdzl;
 
@@ -5729,6 +5735,30 @@ public class SearchModel {
 
 	public void setSearch_tj_yjyy(String[] searchTjYjyy) {
 		this.search_tj_yjyy = searchTjYjyy;
+	}
+
+	public String[] getSearch_tj_fdjslx() {
+		return search_tj_fdjslx;
+	}
+
+	public void setSearch_tj_fdjslx(String[] searchTjFdjslx) {
+		this.search_tj_fdjslx = searchTjFdjslx;
+	}
+
+	public String[] getSearch_tj_alzt() {
+		return search_tj_alzt;
+	}
+
+	public void setSearch_tj_alzt(String[] searchTjAlzt) {
+		this.search_tj_alzt = searchTjAlzt;
+	}
+
+	public String[] getSearch_tj_aljb() {
+		return search_tj_aljb;
+	}
+
+	public void setSearch_tj_aljb(String[] searchTjAljb) {
+		this.search_tj_aljb = searchTjAljb;
 	}
 
 	/**

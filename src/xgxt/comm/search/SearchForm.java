@@ -1242,6 +1242,9 @@ public class SearchForm extends CommForm {
     private List<HashMap<String, String>> kcxzTjList;
     private List<HashMap<String, String>> fsbjTjList;
     private List<HashMap<String, String>> yjyyTjList;
+    private List<HashMap<String,String>> fdjslxTjList;
+    private List<HashMap<String,String>> alztTjList;
+    private List<HashMap<String,String>> aljbTjList;
 
     public List<HashMap<String, String>> getFsbjTjList() {
         return fsbjTjList;
@@ -7701,6 +7704,37 @@ public class SearchForm extends CommForm {
         this.yjyyTjList = dao.arrayToList(dm,mc);
     }
 
+    public List<HashMap<String,String>> getFdjslxTjList(){
+        return fdjslxTjList;
+    }
+
+    public void setFdjslxTjList(){
+        DAO dao = DAO.getInstance();
+        String[] dm = {"教师","朋辈"};
+        String[] mc = {"教师","朋辈"};
+        this.fdjslxTjList = dao.arrayToList(dm,mc);
+    }
+
+    public List<HashMap<String, String>> getAlztTjList() {
+        return alztTjList;
+    }
+
+    public void setAlztTjList() {
+        DAO dao = DAO.getInstance();
+        String[] dm = {"0", "1"};
+        String[] mc = {"已撤档", "在档中"};
+        this.alztTjList = dao.arrayToList(dm, mc);
+    }
+    public List<HashMap<String, String>> getAljbTjList() {
+        return aljbTjList;
+    }
+
+    public void setAljbTjList() {
+        DAO dao = DAO.getInstance();
+        String[] dm = {"一般", "重点"};
+        String[] mc = {"一般", "重点"};
+        this.aljbTjList = dao.arrayToList(dm, mc);
+    }
     /**
      * @description    ： TODO
      * @author ： 柳俊（1282）
