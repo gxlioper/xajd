@@ -87,7 +87,9 @@ public class PbjgAction extends SuperAction<PbjgForm, PbjgService> {
         User user = getUser(request);
         PbsqForm pbsqForm = new PbsqForm();
         if ("stu".equals(user.getUserType())) {
-            throw new Exception("没有权限");
+            request.setAttribute("errMsg","无访问权限");
+            request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+            return null;
         }
         if(!StringUtil.isNull(model.getXh())){
             pbsqForm.setXh(model.getXh());
@@ -204,7 +206,9 @@ public class PbjgAction extends SuperAction<PbjgForm, PbjgService> {
             HashMap<String,String> fdsxx = fdsService.getFds(fdsForm);
             request.setAttribute("fdsxx",fdsxx);//辅导室信息
         }else {
-            throw new Exception("无学号");
+            request.setAttribute("errMsg","无学号");
+            request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+            return null;
         }
         request.setAttribute("pbxxlist",model);
         return mapping.findForward("updatePbjg");

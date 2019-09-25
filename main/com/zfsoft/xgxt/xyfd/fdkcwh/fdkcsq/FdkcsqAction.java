@@ -139,7 +139,9 @@ public class FdkcsqAction extends SuperAction<FdkcsqForm,FdkcsqService> {
             String xm = service.getFdjs(model);
             fdjs.append(model.getFdjs() + "：" + xm);
         }else {
-            throw new Exception("登记号不存在");
+            request.setAttribute("errMsg","登记号不存在");
+            request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+            return null;
         }
         request.setAttribute("fdjsxm",fdjs.toString());
         User user = getUser(request);
@@ -199,7 +201,9 @@ public class FdkcsqAction extends SuperAction<FdkcsqForm,FdkcsqService> {
             String xm = service.getFdjs(model);
             fdjs.append(model.getFdjs() + "：" + xm);
         }else {
-            throw new Exception("登记号不存在");
+            request.setAttribute("errMsg","登记号不存在");
+            request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+            return null;
         }
         request.setAttribute("fdjsxm",fdjs.toString());
         HashMap<String,String> fdjsxx = service.getFdjsxx(model);//辅导教师（朋辈志愿者）信息

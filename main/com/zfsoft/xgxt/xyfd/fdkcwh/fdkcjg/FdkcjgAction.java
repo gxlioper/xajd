@@ -82,7 +82,9 @@ public class FdkcjgAction extends SuperAction<FdkcjgForm, FdkcjgService> {
         User user = getUser(request);
         FdkcsqForm fdkcsqForm = new FdkcsqForm();
         if ("stu".equals(user.getUserType())) {
-            throw new Exception("没有权限");
+            request.setAttribute("errMsg","无访问权限！");
+            request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+            return null;
         }
         boolean isAdmin = fdkcsqService.isAdmin(user);
         request.setAttribute("isAdmin",isAdmin);
@@ -137,7 +139,9 @@ public class FdkcjgAction extends SuperAction<FdkcjgForm, FdkcjgService> {
             String xm = fdkcsqService.getFdjs(fdkcsqForm);
             fdjs.append(fdkcsqForm.getFdjs() + "：" + xm);
         }else {
-            throw new Exception("登记号不存在");
+            request.setAttribute("errMsg","登记号不存在");
+            request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+            return null;
         }
         request.setAttribute("fdjsxm",fdjs.toString());
         User user = getUser(request);
@@ -188,7 +192,9 @@ public class FdkcjgAction extends SuperAction<FdkcjgForm, FdkcjgService> {
             String xm = fdkcsqService.getFdjs(fdkcsqForm);
             fdjs.append(fdkcsqForm.getFdjs() + "：" + xm);
         }else {
-            throw new Exception("登记号不存在");
+            request.setAttribute("errMsg","登记号不存在");
+            request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+            return null;
         }
         request.setAttribute("fdjsxm",fdjs.toString());
         User user = getUser(request);
