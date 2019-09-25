@@ -60,7 +60,7 @@ public class UserFilter implements Filter {
 			if(StringUtils.isNotNull(method)&&method.equals("getHdxx")){
 				//活动报名专用,统一身份认证登录会将session清除
 				Cookie userCookie=new Cookie(session.getId(),url+"?"+jqueryStr);
-				userCookie.setMaxAge(3*60);   //存活期为一个月 30*24*60*60
+				userCookie.setMaxAge(3*60);   //存活期为3分钟 3*60
 				userCookie.setPath(request.getContextPath());
 				response.addCookie(userCookie);
 			}
