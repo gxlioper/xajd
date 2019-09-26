@@ -3480,7 +3480,7 @@
 <w:color w:val="000000"/>
 <w:sz-cs w:val="21"/>
 </w:rPr>
-<w:t>申请</w:t>
+<w:t>书院</w:t>
 </w:r>
 </w:p>
 <w:p wsp:rsidR="0064202F" wsp:rsidRPr="00223DE9" wsp:rsidRDefault="0064202F" wsp:rsidP="002B2294">
@@ -3500,37 +3500,38 @@
 <w:color w:val="000000"/>
 <w:sz-cs w:val="21"/>
 </w:rPr>
-<w:t>日期</w:t>
+<w:t>审核</w:t>
 </w:r>
 </w:p>
 </w:tc>
 <w:tc>
-<w:tcPr>
-<w:tcW w:w="1771" w:type="dxa"/>
-<w:gridSpan w:val="2"/>
-<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
-<w:vAlign w:val="center"/>
-</w:tcPr>
-<w:p wsp:rsidR="0064202F" wsp:rsidRPr="00223DE9" wsp:rsidRDefault="00C710BA" wsp:rsidP="002B2294">
-<w:pPr>
-<w:jc w:val="center"/>
-<w:rPr>
-<w:rFonts w:ascii="宋体" w:fareast="宋体" w:h-ansi="宋体"/>
-<wx:font wx:val="宋体"/>
-<w:color w:val="000000"/>
-<w:sz-cs w:val="21"/>
-</w:rPr>
-</w:pPr>
-<w:r wsp:rsidRPr="00223DE9">
-<w:rPr>
-<w:rFonts w:ascii="宋体" w:fareast="宋体" w:h-ansi="宋体" w:hint="fareast"/>
-<wx:font wx:val="宋体"/>
-<w:color w:val="000000"/>
-<w:sz-cs w:val="21"/>
-</w:rPr>
-<w:t>${knsqInfo.sqsj!}</w:t>
-</w:r>
-</w:p>
+    <w:tcPr>
+        <w:tcW w:w="1771" w:type="dxa"/>
+        <w:gridSpan w:val="2"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+    </w:tcPr>
+    <w:p wsp:rsidR="0064202F" wsp:rsidRPr="001336FD" wsp:rsidRDefault="001336FD" wsp:rsidP="001336FD">
+        <w:pPr>
+            <w:jc w:val="left"/>
+            <w:rPr>
+                <w:rFonts w:ascii="宋体" w:fareast="宋体" w:h-ansi="宋体"/>
+                <wx:font wx:val="宋体"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="15"/>
+                <w:sz-cs w:val="15"/>
+            </w:rPr>
+        </w:pPr>
+        <w:r wsp:rsidRPr="001336FD">
+            <w:rPr>
+                <w:rFonts w:ascii="宋体" w:fareast="宋体" w:h-ansi="宋体" w:hint="fareast"/>
+                <wx:font wx:val="宋体"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="15"/>
+                <w:sz-cs w:val="15"/>
+            </w:rPr>
+            <w:t>(签字并盖章)</w:t>
+        </w:r>
+    </w:p>
 </w:tc>
 </w:tr>
 </w:tbl>

@@ -134,7 +134,24 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 			request.getRequestDispatcher("errmsg.jsp").forward(request,response);
 			return null;
 		}
+		XsxxService xsxxService = new XsxxService();
+		HashMap<String, String> xsjbxx = xsxxService.getXsjbxxMore(user.getUserName());
+		String xy = xsjbxx.get("xydm"); //学生学院代码
+		String sy = xsjbxx.get("sydm"); //学生书院代码
 		HashMap<String,String> data = service.getHdxx(model);
+		if(data.get("bmdx").equals("特定书院报名")){
+			if(!data.get("bmtddx").equals(sy)){ //匹配书院
+				request.setAttribute("errMsg","你不符合该活动报名对象要求");
+				request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+				return null;
+			}
+		}else if(data.get("bmdx").equals("特定学院报名")){
+			if(!data.get("bmtddx").equals(xy)){ //匹配学院
+				request.setAttribute("errMsg","你不符合该活动报名对象要求");
+				request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+				return null;
+			}
+		}
 		request.setAttribute("data", data);
 		return mapping.findForward("hdrybm");
 	}
