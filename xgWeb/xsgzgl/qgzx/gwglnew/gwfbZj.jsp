@@ -169,7 +169,7 @@
                 工时上限/月
             </th>
             <td colspan="3">
-                <input type="text" name="gzscsx" id="gssx" value="${gsgz.gzscsx}" onblur="checkGs()" maxlength="4" placeholder="不得大于工时上限（${gsgz.gzscsx}）">&nbsp;&nbsp;
+                <input type="text" name="gssx" id="gssx" value="${gsgz.gzscsx}" onblur="checkGs()" maxlength="4" placeholder="不得大于工时上限（${gsgz.gzscsx}）">&nbsp;&nbsp;
                 <span id="label"></span>
             </td>
         </tr>

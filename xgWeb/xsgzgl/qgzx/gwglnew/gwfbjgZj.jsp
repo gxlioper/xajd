@@ -21,7 +21,7 @@
         var gsjjeditor;
 
         function yrdwDivSave(type){
-            var checkIds = "dwid-gwmc-gwryyq-fjid";
+            var checkIds = "dwid-gwmc-gwryyq";
 
             if(!checkNotNull(checkIds)){
                 showAlert("请将带<font color='red'>*</font>的项目填写完整!");
@@ -213,7 +213,7 @@
                 <input type="radio" name="sfxsgz" value="1">是
             </td>
         </tr>
-        <%--<tr>
+        <tr>
             <th><span class="red">*</span>协议书</th>
             <td colspan="3">
                 <html:hidden property="fjid" styleId="fjid" />
@@ -233,7 +233,7 @@
                     });
                 </script>
             </td>
-        </tr>--%>
+        </tr>
         <tr>
             <th>
                 <span class="red">*</span>招聘要求</br><span class="red">（限制在1500字内）</span>

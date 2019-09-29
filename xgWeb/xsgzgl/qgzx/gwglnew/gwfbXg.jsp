@@ -21,7 +21,7 @@
         var gsjjeditor;
 
         function yrdwDivSave(type){
-            var checkIds = "gwmc-gwryyq-fjid";
+            var checkIds = "gwmc-gwryyq";
 
             if(!checkNotNull(checkIds)){
                 showAlert("请将带<font color='red'>*</font>的项目填写完整!");
