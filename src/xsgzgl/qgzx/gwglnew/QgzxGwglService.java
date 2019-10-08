@@ -1935,4 +1935,8 @@ public class QgzxGwglService extends BasicService {
 		t.setFbsj(DateUtils.getCurrTime());
 		return qgzxGwglDAO.updatejg(t);
 	}
+
+	public boolean checkGwmc(String gwmc) throws Exception{
+		return qgzxGwglDAO.checkGwmc(gwmc);
+	}
 }

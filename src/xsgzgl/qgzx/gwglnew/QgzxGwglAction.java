@@ -958,6 +958,10 @@ public class QgzxGwglAction extends SuperAction {
 		QgzxCsszService qgzxCsszService = new QgzxCsszService();
 		User user = getUser(request);
 		if(SAVE.equals(myForm.getType()) || SUBMIT.equals(myForm.getType())){
+			if(qgzxGwglService.checkGwmc(myForm.getGwmc())){//岗位名称已存在
+				response.getWriter().print(getJsonMessage("岗位名称已存在！"));
+				return null;
+			}
 			boolean rs = qgzxGwglService.saveGw(myForm,user);
 			String message = rs ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
 			response.getWriter().print(getJsonMessageByKey(message));
@@ -988,6 +992,10 @@ public class QgzxGwglAction extends SuperAction {
 		QgzxCsszService qgzxCsszService = new QgzxCsszService();
 		User user = getUser(request);
 		if(SAVE.equals(myForm.getType()) || SUBMIT.equals(myForm.getType())){
+			if(qgzxGwglService.checkGwmc(myForm.getGwmc())){//岗位名称已存在
+				response.getWriter().print(getJsonMessage("岗位名称已存在！"));
+				return null;
+			}
 			boolean rs = qgzxGwglService.updateGw(myForm,user);
 			String message = rs ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
 			response.getWriter().print(getJsonMessageByKey(message));
@@ -1239,6 +1247,10 @@ public class QgzxGwglAction extends SuperAction {
 		QgzxCsszService qgzxCsszService = new QgzxCsszService();
 		User user = getUser(request);
 		if(SAVE.equals(myForm.getType())){
+			if(qgzxGwglService.checkGwmc(myForm.getGwmc())){//岗位名称已存在
+				response.getWriter().print(getJsonMessage("岗位名称已存在或申请中！"));
+				return null;
+			}
 			boolean rs = qgzxGwglService.insertJg(myForm,user);
 			String message = rs ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
 			response.getWriter().print(getJsonMessageByKey(message));
@@ -1304,6 +1316,10 @@ public class QgzxGwglAction extends SuperAction {
 		QgzxCsszService qgzxCsszService = new QgzxCsszService();
 		User user = getUser(request);
 		if(SAVE.equals(myForm.getType())){
+			if(qgzxGwglService.checkGwmc(myForm.getGwmc())){//岗位名称已存在
+				response.getWriter().print(getJsonMessage("岗位名称已存在或申请中！"));
+				return null;
+			}
 			boolean rs = qgzxGwglService.updateJg(myForm,user);
 			String message = rs ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
 			response.getWriter().print(getJsonMessageByKey(message));

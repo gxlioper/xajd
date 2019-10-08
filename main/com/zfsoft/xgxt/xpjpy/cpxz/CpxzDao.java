@@ -149,7 +149,7 @@ public class CpxzDao extends SuperDAOImpl<CpxzModel> {
 		StringBuilder sql = new StringBuilder("insert into xg_zhcp_fstjjlb(xn,xq,bjdm,cpzdm) ");
 
 		sql.append(" select ?,?,t1.bjdm,'' from ");
-		sql.append(" (select distinct a.bjdm from xsxxb a where a.sfzx = '在校')");
+		sql.append(" (select distinct a.bjdm from xsxxb a where a.sfzx = '在校' and a.bjdm is not null)");
 		sql.append("  t1 where 1=1");
 		return dao.runUpdate(sql.toString(), new String[]{xn,xq});
 	}

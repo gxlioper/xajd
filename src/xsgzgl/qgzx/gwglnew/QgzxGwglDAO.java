@@ -1864,4 +1864,16 @@ public class QgzxGwglDAO extends SuperDAOImpl<QgzxGwglForm> {
 				t.getFbsj(),t.getFjid(),t.getGwdm()};
 		return dao.runUpdate(sql.toString(),input);
 	}
+
+	/**
+	 * 检测岗位名称是否存在
+	 * @param gwmc
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean checkGwmc(String gwmc) throws Exception{
+		String sql = "select count(1) num from (select gwmc from xg_qgzx_gwxxsqb union select gwmc from xg_qgzx_gwxxb) where gwmc = ? ";
+		String num = dao.getOneRs(sql,new String[]{gwmc},"num");
+		return !"0".equals(num);
+	}
 }
