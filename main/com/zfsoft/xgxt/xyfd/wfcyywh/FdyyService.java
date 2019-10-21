@@ -157,4 +157,8 @@ public class FdyyService extends SuperServiceImpl<FdyyForm,FdyyDao> {
     public List<HashMap<String,String>> getQxyyList() throws Exception{
         return dao.getQxyyList();
     }
+
+    public List<HashMap<String,String>> getDclYjList(User user) throws Exception{
+        return dao.getDclYjList(user);
+    }
 }

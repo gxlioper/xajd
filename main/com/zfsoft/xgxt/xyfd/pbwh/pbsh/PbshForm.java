@@ -49,6 +49,7 @@ public class PbshForm extends ActionForm {
     private String[] id;
     private String[] gwids;
     private String[] xhs;
+    private String[] splcs;
 
 
     public Pages getPages() {
@@ -346,5 +347,13 @@ public class PbshForm extends ActionForm {
 
     public void setXhs(String[] xhs) {
         this.xhs = xhs;
+    }
+
+    public String[] getSplcs() {
+        return splcs;
+    }
+
+    public void setSplcs(String[] splcs) {
+        this.splcs = splcs;
     }
 }

@@ -11,6 +11,7 @@ import com.zfsoft.xgxt.xyfd.wfcyywh.FdyyForm;
 import com.zfsoft.xgxt.xyfd.wfcyywh.FdyyService;
 import common.newp.StringUtil;
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -23,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by llf on 2019/8/6.
@@ -162,5 +164,24 @@ public class WsdyyAction extends SuperAction<FdyyForm,FdyyService> {
         return mapping.findForward("viewYy");
     }
 
-
+    /**
+     * ‘§‘ºÃ· æµØ¥∞
+     * @param mapping
+     * @param form
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    public ActionForward yyTs(ActionMapping mapping, ActionForm form,
+                                HttpServletRequest request, HttpServletResponse response) throws Exception{
+        FdyyForm model = (FdyyForm)form;
+        User user = getUser(request);
+        List<HashMap<String,String>> dclyylist = service.getDclYjList(user);
+        Map<String,String> map = new HashMap<String, String>();
+        map.put("num", dclyylist.size()+"");
+        JSONObject json = JSONObject.fromObject(map);
+        response.getWriter().print(json);
+        return null;
+    }
 }

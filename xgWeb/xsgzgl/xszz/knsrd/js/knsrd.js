@@ -590,7 +590,7 @@ function reloadWindow(){
 function editJtqk(){
 	var xh = jQuery("#xh").val();
 	if (jQuery.trim(xh) != ""){
-		showDialog('家庭情况调查',780,500,'xszz_jtqkdc.do?method=dcxxModify&writeAble=yes&type=update&xh='+xh,{
+		showDialog('家庭情况调查',945,500,'xszz_jtqkdc.do?method=dcxxModify&writeAble=yes&type=update&xh='+xh,{
 			close:function(){
 				loadJtqk(xh);
 			}

@@ -521,7 +521,7 @@ public class ZdydrService extends SuperServiceImpl<ZdydrModel,ZdydrDao> {
 
         for(HashMap<String,String> m:drgzxxList){
             String drl = m.get("drl");
-            if("xh".equals(drl) || "gwdm".equals(drl) ){//|| "ffny".equals(drl)
+            if("xh".equals(drl) || "gwdm".equals(drl) || "ffny".equals(drl)){//
                 zjDrlList.add(m.get("drl"));
                 zjDrlmcList.add(m.get("drlmc"));
             }

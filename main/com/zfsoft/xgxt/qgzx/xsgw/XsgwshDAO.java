@@ -501,13 +501,25 @@ public class XsgwshDAO extends SuperDAOImpl<XsgwshForm> {
 		sql.append(searchTj);
 
 		QgzxGlyglService qgzxGlyglService = new QgzxGlyglService();
+		//获取负责的单位
+		List<HashMap<String,String>> bmlist = getYrbmOfUser(user);
 		//如果不是勤工管理员
 		if(!qgzxGlyglService.sfQggly(user.getUserName())){
-			sql.append(" and yrdwdm = '"+user.getUserDep()+"' ");
+			if(bmlist.size()>0){
+				sql.append(" and yrdwdm = '" + bmlist.get(0).get("bmdm") + "' ");
+			}else {
+				sql.append(" and yrdwdm = '" + user.getUserDep() + "' ");
+			}
 		}
-
 //		sql.append(searchTjByUser);
 		return getPageList(t,sql.toString(),inputV);
+	}
+
+	public List<HashMap<String, String>> getYrbmOfUser(User user) {
+		String sql = " select distinct t1.bmdm,t1.bmmc from xg_qgzx_yrdwdmb t ";
+		sql+=" left join ZXBZ_XXBMDM t1 on t.xydm = t1.bmdm ";
+		sql+=" where t.zgh=?";
+		return dao.getList(sql, new String[]{user.getUserName()}, new String[]{"bmdm","bmmc"});
 	}
 
 	public HashMap<String,String> getZgxx(String gwdm,String xh){

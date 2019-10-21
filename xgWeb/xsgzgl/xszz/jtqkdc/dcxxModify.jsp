@@ -390,7 +390,7 @@
 		</div>--%>
 		<html:form action="/xszz_jtqkdc" method="post" styleId="jtqkdcForm">
 		   <input type="hidden" value="${jtrjysrsx }" id="jtrjysrsx"/>
-			<div style="tab;overflow-x:hidden;overflow-y:auto;margin-bottom: 0px;" >
+			<div style="tab;overflow-x:auto;overflow-y:auto;margin-bottom: 0px;height: 450px" >
 				<table width="100%" border="0" class="formlist">
 					<thead>
 						<tr>
@@ -485,7 +485,7 @@
 					</tr>
 				</table>
 			</div>
-			<div style="height: 35px;"></div>
+			<div style="height: 50px;"></div>
 			<table width="100%" border="0" class="formlist" style="position: fixed; _position: absolute; bottom: 0;">
 					<tfoot>
 						<tr>

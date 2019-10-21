@@ -37,7 +37,13 @@
                 map["yyzt"]="dsh";
 				gridSetting["params"] = map;
 				jQuery("#dataTable").initGrid(gridSetting);
-			})
+
+                jQuery.post("xyfd_sdyy.do?method=yyTs", {}, function(data) {
+                    if(data["num"]!='0'){
+                        showAlertDivLayer("您有<font class='red'>"+data["num"]+"</font>条预约待处理");
+					}
+                }, 'json');
+            })
 			//确认预约
 			function submitYy() {
                 var ids = jQuery("#dataTable").getSeletIds();

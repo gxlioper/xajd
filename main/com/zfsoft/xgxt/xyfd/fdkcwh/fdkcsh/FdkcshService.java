@@ -93,15 +93,16 @@ public class FdkcshService extends SuperServiceImpl<FdkcshForm,FdkcshDao> {
         String[] ids = t.getId();
         String[] gwid = t.getGwids();
         String[] sqrids = t.getSqrids();
+        String[] splcs = t.getSplcs();
         List<String> failXhs = new ArrayList<String>();
         for (int i = 0, n = ids.length; i < n; i++) {
-            model.setSplc(t.getSplc());
             model.setYwid(ids[i]);
             model.setGwid(gwid[i]);
             model.setSqid(ids[i]);
             model.setShyj(t.getShyj());
             model.setShjg(t.getShzt());
             model.setSqrid(sqrids[i]);
+            model.setSplc(splcs[i]);
 
             boolean isSuccess = saveSh(model, user);
             if (!isSuccess) {

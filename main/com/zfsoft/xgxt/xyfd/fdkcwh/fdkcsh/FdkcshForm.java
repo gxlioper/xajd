@@ -51,7 +51,7 @@ public class FdkcshForm extends ActionForm {
     private String[] id;
     private String[] gwids;
     private String[] sqrids;
-
+    private String[] splcs;
 
     public Pages getPages() {
         return pages;
@@ -358,4 +358,11 @@ public class FdkcshForm extends ActionForm {
         this.sqrids = sqrids;
     }
 
+    public String[] getSplcs() {
+        return splcs;
+    }
+
+    public void setSplcs(String[] splcs) {
+        this.splcs = splcs;
+    }
 }

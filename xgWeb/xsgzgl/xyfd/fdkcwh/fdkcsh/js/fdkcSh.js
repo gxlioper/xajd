@@ -46,14 +46,16 @@ function savePlsh(shzt, shyj) {
     var sqrids = new Array();
     var yxgss = new Array();
     var gss = new Array();
+    var splcs = new Array();
     jQuery.each(rows, function(i, row) {
         guid.push(row["sqid"]);
         gwid.push(row["gwid"]);
         sqrids.push(row["yhm"]);
+        splcs.push(row["splc"]);
     });
     jQuery.post("xyfd_fdkcsh.do?method=fdkcPlsh&type=save", {
         shzt : shzt,
-        splc : rows[0]["splc"],
+        splcs : splcs,
         id : guid,
         gwids : gwid,
         sqrids : sqrids,

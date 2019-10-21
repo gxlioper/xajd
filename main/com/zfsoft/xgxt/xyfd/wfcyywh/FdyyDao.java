@@ -316,4 +316,18 @@ public class FdyyDao extends SuperDAOImpl<FdyyForm> {
         sql.append(" select * from xg_xyfd_yyqxyydmb ");
         return dao.getListNotOut(sql.toString(),new String[]{});
     }
+
+    /**
+     * 待处理的预约
+     * @return
+     * @throws Exception
+     */
+    public List<HashMap<String,String>> getDclYjList(User user) throws Exception{
+        StringBuilder sql = new StringBuilder();
+        sql.append(" select a.*,c.djh,c.fdjs from xg_xyfd_wdyy a left join xg_xyfd_fdkcjgb b on a.fdkc = b.jgid ");
+        sql.append(" left join(select zgh fdjs,djh from xg_xyfd_fdjsxxb union ");
+        sql.append(" select xh fdjs,djh from xg_xyfd_pbjgb) c on b.fdjs = c.djh ");
+        sql.append(" where a.zt='5' and c.fdjs = ? ");
+        return dao.getListNotOut(sql.toString(),new String[]{user.getUserName()});
+    }
 }

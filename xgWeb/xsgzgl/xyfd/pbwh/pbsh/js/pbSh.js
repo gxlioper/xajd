@@ -44,14 +44,16 @@ function savePlsh(shzt, shyj) {
     var xhs = new Array();
     var yxgss = new Array();
     var gss = new Array();
+    var splcs = new Array();
     jQuery.each(rows, function(i, row) {
         guid.push(row["sqid"]);
         gwid.push(row["gwid"]);
         xhs.push(row["xh"]);
+        splcs.push(row["splc"]);
     });
     jQuery.post("xyfd_pbsh.do?method=pbPlsh&type=save", {
         shzt : shzt,
-        splc : rows[0]["splc"],
+        splcs : splcs,
         id : guid,
         gwids : gwid,
         xhs : xhs,
