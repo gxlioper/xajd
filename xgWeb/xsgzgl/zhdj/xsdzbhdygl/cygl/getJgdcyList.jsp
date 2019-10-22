@@ -8,6 +8,8 @@
     <script type="text/javascript" src="js/jquery/plugins/dataGrid/dataGrid.js"></script>
     <script type="text/javascript" src="js/calendar/calendar.js"></script>
     <script type="text/javascript" src="xsgzgl/zhdj/xsdzbhdygl/cygl/js/jgdcygl.js"></script>
+    <script type="text/javascript" src="js/jquery/plugins/upload/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath() %>/xsgzgl/comm/exportNew/import.js"></script>
     <script type="text/javascript">
         jQuery(function () {
             var gridSetting = {
@@ -64,7 +66,8 @@
                 <li>
                     <a href="javascript:void(0);" onclick="delCy();return false;" class="btn_sc">删除</a>
                 </li>
-
+                <li><a href="javascript:void(0);" class="btn_dr" onclick="dr();return false;">导入</a></li>
+                <li><a href="javascript:void(0);" class="btn_dc" onclick="exportConfig();return false;">导出</a></li>
 
             </ul>
         </div>

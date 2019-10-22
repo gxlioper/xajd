@@ -29,11 +29,13 @@ public class CyglDao extends SuperDAOImpl<CyglForm> {
         String searchTjByUser = SearchService.getSearchTjByUser(user, "t", "xydm", "bjdm");
         String[] inputV = SearchService.getTjInput(cyglForm.getSearchModel());
         List<String> params = new ArrayList<String>();
-        StringBuilder sql = new StringBuilder(" select * from (select a.*,x.xm,x.zymc,x.zydm,x.bjdm,x.xydm,x.bjmc,x.lxdh,d.dzbmc,z.zzmmmc,d.dzblx,   ");
+        StringBuilder sql = new StringBuilder(" select * from (select a.*,x.xm,x.zymc,x.zydm,x.bjdm,x.xydm,x.bjmc,x.xymc,x.sydm,x.symc,x.zybj,x.zybjmc,x.lxdh,d.dzbmc,z.zzmmmc,d.dzblx,   ");
         sql.append("(case a.sfsl when  '0' then '否' when  '1' then '是' else '否' end ) as sl,");
         sql.append("  (case a.sfld when  '0' then '否' when  '1' then '是' else '否' end ) as ld,   ");
         sql.append("(case x.xb when  '1' then '男' when  '2' then '女' else '未知' end ) as xb   ");
-        sql.append(" from xg_zhdj_dzbgl_dzbcy a left join xsxxb x on a.xh = x.xh  ");
+        sql.append(" from xg_zhdj_dzbgl_dzbcy a  left join ");
+        sql.append(" (select a.*, c.bjmc zybjmc, b.sydm, b.symc,c.xymc from XSXXB a left join view_njsybj b ");
+        sql.append(" on a.bjdm = b.bjdm left join view_njxyzybj_all c on a.zybj = c.bjdm) x on a.xh = x.xh ");
         sql.append(" left join (select l.dzbid,l.dzbmc,l.dzblx from  xg_zhdj_dzbgl_dzb l group by l.dzbid,l.dzbmc,l.dzblx) d on a.dzbid = d.dzbid ");
         sql.append("  left join zzmmdmb z on a.zzmmdm = z.zzmmdm )t where 1=1 and t.dzblx = '学生党支部' ");
         sql.append(searchTjByUser);

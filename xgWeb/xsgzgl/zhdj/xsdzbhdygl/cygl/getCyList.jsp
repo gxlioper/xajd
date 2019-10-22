@@ -8,6 +8,8 @@
     <script type="text/javascript" src="js/jquery/plugins/dataGrid/dataGrid.js"></script>
     <script type="text/javascript" src="js/calendar/calendar.js"></script>
     <script type="text/javascript" src="xsgzgl/zhdj/xsdzbhdygl/cygl/js/cygl.js"></script>
+    <script type="text/javascript" src="js/jquery/plugins/upload/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath() %>/xsgzgl/comm/exportNew/import.js"></script>
     <script type="text/javascript">
         jQuery(function () {
             var gridSetting = {
@@ -18,7 +20,7 @@
                     {label: '学号', name: 'xh', index: 'xh', width: '10%'},
                     {label: '姓名', name: 'xm', index: 'xm', width: '10%'},
                     {label: '性别', name: 'xb', index: 'xb', width: '10%'},
-                    {label: '专业', name: 'zymc', index: 'zymc', width: '18%'},
+                    {label: '书院', name: 'symc', index: 'symc', width: '18%'},
                     {label: '班级', name: 'bjmc', index: 'bjmc', width: '10%'},
                     {label: '联系电话', name: 'lxdh', index: 'lxdh', width: '10%'},
                     {label: '政治面貌', name: 'zzmmmc', index: 'zzmmmc', width: '10%'},
@@ -65,7 +67,8 @@
                     <a href="javascript:void(0);" onclick="delCy();return false;" class="btn_sc">删除</a>
                 </li>
                 <li><a href="javascript:void(0);" class="btn_xg" onclick="tb();return false;">同步异动信息</a></li>
-
+                <li><a href="javascript:void(0);" class="btn_dr" onclick="dr();return false;">导入</a></li>
+                <li><a href="javascript:void(0);" class="btn_dc" onclick="exportConfig();return false;">导出</a></li>
 
             </ul>
         </div>

@@ -1,5 +1,6 @@
 package com.zfsoft.xgxt.zhdj.xsdzbhdygl;
 
+import com.zfsoft.xgxt.comm.export.model.ExportModel;
 import org.apache.struts.action.ActionForm;
 import xgxt.comm.search.SearchModel;
 import xgxt.utils.Pages;
@@ -48,6 +49,7 @@ public class JgdcyglForm extends ActionForm {
     private String[] dels;
     private Pages pages = new Pages();
     private SearchModel searchModel = new SearchModel();
+    private ExportModel exportModel = new ExportModel();
     
     private String dzblx;
 
@@ -381,5 +383,13 @@ public class JgdcyglForm extends ActionForm {
 
     public void setDzyx(String dzyx) {
         this.dzyx = dzyx;
+    }
+
+    public ExportModel getExportModel() {
+        return exportModel;
+    }
+
+    public void setExportModel(ExportModel exportModel) {
+        this.exportModel = exportModel;
     }
 }

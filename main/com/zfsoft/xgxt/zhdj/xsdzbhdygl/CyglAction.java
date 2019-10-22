@@ -2,6 +2,10 @@ package com.zfsoft.xgxt.zhdj.xsdzbhdygl;
 
 import com.zfsoft.xgxt.base.action.SuperAction;
 import com.zfsoft.xgxt.base.message.MessageKey;
+import com.zfsoft.xgxt.base.util.FileUtil;
+import com.zfsoft.xgxt.comm.export.model.ExportModel;
+import com.zfsoft.xgxt.comm.export.service.IExportService;
+import com.zfsoft.xgxt.comm.export.service.impl.ExportExcelImpl;
 import net.sf.json.JSONArray;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
@@ -15,6 +19,7 @@ import xgxt.utils.GetTime;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 
@@ -220,6 +225,26 @@ public class CyglAction extends SuperAction<CyglForm, CyglService> {
         boolean result = service.tbydxx();
         String messageKey = result ? MessageKey.SYS_TB_SUCCESS : MessageKey.SYS_TB_FAIL;
         response.getWriter().print(getJsonMessageByKey(messageKey));
+        return null;
+    }
+
+    public ActionForward exportData(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        CyglForm model = (CyglForm) form;
+
+        // 生成高级查询对象
+        CommService comService = new CommService();
+        SearchModel searchModel = comService.getSearchModel(request);
+        model.setSearchModel(searchModel);
+        User user = getUser(request);
+        List<HashMap<String, String>> resultList = service.getAllList(model, user);// 查询出所有记录，不分页
+        // 导出功能代码
+        IExportService exportService = new ExportExcelImpl();
+        ExportModel exportModel = model.getExportModel();
+        exportModel.setZgh(user.getUserName());// 当前操作员
+        exportModel.setDataList(resultList);// 设置数据
+        exportModel.setDcclbh(request.getParameter("dcclbh"));// 设置当前导出功能编号
+        File file = exportService.getExportFile(exportModel);// 生成导出文件
+        FileUtil.outputExcel(response, file);
         return null;
     }
 }

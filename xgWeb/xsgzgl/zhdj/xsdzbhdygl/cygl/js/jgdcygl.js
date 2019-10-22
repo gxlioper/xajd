@@ -294,6 +294,30 @@ function djldgb() {
 
 }
 
+//导入
+function dr() {
+    // 调用通用的导入function，参数是导入功能模块代码。
+    toImportDataNew("IMPORT_DTJS_JGDZBCYDR");
+    return false;
+
+}
+
+var DCCLBH = "zhdj_dzdy_jgdcygl.do";//dcclbh,导出功能编号
+
+//自定义导出 功能
+function exportConfig() {
+    //DCCLBH导出功能编号,执行导出函数
+    customExport(DCCLBH, xsdzbcyExportData);
+}
+
+//导出方法
+function xsdzbcyExportData() {
+    setSearchTj();//设置高级查询条件
+    var url = "dzdy_jgdcygl.do?method=exportData&dcclbh=" + DCCLBH;//dcclbh,导出功能编号
+    url = addSuperSearchParams(url);//设置高级查询参数
+    jQuery("form").eq(0).attr("action", url);
+    jQuery("form").eq(0).submit();
+}
 
 
 
