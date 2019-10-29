@@ -106,6 +106,7 @@
 			<forward name="bm" path="/xsgzgl/hdgl/hdxx/bm.jsp"/>
 			<forward name="ckdw" path="/xsgzgl/hdgl/hdxx/ckdw.jsp"/>
 			<forward name="getBmEwm" path="/xsgzgl/hdgl/hdxx/getBmEwm.jsp"/>
+			<forward name="hdrybm" path="/xsgzgl/hdgl/hdxx/hdrybm.jsp"/>
 		</action>
 
 		<!-- 活动管理 -->

@@ -44,6 +44,7 @@ public class JfxxDao extends SuperDAOImpl<JfxxForm> {
     @Override
     public List<HashMap<String, String>> getPageList(JfxxForm t, User user) throws Exception {
         String searchTj = SearchService.getSearchTj(t.getSearchModel());
+        String searchTjByUser = SearchService.getSearchTjByUser(user, "t", "xydm", "bjdm");
         String[] inputV = SearchService.getTjInput(t.getSearchModel());
         StringBuilder sql = new StringBuilder();
         sql.append("select * from (");
@@ -57,6 +58,7 @@ public class JfxxDao extends SuperDAOImpl<JfxxForm> {
         sql.append(" left join VIEW_XSXX_TSXSXX e on a.xh = e.xh");
         sql.append(" LEFT JOIN (SELECT bjdm,WM_CONCAT(t2.XM) fdyxm,WM_CONCAT(t2.lxdh) lxdh FROM FDYBJB t1 LEFT JOIN FDYXXB t2 ON t1.ZGH = t2.ZGH  GROUP BY BJDM) f ON b.BJDM = f.BJDM ");
         sql.append(" ) t where 1=1 ");
+        sql.append(searchTjByUser);
         sql.append(searchTj);
         return getPageList(t,sql.toString(),inputV);
     }
