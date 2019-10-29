@@ -26,18 +26,23 @@ public class JgdcyglDao extends SuperDAOImpl<JgdcyglForm> {
     public List<HashMap<String, String>> getPageList(JgdcyglForm jgdcyglForm, User user) throws Exception {
         //生成高级查询相关条件、条件值
         String searchTj = SearchService.getSearchTj(jgdcyglForm.getSearchModel());
-        String searchTjByUser = SearchService.getSearchTjByUser(user, "t", "xydm", "bjdm");
         String[] inputV = SearchService.getTjInput(jgdcyglForm.getSearchModel());
-        List<String> params = new ArrayList<String>();
-        StringBuilder sql = new StringBuilder(" select * from (select a.*,x.xm,x.bmmc,x.lxdh,d.dzbmc,z.zzmmmc,d.dzblx,   ");
+        StringBuilder sql = new StringBuilder(" select * from (select a.*,x.xm,x.bmdm,x.bmmc,x.lxdh,d.dzbmc,z.zzmmmc,d.dzblx,   ");
         sql.append("(case a.sfsl when  '0' then '否' when  '1' then '是' else '否' end ) as sl,");
         sql.append("  (case a.sfld when  '0' then '否' when  '1' then '是' else '否' end ) as ld,   ");
         sql.append(" x.xb   ");
         sql.append(" from xg_zhdj_dzbgl_dzbcy a left join view_fdyxx x on a.xh = x.zgh  ");
         sql.append(" left join (select l.dzbid,l.dzbmc,l.dzblx from  xg_zhdj_dzbgl_dzb l group by l.dzbid,l.dzbmc,l.dzblx) d on a.dzbid = d.dzbid ");
         sql.append("  left join zzmmdmb z on a.zzmmdm = z.zzmmdm )t where 1=1 and t.dzblx = '教工党支部' ");
-        sql.append(searchTjByUser);
+
         sql.append(searchTj);
+        if("xx".equalsIgnoreCase(user.getUserStatus())){
+            sql.append(" and 1=1 ");
+        }else if("sy".equalsIgnoreCase(user.getUserStatus())){
+            sql.append(" and t.bmdm = '"+user.getUserDep()+"'");
+        }else {
+            sql.append(" and t.xh = '"+user.getUserName()+"'");
+        }
         return getPageList(jgdcyglForm, sql.toString(), inputV);
     }
 
