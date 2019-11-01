@@ -45,7 +45,9 @@
 		<div class="secondclass_details container" style="width:100%;">
 				<ul class="nav-tabs nav panel-heading notice-tabs col-sm-12 p-0">
 					<li class="active boder-right"><a href="javascript:void(0);" data-toggle="tab" id="zxxq">最新详情</a></li>
+					<logic:equal name="model" property="bmsf" value="1">
 					<li><a href="javascript:void(0);" data-toggle="tab" id="bmgl">报名审核</a></li>
+					</logic:equal>
 					<li class="boder-right"><a href="javascript:void(0);" data-toggle="tab" id="plgl">评论管理</a></li>
 					
 <%--					<li class="active boder-right"><a href="javascript:void(0);" data-toggle="tab" onclick="getHdInfo('${data.hdid}');return false;" id="zxxq">最新详情</a></li>--%>
@@ -54,8 +56,8 @@
 					
 				</ul>
 		</div>
-		<input type="hidden" id="hdid" value="${hdid}" />
-		<input type="hidden" id="bmlx" value="${bmlx}" />
+		<input type="hidden" id="hdid" value="${model.hdid}" />
+		<input type="hidden" id="bmlx" value="${model.bmlx}" />
 		<div id="content_hdxq"></div>
 		<div id="content_plgl"></div>
 		<div id="content_bmgl"></div>

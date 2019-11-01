@@ -95,18 +95,22 @@
 									<%--</div>--%>
                   			 </div>
                   			 <div class="button-groups m-15-0 col-sm-5 text-right p-r-0">
+								 <logic:equal name="data" property="bmsf" value="1">
 								 <button class="btn btn-primary" onclick="bmlj();return false;">
 									 <i class="glyphicon glyphicon-time"></i>
 									 活动报名链接
 								 </button>
+								 </logic:equal>
                         		<button class="btn btn-primary" onclick="lableConfig();return false;">
                             		<i class="glyphicon glyphicon-time"></i>
 										活动编辑
                         		</button>
+								 <logic:equal name="data" property="bmsf" value="1">
 								 <button class="btn btn-primary" onclick="openBmsjDialog();return false;">
 									 <i class="glyphicon glyphicon-time"></i>
 										报名设置
 								 </button>
+								 </logic:equal>
 								 <logic:equal name="data" property="hdzt" value="1">
 									 <button id="btn_hdxj" class="btn btn-primary" onclick="hdxj()">
 										 下架活动
@@ -208,6 +212,7 @@
 												</span>
 											</div>
 										</logic:iterate>
+										<logic:equal name="data" property="bmsf" value="1">
 		                                <div class="form-group">
 		                                    <label>报名对象：</label>
 											<logic:equal name="data" property="bmdx" value="本校公开报名">
@@ -225,6 +230,7 @@
 		                                    <label>报名类型：</label>
 		                                    <span class="address">${data.bmlx=='0'?'组队':'个人'}</span>
 		                                </div>
+										</logic:equal>
 										<div class="form-group">
 										    <label>结果认定：</label>
 										    <span class="address">

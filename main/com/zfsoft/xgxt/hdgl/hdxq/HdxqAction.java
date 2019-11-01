@@ -102,8 +102,8 @@ public class HdxqAction extends SuperAction<HdxxForm, HdxxService> {
 	@SystemAuth(url = url)
 	public ActionForward getHdInfo(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		HdxxForm model = (HdxxForm) form;
-		request.setAttribute("hdid", model.getHdid());
-		request.setAttribute("bmlx", model.getBmlx());
+		model = service.getModel(model);
+		request.setAttribute("model",model);
 		return mapping.findForward("hdxqgl");
 	}
 

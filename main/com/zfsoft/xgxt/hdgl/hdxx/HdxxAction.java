@@ -130,7 +130,7 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 		HdxxForm model = (HdxxForm) form;
 		User user = getUser(request);
 		if(!user.getUserType().equals("stu")){
-			request.setAttribute("errMsg","您无法访问该活动报名界面");
+			request.setAttribute("errMsg","此为学生界面，您无法访问该活动报名界面");
 			request.getRequestDispatcher("errmsg.jsp").forward(request,response);
 			return null;
 		}
@@ -138,7 +138,13 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 		HashMap<String, String> xsjbxx = xsxxService.getXsjbxxMore(user.getUserName());
 		String xy = xsjbxx.get("xydm"); //学生学院代码
 		String sy = xsjbxx.get("sydm"); //学生书院代码
+		model = service.getModel(model);
 		HashMap<String,String> data = service.getHdxx(model);
+		if(StringUtil.isNull(data.get("bmdx"))){//报名对象为空时
+			request.setAttribute("errMsg","该活动为指定报名对象，无法进行报名！");
+			request.getRequestDispatcher("errmsg.jsp").forward(request,response);
+			return null;
+		}
 		if(data.get("bmdx").equals("特定书院报名")){
 			if(!data.get("bmtddx").equals(sy)){ //匹配书院
 				request.setAttribute("errMsg","你不符合该活动报名对象要求");

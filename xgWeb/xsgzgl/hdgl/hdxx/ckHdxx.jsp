@@ -179,7 +179,10 @@
 		                                </div>
 		                                <div class="form-group">
 		                                    <label>报名类型：</label>
-		                                    <span class="address">${data.bmlx=='0'?'组队':'个人'}</span>
+		                                    <span class="address">
+												<logic:equal name="data" property="bmlx" value="1">个人</logic:equal>
+												<logic:equal name="data" property="bmlx" value="0">组队</logic:equal>
+											</span>
 		                                </div>
 										<div class="form-group">
 										    <label>结果认定：</label>
