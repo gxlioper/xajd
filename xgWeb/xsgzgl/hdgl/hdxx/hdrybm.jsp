@@ -21,8 +21,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/css/style.css" rel="stylesheet">
-		
-		
+		<link rel="stylesheet" type="text/css" href="bjwh/bootstrap-datepicker/bootstrap-datepicker.css"/>
+
+		<script language="javascript" src="comm/editor/kindeditor.js"></script>
+		<script language="javascript" src="comm/editor/zh_CN.js"></script>
+		<script language="javascript" src="comm/editor/editor.js"></script>
 		<script type="text/javascript" src="js/function.js"></script>
 		<%@ include file="/syscommon/jquery-1.11.1_migrate.ini"%>
 		<script type="text/javascript" src="js/jquery/ajaxSubmit.js"></script>
@@ -33,8 +36,11 @@
 		<script language="javascript" src="js/comm/commFunction.js"></script>
 		<script type="text/javascript" src="js/json.js"></script>
 		<link rel="stylesheet" href="comm/skin/zfstyle/ymPrompt.css" type="text/css" media="all" />
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="<%=stylePath%>js/lhgdialog/lhgdialog.min.js?skin=iblue"></script>
 		<script type="text/javascript" src="js/calendar/calendar.js"></script>
+		<script type="text/javascript" src="bjwh/bootstrap-datepicker/bootstrap-datepicker.js"/>
+		<script type="text/javascript" src="bjwh/bootstrap-datepicker/bootstrap-datepicker.zh-CN.js"/>
 		
 		<script type="text/javascript" src="js/jquery/jquery.form.js"></script>
 		<script type="text/javascript" src="xsgzgl/hdgl/js/hdxx.js"></script>
@@ -111,5 +117,28 @@
 	                </div>
 	            </div>
         	</div>
+		<!--提示框弹框-->
+		<div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<a type="button" class="close" data-dismiss="modal"
+						   aria-hidden="true">×
+						</a>
+						<h4 class="modal-title" id="msgTitle">
+							提示
+						</h4>
+					</div>
+					<div class="modal-body" id="msgContent">
+						按下 ESC 按钮退出。
+					</div>
+					<div class="modal-footer">
+						<a type="button" class="btn btn-default"
+						   data-dismiss="modal">关闭
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</html:form>
 </html>

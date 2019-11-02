@@ -60,13 +60,14 @@
             <div class="container" style="padding-right:-5px;padding-left:-5px;">
                 <div class="row">
                     <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padding-lr0">
-                        <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 padding-lr0">
-                            <select id="hdlxSelect" name="hdlx" class="selectpicker show-tick form-control">
+                        <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 padding-lr0 form-inline">
+                            <select id="hdlxSelect" name="hdlx" class="selectpicker show-tick form-control" style="width: 30%">
                                 <option value=""></option>
                                 <logic:iterate id="item" collection="${hdlxList}">
                                     <option value="${item.hdlxdm}">${item.hdlxmc}</option>
                                 </logic:iterate>
                             </select>
+							<input type="text" id="hdmc" name="hdmc" placeholder="请输入要搜索的活动名称" class="selectpicker show-tick form-control" style="width: 65%" />
                         </div>
                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 search-btn-wrap">
                             <button type="button" class="btn btn-primary blue-bg-btn search-btn" id="search_go" onclick="searchHd('1')">搜索</button>

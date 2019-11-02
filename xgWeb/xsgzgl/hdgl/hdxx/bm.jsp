@@ -4,6 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <%@ include file="/syscommon/head.ini"%>
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
     <script type="text/javascript" src="js/jquery/jquery.form.js"></script>
     <script type="text/javascript" src="js/jquery/ajaxSubmit.js"></script>
     <script type="text/javascript" src="js/calendar/calendar.js"></script>
@@ -12,6 +15,7 @@
     <script type="text/javascript" src="xsgzgl/comm/fileUpload/jmf.js"></script>
     <script type="text/javascript" src="xsgzgl/comm/fileUpload/f.js"></script>
     <script type="text/javascript" src="xsgzgl/hdgl/js/hdxx.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script type="text/javascript">
     </script>
 </head>
@@ -48,12 +52,12 @@
                     <div id="stuImg" class="open_img" style="margin-left:0px;margin-right:5px;margin-top: 0px;height: 130px">
                         <img style="width:100px;height:130px" id="avatarPreview" src="xsxx_xsgl.do?method=showPhoto&xh=${xh}" border="0">
                     </div>
-                    <div align="left" style="margin-left: 10px;">
-                        <button type="button" onclick="scZp();return false;">
-                            上传照片
-                        </button>
-                        <input id="imgUpload" type="file" name="stuPic" style="display:none;" onchange="upload();">
-                    </div>
+                    <%--<div align="left" style="margin-left: 10px;">--%>
+                        <%--<button type="button" onclick="scZp();return false;">--%>
+                            <%--上传照片--%>
+                        <%--</button>--%>
+                        <%--<input id="imgUpload" type="file" name="stuPic" style="display:none;" onchange="upload();">--%>
+                    <%--</div>--%>
                 </td>
             </tr>
             <logic:iterate id="i" name="jldxList">
@@ -137,6 +141,29 @@
             </tr>
             </tfoot>
         </table>
+    </div>
+    <!--提示框弹框-->
+    <div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a type="button" class="close" data-dismiss="modal"
+                       aria-hidden="true">×
+                    </a>
+                    <h4 class="modal-title" id="msgTitle">
+                        提示
+                    </h4>
+                </div>
+                <div class="modal-body" id="msgContent">
+                    按下 ESC 按钮退出。
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-default"
+                       data-dismiss="modal">关闭
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </html:form>
 </body>

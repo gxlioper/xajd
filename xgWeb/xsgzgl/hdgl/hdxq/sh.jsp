@@ -19,6 +19,7 @@
 <body style="width: 100%">
 <html:form action="/hdgl_hdxq" method="post" styleId="demoForm" onsubmit="return false;">
     <html:hidden property="ids" styleId="ids" value="${data.sqid}"/>
+    <html:hidden property="sqid" styleId="sqid" value="${data.sqid}"/>
     <html:hidden property="bmlx" styleId="bmlx" value="${bmlx}"/>
     <div style='width:100%;overflow-x:hidden;overflow-y:auto;height: 500px' >
         <table width="100%" border="0" class="formlist">

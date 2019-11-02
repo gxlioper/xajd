@@ -77,12 +77,14 @@
 					 <div class="tab-content col-sm-12 p-0">
 		                <div class="tab-pane fade active in" id="hdxq">
 	                	 	<div class="col-sm-7 num-list p-l-0 m-15-0">
+                                <logic:equal name="data" property="bmsf" value="1">
 		                        <label>已报名/活动票数：</label>
 			                        <div class="sc_num">
 			                            <span class="blue">${data.rs == null ? 0 : data.rs}</span>人
 			                            /
 			                            <span>${data.bmrs}</span>人
 			                        </div>
+                                </logic:equal>
 			                        <label class="m-l-25">评论：</label>
 			                        <div class="sc_num">
 			                            <span>0</span>条

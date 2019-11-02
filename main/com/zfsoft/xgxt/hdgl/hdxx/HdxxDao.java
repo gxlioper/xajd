@@ -271,6 +271,9 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
         if(StringUtils.isNotNull(t.getHdlx())){
             sql.append(" and t1.hdlx='" + t.getHdlx() +"'");
         }
+        if(StringUtils.isNotNull(t.getHdmc())){
+        	sql.append(" and t1.hdmc like '%" + t.getHdmc() + "%' ");
+		}
 //		if(pxfs.equals("zxsx")){
 //			sql.append(" and not exists(select 1 from xg_hdgl_hdryb t7 where t1.hdid = t7.hdid and t7.xh = ?)");
 //			sql.append(" order by t1.fbsj desc");
@@ -2134,5 +2137,22 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 		sql.append(" select a.hdid,a.xh,a.bmsj  from xg_hdgl_zdhdryb a left join xg_hdgl_hdxxb b on a.hdid = b.hdid where a.shzt='1' and a.hdpp='1' ");
 		sql.append(" ) where 1=1 and hdid= ? ");
 		return dao.getListNotOut(sql.toString(),new String[]{dthdid});
+	}
+
+/**
+ * @Author llf[1754]
+ * @Description 判断报名是否审核
+ * @Date 17:25 2019/11/1
+ * @Param [sqid]
+ * @return boolean
+ **/
+	public boolean checkIsSh(String sqid){
+		StringBuilder sql = new StringBuilder();
+		sql.append(" select shzt from（select sqid,shzt from xg_hdgl_hdryb union select sqid,shzt from xg_hdgl_zdhdryb） where sqid = ?");
+		String shzt = dao.getOneRs(sql.toString(),new String[]{sqid},"shzt");
+		if("1".equals(shzt)||"2".equals(shzt)){
+			return true; //已审核（1：已通过，2：已拒绝
+		}
+		return false;
 	}
 }

@@ -788,7 +788,9 @@ function bmview(){
             var url = "hdgl_hdxx.do?method=bm&hdid="+hdid+"&lx=grbm";//个人报名
             showDialog("活动报名表单", 800, 550, url);
 		} else {
-    		showAlert(data["message"]);
+            jQuery("#msgContent").html(data["message"]);
+            jQuery('#msgModal').modal('show');
+    		// showAlert(data["message"]);
 		}
 	},'json');
 }
@@ -909,7 +911,9 @@ function saveBm(){
 			}});
 
 		}else{
-			showAlertDivLayer(data["message"]);
+            jQuery("#msgContent").html(data["message"]);
+            jQuery('#msgModal').modal('show');
+			// showAlertDivLayer(data["message"]);
 		}
 	});
 }

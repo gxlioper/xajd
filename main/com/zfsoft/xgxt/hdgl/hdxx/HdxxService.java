@@ -963,4 +963,14 @@ public class HdxxService extends SuperServiceImpl<HdxxForm, HdxxDao> {
     public List<HashMap<String,String>> getBmRys(String dthdid){
         return dao.getBmRys(dthdid);
     }
+/**
+ * @Author llf[1754]
+ * @Description ≈–∂œ «∑Ò“—…Û∫À
+ * @Date 17:26 2019/11/1
+ * @Param [sqid]
+ * @return boolean
+ **/
+    public boolean checkIsSh(String sqid){
+        return dao.checkIsSh(sqid);
+    }
 }

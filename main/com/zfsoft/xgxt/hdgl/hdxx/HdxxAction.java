@@ -141,7 +141,7 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 		model = service.getModel(model);
 		HashMap<String,String> data = service.getHdxx(model);
 		if(StringUtil.isNull(data.get("bmdx"))){//报名对象为空时
-			request.setAttribute("errMsg","该活动为指定报名对象，无法进行报名！");
+			request.setAttribute("errMsg","该活动未指定报名对象，无法进行报名！");
 			request.getRequestDispatcher("errmsg.jsp").forward(request,response);
 			return null;
 		}
@@ -270,8 +270,8 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 		String msg = service.saveCheck(model);
 		if("true".equals(msg)){
 			boolean result = service.saveBm(model);
-			String messageKey = result ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
-			response.getWriter().print(getJsonMessageByKey(messageKey));
+			String messageKey = result ? "报名成功" : "报名失败";
+			response.getWriter().print(getJsonMessage(messageKey));
 		} else {
 			response.getWriter().print(getJsonMessage(msg));
 		}
