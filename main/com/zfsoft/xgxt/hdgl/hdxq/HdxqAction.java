@@ -122,8 +122,15 @@ public class HdxqAction extends SuperAction<HdxxForm, HdxxService> {
 	public ActionForward getHdxq(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		HdxxForm model = (HdxxForm) form;
 		HashMap<String,String> data = service.getHdxx(model);
+		String hdjgrd = data.get("hdjgrd");
+		String sfqd = "no";
+		if("Ç©µ½".equals(hdjgrd)||"Ç©ÍË".equals(hdjgrd)||"Ç©µ½²¢Ç©ÍË".equals(hdjgrd)){
+			sfqd = "yes";
+		}
+		request.setAttribute("sfqd",sfqd);
 		//½×¶ÎÐÅÏ¢
 		List<HashMap<String,String>> jdxx = service.getJdxx(model.getHdid());
+
 		request.setAttribute("jdxxList", jdxx);
 		request.setAttribute("data", data);
 		return mapping.findForward("hdxx");

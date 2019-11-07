@@ -68,6 +68,11 @@
 					var url = "hdgl_hdxx.do?method=getBmEwm&hdid="+hdid;
 					showDialog("报名二维码链接", 360, 200, url);
 				}
+				function qdlj() {
+					var hdid = jQuery("#hdid").val();
+					var url = "http://mtg.xjtu.edu.cn/template/GetDanmuTemplate?conid="+hdid;
+					window.open(url);
+                }
 			</script>
 			<html:form action="/hdgl_hdxq" method="post" styleId="hdxxForm" onsubmit="return false;">		  
 				<input type="hidden" id="hdid" name="hdid" value="${data.hdid}" />
@@ -101,6 +106,12 @@
 								 <button class="btn btn-primary" onclick="bmlj();return false;">
 									 <i class="glyphicon glyphicon-time"></i>
 									 活动报名链接
+								 </button>
+								 </logic:equal>
+								 <logic:equal name="sfqd" value="yes">
+								 <button class="btn btn-primary" onclick="qdlj();return false;">
+									 <i class="glyphicon glyphicon-time"></i>
+									 活动签到链接
 								 </button>
 								 </logic:equal>
                         		<button class="btn btn-primary" onclick="lableConfig();return false;">

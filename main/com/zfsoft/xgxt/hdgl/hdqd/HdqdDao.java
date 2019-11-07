@@ -36,8 +36,8 @@ public class HdqdDao extends SuperDAOImpl<HdqdForm> {
         StringBuilder sql = new StringBuilder();
         sql.append("select * from (");
         sql.append("select a.xh,a.hdid,a.qdsj,a.qtsj,b.hdmc,b.hddd,b.hdkssj,b.hdjssj,c.xm,");
-        sql.append("decode(a.qdzt,'1','ÒÑÇ©µ½','Î´Ç©µ½') qdztmc, ");
-        sql.append("decode(a.qtzt,'1','ÒÑÇ©ÍË','Î´Ç©ÍË') qtztmc, ");
+        sql.append("decode(a.qdzt,'1','ÒÑÇ©µ½','2','ÎÞÐèÇ©µ½','3','ÎÞÐ§Ç©µ½','Î´Ç©µ½') qdztmc, ");
+        sql.append("decode(a.qtzt,'1','ÒÑÇ©ÍË','2','ÎÞÐèÇ©ÍË','3','ÎÞÐ§Ç©ÍË','Î´Ç©ÍË') qtztmc, ");
         sql.append(" a.zyxss ");
         sql.append(" from (select xh,hdid,max(qdzt) qdzt,max(qdsj) qdsj,max(qtzt) qtzt,max(qtsj) qtsj,max(zyxss) zyxss ");
         sql.append(" from ( select xh,hdid,qdzt,qdsj,qtzt,qtsj,zyxss from XG_HDGL_HDQDXXB union  ");
