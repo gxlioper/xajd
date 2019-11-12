@@ -30,6 +30,13 @@
                     jQuery("#jzlxTr").hide();
                 }
                 kcjbChange();
+                jQuery('[name="nlbqs"]').click(function () {
+                    var nlbqLen = jQuery('[name="nlbqs"]');
+					if (this.checked && nlbqLen.filter(':checked').length > 3) {
+						showAlert("能力标签最多只能选三个，请确认！");
+						this.checked = false;
+					}
+                })
             });
 
             function changeHdxs(){
@@ -122,6 +129,8 @@
 					return false;
 				}
 			}
+
+
 
 			//保存设置
 			function saveSz(){
@@ -449,7 +458,7 @@
 							签到开始时间
 						</th>
 						<td >
-							<html:text property="qdkssj" styleId="qdkssj"  style="width:120px;"
+							<html:text property="qdkssj" styleId="qdkssj"
 									   onfocus="showCalendar('qdkssj','yyyy-MM-dd HH:mm',true,'qdjssj');"/>
 						</td>
 						<th>
@@ -465,7 +474,7 @@
 							签退开始时间
 						</th>
 						<td >
-							<html:text property="qtkssj" styleId="qtkssj"  style="width:120px;"
+							<html:text property="qtkssj" styleId="qtkssj"
 									   onfocus="showCalendar('qtkssj','yyyy-MM-dd HH:mm',false,'qdkssj');"/>
 						</td>
 						<th>

@@ -76,7 +76,7 @@
                     </logic:equal>
                     <tr name="bmxs">
                         <th>
-                            <span><font color='red'>*</font>报名名单简历信息必填字段设置</span>
+                            <span>报名名单简历信息必填字段设置</span>
                         </th>
                         <td>
                             <logic:iterate id="i" name="jldxList">
