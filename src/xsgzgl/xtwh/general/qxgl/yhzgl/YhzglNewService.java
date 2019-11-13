@@ -2,10 +2,7 @@ package xsgzgl.xtwh.general.qxgl.yhzgl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -43,6 +40,8 @@ import xsgzgl.xtwh.general.qxgl.GnmkModel;
  * @version 1.0
  */
 public class YhzglNewService extends BasicService{
+
+	private Log logger = LogFactory.getLog(CommanAction.class);
 	
 	YhzglNewDao dao = new YhzglNewDao();
 	
@@ -254,16 +253,20 @@ public class YhzglNewService extends BasicService{
 	 * @date 2018-09-19
 	 */
 	public Boolean yhzGnsqSave(String zdm,JSONArray yhzgnqxArray) throws Exception{
-		Log logger = LogFactory.getLog(CommanAction.class);
+
 		DAO me = DAO.getInstance();
 		boolean result = false;
+		logger.info("【insert into yhzqxb_lsb select * from yhzqxb b where b.zdm = '"+zdm+"'】:【start】"+new Date().toString());
 		String lsbSql = "insert into yhzqxb_lsb select * from yhzqxb b where b.zdm = ? ";
 		result = me.runUpdate(lsbSql,new String[]{zdm});
-		logger.info("insert into yhzqxb_lsb select * from yhzqxb b where b.zdm = '"+zdm+"'");
+		logger.info("【insert into yhzqxb_lsb select * from yhzqxb b where b.zdm = '"+zdm+"'】:【end】"+new Date().toString());
 
+		logger.info("【delete from yhzqxb where zdm= '"+zdm+"'】:【start】"+new Date().toString());
 		String delSql = "delete from yhzqxb where zdm= ? ";
 		result = me.runUpdate(delSql,new String[]{zdm});
+		logger.info("【delete from yhzqxb where zdm= '"+zdm+"'】:【end】"+new Date().toString());
 
+		logger.info("【insert into yhzqxb values (?,?,?)】:【start】"+new Date().toString());
 		if(result){
 			if(yhzgnqxArray.length() > 0){
 				String insertSql = "insert into yhzqxb values (?,?,?)";
@@ -272,16 +275,17 @@ public class YhzglNewService extends BasicService{
 					JSONObject jobj = yhzgnqxArray.getJSONObject(i);
 					String gnmkdm = jobj.getString("gnmkdm");
 					String dxq = jobj.getString("dxq").equals("null") ? null : jobj.getString("dxq");
-//					paramList.add(new String []{zdm,gnmkdm,dxq});
-					result = me.runUpdate(insertSql,new String[]{zdm,gnmkdm,dxq});
-					if(!result){
-						logger.info("insert into yhzqxb values ('"+zdm+"','"+gnmkdm+"','"+dxq+"') 执行失败！");
-						break;
-					}
+					paramList.add(new String []{zdm,gnmkdm,dxq});
+//					result = me.runUpdate(insertSql,new String[]{zdm,gnmkdm,dxq});
+//					if(!result){
+//						logger.info("insert into yhzqxb values ('"+zdm+"','"+gnmkdm+"','"+dxq+"') 执行失败！");
+//						break;
+//					}
 				}
-//				result = me.runBatchBoolean(insertSql,paramList);
+				result = me.runBatchBoolean(insertSql,paramList);
 			}
 		}
+		logger.info("【insert into yhzqxb values (?,?,?)】:【end】"+new Date().toString());
 
 		if(result){
 			saveYhqx(zdm);
@@ -371,21 +375,23 @@ public class YhzglNewService extends BasicService{
 			
 			//删除用户组临时表记录
 			sqls[1]=sb.toString();
-			sqls[2]="truncate table yhzqxb_lsb";
+			sqls[2]="delete from yhzqxb_lsb";
+			logger.info("【批处理保存用户权限】:【start】"+new Date().toString());
 			flag = dao.saveArrDate(sqls);
+			logger.info("【批处理保存用户权限】:【end】"+new Date().toString());
 			if(flag){
 				try {
 					KsdhService ksdh = new KsdhService();
 					ksdh.del_Rubbish_data_yhz(zdm.replace("'", ""));
 				} catch (Exception e) {
-					System.out.println("快速导航表【XG_XTWH_KSDHB】删除出错！");
+					logger.error("快速导航表【XG_XTWH_KSDHB】删除出错！");
 				}
 			}
 		} catch (SQLException e1) {
-			System.out.println("组根据用户组代码查询用户组下面用户异常");
+			logger.error("组根据用户组代码查询用户组下面用户异常");
 			e1.printStackTrace();
 		} catch (Exception e) {
-			System.out.println("保存用户组权限时联动用户权限更新失败");
+			logger.error("保存用户组权限时联动用户权限更新失败");
 			e.printStackTrace();
 		}
 		
