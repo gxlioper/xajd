@@ -260,7 +260,7 @@ function hjAddDzb() {
 
 
 function djztgb() {
-    var djzt = jQuery("#djzt").val();
+    var djzt = jQuery("#zt").val();
     if (djzt == "²»Õý³£") {
         document.getElementById("sl").style.display = "";
         document.getElementById("ld").style.display = "";

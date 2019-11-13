@@ -45,6 +45,8 @@ public class CyglForm extends ActionForm {
     private String ybdysj;
     private String zsygsj;
 
+    private String zt;
+
     private String[] dels;
     private Pages pages = new Pages();
     private SearchModel searchModel = new SearchModel();
@@ -360,6 +362,14 @@ public class CyglForm extends ActionForm {
 
     public void setZsygsj(String zsygsj) {
         this.zsygsj = zsygsj;
+    }
+
+    public String getZt() {
+        return zt;
+    }
+
+    public void setZt(String zt) {
+        this.zt = zt;
     }
 
     public SearchModel getSearchModel() {

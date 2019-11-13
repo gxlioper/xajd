@@ -27,6 +27,13 @@
                 }
             });
 
+            var zt = $('#selzt').val();
+            jQuery("#zt option").each(function () {
+                if (zt == ($(this).val())) {
+                    $(this).attr('selected', true);
+                }
+            });
+
             //是否失联
             var sfsl = $('#selsfsl').val();
             jQuery("#sfsl option").each(function () {
@@ -70,7 +77,7 @@
 <body>
 <html:form action="/dzdy_cygl" method="post" styleId="CyglForm">
 
-    <div style="tab;overflow-x:hidden;overflow-y:auto;margin-bottom:0px;">
+    <div style="tab;overflow-x:hidden;overflow-y:auto;margin-bottom:0px;height: 500px">
         <table width="100%" border="0" class="formlist">
             <thead>
             <tr>
@@ -203,12 +210,22 @@
                 <th width="20%">党籍状态</th>
                 <td width="30%" colspan="3">
                     <input type="hidden" id="seldjzt" value="${cyMap.djzt}"/>
-                    <html:select property="djzt" style="width:152px" styleId="djzt" onchange="djztgb();">
+                    <html:select property="djzt" style="width:152px" styleId="djzt">
+                        <option value='在籍'>在籍</option>
+                        <option value='保留'>保留</option>
+                    </html:select>
+                </td>
+
+            </tr>
+            <tr>
+                <th width="20%">状态</th>
+                <td width="30%" colspan="3">
+                    <input type="hidden" id="selzt" value="${cyMap.zt}"/>
+                    <html:select property="zt" style="width:152px" styleId="zt" onchange="djztgb();">
                         <option value='正常'>正常</option>
                         <option value='不正常'>不正常</option>
                     </html:select>
                 </td>
-
             </tr>
             <tr id="sl" style="display: none">
                 <th width="20%">是否失联</th>
@@ -246,7 +263,7 @@
 
         </table>
     </div>
-    <div style="height:30px;"></div>
+    <div style="height:50px;"></div>
     <%--;height:520px --%>
     <div>
         <table width="100%" border="0" class="formlist" style="position: fixed; _position: absolute; bottom: 0;">
