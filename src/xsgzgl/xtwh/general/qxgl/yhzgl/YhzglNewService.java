@@ -9,13 +9,18 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.zfsoft.xgxt.base.log.LogInfo;
 import com.zfsoft.xgxt.xtwh.ksdh.KsdhService;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import xgxt.DAO.DAO;
 import xgxt.action.Base;
+import xgxt.action.CommanAction;
 import xgxt.comm.CommDAO;
+import xgxt.comm.chart.operation.ChartService;
 import xgxt.form.User;
 import xsgzgl.comm.BasicService;
 import xsgzgl.xtwh.general.qxgl.GnmkModel;
@@ -249,11 +254,12 @@ public class YhzglNewService extends BasicService{
 	 * @date 2018-09-19
 	 */
 	public Boolean yhzGnsqSave(String zdm,JSONArray yhzgnqxArray) throws Exception{
-
+		Log logger = LogFactory.getLog(CommanAction.class);
 		DAO me = DAO.getInstance();
-
+		boolean result = false;
 		String lsbSql = "insert into yhzqxb_lsb select * from yhzqxb b where b.zdm = ? ";
-		boolean result = me.runUpdate(lsbSql,new String[]{zdm});
+		result = me.runUpdate(lsbSql,new String[]{zdm});
+		logger.info("insert into yhzqxb_lsb select * from yhzqxb b where b.zdm = '"+zdm+"'");
 
 		String delSql = "delete from yhzqxb where zdm= ? ";
 		result = me.runUpdate(delSql,new String[]{zdm});
@@ -269,6 +275,7 @@ public class YhzglNewService extends BasicService{
 //					paramList.add(new String []{zdm,gnmkdm,dxq});
 					result = me.runUpdate(insertSql,new String[]{zdm,gnmkdm,dxq});
 					if(!result){
+						logger.info("insert into yhzqxb values ('"+zdm+"','"+gnmkdm+"','"+dxq+"') Ö´ÐÐÊ§°Ü£¡");
 						break;
 					}
 				}

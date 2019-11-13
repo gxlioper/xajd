@@ -538,14 +538,14 @@ public class QgzxCjffjgDAO extends SuperDAOImpl<QgzxCjffjgForm> {
 	 */
 	public List<HashMap<String, String>> getCjmxList(QgzxCjffjgForm model) {
 		StringBuilder sql=new StringBuilder();
-		sql.append("select rownum r,a.*,b.xm,b.yhkh from (select a.*,z.xm cjffrXm,(select gwmc from xg_qgzx_gwxxb b ");
+		sql.append("select rownum r,a.*,b.xm,b.yhkh,b.bjmc from (select a.*,z.xm cjffrXm,(select gwmc from xg_qgzx_gwxxb b ");
 		sql.append("where a.gwdm = b.gwdm)gwmc,(select t1.gwxzmc from xg_qgzx_gwxzdmb t1,xg_qgzx_gwxxb t2 where t1.gwxzdm=t2.gwlb ");
 		sql.append("and t2.gwdm=a.gwdm) gwxzmc from xg_qgzx_jcffb a left join yhb z on z.yhm = a.cjffr where exists ");
 		sql.append("(select 1 from xg_qgzx_gwxxb b left join xg_qgzx_yrdwdmb c on b.yrdwid = c.id where  a.gwdm = b.gwdm and xn = ? and c.xydm = ?) and yf = ? and (xq is null or xq = '' or xq =?) ");
-		sql.append("order by xh,gwdm) a left join (select a.xh, a.xm, a.xb, b.nj, b.xydm, b.zydm, a.bjdm, a.yhkh from xsxxb a ");
+		sql.append("order by xh,gwdm) a left join (select a.xh, a.xm, a.xb, b.nj, b.xydm, b.zydm, a.bjdm,b.bjmc, a.yhkh from xsxxb a ");
 		sql.append("left join view_njxyzybj_all b on a.bjdm=b.bjdm) b on a.xh = b.xh where 1=1 ");
 		String[] inputValue = model.getPkValue().split("!!@@!!");
-		String[] outputValue={"r","xh","xm","gwmc","gwxzmc","gs","je","yhkh","bz","cjffrXm"};
+		String[] outputValue={"r","xh","xm","gwmc","gwxzmc","gs","je","yhkh","bz","cjffrXm","bjmc"};
 		List<String> list=new ArrayList<String>();
 		for(String input:inputValue){
 			list.add(input);

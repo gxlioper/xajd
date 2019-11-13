@@ -3,13 +3,12 @@ package xsgzgl.qgzx.cjffjg;
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 
+import jxl.write.*;
 import xgxt.DAO.DAO;
 import xgxt.action.Base;
 import xgxt.comm.MessageInfo;
@@ -29,11 +28,6 @@ import com.zfsoft.xgxt.xszz.knsjg.KnsjgDao;
 
 import jxl.Workbook;
 import jxl.format.Alignment;
-import jxl.write.Label;
-import jxl.write.WritableCellFormat;
-import jxl.write.WritableSheet;
-import jxl.write.WritableWorkbook;
-import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
 /**
  * 勤工助学-酬金管理-酬金信息管理
@@ -204,7 +198,7 @@ public class QgzxCjffjgService extends BasicService{
 	
 	/**
 	 * 获得用人部门列表
-	 * @param model
+	 * @param
 	 * @return
 	 */
 	public List<HashMap<String, String>> getYrbmOfUser(User user) {
@@ -952,7 +946,7 @@ public class QgzxCjffjgService extends BasicService{
 	
 	/**
 	 * 创建酬金发放明细html
-	 * @param cjmxList
+	 * @param
 	 * @return
 	 */
 	private String createCjmxHtml(List<HashMap<String, String>> rsArrList) {
@@ -1007,7 +1001,7 @@ public class QgzxCjffjgService extends BasicService{
 	
 	/**
 	 * 自动批量提交酬金发放信息（过期的）
-	 * @param params
+	 * @param
 	 * @return
 	 * @throws Exception 
 	 */
@@ -1135,102 +1129,87 @@ public class QgzxCjffjgService extends BasicService{
 		WritableWorkbook book = null;
 		
 		 try {
-			book = Workbook.createWorkbook(file);
+		 	book = Workbook.createWorkbook(file);
 			WritableSheet sheet1 = book.createSheet("酬金发放明细表", 0);
 			//合并单元格
-			sheet1.mergeCells(0, 0, 9, 0); 
-			
-			sheet1.mergeCells(0, 1, 9, 1);
-			
-			sheet1.mergeCells(0, 2, 1, 2);
-			sheet1.mergeCells(2, 2, 4, 2);
-			sheet1.mergeCells(5, 2, 6, 2);
-			sheet1.mergeCells(7, 2, 9, 2);
-			
-			sheet1.mergeCells(0, 3, 1, 3);
-			sheet1.mergeCells(2, 3, 4, 3);
-			sheet1.mergeCells(5, 3, 6, 3);
-			sheet1.mergeCells(7, 3, 9, 3);
-			
-			sheet1.mergeCells(0, 4, 9, 4);
-			
+			sheet1.mergeCells(0, 0, 7, 0);
+
+			sheet1.mergeCells(0, 1, 7, 1);
+			sheet1.mergeCells(0,2,7,2);
+
 			//单元格格式
-		    WritableCellFormat wcf1 = new WritableCellFormat();  
-		    WritableCellFormat wcf2 = new WritableCellFormat();  
-		    wcf1.setAlignment(Alignment.CENTRE);//把水平对齐方式指定为居中 
-		    wcf1.setVerticalAlignment(jxl.format.VerticalAlignment.CENTRE);//把垂直对齐方式指定为居中 
-		    wcf1.setBorder(jxl.format.Border.ALL,jxl.format.BorderLineStyle.THIN); //设置边框
-		    
-		    wcf2.setBorder(jxl.format.Border.ALL,jxl.format.BorderLineStyle.THIN); 
-		    wcf2.setVerticalAlignment(jxl.format.VerticalAlignment.CENTRE);//把垂直对齐方式指定为居中 
-		    
-			
-			Label label_c0r0 = new Label(0,0,"酬金发放明细表",wcf1);
-			
-			Label label_c0r1 = new Label(0,1,"岗位信息",wcf2);
-			
-			Label label_c0r2 = new Label(0,2,"学年",wcf2);
-			Label label_c2r2 = new Label(2,2,rs.get("xn"),wcf2);
-			Label label_c5r2 = new Label(5,2,"用人部门",wcf2);
-			Label label_c7r2 = new Label(7,2,rs.get("yrdwmc"),wcf2);
-			
-			Label label_c0r3 = new Label(0,3,"发放年月",wcf2);
-			Label label_c2r3 = new Label(2,3,rs.get("ffny"),wcf2);
-			Label label_c5r3 = new Label(5,3,"提交状态");
-			Label label_c7r3 = new Label(7,3,rs.get("tjztmc"),wcf2);
-			
-			Label label_c0r4 = new Label(0,4,"酬金明细信息",wcf2);
-			
-			Label label_c0r5 = new Label(0,5,"行号",wcf2);
-			Label label_c1r5 = new Label(1,5,"学号",wcf2);
-			Label label_c2r5 = new Label(2,5,"姓名",wcf2);
-			Label label_c3r5 = new Label(3,5,"岗位名称",wcf2);
-			Label label_c4r5 = new Label(4,5,"岗位性质",wcf2);
-			Label label_c5r5 = new Label(5,5,"工时",wcf2);
-			Label label_c6r5 = new Label(6,5,"金额",wcf2);
-			Label label_c7r5 = new Label(7,5,"银行卡号",wcf2);
-			Label label_c8r5 = new Label(8,5,"酬金发放人",wcf2);
-			Label label_c9r5 = new Label(9,5,"备注",wcf2);
-			
+			WritableCellFormat wcf1 = new WritableCellFormat();
+			WritableCellFormat wcf2 = new WritableCellFormat();
+			WritableCellFormat wcf3 = new WritableCellFormat();
+			WritableCellFormat wcf4 = new WritableCellFormat();
+			WritableFont font1 = new WritableFont(WritableFont.createFont(""),18,WritableFont.BOLD,false);
+			wcf1.setAlignment(Alignment.CENTRE);//把水平对齐方式指定为居中
+			wcf1.setVerticalAlignment(jxl.format.VerticalAlignment.CENTRE);//把垂直对齐方式指定为居中
+			wcf1.setBorder(jxl.format.Border.ALL,jxl.format.BorderLineStyle.THIN); //设置边框
+			wcf1.setFont(font1);
+
+			 WritableFont font2 = new WritableFont(WritableFont.createFont(""),15,WritableFont.BOLD,false);
+			 wcf3.setAlignment(Alignment.CENTRE);//把水平对齐方式指定为居中
+			 wcf3.setVerticalAlignment(jxl.format.VerticalAlignment.CENTRE);//把垂直对齐方式指定为居中
+			 wcf3.setBorder(jxl.format.Border.ALL,jxl.format.BorderLineStyle.THIN); //设置边框
+			 wcf3.setFont(font2);
+
+			 WritableFont font3 = new WritableFont(WritableFont.createFont(""),10,WritableFont.BOLD,false);
+			 wcf4.setAlignment(Alignment.CENTRE);//把水平对齐方式指定为居中
+			 wcf4.setBorder(jxl.format.Border.ALL,jxl.format.BorderLineStyle.THIN);
+			 wcf4.setVerticalAlignment(jxl.format.VerticalAlignment.CENTRE);//把垂直对齐方式指定为居中
+			 wcf4.setWrap(true);
+			 wcf4.setFont(font3);
+
+			wcf2.setAlignment(Alignment.CENTRE);//把水平对齐方式指定为居中
+			wcf2.setBorder(jxl.format.Border.ALL,jxl.format.BorderLineStyle.THIN);
+			wcf2.setVerticalAlignment(jxl.format.VerticalAlignment.CENTRE);//把垂直对齐方式指定为居中
+			 wcf2.setWrap(true);
+
+
+			Label label_c0r0 = new Label(0,0,"西安交通大学",wcf1);
+			String ffny = rs.get("ffny").replaceAll("-","年");
+			Label label_c0r1 = new Label(0,1,ffny+"月（"+rs.get("yrdwmc")+"）本科生勤工助学工资发放情况",wcf3);
+		 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			Label label_c0r2 = new Label(0,2,"制表单位（盖章）：                                                         制表日期："+sdf.format(new Date()),wcf2);
+
+			Label label_c0r3 = new Label(0,3,"行号",wcf4);
+			Label label_c1r3 = new Label(1,3,"岗位名称",wcf4);
+			Label label_c2r3 = new Label(2,3,"学号",wcf4);
+			Label label_c3r3 = new Label(3,3,"姓名",wcf4);
+			Label label_c4r3 = new Label(4,3,"班级",wcf4);
+			Label label_c5r3 = new Label(5,3,"累计工作时间",wcf4);
+			Label label_c6r3 = new Label(6,3,"金额（元）",wcf4);
+			Label label_c7r3 = new Label(7,3,"备注",wcf4);
+
 			sheet1.addCell(label_c0r0);
-			
+
 			sheet1.addCell(label_c0r1);
-			
+
 			sheet1.addCell(label_c0r2);
-			sheet1.addCell(label_c2r2);
-			sheet1.addCell(label_c5r2);
-			sheet1.addCell(label_c7r2);
-			
+
 			sheet1.addCell(label_c0r3);
+			sheet1.addCell(label_c1r3);
 			sheet1.addCell(label_c2r3);
+			sheet1.addCell(label_c3r3);
+			sheet1.addCell(label_c4r3);
 			sheet1.addCell(label_c5r3);
+			sheet1.addCell(label_c6r3);
 			sheet1.addCell(label_c7r3);
-			
-			sheet1.addCell(label_c0r4);
-			
-			sheet1.addCell(label_c0r5);
-			sheet1.addCell(label_c1r5);
-			sheet1.addCell(label_c2r5);
-			sheet1.addCell(label_c3r5);
-			sheet1.addCell(label_c4r5);
-			sheet1.addCell(label_c5r5);
-			sheet1.addCell(label_c6r5);
-			sheet1.addCell(label_c7r5);
-			sheet1.addCell(label_c8r5);
-			sheet1.addCell(label_c9r5);
-			
+
+
 			for(int i=0;i<cjmxList.size();i++){
-				Label label0 = new Label(0,6+i,1+i+"",wcf2);
-				Label label1 = new Label(1,6+i,cjmxList.get(i).get("xh"),wcf2);
-				Label label2 = new Label(2,6+i,cjmxList.get(i).get("xm"),wcf2);
-				Label label3 = new Label(3,6+i,cjmxList.get(i).get("gwmc"),wcf2);
-				Label label4 = new Label(4,6+i,cjmxList.get(i).get("gwxzmc"),wcf2);
-				Label label5 = new Label(5,6+i,cjmxList.get(i).get("gs"),wcf2);
-				Label label6 = new Label(6,6+i,cjmxList.get(i).get("je"),wcf2);
-				Label label7 = new Label(7,6+i,cjmxList.get(i).get("yhkh"),wcf2);
-				Label label8 = new Label(8,6+i,cjmxList.get(i).get("cjffrXm"),wcf2);
-				Label label9 = new Label(9,6+i,cjmxList.get(i).get("bz"),wcf2);
-				
+				Label label0 = new Label(0,4+i,1+i+"",wcf2);
+				Label label3 = new Label(1,4+i,cjmxList.get(i).get("gwmc"),wcf2);
+				Label label1 = new Label(2,4+i,cjmxList.get(i).get("xh"),wcf2);
+				Label label2 = new Label(3,4+i,cjmxList.get(i).get("xm"),wcf2);
+
+				Label label4 = new Label(4,4+i,cjmxList.get(i).get("bjmc"),wcf2);
+				Label label5 = new Label(5,4+i,cjmxList.get(i).get("gs"),wcf2);
+				Label label6 = new Label(6,4+i,cjmxList.get(i).get("je"),wcf2);
+
+				Label label7 = new Label(7,4+i,cjmxList.get(i).get("bz"),wcf2);
+
 				sheet1.addCell(label0);
 				sheet1.addCell(label1);
 				sheet1.addCell(label2);
@@ -1238,21 +1217,19 @@ public class QgzxCjffjgService extends BasicService{
 				sheet1.addCell(label4);
 				sheet1.addCell(label5);
 				sheet1.addCell(label6);
+
 				sheet1.addCell(label7);
-				sheet1.addCell(label8);
-				sheet1.addCell(label9);
 			}
-			
+
 			sheet1.setColumnView(0, 5);
 			sheet1.setColumnView(1, 15);
 			sheet1.setColumnView(2, 15);
 			sheet1.setColumnView(3, 15);
 			sheet1.setColumnView(4, 15);
-			sheet1.setColumnView(5, 5);
+			sheet1.setColumnView(5, 10);
 			sheet1.setColumnView(6, 8);
-			sheet1.setColumnView(7, 25);
-			sheet1.setColumnView(8, 15);
-			sheet1.setColumnView(9, 20);
+
+			sheet1.setColumnView(7, 20);
 			
 		} catch (IOException e) {
 			e.printStackTrace();

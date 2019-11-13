@@ -31,7 +31,8 @@
 				<ul>
 					<li><a href="javascript:void(0);" onclick="add();" class="btn_zj">增加</a></li>
 					<li><a href="javascript:void(0);" onclick="update();" class="btn_xg">修改</a></li>
-					<li><a href="javascript:void(0);" onclick="del();" class="btn_sc">删除</a></li>		
+					<li><a href="javascript:void(0);" onclick="del();" class="btn_sc">删除</a></li>
+					<li><a href="javascript:void(0);" onclick="updateQyzt();" class="btn_xg">变更启用状态</a></li>
 				</ul>
 			</div>
 			</logic:equal>				

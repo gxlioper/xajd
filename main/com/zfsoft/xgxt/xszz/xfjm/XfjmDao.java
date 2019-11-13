@@ -339,6 +339,17 @@ public class XfjmDao extends SuperDAOImpl<XfjmForm> {
         }
         return false;
     }
+    /**
+     * @Author llf
+     * @Description 撤销审核
+     * @Date 9:41 2019/11/12
+     * @Param [id]
+     * @return boolean
+     **/
+    public boolean qxsh(String id) throws Exception{
+        String sql = "update xg_xszz_new_xfjmb set xfjmje = '' , shzt = '5' where id = ?";
+        return dao.runUpdate(sql,new String[]{id});
+    }
 
     /**
      * @描述: 根据学号学年，获取困难生认定结果信息

@@ -5,7 +5,14 @@
 				colList:[
 				   {label:'档次代码',name:'dcdm', index: 'dcdm',key:true},
 				   {label:'档次名称',name:'dcmc', index: 'dcdm',width:'20%'},
-				   {label:'项目说明',name:'xmsm', index: 'xmsm',width:'60%',formatter:xmsmSubstring}
+				   {label:'项目说明',name:'xmsm', index: 'xmsm',width:'60%',formatter:xmsmSubstring},
+                    {label:'是否启用',name:'sfqy', index: 'sfqy',formatter:function (cellValue,rowObject) {
+						if(rowObject["sfqy"]!="否"){
+							return "是"
+						}else {
+							return rowObject["sfqy"];
+						}
+                    }}
 				],
 				sortname: "dcdm",
 			 	sortorder: "asc"
@@ -42,6 +49,19 @@
 					showDialog(title,400,250,url);
 				}
 			}
+
+			function updateQyzt() {
+                var rows = jQuery("#dataTable").getSeletRow();
+                if (rows.length != 1){
+                    showAlertDivLayer("请选择一条您要修改的记录！");
+                } else {
+                    var url = 'xszz_knsdc.do?method=updateQyzt&dcdm='+rows[0]["dcdm"];
+                    jQuery.post(url,{sfqy:rows[0]["sfqy"]},function(data){
+                        showAlertDivLayer(data["message"]);
+                        jQuery("#dataTable").reloadGrid();
+                    },'json');
+                }
+            }
 
 			function del(){
 				var ids = jQuery("#dataTable").getSeletIds();

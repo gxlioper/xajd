@@ -9,8 +9,13 @@ import com.zfsoft.xgxt.base.service.impl.SuperServiceImpl;
 import com.zfsoft.xgxt.base.util.UniqID;
 
 import com.zfsoft.xgxt.hdgl.hdbljg.HdbljgDao;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.struts.upload.FormFile;
+import org.slf4j.Logger;
 import xgxt.DAO.PicDAO;
+import xgxt.action.CommanAction;
+import xgxt.comm.chart.operation.ChartService;
 import xgxt.form.User;
 import xgxt.utils.Pages;
 import xgxt.utils.String.StringUtils;
@@ -910,9 +915,12 @@ public class HdxxService extends SuperServiceImpl<HdxxForm, HdxxDao> {
      * @return
      */
     public void pp() {
+        Log logger = LogFactory.getLog(CommanAction.class);
+        logger.info("自动派票开始...");
         //所有未派票的活动
         List<HashMap<String, String>> hdList = getHdxxList();
         for (HashMap<String, String> hashMap : hdList) {
+            logger.info("活动："+hashMap.get("hdmc")+"【"+hashMap.get("hdid")+"】开始派票...");
             //报名的人
             List<String> ryList = getHdryList(hashMap.get("hdid"));
             if (StringUtils.isNull(hashMap.get("bmrs"))) {
@@ -952,6 +960,8 @@ public class HdxxService extends SuperServiceImpl<HdxxForm, HdxxDao> {
                 try {
                     dao.pp(params);
 
+                    logger.info("活动："+hashMap.get("hdmc")+"【"+hashMap.get("hdid")+"】派票完成！");
+
                 } catch (SQLException e) {
                     e.printStackTrace();
 
@@ -959,6 +969,7 @@ public class HdxxService extends SuperServiceImpl<HdxxForm, HdxxDao> {
             }
 
         }
+        logger.info("自动派票结束...");
     }
     public List<HashMap<String,String>> getBmRys(String dthdid){
         return dao.getBmRys(dthdid);

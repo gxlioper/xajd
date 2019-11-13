@@ -20,6 +20,7 @@
                     {label: '学号', name: 'xh', index: 'xh', width: '10%'},
                     {label: '姓名', name: 'xm', index: 'xm', width: '10%'},
                     {label: '性别', name: 'xb', index: 'xb', width: '10%'},
+                    {label: '身份证号', name: 'sfzh', index: 'sfzh', width: '10%'},
                     {label: '书院', name: 'symc', index: 'symc', width: '18%'},
                     {label: '班级', name: 'bjmc', index: 'bjmc', width: '10%'},
                     {label: '联系电话', name: 'lxdh', index: 'lxdh', width: '10%'},

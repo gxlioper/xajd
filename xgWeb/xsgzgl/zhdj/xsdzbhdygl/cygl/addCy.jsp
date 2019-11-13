@@ -68,9 +68,9 @@
                 <th width="20%">专业</th>
                 <td width="30%"><span id="zymc"></span></td>
             </tr>
-            <tr style="display: none;">
+            <tr>
                 <th width="20%">身份证号</th>
-                <td width="30%"><span id="sfzh"></span></td>
+                <td width="30%"><input type="text" id="sfzh" name="sfzh" readonly="readonly" style="border-style: none"/></td>
             </tr>
             <tr>
                 <th width="20%">专业班级</th>

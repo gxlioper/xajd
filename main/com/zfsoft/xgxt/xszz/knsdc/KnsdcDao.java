@@ -32,7 +32,7 @@ public class KnsdcDao extends SuperDAOImpl<KnsdcForm> {
 	public List<HashMap<String, String>> getPageList(KnsdcForm model)
 			throws Exception {
 		List<String> params = new ArrayList<String>();
-		StringBuilder sql = new StringBuilder("select dcdm,dcmc,xmsm from xg_xszz_new_kndcdmb where 1=1");
+		StringBuilder sql = new StringBuilder("select dcdm,dcmc,xmsm,sfqy from xg_xszz_new_kndcdmb where 1=1");
 		
 		if (!StringUtil.isNull(model.getDcdm())){
 			params.add(model.getDcdm());
@@ -194,7 +194,7 @@ public class KnsdcDao extends SuperDAOImpl<KnsdcForm> {
 	 * @throws
 	 */
 	public List<HashMap<String, String>> getKnsdcList() {
-		String sql = "select dcdm ,dcmc from xg_xszz_new_kndcdmb order by dcdm";
+		String sql = "select dcdm ,dcmc from xg_xszz_new_kndcdmb where sfqy ='ÊÇ' or sfqy is null order by dcdm";
 		return dao.getList(sql, new String[]{},new String[]{"dcdm","dcmc"});
 	}
 	/**

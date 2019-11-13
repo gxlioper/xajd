@@ -33,7 +33,7 @@ function updateCy() {
         showAlertDivLayer("请选择一个记录！");
         return false;
     }
-    var url = "dzdy_cygl.do?method=updateCy&xh=" + rows[0]["xh"];
+    var url = "dzdy_cygl.do?method=updateCy&sfzh=" + rows[0]["sfzh"];
     var title = "修改成员信息";
     showDialog(title, 770, 552, url);
 }
@@ -84,7 +84,7 @@ function delCy() {
         return false;
     }
     for (var i = 0; i < row.length; i++) {
-        dels.push(row[i]["xh"]);
+        dels.push(row[i]["sfzh"]);
     }
     var para = {
         dels: dels
@@ -155,7 +155,7 @@ function choseXx() {
     var rows = jQuery("#dataTable").getSeletRow();
 
     if (rows.length == 0) {
-        showAlertDivLayer("请选择一个学院！");
+        showAlertDivLayer("请选择一个学生！");
         return false;
     }
     var api = frameElement.api;
@@ -164,7 +164,7 @@ function choseXx() {
     parentsW.jQuery("#xm").html(rows[0]['xm']);
     parentsW.jQuery("#xb").html(rows[0]['xb']);
     parentsW.jQuery("#csrq").html(rows[0]['csrq']);
-    parentsW.jQuery("#sfzh").html(rows[0]['sfzh']);
+    parentsW.jQuery("#sfzh").val(rows[0]['sfzh']);
     parentsW.jQuery("#mzmc").html(rows[0]['mzmc']);
     parentsW.jQuery("#zymc").html(rows[0]['zymc']);
     parentsW.jQuery("#bjmc").html(rows[0]['bjmc']);

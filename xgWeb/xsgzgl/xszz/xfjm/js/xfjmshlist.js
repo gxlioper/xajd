@@ -47,8 +47,10 @@ function selectTab(obj,type){
     status = type;
     if(status=='ysh'){
         jQuery("#xfjmsh").hide();
+        jQuery("#xfjmcx").show();
     }else{
         jQuery("#xfjmsh").show();
+        jQuery("#xfjmcx").hide();
     }
     jQuery(".ha").removeClass("ha");
     jQuery(obj).parent().addClass("ha");
@@ -80,6 +82,41 @@ function xfjmsh(){
     showDialog("学费减免信息审核",  720, 520, "xszz_new_xfjm.do?method=xfjmSh&status=dsh&id=" + row.id
         + "&xh=" + row.xh+"&shlc="+row.shlc+"&shid="+row.shid+"&xtgwid="+row.gwid);
 }
+//撤销审核
+function cancelSh(){
+    var rows = jQuery("#dataTable").getSeletRow();
+
+    if (rows.length != 1){
+        showAlertDivLayer("请选择一条您要撤消的审核记录！");
+    } else {
+
+        //最后一级撤销审核后调用的路径
+        var cancelPath = "xszz_new_xfjm.do?method=qxsh&status=dsh&id="+rows[0]["id"];
+        var msg="<div><ul>";
+        var callBackMsg="";
+        confirmInfo("您确定要撤销操作吗?",function(ty){
+            if(ty=="ok"){
+                jQuery.post("comm_spl.do?method=cxshnew",{shlc:rows[0]["shlc"],shid:rows[0]["shid"]},function(data){
+                    // 判断是否最后一级撤销(1:最后一级撤销成功）
+                    if("1" == data["cancelFlg"]){
+                        jQuery.post(cancelPath,{id:rows[0]["id"]},function(result){
+                            callBackMsg=result["message"];
+                        },'json');
+                    }else{
+                        callBackMsg=data["message"];
+                    }
+                    msg+="<li><span style='width:40%;display:inline-block'>"+rows[0]["xh"]+"</span><font class='have'>"+callBackMsg+"</font></li>";
+                    msg+="</ul></div>";
+                    showAlertDivLayer(msg,{},{"clkFun":function(){
+                        jQuery("#dataTable").reloadGrid();
+                    }});
+                },'json');
+            }
+        });
+
+    }
+}
+
 function searchRs(){
     var map = getSuperSearch();
     map.status = status;

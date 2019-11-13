@@ -85,16 +85,16 @@ function showDetail(xh) {
 }
 
 function viewThjl() {
-	var id = '';
+	var xh = '';
 	var rowsValue = jQuery("#dataTable").getSeletRow();
 	if (rowsValue.length != 1) {
 		showAlert("请选择一条您要查看的记录！");
 		return false;
 	} else {
-		id = rowsValue[0]["id"];
+		xh = rowsValue[0]["xh"];
 	}
-	showDialog("查看谈话记录", 700, 505,
-			"szdw_thjl.do?method=thjlDetail&doType=view&id=" + id);
+	showDialog("查看谈话记录", 700, 525,
+			"szdw_thjl.do?method=thjlDetailByXh&xh=" + xh);
 }
 
 function addThjl() {

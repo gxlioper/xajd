@@ -231,10 +231,15 @@ public class QgzxCxtjDAO extends SuperDAOImpl{
 
 		StringBuilder sql = new StringBuilder();
 		sql.append("select * from (");
-		sql.append(" select a.xh,a.nf,a.yf,gs,je,b.xm,b.yhkh,b.yhmc,b.bjdm,b.bjmc,b.zybj,b.zybjmc,b.xydm,b.xymc,b.zydm,b.zymc,b.sjhm,b.nj from (");
-		sql.append(" select a.xh,substr(ffsj, 0, 4) nf,substr(ffsj, 6) yf, ffsj,sum(gs) gs,sum(je) je");
-		sql.append(" from XG_QGZX_CJFF a group by a.xh,a.ffsj ) a");
-		sql.append(" left join view_xsjbxx b on a.xh = b.xh ");
+		sql.append(" select a.xh,a.nf,a.yf,gs,je,yrdw,b.xm,b.yhkh,b.yhmc,b.bjdm,b.bjmc,b.zybj,b.zybjmc,b.xydm,b.xymc,b.zydm,b.zymc,b.sjhm,b.nj from (");
+		sql.append(" select a.xh,substr(a.ffsj, 0, 4) nf,substr(a.ffsj, 6) yf, a.ffsj,sum(a.gs) gs,sum(a.je) je,wm_concat(nvl(b.yrdwmc,c.bmmc)) yrdw ");
+		sql.append(" from (select xh,substr(ffsj, 0, 4) nf,substr(ffsj, 6) yf, ffsj,yrbm,sum(gs) gs,sum(je) je ");
+		sql.append(" from XG_QGZX_CJFF  group by xh,ffsj,yrbm ) a ");
+		sql.append("  left join xg_qgzx_yrdwdmb b on a.yrbm = b.yrdwdm ");
+		sql.append(" left join zxbz_xxbmdm c on a.yrbm = c.bmdm group by a.xh,a.ffsj  ) a");
+		sql.append(" left join (select a.*, (select yhmc from dmk_yh d where a.yhdm = d.yhdm) yhmc,c.bjmc zybjmc, b.sydm, b.symc,c.xymc from XSXXB a ");
+		sql.append(" left join view_njsybj b on a.bjdm = b.bjdm left join view_njxyzybj_all c ");
+		sql.append(" on a.zybj = c.bjdm )b on a.xh = b.xh ");
 		sql.append(" ) t where 1=1 ");
 
 		sql.append(searchTj);

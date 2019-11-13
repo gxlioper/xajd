@@ -13,7 +13,7 @@ public class JgdcyglDao extends SuperDAOImpl<JgdcyglForm> {
     protected void setTableInfo() {
         this.setClass(JgdcyglForm.class);
         this.setKey("xh");
-        this.setTableName("xg_zhdj_dzbgl_dzbcy");
+        this.setTableName("xg_zhdj_dzbgl_jgdzbcy");
 
     }
 
@@ -31,7 +31,7 @@ public class JgdcyglDao extends SuperDAOImpl<JgdcyglForm> {
         sql.append("(case a.sfsl when  '0' then '否' when  '1' then '是' else '否' end ) as sl,");
         sql.append("  (case a.sfld when  '0' then '否' when  '1' then '是' else '否' end ) as ld,   ");
         sql.append(" x.xb   ");
-        sql.append(" from xg_zhdj_dzbgl_dzbcy a left join view_fdyxx x on a.xh = x.zgh  ");
+        sql.append(" from xg_zhdj_dzbgl_jgdzbcy a left join view_fdyxx x on a.xh = x.zgh  ");
         sql.append(" left join (select l.dzbid,l.dzbmc,l.dzblx from  xg_zhdj_dzbgl_dzb l group by l.dzbid,l.dzbmc,l.dzblx) d on a.dzbid = d.dzbid ");
         sql.append("  left join zzmmdmb z on a.zzmmdm = z.zzmmdm )t where 1=1 and t.dzblx = '教工党支部' ");
 
@@ -72,7 +72,7 @@ public class JgdcyglDao extends SuperDAOImpl<JgdcyglForm> {
         StringBuilder sql = new StringBuilder();
         List<String> paraList = new ArrayList<String>();
         sql.append(" select count(1) cnt");
-        sql.append(" from xg_zhdj_dzbgl_dzbcy");
+        sql.append(" from xg_zhdj_dzbgl_jgdzbcy");
         sql.append(" where xh = ?");
         paraList.add(model.getXh());
         String cnt = dao.getOneRs(sql.toString(), paraList.toArray(new String[]{}), "cnt");
@@ -83,7 +83,7 @@ public class JgdcyglDao extends SuperDAOImpl<JgdcyglForm> {
         StringBuilder sql = new StringBuilder();
         List<String> paraList = new ArrayList<String>();
         String[] dels = model.getDels();
-        sql.append(" delete from xg_zhdj_dzbgl_dzbcy where xh in(");
+        sql.append(" delete from xg_zhdj_dzbgl_jgdzbcy where xh in(");
         for (int i = 0; i < dels.length; i++) {
             sql.append("?");
             if (i != dels.length - 1) {
@@ -97,7 +97,7 @@ public class JgdcyglDao extends SuperDAOImpl<JgdcyglForm> {
 
     public List<HashMap<String, String>> getCy(JgdcyglForm model) throws Exception {
         List<String> params = new ArrayList<String>();
-        StringBuilder sql = new StringBuilder("select a.*,v.zgh as xh,v.xm,v.xb,v.bmmc,v.symc,v.lxdh,v.dzyx,v.jtzz,e.sydq as jg from xg_zhdj_dzbgl_dzbcy a left join view_fdyxx v on a.xh = v.zgh" +
+        StringBuilder sql = new StringBuilder("select a.*,v.zgh as xh,v.xm,v.xb,v.bmmc,v.symc,v.lxdh,v.dzyx,v.jtzz,e.sydq as jg from xg_zhdj_dzbgl_jgdzbcy a left join view_fdyxx v on a.xh = v.zgh" +
                 " left join DMK_SYDQ e on e.sydqdm = v.jg where a.xh = ?  ");
         params.add(model.getXh());
         return dao.getListNotOut(sql.toString(), params.toArray(new String[]{}));

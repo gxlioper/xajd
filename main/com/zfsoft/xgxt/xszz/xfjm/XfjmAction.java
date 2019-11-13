@@ -3,6 +3,7 @@ package com.zfsoft.xgxt.xszz.xfjm;
 import com.alibaba.fastjson.JSON;
 import com.zfsoft.xgxt.base.action.SuperAction;
 import com.zfsoft.xgxt.base.auth.SystemAuth;
+import com.zfsoft.xgxt.base.message.MessageKey;
 import com.zfsoft.xgxt.base.util.FileUtil;
 import com.zfsoft.xgxt.comm.export.model.ExportModel;
 import com.zfsoft.xgxt.comm.export.service.IExportService;
@@ -478,6 +479,16 @@ public class XfjmAction extends SuperAction<XfjmForm,XfjmService> {
         User user = getUser(request);
         Map<String,Object> result = xfjmService.shSave(model,user);
         response.getWriter().print(JSON.parseObject(JSON.toJSONString(result)));
+        return null;
+    }
+
+    public ActionForward qxsh(ActionMapping mapping,ActionForm form,HttpServletRequest request,
+                                HttpServletResponse response) throws Exception{
+        XfjmForm model = (XfjmForm) form;
+        // 最后一级撤销
+        boolean isSuccess = xfjmService.cancel(model);
+        String messageKey = isSuccess ? MessageKey.SYS_CANCEL_SUCCESS : MessageKey.SYS_CANCEL_FAIL;
+        response.getWriter().print(getJsonMessageByKey(messageKey));
         return null;
     }
 

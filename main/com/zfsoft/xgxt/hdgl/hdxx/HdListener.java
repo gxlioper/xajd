@@ -20,7 +20,7 @@ public class HdListener implements ServletContextListener {
             public void run() {
                 service.pp();
             }
-        },0, 30*60 * 1000);//半小时执行一次
+        },0, 10*60 * 1000);//10分钟执行一次
 
     }
 

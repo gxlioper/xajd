@@ -178,6 +178,24 @@ public class KnsdcAction extends SuperAction {
 		request.setAttribute("oldDcdm", myForm.getDcdm());
 		return mapping.findForward("updateKnsdc");
 	}
+
+	@SystemAuth(url = url,rewritable=ReadWrite.WRITEABLE)
+	@SystemLog(description="访问学生资助-困难生认定-档次维护-变更启用状态-DCDM:{dcdm}")
+	public ActionForward updateQyzt(ActionMapping mapping, ActionForm form,
+									 HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		KnsdcForm myForm = (KnsdcForm) form;
+		KnsdcService service = new KnsdcService();
+		if("否".equals(myForm.getSfqy())){
+			myForm.setSfqy("是");//启用
+		}else {
+			myForm.setSfqy("否");//不启用
+		}
+		boolean result =   service.runUpdate(myForm);
+		String messageKey = result ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
+		response.getWriter().print(getJsonMessageByKey(messageKey));
+		return null;
+	}
 	/**
 	 * 
 	 * @描述:删除

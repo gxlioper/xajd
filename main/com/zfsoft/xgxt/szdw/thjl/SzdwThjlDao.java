@@ -58,10 +58,12 @@ public class SzdwThjlDao extends SuperDAOImpl<SzdwThjlForm> {
 		
 		StringBuilder sql = new StringBuilder();
 		
-		sql.append("select t.*,t2.sydm,t3.symc from xg_view_szdw_thjl t ");
+		sql.append("select t.*,t2.sydm,t3.symc from   ");
+		sql.append(" (select t.*,row_number() over(partition by t.xh order by t.thsj desc) rn ");
+		sql.append(" from xg_view_szdw_thjl t where t.thsj is not null) t ");
 		sql.append(" left join XG_XTWH_SYBJGLB t2 on t2.bjdm = t.bjdm ");
 		sql.append(" left join XG_XTWH_SYDMB t3 on t2.sydm = t3.sydm ");
-		sql.append(" where 1=1 ");
+		sql.append(" where 1=1 and t.rn = 1 ");
 		sql.append(searchTjByUser);
 		sql.append(searchTj);
 		return getPageList(t, sql.toString(), inputV);

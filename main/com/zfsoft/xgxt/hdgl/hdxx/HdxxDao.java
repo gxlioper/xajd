@@ -288,14 +288,31 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 //		}
 		sql.append(" order by t1.FBSJ DESC ) t where 1 = 1 ");
         String[] input = new String[]{};
-        String bmsql = "select * from YHB t where yhm = ? and (zdm like '%0001' or zdm = '0001' or zdm like '%0001,%') and qx = '1'";
-        HashMap<String,String> yhmap = dao.getMapNotOut(bmsql,new String[]{user.getUserName()});//查看用户是否为管理员
-        if(yhmap.size()==0){
+
+        if(!isAdmin(user)){//不是管理员
             sql.append(" and fbr = ? ");
             input = new String[]{user.getUserName()};
         }
+
         sql.append(" order by fbsj desc ");
 		return getPageList(t, sql.toString(), input);
+	}
+
+	public boolean isAdmin(User user){
+		StringBuilder userSql = new StringBuilder();
+		userSql.append(" select zdm from yhb where yhm = ? ");
+		String zdm = dao.getOneRs(userSql.toString(),new String[]{user.getUserName()},"zdm");
+		String[] zdms = zdm.split(",");
+		boolean isAdmin = false;
+		for(int i=0;i<zdms.length;i++){
+			StringBuilder check = new StringBuilder();
+			check.append(" select zmc from yhzb where zdm = ? ");
+			String zmc = dao.getOneRs(check.toString(),new String[]{zdms[i]},"zmc");
+			if(zmc.equals("超级管理员")){
+				isAdmin = true;
+			}
+		}
+		return isAdmin;
 	}
 
 	/**

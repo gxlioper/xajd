@@ -27,8 +27,11 @@
         <!-- ∞¥≈• -->
         <div class="buttonbox">
             <ul>
-                <li>
-                    <a href="javascript:void(0);" id="xfjmsh" onclick="xfjmsh();return false;" class="btn_sh">…Û∫À</a>
+                <li id="xfjmsh" >
+                    <a href="javascript:void(0);" onclick="xfjmsh();return false;" class="btn_sh">…Û∫À</a>
+                </li>
+                <li id="xfjmcx" style="display: none">
+                    <a href="javascript:void(0);" onclick="cancelSh();return false;" class="btn_qxsh">≥∑œ˙</a>
                 </li>
                 <li>
                     <a href="javascript:void(0);" onclick="shlcck();return false;"

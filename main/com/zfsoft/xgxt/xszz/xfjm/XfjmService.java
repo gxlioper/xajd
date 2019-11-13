@@ -481,6 +481,12 @@ public class XfjmService extends SuperServiceImpl<XfjmForm,XfjmDao> {
         return result;
     }
 
+    public boolean cancel(XfjmForm myForm) throws Exception {
+        myForm.setShzt(Constants.YW_SHZ);
+        boolean result = dao.qxsh(myForm.getId());
+        return result;
+    }
+
     /**
      * @描述: 根据审核流程及待审核岗位判断是否是最后一级审核
      * @作者: 何爽[工号:1730]

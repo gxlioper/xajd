@@ -72,11 +72,11 @@
                  </logic:equal>
 
 
-                    <!-- <logic:equal value="zf01" name="userName">
-                        <li>
-                            <a href="#" class="btn_dc" onclick="exportConfig();return false;">导出</a>
-                        </li>
-                    </logic:equal> --%>
+                     <%--<logic:equal value="zf01" name="userName">--%>
+                        <%--<li>--%>
+                            <%--<a href="#" class="btn_dc" onclick="exportConfig();return false;">导出</a>--%>
+                        <%--</li>--%>
+                    <%--</logic:equal>--%>
                 </ul>
             </div>
             <!-- 过滤条件 -->

@@ -21,6 +21,8 @@ public class KnsdcForm extends ActionForm {
 	private String xh;//困难原因序号
 	
 	private String zme;//各档次总名额
+
+	private String sfqy;//是否启用
 	
 	/**
 	 * @return the zme
@@ -106,8 +108,12 @@ public class KnsdcForm extends ActionForm {
 	public void setYymc(String yymc) {
 		this.yymc = yymc;
 	}
-	
-	
 
+	public String getSfqy() {
+		return sfqy;
+	}
 
+	public void setSfqy(String sfqy) {
+		this.sfqy = sfqy;
+	}
 }

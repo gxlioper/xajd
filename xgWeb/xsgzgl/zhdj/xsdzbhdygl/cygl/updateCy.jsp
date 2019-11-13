@@ -115,9 +115,9 @@
                 <th width="20%">专业</th>
                 <td width="30%"><span id="zymc">${cyMap.zymc}</span></td>
             </tr>
-            <tr style="display: none;">
+            <tr>
                 <th width="20%">身份证号</th>
-                <td width="30%"><span id="sfzh">${cyMap.sfzh}</span></td>
+                <td width="30%"><input id="sfzh" name="sfzh" value="${cyMap.sfzh}" readonly="readonly" style="border-style: none"/></td>
             </tr>
             <tr>
                 <th width="20%">专业班级</th>

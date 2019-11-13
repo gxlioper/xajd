@@ -26,6 +26,7 @@
                     {label:'月份',name:'yf', index: 'yf',width:'7%'},
                     {label:'工时',name:'gs', index: 'gs',width:'7%'},
                     {label:'工资（元）',name:'je', index: 'je',width:'7%'},
+                    {label:'用人单位',name:'yrdw', index: 'yrdw',width:'7%'},
                     {label:'银行名称',name:'yhmc', index: 'yhmc',width:'10%'},
                     {label:'银行卡号',name:'yhkh', index: 'yhkh',width:'15%'}
                 ],
