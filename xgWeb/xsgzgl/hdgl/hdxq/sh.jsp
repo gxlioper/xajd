@@ -47,52 +47,68 @@
                     </div>
                 </td>
             </tr>
-            <tr>
-                <th>个人介绍</th>
-                <td colspan="3">
-                    ${data.gzjl}
-                </td>
-            </tr>
-            <tr>
-                <th>个人工作经历</th>
-                <td colspan="3">
-                        ${data.zyzjl}
-                </td>
-            </tr>
-            <tr>
-                <th>在校期间所获荣誉</th>
-                <td colspan="3">
-                        ${data.yynl}
-                </td>
-            </tr>
-            <tr>
-                <th>报名原因</th>
-                <td colspan="3">
-                        ${data.zwms}
-                </td>
-            </tr>
-            <tr>
-                <th>职业技能</th>
-                <td colspan="3">
-                        ${data.zyjn}
-                </td>
-            </tr>
-			<tr>
-			    <th>报名附件</th>
-			    <td colspan="3">
-			            <input type="hidden" id="bmfj" name="bmfj" value="${data.bmfj}" />
-			             <div id="bmfjDiv"></div>
-			            <script type="text/javascript">
-			            	//调用附件
-			            	jQuery(function() {
-			            		jQuery('#bmfjDiv').multiUploader_q({
-			            			gid: jQuery('#bmfj').val(),
-			            			uid: 'fjuid${n}'
-			            		});
-			            	});
-			            </script>	 
-			    </td>
-			</tr>
+            <logic:iterate id="i" name="jldxList">
+            <logic:equal value="1" name="i" property="sfbt">
+                <logic:equal value="gzjl" name="i" property="zd">
+                    <tr>
+                        <th>个人介绍</th>
+                        <td colspan="3">
+                            ${data.gzjl}
+                        </td>
+                    </tr>
+                </logic:equal>
+                <logic:equal value="zyzjl" name="i" property="zd">
+                    <tr>
+                        <th>个人工作经历</th>
+                        <td colspan="3">
+                                ${data.zyzjl}
+                        </td>
+                    </tr>
+                </logic:equal>
+                <logic:equal value="yynl" name="i" property="zd">
+                    <tr>
+                        <th>在校期间所获荣誉</th>
+                        <td colspan="3">
+                                ${data.yynl}
+                        </td>
+                    </tr>
+                </logic:equal>
+                <logic:equal value="zwms" name="i" property="zd">
+                    <tr>
+                        <th>报名原因</th>
+                        <td colspan="3">
+                                ${data.zwms}
+                        </td>
+                    </tr>
+                </logic:equal>
+                <logic:equal value="zyjn" name="i" property="zd">
+                    <tr>
+                        <th>职业技能</th>
+                        <td colspan="3">
+                                ${data.zyjn}
+                        </td>
+                    </tr>
+                </logic:equal>
+                <logic:equal value="bmfj" name="i" property="zd">
+                    <tr>
+                        <th>报名附件</th>
+                        <td colspan="3">
+                                <input type="hidden" id="bmfj" name="bmfj" value="${data.bmfj}" />
+                                 <div id="bmfjDiv"></div>
+                                <script type="text/javascript">
+                                    //调用附件
+                                    jQuery(function() {
+                                        jQuery('#bmfjDiv').multiUploader_q({
+                                            gid: jQuery('#bmfj').val(),
+                                            uid: 'fjuid${n}'
+                                        });
+                                    });
+                                </script>
+                        </td>
+                    </tr>
+                </logic:equal>
+            </logic:equal>
+            </logic:iterate>
             <logic:equal value="sh" name="cz">
                 <tr>
                     <th width="16%">

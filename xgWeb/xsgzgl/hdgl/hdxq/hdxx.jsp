@@ -199,6 +199,14 @@
 													${data.hdxs}
 											</span>
 										</div>
+										<logic:equal name="data" property="hdxs" value="讲座">
+											<div class="form-group">
+												<label>主讲人：</label>
+												<span class="address">
+														${data.zjrxm}
+												</span>
+											</div>
+										</logic:equal>
 		                                <div class="form-group">
 		                                    <label>类型：</label>
 		                                    <span class="address">

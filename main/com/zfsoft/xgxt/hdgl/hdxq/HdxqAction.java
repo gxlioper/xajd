@@ -218,6 +218,10 @@ public class HdxqAction extends SuperAction<HdxxForm, HdxxService> {
         request.setAttribute("jbxxList", jbxxListxs);
 		request.setAttribute("data",data);
 		request.setAttribute("bmlx",model.getBmlx());
+
+		List<HashMap<String,String>> jldxList = service.getBtZdList(model.getHdid());
+		request.setAttribute("jldxList",jldxList);//简历单项字段信息
+
 		return mapping.findForward("sh");
 	}
 
@@ -265,11 +269,11 @@ public class HdxqAction extends SuperAction<HdxxForm, HdxxService> {
 //			String key = MessageKey.XG_HDGL_PEOPLE_BEYOND;
 //			response.getWriter().print(getJsonMessageByKey(key));
 //		}else{
-		boolean re = service.checkIsSh(model.getSqid());
-		if(re){
-			response.getWriter().print(getJsonMessage("已审核，请勿重复审核"));
-			return null;
-		}
+//		boolean re = service.checkIsSh(model.getSqid());
+//		if(re){
+//			response.getWriter().print(getJsonMessage("已审核，请勿重复审核"));
+//			return null;
+//		}
 			boolean result = service.updateShzt(model);
 			String messageKey = result ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
 			response.getWriter().print(getJsonMessageByKey(messageKey));

@@ -93,6 +93,7 @@
 									<th>·Ö×é</th>
 								</logic:equal>
 								<th>ÉóºË×´Ì¬</th>
+								<th>ÅÉÆ±×´Ì¬</th>
 							</tr>
 						</thead>
 						<tbody id="ryTbody">

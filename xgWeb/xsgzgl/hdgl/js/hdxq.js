@@ -155,6 +155,7 @@ function createHtmlForRy(obj) {
                 content+="<td>"+o["cymc"]+"</td>";
 			}
 			content+="<td>"+o["shztmc"]+"</td>";
+            content+="<td>"+o["hdpp"]+"</td>";
 		}
 		jQuery(listTbody).append(content);
 	}

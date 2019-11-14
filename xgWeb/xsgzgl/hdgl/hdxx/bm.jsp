@@ -61,11 +61,11 @@
                 </td>
             </tr>
             <logic:iterate id="i" name="jldxList">
+                <logic:equal value="1" name="i" property="sfbt">
                 <tr>
                     <th>
-                        <logic:equal value="1" name="i" property="sfbt">
                             <span class="red">*</span>
-                        </logic:equal>
+
                         ${i.mc}
                     </th>
                     <td colspan="3">
@@ -104,6 +104,7 @@
                         </logic:equal>
 					</td>
                 </tr>
+                </logic:equal>
             </logic:iterate>
             </tbody>
         </table>

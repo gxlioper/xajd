@@ -89,6 +89,7 @@ public class HdxxAction extends SuperAction<HdxxForm, HdxxService> {
 		}
 		String path = "hdgl_hdgl_hdxx.do";
 		request.setAttribute("path", path);
+		request.setAttribute("hdlxList",service.getHdlx());
 		FormModleCommon.commonRequestSet(request);
 		return mapping.findForward("hdxxList");
 	}

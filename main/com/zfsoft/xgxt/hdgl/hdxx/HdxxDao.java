@@ -207,6 +207,12 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 			jt_user = new String[]{userName,userName,userName,userName,userName,userName,userName,userName,userName,userName,userName,userName,userName,userName,userName,userName,userName,userName,userName};
 		}
 		sql.append(" ) t where t.rnum = 1");
+		if(StringUtils.isNotNull(t.getHdlx())){
+			sql.append(" and t.hdlx='" + t.getHdlx() +"'");
+		}
+		if(StringUtils.isNotNull(t.getHdmc())){
+			sql.append(" and t.hdmc like '%" + t.getHdmc() + "%' ");
+		}
 		if(pxfs.equals("zjjb")){
 			sql.append(" order by t.hdbmzt asc");
 		}
@@ -508,6 +514,7 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 		StringBuilder sb = new StringBuilder();
 		sb.append(" select t.* from (");
 		sb.append(" select a.sqid,a.hdid,a.xh,a.bmsj,a.shzt,decode(a.shzt,'0','待审核','1','已通过','2','已拒绝','5','审核中',shzt) shztmc,");
+		sb.append("decode(a.hdpp,'0','未派票','1','已派票',a.hdpp) hdpp,");
 		sb.append(" b.xm,b.xydm,b.xymc,b.nj,b.bjdm,b.bjmc,b.zydm,b.zymc,b.xb,c.bmlx");
 		if("0".equals(bmlx)){
             sb.append(" ,decode(a.dwzw,'0','队员','1','队长',' ') cymc");
@@ -2156,13 +2163,13 @@ public class HdxxDao extends SuperDAOImpl<HdxxForm>{
 		return dao.getListNotOut(sql.toString(),new String[]{dthdid});
 	}
 
-/**
- * @Author llf[1754]
- * @Description 判断报名是否审核
- * @Date 17:25 2019/11/1
- * @Param [sqid]
- * @return boolean
- **/
+	/**
+	* @Author llf[1754]
+	* @Description 判断报名是否审核
+	* @Date 17:25 2019/11/1
+	* @Param [sqid]
+	* @return boolean
+	**/
 	public boolean checkIsSh(String sqid){
 		StringBuilder sql = new StringBuilder();
 		sql.append(" select shzt from（select sqid,shzt from xg_hdgl_hdryb union select sqid,shzt from xg_hdgl_zdhdryb） where sqid = ?");

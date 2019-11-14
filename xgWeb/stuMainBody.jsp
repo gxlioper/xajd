@@ -108,7 +108,7 @@
 	<!--新增选项卡模块-->
 <div class="container">
 	<div class="row">
-		<div class="col-md-7 col-sm-7 padding_r0">				
+		<div class="col-md-6 col-sm-6 padding_r0">
 			<div class="panel panel-default index_list margin_t15">
 				<ul id="tagslist01" class="nav-tabs nav panel-heading notice-tabs">
 					<span class="pull-left" style="padding:0px;"><img src="images/notice_icon.png" style="height:40px;padding:10px;"></span>
@@ -127,18 +127,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-5 col-sm-5">
-					<div class="panel panel-default index_list margin_t15">
-						<div class="panel-heading">
-							<span class="pull-left"><img src="images/download.png">下载专区</span>
-							<a href="xtwhSysz.do?method=xzzqView" class="pull-right" title="更多">more>></a>
-						</div>
-						<div class="panel-body">
-							<ul class="list-group" id="fileList">
-							</ul>
-						</div>
-					</div>
-				</div>
+		<%@ include file="/homepage/info/hdxxInfo.jsp"%>
+
 		
 	</div>
 	<div class="row">
@@ -166,7 +156,18 @@
 		<%@ include file="/homepage/info/xssqjgInfo.jsp"%>	
 		</div>
 	<div class="row">
-		<%@ include file="/homepage/info/hdxxInfo.jsp"%>
+		<div class="col-md-5 col-sm-5">
+			<div class="panel panel-default index_list margin_t15">
+				<div class="panel-heading">
+					<span class="pull-left"><img src="images/download.png">下载专区</span>
+					<a href="xtwhSysz.do?method=xzzqView" class="pull-right" title="更多">more>></a>
+				</div>
+				<div class="panel-body">
+					<ul class="list-group" id="fileList">
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 	</body>

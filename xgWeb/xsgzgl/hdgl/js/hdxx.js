@@ -1,3 +1,7 @@
+function searchHd() {
+	var pxfs = jQuery("#ymmc").val();
+	searchRs('1',pxfs);
+}
 // ≤È—Ø
 function searchRs(cxzt,pxfs){
 	if(cxzt == '1'){
