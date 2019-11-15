@@ -630,7 +630,7 @@ function createHtmlForWcj(obj) {
 							if(o['hdpp'] == '0' || o['hdpp'] == '0'){
 								content+='<button type="button" class="btn btn-primary" disabled="disabled">派票中</button>';
 							}else{
-								content+='<button type="button" class="btn btn-primary" disabled="disabled">活动未开始</button>';
+								content+='<button type="button" class="btn btn-primary" disabled="disabled">已通过【活动未开始】</button>';
 							}
 						}else if(o['hdbmshzt'] == '5' || o['hdbmshzt'] == '5'){//审核中
 							content+='<button type="button" class="btn btn-primary" disabled="disabled">审核中</button>';
