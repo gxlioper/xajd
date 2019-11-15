@@ -1136,7 +1136,8 @@ public class QgzxCjffjgService extends BasicService{
 
 			sheet1.mergeCells(0, 1, 7, 1);
 			sheet1.mergeCells(0,2,7,2);
-
+			sheet1.mergeCells(1,4+cjmxList.size(),5,4+cjmxList.size());
+			 sheet1.mergeCells(0, 5+cjmxList.size(), 7, 5+cjmxList.size());
 			//单元格格式
 			WritableCellFormat wcf1 = new WritableCellFormat();
 			WritableCellFormat wcf2 = new WritableCellFormat();
@@ -1197,8 +1198,9 @@ public class QgzxCjffjgService extends BasicService{
 			sheet1.addCell(label_c6r3);
 			sheet1.addCell(label_c7r3);
 
-
+			int sum = 0;
 			for(int i=0;i<cjmxList.size();i++){
+				sum = sum+Integer.parseInt(cjmxList.get(i).get("je"));
 				Label label0 = new Label(0,4+i,1+i+"",wcf2);
 				Label label3 = new Label(1,4+i,cjmxList.get(i).get("gwmc"),wcf2);
 				Label label1 = new Label(2,4+i,cjmxList.get(i).get("xh"),wcf2);
@@ -1220,6 +1222,19 @@ public class QgzxCjffjgService extends BasicService{
 
 				sheet1.addCell(label7);
 			}
+
+			 Label labelc0rn = new Label(0,4+cjmxList.size(),"合计：",wcf2);
+			 Label labelc1rn = new Label(1,4+cjmxList.size(),"",wcf2);
+			 Label labelc2rn = new Label(6,4+cjmxList.size(),sum+"",wcf2);
+			 Label labelc3rn = new Label(7,4+cjmxList.size(),"",wcf2);
+
+			 Label label_c0rn1 = new Label(0,5+cjmxList.size(),"用人单位主管人： "+rs.get("dwfzr")+"                                   电话："+rs.get("lxdh"),wcf2);
+
+			 sheet1.addCell(labelc0rn);
+			 sheet1.addCell(labelc1rn);
+			 sheet1.addCell(labelc2rn);
+			 sheet1.addCell(labelc3rn);
+			 sheet1.addCell(label_c0rn1);
 
 			sheet1.setColumnView(0, 5);
 			sheet1.setColumnView(1, 15);

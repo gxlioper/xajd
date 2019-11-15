@@ -522,9 +522,10 @@ public class QgzxCjffjgDAO extends SuperDAOImpl<QgzxCjffjgForm> {
 	 */
 	public HashMap<String, String> cjxxCk(QgzxCjffjgForm model) {
 		StringBuilder sql=new StringBuilder();
-		sql.append("select a.xn,a.yrdwdm,a.xq,(select bmmc from view_xg_qgzx_yrdwdmb b where a.yrdwdm = b.bmdm) yrdwmc,");
+		sql.append("select a.xn,a.yrdwdm,a.xq,b.bmmc yrdwmc, b.dwfzr,b.lxdh,");
 		sql.append("a.ffny,a.tjzt,case when a.tjzt = '1' then '已提交'else '未提交'end as tjztmc ");
-		sql.append("from xg_qgzx_gwffztb a where xn = ? and yrdwdm = ? and ffny = ? and (xq is null or xq = '' or xq = ?) and rownum = 1 ");
+		sql.append("from xg_qgzx_gwffztb a  left join view_xg_qgzx_yrdwdmb b on a.yrdwdm = b.bmdm ");
+		sql.append(" where xn = ? and yrdwdm = ? and ffny = ? and (xq is null or xq = '' or xq = ?) and rownum = 1 ");
 		String[] inputValue = model.getPkValue().split("!!@@!!");
 		
 		return dao.getMapNotOut(sql.toString(), inputValue);
