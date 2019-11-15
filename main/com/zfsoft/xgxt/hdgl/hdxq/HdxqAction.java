@@ -230,14 +230,14 @@ public class HdxqAction extends SuperAction<HdxxForm, HdxxService> {
 		HdxxForm model = (HdxxForm) form;
 		if(SAVE.equals(model.getType())){
 			model.setIds(model.getId().split(","));
-			for(int i=0;i<model.getIds().length;i++){
-				boolean re = service.checkIsSh(model.getIds()[i]);
-				if(re){
-					response.getWriter().print(getJsonMessage("´æÔÚÒÑÉóºËÊý¾Ý£¬ÇëÎðÖØ¸´ÉóºË"));
-					return null;
-				}
-
-			}
+//			for(int i=0;i<model.getIds().length;i++){
+//				boolean re = service.checkIsSh(model.getIds()[i]);
+//				if(re){
+//					response.getWriter().print(getJsonMessage("´æÔÚÒÑÉóºËÊý¾Ý£¬ÇëÎðÖØ¸´ÉóºË"));
+//					return null;
+//				}
+//
+//			}
 			boolean result = service.updateShzt(model);
 			String messageKey = result ? MessageKey.SYS_SAVE_SUCCESS : MessageKey.SYS_SAVE_FAIL;
 			response.getWriter().print(getJsonMessageByKey(messageKey));

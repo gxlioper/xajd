@@ -47,7 +47,7 @@
             </thead>
             <tbody>
             <tr>
-                <th><span class="red">*</span>个人照片</th>
+                <th>个人照片</th>
                 <td colspan="3">
                     <div id="stuImg" class="open_img" style="margin-left:0px;margin-right:5px;margin-top: 0px;height: 130px">
                         <img style="width:100px;height:130px" id="avatarPreview" src="xsxx_xsgl.do?method=showPhoto&xh=${xh}" border="0">
