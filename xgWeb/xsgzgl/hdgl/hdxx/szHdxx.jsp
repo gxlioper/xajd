@@ -277,13 +277,13 @@
 							<font color="red">*</font>主办方
 						</th>
 						<td >
-							<html:text property="zbf" styleId="zbf" maxlength="50"/>
+							<html:text property="zbf" styleId="zbf" maxlength="50" readonly="true"/>
 						</td>
 						<th width="15%">
 							<font color="red">*</font>活动地点
 						</th>
 						<td width="35%">
-							<html:text property="hddd" styleId="hddd" maxlength="20"/>
+							<html:text property="hddd" styleId="hddd" maxlength="20" readonly="true"/>
 						</td>
 					</tr>
 					<tr>
@@ -291,7 +291,7 @@
 							<span><font color="red">*</font>线上or线下活动</span>
 						</th>
 						<td width="35%">
-							<html:select property="xsxxlx" styleId="xsxxlx"  style="width:173px">
+							<html:select property="xsxxlx" styleId="xsxxlx"  style="width:173px" disabled="true">
 								<html:option value="">--请选择--</html:option>
 								<html:option value="线上">线上活动</html:option>
 								<html:option value="线下">线下活动</html:option>
@@ -301,7 +301,7 @@
 							<span><font color="red">*</font>活动形式</span>
 						</th>
 						<td width="35%">
-							<html:select property="hdkclx" styleId="hdkclx"  style="width:173px">
+							<html:select property="hdkclx" styleId="hdkclx"  style="width:173px" disabled="true">
 								<html:option value="">--请选择--</html:option>
 								<html:option value="考核类">考核类（多阶段）</html:option>
 								<html:option value="参与类">参与类（单阶段）</html:option>
@@ -313,7 +313,7 @@
 							<span><font color="red">*</font>活动性质</span>
 						</th>
 						<td width="35%">
-							<html:select property="hdxs" styleId="hdxs" onchange="changeHdxs()" style="width:173px">
+							<html:select property="hdxs" styleId="hdxs" onchange="changeHdxs()" style="width:173px" disabled="true">
 								<html:option value="">--请选择--</html:option>
 								<html:option value="活动">活动</html:option>
 								<html:option value="课程">课程</html:option>
@@ -324,7 +324,7 @@
 							<font color="red">*</font><span id="lx_span">活动类型</span>
 						</th>
 						<td>
-							<html:select property="hdlx" styleId="hdlx" style="width:173px">
+							<html:select property="hdlx" styleId="hdlx" style="width:173px" disabled="true">
 								<html:option value="">--请选择--</html:option>
 								<html:options collection="hdlxList" labelProperty="hdlxmc" property="hdlxdm"/>
 							</html:select>
@@ -336,13 +336,13 @@
 							<font color="red">*</font>主讲人姓名
 						</th>
 						<td>
-							<html:text property="zjrxm" styleId="zjrxm" maxlength="10"/>
+							<html:text property="zjrxm" styleId="zjrxm" maxlength="10" readonly="true"/>
 						</td>
 						<th >
 							<font color="red">*</font>主讲人单位
 						</th>
 						<td >
-							<html:text property="zjrdw" styleId="zjrdw" maxlength="20"/>
+							<html:text property="zjrdw" styleId="zjrdw" maxlength="20" readonly="true"/>
 						</td>
 					</tr>
 					<tr name="zjrxx_tr">
@@ -350,7 +350,7 @@
 							<font color="red">*</font>主讲人职称
 						</th>
 						<td>
-							<html:select property="zjrzc" styleId="zjrzc" style="width:173px">
+							<html:select property="zjrzc" styleId="zjrzc" style="width:173px" disabled="true">
 								<html:option value="">--请选择--</html:option>
 								<html:options collection="zjrzcList" labelProperty="mc" property="dm"/>
 							</html:select>
@@ -359,7 +359,7 @@
 							<font color="red">*</font>主讲人职务
 						</th>
 						<td >
-							<html:text property="zjrzw" styleId="zjrzw" maxlength="10"/>
+							<html:text property="zjrzw" styleId="zjrzw" maxlength="10" readonly="true"/>
 						</td>
 					</tr>
 					<tr>
@@ -368,7 +368,7 @@
 
 						</th>
 						<td colspan="3">
-							<html:select property="jzjb" styleId="jzjb" style="width:173px">
+							<html:select property="jzjb" styleId="jzjb" style="width:173px" disabled="true">
 								<html:option value="">--请选择--</html:option>
 								<html:option value="校级活动">校级活动</html:option>
 								<html:option value="院级活动">院级活动</html:option>
@@ -384,7 +384,7 @@
 						</th>
 						<td colspan="3">
 							<html:textarea rows="2" property="zjrjs" styleId="zjrjs"
-										   style="width:95%" onblur="checkLen(this,100);"/>
+										   style="width:95%" onblur="checkLen(this,100);" readonly="true"/>
 						</td>
 					</tr>
 
@@ -394,7 +394,7 @@
 							<font color="red">*</font>课程级别
 						</th>
 						<td>
-							<html:select property="jzlx" styleId="jzlx" style="width:173px" onchange="kcjbChange()">
+							<html:select property="jzlx" styleId="jzlx" style="width:173px" onchange="kcjbChange()" disabled="true">
 								<html:option value="">---&nbsp;请选择课程级别&nbsp;---</html:option>
 								<html:options collection ="jzlxList" property="jzlxdm" labelProperty="jzlxmc" />
 							</html:select>
@@ -403,7 +403,7 @@
 							<font color="red">*</font>自选课程类型
 						</th>
 						<td id="zxkclxTd" style="display: none;">
-							<html:select property="zxkclx" styleId="zxkclx" style="width:173px">
+							<html:select property="zxkclx" styleId="zxkclx" style="width:173px" disabled="true">
 								<html:option value="">---&nbsp;请选择自选课程类型&nbsp;---</html:option>
 								<html:options collection ="zxckclxList" property="dm" labelProperty="mc" />
 							</html:select>
@@ -416,7 +416,7 @@
 						<td colspan="3">
 							<logic:iterate name="activityLabelList" id="bq">
 								<%--<html:checkbox property="hdbqs" value="${bq.dm}">${bq.mc}</html:checkbox>--%>
-								<label><html:multibox property="hdbqs" value="${bq.hdbqdm}"/>${bq.hdbqmc}</label>
+								<label><html:multibox property="hdbqs" value="${bq.hdbqdm}" disabled="true"/>${bq.hdbqmc}</label>
 							</logic:iterate>
 						</td>
 					</tr>
@@ -427,7 +427,7 @@
 						</th>
 						<td colspan="3">
 							<logic:iterate name="abilityLabelList" id="bq">
-								<label><html:multibox property="nlbqs" value="${bq.nlbqdm}"/>${bq.nlbqmc}</label>
+								<label><html:multibox property="nlbqs" value="${bq.nlbqdm}" disabled="true"/>${bq.nlbqmc}</label>
 							</logic:iterate>
 							<br><font color="red">（选择参加该活动能提升的综合能力，最多三项）</font>
 						</td>

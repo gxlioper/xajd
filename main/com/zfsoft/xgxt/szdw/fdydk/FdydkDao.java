@@ -27,11 +27,14 @@ public class FdydkDao extends SuperDAOImpl<FdydkForm> {
         String[] inputV = SearchService.getTjInput(t.getSearchModel());
         StringBuilder sql = new StringBuilder();
         sql.append(" select t.* from (");
-        sql.append(" select a.*,b.mc kclbmc,c.xm from SZDW_FDY_FDYDKJGB a ");
+        sql.append(" select a.*,b.mc kclbmc,c.xm,c.bmdm from SZDW_FDY_FDYDKJGB a ");
         sql.append(" left join XG_SZDW_KCLBB b on a.kclbdm = dm ");
         sql.append(" left join FDYXXB c on a.zgh = c.ZGH ");
         sql.append(" ) t where 1 = 1 ");
-        sql.append(searchTjByUser);
+//        sql.append(searchTjByUser);//没有班级字段无法使用
+        if(!"xx".equalsIgnoreCase(user.getUserStatus())){
+            sql.append(" bmdm = '"+user.getUserDep()+"' " );
+        }
         sql.append(searchTj);
         return getPageList(t, sql.toString(), inputV);
     }
